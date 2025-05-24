@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="TestChatBot 2.0">96f1c7abc32dea103ab9b017050131f6</compiled_topic>
+        <design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"b61a44b642474bb4aa9f4e9efc2038f0","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"b61a44b642474bb4aa9f4e9efc2038f0"}],"goals":[{"name":"primary","trigger_id":"b61a44b642474bb4aa9f4e9efc2038f0","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Welcome to virtual agent\", vaContext.getRequesterLang())"},"id":"d73a700d8bd04e37bb16b54c1de7113c","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":""},"id":"98ae36508bad4232bffd2477ceac71f3","name":"End","expert_mode":false},{"type":"InputPrompt","variable_id":"63f2350efc414d8183820638e0520e2b","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"What is your problem?\", vaContext.getRequesterLang())"},"default_value":{"type":"String","mode":"string","value":"{{vaInputs.asking_a_question}}"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":true,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"metadataScript":"","cardName":"","cardFields":[],"id":"c36a1cc56a2049f78022684931e78aac","name":"Asking a question","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"formatType":"Text","validationScript":"","description":""},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"a9b80bbccf9349a8883f9bbbbff0afa2","name":"Show categories","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"d221bd8fb6e64c6c911296bed2661d65","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"What type of problem do you have\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"MultiPartOutputPrompt","label":"gs.getMessageLang(\"Options\", vaContext.getRequesterLang())","parts":[{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Computer\", vaContext.getRequesterLang())"}],"request_feedback":false,"id":"e4053117f4a6400287c47b07c62ead83","name":"e4053117f4a6400287c47b07c62ead83","expert_mode":false,"secure":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Headset\", vaContext.getRequesterLang())"}],"request_feedback":false,"id":"2822ea61e0eb42f78536cb93c386201a","name":"2822ea61e0eb42f78536cb93c386201a","expert_mode":false,"secure":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Charger\", vaContext.getRequesterLang())"}],"request_feedback":false,"id":"5eb236dff0354813bcd6ab270058d2b9","name":"5eb236dff0354813bcd6ab270058d2b9","expert_mode":false,"secure":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Monitor\", vaContext.getRequesterLang())"}],"request_feedback":false,"id":"4273ab51c45148d0a68a8c468412a783","name":"4273ab51c45148d0a68a8c468412a783","expert_mode":false,"secure":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Software\", vaContext.getRequesterLang())"}],"request_feedback":false,"id":"47b45241c0cc451c961d0b465fa49f3b","name":"47b45241c0cc451c961d0b465fa49f3b","expert_mode":false,"secure":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Adapter\", vaContext.getRequesterLang())"}],"request_feedback":false,"id":"28256dea1e824e9187421a8a99f2dfc9","name":"28256dea1e824e9187421a8a99f2dfc9","expert_mode":false,"secure":false}],"id":"df1bdf777f194e7f85559679e7372cb7","name":"Show categories","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"Hola\", vaContext.getRequesterLang())"}],"request_feedback":true,"isCollapsible":true,"id":"8a9175c6c3964374bd31bf103b256a17","name":"hola_texto","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"secure":false}],"edges":[{"type":"Edge","source_node_id":"c36a1cc56a2049f78022684931e78aac","target_node_id":"df1bdf777f194e7f85559679e7372cb7","id":"f6d4b9ba9f0e42acb098aa17b9c71207"},{"type":"Edge","source_node_id":"a9b80bbccf9349a8883f9bbbbff0afa2","target_node_id":"98ae36508bad4232bffd2477ceac71f3","id":"67c3477dcdb34b25bb1bf4769072128f"},{"type":"Edge","source_node_id":"df1bdf777f194e7f85559679e7372cb7","target_node_id":"a9b80bbccf9349a8883f9bbbbff0afa2","id":"0bfc0b12dbbf4c4db59279466b1853df"},{"type":"Edge","source_node_id":"d73a700d8bd04e37bb16b54c1de7113c","target_node_id":"8a9175c6c3964374bd31bf103b256a17","id":"0c0c0917058a46e78d57739100d9ae2c"},{"type":"Edge","source_node_id":"8a9175c6c3964374bd31bf103b256a17","target_node_id":"c36a1cc56a2049f78022684931e78aac","id":"348f9770b88a47558b9f962574b58b44"}],"id":"primary"}],"script_variables":[],"glide_variables":[{"type":"Reference","table":"sys_user","auto_select":false,"id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"String","name":"asking_a_question","list":false,"id":"63f2350efc414d8183820638e0520e2b","formatType":"Text","validationScript":"","secure":false,"sensitive":false,"aiInput":false},{"type":"Choice","choices":[{"name":"Computer","element":"Computer"},{"name":"Headsets","element":"Headsets"},{"name":"Charger","element":"Charger"},{"name":"Adapter","element":"Adapter"},{"name":"Monitor","element":"Monitor"},{"name":"Software","element":"Software"}],"id":"d221bd8fb6e64c6c911296bed2661d65","name":"show_categories","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Show Categories"}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"209d68cbc3ede6103ab9b0170501312b","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":true,"id":"9069fa2fc3e9ea103ab9b01705013142","name":"TestChatBot 2.0","key_phrases":["TestChatBot 2.0"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":false,"design_categories":[],"triggerable_by_notification":false,"description":"Testing the ChatBot to create a new case","model_type":"nlu_keyword","foundational":false,"modify_confirmation_enabled":true,"context_profiles":[],"title":"TestChatBot 2.0","library":false,"readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>9069fa2fc3e9ea103ab9b01705013142</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.78",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "d73a700d8bd04e37bb16b54c1de7113c": {
+          "id": "d73a700d8bd04e37bb16b54c1de7113c",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Welcome to virtual agent"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "98ae36508bad4232bffd2477ceac71f3": {
+          "id": "98ae36508bad4232bffd2477ceac71f3",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "c36a1cc56a2049f78022684931e78aac": {
+          "id": "c36a1cc56a2049f78022684931e78aac",
+          "stepType": "TextPrompt",
+          "name": "Asking a question",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What is your problem?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": ""
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.asking_a_question}}",
+                      "displayValue": "Input Variables➛Asking A Question"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "63f2350efc414d8183820638e0520e2b",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        },
+        "a9b80bbccf9349a8883f9bbbbff0afa2": {
+          "name": "Show categories",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What type of problem do you have"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "d221bd8fb6e64c6c911296bed2661d65",
+          "detailDescription": "",
+          "id": "a9b80bbccf9349a8883f9bbbbff0afa2",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "df1bdf777f194e7f85559679e7372cb7": {
+          "id": "df1bdf777f194e7f85559679e7372cb7",
+          "stepType": "MultiPartOutput",
+          "name": "Show categories",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "navigationLabel": "Options",
+          "messages": [
+            {
+              "type": "Text",
+              "value": "Computer"
+            },
+            {
+              "type": "Text",
+              "value": "Headset"
+            },
+            {
+              "type": "Text",
+              "value": "Charger"
+            },
+            {
+              "type": "Text",
+              "value": "Monitor"
+            },
+            {
+              "type": "Text",
+              "value": "Software"
+            },
+            {
+              "type": "Text",
+              "value": "Adapter"
+            }
+          ]
+        },
+        "8a9175c6c3964374bd31bf103b256a17": {
+          "id": "8a9175c6c3964374bd31bf103b256a17",
+          "stepType": "TextOutput",
+          "name": "hola_texto",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Hola"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "541ab401ef714c3fa690761211308f8e"
+            }
+          ],
+          "isCollapsible": true,
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "f6d4b9ba9f0e42acb098aa17b9c71207",
+          "edgeType": "Edge",
+          "source": "c36a1cc56a2049f78022684931e78aac",
+          "target": "df1bdf777f194e7f85559679e7372cb7",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "67c3477dcdb34b25bb1bf4769072128f",
+          "edgeType": "Edge",
+          "source": "a9b80bbccf9349a8883f9bbbbff0afa2",
+          "target": "98ae36508bad4232bffd2477ceac71f3",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0bfc0b12dbbf4c4db59279466b1853df",
+          "edgeType": "Edge",
+          "source": "df1bdf777f194e7f85559679e7372cb7",
+          "target": "a9b80bbccf9349a8883f9bbbbff0afa2",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0c0c0917058a46e78d57739100d9ae2c",
+          "edgeType": "Edge",
+          "source": "d73a700d8bd04e37bb16b54c1de7113c",
+          "target": "8a9175c6c3964374bd31bf103b256a17",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "348f9770b88a47558b9f962574b58b44",
+          "edgeType": "Edge",
+          "source": "8a9175c6c3964374bd31bf103b256a17",
+          "target": "c36a1cc56a2049f78022684931e78aac",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "63f2350efc414d8183820638e0520e2b": {
+      "id": "63f2350efc414d8183820638e0520e2b",
+      "name": "asking_a_question",
+      "label": "Asking A Question",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTc0Nzk0NzE5OTUyMCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "c36a1cc56a2049f78022684931e78aac",
+      "isHidden": false
+    },
+    "d221bd8fb6e64c6c911296bed2661d65": {
+      "id": "d221bd8fb6e64c6c911296bed2661d65",
+      "name": "show_categories",
+      "label": "Show Categories",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Computer",
+          "value": "Computer"
+        },
+        {
+          "label": "Headsets",
+          "value": "Headsets"
+        },
+        {
+          "label": "Charger",
+          "value": "Charger",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Adapter",
+          "value": "Adapter",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Monitor",
+          "value": "Monitor",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Software",
+          "value": "Software",
+          "checked": true,
+          "meta": {}
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "a9b80bbccf9349a8883f9bbbbff0afa2",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <name>TestChatBot 2.0</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-05-22 21:30:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>d2f1c7abc32dea103ab9b017050131fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cb_design_topic_d2f1c7abc32dea103ab9b017050131fa</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-05-22 21:30:23</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="DELETE">
+        <operation>create</operation>
+        <source_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-05-22 18:14:36</sys_created_on>
+        <sys_id>6064d263c329ea103ab9b0170501312e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_volt2_github_s_0_ci_workspace</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_scope_privilege_6064d263c329ea103ab9b0170501312e</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-05-22 18:14:36</sys_updated_on>
+        <target_name>x_volt2_github_s_0_ci_workspace</target_name>
+        <target_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sys_scope_privilege_6064d263c329ea103ab9b0170501312e</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege"><sys_scope_privilege action="INSERT_OR_UPDATE"><operation>create</operation><source_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</source_scope><status>allowed</status><sys_class_name>sys_scope_privilege</sys_class_name><sys_created_by>esteban.quintero</sys_created_by><sys_created_on>2025-05-22 18:14:36</sys_created_on><sys_id>6064d263c329ea103ab9b0170501312e</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_volt2_github_s_0_ci_workspace</sys_name><sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package><sys_policy/><sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope><sys_update_name>sys_scope_privilege_6064d263c329ea103ab9b0170501312e</sys_update_name><sys_updated_by>esteban.quintero</sys_updated_by><sys_updated_on>2025-05-22 18:14:36</sys_updated_on><target_name>x_volt2_github_s_0_ci_workspace</target_name><target_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</target_scope><target_type>sys_db_object</target_type></sys_scope_privilege></record_update>]]></payload>
+        <payload_hash>-101550442</payload_hash>
+        <record_name>x_volt2_github_s_0_ci_workspace</record_name>
+        <reverted_from/>
+        <source>0c2a8a57c3a1aa103ab9b01705013116</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-05-22 18:14:36</sys_created_on>
+        <sys_id>1625d2a3c329ea103ab9b0170501318b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>196f9344b750000001</sys_recorded_at>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-05-22 18:14:36</sys_updated_on>
+        <type>Cross scope privilege</type>
+        <update_guid>1a25d2a39329ea10663823b4a3693d8a</update_guid>
+        <update_guid_history>1a25d2a39329ea10663823b4a3693d8a:-101550442</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-05-22 18:35:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_scope_privilege">sys_scope_privilege</sys_db_object>
+        <sys_id>7332c6ca2b3846aea19487919ab80664</sys_id>
+        <sys_metadata>6064d263c329ea103ab9b0170501312e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_volt2_github_s_0_ci_workspace</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sys_scope_privilege_6064d263c329ea103ab9b0170501312e</sys_update_name>
+        <sys_update_version display_value="sys_scope_privilege_6064d263c329ea103ab9b0170501312e">1625d2a3c329ea103ab9b0170501318b</sys_update_version>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-05-22 18:35:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -4,7 +4,7 @@
         <acls/>
         <active>true</active>
         <annotation/>
-        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=64604000,viewActivatedIn=naturalLanguage</attributes>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=149644000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>27000</authored_on_release_version>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
@@ -15,7 +15,7 @@
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>csm_flow</internal_name>
-        <label_cache>[{"name":"Created_1.current.asset","label":"Trigger - Record Created➛Case Record➛Asset","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"asset","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["asset"]}},{"name":"Created_1.current.location","label":"Trigger - Record Created➛Case Record➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"location","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["location"]}},{"name":"Created_1.current.short_description","label":"Trigger - Record Created➛Case Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"sn_customerservice_case","column_name":"short_description","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["short_description"]}},{"name":"Created_1.current.contact","label":"Trigger - Record Created➛Case Record➛Contact","reference":"customer_contact","reference_display":"Contact","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"contact","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["caller"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Case Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sn_customerservice_case","column_name":"number","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["parent"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Case Record","reference":"sn_customerservice_case","reference_display":"Case","type":"reference","base_type":"reference","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["assignment_group","assigned_to"]},"attributes":{}},{"name":"Created_1.current.assignment_group","label":"Trigger - Record Created➛Case Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"assignment_group","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["assignment_group"]}},{"name":"Created_1.current.assigned_to","label":"Trigger - Record Created➛Case Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"assigned_to","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["assigned_to"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.assigned_to","label":"1 - Create Record➛Work Order Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"wm_order","column_name":"assigned_to","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["assigned_to"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.asset","label":"1 - Create Record➛Work Order Record➛Asset","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","parent_table_name":"wm_order","column_name":"asset","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["asset"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record","label":"1 - Create Record➛Work Order Record","reference":"wm_order","reference_display":"Work Order","type":"reference","base_type":"reference","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["location","parent"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.number","label":"1 - Create Record➛Work Order Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"wm_order","column_name":"number","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["location","parent"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.assignment_group","label":"1 - Create Record➛Work Order Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"wm_order","column_name":"assignment_group","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["assignment_group"]}}]</label_cache>
+        <label_cache>[{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Case Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_customerservice_case","column_name":"sys_id","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["parent"]}},{"name":"Created_1.current.case_report.sys_id","label":"Trigger - Record Created➛Case Record➛Case Report➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_customerservice_case_report","column_name":"sys_id","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["parent"]}},{"name":"Created_1.current.case_report.number","label":"Trigger - Record Created➛Case Record➛Case Report➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sn_customerservice_case_report","column_name":"number","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["parent"]}},{"name":"Created_1.current.asset","label":"Trigger - Record Created➛Case Record➛Asset","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"asset","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["asset"]}},{"name":"Created_1.current.location","label":"Trigger - Record Created➛Case Record➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"location","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["location"]}},{"name":"Created_1.current.short_description","label":"Trigger - Record Created➛Case Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"sn_customerservice_case","column_name":"short_description","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["short_description"]}},{"name":"Created_1.current.contact","label":"Trigger - Record Created➛Case Record➛Contact","reference":"customer_contact","reference_display":"Contact","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"contact","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["caller"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Case Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sn_customerservice_case","column_name":"number","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["parent"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Case Record","reference":"sn_customerservice_case","reference_display":"Case","type":"reference","base_type":"reference","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["assignment_group","assigned_to","parent"]},"attributes":{}},{"name":"Created_1.current.assignment_group","label":"Trigger - Record Created➛Case Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"assignment_group","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["assignment_group"]}},{"name":"Created_1.current.assigned_to","label":"Trigger - Record Created➛Case Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"assigned_to","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["assigned_to"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.assigned_to","label":"1 - Create Record➛Work Order Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"wm_order","column_name":"assigned_to","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["assigned_to"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.asset","label":"1 - Create Record➛Work Order Record➛Asset","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","parent_table_name":"wm_order","column_name":"asset","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["asset"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record","label":"1 - Create Record➛Work Order Record","reference":"wm_order","reference_display":"Work Order","type":"reference","base_type":"reference","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["location","parent"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.number","label":"1 - Create Record➛Work Order Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"wm_order","column_name":"number","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["location","parent"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.assignment_group","label":"1 - Create Record➛Work Order Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"wm_order","column_name":"assignment_group","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["assignment_group"]}}]</label_cache>
         <master_snapshot>a26bc253936de610d942fc4e1dba1003</master_snapshot>
         <master_snapshot_digest/>
         <name>CSM Flow</name>
@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5ab90a9f932de610d942fc4e1dba10d3</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>CSM Flow</sys_name>
         <sys_overrides/>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
@@ -44,7 +44,7 @@
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_hub_flow_5ab90a9f932de610d942fc4e1dba10d3</sys_update_name>
         <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-05-22 16:42:54</sys_updated_on>
+        <sys_updated_on>2025-05-23 17:37:26</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
@@ -85,14 +85,14 @@
         <identifier>5ab90a9f932de610d942fc4e1dba10d3</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>alex.santacruz</sys_created_by>
-        <sys_created_on>2025-05-22 16:42:54</sys_created_on>
-        <sys_id>db2086a3936d2a10d942fc4e1dba10a6</sys_id>
+        <sys_created_on>2025-05-23 16:20:14</sys_created_on>
+        <sys_id>f494c73f9325aa10d942fc4e1dba10e5</sys_id>
         <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-05-22 16:42:54</sys_updated_on>
+        <sys_updated_on>2025-05-23 16:20:14</sys_updated_on>
         <trigger display_value="">0efb8d539329e610d942fc4e1dba10fe</trigger>
     </sys_trigger_runner_mapping>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=5ab90a9f932de610d942fc4e1dba10d3^sys_idNOT INdb2086a3936d2a10d942fc4e1dba10a6"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=5ab90a9f932de610d942fc4e1dba10d3^sys_idNOT INf494c73f9325aa10d942fc4e1dba10e5"/>
     <sys_hub_flow_stage action="delete_multiple" query="flow=5ab90a9f932de610d942fc4e1dba10d3"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=5ab90a9f932de610d942fc4e1dba10d3^sys_idNOT INdeb90a9f932de610d942fc4e1dba10d5"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -316,13 +316,13 @@
         <sys_created_by>alex.santacruz</sys_created_by>
         <sys_created_on>2025-05-21 22:53:28</sys_created_on>
         <sys_id>396b8253936de610d942fc4e1dba107a</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
-        <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-05-22 16:43:33</sys_updated_on>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-05-23 17:57:48</sys_updated_on>
         <ui_id>00984a3c-9314-4a47-a857-49572750042b</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+1VwW7bMAz9lUBnw7DjLmhzG1LktDXAOmSHrjVki06EyZInyUmzIP8+ypLTrK3bDRgGFFhuIh/p954o5mZPOCNTMkkheXeRTsoszbJxkozPz9JikhXpmGUU4IxERNIaEGlpISDvDhHZUNG64LbOlWagMcS4aQTdLUPmi9LfRouQK9dcMA2STG9uI9JQjV0sZqb7R6nf5SRoAQKhnx2pAY521zwb+3BaO7ryCa9imkQE7i1IBkikosJARGoqGbVK78jU6hYDGihbSLE7ItZcWmxIHPbe8B/42fPE4SpAZSX43PGYB6t8uLqkll5j59K2OkDLteIlGO8Jg4q2ws5OYx6waCxX0pd0MkO1Em0tr7wl5NigvxmMtAZJQON0OuZBRnW9VttPPcs5l50lISlUScXxRK3VvGit47MnIKDGRnlNm4bLVd5oteFdMXKp45XAQ1wJtcWPGr6SMS0d8RhtpfEc45ddeEk1dyo+YhssPkTE7MxMUGMetKCJ+ffWMfHKgobc2+BKSs0b+x4/sIFA9xD1w84guRgcrLR4GKRuvs3JoCMJsF/bJMnYfj/DCbDA8jQuW41m2bhLHw53ziUnbRjZIxBs1kpbZ0lH+cWqJ1BXbhHkS9LJHd6OAD3coVTSou1Yh88PA8NI2dYFaASiKLyV7mZXWrXNi/J/QR6LEWXVa3Ud6HB4ukP+m/4vTP/D5fz6G+qX85yDYOaZR9VvZqjxti3k/pE92s4hOVqGZNjQ6d/a0Okk6X5vaE97cW9+TZ/8Iw8s7Nuf7lYfJp8IAAA=</values>
+        <values>H4sIAAAAAAAA/+1VUWvbMBD+K0HPxth1F9q8jZQ8bQ2sI3voWiNb50RMljxJTpoF//edLDnN2ibdYAwK85vuvjt93yfpfLsjnJEJGaeQvLtMx2WWZtlZkpxdnKfFOCvSM5ZRgHMSEUlrQKSlhYC8X0RkTUXrgps6V5qBxhDjphF0uwiZL0p/G81DrlxxwTRIMrm9i0hDNXaxmJnsnqR+l5OgBQiEfnakjnC02+bF2IfD2tG1T3gVkyQi8GBBMkAiFRUGIlJTyahVeksmVrcY0EDZXIrtHrHi0mJD4rAPhv/AbS8Sh6sAlZXgc/tlHqzy4eqKWnqDnUvb6gAtV4qXYLwnDCraCjs9jHnAvLFcSV/SywzVSrS1vPaWkH2D4WQw0hokAY3T6ZgHGdXNSm0+DSxnXPaWhKRQJRX7FbVW86K1js+OgIAaG+U1bRoul3mj1Zr3xciljpcCF3El1AY3NXwpY1o64jHaSuMZxq/68IJq7lR8xDZY3EXEbM1UUGMetaCJ+ffWMfHKgobc2+BKSs0b+x43WEOg20XDZWeQXB69WGnxeJH6+20OLjqSAPu1TZKM7XZTvAEWWJ7GZavRLBv36a67dy45aceRAwLBZqW0dZb0lE9WPYO6cosgX5KO7/F0BOjjHUolLdqOdfj8MHBir63JOUMgisJT6U92qVXbnJT/C3JfjCirXqvrQV33fIb8N/1fmP6Hw/n1NzQM5xkHwcwLj2qYzFDjaVvI/SN7Mp1DcrQIyTCh0781odNx0n9vaE57cW9+TB/8kY8M7LufcXP/Yp8IAAA=</values>
     </sys_hub_action_instance_v2>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
@@ -339,10 +339,10 @@
         <sys_created_by>alex.santacruz</sys_created_by>
         <sys_created_on>2025-05-21 22:53:28</sys_created_on>
         <sys_id>f96b8253936de610d942fc4e1dba107b</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
-        <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-05-22 16:43:33</sys_updated_on>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-05-23 17:57:48</sys_updated_on>
         <ui_id>71cbe422-57c5-4c15-9ce3-d024ab9c9797</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/+1VyW7bMBD9FYNnWaAseb0VCXJqY6AJ0kOaCiNxbBOhlpJUEtfwv3coygvSBG3dokCA6jbb45vh8Ol2w6RgMzaKkA+n0SiPozgecD6YJFE2irNoIGJATFjASiiQMi1kCtPWCNgDqMY5H4vUgrknj5CmVrC+6QKfKn3fm2uBunftE/KVVEJjyWa3dwGrQROSRc1mm2ehX+WlIENFqdeO2Cs87bp+0ff+uLZ36QOVo8tmPGD4ZLEUSEQWoAwGrIBSgK30ms2sbsihEcS8VOt9xkqWlgCZy30y8hsdO+Eub4HUWY4+tjfTbl7evTgHC1eEnNtGd6n5qpI5Gj8TgQtolD079vmEeW1lVfqSts2uulJNUV76kbA9wO56yNMYIoG169Mx79pYXK2qx487lheybEfSBVWVg9pbYK2WWWMdnw1DhQUBpQXUtSyXaa2rB9kWE5ciXCoywoWqHulQI5dlCLkjHtJYIbwg/3nrvgEtXRcfCIaKtwEza3OmwJhDLzTE9GvjmPjOuh5SPwZXkmtZ23d0wAN2dLfBbuEF8umrixVlh0Vqd9wcLTuRIIYoUlt9bjiPxWbD+XSSQJz3p3GU9BNIxn2YDMf9ZDocD8ZDzpNBFmrMabXCo/Lt9gtZaE+EQUsA7jLcBE/BKJsiQ+1ZEKf24pa6aurT+zpgECy9bjL/hNmPivJ/+v90+r8p1z9/VTu5vpCohHnhme20Ggu6doupf3bP9LoL9m66YKfZ0d/S7GjE2+8NKbdv7s0L99E/+hUJv/sOntNXHrUIAAA=</values>
@@ -364,7 +364,7 @@
         <sys_created_on>2025-05-21 22:53:28</sys_created_on>
         <sys_id>216b8253936de610d942fc4e1dba1044</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
@@ -387,7 +387,7 @@
         <sys_created_on>2025-05-21 22:53:28</sys_created_on>
         <sys_id>256b8253936de610d942fc4e1dba1047</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
@@ -413,7 +413,7 @@
         <description>A flow to create a work order and work order task with only a case</description>
         <flow_priority>MEDIUM</flow_priority>
         <internal_name>csm_flow</internal_name>
-        <label_cache>[{"name":"Created_1.current.asset","label":"Trigger - Record Created➛Case Record➛Asset","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"asset","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["asset"]}},{"name":"Created_1.current.location","label":"Trigger - Record Created➛Case Record➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"location","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["location"]}},{"name":"Created_1.current.short_description","label":"Trigger - Record Created➛Case Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"sn_customerservice_case","column_name":"short_description","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["short_description"]}},{"name":"Created_1.current.contact","label":"Trigger - Record Created➛Case Record➛Contact","reference":"customer_contact","reference_display":"Contact","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"contact","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["caller"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Case Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sn_customerservice_case","column_name":"number","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["parent"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Case Record","reference":"sn_customerservice_case","reference_display":"Case","type":"reference","base_type":"reference","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["assignment_group","assigned_to"]},"attributes":{}},{"name":"Created_1.current.assignment_group","label":"Trigger - Record Created➛Case Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"assignment_group","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["assignment_group"]}},{"name":"Created_1.current.assigned_to","label":"Trigger - Record Created➛Case Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"assigned_to","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["assigned_to"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.assigned_to","label":"1 - Create Record➛Work Order Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"wm_order","column_name":"assigned_to","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["assigned_to"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.asset","label":"1 - Create Record➛Work Order Record➛Asset","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","parent_table_name":"wm_order","column_name":"asset","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["asset"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record","label":"1 - Create Record➛Work Order Record","reference":"wm_order","reference_display":"Work Order","type":"reference","base_type":"reference","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["location","parent"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.number","label":"1 - Create Record➛Work Order Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"wm_order","column_name":"number","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["location","parent"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.assignment_group","label":"1 - Create Record➛Work Order Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"wm_order","column_name":"assignment_group","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["assignment_group"]}}]</label_cache>
+        <label_cache>[{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Case Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_customerservice_case","column_name":"sys_id","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["parent"]}},{"name":"Created_1.current.case_report.sys_id","label":"Trigger - Record Created➛Case Record➛Case Report➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_customerservice_case_report","column_name":"sys_id","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["parent"]}},{"name":"Created_1.current.case_report.number","label":"Trigger - Record Created➛Case Record➛Case Report➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sn_customerservice_case_report","column_name":"number","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["parent"]}},{"name":"Created_1.current.asset","label":"Trigger - Record Created➛Case Record➛Asset","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"asset","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["asset"]}},{"name":"Created_1.current.location","label":"Trigger - Record Created➛Case Record➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"location","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["location"]}},{"name":"Created_1.current.short_description","label":"Trigger - Record Created➛Case Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"sn_customerservice_case","column_name":"short_description","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["short_description"]}},{"name":"Created_1.current.contact","label":"Trigger - Record Created➛Case Record➛Contact","reference":"customer_contact","reference_display":"Contact","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"contact","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["caller"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Case Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sn_customerservice_case","column_name":"number","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["parent"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Case Record","reference":"sn_customerservice_case","reference_display":"Case","type":"reference","base_type":"reference","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["assignment_group","assigned_to","parent"]},"attributes":{}},{"name":"Created_1.current.assignment_group","label":"Trigger - Record Created➛Case Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"assignment_group","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["assignment_group"]}},{"name":"Created_1.current.assigned_to","label":"Trigger - Record Created➛Case Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_customerservice_case","column_name":"assigned_to","usedInstances":{"00984a3c-9314-4a47-a857-49572750042b":["assigned_to"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.assigned_to","label":"1 - Create Record➛Work Order Record➛Assigned to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"wm_order","column_name":"assigned_to","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["assigned_to"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.asset","label":"1 - Create Record➛Work Order Record➛Asset","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","parent_table_name":"wm_order","column_name":"asset","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["asset"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record","label":"1 - Create Record➛Work Order Record","reference":"wm_order","reference_display":"Work Order","type":"reference","base_type":"reference","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["location","parent"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.number","label":"1 - Create Record➛Work Order Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"wm_order","column_name":"number","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["location","parent"]}},{"name":"00984a3c-9314-4a47-a857-49572750042b.record.assignment_group","label":"1 - Create Record➛Work Order Record➛Assignment group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"wm_order","column_name":"assignment_group","usedInstances":{"71cbe422-57c5-4c15-9ce3-d024ab9c9797":["assignment_group"]}}]</label_cache>
         <master>true</master>
         <name>CSM Flow</name>
         <natlang/>
@@ -430,7 +430,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a26bc253936de610d942fc4e1dba1003</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -438,7 +438,7 @@
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-05-22 16:42:54</sys_updated_on>
+        <sys_updated_on>2025-05-23 16:20:14</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow_snapshot>
@@ -522,14 +522,14 @@
         <sys_created_by>alex.santacruz</sys_created_by>
         <sys_created_on>2025-05-21 22:53:32</sys_created_on>
         <sys_id>266bc253936de610d942fc4e1dba1010</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-05-22 16:42:54</sys_updated_on>
+        <sys_updated_on>2025-05-23 16:20:13</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -606,14 +606,14 @@
         <sys_created_by>alex.santacruz</sys_created_by>
         <sys_created_on>2025-05-21 22:53:32</sys_created_on>
         <sys_id>2a6bc253936de610d942fc4e1dba1005</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-05-22 16:42:54</sys_updated_on>
+        <sys_updated_on>2025-05-23 16:20:13</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -667,13 +667,13 @@
         <sys_created_by>alex.santacruz</sys_created_by>
         <sys_created_on>2025-05-21 22:53:32</sys_created_on>
         <sys_id>626bc253936de610d942fc4e1dba101c</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-05-21 22:53:32</sys_updated_on>
+        <sys_updated_on>2025-05-23 16:20:13</sys_updated_on>
         <ui_id>00984a3c-9314-4a47-a857-49572750042b</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+1VwW7bMAz9lUBnw7DjLmhzG1LktDXAOmSHrjVki06EyZInyUmzIP8+ypLTrK3bDRgGFFhuIh/p954o5mZPOCNTMkkheXeRTsoszbJxkozPz9JikhXpmGUU4IxERNIaEGlpISDvDhHZUNG64LbOlWagMcS4aQTdLUPmi9LfRouQK9dcMA2STG9uI9JQjV0sZqb7R6nf5SRoAQKhnx2pAY521zwb+3BaO7ryCa9imkQE7i1IBkikosJARGoqGbVK78jU6hYDGihbSLE7ItZcWmxIHPbe8B/42fPE4SpAZSX43PGYB6t8uLqkll5j59K2OkDLteIlGO8Jg4q2ws5OYx6waCxX0pd0MkO1Em0tr7wl5NigvxmMtAZJQON0OuZBRnW9VttPPcs5l50lISlUScXxRK3VvGit47MnIKDGRnlNm4bLVd5oteFdMXKp45XAQ1wJtcWPGr6SMS0d8RhtpfEc45ddeEk1dyo+YhssPkTE7MxMUGMetKCJ+ffWMfHKgobc2+BKSs0b+x4/sIFA9xD1w84guRgcrLR4GKRuvs3JoCMJsF/bJMnYfj/DCbDA8jQuW41m2bhLHw53ziUnbRjZIxBs1kpbZ0lH+cWqJ1BXbhHkS9LJHd6OAD3coVTSou1Yh88PA8NI2dYFaASiKLyV7mZXWrXNi/J/QR6LEWXVa3Ud6HB4ukP+m/4vTP/D5fz6G+qX85yDYOaZR9VvZqjxti3k/pE92s4hOVqGZNjQ6d/a0Okk6X5vaE97cW9+TZ/8Iw8s7Nuf7lYfJp8IAAA=</values>
+        <values>H4sIAAAAAAAA/+1VUWvbMBD+K0HPxth1F9q8jZQ8bQ2sI3voWiNb50RMljxJTpoF//edLDnN2ibdYAwK85vuvjt93yfpfLsjnJEJGaeQvLtMx2WWZtlZkpxdnKfFOCvSM5ZRgHMSEUlrQKSlhYC8X0RkTUXrgps6V5qBxhDjphF0uwiZL0p/G81DrlxxwTRIMrm9i0hDNXaxmJnsnqR+l5OgBQiEfnakjnC02+bF2IfD2tG1T3gVkyQi8GBBMkAiFRUGIlJTyahVeksmVrcY0EDZXIrtHrHi0mJD4rAPhv/AbS8Sh6sAlZXgc/tlHqzy4eqKWnqDnUvb6gAtV4qXYLwnDCraCjs9jHnAvLFcSV/SywzVSrS1vPaWkH2D4WQw0hokAY3T6ZgHGdXNSm0+DSxnXPaWhKRQJRX7FbVW86K1js+OgIAaG+U1bRoul3mj1Zr3xciljpcCF3El1AY3NXwpY1o64jHaSuMZxq/68IJq7lR8xDZY3EXEbM1UUGMetaCJ+ffWMfHKgobc2+BKSs0b+x43WEOg20XDZWeQXB69WGnxeJH6+20OLjqSAPu1TZKM7XZTvAEWWJ7GZavRLBv36a67dy45aceRAwLBZqW0dZb0lE9WPYO6cosgX5KO7/F0BOjjHUolLdqOdfj8MHBir63JOUMgisJT6U92qVXbnJT/C3JfjCirXqvrQV33fIb8N/1fmP6Hw/n1NzQM5xkHwcwLj2qYzFDjaVvI/SN7Mp1DcrQIyTCh0781odNx0n9vaE57cW9+TB/8kY8M7LufcXP/Yp8IAAA=</values>
     </sys_hub_action_instance_v2>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
@@ -715,7 +715,7 @@
         <sys_created_on>2025-05-21 22:53:32</sys_created_on>
         <sys_id>aa6bc253936de610d942fc4e1dba100d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
@@ -738,7 +738,7 @@
         <sys_created_on>2025-05-21 22:53:32</sys_created_on>
         <sys_id>ea6bc253936de610d942fc4e1dba1014</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
@@ -760,17 +760,17 @@
         <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"ea6bc253936de610d942fc4e1dba1027","name":"plan","plan_signature":null}}</plan>
         <plan_id>5ab90a9f932de610d942fc4e1dba10d3</plan_id>
-        <snapshot>ac504ea3936d2a10d942fc4e1dba10e9</snapshot>
+        <snapshot>86ea93bf93a5aa10d942fc4e1dba1019</snapshot>
         <sys_created_by>alex.santacruz</sys_created_by>
         <sys_created_on>2025-05-21 22:53:32</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ea6bc253936de610d942fc4e1dba1027</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-05-22 16:41:50</sys_updated_on>
+        <sys_updated_on>2025-05-23 16:20:14</sys_updated_on>
         <trigger display_value="">0efb8d539329e610d942fc4e1dba10fe</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=5ab90a9f932de610d942fc4e1dba10d3"/>

@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <context_profiles/>
+        <description/>
+        <dialog_acts_enabled>true</dialog_acts_enabled>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <foundational>false</foundational>
+        <graph>{
+  "graph_api_version": "1.0.78",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "1693a543e6294e59b90c302bc467af88": {
+          "id": "1693a543e6294e59b90c302bc467af88",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "a03a4cd0d2384c6a9892bc9188f53e43": {
+          "id": "a03a4cd0d2384c6a9892bc9188f53e43",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "1356d0053afa4fc9b329689ab83d90e8": {
+          "name": "Problem",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What is your problem?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "263e82981e0f4fab801c94a9b4ab2d14",
+          "detailDescription": "",
+          "id": "1356d0053afa4fc9b329689ab83d90e8",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "794890f907e3427e881c83994f3f4c1d": {
+          "id": "794890f907e3427e881c83994f3f4c1d",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "757490c7ea7c4c9b909a4b82bf414b3b": {
+          "id": "757490c7ea7c4c9b909a4b82bf414b3b",
+          "stepType": "CrudAction",
+          "name": "",
+          "template": {},
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "e471c7c4bf7141e885be77b80b721512"
+        },
+        "1cf223184d0841829855c1caf5e5c3d7": {
+          "id": "1cf223184d0841829855c1caf5e5c3d7",
+          "stepType": "ImplicitEnd"
+        },
+        "b2a433534bbe4b5bba9461f73db7ac54": {
+          "id": "b2a433534bbe4b5bba9461f73db7ac54",
+          "stepType": "ImplicitEnd"
+        },
+        "4d50e26fcc74421ab0e3c0f40efbb16c": {
+          "id": "4d50e26fcc74421ab0e3c0f40efbb16c",
+          "stepType": "ImplicitEnd"
+        },
+        "df7947d1c7b644edbb5ebb3edf1c39ef": {
+          "id": "df7947d1c7b644edbb5ebb3edf1c39ef",
+          "stepType": "ImplicitEnd"
+        },
+        "a5e0ad15bea04c8ea162a36572c3bac3": {
+          "id": "a5e0ad15bea04c8ea162a36572c3bac3",
+          "stepType": "ImplicitEnd"
+        },
+        "2ca4c9abeac84313ab7897ebc87cacde": {
+          "id": "2ca4c9abeac84313ab7897ebc87cacde",
+          "stepType": "CrudAction",
+          "name": "",
+          "template": {},
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "f77510723a1943619740357bb477ea5d"
+        },
+        "d89b98bed3ec46c5b305bf2c2a83a805": {
+          "id": "d89b98bed3ec46c5b305bf2c2a83a805",
+          "stepType": "CrudAction",
+          "name": "Laptop Case",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "location",
+                  "expression": "{{vaInputs.user.city}}",
+                  "id": "31ef8049697047f3913aedaa3c594765"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "asset",
+                  "expression": "6e268f93c3e5aa103ab9b017050131a4",
+                  "id": "f304264c554647f3b01c2b0414f8f6f6"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "short_description",
+                  "expression": "",
+                  "id": "47fa380d5c8a40a3852fa96038c1be7e"
+                }
+              ]
+            },
+            "queryString": "location={{vaInputs.user.city}}^asset=6e268f93c3e5aa103ab9b017050131a4^short_description="
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "fd5959ef7f4f4460ac886c521c89aec3"
+        },
+        "8f85a6f8afb8432d898fed7fb53b7711": {
+          "id": "8f85a6f8afb8432d898fed7fb53b7711",
+          "stepType": "CrudAction",
+          "name": "",
+          "template": {},
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "c300c1e57ee845d086e667f06a72dcf7"
+        },
+        "4181a73c0ae04884990962c51a5b6bc2": {
+          "id": "4181a73c0ae04884990962c51a5b6bc2",
+          "stepType": "CrudAction",
+          "name": "",
+          "template": {},
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "58e32abd4fa244dd9e0922eb976c4a34"
+        },
+        "64f3b9e6d7214dbda03a88e74ef39cb0": {
+          "id": "64f3b9e6d7214dbda03a88e74ef39cb0",
+          "stepType": "CrudAction",
+          "name": "Adapter operation",
+          "template": {},
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "8f74c0ead24e4978b80ed250a3499f7d"
+        }
+      },
+      "edges": [
+        {
+          "id": "815d6b4d29624290af2cd28dca414d5e",
+          "edgeType": "Edge",
+          "source": "1693a543e6294e59b90c302bc467af88",
+          "target": "1356d0053afa4fc9b329689ab83d90e8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "626ded80bd76481180d81bf0b862ecb1",
+          "edgeType": "Edge",
+          "source": "1356d0053afa4fc9b329689ab83d90e8",
+          "target": "794890f907e3427e881c83994f3f4c1d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "eaafc50abe0b409d93a6a87258f5cd12",
+          "edgeType": "Branch",
+          "source": "794890f907e3427e881c83994f3f4c1d",
+          "target": "757490c7ea7c4c9b909a4b82bf414b3b",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem_2=Charger",
+            "mode": "query"
+          },
+          "label": "Charger"
+        },
+        {
+          "id": "756655b128c448f9bc13fbec9437f017",
+          "edgeType": "Edge",
+          "source": "757490c7ea7c4c9b909a4b82bf414b3b",
+          "target": "a03a4cd0d2384c6a9892bc9188f53e43",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "435fcb8d5cd94bf3ad16e30a42699e01",
+          "edgeType": "Branch",
+          "source": "794890f907e3427e881c83994f3f4c1d",
+          "target": "2ca4c9abeac84313ab7897ebc87cacde",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem_2=Software",
+            "mode": "query"
+          },
+          "label": "Software"
+        },
+        {
+          "id": "9a702b6f09eb433aa8b157c51397e4ef",
+          "edgeType": "Edge",
+          "source": "2ca4c9abeac84313ab7897ebc87cacde",
+          "target": "1cf223184d0841829855c1caf5e5c3d7",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c8cd44ecb6924858bea2466f4a3641ab",
+          "edgeType": "Branch",
+          "source": "794890f907e3427e881c83994f3f4c1d",
+          "target": "d89b98bed3ec46c5b305bf2c2a83a805",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem_2=Laptop",
+            "mode": "query"
+          },
+          "label": "Laptop"
+        },
+        {
+          "id": "43643b8cfb81499ba9ec483904a11916",
+          "edgeType": "Edge",
+          "source": "d89b98bed3ec46c5b305bf2c2a83a805",
+          "target": "4d50e26fcc74421ab0e3c0f40efbb16c",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "f5c89a085a214c8793bff23714d7976a",
+          "edgeType": "Branch",
+          "source": "794890f907e3427e881c83994f3f4c1d",
+          "target": "8f85a6f8afb8432d898fed7fb53b7711",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem_2=Monitor",
+            "mode": "query"
+          },
+          "label": "Monitor"
+        },
+        {
+          "id": "b2f0bb79488a49bdb552de6bfee698da",
+          "edgeType": "Edge",
+          "source": "8f85a6f8afb8432d898fed7fb53b7711",
+          "target": "df7947d1c7b644edbb5ebb3edf1c39ef",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "f5f2eddfebcc4f069cc34387331234a7",
+          "edgeType": "Branch",
+          "source": "794890f907e3427e881c83994f3f4c1d",
+          "target": "4181a73c0ae04884990962c51a5b6bc2",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem_2=Headset",
+            "mode": "query"
+          },
+          "label": "Headset"
+        },
+        {
+          "id": "af28315b1d8c4f88bb00d9267191ce69",
+          "edgeType": "Edge",
+          "source": "4181a73c0ae04884990962c51a5b6bc2",
+          "target": "a5e0ad15bea04c8ea162a36572c3bac3",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "9f1461f5cde344f9b480a1843583c2a5",
+          "edgeType": "Branch",
+          "source": "794890f907e3427e881c83994f3f4c1d",
+          "target": "64f3b9e6d7214dbda03a88e74ef39cb0",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem_2=Adapter",
+            "mode": "query"
+          },
+          "label": "Adapter"
+        },
+        {
+          "id": "dba1236e30cb4d1cbfb484810b4d8781",
+          "edgeType": "Edge",
+          "source": "64f3b9e6d7214dbda03a88e74ef39cb0",
+          "target": "b2a433534bbe4b5bba9461f73db7ac54",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "263e82981e0f4fab801c94a9b4ab2d14": {
+      "id": "263e82981e0f4fab801c94a9b4ab2d14",
+      "name": "problem_2",
+      "label": "Problem (2)",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Laptop",
+          "value": "Laptop"
+        },
+        {
+          "label": "Monitor",
+          "value": "Monitor"
+        },
+        {
+          "label": "Headset",
+          "value": "Headset",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Adapter",
+          "value": "Adapter",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Charger",
+          "value": "Charger",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Software",
+          "value": "Software",
+          "checked": true,
+          "meta": {}
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "1356d0053afa4fc9b329689ab83d90e8",
+      "isHidden": false
+    },
+    "e471c7c4bf7141e885be77b80b721512": {
+      "id": "e471c7c4bf7141e885be77b80b721512",
+      "name": "(unnamed)",
+      "label": "",
+      "varType": "reference",
+      "table": "",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "757490c7ea7c4c9b909a4b82bf414b3b",
+      "isHidden": false
+    },
+    "f77510723a1943619740357bb477ea5d": {
+      "id": "f77510723a1943619740357bb477ea5d",
+      "name": "(unnamed)",
+      "label": "",
+      "varType": "reference",
+      "table": "",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "2ca4c9abeac84313ab7897ebc87cacde",
+      "isHidden": false
+    },
+    "fd5959ef7f4f4460ac886c521c89aec3": {
+      "id": "fd5959ef7f4f4460ac886c521c89aec3",
+      "name": "laptop_case",
+      "label": "Laptop Case",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "d89b98bed3ec46c5b305bf2c2a83a805",
+      "isHidden": false
+    },
+    "c300c1e57ee845d086e667f06a72dcf7": {
+      "id": "c300c1e57ee845d086e667f06a72dcf7",
+      "name": "(unnamed)",
+      "label": "",
+      "varType": "reference",
+      "table": "",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "8f85a6f8afb8432d898fed7fb53b7711",
+      "isHidden": false
+    },
+    "58e32abd4fa244dd9e0922eb976c4a34": {
+      "id": "58e32abd4fa244dd9e0922eb976c4a34",
+      "name": "(unnamed)",
+      "label": "",
+      "varType": "reference",
+      "table": "",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "4181a73c0ae04884990962c51a5b6bc2",
+      "isHidden": false
+    },
+    "8f74c0ead24e4978b80ed250a3499f7d": {
+      "id": "8f74c0ead24e4978b80ed250a3499f7d",
+      "name": "adapter_operation",
+      "label": "Adapter Operation",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "64f3b9e6d7214dbda03a88e74ef39cb0",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <key_phrases>CSM_Virtual_Agent</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <model_type>nlu_keyword</model_type>
+        <modify_confirmation_enabled>true</modify_confirmation_enabled>
+        <name>CSM_Virtual_Agent</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <root_topic_id/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-05-23 15:16:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8816b23b93e1aa10d942fc4e1dba10a4</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>CSM_Virtual_Agent</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cb_topic_8816b23b93e1aa10d942fc4e1dba10a4</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-05-23 16:22:37</sys_updated_on>
+        <title>CSM_Virtual_Agent</title>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+    </sys_cb_topic>
+    <sys_translated_text action="delete_multiple" query="documentkey=8816b23b93e1aa10d942fc4e1dba10a4"/>
+</record_update>

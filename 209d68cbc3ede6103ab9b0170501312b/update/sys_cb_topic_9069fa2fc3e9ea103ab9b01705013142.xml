@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <context_profiles/>
+        <description>Testing the ChatBot to create a new case</description>
+        <dialog_acts_enabled>true</dialog_acts_enabled>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <foundational>false</foundational>
+        <graph>{
+  "graph_api_version": "1.0.78",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "d73a700d8bd04e37bb16b54c1de7113c": {
+          "id": "d73a700d8bd04e37bb16b54c1de7113c",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Welcome to Virtual Agent"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "98ae36508bad4232bffd2477ceac71f3": {
+          "id": "98ae36508bad4232bffd2477ceac71f3",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "6a119b1f95db47a78945a9ea9c6b2917": {
+          "name": "Problem",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Tell me what is your problem"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "2758426a7dd24918b89947c0344978d1",
+          "detailDescription": "",
+          "id": "6a119b1f95db47a78945a9ea9c6b2917",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "e934c3a51e5a4d8ebdd2490be0b59ad6": {
+          "id": "e934c3a51e5a4d8ebdd2490be0b59ad6",
+          "stepType": "Decision",
+          "name": "Categories"
+        },
+        "8ec6cf7b68fb464399ffa7b6edfd4bda": {
+          "id": "8ec6cf7b68fb464399ffa7b6edfd4bda",
+          "stepType": "ImplicitEnd"
+        },
+        "53c9646996ad45d78fe6556638bdb8c0": {
+          "id": "53c9646996ad45d78fe6556638bdb8c0",
+          "stepType": "ImplicitEnd"
+        },
+        "6fc34e8e4bac47ada3429ec900079d7b": {
+          "id": "6fc34e8e4bac47ada3429ec900079d7b",
+          "stepType": "ImplicitEnd"
+        },
+        "b899837742ad4e80be262834ea68b35c": {
+          "id": "b899837742ad4e80be262834ea68b35c",
+          "stepType": "ImplicitEnd"
+        },
+        "0fad8cb5397a46559d07b13b9a40583c": {
+          "id": "0fad8cb5397a46559d07b13b9a40583c",
+          "stepType": "ImplicitEnd"
+        },
+        "e25d18324c6a4dd7ad376997ef4d08ea": {
+          "id": "e25d18324c6a4dd7ad376997ef4d08ea",
+          "stepType": "CrudAction",
+          "name": "test_name",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "assigned_to",
+                  "expression": "",
+                  "id": "35eb6250127243859426bbea357658de"
+                }
+              ]
+            },
+            "queryString": "assigned_to="
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "4dfde2f1880848859b878d7398082343"
+        },
+        "38db216e91f54647aa56c448753a8c8c": {
+          "id": "38db216e91f54647aa56c448753a8c8c",
+          "stepType": "CrudAction",
+          "name": "test_name",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "assigned_to",
+                  "expression": "",
+                  "id": "9bfe7ecd2b61448b85999f3aaeed6d10"
+                }
+              ]
+            },
+            "queryString": "assigned_to="
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "ee25e8ea6ca449529333d0367b8a131b"
+        },
+        "411c906628904445bc5b31725bc8a7ed": {
+          "id": "411c906628904445bc5b31725bc8a7ed",
+          "stepType": "CrudAction",
+          "name": "test_name",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "assigned_to",
+                  "expression": "",
+                  "id": "71c096ea28d74f679d8b01589ab53375"
+                }
+              ]
+            },
+            "queryString": "assigned_to="
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "5c11cbc0ca954387b1c8c17ac23294fb"
+        },
+        "87174d76a2284029b8d509962e60baac": {
+          "id": "87174d76a2284029b8d509962e60baac",
+          "stepType": "CrudAction",
+          "name": "test_name",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "assigned_to",
+                  "expression": "",
+                  "id": "d799e1470bec4effaaa0d429b83c6dd2"
+                }
+              ]
+            },
+            "queryString": "assigned_to="
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "4f1b32421760459d8fe654d3e95ec761"
+        },
+        "c6fe19dab7a04b5684969a718e09bbcf": {
+          "id": "c6fe19dab7a04b5684969a718e09bbcf",
+          "stepType": "CrudAction",
+          "name": "test_name",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "assigned_to",
+                  "expression": "",
+                  "id": "5d243735c676433cbb6b4f13275a0121"
+                }
+              ]
+            },
+            "queryString": "assigned_to="
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "d1aed2e672b847adb9843510e6814d83"
+        },
+        "9be8a42847a54842a8fbb74d6d895dc8": {
+          "id": "9be8a42847a54842a8fbb74d6d895dc8",
+          "stepType": "CrudAction",
+          "name": "test_name",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "assigned_to",
+                  "expression": "d73df73ac369e6103ab9b01705013190",
+                  "id": "073e327eae224078a601690c730361a9"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "short_description",
+                  "expression": "testing",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": "testing"
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "be6bd7aead29484ebab2aff3f515bb5d"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "assignment_group",
+                  "expression": "17535d1f9329e610d942fc4e1dba109f",
+                  "id": "f877a4cdef6d436bbbcd50c47ce91815"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "asset",
+                  "expression": "8bf32623c3a9ea103ab9b01705013161",
+                  "id": "9f51d09ee47247e9b5bd973573e7d0b3"
+                }
+              ]
+            },
+            "queryString": "assigned_to=d73df73ac369e6103ab9b01705013190^short_description=testing^assignment_group=17535d1f9329e610d942fc4e1dba109f^asset=8bf32623c3a9ea103ab9b01705013161"
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "545d17490bf14e6a971bc96d7dacd0a6"
+        },
+        "e2a29d0eccb24aee96e3b8dfbf4aac84": {
+          "id": "e2a29d0eccb24aee96e3b8dfbf4aac84",
+          "stepType": "TextOutput",
+          "name": "Message",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A new case has been created!"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "bf85cedd4ddf40bbb8cbe6ca735f1492"
+            }
+          ],
+          "isCollapsible": true,
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "725c9ca45f94466fa86a749af011a283": {
+          "id": "725c9ca45f94466fa86a749af011a283",
+          "stepType": "TextOutput",
+          "name": "Message",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A new Headset case has been created"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "a3c6829d43e24c9aa0813ca9f36a9ac3"
+            }
+          ],
+          "isCollapsible": true,
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "bc98e5e877b84339ab53dd9913bab368": {
+          "id": "bc98e5e877b84339ab53dd9913bab368",
+          "stepType": "TextOutput",
+          "name": "Message",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A new monitor case has been created"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "40285f49f36a49f4ad76cc8fa145a7d7"
+            }
+          ],
+          "isCollapsible": true,
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "51eebc072599450496582e60fe921b79": {
+          "id": "51eebc072599450496582e60fe921b79",
+          "stepType": "TextOutput",
+          "name": "Message",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A new software case has been created"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "2c52b03264314efabc03027b20bfafce"
+            }
+          ],
+          "isCollapsible": true,
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "c7681e8874a042a6b7ec92d2183eeeca": {
+          "id": "c7681e8874a042a6b7ec92d2183eeeca",
+          "stepType": "TextOutput",
+          "name": "Message",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A new  adapter case has been created"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "bb86de8e8da84d8fbbf8726c05d9dc90"
+            }
+          ],
+          "isCollapsible": true,
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "20fcdf139359423da52f3160e5fd4410": {
+          "id": "20fcdf139359423da52f3160e5fd4410",
+          "stepType": "TextOutput",
+          "name": "Message",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "A new software case has been created"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "e0faa3923f594a54bd7c9c83970d2e06"
+            }
+          ],
+          "isCollapsible": true,
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "0c0c0917058a46e78d57739100d9ae2c",
+          "edgeType": "Edge",
+          "source": "d73a700d8bd04e37bb16b54c1de7113c",
+          "target": "6a119b1f95db47a78945a9ea9c6b2917",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d9dd8f5f0420420a90567bff918bc713",
+          "edgeType": "Edge",
+          "source": "6a119b1f95db47a78945a9ea9c6b2917",
+          "target": "e934c3a51e5a4d8ebdd2490be0b59ad6",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "89e922c848ac48569920be8c9eb9084d",
+          "edgeType": "Branch",
+          "source": "e934c3a51e5a4d8ebdd2490be0b59ad6",
+          "target": "e25d18324c6a4dd7ad376997ef4d08ea",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem=Charger",
+            "mode": "query"
+          },
+          "label": "charger"
+        },
+        {
+          "id": "ca7dc0f1f5444469982061f454309c3b",
+          "edgeType": "Branch",
+          "source": "e934c3a51e5a4d8ebdd2490be0b59ad6",
+          "target": "38db216e91f54647aa56c448753a8c8c",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem=Headset",
+            "mode": "query"
+          },
+          "label": "Headset"
+        },
+        {
+          "id": "c876621855b04915ac42e723f1d146f3",
+          "edgeType": "Branch",
+          "source": "e934c3a51e5a4d8ebdd2490be0b59ad6",
+          "target": "411c906628904445bc5b31725bc8a7ed",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem=Monitor",
+            "mode": "query"
+          },
+          "label": "Monitor"
+        },
+        {
+          "id": "33960628eeeb40eeb345d1c3eda19c3a",
+          "edgeType": "Branch",
+          "source": "e934c3a51e5a4d8ebdd2490be0b59ad6",
+          "target": "87174d76a2284029b8d509962e60baac",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem=Software",
+            "mode": "query"
+          },
+          "label": "Software"
+        },
+        {
+          "id": "efffbb338cfa44f295ba468b6dfa4557",
+          "edgeType": "Branch",
+          "source": "e934c3a51e5a4d8ebdd2490be0b59ad6",
+          "target": "c6fe19dab7a04b5684969a718e09bbcf",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem=Adapter",
+            "mode": "query"
+          },
+          "label": "Adapter"
+        },
+        {
+          "id": "d0afd4e1d30f4cdc879b29cf82275ced",
+          "edgeType": "Branch",
+          "source": "e934c3a51e5a4d8ebdd2490be0b59ad6",
+          "target": "9be8a42847a54842a8fbb74d6d895dc8",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem=Computer",
+            "mode": "query"
+          },
+          "label": "Computer"
+        },
+        {
+          "id": "569702adce054a30892550c3e69a658e",
+          "edgeType": "Edge",
+          "source": "9be8a42847a54842a8fbb74d6d895dc8",
+          "target": "e2a29d0eccb24aee96e3b8dfbf4aac84",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d1b2efb3ce69428eb5bcf1268d6cdf65",
+          "edgeType": "Edge",
+          "source": "e2a29d0eccb24aee96e3b8dfbf4aac84",
+          "target": "b899837742ad4e80be262834ea68b35c",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "84ac93ca8890463da2bdfc36298b1327",
+          "edgeType": "Edge",
+          "source": "38db216e91f54647aa56c448753a8c8c",
+          "target": "725c9ca45f94466fa86a749af011a283",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "9d8cd68c61ab4135aa67a989a8032f0d",
+          "edgeType": "Edge",
+          "source": "725c9ca45f94466fa86a749af011a283",
+          "target": "98ae36508bad4232bffd2477ceac71f3",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "bf69bfd1259e4a4ea7fa756823ec5bda",
+          "edgeType": "Edge",
+          "source": "411c906628904445bc5b31725bc8a7ed",
+          "target": "bc98e5e877b84339ab53dd9913bab368",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b3cdf5c3f4114a20bc5ad721f3d2524e",
+          "edgeType": "Edge",
+          "source": "bc98e5e877b84339ab53dd9913bab368",
+          "target": "8ec6cf7b68fb464399ffa7b6edfd4bda",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d5e7c273f06c4741ab0075b9d75ee2c2",
+          "edgeType": "Edge",
+          "source": "87174d76a2284029b8d509962e60baac",
+          "target": "51eebc072599450496582e60fe921b79",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "5a720df4426b4034a7b78e3097c20de1",
+          "edgeType": "Edge",
+          "source": "51eebc072599450496582e60fe921b79",
+          "target": "6fc34e8e4bac47ada3429ec900079d7b",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "775d0c3f834340ca9451462c6bf06d79",
+          "edgeType": "Edge",
+          "source": "c6fe19dab7a04b5684969a718e09bbcf",
+          "target": "c7681e8874a042a6b7ec92d2183eeeca",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "70e22ed3a2664e39b0f44e2d7fa5046f",
+          "edgeType": "Edge",
+          "source": "c7681e8874a042a6b7ec92d2183eeeca",
+          "target": "0fad8cb5397a46559d07b13b9a40583c",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c72fae14fa18424fad2a6357728422ad",
+          "edgeType": "Edge",
+          "source": "e25d18324c6a4dd7ad376997ef4d08ea",
+          "target": "20fcdf139359423da52f3160e5fd4410",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "6f38bfbe2dc0449295b6291a299b69dc",
+          "edgeType": "Edge",
+          "source": "20fcdf139359423da52f3160e5fd4410",
+          "target": "53c9646996ad45d78fe6556638bdb8c0",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "2758426a7dd24918b89947c0344978d1": {
+      "id": "2758426a7dd24918b89947c0344978d1",
+      "name": "problem",
+      "label": "Problem",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Computer",
+          "value": "Computer"
+        },
+        {
+          "label": "Headset",
+          "value": "Headset"
+        },
+        {
+          "label": "Monitor",
+          "value": "Monitor",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Charger",
+          "value": "Charger",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Adapter",
+          "value": "Adapter",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Software",
+          "value": "Software",
+          "checked": true,
+          "meta": {}
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "6a119b1f95db47a78945a9ea9c6b2917",
+      "isHidden": false
+    },
+    "4dfde2f1880848859b878d7398082343": {
+      "id": "4dfde2f1880848859b878d7398082343",
+      "name": "test_name",
+      "label": "Test_name",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "e25d18324c6a4dd7ad376997ef4d08ea",
+      "isHidden": false
+    },
+    "ee25e8ea6ca449529333d0367b8a131b": {
+      "id": "ee25e8ea6ca449529333d0367b8a131b",
+      "name": "test_name_2",
+      "label": "Test_name (2)",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "38db216e91f54647aa56c448753a8c8c",
+      "isHidden": false
+    },
+    "5c11cbc0ca954387b1c8c17ac23294fb": {
+      "id": "5c11cbc0ca954387b1c8c17ac23294fb",
+      "name": "test_name_6",
+      "label": "Test_name (6)",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "411c906628904445bc5b31725bc8a7ed",
+      "isHidden": false
+    },
+    "4f1b32421760459d8fe654d3e95ec761": {
+      "id": "4f1b32421760459d8fe654d3e95ec761",
+      "name": "test_name_5",
+      "label": "Test_name (5)",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "87174d76a2284029b8d509962e60baac",
+      "isHidden": false
+    },
+    "d1aed2e672b847adb9843510e6814d83": {
+      "id": "d1aed2e672b847adb9843510e6814d83",
+      "name": "test_name_4",
+      "label": "Test_name (4)",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "c6fe19dab7a04b5684969a718e09bbcf",
+      "isHidden": false
+    },
+    "545d17490bf14e6a971bc96d7dacd0a6": {
+      "id": "545d17490bf14e6a971bc96d7dacd0a6",
+      "name": "test_name_3",
+      "label": "Test_name (3)",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "9be8a42847a54842a8fbb74d6d895dc8",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <key_phrases>TestChatBot 2.0</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <model_type>nlu_keyword</model_type>
+        <modify_confirmation_enabled>true</modify_confirmation_enabled>
+        <name>TestChatBot 2.0</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <root_topic_id/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-05-22 20:52:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>9069fa2fc3e9ea103ab9b01705013142</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>TestChatBot 2.0</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cb_topic_9069fa2fc3e9ea103ab9b01705013142</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-05-22 22:31:05</sys_updated_on>
+        <title>TestChatBot 2.0</title>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+    </sys_cb_topic>
+    <sys_translated_text action="delete_multiple" query="documentkey=9069fa2fc3e9ea103ab9b01705013142"/>
+</record_update>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Work Terminal CI">53f89fdbc329aa103ab9b01705013130</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Work Terminal CIs</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_volt2_github_s_0_work_terminal_ci</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles>x_volt2_github_s_0.work_terminal_ci_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-05-22 04:32:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>97f89fdbc329aa103ab9b01705013133</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Work Terminal CIs</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_app_module_97f89fdbc329aa103ab9b01705013133</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-05-22 04:32:27</sys_updated_on>
+        <timeline_page/>
+        <title>Work Terminal CIs</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>

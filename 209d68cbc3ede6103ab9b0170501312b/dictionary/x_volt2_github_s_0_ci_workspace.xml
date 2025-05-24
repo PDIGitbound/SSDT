@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="88c5361fc365aa103ab9b017050131da" extends="cmdb_ci" label="Workspace Configuration Item" max_length="40" name="x_volt2_github_s_0_ci_workspace" type="collection">
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="CI Created" max_length="32" name="ci_created" reference="cmdb_ci" type="reference"/>
+    </element>
+</database>
