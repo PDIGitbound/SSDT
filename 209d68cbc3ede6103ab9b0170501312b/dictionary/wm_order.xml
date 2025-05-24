@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="offline_timestamp_field=offline_device_timestamp" audit="true" db_object_id="18cbd40b93ed6610d942fc4e1dba102a" extends="sm_order" label="Work Order" max_length="40" name="wm_order" text_index="true" type="collection">
+        <element label="longitude" max_length="40" name="x_volt2_github_s_0_longitude" type="geo_point"/>
+        <element label="Latitude" max_length="255" name="x_volt2_github_s_0_latitud" type="geo_point"/>
+    </element>
+</database>

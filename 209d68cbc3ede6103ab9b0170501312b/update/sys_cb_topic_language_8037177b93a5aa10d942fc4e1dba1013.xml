@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic_language">
+    <sys_cb_topic_language action="INSERT_OR_UPDATE">
+        <cb_topic_id display_value="CSM_Virtual_Agent_v1">4837177b93a5aa10d942fc4e1dba100f</cb_topic_id>
+        <language_code>en</language_code>
+        <nlu_entities>[{"node_id":"c640bedc071e46368a248a94c593e7ae","variable_name":"problem_2","nlu_entity":"","nlu_entity_label":""},{"node_id":"a469d2242745422dbb53c4340c89a37e","variable_name":"laptop_sd","nlu_entity":"","nlu_entity_label":""},{"node_id":"224ef033f6344d7584e43c3c923584c6","variable_name":"adapter_sd","nlu_entity":"","nlu_entity_label":""},{"node_id":"52fbc015c92c4eff8b58f1231b111557","variable_name":"monitor_sd","nlu_entity":"","nlu_entity_label":""},{"node_id":"8ab66f2149144f1097c15ab56bd00e80","variable_name":"charger_sd","nlu_entity":"","nlu_entity_label":""},{"node_id":"9e0a6e89f7e2423ca57520a2adbc2e00","variable_name":"software_sd","nlu_entity":"","nlu_entity_label":""},{"node_id":"56e3f0c4e053464db6f6d5b6d8305d6f","variable_name":"headset_sd","nlu_entity":"","nlu_entity_label":""}]</nlu_entities>
+        <nlu_intent>Negative</nlu_intent>
+        <nlu_intent_label>Negative</nlu_intent_label>
+        <nlu_model>Setup_Topics_Model</nlu_model>
+        <nlu_model_label>Setup Topics Model</nlu_model_label>
+        <nlu_provider>64c023c17300330021a044764df6a70e</nlu_provider>
+        <sys_class_name>sys_cb_topic_language</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-05-23 17:41:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8037177b93a5aa10d942fc4e1dba1013</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cb_topic_language_8037177b93a5aa10d942fc4e1dba1013</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-05-23 18:20:58</sys_updated_on>
+    </sys_cb_topic_language>
+</record_update>

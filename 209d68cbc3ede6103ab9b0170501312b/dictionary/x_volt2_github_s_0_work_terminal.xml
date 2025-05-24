@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="cd785b9bc329aa103ab9b01705013146" label="Work Terminal" max_length="40" name="x_volt2_github_s_0_work_terminal" type="collection">
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Owner" max_length="32" name="owner" reference="sys_user" type="reference"/>
+        <element label="Installation Date" max_length="40" name="installation_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="CI Created" max_length="32" name="ci_created" reference="x_volt2_github_s_0_work_terminal_ci" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Manufacturer" max_length="32" name="manufacturer" reference="core_company" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Code" max_length="8000" name="code" type="script"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Asset" max_length="32" name="asset" reference="alm_asset" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Work Terminal Type" max_length="40" name="work_terminal_type" type="choice">
+            <choice/>
+        </element>
+        <element label="Description" max_length="1000" name="description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Status" max_length="40" name="status" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Assigned To" max_length="32" name="assigned_to" reference="sys_user" type="reference"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+        <element label="Serial Number" max_length="100" name="serial_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Support Group" max_length="32" name="support_group" reference="sys_user_group" type="reference"/>
+        <index name="index">
+            <element name="asset"/>
+        </index>
+        <index name="index2">
+            <element name="assigned_to"/>
+        </index>
+        <index name="index3">
+            <element name="ci_created"/>
+        </index>
+        <index name="index4">
+            <element name="location"/>
+        </index>
+        <index name="index5">
+            <element name="manufacturer"/>
+        </index>
+        <index name="index6">
+            <element name="owner"/>
+        </index>
+        <index name="index7">
+            <element name="support_group"/>
+        </index>
+    </element>
+</database>
