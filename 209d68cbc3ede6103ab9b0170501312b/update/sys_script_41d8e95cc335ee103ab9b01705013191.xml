@@ -11,14 +11,14 @@
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>alm_asset</collection>
+        <collection>customer_contact</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Auto-create Work Terminal</name>
+        <name>Contact for User</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -28,37 +28,41 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+  var actualUser = gs.getUserID();
+  var autoUser = current.user_id;
 
-	// Solo si aún no tiene relación
-    var wt = new GlideRecord('x_volt2_github_s_0_work_terminal');
-    wt.initialize();
+  if (autoUser && autoUser != actualUser) {
+    // Desactivar el usuario creado automáticamente
+    var u = new GlideRecord('sys_user');
+    if (u.get(autoUser)) {
+      gs.info("Desactivando usuario creado automáticamente: " + u.getDisplayValue('name'));
+      u.active = false;
+      u.update();
+    }
 
-    wt.name = current.name;
-    //wt.serial_number = current.serial_number;
-    wt.location = current.location;
-    wt.assigned_to = current.assigned_to;
-    wt.asset = current.sys_id; // para relación inversa
-
-    var wtSysId = wt.insert();
-
-})(current, previous);]]></script>
+    // Reasignar el contacto al usuario actual
+    current.user_id = actualUser;
+    gs.info("Reasignando contacto al usuario actual: " + gs.getUserDisplayName());
+  }
+})(current, previous);
+]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>esteban.quintero</sys_created_by>
-        <sys_created_on>2025-05-22 05:19:08</sys_created_on>
+        <sys_created_on>2025-05-24 22:57:07</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>fb0363dbc369aa103ab9b0170501318a</sys_id>
+        <sys_id>41d8e95cc335ee103ab9b01705013191</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_name>Auto-create Work Terminal</sys_name>
+        <sys_name>Contact for User</sys_name>
         <sys_overrides/>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
-        <sys_update_name>sys_script_fb0363dbc369aa103ab9b0170501318a</sys_update_name>
+        <sys_update_name>sys_script_41d8e95cc335ee103ab9b01705013191</sys_update_name>
         <sys_updated_by>esteban.quintero</sys_updated_by>
-        <sys_updated_on>2025-05-24 23:10:02</sys_updated_on>
+        <sys_updated_on>2025-05-24 23:09:47</sys_updated_on>
         <template/>
-        <when>after</when>
+        <when>before</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=fb0363dbc369aa103ab9b0170501318a"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=41d8e95cc335ee103ab9b01705013191"/>
 </record_update>
