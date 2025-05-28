@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_volt2_github_s_0.LocationUtils</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>LocationUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var LocationUtils = Class.create();
+LocationUtils.prototype = {
+    initialize: function() {},
+
+    reverseGeocode: function(lat, lng) {
+        var url = "https://nominatim.openstreetmap.org/reverse?format=json&lat=" + lat + "&lon=" + lng + "&addressdetails=1";
+
+        gs.info("Calling reverseGeocode for lat: " + lat + ", lng: " + lng);
+
+
+        var request = new sn_ws.RESTMessageV2();
+        request.setEndpoint(url);
+        request.setHttpMethod('get');
+        request.setRequestHeader("Accept", "application/json");
+        request.setRequestHeader("Content-Type", "application/json");
+
+        try {
+            var response = request.execute();
+            var responseBody = response.getBody();
+            var temp = JSON.parse(responseBody);
+            gs.info("JSON:" + temp);
+            gs.info("JSON: " + JSON.stringify(temp));
+
+            return {
+                name: body.display_name,
+                street: addr.road || '',
+                city: addr.city || addr.town || addr.village,
+                state: addr.state,
+                postal_code: addr.postcode
+            };
+        }catch (ex) {
+      gs.error("Reverse geocode failed: " + ex);
+      return null;
+    }
+	},
+	type: 'LocationUtils'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-05-26 16:47:28</sys_created_on>
+        <sys_id>6757e23893b5ae10d942fc4e1dba1078</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>LocationUtils</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_script_include_6757e23893b5ae10d942fc4e1dba1078</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-05-27 16:00:39</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -24,8 +24,8 @@
       "applicability": "",
       "description": "",
       "nodes": {
-        "953c87e8ca8040da88448708724ac172": {
-          "id": "953c87e8ca8040da88448708724ac172",
+        "eb5a52ea4d9f4f479d92940d74899e28": {
+          "id": "eb5a52ea4d9f4f479d92940d74899e28",
           "stepType": "Start",
           "name": "Start",
           "greetingResponse": {
@@ -42,8 +42,8 @@
             "mode": "simple"
           }
         },
-        "9b33c31164054cf2a40ae5655125998d": {
-          "id": "9b33c31164054cf2a40ae5655125998d",
+        "43e3f124e65f4138a6bc03a02a66bc10": {
+          "id": "43e3f124e65f4138a6bc03a02a66bc10",
           "stepType": "TerminateGoal",
           "name": "End",
           "confirmationMessage": {
@@ -53,6 +53,21 @@
                 "children": [
                   {
                     "text": "Your case was created"
+                  },
+                  {
+                    "type": "datapill",
+                    "dataPill": {
+                      "value": "{{vaInputs.adapter_case.case}}",
+                      "displayValue": "Input Variables➛Adapter Case➛Case"
+                    },
+                    "children": [
+                      {
+                        "text": ""
+                      }
+                    ]
+                  },
+                  {
+                    "text": ""
                   }
                 ]
               }
@@ -60,7 +75,7 @@
             "mode": "simple"
           }
         },
-        "c640bedc071e46368a248a94c593e7ae": {
+        "d7976ffad97e467da90034236a9d1134": {
           "name": "Problem",
           "prompt": {
             "value": [
@@ -99,9 +114,9 @@
             "value": "",
             "mode": "simple"
           },
-          "variableId": "792877b5692949c6b69a2a58c4f02037",
+          "variableId": "6ec6f721bc894d0a93246ef021895da0",
           "detailDescription": "",
-          "id": "c640bedc071e46368a248a94c593e7ae",
+          "id": "d7976ffad97e467da90034236a9d1134",
           "stepType": "ChoicePrompt",
           "hasCardHeader": false,
           "cardMetadata": {
@@ -114,13 +129,13 @@
           "withNluUserInput": false,
           "skipIfFulfilled": false
         },
-        "0ea1562c4ea942608e7af980db7ac7b9": {
-          "id": "0ea1562c4ea942608e7af980db7ac7b9",
+        "a5893384b002414e93903be8425d54a9": {
+          "id": "a5893384b002414e93903be8425d54a9",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "88cc8a5b32164944b62f9e937cf6fedf": {
-          "id": "88cc8a5b32164944b62f9e937cf6fedf",
+        "996a2dabd11d4d63a96e1279d971220b": {
+          "id": "996a2dabd11d4d63a96e1279d971220b",
           "stepType": "CrudAction",
           "name": "Charger case",
           "template": {
@@ -188,30 +203,30 @@
               "mode": "simple"
             }
           ],
-          "variableId": "f24f2e7805eb4fe58c90650302a9ca63"
+          "variableId": "0156d776e3dd4e029ef3c08225b7e086"
         },
-        "af8395e9e2fe4d458341cae2aa22c038": {
-          "id": "af8395e9e2fe4d458341cae2aa22c038",
+        "528f311e91504bb6b2e9fa116c0185e0": {
+          "id": "528f311e91504bb6b2e9fa116c0185e0",
           "stepType": "ImplicitEnd"
         },
-        "48b112a056bc41769f4f088ea6dfc4f8": {
-          "id": "48b112a056bc41769f4f088ea6dfc4f8",
+        "b36c22c303ff4a5fbdc7e2ece618ce65": {
+          "id": "b36c22c303ff4a5fbdc7e2ece618ce65",
           "stepType": "ImplicitEnd"
         },
-        "def914746c534210b17714cafa525106": {
-          "id": "def914746c534210b17714cafa525106",
+        "a69890f0a6ec4a12a9d3dac51f64dcbd": {
+          "id": "a69890f0a6ec4a12a9d3dac51f64dcbd",
           "stepType": "ImplicitEnd"
         },
-        "0d3f59e4b74f4249a03240e6a8d7e683": {
-          "id": "0d3f59e4b74f4249a03240e6a8d7e683",
+        "24c7a31a87334ebdb8522855d0ee08a4": {
+          "id": "24c7a31a87334ebdb8522855d0ee08a4",
           "stepType": "ImplicitEnd"
         },
-        "22021cb57ed04cafab9e1b93c6ace43f": {
-          "id": "22021cb57ed04cafab9e1b93c6ace43f",
+        "622b88fc857d4dbea4764ff1ddddf19e": {
+          "id": "622b88fc857d4dbea4764ff1ddddf19e",
           "stepType": "ImplicitEnd"
         },
-        "40d86701507e4733822e7c5077cbe452": {
-          "id": "40d86701507e4733822e7c5077cbe452",
+        "8e98f101a0e843d8a3f82536b4ec7730": {
+          "id": "8e98f101a0e843d8a3f82536b4ec7730",
           "stepType": "CrudAction",
           "name": "Software Case",
           "template": {
@@ -279,10 +294,10 @@
               "mode": "simple"
             }
           ],
-          "variableId": "7c9b284e19ce4dbc9d55f51118f93fe6"
+          "variableId": "5d9e0290863d49cf8a515298caa30ccf"
         },
-        "5b76a0e7b2cb4f3fa00d44ad4e6915a5": {
-          "id": "5b76a0e7b2cb4f3fa00d44ad4e6915a5",
+        "3cea8b82381342df9bd20ad7a0aa4de0": {
+          "id": "3cea8b82381342df9bd20ad7a0aa4de0",
           "stepType": "CrudAction",
           "name": "Laptop Case",
           "template": {
@@ -350,10 +365,10 @@
               "mode": "simple"
             }
           ],
-          "variableId": "790a9a3952f84107aba74463a7ba7f10"
+          "variableId": "ec9b9e6503ed4f459aebc8b757023661"
         },
-        "6b394e8763bf47669e5c057fac51675f": {
-          "id": "6b394e8763bf47669e5c057fac51675f",
+        "fa58f6b0a1df4ca28a9c80740e64566c": {
+          "id": "fa58f6b0a1df4ca28a9c80740e64566c",
           "stepType": "CrudAction",
           "name": "Monitor Case",
           "template": {
@@ -421,10 +436,10 @@
               "mode": "simple"
             }
           ],
-          "variableId": "62a65b2868254aaaa48b347bf9dea3ef"
+          "variableId": "3958ac3856414130bded9f438c48b66a"
         },
-        "d67b0b76fac846d38eb3a73facadbb72": {
-          "id": "d67b0b76fac846d38eb3a73facadbb72",
+        "5b903d6bca514cfe8510c115fefe0e90": {
+          "id": "5b903d6bca514cfe8510c115fefe0e90",
           "stepType": "CrudAction",
           "name": "Headset Case",
           "template": {
@@ -492,10 +507,10 @@
               "mode": "simple"
             }
           ],
-          "variableId": "8da0d6725dfa40e9a83647151497d1fe"
+          "variableId": "db5b8de1b16044829402b2a4f08c80ed"
         },
-        "905199aa18784f63b8e9518b33cd1fed": {
-          "id": "905199aa18784f63b8e9518b33cd1fed",
+        "630f275b043b4d0ebd5588f605b37a19": {
+          "id": "630f275b043b4d0ebd5588f605b37a19",
           "stepType": "CrudAction",
           "name": "Adapter Case",
           "template": {
@@ -563,10 +578,10 @@
               "mode": "simple"
             }
           ],
-          "variableId": "6a2f34de48404d6896667dcdbe3c7fbb"
+          "variableId": "292679eac1d7460ca7cfb82235ae3194"
         },
-        "a469d2242745422dbb53c4340c89a37e": {
-          "id": "a469d2242745422dbb53c4340c89a37e",
+        "f0db81ae7df34c1f8d7021bb898b3869": {
+          "id": "f0db81ae7df34c1f8d7021bb898b3869",
           "stepType": "TextPrompt",
           "name": "Laptop SD",
           "prompt": {
@@ -616,7 +631,7 @@
           },
           "withNluUserInput": false,
           "skipIfFulfilled": false,
-          "variableId": "6134bd30db4b4c1095cbab11dcc8be72",
+          "variableId": "68b48ee6407347b08f9088a1c3fcd525",
           "detailDescription": "",
           "inputType": {
             "format": "Text",
@@ -624,8 +639,8 @@
           },
           "requestFeedback": true
         },
-        "8ab66f2149144f1097c15ab56bd00e80": {
-          "id": "8ab66f2149144f1097c15ab56bd00e80",
+        "e20a66471c2d4771854f0ab2bc24d2c9": {
+          "id": "e20a66471c2d4771854f0ab2bc24d2c9",
           "stepType": "TextPrompt",
           "name": "Charger SD",
           "prompt": {
@@ -675,7 +690,7 @@
           },
           "withNluUserInput": false,
           "skipIfFulfilled": false,
-          "variableId": "3c123d2987a04deaa5257c2ec536f42f",
+          "variableId": "7f975ebcc5534b238ccc9cad84f5c949",
           "detailDescription": "",
           "inputType": {
             "format": "Text",
@@ -683,8 +698,8 @@
           },
           "requestFeedback": true
         },
-        "52fbc015c92c4eff8b58f1231b111557": {
-          "id": "52fbc015c92c4eff8b58f1231b111557",
+        "6625b731cd7e4086b3e15a4d8d6e4ff9": {
+          "id": "6625b731cd7e4086b3e15a4d8d6e4ff9",
           "stepType": "TextPrompt",
           "name": "Monitor SD",
           "prompt": {
@@ -734,7 +749,7 @@
           },
           "withNluUserInput": false,
           "skipIfFulfilled": false,
-          "variableId": "0599eab60702436ab4d2444b49660d60",
+          "variableId": "443538cf7c8a4cabb1d470145685ab98",
           "detailDescription": "",
           "inputType": {
             "format": "Text",
@@ -742,8 +757,8 @@
           },
           "requestFeedback": true
         },
-        "224ef033f6344d7584e43c3c923584c6": {
-          "id": "224ef033f6344d7584e43c3c923584c6",
+        "e1ec25f4c747494f9f43bdb3020229f0": {
+          "id": "e1ec25f4c747494f9f43bdb3020229f0",
           "stepType": "TextPrompt",
           "name": "Adapter SD",
           "prompt": {
@@ -793,7 +808,7 @@
           },
           "withNluUserInput": false,
           "skipIfFulfilled": false,
-          "variableId": "77d005761f4b45e8bf8a4be8a9771d82",
+          "variableId": "979b313acf79437485ce9f30dd77d7aa",
           "detailDescription": "",
           "inputType": {
             "format": "Text",
@@ -801,8 +816,8 @@
           },
           "requestFeedback": true
         },
-        "56e3f0c4e053464db6f6d5b6d8305d6f": {
-          "id": "56e3f0c4e053464db6f6d5b6d8305d6f",
+        "8898e34b823e411c808ea3b4ddc92832": {
+          "id": "8898e34b823e411c808ea3b4ddc92832",
           "stepType": "TextPrompt",
           "name": "Headset SD",
           "prompt": {
@@ -852,7 +867,7 @@
           },
           "withNluUserInput": false,
           "skipIfFulfilled": false,
-          "variableId": "a8d961773fba4957ab3b109770a23cfd",
+          "variableId": "0ff7caea547e4b2f99d181e92c9e4333",
           "detailDescription": "",
           "inputType": {
             "format": "Text",
@@ -860,8 +875,8 @@
           },
           "requestFeedback": true
         },
-        "9e0a6e89f7e2423ca57520a2adbc2e00": {
-          "id": "9e0a6e89f7e2423ca57520a2adbc2e00",
+        "a634ad260c4f47b9a66e01b68a477165": {
+          "id": "a634ad260c4f47b9a66e01b68a477165",
           "stepType": "TextPrompt",
           "name": "Software SD",
           "prompt": {
@@ -911,7 +926,7 @@
           },
           "withNluUserInput": false,
           "skipIfFulfilled": false,
-          "variableId": "4875c85f155d452791dbf50ee786d3c5",
+          "variableId": "12ac93bc515e4d6fbb5370188c53a185",
           "detailDescription": "",
           "inputType": {
             "format": "Text",
@@ -919,8 +934,8 @@
           },
           "requestFeedback": true
         },
-        "07f9da0661054e728e97b58322394caa": {
-          "id": "07f9da0661054e728e97b58322394caa",
+        "64b2ebdd64ae4aeea04d9cbc4abdea82": {
+          "id": "64b2ebdd64ae4aeea04d9cbc4abdea82",
           "stepType": "Component",
           "name": "User_Location_Case",
           "fields": [],
@@ -941,31 +956,31 @@
           },
           "outputs": [
             {
-              "id": "f9bfafbf19a84e728552f7e80cd00960",
+              "id": "3d79fc5a7b0b4a0a9527a78154626952",
               "value": "latitude",
               "mapping": "latitude",
               "preventDisable": false
             },
             {
-              "id": "c91d298d6ad3485a82ca8081ecf5489e",
+              "id": "b0b7141a45dc42fc9742e0472adfecec",
               "value": "longitude",
               "mapping": "longitude",
               "preventDisable": false
             },
             {
-              "id": "11f2ae3a50754e20be9922cc59dc863f",
+              "id": "6f12407b9f8143bb9bce4f8ee66fbe66",
               "value": "errormessage",
               "mapping": "errormessage",
               "preventDisable": false
             },
             {
-              "id": "2b148ff4dd57453b97c4963379a82275",
+              "id": "dedce656213d412991c50da6d325368c",
               "value": "errortype",
               "mapping": "errortype",
               "preventDisable": false
             },
             {
-              "id": "e897c7e9bb44401499dc4754af814cec",
+              "id": "934ee886ca7341068f06084d1b2c4920",
               "value": "status",
               "mapping": "status",
               "preventDisable": false
@@ -973,15 +988,15 @@
           ],
           "outdatedNote": false,
           "variableIds": [
-            "f9bfafbf19a84e728552f7e80cd00960",
-            "c91d298d6ad3485a82ca8081ecf5489e",
-            "11f2ae3a50754e20be9922cc59dc863f",
-            "2b148ff4dd57453b97c4963379a82275",
-            "e897c7e9bb44401499dc4754af814cec"
+            "3d79fc5a7b0b4a0a9527a78154626952",
+            "b0b7141a45dc42fc9742e0472adfecec",
+            "6f12407b9f8143bb9bce4f8ee66fbe66",
+            "dedce656213d412991c50da6d325368c",
+            "934ee886ca7341068f06084d1b2c4920"
           ]
         },
-        "3d8f37e43ce74095b8547560e3eccd33": {
-          "id": "3d8f37e43ce74095b8547560e3eccd33",
+        "52760fff0a9e4f1ebe4fe6b31c2d2dbc": {
+          "id": "52760fff0a9e4f1ebe4fe6b31c2d2dbc",
           "stepType": "CrudAction",
           "name": "Latitud and longitud",
           "template": {
@@ -1207,13 +1222,369 @@
               "mode": "simple"
             }
           ],
-          "variableId": "76cc9bfdbfc64f7ca8f78e39ec3d29f2"
+          "variableId": "e44ca2fa756d4056916dff07e2d3ede5"
         },
-        "729a945dddec4f3e83428d3ea97c5b2d": {
-          "id": "729a945dddec4f3e83428d3ea97c5b2d",
-          "name": "Do while",
-          "script": "(function execute() {\n    var loc=new GlideRecord('cmn_location')\n    if(loc.get('name',inputs.location_name)){\n        outputs.state = loc.state;\n        outputs.latitude = loc.latitude;\n        outputs.longitude = loc.longitude;\n    }\n})()\n",
-          "stepType": "ScriptAction",
+        "1760dbab9ab946d08f05423427f42aca": {
+          "id": "1760dbab9ab946d08f05423427f42aca",
+          "name": "Case fulfiller",
+          "invocationType": "action",
+          "stepType": "FlowAction",
+          "actionSpoke": "core",
+          "actionSpokeAction": "9d09f99587003300663ca1bb36cb0ba3",
+          "actionWaitType": "sync",
+          "actionRunAs": "session_user",
+          "permissionsNote": "By default, the Action executes based on the permissions of the user who initiated the conversation. For elevated privileges, you can set to System User.",
+          "actionSecureField": false,
+          "actionSelectSecureField": "",
+          "actionPromptSecureField": {
+            "mode": "simple",
+            "value": ""
+          },
+          "actionConfirmPromptSecureField": {
+            "mode": "simple",
+            "value": ""
+          },
+          "actionNonSecureChannelMessage": {
+            "mode": "simple",
+            "value": ""
+          },
+          "actionInputs": {
+            "input-if_multiple_records_are_found_action": {
+              "value": "use_first_record",
+              "mode": "string"
+            },
+            "input-sort_type": {
+              "value": "sort_desc",
+              "mode": "string"
+            }
+          },
+          "actionOutputs": {
+            "output-Record": [
+              {
+                "id": "63c6a0223071431f839b95804b30f389",
+                "mapping": "Record",
+                "disabled": false,
+                "type": "document_id",
+                "value": "Record",
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": "",
+                "variable": "Record",
+                "variableName": "record"
+              }
+            ],
+            "output-Table": [
+              {
+                "id": "2fd4bd03f4944ca4abe523497602465e",
+                "mapping": "sn_custom_service_case",
+                "disabled": false,
+                "type": "table_name",
+                "value": "Table",
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": "",
+                "variable": "Sn_custom_service_case",
+                "variableName": "sn_custom_service_case"
+              }
+            ],
+            "output-status": [
+              {
+                "id": "a03647bd96fc481aa83851580eeabe0d",
+                "mapping": "Status",
+                "disabled": false,
+                "type": "choice",
+                "value": "Status",
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": "",
+                "choices": [
+                  {
+                    "label": "Error",
+                    "value": "1",
+                    "order": 0
+                  },
+                  {
+                    "label": "Success",
+                    "value": "0",
+                    "order": 1
+                  }
+                ],
+                "variable": "Status (2)",
+                "variableName": "status_2"
+              }
+            ],
+            "output-error_message": [
+              {
+                "id": "087a842522354d5f93457267b349682a",
+                "mapping": "Error Message",
+                "disabled": false,
+                "type": "string",
+                "value": "Error Message",
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": "",
+                "variable": "Error Message",
+                "variableName": "error_message"
+              }
+            ],
+            "output-__action_status__": [
+              {
+                "id": "4aa6ef4abbcb430087fa072e52b22932",
+                "mapping": "Action Status",
+                "disabled": false,
+                "type": "object",
+                "value": "Action Status",
+                "is_list_data_entry": false,
+                "dependent_on_field": "",
+                "variable": "Action Status",
+                "variableName": "action_status"
+              }
+            ],
+            "output-__dont_treat_as_error__": [
+              {
+                "id": "cc76b23ef4ae402f9c13134a1c87fb00",
+                "mapping": "Don't Treat as Error",
+                "disabled": false,
+                "type": "boolean",
+                "value": "Don't Treat as Error",
+                "is_list_data_entry": false,
+                "dependent_on_field": "",
+                "variable": "Don't Treat As Error",
+                "variableName": "don_t_treat_as_error"
+              }
+            ]
+          },
+          "actionDefinition": {
+            "id": "9d09f99587003300663ca1bb36cb0ba3",
+            "latest_snapshot_id": "9d09f99587003300663ca1bb36cb0ba3",
+            "parent_id": "b93f42810b30030085c083eb37673a63",
+            "type": "action",
+            "name": "look_up_record",
+            "label": "Look Up Record",
+            "scope_id": "global",
+            "description": "\n      Look up a singular record on any ServiceNow table. You can configure the conditions for the record lookup. If multiple records are found, only the first record returns.\n    ",
+            "category": "",
+            "parameters_have_loaded": true,
+            "input_parameters": [
+              {
+                "supported_input_modes": [
+                  "script",
+                  "data_pill"
+                ],
+                "name": "table",
+                "label": "Table",
+                "type": "table_name",
+                "order": 0,
+                "required": false,
+                "value": [],
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": ""
+              },
+              {
+                "supported_input_modes": [
+                  "script",
+                  "data_pill"
+                ],
+                "name": "conditions",
+                "label": "Conditions",
+                "type": "conditions",
+                "order": 1,
+                "required": false,
+                "value": [],
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": "table"
+              },
+              {
+                "supported_input_modes": [
+                  "script",
+                  "data_pill"
+                ],
+                "name": "sort_column",
+                "label": "Order by",
+                "type": "field_name",
+                "order": 2,
+                "required": false,
+                "value": [],
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": "table"
+              },
+              {
+                "supported_input_modes": [
+                  "script",
+                  "data_pill",
+                  "data_entry"
+                ],
+                "name": "sort_type",
+                "label": "Sort Type",
+                "type": "choice",
+                "order": 3,
+                "required": false,
+                "value": [],
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": "",
+                "choices": [
+                  {
+                    "label": "a to z",
+                    "value": "sort_asc",
+                    "order": 0
+                  },
+                  {
+                    "label": "z to a",
+                    "value": "sort_desc",
+                    "order": 1
+                  }
+                ]
+              },
+              {
+                "supported_input_modes": [
+                  "script",
+                  "data_pill",
+                  "data_entry"
+                ],
+                "name": "if_multiple_records_are_found_action",
+                "label": "If multiple records are found action",
+                "type": "choice",
+                "order": 4,
+                "required": false,
+                "value": [],
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": "",
+                "choices": [
+                  {
+                    "label": "Fail the step",
+                    "value": "error",
+                    "order": 0
+                  },
+                  {
+                    "label": "Return only the first record",
+                    "value": "use_first_record",
+                    "order": 1
+                  }
+                ]
+              },
+              {
+                "supported_input_modes": [
+                  "script",
+                  "data_pill",
+                  "data_entry"
+                ],
+                "name": "__snc_dont_fail_on_error",
+                "label": "Don't fail on error",
+                "type": "boolean",
+                "order": 5,
+                "required": false,
+                "value": [],
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": ""
+              }
+            ],
+            "output_parameters": [
+              {
+                "name": "Record",
+                "label": "Record",
+                "type": "document_id",
+                "order": 0,
+                "required": false,
+                "value": [],
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": ""
+              },
+              {
+                "name": "Table",
+                "label": "Table",
+                "type": "table_name",
+                "order": 1,
+                "required": false,
+                "value": [],
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": ""
+              },
+              {
+                "name": "status",
+                "label": "Status",
+                "type": "choice",
+                "order": 2,
+                "required": false,
+                "value": [],
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": "",
+                "choices": [
+                  {
+                    "label": "Error",
+                    "value": "1",
+                    "order": 0
+                  },
+                  {
+                    "label": "Success",
+                    "value": "0",
+                    "order": 1
+                  }
+                ]
+              },
+              {
+                "name": "error_message",
+                "label": "Error Message",
+                "type": "string",
+                "order": 3,
+                "required": false,
+                "value": [],
+                "description": "",
+                "is_list_data_entry": false,
+                "dependent_on_field": ""
+              },
+              {
+                "name": "__action_status__",
+                "label": "Action Status",
+                "type": "object",
+                "order": 4,
+                "required": false,
+                "value": [],
+                "is_list_data_entry": false,
+                "dependent_on_field": ""
+              },
+              {
+                "name": "__dont_treat_as_error__",
+                "label": "Don't Treat as Error",
+                "type": "boolean",
+                "order": 5,
+                "required": false,
+                "value": [],
+                "is_list_data_entry": false,
+                "dependent_on_field": ""
+              }
+            ]
+          },
+          "subflowSecureField": false,
+          "subflowSelectSecureField": "",
+          "subflowPromptSecureField": {
+            "mode": "simple",
+            "value": ""
+          },
+          "subflowConfirmPromptSecureField": {
+            "mode": "simple",
+            "value": ""
+          },
+          "subflowNonSecureChannelMessage": {
+            "mode": "simple",
+            "value": "This action is not supported on this channel."
+          },
+          "variableIds": [
+            "63c6a0223071431f839b95804b30f389",
+            "2fd4bd03f4944ca4abe523497602465e",
+            "a03647bd96fc481aa83851580eeabe0d",
+            "087a842522354d5f93457267b349682a",
+            "4aa6ef4abbcb430087fa072e52b22932",
+            "cc76b23ef4ae402f9c13134a1c87fb00"
+          ],
           "applicability": {
             "value": "",
             "mode": "query"
@@ -1222,18 +1593,26 @@
       },
       "edges": [
         {
-          "id": "e872fd1f7783411487e92767299e08d4",
+          "id": "ae71e33ecd224d179201f1d3cd0462a6",
           "edgeType": "Edge",
-          "source": "953c87e8ca8040da88448708724ac172",
-          "target": "07f9da0661054e728e97b58322394caa",
+          "source": "630f275b043b4d0ebd5588f605b37a19",
+          "target": "b36c22c303ff4a5fbdc7e2ece618ce65",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "ba7acc803e3a4a9e88e8bb5d99786b77",
+          "id": "0a85d5622cdd4323b06e4928649e7130",
+          "edgeType": "Edge",
+          "source": "eb5a52ea4d9f4f479d92940d74899e28",
+          "target": "64b2ebdd64ae4aeea04d9cbc4abdea82",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "83d582ea37394aa7b43fb23c5d73d507",
           "edgeType": "Branch",
-          "source": "0ea1562c4ea942608e7af980db7ac7b9",
-          "target": "a469d2242745422dbb53c4340c89a37e",
+          "source": "a5893384b002414e93903be8425d54a9",
+          "target": "f0db81ae7df34c1f8d7021bb898b3869",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -1243,66 +1622,58 @@
           "label": "Laptop"
         },
         {
-          "id": "772777150db546c4a0d86ae3e0577fb7",
+          "id": "4b40c07574bf43c8bb0f28b87fb40297",
           "edgeType": "Edge",
-          "source": "a469d2242745422dbb53c4340c89a37e",
-          "target": "5b76a0e7b2cb4f3fa00d44ad4e6915a5",
+          "source": "f0db81ae7df34c1f8d7021bb898b3869",
+          "target": "3cea8b82381342df9bd20ad7a0aa4de0",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "b10d62d85f5b45c8bf8d5ca1515d08f3",
+          "id": "4277bbefbab545bea0bd97d2dd7293d6",
           "edgeType": "Edge",
-          "source": "224ef033f6344d7584e43c3c923584c6",
-          "target": "905199aa18784f63b8e9518b33cd1fed",
+          "source": "e1ec25f4c747494f9f43bdb3020229f0",
+          "target": "630f275b043b4d0ebd5588f605b37a19",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "f42aa5d5839b4d58bb24e3fa1fad43a3",
+          "id": "7342bb173aec48b487e59f5dd4a22663",
           "edgeType": "Edge",
-          "source": "6b394e8763bf47669e5c057fac51675f",
-          "target": "0d3f59e4b74f4249a03240e6a8d7e683",
+          "source": "fa58f6b0a1df4ca28a9c80740e64566c",
+          "target": "24c7a31a87334ebdb8522855d0ee08a4",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "48f7c3f74bc94afaba1e61f43621e54f",
+          "id": "58196dd6a1474235b3b5a90aee5da3aa",
           "edgeType": "Edge",
-          "source": "88cc8a5b32164944b62f9e937cf6fedf",
-          "target": "9b33c31164054cf2a40ae5655125998d",
+          "source": "996a2dabd11d4d63a96e1279d971220b",
+          "target": "43e3f124e65f4138a6bc03a02a66bc10",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "71e77d3042834d1db02d8a74d8cb34b9",
+          "id": "32ade9ed1d7d403d84e4c728c5938183",
           "edgeType": "Edge",
-          "source": "40d86701507e4733822e7c5077cbe452",
-          "target": "af8395e9e2fe4d458341cae2aa22c038",
+          "source": "8e98f101a0e843d8a3f82536b4ec7730",
+          "target": "528f311e91504bb6b2e9fa116c0185e0",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "d5f5edc4d4fa4d648705aece1fe1d1da",
+          "id": "61551370578d4e0f995e89e870b60923",
           "edgeType": "Edge",
-          "source": "5b76a0e7b2cb4f3fa00d44ad4e6915a5",
-          "target": "def914746c534210b17714cafa525106",
+          "source": "5b903d6bca514cfe8510c115fefe0e90",
+          "target": "622b88fc857d4dbea4764ff1ddddf19e",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "8909d5e1ec484b689f2a78557c50829d",
-          "edgeType": "Edge",
-          "source": "d67b0b76fac846d38eb3a73facadbb72",
-          "target": "22021cb57ed04cafab9e1b93c6ace43f",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "86b754ada4cf40b588857ec62ca7114d",
+          "id": "b9a0eed6ff9a4010ae40c5286029ed9c",
           "edgeType": "Branch",
-          "source": "0ea1562c4ea942608e7af980db7ac7b9",
-          "target": "8ab66f2149144f1097c15ab56bd00e80",
+          "source": "a5893384b002414e93903be8425d54a9",
+          "target": "e20a66471c2d4771854f0ab2bc24d2c9",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -1312,18 +1683,18 @@
           "label": "Charger"
         },
         {
-          "id": "a321593cc26043beb73ecd5b042c47fb",
+          "id": "2bdf8ff549e74377b938b18c045e50e1",
           "edgeType": "Edge",
-          "source": "8ab66f2149144f1097c15ab56bd00e80",
-          "target": "88cc8a5b32164944b62f9e937cf6fedf",
+          "source": "e20a66471c2d4771854f0ab2bc24d2c9",
+          "target": "996a2dabd11d4d63a96e1279d971220b",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "572abb463b984e1ab773245c17b9f731",
+          "id": "3368c8b643fe4972a2123c5a10bcb62e",
           "edgeType": "Branch",
-          "source": "0ea1562c4ea942608e7af980db7ac7b9",
-          "target": "52fbc015c92c4eff8b58f1231b111557",
+          "source": "a5893384b002414e93903be8425d54a9",
+          "target": "6625b731cd7e4086b3e15a4d8d6e4ff9",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -1333,18 +1704,18 @@
           "label": "Monitor"
         },
         {
-          "id": "0a1b7f5a20ac42cfae455d1d8628df46",
+          "id": "0913272d89044ab584e5716ba96bbe8e",
           "edgeType": "Edge",
-          "source": "52fbc015c92c4eff8b58f1231b111557",
-          "target": "6b394e8763bf47669e5c057fac51675f",
+          "source": "6625b731cd7e4086b3e15a4d8d6e4ff9",
+          "target": "fa58f6b0a1df4ca28a9c80740e64566c",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "fb205a32a6064848b90535713f5ba84e",
+          "id": "6c928033ef3d473082c6ad757aaeb6c9",
           "edgeType": "Branch",
-          "source": "0ea1562c4ea942608e7af980db7ac7b9",
-          "target": "224ef033f6344d7584e43c3c923584c6",
+          "source": "a5893384b002414e93903be8425d54a9",
+          "target": "e1ec25f4c747494f9f43bdb3020229f0",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -1354,10 +1725,10 @@
           "label": "Adapter"
         },
         {
-          "id": "6e032d9283854f75af9e043138cacbd5",
+          "id": "ef74327db23d42f2a6562fa22f33c585",
           "edgeType": "Branch",
-          "source": "0ea1562c4ea942608e7af980db7ac7b9",
-          "target": "56e3f0c4e053464db6f6d5b6d8305d6f",
+          "source": "a5893384b002414e93903be8425d54a9",
+          "target": "8898e34b823e411c808ea3b4ddc92832",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -1367,18 +1738,18 @@
           "label": "Headset"
         },
         {
-          "id": "f6477a369f174f03b7c482dc4f51d389",
+          "id": "947eebe1f26a4af98088d91093b43671",
           "edgeType": "Edge",
-          "source": "56e3f0c4e053464db6f6d5b6d8305d6f",
-          "target": "d67b0b76fac846d38eb3a73facadbb72",
+          "source": "8898e34b823e411c808ea3b4ddc92832",
+          "target": "5b903d6bca514cfe8510c115fefe0e90",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "7040433cce844bf0b2d0c452188f8d8b",
+          "id": "f92179b9e33b46b29eaa63c4c462c200",
           "edgeType": "Branch",
-          "source": "0ea1562c4ea942608e7af980db7ac7b9",
-          "target": "9e0a6e89f7e2423ca57520a2adbc2e00",
+          "source": "a5893384b002414e93903be8425d54a9",
+          "target": "a634ad260c4f47b9a66e01b68a477165",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -1388,50 +1759,50 @@
           "label": "Software"
         },
         {
-          "id": "e401eb83f90143a8b26dd7c110e83a58",
+          "id": "1f1d38074bfc44ce9ba3facb6f5f464f",
           "edgeType": "Edge",
-          "source": "9e0a6e89f7e2423ca57520a2adbc2e00",
-          "target": "40d86701507e4733822e7c5077cbe452",
+          "source": "a634ad260c4f47b9a66e01b68a477165",
+          "target": "8e98f101a0e843d8a3f82536b4ec7730",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "a0a0b15ff4f1413890f56bae57551386",
+          "id": "e2a79fe6a0634bf2aa7e7eb7fb62887d",
           "edgeType": "Edge",
-          "source": "07f9da0661054e728e97b58322394caa",
-          "target": "c640bedc071e46368a248a94c593e7ae",
+          "source": "64b2ebdd64ae4aeea04d9cbc4abdea82",
+          "target": "d7976ffad97e467da90034236a9d1134",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "e1d7108378b84d6890483a741ec292f6",
+          "id": "fbfc33be086246798a8d2558d4c3c48f",
           "edgeType": "Edge",
-          "source": "c640bedc071e46368a248a94c593e7ae",
-          "target": "3d8f37e43ce74095b8547560e3eccd33",
+          "source": "d7976ffad97e467da90034236a9d1134",
+          "target": "52760fff0a9e4f1ebe4fe6b31c2d2dbc",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "fd852186e3ab4380b64517b005b06afb",
+          "id": "b164235949c44d3899472be2bb8ee5ac",
           "edgeType": "Edge",
-          "source": "3d8f37e43ce74095b8547560e3eccd33",
-          "target": "0ea1562c4ea942608e7af980db7ac7b9",
+          "source": "52760fff0a9e4f1ebe4fe6b31c2d2dbc",
+          "target": "a5893384b002414e93903be8425d54a9",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "19c07e574602408781bce880291484d5",
+          "id": "62252d2ce568442ea7a8b1a2f5153404",
           "edgeType": "Edge",
-          "source": "905199aa18784f63b8e9518b33cd1fed",
-          "target": "729a945dddec4f3e83428d3ea97c5b2d",
+          "source": "3cea8b82381342df9bd20ad7a0aa4de0",
+          "target": "1760dbab9ab946d08f05423427f42aca",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "a0f69755c78e4267b026e4978447ecfb",
+          "id": "efbfacb1852f4adc914b0ba9548d7add",
           "edgeType": "Edge",
-          "source": "729a945dddec4f3e83428d3ea97c5b2d",
-          "target": "48b112a056bc41769f4f088ea6dfc4f8",
+          "source": "1760dbab9ab946d08f05423427f42aca",
+          "target": "a69890f0a6ec4a12a9d3dac51f64dcbd",
           "sourcePort": "",
           "targetPort": ""
         }
@@ -1439,16 +1810,16 @@
     }
   },
   "variables": {
-    "31898d551f4c4c0d9601155266d03881": {
+    "5442b5e8df1f4577a90a02e2bebcd384": {
       "category": "vaInputs",
-      "id": "31898d551f4c4c0d9601155266d03881",
+      "id": "5442b5e8df1f4577a90a02e2bebcd384",
       "label": "User",
       "name": "user",
       "table": "sys_user",
       "varType": "reference"
     },
-    "792877b5692949c6b69a2a58c4f02037": {
-      "id": "792877b5692949c6b69a2a58c4f02037",
+    "6ec6f721bc894d0a93246ef021895da0": {
+      "id": "6ec6f721bc894d0a93246ef021895da0",
       "name": "problem_2",
       "label": "Problem (2)",
       "varType": "choice",
@@ -1487,77 +1858,77 @@
         }
       ],
       "category": "vaInputs",
-      "nodeId": "c640bedc071e46368a248a94c593e7ae",
+      "nodeId": "d7976ffad97e467da90034236a9d1134",
       "isHidden": false
     },
-    "f24f2e7805eb4fe58c90650302a9ca63": {
-      "id": "f24f2e7805eb4fe58c90650302a9ca63",
+    "0156d776e3dd4e029ef3c08225b7e086": {
+      "id": "0156d776e3dd4e029ef3c08225b7e086",
       "name": "charger_case",
       "label": "Charger Case",
       "varType": "reference",
       "table": "sn_customerservice_case",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "88cc8a5b32164944b62f9e937cf6fedf",
+      "nodeId": "996a2dabd11d4d63a96e1279d971220b",
       "isHidden": false
     },
-    "7c9b284e19ce4dbc9d55f51118f93fe6": {
-      "id": "7c9b284e19ce4dbc9d55f51118f93fe6",
+    "5d9e0290863d49cf8a515298caa30ccf": {
+      "id": "5d9e0290863d49cf8a515298caa30ccf",
       "name": "software_case",
       "label": "Software Case",
       "varType": "reference",
       "table": "sn_customerservice_case",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "40d86701507e4733822e7c5077cbe452",
+      "nodeId": "8e98f101a0e843d8a3f82536b4ec7730",
       "isHidden": false
     },
-    "790a9a3952f84107aba74463a7ba7f10": {
-      "id": "790a9a3952f84107aba74463a7ba7f10",
+    "ec9b9e6503ed4f459aebc8b757023661": {
+      "id": "ec9b9e6503ed4f459aebc8b757023661",
       "name": "laptop_case",
       "label": "Laptop Case",
       "varType": "reference",
       "table": "sn_customerservice_case",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "5b76a0e7b2cb4f3fa00d44ad4e6915a5",
+      "nodeId": "3cea8b82381342df9bd20ad7a0aa4de0",
       "isHidden": false
     },
-    "62a65b2868254aaaa48b347bf9dea3ef": {
-      "id": "62a65b2868254aaaa48b347bf9dea3ef",
+    "3958ac3856414130bded9f438c48b66a": {
+      "id": "3958ac3856414130bded9f438c48b66a",
       "name": "monitor_case",
       "label": "Monitor Case",
       "varType": "reference",
       "table": "sn_customerservice_case",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "6b394e8763bf47669e5c057fac51675f",
+      "nodeId": "fa58f6b0a1df4ca28a9c80740e64566c",
       "isHidden": false
     },
-    "8da0d6725dfa40e9a83647151497d1fe": {
-      "id": "8da0d6725dfa40e9a83647151497d1fe",
+    "db5b8de1b16044829402b2a4f08c80ed": {
+      "id": "db5b8de1b16044829402b2a4f08c80ed",
       "name": "headset_case",
       "label": "Headset Case",
       "varType": "reference",
       "table": "sn_customerservice_case",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "d67b0b76fac846d38eb3a73facadbb72",
+      "nodeId": "5b903d6bca514cfe8510c115fefe0e90",
       "isHidden": false
     },
-    "6a2f34de48404d6896667dcdbe3c7fbb": {
-      "id": "6a2f34de48404d6896667dcdbe3c7fbb",
+    "292679eac1d7460ca7cfb82235ae3194": {
+      "id": "292679eac1d7460ca7cfb82235ae3194",
       "name": "adapter_case",
       "label": "Adapter Case",
       "varType": "reference",
       "table": "sn_customerservice_case",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "905199aa18784f63b8e9518b33cd1fed",
+      "nodeId": "630f275b043b4d0ebd5588f605b37a19",
       "isHidden": false
     },
-    "6134bd30db4b4c1095cbab11dcc8be72": {
-      "id": "6134bd30db4b4c1095cbab11dcc8be72",
+    "68b48ee6407347b08f9088a1c3fcd525": {
+      "id": "68b48ee6407347b08f9088a1c3fcd525",
       "name": "laptop_sd",
       "label": "Laptop SD",
       "varType": "string",
@@ -1568,11 +1939,11 @@
         "value": "MTc0ODAyMzI0NTQ1NyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
         "mode": "simple"
       },
-      "nodeId": "a469d2242745422dbb53c4340c89a37e",
+      "nodeId": "f0db81ae7df34c1f8d7021bb898b3869",
       "isHidden": false
     },
-    "3c123d2987a04deaa5257c2ec536f42f": {
-      "id": "3c123d2987a04deaa5257c2ec536f42f",
+    "7f975ebcc5534b238ccc9cad84f5c949": {
+      "id": "7f975ebcc5534b238ccc9cad84f5c949",
       "name": "charger_sd",
       "label": "Charger SD",
       "varType": "string",
@@ -1583,11 +1954,11 @@
         "value": "MTc0ODAyMzUwMzQ1MCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
         "mode": "simple"
       },
-      "nodeId": "8ab66f2149144f1097c15ab56bd00e80",
+      "nodeId": "e20a66471c2d4771854f0ab2bc24d2c9",
       "isHidden": false
     },
-    "0599eab60702436ab4d2444b49660d60": {
-      "id": "0599eab60702436ab4d2444b49660d60",
+    "443538cf7c8a4cabb1d470145685ab98": {
+      "id": "443538cf7c8a4cabb1d470145685ab98",
       "name": "monitor_sd",
       "label": "Monitor SD",
       "varType": "string",
@@ -1598,11 +1969,11 @@
         "value": "MTc0ODAyMzUwNjY4MSBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
         "mode": "simple"
       },
-      "nodeId": "52fbc015c92c4eff8b58f1231b111557",
+      "nodeId": "6625b731cd7e4086b3e15a4d8d6e4ff9",
       "isHidden": false
     },
-    "77d005761f4b45e8bf8a4be8a9771d82": {
-      "id": "77d005761f4b45e8bf8a4be8a9771d82",
+    "979b313acf79437485ce9f30dd77d7aa": {
+      "id": "979b313acf79437485ce9f30dd77d7aa",
       "name": "adapter_sd",
       "label": "Adapter SD",
       "varType": "string",
@@ -1613,11 +1984,11 @@
         "value": "MTc0ODAyMzUxODY5OCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
         "mode": "simple"
       },
-      "nodeId": "224ef033f6344d7584e43c3c923584c6",
+      "nodeId": "e1ec25f4c747494f9f43bdb3020229f0",
       "isHidden": false
     },
-    "a8d961773fba4957ab3b109770a23cfd": {
-      "id": "a8d961773fba4957ab3b109770a23cfd",
+    "0ff7caea547e4b2f99d181e92c9e4333": {
+      "id": "0ff7caea547e4b2f99d181e92c9e4333",
       "name": "headset_sd",
       "label": "Headset SD",
       "varType": "string",
@@ -1628,11 +1999,11 @@
         "value": "MTc0ODAyMzU0NDIxOCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
         "mode": "simple"
       },
-      "nodeId": "56e3f0c4e053464db6f6d5b6d8305d6f",
+      "nodeId": "8898e34b823e411c808ea3b4ddc92832",
       "isHidden": false
     },
-    "4875c85f155d452791dbf50ee786d3c5": {
-      "id": "4875c85f155d452791dbf50ee786d3c5",
+    "12ac93bc515e4d6fbb5370188c53a185": {
+      "id": "12ac93bc515e4d6fbb5370188c53a185",
       "name": "software_sd",
       "label": "Software SD",
       "varType": "string",
@@ -1643,11 +2014,11 @@
         "value": "MTc0ODAyMzU1MTA4MyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
         "mode": "simple"
       },
-      "nodeId": "9e0a6e89f7e2423ca57520a2adbc2e00",
+      "nodeId": "a634ad260c4f47b9a66e01b68a477165",
       "isHidden": false
     },
-    "f9bfafbf19a84e728552f7e80cd00960": {
-      "id": "f9bfafbf19a84e728552f7e80cd00960",
+    "3d79fc5a7b0b4a0a9527a78154626952": {
+      "id": "3d79fc5a7b0b4a0a9527a78154626952",
       "name": "latitude",
       "label": "Latitude",
       "defaultValue": "latitude",
@@ -1657,11 +2028,11 @@
         "libraryMappingType": "output"
       },
       "preventDisable": false,
-      "nodeId": "07f9da0661054e728e97b58322394caa",
+      "nodeId": "64b2ebdd64ae4aeea04d9cbc4abdea82",
       "isHidden": false
     },
-    "c91d298d6ad3485a82ca8081ecf5489e": {
-      "id": "c91d298d6ad3485a82ca8081ecf5489e",
+    "b0b7141a45dc42fc9742e0472adfecec": {
+      "id": "b0b7141a45dc42fc9742e0472adfecec",
       "name": "longitude",
       "label": "Longitude",
       "defaultValue": "longitude",
@@ -1671,11 +2042,11 @@
         "libraryMappingType": "output"
       },
       "preventDisable": false,
-      "nodeId": "07f9da0661054e728e97b58322394caa",
+      "nodeId": "64b2ebdd64ae4aeea04d9cbc4abdea82",
       "isHidden": false
     },
-    "11f2ae3a50754e20be9922cc59dc863f": {
-      "id": "11f2ae3a50754e20be9922cc59dc863f",
+    "6f12407b9f8143bb9bce4f8ee66fbe66": {
+      "id": "6f12407b9f8143bb9bce4f8ee66fbe66",
       "name": "errormessage",
       "label": "Errormessage",
       "defaultValue": "errormessage",
@@ -1685,11 +2056,11 @@
         "libraryMappingType": "output"
       },
       "preventDisable": false,
-      "nodeId": "07f9da0661054e728e97b58322394caa",
+      "nodeId": "64b2ebdd64ae4aeea04d9cbc4abdea82",
       "isHidden": false
     },
-    "2b148ff4dd57453b97c4963379a82275": {
-      "id": "2b148ff4dd57453b97c4963379a82275",
+    "dedce656213d412991c50da6d325368c": {
+      "id": "dedce656213d412991c50da6d325368c",
       "name": "errortype",
       "label": "Errortype",
       "defaultValue": "errortype",
@@ -1699,11 +2070,11 @@
         "libraryMappingType": "output"
       },
       "preventDisable": false,
-      "nodeId": "07f9da0661054e728e97b58322394caa",
+      "nodeId": "64b2ebdd64ae4aeea04d9cbc4abdea82",
       "isHidden": false
     },
-    "e897c7e9bb44401499dc4754af814cec": {
-      "id": "e897c7e9bb44401499dc4754af814cec",
+    "934ee886ca7341068f06084d1b2c4920": {
+      "id": "934ee886ca7341068f06084d1b2c4920",
       "name": "status",
       "label": "Status",
       "defaultValue": "status",
@@ -1713,28 +2084,146 @@
         "libraryMappingType": "output"
       },
       "preventDisable": false,
-      "nodeId": "07f9da0661054e728e97b58322394caa",
+      "nodeId": "64b2ebdd64ae4aeea04d9cbc4abdea82",
       "isHidden": false
     },
-    "76cc9bfdbfc64f7ca8f78e39ec3d29f2": {
-      "id": "76cc9bfdbfc64f7ca8f78e39ec3d29f2",
+    "e44ca2fa756d4056916dff07e2d3ede5": {
+      "id": "e44ca2fa756d4056916dff07e2d3ede5",
       "name": "latitud_and_longitud",
       "label": "Latitud And Longitud",
       "varType": "reference",
       "table": "cmn_location",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "3d8f37e43ce74095b8547560e3eccd33",
+      "nodeId": "52760fff0a9e4f1ebe4fe6b31c2d2dbc",
+      "isHidden": false
+    },
+    "63c6a0223071431f839b95804b30f389": {
+      "id": "63c6a0223071431f839b95804b30f389",
+      "name": "record",
+      "label": "Record",
+      "defaultValue": "Record",
+      "varType": "document_id",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "description": "",
+      "is_list_data_entry": false,
+      "dependent_on_field": "",
+      "variable": "Record",
+      "variableName": "record",
+      "nodeId": "1760dbab9ab946d08f05423427f42aca",
+      "isHidden": false
+    },
+    "2fd4bd03f4944ca4abe523497602465e": {
+      "id": "2fd4bd03f4944ca4abe523497602465e",
+      "name": "sn_custom_service_case",
+      "label": "Sn_custom_service_case",
+      "defaultValue": "Table",
+      "varType": "table_name",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "description": "",
+      "is_list_data_entry": false,
+      "dependent_on_field": "",
+      "variable": "Sn_custom_service_cas",
+      "variableName": "sn_custom_service_cas",
+      "nodeId": "1760dbab9ab946d08f05423427f42aca",
+      "isHidden": false
+    },
+    "a03647bd96fc481aa83851580eeabe0d": {
+      "id": "a03647bd96fc481aa83851580eeabe0d",
+      "name": "status_2",
+      "label": "Status (2)",
+      "defaultValue": "Status",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "description": "",
+      "is_list_data_entry": false,
+      "dependent_on_field": "",
+      "choices": [
+        {
+          "label": "Error",
+          "value": "1",
+          "order": 0
+        },
+        {
+          "label": "Success",
+          "value": "0",
+          "order": 1
+        }
+      ],
+      "variable": "Status (2)",
+      "variableName": "status_2",
+      "nodeId": "1760dbab9ab946d08f05423427f42aca",
+      "isHidden": false
+    },
+    "087a842522354d5f93457267b349682a": {
+      "id": "087a842522354d5f93457267b349682a",
+      "name": "error_message",
+      "label": "Error Message",
+      "defaultValue": "Error Message",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "description": "",
+      "is_list_data_entry": false,
+      "dependent_on_field": "",
+      "variable": "Error Message",
+      "variableName": "error_message",
+      "nodeId": "1760dbab9ab946d08f05423427f42aca",
+      "isHidden": false
+    },
+    "4aa6ef4abbcb430087fa072e52b22932": {
+      "id": "4aa6ef4abbcb430087fa072e52b22932",
+      "name": "action_status",
+      "label": "Action Status",
+      "defaultValue": "Action Status",
+      "varType": "object",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "is_list_data_entry": false,
+      "dependent_on_field": "",
+      "variable": "Action Status",
+      "variableName": "action_status",
+      "nodeId": "1760dbab9ab946d08f05423427f42aca",
+      "isHidden": false
+    },
+    "cc76b23ef4ae402f9c13134a1c87fb00": {
+      "id": "cc76b23ef4ae402f9c13134a1c87fb00",
+      "name": "don_t_treat_as_error",
+      "label": "Don't Treat As Error",
+      "defaultValue": "Don't Treat as Error",
+      "varType": "boolean",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "is_list_data_entry": false,
+      "dependent_on_field": "",
+      "variable": "Don't Treat As Error",
+      "variableName": "don_t_treat_as_error",
+      "nodeId": "1760dbab9ab946d08f05423427f42aca",
       "isHidden": false
     }
   }
 }</graph>
-        <key_phrases>CSM_Virtual_Agent_v1,CSM_Virtual_Agent</key_phrases>
+        <key_phrases>CSM_Virtual_Agent_V2,CSM_Virtual_Agent_v1,CSM_Virtual_Agent</key_phrases>
         <library>false</library>
         <live_agent>false</live_agent>
         <model_type>nlu_keyword</model_type>
         <modify_confirmation_enabled>true</modify_confirmation_enabled>
-        <name>CSM_Virtual_Agent_v1</name>
+        <name>CSM_Virtual_Agent_V2</name>
         <nlu_intent/>
         <nlu_intent_label/>
         <nlu_model/>
@@ -1744,23 +2233,23 @@
         <roles/>
         <root_topic_id>8816b23b93e1aa10d942fc4e1dba10a4</root_topic_id>
         <secure_custom_input_control>false</secure_custom_input_control>
-        <source_topic_id>8816b23b93e1aa10d942fc4e1dba10a4</source_topic_id>
+        <source_topic_id>4837177b93a5aa10d942fc4e1dba100f</source_topic_id>
         <sys_class_name>sys_cb_topic</sys_class_name>
         <sys_created_by>josepablo.lopez</sys_created_by>
-        <sys_created_on>2025-05-23 17:41:33</sys_created_on>
+        <sys_created_on>2025-05-26 17:00:58</sys_created_on>
         <sys_domain>global</sys_domain>
-        <sys_id>4837177b93a5aa10d942fc4e1dba100f</sys_id>
-        <sys_mod_count>13</sys_mod_count>
-        <sys_name>CSM_Virtual_Agent_v1</sys_name>
+        <sys_id>b6aae23c93b5ae10d942fc4e1dba109d</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>CSM_Virtual_Agent_V2</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
-        <sys_update_name>sys_cb_topic_4837177b93a5aa10d942fc4e1dba100f</sys_update_name>
+        <sys_update_name>sys_cb_topic_b6aae23c93b5ae10d942fc4e1dba109d</sys_update_name>
         <sys_updated_by>josepablo.lopez</sys_updated_by>
-        <sys_updated_on>2025-05-26 16:40:52</sys_updated_on>
-        <title>CSM_Virtual_Agent_v1</title>
+        <sys_updated_on>2025-05-27 21:42:36</sys_updated_on>
+        <title>CSM_Virtual_Agent_V2</title>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>STANDARD</type>
     </sys_cb_topic>
-    <sys_translated_text action="delete_multiple" query="documentkey=4837177b93a5aa10d942fc4e1dba100f"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=b6aae23c93b5ae10d942fc4e1dba109d"/>
 </record_update>

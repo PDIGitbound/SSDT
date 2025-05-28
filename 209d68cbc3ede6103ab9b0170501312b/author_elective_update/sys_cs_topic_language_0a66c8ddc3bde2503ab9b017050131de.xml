@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_language">
+    <sys_cs_topic_language action="DELETE">
+        <cs_topic_id display_value="_PRVW__eb3712c9239b4a7286d2e17ceabbc503">026648ddc3bde2503ab9b01705013144</cs_topic_id>
+        <language_code>en</language_code>
+        <nlu_entities>[{"variable_name":"problem_2","nlu_entity":"","nlu_entity_label":""},{"variable_name":"laptop_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"adapter_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"monitor_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"charger_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"software_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"headset_sd","nlu_entity":"","nlu_entity_label":""}]</nlu_entities>
+        <nlu_intent>Negative</nlu_intent>
+        <nlu_intent_label>Negative</nlu_intent_label>
+        <nlu_model>Setup_Topics_Model</nlu_model>
+        <nlu_model_label>Setup Topics Model</nlu_model_label>
+        <nlu_provider>64c023c17300330021a044764df6a70e</nlu_provider>
+        <sys_class_name>sys_cs_topic_language</sys_class_name>
+        <sys_created_by>jessica.hidalgo</sys_created_by>
+        <sys_created_on>2025-05-27 18:20:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>0a66c8ddc3bde2503ab9b017050131de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cs_topic_language_0a66c8ddc3bde2503ab9b017050131de</sys_update_name>
+        <sys_updated_by>jessica.hidalgo</sys_updated_by>
+        <sys_updated_on>2025-05-27 18:20:15</sys_updated_on>
+    </sys_cs_topic_language>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sys_cs_topic_language_0a66c8ddc3bde2503ab9b017050131de</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_language"><sys_cs_topic_language action="INSERT_OR_UPDATE"><cs_topic_id display_value="_PRVW__eb3712c9239b4a7286d2e17ceabbc503">026648ddc3bde2503ab9b01705013144</cs_topic_id><language_code>en</language_code><nlu_entities>[{"variable_name":"problem_2","nlu_entity":"","nlu_entity_label":""},{"variable_name":"laptop_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"adapter_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"monitor_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"charger_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"software_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"headset_sd","nlu_entity":"","nlu_entity_label":""}]</nlu_entities><nlu_intent>Negative</nlu_intent><nlu_intent_label>Negative</nlu_intent_label><nlu_model>Setup_Topics_Model</nlu_model><nlu_model_label>Setup Topics Model</nlu_model_label><nlu_provider>64c023c17300330021a044764df6a70e</nlu_provider><sys_class_name>sys_cs_topic_language</sys_class_name><sys_created_by>jessica.hidalgo</sys_created_by><sys_created_on>2025-05-27 18:20:15</sys_created_on><sys_domain>global</sys_domain><sys_id>0a66c8ddc3bde2503ab9b017050131de</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package><sys_policy/><sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope><sys_update_name>sys_cs_topic_language_0a66c8ddc3bde2503ab9b017050131de</sys_update_name><sys_updated_by>jessica.hidalgo</sys_updated_by><sys_updated_on>2025-05-27 18:20:15</sys_updated_on></sys_cs_topic_language></record_update>]]></payload>
+        <payload_hash>-2129382798</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>ea6af6bcc3f1a2503ab9b01705013109</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>jessica.hidalgo</sys_created_by>
+        <sys_created_on>2025-05-27 18:20:15</sys_created_on>
+        <sys_id>8266c8ddc3bde2503ab9b017050131e1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19712f946f30000001</sys_recorded_at>
+        <sys_updated_by>jessica.hidalgo</sys_updated_by>
+        <sys_updated_on>2025-05-27 18:20:15</sys_updated_on>
+        <type>CS Topic Language</type>
+        <update_guid>4666c8ddc4bde2504432986e956575e0</update_guid>
+        <update_guid_history>4666c8ddc4bde2504432986e956575e0:-2129382798</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>jessica.hidalgo</sys_created_by>
+        <sys_created_on>2025-05-28 06:47:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_cs_topic_language">sys_cs_topic_language</sys_db_object>
+        <sys_id>7debacbd91044ed0814b96e2c5e7a244</sys_id>
+        <sys_metadata>0a66c8ddc3bde2503ab9b017050131de</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sys_cs_topic_language_0a66c8ddc3bde2503ab9b017050131de</sys_update_name>
+        <sys_update_version display_value="sys_cs_topic_language_0a66c8ddc3bde2503ab9b017050131de">8266c8ddc3bde2503ab9b017050131e1</sys_update_version>
+        <sys_updated_by>jessica.hidalgo</sys_updated_by>
+        <sys_updated_on>2025-05-28 06:47:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
