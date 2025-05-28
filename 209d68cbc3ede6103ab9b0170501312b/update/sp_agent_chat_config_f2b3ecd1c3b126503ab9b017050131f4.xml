@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_agent_chat_config">
+    <sp_agent_chat_config action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <name>Virtual Agent Service</name>
+        <order>100</order>
+        <portal>54045beb93256a10d942fc4e1dba10a8</portal>
+        <public>true</public>
+        <roles/>
+        <server_script><![CDATA[(function($sp) {
+  var topicGR = new GlideRecord('sys_cs_topic');
+  topicGR.addQuery('name', 'CSM_Virtual_Agent_V2');
+  topicGR.query();
+
+  var topicId = '';
+  if (topicGR.next()) {
+    topicId = topicGR.getUniqueValue();
+  }
+
+  return {
+    topicId: topicId,
+    portalId: $sp.getPortal().getId()
+  };
+})($sp);
+]]></server_script>
+        <sys_class_name>sp_agent_chat_config</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-05-27 20:43:54</sys_created_on>
+        <sys_id>f2b3ecd1c3b126503ab9b017050131f4</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Virtual Agent Service</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_agent_chat_config_f2b3ecd1c3b126503ab9b017050131f4</sys_update_name>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-05-27 22:04:33</sys_updated_on>
+    </sp_agent_chat_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=f2b3ecd1c3b126503ab9b017050131f4"/>
+</record_update>

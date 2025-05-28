@@ -6,27 +6,27 @@
         <css/>
         <glyph/>
         <id/>
-        <order>1</order>
+        <order>2</order>
         <roles/>
         <short_description/>
         <size>md</size>
-        <sp_column display_value="1">ff06dfaf93256a10d942fc4e1dba10cf</sp_column>
-        <sp_widget display_value="AI Search Assist">66135172671e1010b3d782f45685ef9e</sp_widget>
+        <sp_column display_value="3">8206609593712250d942fc4e1dba101c</sp_column>
+        <sp_widget display_value="Virtual Agent SSDT">84cef01193b52250d942fc4e1dba10eb</sp_widget>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>isaac.hernandez</sys_created_by>
-        <sys_created_on>2025-05-22 22:58:13</sys_created_on>
-        <sys_id>8d1613ef93256a10d942fc4e1dba1004</sys_id>
+        <sys_created_on>2025-05-27 22:30:42</sys_created_on>
+        <sys_id>66bffc9993b52250d942fc4e1dba1034</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
-        <sys_update_name>sp_instance_8d1613ef93256a10d942fc4e1dba1004</sys_update_name>
+        <sys_update_name>sp_instance_66bffc9993b52250d942fc4e1dba1034</sys_update_name>
         <sys_updated_by>isaac.hernandez</sys_updated_by>
-        <sys_updated_on>2025-05-22 22:58:13</sys_updated_on>
+        <sys_updated_on>2025-05-27 22:30:42</sys_updated_on>
         <title/>
         <url/>
         <widget_parameters/>
     </sp_instance>
-    <sys_translated_text action="delete_multiple" query="documentkey=8d1613ef93256a10d942fc4e1dba1004"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=66bffc9993b52250d942fc4e1dba1034"/>
 </record_update>

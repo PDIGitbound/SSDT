@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function($log, $scope, $element, $document, spModal, $q, $timeout, $window) {
+	'use strict';
+	
+  /* widget controller */
+  var $ctrl = this;
+	var $spContainer = $document.find('.sp-page-root');
+	var $widgetParent = $element.parent();
+	var START_SUPPORT_CONVERSATION = "${Start Support Conversation}";
+	var CLOSE_SUPPORT_CONVERSATION = "${Close Support Conversation}";
+	
+	$ctrl.isWindowVisible = false;
+	$ctrl.hasUnreadMessages = false;
+	$ctrl.firstPress = false;
+	$ctrl.vaSource = '';
+	$ctrl.helpButtonAriaLabel = START_SUPPORT_CONVERSATION;
+	
+	
+	$ctrl.toggleWindow = function() {
+		if ($ctrl.isWindowVisible) {
+			$ctrl.isWindowVisible = false;
+			$ctrl.helpButtonAriaLabel = START_SUPPORT_CONVERSATION;
+			$timeout(function() {
+				if (!$ctrl.isWindowVisible) {
+					$element.find('.conversation-container').css("display", "none");
+					$element.find('.sn-connect-floating').css("display", "none");
+					$element.find('.sn-connect-floating-wrapper').css("display", "none");
+					
+					// ios overlay hacky fix.
+					$document.find('.touch_scroll').css("-webkit-overflow-scrolling", "touch");
+				}
+			}, 300);
+		} else {
+			if (!$ctrl.firstPress) {
+				$ctrl.firstPress = true;
+				$ctrl.vaSource = '/$sn-va-web-client-app.do?sysparm_nostack=true&sysparm_stack=no';
+				if ($ctrl.options.va_url_params) {
+					$ctrl.vaSource = $ctrl.vaSource + '&' + $ctrl.options.va_url_params;
+				}
+			}
+			$ctrl.isWindowVisible = true;
+			$ctrl.hasUnreadMessages = false;
+			$ctrl.helpButtonAriaLabel = CLOSE_SUPPORT_CONVERSATION;
+			$element.find('.conversation-container').css("display", "block");
+			$element.find('.sn-connect-floating').css("display", "block");
+			$element.find('.sn-connect-floating-wrapper').css("display", "block");
+			
+			// ios overlay hacky fix.
+			$document.find('.touch_scroll').css("-webkit-overflow-scrolling", "auto");
+		}
+	};
+	
+		$window.addEventListener("message", function(e) {
+			if (e.data === 'sn-va-web-client-app-new-message' && $ctrl.isWindowVisible === false) {
+				$ctrl.hasUnreadMessages = true;
+			}
+			else if (e.data === 'sn-va-web-client-app-trigger-login') {
+				$window.location.reload(true);
+			}
+		});
+	
+	$element.find('.help-button').on("mouseup", function(e) {
+		e.target.blur();
+		e.stopPropagation();
+	});
+	
+	$element.find('.help-icon').on("mouseup", function(e) {
+		e.target.blur();
+		e.stopPropagation();
+	});
+	
+	$ctrl.openWindow = function() {
+		$ctrl.isWindowVisible = true;		
+		// delay before clearing unread message indicator
+		// in-case user opens and closes quickly
+		$timeout(function() {
+			if ($ctrl.isWindowVisible) {
+				$ctrl.hasUnreadMessages = false;							
+			}
+		}, 500);
+	};
+	
+	var _closeWindow = function() {
+		
+		$ctrl.isWindowVisible = false;
+		$ctrl.hasActiveConversation = false;
+	};
+}]]></client_script>
+        <controller_as>$ctrl</controller_as>
+        <css>$color-darker: #485563;&#13;
+$color-white: #ffffff;&#13;
+&#13;
+$window-width: 375px;&#13;
+$window-height: 600px;&#13;
+$button-height: 60px;&#13;
+$bottom-margin: 15px;&#13;
+&#13;
+$sn-chatbot-animation-speed: 300ms;&#13;
+&#13;
+// OVERRIDE TO DISPLAY RECORD CARDS&#13;
+.sn-card-component_records {&#13;
+  display: block !important;&#13;
+}&#13;
+&#13;
+.conversation-button-container {&#13;
+  position: fixed;&#13;
+  right: 30px;&#13;
+  bottom: 15px;&#13;
+  z-index: 20;&#13;
+&#13;
+  .conversation-region {&#13;
+    position: relative;&#13;
+    opacity: 0;&#13;
+    visibility: hidden;&#13;
+&#13;
+&#13;
+    &amp;.open {&#13;
+      transition: $sn-chatbot-animation-speed ease-in opacity;&#13;
+      opacity: 1;&#13;
+      visibility: visible;&#13;
+&#13;
+    }&#13;
+  }&#13;
+&#13;
+&#13;
+  .help-button {&#13;
+    position: relative;&#13;
+    width: 60px;&#13;
+    color: #fff;&#13;
+    float: right;&#13;
+    border: none;&#13;
+    height: $button-height;&#13;
+    border-radius: 60px;&#13;
+    box-shadow: 0px 2px 11px #ababab;&#13;
+    -moz-box-shadow: 0px 2px 11px #ababab;&#13;
+    -o-box-shadow: 0px 2px 11px #ababab;&#13;
+    padding: 0;&#13;
+    background-color: #8D8DE0;&#13;
+&#13;
+    &amp;::before {&#13;
+      content: "";&#13;
+      width: 60px;&#13;
+      height: 60px;&#13;
+      border-radius: 50%;&#13;
+      position: absolute;&#13;
+      top: 0;&#13;
+      left: 0;&#13;
+    }&#13;
+    &#13;
+    &amp;:hover::before {&#13;
+    	background-color: rgba(0,0,0,0.2);&#13;
+    }&#13;
+&#13;
+    &amp;:focus {&#13;
+      outline: thin dotted;&#13;
+      outline-color: gray;&#13;
+      outline: 5px auto -webkit-focus-ring-color;&#13;
+      outline-offset: 2px;&#13;
+    }&#13;
+&#13;
+    &amp;.state-unread {&#13;
+      &amp; &gt; span:after {&#13;
+        content: ' ';&#13;
+        position: absolute;&#13;
+        top: -17px;&#13;
+        right: -14px;&#13;
+        width: 16px;&#13;
+        height: 16px;&#13;
+        background-color: #ed6e5c;&#13;
+        border-radius: 25px;&#13;
+      }&#13;
+    }&#13;
+    &#13;
+    .help-icon {&#13;
+      pointer-events: none;&#13;
+      position: relative;&#13;
+    }&#13;
+    &#13;
+    .sn-va-widget-icon {&#13;
+    	background-image: url('/images/sn-va-sp-widget/sn-va-sp-widget-icon.svg');&#13;
+      height: 32px;&#13;
+      top: 1px;&#13;
+      left: 12px;&#13;
+      width: 36px;&#13;
+      display: block&#13;
+    }&#13;
+&#13;
+    .icon-close {&#13;
+      font-size: 20px;&#13;
+&#13;
+    }&#13;
+&#13;
+  }&#13;
+}&#13;
+&#13;
+// window sizing&#13;
+.sn-connect-floating {&#13;
+  position: relative;&#13;
+  bottom: 15px;&#13;
+  right: 0;&#13;
+  display: none;&#13;
+&#13;
+  .sn-connect-floating-wrapper {&#13;
+    width: $window-width; &#13;
+    transition: &#13;
+    border-bottom: 1px solid #bdc0c4;&#13;
+    margin-right: 0;&#13;
+    right: 0;&#13;
+    box-shadow: 0px 2px 11px #ababab !important;&#13;
+    -moz-box-shadow: 0px 2px 11px #ababab !important;&#13;
+    -o-box-shadow: 0px 2px 11px #ababab !important;&#13;
+    transition: max-height 0s $sn-chatbot-animation-speed;&#13;
+    display: none;&#13;
+    border-radius: 10px;&#13;
+    overflow: hidden;&#13;
+&#13;
+    .conversation-container {&#13;
+      height: 100%;&#13;
+      display: none;&#13;
+&#13;
+      .chat-frame {&#13;
+        max-height: $window-height;&#13;
+        height: calc(100vh - $button-height - ($bottom-margin * 3));&#13;
+        width: $window-width;&#13;
+        margin-bottom: -5px;&#13;
+        border: none;&#13;
+        overflow: hidden;&#13;
+        background-color: #fff;&#13;
+      }&#13;
+&#13;
+      // Immediate div is autogenerated from serviceportal&#13;
+      &amp; &gt; div {&#13;
+        height: 100%;&#13;
+      }&#13;
+    }&#13;
+  }&#13;
+}&#13;
+&#13;
+// Mobile SCSS&#13;
+@media (max-width: 425px) {  &#13;
+  .sn-connect-floating {&#13;
+    .sn-connect-floating-wrapper {&#13;
+      position: fixed;&#13;
+      max-height: 100%;&#13;
+      width: 100%;&#13;
+      left: 0;&#13;
+      right: 0;&#13;
+      bottom: calc($button-height + 20px);&#13;
+      top: 0;&#13;
+      border-radius: 0px !important;&#13;
+&#13;
+      .conversation-container {&#13;
+        position: absolute;&#13;
+        max-height: 100%;&#13;
+        width: 100%;&#13;
+        height: 100%;&#13;
+        left: 0;&#13;
+        right: 0;&#13;
+        top: 0;&#13;
+        bottom: 0;&#13;
+&#13;
+        .chat-frame {&#13;
+          max-height: initial !important;&#13;
+          position: absolute;&#13;
+          width: 100%;&#13;
+          height: 100%;&#13;
+          left: 0;&#13;
+          right: 0;&#13;
+          top: 0;&#13;
+          bottom: 0;&#13;
+        }&#13;
+      }&#13;
+    }&#13;
+  }&#13;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function(){}]]></link>
+        <name>Copy of Virtual Agent Service Portal Wid</name>
+        <option_schema>[{"hint":"The color of the floating button which opens the virtual agent service portal widget button.","name":"button_color","section":"Presentation","default_value":"#8D8DE0","label":"Floating Button Color","type":"string"},{"hint":"The URL parameters to pass to the VA client, for example: sysparm_live_agent_queue=abc123&amp;sysparm_conversation=xzy456","name":"va_url_params","section":"Behavior","label":"Virtual Agent Client URL Parameters","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+	var instanceGR = $sp.getInstanceRecord();
+	
+	options.va_url_params = options.va_url_params || "";
+	options.button_color = options.button_color || "red";
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-05-27 22:15:59</sys_created_on>
+        <sys_id>4f5cb8d993352250d942fc4e1dba1039</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Virtual Agent Service Portal Wid</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_widget_4f5cb8d993352250d942fc4e1dba1039</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-05-27 22:15:59</sys_updated_on>
+        <template><![CDATA[<div class="conversation-button-container">
+	<div class="conversation-region fade" 
+       ng-class="{'open': $ctrl.isWindowVisible}">
+    <div class="sn-connect sn-connect-floating">
+      <div class="sn-connect-floating-wrapper loaded">
+        <div class="conversation-container">
+          <iframe title="${Chat Support}" class = "chat-frame" scrolling="no"  horizontalscrolling="no" verticalscrolling="no" frameborder="none" ng-src="{{$ctrl.vaSource}}">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button aria-label="{{$ctrl.helpButtonAriaLabel}}"
+          class="help-button"
+          ng-attr-tabindex="0"
+          ng-class="{'state-open': $ctrl.isWindowVisible, 'state-unread': $ctrl.hasUnreadMessages}" 
+          ng-click="$ctrl.toggleWindow()"
+          ng-style="{'background-color': $ctrl.options.button_color}"
+          ng-attr-tabindex="0">
+    <div class="hover-overlay"></div>
+    <span aria-hidden="true" ng-class="$ctrl.isWindowVisible ? 'help-icon icon-close icon-cross' : 'help-icon icon-open sn-va-widget-icon'"></span>
+  </button>  
+</div>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sp_widget_4f5cb8d993352250d942fc4e1dba1039</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function($log, $scope, $element, $document, spModal, $q, $timeout, $window) {
+	'use strict';
+	
+  /* widget controller */
+  var $ctrl = this;
+	var $spContainer = $document.find('.sp-page-root');
+	var $widgetParent = $element.parent();
+	var START_SUPPORT_CONVERSATION = "${Start Support Conversation}";
+	var CLOSE_SUPPORT_CONVERSATION = "${Close Support Conversation}";
+	
+	$ctrl.isWindowVisible = false;
+	$ctrl.hasUnreadMessages = false;
+	$ctrl.firstPress = false;
+	$ctrl.vaSource = '';
+	$ctrl.helpButtonAriaLabel = START_SUPPORT_CONVERSATION;
+	
+	
+	$ctrl.toggleWindow = function() {
+		if ($ctrl.isWindowVisible) {
+			$ctrl.isWindowVisible = false;
+			$ctrl.helpButtonAriaLabel = START_SUPPORT_CONVERSATION;
+			$timeout(function() {
+				if (!$ctrl.isWindowVisible) {
+					$element.find('.conversation-container').css("display", "none");
+					$element.find('.sn-connect-floating').css("display", "none");
+					$element.find('.sn-connect-floating-wrapper').css("display", "none");
+					
+					// ios overlay hacky fix.
+					$document.find('.touch_scroll').css("-webkit-overflow-scrolling", "touch");
+				}
+			}, 300);
+		} else {
+			if (!$ctrl.firstPress) {
+				$ctrl.firstPress = true;
+				$ctrl.vaSource = '/$sn-va-web-client-app.do?sysparm_nostack=true&amp;sysparm_stack=no';
+				if ($ctrl.options.va_url_params) {
+					$ctrl.vaSource = $ctrl.vaSource + '&amp;' + $ctrl.options.va_url_params;
+				}
+			}
+			$ctrl.isWindowVisible = true;
+			$ctrl.hasUnreadMessages = false;
+			$ctrl.helpButtonAriaLabel = CLOSE_SUPPORT_CONVERSATION;
+			$element.find('.conversation-container').css("display", "block");
+			$element.find('.sn-connect-floating').css("display", "block");
+			$element.find('.sn-connect-floating-wrapper').css("display", "block");
+			
+			// ios overlay hacky fix.
+			$document.find('.touch_scroll').css("-webkit-overflow-scrolling", "auto");
+		}
+	};
+	
+		$window.addEventListener("message", function(e) {
+			if (e.data === 'sn-va-web-client-app-new-message' &amp;&amp; $ctrl.isWindowVisible === false) {
+				$ctrl.hasUnreadMessages = true;
+			}
+			else if (e.data === 'sn-va-web-client-app-trigger-login') {
+				$window.location.reload(true);
+			}
+		});
+	
+	$element.find('.help-button').on("mouseup", function(e) {
+		e.target.blur();
+		e.stopPropagation();
+	});
+	
+	$element.find('.help-icon').on("mouseup", function(e) {
+		e.target.blur();
+		e.stopPropagation();
+	});
+	
+	$ctrl.openWindow = function() {
+		$ctrl.isWindowVisible = true;		
+		// delay before clearing unread message indicator
+		// in-case user opens and closes quickly
+		$timeout(function() {
+			if ($ctrl.isWindowVisible) {
+				$ctrl.hasUnreadMessages = false;							
+			}
+		}, 500);
+	};
+	
+	var _closeWindow = function() {
+		
+		$ctrl.isWindowVisible = false;
+		$ctrl.hasActiveConversation = false;
+	};
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;$ctrl&lt;/controller_as&gt;&lt;css&gt;$color-darker: #485563;&amp;#13;
+$color-white: #ffffff;&amp;#13;
+&amp;#13;
+$window-width: 375px;&amp;#13;
+$window-height: 600px;&amp;#13;
+$button-height: 60px;&amp;#13;
+$bottom-margin: 15px;&amp;#13;
+&amp;#13;
+$sn-chatbot-animation-speed: 300ms;&amp;#13;
+&amp;#13;
+// OVERRIDE TO DISPLAY RECORD CARDS&amp;#13;
+.sn-card-component_records {&amp;#13;
+  display: block !important;&amp;#13;
+}&amp;#13;
+&amp;#13;
+.conversation-button-container {&amp;#13;
+  position: fixed;&amp;#13;
+  right: 30px;&amp;#13;
+  bottom: 15px;&amp;#13;
+  z-index: 20;&amp;#13;
+&amp;#13;
+  .conversation-region {&amp;#13;
+    position: relative;&amp;#13;
+    opacity: 0;&amp;#13;
+    visibility: hidden;&amp;#13;
+&amp;#13;
+&amp;#13;
+    &amp;amp;.open {&amp;#13;
+      transition: $sn-chatbot-animation-speed ease-in opacity;&amp;#13;
+      opacity: 1;&amp;#13;
+      visibility: visible;&amp;#13;
+&amp;#13;
+    }&amp;#13;
+  }&amp;#13;
+&amp;#13;
+&amp;#13;
+  .help-button {&amp;#13;
+    position: relative;&amp;#13;
+    width: 60px;&amp;#13;
+    color: #fff;&amp;#13;
+    float: right;&amp;#13;
+    border: none;&amp;#13;
+    height: $button-height;&amp;#13;
+    border-radius: 60px;&amp;#13;
+    box-shadow: 0px 2px 11px #ababab;&amp;#13;
+    -moz-box-shadow: 0px 2px 11px #ababab;&amp;#13;
+    -o-box-shadow: 0px 2px 11px #ababab;&amp;#13;
+    padding: 0;&amp;#13;
+    background-color: #8D8DE0;&amp;#13;
+&amp;#13;
+    &amp;amp;::before {&amp;#13;
+      content: "";&amp;#13;
+      width: 60px;&amp;#13;
+      height: 60px;&amp;#13;
+      border-radius: 50%;&amp;#13;
+      position: absolute;&amp;#13;
+      top: 0;&amp;#13;
+      left: 0;&amp;#13;
+    }&amp;#13;
+    &amp;#13;
+    &amp;amp;:hover::before {&amp;#13;
+    	background-color: rgba(0,0,0,0.2);&amp;#13;
+    }&amp;#13;
+&amp;#13;
+    &amp;amp;:focus {&amp;#13;
+      outline: thin dotted;&amp;#13;
+      outline-color: gray;&amp;#13;
+      outline: 5px auto -webkit-focus-ring-color;&amp;#13;
+      outline-offset: 2px;&amp;#13;
+    }&amp;#13;
+&amp;#13;
+    &amp;amp;.state-unread {&amp;#13;
+      &amp;amp; &amp;gt; span:after {&amp;#13;
+        content: ' ';&amp;#13;
+        position: absolute;&amp;#13;
+        top: -17px;&amp;#13;
+        right: -14px;&amp;#13;
+        width: 16px;&amp;#13;
+        height: 16px;&amp;#13;
+        background-color: #ed6e5c;&amp;#13;
+        border-radius: 25px;&amp;#13;
+      }&amp;#13;
+    }&amp;#13;
+    &amp;#13;
+    .help-icon {&amp;#13;
+      pointer-events: none;&amp;#13;
+      position: relative;&amp;#13;
+    }&amp;#13;
+    &amp;#13;
+    .sn-va-widget-icon {&amp;#13;
+    	background-image: url('/images/sn-va-sp-widget/sn-va-sp-widget-icon.svg');&amp;#13;
+      height: 32px;&amp;#13;
+      top: 1px;&amp;#13;
+      left: 12px;&amp;#13;
+      width: 36px;&amp;#13;
+      display: block&amp;#13;
+    }&amp;#13;
+&amp;#13;
+    .icon-close {&amp;#13;
+      font-size: 20px;&amp;#13;
+&amp;#13;
+    }&amp;#13;
+&amp;#13;
+  }&amp;#13;
+}&amp;#13;
+&amp;#13;
+// window sizing&amp;#13;
+.sn-connect-floating {&amp;#13;
+  position: relative;&amp;#13;
+  bottom: 15px;&amp;#13;
+  right: 0;&amp;#13;
+  display: none;&amp;#13;
+&amp;#13;
+  .sn-connect-floating-wrapper {&amp;#13;
+    width: $window-width; &amp;#13;
+    transition: &amp;#13;
+    border-bottom: 1px solid #bdc0c4;&amp;#13;
+    margin-right: 0;&amp;#13;
+    right: 0;&amp;#13;
+    box-shadow: 0px 2px 11px #ababab !important;&amp;#13;
+    -moz-box-shadow: 0px 2px 11px #ababab !important;&amp;#13;
+    -o-box-shadow: 0px 2px 11px #ababab !important;&amp;#13;
+    transition: max-height 0s $sn-chatbot-animation-speed;&amp;#13;
+    display: none;&amp;#13;
+    border-radius: 10px;&amp;#13;
+    overflow: hidden;&amp;#13;
+&amp;#13;
+    .conversation-container {&amp;#13;
+      height: 100%;&amp;#13;
+      display: none;&amp;#13;
+&amp;#13;
+      .chat-frame {&amp;#13;
+        max-height: $window-height;&amp;#13;
+        height: calc(100vh - $button-height - ($bottom-margin * 3));&amp;#13;
+        width: $window-width;&amp;#13;
+        margin-bottom: -5px;&amp;#13;
+        border: none;&amp;#13;
+        overflow: hidden;&amp;#13;
+        background-color: #fff;&amp;#13;
+      }&amp;#13;
+&amp;#13;
+      // Immediate div is autogenerated from serviceportal&amp;#13;
+      &amp;amp; &amp;gt; div {&amp;#13;
+        height: 100%;&amp;#13;
+      }&amp;#13;
+    }&amp;#13;
+  }&amp;#13;
+}&amp;#13;
+&amp;#13;
+// Mobile SCSS&amp;#13;
+@media (max-width: 425px) {  &amp;#13;
+  .sn-connect-floating {&amp;#13;
+    .sn-connect-floating-wrapper {&amp;#13;
+      position: fixed;&amp;#13;
+      max-height: 100%;&amp;#13;
+      width: 100%;&amp;#13;
+      left: 0;&amp;#13;
+      right: 0;&amp;#13;
+      bottom: calc($button-height + 20px);&amp;#13;
+      top: 0;&amp;#13;
+      border-radius: 0px !important;&amp;#13;
+&amp;#13;
+      .conversation-container {&amp;#13;
+        position: absolute;&amp;#13;
+        max-height: 100%;&amp;#13;
+        width: 100%;&amp;#13;
+        height: 100%;&amp;#13;
+        left: 0;&amp;#13;
+        right: 0;&amp;#13;
+        top: 0;&amp;#13;
+        bottom: 0;&amp;#13;
+&amp;#13;
+        .chat-frame {&amp;#13;
+          max-height: initial !important;&amp;#13;
+          position: absolute;&amp;#13;
+          width: 100%;&amp;#13;
+          height: 100%;&amp;#13;
+          left: 0;&amp;#13;
+          right: 0;&amp;#13;
+          top: 0;&amp;#13;
+          bottom: 0;&amp;#13;
+        }&amp;#13;
+      }&amp;#13;
+    }&amp;#13;
+  }&amp;#13;
+}&lt;/css&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id/&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function(){}]]&gt;&lt;/link&gt;&lt;name&gt;Copy of Virtual Agent Service Portal Wid&lt;/name&gt;&lt;option_schema&gt;[{"hint":"The color of the floating button which opens the virtual agent service portal widget button.","name":"button_color","section":"Presentation","default_value":"#8D8DE0","label":"Floating Button Color","type":"string"},{"hint":"The URL parameters to pass to the VA client, for example: sysparm_live_agent_queue=abc123&amp;amp;sysparm_conversation=xzy456","name":"va_url_params","section":"Behavior","label":"Virtual Agent Client URL Parameters","type":"string"}]&lt;/option_schema&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+	var instanceGR = $sp.getInstanceRecord();
+	
+	options.va_url_params = options.va_url_params || "";
+	options.button_color = options.button_color || "red";
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;isaac.hernandez&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-05-27 22:15:59&lt;/sys_created_on&gt;&lt;sys_id&gt;4f5cb8d993352250d942fc4e1dba1039&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Copy of Virtual Agent Service Portal Wid&lt;/sys_name&gt;&lt;sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GitHub SSDT"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_4f5cb8d993352250d942fc4e1dba1039&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;isaac.hernandez&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-05-27 22:15:59&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="conversation-button-container"&gt;
+	&lt;div class="conversation-region fade" 
+       ng-class="{'open': $ctrl.isWindowVisible}"&gt;
+    &lt;div class="sn-connect sn-connect-floating"&gt;
+      &lt;div class="sn-connect-floating-wrapper loaded"&gt;
+        &lt;div class="conversation-container"&gt;
+          &lt;iframe title="${Chat Support}" class = "chat-frame" scrolling="no"  horizontalscrolling="no" verticalscrolling="no" frameborder="none" ng-src="{{$ctrl.vaSource}}"&gt;
+          &lt;/iframe&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;button aria-label="{{$ctrl.helpButtonAriaLabel}}"
+          class="help-button"
+          ng-attr-tabindex="0"
+          ng-class="{'state-open': $ctrl.isWindowVisible, 'state-unread': $ctrl.hasUnreadMessages}" 
+          ng-click="$ctrl.toggleWindow()"
+          ng-style="{'background-color': $ctrl.options.button_color}"
+          ng-attr-tabindex="0"&gt;
+    &lt;div class="hover-overlay"&gt;&lt;/div&gt;
+    &lt;span aria-hidden="true" ng-class="$ctrl.isWindowVisible ? 'help-icon icon-close icon-cross' : 'help-icon icon-open sn-va-widget-icon'"&gt;&lt;/span&gt;
+  &lt;/button&gt;  
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>182609592</payload_hash>
+        <record_name>Copy of Virtual Agent Service Portal Wid</record_name>
+        <reverted_from/>
+        <source>42c1967c9335ae10d942fc4e1dba1037</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-05-27 22:15:59</sys_created_on>
+        <sys_id>8f5c781d93352250d942fc4e1dba1040</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19713d115c30000001</sys_recorded_at>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-05-27 22:15:59</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>835c781dac352250b3a15373a4f39b40</update_guid>
+        <update_guid_history>835c781dac352250b3a15373a4f39b40:182609592</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Copy of Virtual Agent Service Portal Wid">727e305d93752250d942fc4e1dba10cc</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-05-27 22:25:15</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>0ad4afdb7cbb4b748143ff29f82358c4</sys_id>
+        <sys_metadata>4f5cb8d993352250d942fc4e1dba1039</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Copy of Virtual Agent Service Portal Wid</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sp_widget_4f5cb8d993352250d942fc4e1dba1039</sys_update_name>
+        <sys_update_version display_value="sp_widget_4f5cb8d993352250d942fc4e1dba1039">8f5c781d93352250d942fc4e1dba1040</sys_update_version>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-05-27 22:25:15</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
