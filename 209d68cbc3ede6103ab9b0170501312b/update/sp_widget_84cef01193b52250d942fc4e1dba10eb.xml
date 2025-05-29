@@ -2,87 +2,85 @@
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
         <client_script><![CDATA[function x($log, $scope, $element, $document, spModal, $q, $timeout, $window) {
-  'use strict';
+    'use strict';
 
-  var $ctrl = this;
-  var $spContainer = $document.find('.sp-page-root');
-  var $widgetParent = $element.parent();
-  var START_SUPPORT_CONVERSATION = "${Start Support Conversation}";
-  var CLOSE_SUPPORT_CONVERSATION = "${Close Support Conversation}";
+    var $ctrl = this;
+    var $spContainer = $document.find('.sp-page-root');
+    var $widgetParent = $element.parent();
+    var START_SUPPORT_CONVERSATION = "${Start Support Conversation}";
+    var CLOSE_SUPPORT_CONVERSATION = "${Close Support Conversation}";
 
-  $ctrl.isWindowVisible = false;
-  $ctrl.hasUnreadMessages = false;
-  $ctrl.firstPress = false;
-  $ctrl.vaSource = '';
-  $ctrl.helpButtonAriaLabel = START_SUPPORT_CONVERSATION;
-
-  $ctrl.toggleWindow = function() {
-    if ($ctrl.isWindowVisible) {
-      $ctrl.isWindowVisible = false;
-      $ctrl.helpButtonAriaLabel = START_SUPPORT_CONVERSATION;
-      $timeout(function() {
-        if (!$ctrl.isWindowVisible) {
-          $element.find('.conversation-container').css("display", "none");
-          $element.find('.sn-connect-floating').css("display", "none");
-          $element.find('.sn-connect-floating-wrapper').css("display", "none");
-
-          // iOS overlay fix
-          $document.find('.touch_scroll').css("-webkit-overflow-scrolling", "touch");
-        }
-      }, 300);
-    } else {
-      if (!$ctrl.firstPress) {
-        $ctrl.firstPress = true;
-        $ctrl.vaSource = '/$sn-va-web-client-app.do?sysparm_nostack=true&sysparm_stack=no';
-        if ($ctrl.options.va_url_params) {
-          $ctrl.vaSource += '&' + $ctrl.options.va_url_params;
-        }
-      }
-      $ctrl.isWindowVisible = true;
-      $ctrl.hasUnreadMessages = false;
-      $ctrl.helpButtonAriaLabel = CLOSE_SUPPORT_CONVERSATION;
-      $element.find('.conversation-container').css("display", "block");
-      $element.find('.sn-connect-floating').css("display", "block");
-      $element.find('.sn-connect-floating-wrapper').css("display", "block");
-
-      // iOS overlay fix
-      $document.find('.touch_scroll').css("-webkit-overflow-scrolling", "auto");
-    }
-  };
-
-  $window.addEventListener("message", function(e) {
-    if (e.data === 'sn-va-web-client-app-new-message' && !$ctrl.isWindowVisible) {
-      $ctrl.hasUnreadMessages = true;
-    } else if (e.data === 'sn-va-web-client-app-trigger-login') {
-      $window.location.reload(true);
-    }
-  });
-
-  $element.find('.help-button').on("mouseup", function(e) {
-    e.target.blur();
-    e.stopPropagation();
-  });
-
-  $element.find('.help-icon').on("mouseup", function(e) {
-    e.target.blur();
-    e.stopPropagation();
-  });
-
-  $ctrl.openWindow = function() {
-    $ctrl.isWindowVisible = true;
-    $timeout(function() {
-      if ($ctrl.isWindowVisible) {
-        $ctrl.hasUnreadMessages = false;
-      }
-    }, 500);
-  };
-
-  var _closeWindow = function() {
     $ctrl.isWindowVisible = false;
-    $ctrl.hasActiveConversation = false;
-  };
-}
-]]></client_script>
+    $ctrl.hasUnreadMessages = false;
+    $ctrl.firstPress = false;
+    $ctrl.vaSource = '';
+
+    $ctrl.toggleWindow = function() {
+        if ($ctrl.isWindowVisible) {
+            $ctrl.isWindowVisible = false;
+			$ctrl.helpButtonAriaLabel = START_SUPPORT_CONVERSATION;
+            $timeout(function() {
+                if (!$ctrl.isWindowVisible) {
+                    $element.find('.conversation-container').css("display", "none");
+                    $element.find('.sn-connect-floating').css("display", "none");
+                    $element.find('.sn-connect-floating-wrapper').css("display", "none");
+
+                    // iOS overlay fix
+                    $document.find('.touch_scroll').css("-webkit-overflow-scrolling", "touch");
+                }
+            }, 300);
+        } else {
+			if (!$ctrl.firstPress) {
+				$ctrl.firstPress = true;
+				$ctrl.vaSource = '/$sn-va-web-client-app.do?sysparm_nostack=true&sysparm_stack=no';
+				if ($ctrl.options.va_url_params) {
+					$ctrl.vaSource = $ctrl.vaSource + '&' + $ctrl.options.va_url_params;
+				}
+			}
+            $ctrl.isWindowVisible = true;
+            $ctrl.hasUnreadMessages = false;
+            $ctrl.helpButtonAriaLabel = CLOSE_SUPPORT_CONVERSATION;
+            $element.find('.conversation-container').css("display", "block");
+            $element.find('.sn-connect-floating').css("display", "block");
+            $element.find('.sn-connect-floating-wrapper').css("display", "block");
+
+            // iOS overlay fix
+            $document.find('.touch_scroll').css("-webkit-overflow-scrolling", "auto");
+        }
+    };
+
+    $window.addEventListener("message", function(e) {
+        if (e.data === 'sn-va-web-client-app-new-message' && !$ctrl.isWindowVisible) {
+            $ctrl.hasUnreadMessages = true;
+        } else if (e.data === 'sn-va-web-client-app-trigger-login') {
+            $window.location.reload(true);
+        }
+    });
+
+    $element.find('.help-button').on("mouseup", function(e) {
+        e.target.blur();
+        e.stopPropagation();
+    });
+
+    $element.find('.help-icon').on("mouseup", function(e) {
+        e.target.blur();
+        e.stopPropagation();
+    });
+
+    $ctrl.openWindow = function() {
+        $ctrl.isWindowVisible = true;
+        $timeout(function() {
+            if ($ctrl.isWindowVisible) {
+                $ctrl.hasUnreadMessages = false;
+            }
+        }, 500);
+    };
+
+    var _closeWindow = function() {
+        $ctrl.isWindowVisible = false;
+        $ctrl.hasActiveConversation = false;
+    };
+}]]></client_script>
         <controller_as>$ctrl</controller_as>
         <css>$color-darker: #485563;&#13;
 $color-white: #ffffff;&#13;
@@ -269,7 +267,8 @@ $sn-chatbot-animation-speed: 300ms;&#13;
       }&#13;
     }&#13;
   }&#13;
-}</css>
+}&#13;
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -281,27 +280,30 @@ $sn-chatbot-animation-speed: 300ms;&#13;
         <link><![CDATA[function x(){}]]></link>
         <name>Virtual Agent SSDT</name>
         <option_schema>[{"hint":"The color of the floating button which opens the virtual agent service portal widget button.","name":"button_color","section":"Presentation","default_value":"#8D8DE0","label":"Floating Button Color","type":"string"},{"hint":"The URL parameters to pass to the VA client, for example: sysparm_live_agent_queue=abc123&amp;sysparm_conversation=xzy456","name":"va_url_params","section":"Behavior","label":"Virtual Agent Client URL Parameters","type":"string"}]</option_schema>
-        <public>false</public>
+        <public>true</public>
         <roles/>
         <script><![CDATA[(function() {
-  return {
-    topicId: '0496ccddc3bde2503ab9b017050131a2',
-    portalId: 'sp'
-  };
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	
+	var instanceGR = $sp.getInstanceRecord();
+	
+	options.va_url_params = instanceGR.va_url_params || "";
+	options.button_color = options.button_color || "red";
 })();]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>isaac.hernandez</sys_created_by>
         <sys_created_on>2025-05-27 22:26:26</sys_created_on>
         <sys_id>84cef01193b52250d942fc4e1dba10eb</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>Virtual Agent SSDT</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_widget_84cef01193b52250d942fc4e1dba10eb</sys_update_name>
-        <sys_updated_by>isaac.hernandez</sys_updated_by>
-        <sys_updated_on>2025-05-27 22:38:00</sys_updated_on>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-05-28 17:39:42</sys_updated_on>
         <template><![CDATA[<div class="conversation-button-container">
 	<div class="conversation-region fade" 
        ng-class="{'open': $ctrl.isWindowVisible}">

@@ -52,20 +52,13 @@
                 "type": "paragraph",
                 "children": [
                   {
-                    "text": "Your case was created"
-                  },
-                  {
-                    "type": "datapill",
-                    "dataPill": {
-                      "value": "{{vaInputs.adapter_case.case}}",
-                      "displayValue": "Input Variables➛Adapter Case➛Case"
-                    },
-                    "children": [
-                      {
-                        "text": ""
-                      }
-                    ]
-                  },
+                    "text": "Thank you! your case is created, your number case is: $(caseNumber)"
+                  }
+                ]
+              },
+              {
+                "type": "paragraph",
+                "children": [
                   {
                     "text": ""
                   }
@@ -1224,367 +1217,29 @@
           ],
           "variableId": "e44ca2fa756d4056916dff07e2d3ede5"
         },
-        "1760dbab9ab946d08f05423427f42aca": {
-          "id": "1760dbab9ab946d08f05423427f42aca",
-          "name": "Case fulfiller",
-          "invocationType": "action",
-          "stepType": "FlowAction",
-          "actionSpoke": "core",
-          "actionSpokeAction": "9d09f99587003300663ca1bb36cb0ba3",
-          "actionWaitType": "sync",
-          "actionRunAs": "session_user",
-          "permissionsNote": "By default, the Action executes based on the permissions of the user who initiated the conversation. For elevated privileges, you can set to System User.",
-          "actionSecureField": false,
-          "actionSelectSecureField": "",
-          "actionPromptSecureField": {
-            "mode": "simple",
-            "value": ""
-          },
-          "actionConfirmPromptSecureField": {
-            "mode": "simple",
-            "value": ""
-          },
-          "actionNonSecureChannelMessage": {
-            "mode": "simple",
-            "value": ""
-          },
-          "actionInputs": {
-            "input-if_multiple_records_are_found_action": {
-              "value": "use_first_record",
-              "mode": "string"
-            },
-            "input-sort_type": {
-              "value": "sort_desc",
-              "mode": "string"
+        "cc976d1825704c13bb341149d1c9e43e": {
+          "id": "cc976d1825704c13bb341149d1c9e43e",
+          "stepType": "TextOutput",
+          "name": "Case number",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "Your case number is: ${case_number}"
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "72da764e9ede4a548990f61475d4262a"
             }
-          },
-          "actionOutputs": {
-            "output-Record": [
-              {
-                "id": "63c6a0223071431f839b95804b30f389",
-                "mapping": "Record",
-                "disabled": false,
-                "type": "document_id",
-                "value": "Record",
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": "",
-                "variable": "Record",
-                "variableName": "record"
-              }
-            ],
-            "output-Table": [
-              {
-                "id": "2fd4bd03f4944ca4abe523497602465e",
-                "mapping": "sn_custom_service_case",
-                "disabled": false,
-                "type": "table_name",
-                "value": "Table",
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": "",
-                "variable": "Sn_custom_service_case",
-                "variableName": "sn_custom_service_case"
-              }
-            ],
-            "output-status": [
-              {
-                "id": "a03647bd96fc481aa83851580eeabe0d",
-                "mapping": "Status",
-                "disabled": false,
-                "type": "choice",
-                "value": "Status",
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": "",
-                "choices": [
-                  {
-                    "label": "Error",
-                    "value": "1",
-                    "order": 0
-                  },
-                  {
-                    "label": "Success",
-                    "value": "0",
-                    "order": 1
-                  }
-                ],
-                "variable": "Status (2)",
-                "variableName": "status_2"
-              }
-            ],
-            "output-error_message": [
-              {
-                "id": "087a842522354d5f93457267b349682a",
-                "mapping": "Error Message",
-                "disabled": false,
-                "type": "string",
-                "value": "Error Message",
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": "",
-                "variable": "Error Message",
-                "variableName": "error_message"
-              }
-            ],
-            "output-__action_status__": [
-              {
-                "id": "4aa6ef4abbcb430087fa072e52b22932",
-                "mapping": "Action Status",
-                "disabled": false,
-                "type": "object",
-                "value": "Action Status",
-                "is_list_data_entry": false,
-                "dependent_on_field": "",
-                "variable": "Action Status",
-                "variableName": "action_status"
-              }
-            ],
-            "output-__dont_treat_as_error__": [
-              {
-                "id": "cc76b23ef4ae402f9c13134a1c87fb00",
-                "mapping": "Don't Treat as Error",
-                "disabled": false,
-                "type": "boolean",
-                "value": "Don't Treat as Error",
-                "is_list_data_entry": false,
-                "dependent_on_field": "",
-                "variable": "Don't Treat As Error",
-                "variableName": "don_t_treat_as_error"
-              }
-            ]
-          },
-          "actionDefinition": {
-            "id": "9d09f99587003300663ca1bb36cb0ba3",
-            "latest_snapshot_id": "9d09f99587003300663ca1bb36cb0ba3",
-            "parent_id": "b93f42810b30030085c083eb37673a63",
-            "type": "action",
-            "name": "look_up_record",
-            "label": "Look Up Record",
-            "scope_id": "global",
-            "description": "\n      Look up a singular record on any ServiceNow table. You can configure the conditions for the record lookup. If multiple records are found, only the first record returns.\n    ",
-            "category": "",
-            "parameters_have_loaded": true,
-            "input_parameters": [
-              {
-                "supported_input_modes": [
-                  "script",
-                  "data_pill"
-                ],
-                "name": "table",
-                "label": "Table",
-                "type": "table_name",
-                "order": 0,
-                "required": false,
-                "value": [],
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": ""
-              },
-              {
-                "supported_input_modes": [
-                  "script",
-                  "data_pill"
-                ],
-                "name": "conditions",
-                "label": "Conditions",
-                "type": "conditions",
-                "order": 1,
-                "required": false,
-                "value": [],
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": "table"
-              },
-              {
-                "supported_input_modes": [
-                  "script",
-                  "data_pill"
-                ],
-                "name": "sort_column",
-                "label": "Order by",
-                "type": "field_name",
-                "order": 2,
-                "required": false,
-                "value": [],
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": "table"
-              },
-              {
-                "supported_input_modes": [
-                  "script",
-                  "data_pill",
-                  "data_entry"
-                ],
-                "name": "sort_type",
-                "label": "Sort Type",
-                "type": "choice",
-                "order": 3,
-                "required": false,
-                "value": [],
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": "",
-                "choices": [
-                  {
-                    "label": "a to z",
-                    "value": "sort_asc",
-                    "order": 0
-                  },
-                  {
-                    "label": "z to a",
-                    "value": "sort_desc",
-                    "order": 1
-                  }
-                ]
-              },
-              {
-                "supported_input_modes": [
-                  "script",
-                  "data_pill",
-                  "data_entry"
-                ],
-                "name": "if_multiple_records_are_found_action",
-                "label": "If multiple records are found action",
-                "type": "choice",
-                "order": 4,
-                "required": false,
-                "value": [],
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": "",
-                "choices": [
-                  {
-                    "label": "Fail the step",
-                    "value": "error",
-                    "order": 0
-                  },
-                  {
-                    "label": "Return only the first record",
-                    "value": "use_first_record",
-                    "order": 1
-                  }
-                ]
-              },
-              {
-                "supported_input_modes": [
-                  "script",
-                  "data_pill",
-                  "data_entry"
-                ],
-                "name": "__snc_dont_fail_on_error",
-                "label": "Don't fail on error",
-                "type": "boolean",
-                "order": 5,
-                "required": false,
-                "value": [],
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": ""
-              }
-            ],
-            "output_parameters": [
-              {
-                "name": "Record",
-                "label": "Record",
-                "type": "document_id",
-                "order": 0,
-                "required": false,
-                "value": [],
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": ""
-              },
-              {
-                "name": "Table",
-                "label": "Table",
-                "type": "table_name",
-                "order": 1,
-                "required": false,
-                "value": [],
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": ""
-              },
-              {
-                "name": "status",
-                "label": "Status",
-                "type": "choice",
-                "order": 2,
-                "required": false,
-                "value": [],
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": "",
-                "choices": [
-                  {
-                    "label": "Error",
-                    "value": "1",
-                    "order": 0
-                  },
-                  {
-                    "label": "Success",
-                    "value": "0",
-                    "order": 1
-                  }
-                ]
-              },
-              {
-                "name": "error_message",
-                "label": "Error Message",
-                "type": "string",
-                "order": 3,
-                "required": false,
-                "value": [],
-                "description": "",
-                "is_list_data_entry": false,
-                "dependent_on_field": ""
-              },
-              {
-                "name": "__action_status__",
-                "label": "Action Status",
-                "type": "object",
-                "order": 4,
-                "required": false,
-                "value": [],
-                "is_list_data_entry": false,
-                "dependent_on_field": ""
-              },
-              {
-                "name": "__dont_treat_as_error__",
-                "label": "Don't Treat as Error",
-                "type": "boolean",
-                "order": 5,
-                "required": false,
-                "value": [],
-                "is_list_data_entry": false,
-                "dependent_on_field": ""
-              }
-            ]
-          },
-          "subflowSecureField": false,
-          "subflowSelectSecureField": "",
-          "subflowPromptSecureField": {
-            "mode": "simple",
-            "value": ""
-          },
-          "subflowConfirmPromptSecureField": {
-            "mode": "simple",
-            "value": ""
-          },
-          "subflowNonSecureChannelMessage": {
-            "mode": "simple",
-            "value": "This action is not supported on this channel."
-          },
-          "variableIds": [
-            "63c6a0223071431f839b95804b30f389",
-            "2fd4bd03f4944ca4abe523497602465e",
-            "a03647bd96fc481aa83851580eeabe0d",
-            "087a842522354d5f93457267b349682a",
-            "4aa6ef4abbcb430087fa072e52b22932",
-            "cc76b23ef4ae402f9c13134a1c87fb00"
           ],
+          "isCollapsible": true,
+          "requestFeedback": true,
           "applicability": {
             "value": "",
             "mode": "query"
@@ -1596,7 +1251,23 @@
           "id": "ae71e33ecd224d179201f1d3cd0462a6",
           "edgeType": "Edge",
           "source": "630f275b043b4d0ebd5588f605b37a19",
-          "target": "b36c22c303ff4a5fbdc7e2ece618ce65",
+          "target": "cc976d1825704c13bb341149d1c9e43e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "58196dd6a1474235b3b5a90aee5da3aa",
+          "edgeType": "Edge",
+          "source": "996a2dabd11d4d63a96e1279d971220b",
+          "target": "43e3f124e65f4138a6bc03a02a66bc10",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "62252d2ce568442ea7a8b1a2f5153404",
+          "edgeType": "Edge",
+          "source": "3cea8b82381342df9bd20ad7a0aa4de0",
+          "target": "a69890f0a6ec4a12a9d3dac51f64dcbd",
           "sourcePort": "",
           "targetPort": ""
         },
@@ -1642,14 +1313,6 @@
           "edgeType": "Edge",
           "source": "fa58f6b0a1df4ca28a9c80740e64566c",
           "target": "24c7a31a87334ebdb8522855d0ee08a4",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "58196dd6a1474235b3b5a90aee5da3aa",
-          "edgeType": "Edge",
-          "source": "996a2dabd11d4d63a96e1279d971220b",
-          "target": "43e3f124e65f4138a6bc03a02a66bc10",
           "sourcePort": "",
           "targetPort": ""
         },
@@ -1791,18 +1454,10 @@
           "targetPort": ""
         },
         {
-          "id": "62252d2ce568442ea7a8b1a2f5153404",
+          "id": "3932f242332f4106b0481f7f352e0882",
           "edgeType": "Edge",
-          "source": "3cea8b82381342df9bd20ad7a0aa4de0",
-          "target": "1760dbab9ab946d08f05423427f42aca",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "efbfacb1852f4adc914b0ba9548d7add",
-          "edgeType": "Edge",
-          "source": "1760dbab9ab946d08f05423427f42aca",
-          "target": "a69890f0a6ec4a12a9d3dac51f64dcbd",
+          "source": "cc976d1825704c13bb341149d1c9e43e",
+          "target": "b36c22c303ff4a5fbdc7e2ece618ce65",
           "sourcePort": "",
           "targetPort": ""
         }
@@ -2097,124 +1752,6 @@
       "category": "vaInputs",
       "nodeId": "52760fff0a9e4f1ebe4fe6b31c2d2dbc",
       "isHidden": false
-    },
-    "63c6a0223071431f839b95804b30f389": {
-      "id": "63c6a0223071431f839b95804b30f389",
-      "name": "record",
-      "label": "Record",
-      "defaultValue": "Record",
-      "varType": "document_id",
-      "category": "vaInputs",
-      "metadata": {
-        "libraryMappingType": "output"
-      },
-      "description": "",
-      "is_list_data_entry": false,
-      "dependent_on_field": "",
-      "variable": "Record",
-      "variableName": "record",
-      "nodeId": "1760dbab9ab946d08f05423427f42aca",
-      "isHidden": false
-    },
-    "2fd4bd03f4944ca4abe523497602465e": {
-      "id": "2fd4bd03f4944ca4abe523497602465e",
-      "name": "sn_custom_service_case",
-      "label": "Sn_custom_service_case",
-      "defaultValue": "Table",
-      "varType": "table_name",
-      "category": "vaInputs",
-      "metadata": {
-        "libraryMappingType": "output"
-      },
-      "description": "",
-      "is_list_data_entry": false,
-      "dependent_on_field": "",
-      "variable": "Sn_custom_service_cas",
-      "variableName": "sn_custom_service_cas",
-      "nodeId": "1760dbab9ab946d08f05423427f42aca",
-      "isHidden": false
-    },
-    "a03647bd96fc481aa83851580eeabe0d": {
-      "id": "a03647bd96fc481aa83851580eeabe0d",
-      "name": "status_2",
-      "label": "Status (2)",
-      "defaultValue": "Status",
-      "varType": "string",
-      "category": "vaInputs",
-      "metadata": {
-        "libraryMappingType": "output"
-      },
-      "description": "",
-      "is_list_data_entry": false,
-      "dependent_on_field": "",
-      "choices": [
-        {
-          "label": "Error",
-          "value": "1",
-          "order": 0
-        },
-        {
-          "label": "Success",
-          "value": "0",
-          "order": 1
-        }
-      ],
-      "variable": "Status (2)",
-      "variableName": "status_2",
-      "nodeId": "1760dbab9ab946d08f05423427f42aca",
-      "isHidden": false
-    },
-    "087a842522354d5f93457267b349682a": {
-      "id": "087a842522354d5f93457267b349682a",
-      "name": "error_message",
-      "label": "Error Message",
-      "defaultValue": "Error Message",
-      "varType": "string",
-      "category": "vaInputs",
-      "metadata": {
-        "libraryMappingType": "output"
-      },
-      "description": "",
-      "is_list_data_entry": false,
-      "dependent_on_field": "",
-      "variable": "Error Message",
-      "variableName": "error_message",
-      "nodeId": "1760dbab9ab946d08f05423427f42aca",
-      "isHidden": false
-    },
-    "4aa6ef4abbcb430087fa072e52b22932": {
-      "id": "4aa6ef4abbcb430087fa072e52b22932",
-      "name": "action_status",
-      "label": "Action Status",
-      "defaultValue": "Action Status",
-      "varType": "object",
-      "category": "vaInputs",
-      "metadata": {
-        "libraryMappingType": "output"
-      },
-      "is_list_data_entry": false,
-      "dependent_on_field": "",
-      "variable": "Action Status",
-      "variableName": "action_status",
-      "nodeId": "1760dbab9ab946d08f05423427f42aca",
-      "isHidden": false
-    },
-    "cc76b23ef4ae402f9c13134a1c87fb00": {
-      "id": "cc76b23ef4ae402f9c13134a1c87fb00",
-      "name": "don_t_treat_as_error",
-      "label": "Don't Treat As Error",
-      "defaultValue": "Don't Treat as Error",
-      "varType": "boolean",
-      "category": "vaInputs",
-      "metadata": {
-        "libraryMappingType": "output"
-      },
-      "is_list_data_entry": false,
-      "dependent_on_field": "",
-      "variable": "Don't Treat As Error",
-      "variableName": "don_t_treat_as_error",
-      "nodeId": "1760dbab9ab946d08f05423427f42aca",
-      "isHidden": false
     }
   }
 }</graph>
@@ -2239,14 +1776,14 @@
         <sys_created_on>2025-05-26 17:00:58</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>b6aae23c93b5ae10d942fc4e1dba109d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>CSM_Virtual_Agent_V2</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_cb_topic_b6aae23c93b5ae10d942fc4e1dba109d</sys_update_name>
         <sys_updated_by>josepablo.lopez</sys_updated_by>
-        <sys_updated_on>2025-05-27 21:42:36</sys_updated_on>
+        <sys_updated_on>2025-05-28 15:55:07</sys_updated_on>
         <title>CSM_Virtual_Agent_V2</title>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>STANDARD</type>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application>Virtual Agent</application>
+        <code/>
+        <commented_message/>
+        <key>va:topic:8710f4e19375e250d942fc4e1dba10c0:node:37fa77ad355c4c10ae7b297eb8d9f54d:field:0</key>
+        <language>en</language>
+        <message>I've created this case for you:</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-05-28 16:11:14</sys_created_on>
+        <sys_id>bd72b0a59375e250d942fc4e1dba10d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>va:topic:8710f4e19375e250d942fc4e1dba10c0:node:37fa77ad355c4c10ae7b297eb8d9f54d:field:0</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_ui_message_bd72b0a59375e250d942fc4e1dba10d6</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-05-28 16:11:14</sys_updated_on>
+    </sys_ui_message>
+</record_update>

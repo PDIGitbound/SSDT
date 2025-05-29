@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category>b28634c4b7b93300da7ab948ee11a93a</category>
+        <channels/>
+        <connect_queue/>
+        <context_profiles/>
+        <description>Create Case</description>
+        <dialog_acts_enabled>false</dialog_acts_enabled>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>true</flexible_conversation_switching>
+        <foundational>false</foundational>
+        <graph>{
+  "graph_api_version": "1.0.78",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "e23d38ea414c46e98ce0f85169a9687d": {
+          "id": "e23d38ea414c46e98ce0f85169a9687d",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          },
+          "parameters": [
+            {
+              "name": "short_description",
+              "value": "",
+              "id": "cee687225daf418895403154052031ac",
+              "referenced": true,
+              "disabled": true,
+              "type": "String",
+              "hint": ""
+            },
+            {
+              "name": "description",
+              "value": "",
+              "id": "b0714e7059454a82a9e434a4292b76d5",
+              "referenced": true,
+              "disabled": true,
+              "type": "String",
+              "hint": ""
+            },
+            {
+              "name": "account_sys_id",
+              "value": "",
+              "id": "2d272f1247b64ff7bed220baeedde3df",
+              "referenced": true,
+              "disabled": true,
+              "type": "String",
+              "hint": ""
+            },
+            {
+              "name": "contact_sys_id",
+              "value": "",
+              "id": "20732f8d3f684a0dbfc1b95816c9fc02",
+              "referenced": true,
+              "disabled": true,
+              "type": "String",
+              "hint": ""
+            },
+            {
+              "name": "consumer_sys_id",
+              "value": "",
+              "id": "99bce2c2f1c2453ebc52d3cec57194db",
+              "referenced": true,
+              "disabled": true,
+              "type": "String",
+              "hint": ""
+            }
+          ],
+          "variableIds": [
+            "cee687225daf418895403154052031ac",
+            "b0714e7059454a82a9e434a4292b76d5",
+            "2d272f1247b64ff7bed220baeedde3df",
+            "20732f8d3f684a0dbfc1b95816c9fc02",
+            "99bce2c2f1c2453ebc52d3cec57194db"
+          ],
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          }
+        },
+        "76c28942d6f044f39e3b9c3837ada3f4": {
+          "id": "76c28942d6f044f39e3b9c3837ada3f4",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "outputVariables": [
+            {
+              "key": "case_sys_id",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaVars.caseid}}",
+                        "displayValue": "vaVars➛caseid"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "cannotBeDeleted": true,
+              "alertMessage": {
+                "id": "end.outputParamDeleteAlert",
+                "defaultMessage": "You cannot delete this parameter because other calling topics use it."
+              },
+              "additionalInfoUrl": "/sys_cs_topic_library_usage_list.do?sysparm_query=library_cs_topic_id=cd576555b767330024f1b948ee11a91f%5Ecalling_cs_topic_idIN3ab99fadb767330024f1b948ee11a931",
+              "additionalInfoLabel": {
+                "id": "end.outputParameterDeleteInfoLink",
+                "defaultMessage": "See calling topics"
+              },
+              "disabled": true
+            }
+          ],
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          }
+        },
+        "d1524b03819d4b7291ee9399a0476138": {
+          "id": "d1524b03819d4b7291ee9399a0476138",
+          "stepType": "RecordOutput",
+          "name": "show case",
+          "variableId": "",
+          "mode": "script",
+          "tableName": "sn_customerservice_case",
+          "fields": [
+            "short_description",
+            "priority",
+            "state"
+          ],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": "sys_id={{vaInputs.create_case}}"
+          },
+          "cardTemplate": "General",
+          "cardFields": {},
+          "cardDefinition": {},
+          "requestFeedback": true,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          }
+        },
+        "dd731333f94348c6bae25e05c40f06bb": {
+          "id": "dd731333f94348c6bae25e05c40f06bb",
+          "stepType": "CrudAction",
+          "name": "Create Case",
+          "template": {
+            "queryString": "short_description={{vaInputs.short_description}}^description={{vaInputs.description}}^account={{vaInputs.account_sys_id}}^contact={{vaInputs.contact_sys_id}}^consumer={{vaInputs.consumer_sys_id}}^contact_type=virtual_agent"
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "variableId": "d556d2b84abc47309dfb6add3b5f6474",
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          }
+        },
+        "058149aca3774c39b24507415d90e03e": {
+          "id": "058149aca3774c39b24507415d90e03e",
+          "name": "Fetch Account and Contact / Consumer",
+          "script": "(function execute() {\n    var user = gs.getUserID();\n    var contactQuery = new GlideRecord('customer_contact');\n    if (contactQuery.get(user)) {\n        vaInputs.contact_sys_id = contactQuery.sys_id;\n        vaInputs.account_sys_id = contactQuery.account;\n    }else{\n        var consumerQuery = new GlideRecord('csm_consumer');\n        if (consumerQuery.get('user', user)) {\n            vaInputs.consumer_sys_id = consumerQuery.sys_id;\n        }\n    }\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          }
+        },
+        "f0c3435976544dc4a47777517ca3235f": {
+          "id": "f0c3435976544dc4a47777517ca3235f",
+          "stepType": "Decision",
+          "name": "Decision",
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          }
+        },
+        "37fa77ad355c4c10ae7b297eb8d9f54d": {
+          "id": "37fa77ad355c4c10ae7b297eb8d9f54d",
+          "stepType": "TextOutput",
+          "name": "Create Case Ack",
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "text": "I've created this case for you:"
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple"
+            }
+          ],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "secure": false,
+          "requestFeedback": true,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "isCollapsible": true
+        },
+        "9a926bd06ca34fbe9377dc0626930616": {
+          "id": "9a926bd06ca34fbe9377dc0626930616",
+          "stepType": "Decision",
+          "name": "Decision",
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          }
+        },
+        "a06bf6e377e844d2b59c6bbed8b80d7c": {
+          "id": "a06bf6e377e844d2b59c6bbed8b80d7c",
+          "name": "Fetch Account from Contact",
+          "script": "(function execute() {\n    var contactQuery = new GlideRecord('customer_contact');\n    if (contactQuery.get(vaInputs.contact_sys_id)) {\n        vaInputs.contact_sys_id = contactQuery.sys_id;\n        vaInputs.account_sys_id = contactQuery.account;\n    }\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          }
+        },
+        "696fc6565c66481ca936fbbb827c2196": {
+          "id": "696fc6565c66481ca936fbbb827c2196",
+          "stepType": "Decision",
+          "name": "Decision",
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          }
+        },
+        "7884a70884114aacb12b8830b1f5f7d4": {
+          "id": "7884a70884114aacb12b8830b1f5f7d4",
+          "stepType": "TextOutput",
+          "name": "Case no access",
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "text": "You do not have the permissions to create a case. Contact your system administrator to get access."
+                    },
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple"
+            }
+          ],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "secure": false,
+          "requestFeedback": true,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "isCollapsible": true
+        },
+        "2220c463b25b4c458cdd4c6591e2a2d8": {
+          "id": "2220c463b25b4c458cdd4c6591e2a2d8",
+          "name": "Caseid for output",
+          "script": "(function execute() {\n    vaVars.caseid = vaInputs.create_case;\n})()\n",
+          "stepType": "ScriptAction",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "b86e0af5a29447758404c707fbae3fc4",
+          "edgeType": "Branch",
+          "source": "9a926bd06ca34fbe9377dc0626930616",
+          "target": "a06bf6e377e844d2b59c6bbed8b80d7c",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "account_sys_idISEMPTY",
+            "mode": "query"
+          },
+          "label": "Account is empty"
+        },
+        {
+          "id": "0f6dbb8adcb7465db27bd2d5693f8004",
+          "edgeType": "Edge",
+          "source": "058149aca3774c39b24507415d90e03e",
+          "target": "dd731333f94348c6bae25e05c40f06bb",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "3caa86c21b9c49fe84d965d9aed18d1b",
+          "edgeType": "Branch",
+          "source": "f0c3435976544dc4a47777517ca3235f",
+          "target": "058149aca3774c39b24507415d90e03e",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "contact_sys_idISEMPTY^consumer_sys_idISEMPTY^account_sys_idISEMPTY",
+            "mode": "query"
+          },
+          "label": "Contact and Consumer is empty"
+        },
+        {
+          "id": "44ed9c6647fb41968f83c3dff038cef3",
+          "edgeType": "Edge",
+          "source": "dd731333f94348c6bae25e05c40f06bb",
+          "target": "37fa77ad355c4c10ae7b297eb8d9f54d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "9186bc22fd62458b816ea83d21d4046d",
+          "edgeType": "Edge",
+          "source": "37fa77ad355c4c10ae7b297eb8d9f54d",
+          "target": "d1524b03819d4b7291ee9399a0476138",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "1fe3f62832e140178cc7fadf711fa17b",
+          "edgeType": "Branch",
+          "source": "f0c3435976544dc4a47777517ca3235f",
+          "target": "9a926bd06ca34fbe9377dc0626930616",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "contact_sys_idISNOTEMPTY",
+            "mode": "query"
+          },
+          "label": "Contact is not empty"
+        },
+        {
+          "id": "c6c03c92b6574605a5fb6b4cbb2ac00d",
+          "edgeType": "Branch",
+          "source": "9a926bd06ca34fbe9377dc0626930616",
+          "target": "dd731333f94348c6bae25e05c40f06bb",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "account_sys_idISNOTEMPTY",
+            "mode": "query"
+          },
+          "label": "Account is not empty"
+        },
+        {
+          "id": "9969f17106e14215925d79307fdef5cb",
+          "edgeType": "Edge",
+          "source": "a06bf6e377e844d2b59c6bbed8b80d7c",
+          "target": "dd731333f94348c6bae25e05c40f06bb",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "21f67780a3584503befe464e2eedf808",
+          "edgeType": "Branch",
+          "source": "f0c3435976544dc4a47777517ca3235f",
+          "target": "dd731333f94348c6bae25e05c40f06bb",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "consumer_sys_idISNOTEMPTY^ORaccount_sys_idISNOTEMPTY",
+            "mode": "query"
+          },
+          "label": "Consumer/Account is not empty"
+        },
+        {
+          "id": "829382fbac7b48078efd8f6ad36ceffb",
+          "edgeType": "Edge",
+          "source": "e23d38ea414c46e98ce0f85169a9687d",
+          "target": "696fc6565c66481ca936fbbb827c2196",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "385bbb115e8a4d51a93d76fb40c9e2b9",
+          "edgeType": "Branch",
+          "source": "696fc6565c66481ca936fbbb827c2196",
+          "target": "f0c3435976544dc4a47777517ca3235f",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    var gr = new GlideRecord('sn_customerservice_case');\n    return gr.canCreate();\n})()\n"
+          },
+          "label": "Has access to create case"
+        },
+        {
+          "id": "7ed30fc789f242108bc13114f3f3f6e0",
+          "edgeType": "Branch",
+          "source": "696fc6565c66481ca936fbbb827c2196",
+          "target": "7884a70884114aacb12b8830b1f5f7d4",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    var gr = new GlideRecord('sn_customerservice_case');\n    return !gr.canCreate();\n})()\n"
+          },
+          "label": "Does not have access to create case"
+        },
+        {
+          "id": "706d5f1f40ab463680ea6e3e341e5758",
+          "edgeType": "Edge",
+          "source": "7884a70884114aacb12b8830b1f5f7d4",
+          "target": "76c28942d6f044f39e3b9c3837ada3f4",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ce3b37c3aab1439d84f5892044bf8d9c",
+          "edgeType": "Edge",
+          "source": "d1524b03819d4b7291ee9399a0476138",
+          "target": "2220c463b25b4c458cdd4c6591e2a2d8",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ae05f811797441a5a3aa1f0153134dec",
+          "edgeType": "Edge",
+          "source": "2220c463b25b4c458cdd4c6591e2a2d8",
+          "target": "76c28942d6f044f39e3b9c3837ada3f4",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "c83e1f7b1db549568858a82175fc2231": {
+      "id": "c83e1f7b1db549568858a82175fc2231",
+      "value": {
+        "value": "",
+        "mode": "simple"
+      },
+      "name": "caseid",
+      "label": "caseid",
+      "varType": "script",
+      "category": "vaVars"
+    },
+    "cee687225daf418895403154052031ac": {
+      "id": "cee687225daf418895403154052031ac",
+      "name": "short_description",
+      "label": "Short_description",
+      "defaultValue": "",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "input"
+      },
+      "nodeId": "e23d38ea414c46e98ce0f85169a9687d",
+      "isHidden": false
+    },
+    "d556d2b84abc47309dfb6add3b5f6474": {
+      "id": "d556d2b84abc47309dfb6add3b5f6474",
+      "name": "create_case",
+      "label": "Create Case",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "dd731333f94348c6bae25e05c40f06bb",
+      "isHidden": false
+    },
+    "b0714e7059454a82a9e434a4292b76d5": {
+      "id": "b0714e7059454a82a9e434a4292b76d5",
+      "name": "description",
+      "label": "Description",
+      "defaultValue": "",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "input"
+      },
+      "nodeId": "e23d38ea414c46e98ce0f85169a9687d",
+      "isHidden": false
+    },
+    "2d272f1247b64ff7bed220baeedde3df": {
+      "id": "2d272f1247b64ff7bed220baeedde3df",
+      "name": "account_sys_id",
+      "label": "Account_sys_id",
+      "defaultValue": "",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "input"
+      },
+      "nodeId": "e23d38ea414c46e98ce0f85169a9687d",
+      "isHidden": false
+    },
+    "20732f8d3f684a0dbfc1b95816c9fc02": {
+      "id": "20732f8d3f684a0dbfc1b95816c9fc02",
+      "name": "contact_sys_id",
+      "label": "Contact_sys_id",
+      "defaultValue": "",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "input"
+      },
+      "nodeId": "e23d38ea414c46e98ce0f85169a9687d",
+      "isHidden": false
+    },
+    "99bce2c2f1c2453ebc52d3cec57194db": {
+      "id": "99bce2c2f1c2453ebc52d3cec57194db",
+      "name": "consumer_sys_id",
+      "label": "Consumer_sys_id",
+      "defaultValue": "",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "input"
+      },
+      "nodeId": "e23d38ea414c46e98ce0f85169a9687d",
+      "isHidden": false
+    },
+    "0a30cc778418431bb4ce84533622ae1d": {
+      "category": "vaInputs",
+      "id": "0a30cc778418431bb4ce84533622ae1d",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    }
+  }
+}</graph>
+        <key_phrases/>
+        <library>true</library>
+        <live_agent>false</live_agent>
+        <model_type>nlu_keyword</model_type>
+        <modify_confirmation_enabled>false</modify_confirmation_enabled>
+        <name>testing</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <root_topic_id>09f22fcfb7c333006ebab948ee11a904</root_topic_id>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id>09f22fcfb7c333006ebab948ee11a904</source_topic_id>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-05-28 16:00:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8710f4e19375e250d942fc4e1dba10c0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>testing</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cb_topic_8710f4e19375e250d942fc4e1dba10c0</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-05-28 16:01:12</sys_updated_on>
+        <title>testing</title>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>TOPIC_BLOCK</type>
+    </sys_cb_topic>
+    <sys_translated_text action="delete_multiple" query="documentkey=8710f4e19375e250d942fc4e1dba10c0"/>
+</record_update>

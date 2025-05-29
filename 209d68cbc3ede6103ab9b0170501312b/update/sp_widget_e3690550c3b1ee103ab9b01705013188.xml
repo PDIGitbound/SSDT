@@ -1,56 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function() {
-  /* widget controller */
+        <client_script><![CDATA[api.controller = function() {
   var c = this;
+
+  // Variable para mostrar/ocultar el modal
+  c.showModal = false;
+
+  // Función para abrir el modal
+  c.openModal = function() {
+    c.showModal = true;
+  };
+
+  // Función para cerrar el modal
+  c.closeModal = function() {
+    c.showModal = false;
+  };
 };]]></client_script>
         <controller_as>c</controller_as>
-        <css>h3 {&#13;
-  font-size: 1.75rem;&#13;
-  font-weight: 700;&#13;
-  margin-bottom: 1.2rem;&#13;
-  color: #343a40;&#13;
-}&#13;
-&#13;
-table.table {&#13;
-  border: 1px solid #dee2e6;&#13;
-  background-color: #ffffff;&#13;
+        <css>.modal {&#13;
+  display: block;&#13;
+  position: fixed;&#13;
+  z-index: 1000;&#13;
+  padding-top: 100px;&#13;
+  left: 0;&#13;
+  top: 0;&#13;
   width: 100%;&#13;
-  border-radius: 0.25rem;&#13;
-  overflow: hidden;&#13;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);&#13;
+  height: 100%;&#13;
+  overflow: auto;&#13;
+  background-color: rgba(0,0,0,0.6); /* Más oscuro para resaltar */&#13;
+  animation: fadeIn 0.3s ease-in-out;&#13;
 }&#13;
 &#13;
-table.table thead {&#13;
-  background-color: #f1f3f5;&#13;
-  font-weight: bold;&#13;
-  color: #495057;&#13;
+.modal-content {&#13;
+  background-color: #fff;&#13;
+  margin: auto;&#13;
+  padding: 20px;&#13;
+  border-radius: 10px;&#13;
+  width: 80%;&#13;
+  max-width: 700px;&#13;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);&#13;
+  animation: slideDown 0.4s ease;&#13;
 }&#13;
 &#13;
-table.table th, table.table td {&#13;
-  padding: 0.75rem;&#13;
-  vertical-align: middle;&#13;
-}&#13;
-&#13;
-table.table tbody tr:hover {&#13;
-  background-color: #f8f9fa;&#13;
-}&#13;
-&#13;
-.alert-danger {&#13;
-  margin-top: 1rem;&#13;
-}&#13;
-&#13;
-.no-results {&#13;
-  font-style: italic;&#13;
+.close {&#13;
   color: #6c757d;&#13;
-  margin-top: 1rem;&#13;
+  float: right;&#13;
+  font-size: 24px;&#13;
+  font-weight: bold;&#13;
+  background: none;&#13;
+  border: none;&#13;
+  cursor: pointer;&#13;
+  transition: color 0.3s;&#13;
 }&#13;
 &#13;
-.placeholder-space {&#13;
-  height: 30px; /* Ajusta según el diseño */&#13;
+.close:hover,&#13;
+.close:focus {&#13;
+  color: #343a40;&#13;
+  text-decoration: none;&#13;
 }&#13;
-</css>
+&#13;
+/* Placeholder space */&#13;
+.placeholder-space {&#13;
+  height: 30px;&#13;
+}&#13;
+&#13;
+/* Fancy button */&#13;
+.btn-primary {&#13;
+  background-color: #007bff;&#13;
+  border: none;&#13;
+  padding: 0.9rem 1.6rem;&#13;
+  font-size: 1.1rem;&#13;
+  font-weight: 600;&#13;
+  border-radius: 0.4rem;&#13;
+  color: white;&#13;
+  cursor: pointer;&#13;
+  transition: background-color 0.3s ease;&#13;
+}&#13;
+&#13;
+.btn-primary:hover {&#13;
+  background-color: #0056b3;&#13;
+}&#13;
+&#13;
+/* Animations */&#13;
+@keyframes fadeIn {&#13;
+  from { opacity: 0; }&#13;
+  to { opacity: 1; }&#13;
+}&#13;
+&#13;
+@keyframes slideDown {&#13;
+  from { transform: translateY(-20px); opacity: 0; }&#13;
+  to { transform: translateY(0); opacity: 1; }&#13;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -96,42 +137,56 @@ table.table tbody tr:hover {&#13;
         <sys_created_by>esteban.quintero</sys_created_by>
         <sys_created_on>2025-05-24 20:45:25</sys_created_on>
         <sys_id>e3690550c3b1ee103ab9b01705013188</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name>My SSDT Cases</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_widget_e3690550c3b1ee103ab9b01705013188</sys_update_name>
         <sys_updated_by>esteban.quintero</sys_updated_by>
-        <sys_updated_on>2025-05-26 20:40:54</sys_updated_on>
+        <sys_updated_on>2025-05-28 18:43:13</sys_updated_on>
         <template><![CDATA[<div>
-  <h3>My Cases</h3>
-  <div ng-if="data.error" class="alert alert-danger">{{data.error}}</div>
+  <!-- Botón para abrir el modal -->
+  <button class="btn btn-primary" ng-click="c.openModal()">My Cases</button>
 
-  <table class="table table-striped" ng-if="data.myCases.length">
-    <thead>
-      <tr>
-        <th>Number</th>
-        <th>Description</th>
-        <th>State</th>
-        <th>Priority</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="c in data.myCases">
-        <td>{{c.number}}</td>
-        <td>{{c.short_description}}</td>
-        <td>{{c.state}}</td>
-        <td>{{c.priority}}</td>
-      </tr>
-    </tbody>
-  </table>
+  <!-- Modal -->
+  <div class="modal fade in" ng-show="c.showModal" style="display: block;" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">My Cases</h4>
+          <button type="button" class="close" ng-click="c.closeModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div ng-if="data.error" class="alert alert-danger">{{data.error}}</div>
 
-  <div ng-if="!data.myCases.length && !data.error" class="no-results">
-    No cases found for your user.
+          <table class="table table-striped" ng-if="data.myCases.length">
+            <thead>
+              <tr>
+                <th>Number</th>
+                <th>Description</th>
+                <th>State</th>
+                <th>Priority</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr ng-repeat="c in data.myCases">
+                <td>{{c.number}}</td>
+                <td>{{c.short_description}}</td>
+                <td>{{c.state}}</td>
+                <td>{{c.priority}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div ng-if="!data.myCases.length && !data.error" class="no-results">
+            No cases found for your user.
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <!-- Espacio fijo debajo del contenido -->
+  
   <div class="placeholder-space"></div>
 </div>
 ]]></template>

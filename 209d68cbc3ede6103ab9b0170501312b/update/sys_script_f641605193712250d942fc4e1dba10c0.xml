@@ -20,7 +20,7 @@
         </filter_condition>
         <is_rest>false</is_rest>
         <message/>
-        <name>AutoAssignLocation</name>
+        <name>AutoAssignGroupAndLocation</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -32,23 +32,26 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
     // Add your code here
-    // gs.addInfoMessage("]]>👉<![CDATA[ AAAAAA ]]>👈<![CDATA[");
+    //gs.addInfoMessage("]]>👉<![CDATA[ AAAAAA ]]>👈<![CDATA[");
 
     var accGR = new GlideRecord('customer_account');
     if (accGR.get(current.account)) {
-        var accountName = accGR.name;
+        var accountCountry = accGR.country;
     }
-    // gs.addInfoMessage("]]>👉<![CDATA[ Account name obtenido: " + accountName) + " ]]>👈<![CDATA[";
+     gs.addInfoMessage("]]>👉<![CDATA[ Account country: " + accountCountry) + " ]]>👈<![CDATA[";
 
 
-    if (accountName == "alex.santacruz") {
+    if (accountCountry == "Mexico") {
         current.assignment_group.setDisplayValue("Field Agents Jalisco");
+		current.location.setDisplayValue("Guadalajara, Jalisco, México");
     }
-	else if (accountName == "Carlos Salcido") {
+	else if (accountCountry == "USA") {
         current.assignment_group.setDisplayValue("Field Agents Texas");
+		current.location.setDisplayValue("Burleson, Texas, United States");
     }
-	else if (accountName == "Esteban.quintero") {
+	else if (accountCountry == "Spain") {
         current.assignment_group.setDisplayValue("Field Agents Spain");
+		current.location.setDisplayValue("Madrid, Comunidad de Madrid, Spain");
     }
 
 })(current, previous);]]></script>
@@ -58,15 +61,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f641605193712250d942fc4e1dba10c0</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_name>AutoAssignLocation</sys_name>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>AutoAssignGroupAndLocation</sys_name>
         <sys_overrides/>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_script_f641605193712250d942fc4e1dba10c0</sys_update_name>
         <sys_updated_by>carlos.salcido</sys_updated_by>
-        <sys_updated_on>2025-05-27 22:25:37</sys_updated_on>
+        <sys_updated_on>2025-05-28 22:07:04</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

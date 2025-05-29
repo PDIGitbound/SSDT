@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_language">
+    <sys_cs_topic_language action="INSERT_OR_UPDATE">
+        <cs_topic_id display_value="_PRVW__f145ef6e97ce4be9bbf81153a0db5f7b">ddb3253d93fd2650d942fc4e1dba107d</cs_topic_id>
+        <language_code>en</language_code>
+        <nlu_entities>[{"variable_name":"problem_latin_america","nlu_entity":"","nlu_entity_label":""},{"variable_name":"laptop_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"adapter_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"monitor_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"charger_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"hdmi_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"headset_sd","nlu_entity":"","nlu_entity_label":""},{"variable_name":"empresa","nlu_entity":"","nlu_entity_label":""},{"variable_name":"problem_usa","nlu_entity":"","nlu_entity_label":""},{"variable_name":"problem_europe","nlu_entity":"","nlu_entity_label":""},{"variable_name":"choices","nlu_entity":"","nlu_entity_label":""},{"variable_name":"laptop_sd_usa","nlu_entity":"","nlu_entity_label":""},{"variable_name":"monitor_sd_usa","nlu_entity":"","nlu_entity_label":""},{"variable_name":"charger_sd_usa","nlu_entity":"","nlu_entity_label":""},{"variable_name":"headset_sd_usa","nlu_entity":"","nlu_entity_label":""},{"variable_name":"adapter_sd_usa","nlu_entity":"","nlu_entity_label":""},{"variable_name":"hdmi_sd_usa","nlu_entity":"","nlu_entity_label":""},{"variable_name":"charger_sd_europe","nlu_entity":"","nlu_entity_label":""},{"variable_name":"hdmi_sd_europe","nlu_entity":"","nlu_entity_label":""},{"variable_name":"adapter_sd_europe","nlu_entity":"","nlu_entity_label":""},{"variable_name":"laptop_sd_europe_3","nlu_entity":"","nlu_entity_label":""},{"variable_name":"headset_sd_europe","nlu_entity":"","nlu_entity_label":""},{"variable_name":"monitor_sd_europe","nlu_entity":"","nlu_entity_label":""},{"variable_name":"case_sys_id","nlu_entity":"","nlu_entity_label":""},{"variable_name":"other_cases_","nlu_entity":"","nlu_entity_label":""},{"variable_name":"kb_other_options","nlu_entity":"","nlu_entity_label":""},{"variable_name":"number_case","nlu_entity":"","nlu_entity_label":""}]</nlu_entities>
+        <nlu_intent>Affirmative</nlu_intent>
+        <nlu_intent_label>Affirmative</nlu_intent_label>
+        <nlu_model>Setup_Topics_Model</nlu_model>
+        <nlu_model_label>Setup Topics Model</nlu_model_label>
+        <nlu_provider>64c023c17300330021a044764df6a70e</nlu_provider>
+        <sys_class_name>sys_cs_topic_language</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-05-29 14:24:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>e9b3253d93fd2650d942fc4e1dba1083</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cs_topic_language_e9b3253d93fd2650d942fc4e1dba1083</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-05-29 14:24:52</sys_updated_on>
+    </sys_cs_topic_language>
+</record_update>
