@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="kb_uc_can_read_mtom">
+    <kb_uc_can_read_mtom action="INSERT_OR_UPDATE">
+        <kb_knowledge_base display_value="Consumer Service">2b292926c3302200e7c7d44d81d3ae10</kb_knowledge_base>
+        <sys_class_name>kb_uc_can_read_mtom</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-05-29 00:27:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>26042e2193bde250d942fc4e1dba1056</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Consumer Service.Any User</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>kb_uc_can_read_mtom_26042e2193bde250d942fc4e1dba1056</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-05-29 00:27:27</sys_updated_on>
+        <user_criteria display_value="Any User">fb1166d64fff0200086eeed18110c7ab</user_criteria>
+    </kb_uc_can_read_mtom>
+</record_update>

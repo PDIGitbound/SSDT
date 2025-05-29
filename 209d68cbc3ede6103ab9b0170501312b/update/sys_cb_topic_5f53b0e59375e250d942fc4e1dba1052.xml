@@ -1,0 +1,1785 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <context_profiles/>
+        <description/>
+        <dialog_acts_enabled>true</dialog_acts_enabled>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <foundational>false</foundational>
+        <graph>{
+  "graph_api_version": "1.0.78",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "2e080c6be1b4449db0af14ce52df9b60": {
+          "id": "2e080c6be1b4449db0af14ce52df9b60",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Welcome to the virtual, ¿how can i help you?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "282f417f024a4e67a591dd9d51ff199b": {
+          "id": "282f417f024a4e67a591dd9d51ff199b",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Thank you for using Virtual Agent! "
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "2959921f967847b2802eb230d923e90f": {
+          "name": "Problem",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What is your problem?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "2e5a5a7487604604a0d6f3b19acbf244",
+          "detailDescription": "",
+          "id": "2959921f967847b2802eb230d923e90f",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "767d2a07510b489d8984c45194a7177e": {
+          "id": "767d2a07510b489d8984c45194a7177e",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "34e97e228b094c8b8a46e4880f39276e": {
+          "id": "34e97e228b094c8b8a46e4880f39276e",
+          "stepType": "CrudAction",
+          "name": "Charger case",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "location",
+                  "expression": "{{vaInputs.latitud_and_longitud}}",
+                  "id": "9328d23a3814400ebb583e4196b9c8db"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "asset",
+                  "expression": "30afb29bc3a5aa103ab9b01705013156",
+                  "id": "98a97b83c3544f69bf94d5989eba4739"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "short_description",
+                  "expression": "{{vaInputs.charger_sd}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.charger_sd}}",
+                            "displayValue": "Input Variables➛Charger SD"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "9ad77ee24da7403696eaeff6399a5bdf"
+                }
+              ]
+            },
+            "queryString": "location={{vaInputs.latitud_and_longitud}}^asset=30afb29bc3a5aa103ab9b01705013156^short_description={{vaInputs.charger_sd}}"
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "526665e88b984adc8205a0e89bb578e5"
+        },
+        "db49255a3a9340729fe0981c2ba8dbeb": {
+          "id": "db49255a3a9340729fe0981c2ba8dbeb",
+          "stepType": "ImplicitEnd"
+        },
+        "0fc0da0479cc4480bbeaca86f447aa3b": {
+          "id": "0fc0da0479cc4480bbeaca86f447aa3b",
+          "stepType": "ImplicitEnd"
+        },
+        "42ae8008273949d6836675f44c167050": {
+          "id": "42ae8008273949d6836675f44c167050",
+          "stepType": "ImplicitEnd"
+        },
+        "9f7ed91cc26f4493ae61786f9af39fe1": {
+          "id": "9f7ed91cc26f4493ae61786f9af39fe1",
+          "stepType": "ImplicitEnd"
+        },
+        "b20c4fedf50e4e45aa3d3bd7042ca92e": {
+          "id": "b20c4fedf50e4e45aa3d3bd7042ca92e",
+          "stepType": "ImplicitEnd"
+        },
+        "cdf95d0e819647bca99f2e9fa0064dae": {
+          "id": "cdf95d0e819647bca99f2e9fa0064dae",
+          "stepType": "CrudAction",
+          "name": "Software Case",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "location",
+                  "expression": "{{vaInputs.user.city}}",
+                  "id": "fc03b30259c048d3a4aee689b3c03168"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "asset",
+                  "expression": "{{vaInputs.software_case.account}}",
+                  "id": "c995fc070c714293a2131ccdab369d06"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "short_description",
+                  "expression": "{{vaInputs.software_sd}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.software_sd}}",
+                            "displayValue": "Input Variables➛Software SD"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "2295279d8125457baafe85664561ecf4"
+                }
+              ]
+            },
+            "queryString": "location={{vaInputs.user.city}}^asset={{vaInputs.software_case.account}}^short_description={{vaInputs.software_sd}}"
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "5ea3ab5afead40cfa66d15be43f038cd"
+        },
+        "171fb7797c4840eeb9c4197c5c90cacd": {
+          "id": "171fb7797c4840eeb9c4197c5c90cacd",
+          "stepType": "CrudAction",
+          "name": "Laptop Case",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "location",
+                  "expression": "{{vaInputs.latitud_and_longitud}}",
+                  "id": "8097899941a14e67a5d813d256861115"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "asset",
+                  "expression": "6e268f93c3e5aa103ab9b017050131a4",
+                  "id": "2e6ae8b1fd5a48fcbc136a652172767d"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "short_description",
+                  "expression": "{{vaInputs.laptop_sd}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.laptop_sd}}",
+                            "displayValue": "Input Variables➛Laptop SD"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "df19c6c95d064476b5b7e14d99f9977b"
+                }
+              ]
+            },
+            "queryString": "location={{vaInputs.latitud_and_longitud}}^asset=6e268f93c3e5aa103ab9b017050131a4^short_description={{vaInputs.laptop_sd}}"
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "c5171e0777f840eaa6b83c2bbdc2e0b1"
+        },
+        "b3dcbf526e3747faa5dc970fafc3142b": {
+          "id": "b3dcbf526e3747faa5dc970fafc3142b",
+          "stepType": "CrudAction",
+          "name": "Monitor Case",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "location",
+                  "expression": "{{vaInputs.user.city}}",
+                  "id": "d2e8a9b926cf4e65a6beba07be1d80c2"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "asset",
+                  "expression": "24e28f9fc3a5aa103ab9b0170501318b",
+                  "id": "4f7847bfd4d24e48a7f2a1b338332b4d"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "short_description",
+                  "expression": "{{vaInputs.monitor_sd}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.monitor_sd}}",
+                            "displayValue": "Input Variables➛Monitor SD"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "74d497c9cf184b199f1c2ee0802e32e6"
+                }
+              ]
+            },
+            "queryString": "location={{vaInputs.user.city}}^asset=24e28f9fc3a5aa103ab9b0170501318b^short_description={{vaInputs.monitor_sd}}"
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "3fbd419ae6914720b8d60fd885bb4543"
+        },
+        "8403ba9c726d473fb3d64b2096f2a073": {
+          "id": "8403ba9c726d473fb3d64b2096f2a073",
+          "stepType": "CrudAction",
+          "name": "Headset Case",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "location",
+                  "expression": "{{vaInputs.user.city}}",
+                  "id": "4f4b5b1995ad4c45b332baaa52537520"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "asset",
+                  "expression": "a05b7a17c3a5aa103ab9b017050131cb",
+                  "id": "f44a4611eb36486486c07869d666e3e2"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "short_description",
+                  "expression": "{{vaInputs.headset_sd}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.headset_sd}}",
+                            "displayValue": "Input Variables➛Headset SD"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "4e6b458cb51f4f68b6397998a645cedb"
+                }
+              ]
+            },
+            "queryString": "location={{vaInputs.user.city}}^asset=a05b7a17c3a5aa103ab9b017050131cb^short_description={{vaInputs.headset_sd}}"
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "99540f3e4b6d4b41ae9ee9357df48dfc"
+        },
+        "c8898719f49c4ac58333debea759411e": {
+          "id": "c8898719f49c4ac58333debea759411e",
+          "stepType": "CrudAction",
+          "name": "Adapter Case",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "location",
+                  "expression": "{{vaInputs.user.city}}",
+                  "id": "852b87c50e844478b5c90c22ee727994"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "asset",
+                  "expression": "37e0471fc3a5aa103ab9b01705013113",
+                  "id": "c3a7dd85d4754c929cb7cf505ef98fe0"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "short_description",
+                  "expression": "{{vaInputs.adapter_sd}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.adapter_sd}}",
+                            "displayValue": "Input Variables➛Adapter SD"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "e278d51e79344ecf9b23503c041ee0c8"
+                }
+              ]
+            },
+            "queryString": "location={{vaInputs.user.city}}^asset=37e0471fc3a5aa103ab9b01705013113^short_description={{vaInputs.adapter_sd}}"
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "f88d807e0510424cab59476f1a63e770"
+        },
+        "8aef6c34e66b4575aeb246724b5faa60": {
+          "id": "8aef6c34e66b4575aeb246724b5faa60",
+          "stepType": "TextPrompt",
+          "name": "Laptop SD",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Write a short description of your problem"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "54e8103eb36e4bc2be1a464bcb65c9b4",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        },
+        "c08d58b4407e4753b0c1383f1381467c": {
+          "id": "c08d58b4407e4753b0c1383f1381467c",
+          "stepType": "TextPrompt",
+          "name": "Charger SD",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Write a short description of your problem"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "b8d73044f9b943b385e965dd851b001c",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        },
+        "49430c29ce6a4576ae1ab6bfcc31076f": {
+          "id": "49430c29ce6a4576ae1ab6bfcc31076f",
+          "stepType": "TextPrompt",
+          "name": "Monitor SD",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Write a short description of your problem"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "94b62f9165554c2ea02951cb6818cb71",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        },
+        "08584f5efce84eca9eb5e6d9943d1763": {
+          "id": "08584f5efce84eca9eb5e6d9943d1763",
+          "stepType": "TextPrompt",
+          "name": "Adapter SD",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Write a short description of your problem"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "0bf222ef94ea427bba014baa08835376",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        },
+        "00a92ada0af941a1af4af838b1996730": {
+          "id": "00a92ada0af941a1af4af838b1996730",
+          "stepType": "TextPrompt",
+          "name": "Headset SD",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Write a short description of your problem"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "eaffdb6130c54ab1ad9b8a06f280e4eb",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        },
+        "27f30f502e42400a909e3b557f8a6ede": {
+          "id": "27f30f502e42400a909e3b557f8a6ede",
+          "stepType": "TextPrompt",
+          "name": "Software SD",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Write a short description of your problem"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "5fc76c1fc72948a39d119cef414445fd",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        },
+        "66e127af85564aa88009c3c9f11d3d37": {
+          "id": "66e127af85564aa88009c3c9f11d3d37",
+          "stepType": "Component",
+          "name": "User_Location_Case",
+          "fields": [],
+          "reusableTopicId": "19b7784453022010b6e8ddeeff7b12da",
+          "reusableTopicChoice": "Geolocation",
+          "sourceType": "TOPIC_BLOCK",
+          "loading": false,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "inputs": {
+            "permissionprompt": {
+              "value": "Would you like to share your location?",
+              "mode": "simple",
+              "type": "String"
+            }
+          },
+          "outputs": [
+            {
+              "id": "fbb8a3bb36264af5a01ee19fe61a105b",
+              "value": "latitude",
+              "mapping": "latitude",
+              "preventDisable": false
+            },
+            {
+              "id": "b3b1325be140445081cfb9b53d61d15b",
+              "value": "longitude",
+              "mapping": "longitude",
+              "preventDisable": false
+            },
+            {
+              "id": "3fa78bd9e90947589338c154073e0412",
+              "value": "errormessage",
+              "mapping": "errormessage",
+              "preventDisable": false
+            },
+            {
+              "id": "c835397e03604fe7b2cf9687a697f757",
+              "value": "errortype",
+              "mapping": "errortype",
+              "preventDisable": false
+            },
+            {
+              "id": "787fbdf62a90420393fdfd008efe092a",
+              "value": "status",
+              "mapping": "status",
+              "preventDisable": false
+            }
+          ],
+          "outdatedNote": false,
+          "variableIds": [
+            "fbb8a3bb36264af5a01ee19fe61a105b",
+            "b3b1325be140445081cfb9b53d61d15b",
+            "3fa78bd9e90947589338c154073e0412",
+            "c835397e03604fe7b2cf9687a697f757",
+            "787fbdf62a90420393fdfd008efe092a"
+          ]
+        },
+        "d150d7a165dd401e9f2b5b8a52b4e01b": {
+          "id": "d150d7a165dd401e9f2b5b8a52b4e01b",
+          "stepType": "CrudAction",
+          "name": "Latitud and longitud",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "name",
+                  "expression": "{{vaInputs.user.state}}{{vaInputs.user.city}}{{vaInputs.user.street}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.user.state}}",
+                            "displayValue": "Input Variables➛User➛State / Province"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.user.city}}",
+                            "displayValue": "Input Variables➛User➛City"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.user.street}}",
+                            "displayValue": "Input Variables➛User➛Street"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "02813cbfab62415088612578165d4ab6"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "latitude",
+                  "expression": "{{vaInputs.latitude}}",
+                  "id": "fa8a1e4b31c4449fb18be177e6bb9b0a"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "longitude",
+                  "expression": "{{vaInputs.longitude}}",
+                  "id": "1642a69108a44a978d19f0fcb8411fbe"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "state",
+                  "expression": "{{vaInputs.user.state}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.user.state}}",
+                            "displayValue": "Input Variables➛User➛State / Province"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "7116faea4af04ef0a2399781fdb57248"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "zip",
+                  "expression": "{{vaInputs.user.zip}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.user.zip}}",
+                            "displayValue": "Input Variables➛User➛Zip / Postal code"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "e684cb7d1af94ce99eefa00de7efa915"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "city",
+                  "expression": "{{vaInputs.user.city}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.user.city}}",
+                            "displayValue": "Input Variables➛User➛City"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "788e76eeaa5a4499bee31fe20d09cfc3"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "street",
+                  "expression": "{{vaInputs.user.street}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.user.street}}",
+                            "displayValue": "Input Variables➛User➛Street"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "a6b7ab58f5bf404b905de360c0158e22"
+                }
+              ]
+            },
+            "queryString": "name={{vaInputs.user.state}}{{vaInputs.user.city}}{{vaInputs.user.street}}^latitude={{vaInputs.latitude}}^longitude={{vaInputs.longitude}}^state={{vaInputs.user.state}}^zip={{vaInputs.user.zip}}^city={{vaInputs.user.city}}^street={{vaInputs.user.street}}"
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "20f8c6225bda4203a745f0e7e7c40919"
+        },
+        "9cfc6584fbfa4053956461df7a24145c": {
+          "id": "9cfc6584fbfa4053956461df7a24145c",
+          "stepType": "RecordOutput",
+          "name": "Case number",
+          "variableId": "",
+          "cardTemplate": "General",
+          "cardFields": {},
+          "mode": "script",
+          "tableName": "sn_customerservice_case",
+          "fields": [
+            "short_description",
+            "priority",
+            "state",
+            "number"
+          ],
+          "cardDefinition": {
+            "name": "Record",
+            "value": "General"
+          },
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": "sys_id={{vaInputs.charger_case}}"
+          }
+        }
+      },
+      "edges": [
+        {
+          "id": "c3573461e78a4e2eafc7f3ea988b5e1f",
+          "edgeType": "Edge",
+          "source": "c8898719f49c4ac58333debea759411e",
+          "target": "0fc0da0479cc4480bbeaca86f447aa3b",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "febc3516a8f24bcfb8ed300c66276163",
+          "edgeType": "Edge",
+          "source": "171fb7797c4840eeb9c4197c5c90cacd",
+          "target": "42ae8008273949d6836675f44c167050",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "a3d431cea0f248188f2845a52d49ea84",
+          "edgeType": "Edge",
+          "source": "2e080c6be1b4449db0af14ce52df9b60",
+          "target": "66e127af85564aa88009c3c9f11d3d37",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "73699d9e562b42d7b93c0d314d6f4b7e",
+          "edgeType": "Branch",
+          "source": "767d2a07510b489d8984c45194a7177e",
+          "target": "8aef6c34e66b4575aeb246724b5faa60",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem_2=Laptop",
+            "mode": "query"
+          },
+          "label": "Laptop"
+        },
+        {
+          "id": "dd88352704b54b43b39b0bbe0308723b",
+          "edgeType": "Edge",
+          "source": "8aef6c34e66b4575aeb246724b5faa60",
+          "target": "171fb7797c4840eeb9c4197c5c90cacd",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "5424ff2b28654a6c8f30bc74889d15dc",
+          "edgeType": "Edge",
+          "source": "08584f5efce84eca9eb5e6d9943d1763",
+          "target": "c8898719f49c4ac58333debea759411e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "45e68ec4ef224618a88ca4fecda3b7fa",
+          "edgeType": "Edge",
+          "source": "b3dcbf526e3747faa5dc970fafc3142b",
+          "target": "9f7ed91cc26f4493ae61786f9af39fe1",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "18776379feb14231b21693e29958ecc7",
+          "edgeType": "Edge",
+          "source": "cdf95d0e819647bca99f2e9fa0064dae",
+          "target": "db49255a3a9340729fe0981c2ba8dbeb",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "caeee26ed1944c9ab2daf14e8fe4261e",
+          "edgeType": "Edge",
+          "source": "8403ba9c726d473fb3d64b2096f2a073",
+          "target": "b20c4fedf50e4e45aa3d3bd7042ca92e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "bf518819c8d94263bd652c537b50fa9f",
+          "edgeType": "Branch",
+          "source": "767d2a07510b489d8984c45194a7177e",
+          "target": "c08d58b4407e4753b0c1383f1381467c",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem_2=Charger",
+            "mode": "query"
+          },
+          "label": "Charger"
+        },
+        {
+          "id": "390370929e4b45bfbdc75059f4e08d3f",
+          "edgeType": "Edge",
+          "source": "c08d58b4407e4753b0c1383f1381467c",
+          "target": "34e97e228b094c8b8a46e4880f39276e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "8a8f9ad45b7b49a8954dfa06288e61b6",
+          "edgeType": "Branch",
+          "source": "767d2a07510b489d8984c45194a7177e",
+          "target": "49430c29ce6a4576ae1ab6bfcc31076f",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem_2=Monitor",
+            "mode": "query"
+          },
+          "label": "Monitor"
+        },
+        {
+          "id": "693ecdfe4fbb43d88f07a791fd06f97a",
+          "edgeType": "Edge",
+          "source": "49430c29ce6a4576ae1ab6bfcc31076f",
+          "target": "b3dcbf526e3747faa5dc970fafc3142b",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c63e1825041c4d9294cf3c396337f783",
+          "edgeType": "Branch",
+          "source": "767d2a07510b489d8984c45194a7177e",
+          "target": "08584f5efce84eca9eb5e6d9943d1763",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem_2=Adapter",
+            "mode": "query"
+          },
+          "label": "Adapter"
+        },
+        {
+          "id": "d8425b68fb6846b583fff267d3753694",
+          "edgeType": "Branch",
+          "source": "767d2a07510b489d8984c45194a7177e",
+          "target": "00a92ada0af941a1af4af838b1996730",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem_2=Headset",
+            "mode": "query"
+          },
+          "label": "Headset"
+        },
+        {
+          "id": "bebc9c22c01b4aba9880f24ad84495d4",
+          "edgeType": "Edge",
+          "source": "00a92ada0af941a1af4af838b1996730",
+          "target": "8403ba9c726d473fb3d64b2096f2a073",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "f12ddb2b39134c7a96cdd700ff57ee30",
+          "edgeType": "Branch",
+          "source": "767d2a07510b489d8984c45194a7177e",
+          "target": "27f30f502e42400a909e3b557f8a6ede",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.problem_2=Software",
+            "mode": "query"
+          },
+          "label": "Software"
+        },
+        {
+          "id": "4a4c8881acd54b8588310973ba945039",
+          "edgeType": "Edge",
+          "source": "27f30f502e42400a909e3b557f8a6ede",
+          "target": "cdf95d0e819647bca99f2e9fa0064dae",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "db2bb3c7bc954a9fa3a34c9908175983",
+          "edgeType": "Edge",
+          "source": "66e127af85564aa88009c3c9f11d3d37",
+          "target": "2959921f967847b2802eb230d923e90f",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "477dadb8c3eb4c70811b87c9f8591191",
+          "edgeType": "Edge",
+          "source": "2959921f967847b2802eb230d923e90f",
+          "target": "d150d7a165dd401e9f2b5b8a52b4e01b",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ae84e26e34834942998f170b7bdd598e",
+          "edgeType": "Edge",
+          "source": "d150d7a165dd401e9f2b5b8a52b4e01b",
+          "target": "767d2a07510b489d8984c45194a7177e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ac90f91117c3498698f68c35d69da1d0",
+          "edgeType": "Edge",
+          "source": "34e97e228b094c8b8a46e4880f39276e",
+          "target": "9cfc6584fbfa4053956461df7a24145c",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "778a48ab9a714542851ae48fe24534e4",
+          "edgeType": "Edge",
+          "source": "9cfc6584fbfa4053956461df7a24145c",
+          "target": "282f417f024a4e67a591dd9d51ff199b",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "6f961d5c00a44a8da4d98f6237eceaf2": {
+      "category": "vaInputs",
+      "id": "6f961d5c00a44a8da4d98f6237eceaf2",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "2e5a5a7487604604a0d6f3b19acbf244": {
+      "id": "2e5a5a7487604604a0d6f3b19acbf244",
+      "name": "problem_2",
+      "label": "Problem (2)",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Laptop",
+          "value": "Laptop"
+        },
+        {
+          "label": "Monitor",
+          "value": "Monitor"
+        },
+        {
+          "label": "Headset",
+          "value": "Headset",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Adapter",
+          "value": "Adapter",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Charger",
+          "value": "Charger",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Software",
+          "value": "Software",
+          "checked": true,
+          "meta": {}
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "2959921f967847b2802eb230d923e90f",
+      "isHidden": false
+    },
+    "526665e88b984adc8205a0e89bb578e5": {
+      "id": "526665e88b984adc8205a0e89bb578e5",
+      "name": "charger_case",
+      "label": "Charger Case",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "34e97e228b094c8b8a46e4880f39276e",
+      "isHidden": false
+    },
+    "5ea3ab5afead40cfa66d15be43f038cd": {
+      "id": "5ea3ab5afead40cfa66d15be43f038cd",
+      "name": "software_case",
+      "label": "Software Case",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "cdf95d0e819647bca99f2e9fa0064dae",
+      "isHidden": false
+    },
+    "c5171e0777f840eaa6b83c2bbdc2e0b1": {
+      "id": "c5171e0777f840eaa6b83c2bbdc2e0b1",
+      "name": "laptop_case",
+      "label": "Laptop Case",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "171fb7797c4840eeb9c4197c5c90cacd",
+      "isHidden": false
+    },
+    "3fbd419ae6914720b8d60fd885bb4543": {
+      "id": "3fbd419ae6914720b8d60fd885bb4543",
+      "name": "monitor_case",
+      "label": "Monitor Case",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "b3dcbf526e3747faa5dc970fafc3142b",
+      "isHidden": false
+    },
+    "99540f3e4b6d4b41ae9ee9357df48dfc": {
+      "id": "99540f3e4b6d4b41ae9ee9357df48dfc",
+      "name": "headset_case",
+      "label": "Headset Case",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "8403ba9c726d473fb3d64b2096f2a073",
+      "isHidden": false
+    },
+    "f88d807e0510424cab59476f1a63e770": {
+      "id": "f88d807e0510424cab59476f1a63e770",
+      "name": "adapter_case",
+      "label": "Adapter Case",
+      "varType": "reference",
+      "table": "sn_customerservice_case",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "c8898719f49c4ac58333debea759411e",
+      "isHidden": false
+    },
+    "54e8103eb36e4bc2be1a464bcb65c9b4": {
+      "id": "54e8103eb36e4bc2be1a464bcb65c9b4",
+      "name": "laptop_sd",
+      "label": "Laptop SD",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTc0ODAyMzI0NTQ1NyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "8aef6c34e66b4575aeb246724b5faa60",
+      "isHidden": false
+    },
+    "b8d73044f9b943b385e965dd851b001c": {
+      "id": "b8d73044f9b943b385e965dd851b001c",
+      "name": "charger_sd",
+      "label": "Charger SD",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTc0ODAyMzUwMzQ1MCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "c08d58b4407e4753b0c1383f1381467c",
+      "isHidden": false
+    },
+    "94b62f9165554c2ea02951cb6818cb71": {
+      "id": "94b62f9165554c2ea02951cb6818cb71",
+      "name": "monitor_sd",
+      "label": "Monitor SD",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTc0ODAyMzUwNjY4MSBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "49430c29ce6a4576ae1ab6bfcc31076f",
+      "isHidden": false
+    },
+    "0bf222ef94ea427bba014baa08835376": {
+      "id": "0bf222ef94ea427bba014baa08835376",
+      "name": "adapter_sd",
+      "label": "Adapter SD",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTc0ODAyMzUxODY5OCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "08584f5efce84eca9eb5e6d9943d1763",
+      "isHidden": false
+    },
+    "eaffdb6130c54ab1ad9b8a06f280e4eb": {
+      "id": "eaffdb6130c54ab1ad9b8a06f280e4eb",
+      "name": "headset_sd",
+      "label": "Headset SD",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTc0ODAyMzU0NDIxOCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "00a92ada0af941a1af4af838b1996730",
+      "isHidden": false
+    },
+    "5fc76c1fc72948a39d119cef414445fd": {
+      "id": "5fc76c1fc72948a39d119cef414445fd",
+      "name": "software_sd",
+      "label": "Software SD",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTc0ODAyMzU1MTA4MyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "27f30f502e42400a909e3b557f8a6ede",
+      "isHidden": false
+    },
+    "fbb8a3bb36264af5a01ee19fe61a105b": {
+      "id": "fbb8a3bb36264af5a01ee19fe61a105b",
+      "name": "latitude",
+      "label": "Latitude",
+      "defaultValue": "latitude",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false,
+      "nodeId": "66e127af85564aa88009c3c9f11d3d37",
+      "isHidden": false
+    },
+    "b3b1325be140445081cfb9b53d61d15b": {
+      "id": "b3b1325be140445081cfb9b53d61d15b",
+      "name": "longitude",
+      "label": "Longitude",
+      "defaultValue": "longitude",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false,
+      "nodeId": "66e127af85564aa88009c3c9f11d3d37",
+      "isHidden": false
+    },
+    "3fa78bd9e90947589338c154073e0412": {
+      "id": "3fa78bd9e90947589338c154073e0412",
+      "name": "errormessage",
+      "label": "Errormessage",
+      "defaultValue": "errormessage",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false,
+      "nodeId": "66e127af85564aa88009c3c9f11d3d37",
+      "isHidden": false
+    },
+    "c835397e03604fe7b2cf9687a697f757": {
+      "id": "c835397e03604fe7b2cf9687a697f757",
+      "name": "errortype",
+      "label": "Errortype",
+      "defaultValue": "errortype",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false,
+      "nodeId": "66e127af85564aa88009c3c9f11d3d37",
+      "isHidden": false
+    },
+    "787fbdf62a90420393fdfd008efe092a": {
+      "id": "787fbdf62a90420393fdfd008efe092a",
+      "name": "status",
+      "label": "Status",
+      "defaultValue": "status",
+      "varType": "string",
+      "category": "vaInputs",
+      "metadata": {
+        "libraryMappingType": "output"
+      },
+      "preventDisable": false,
+      "nodeId": "66e127af85564aa88009c3c9f11d3d37",
+      "isHidden": false
+    },
+    "20f8c6225bda4203a745f0e7e7c40919": {
+      "id": "20f8c6225bda4203a745f0e7e7c40919",
+      "name": "latitud_and_longitud",
+      "label": "Latitud And Longitud",
+      "varType": "reference",
+      "table": "cmn_location",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "d150d7a165dd401e9f2b5b8a52b4e01b",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <key_phrases>CSM_VirtualAgent_V3,CSM_Virtual_Agent_V2,CSM_Virtual_Agent_v1,CSM_Virtual_Agent</key_phrases>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <model_type>nlu_keyword</model_type>
+        <modify_confirmation_enabled>true</modify_confirmation_enabled>
+        <name>CSM_VirtualAgent_V3</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <root_topic_id>8816b23b93e1aa10d942fc4e1dba10a4</root_topic_id>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id>b6aae23c93b5ae10d942fc4e1dba109d</source_topic_id>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-05-28 16:15:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>5f53b0e59375e250d942fc4e1dba1052</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>CSM_VirtualAgent_V3</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cb_topic_5f53b0e59375e250d942fc4e1dba1052</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-05-28 16:36:51</sys_updated_on>
+        <title>CSM_VirtualAgent_V3</title>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+    </sys_cb_topic>
+    <sys_translated_text action="delete_multiple" query="documentkey=5f53b0e59375e250d942fc4e1dba1052"/>
+</record_update>

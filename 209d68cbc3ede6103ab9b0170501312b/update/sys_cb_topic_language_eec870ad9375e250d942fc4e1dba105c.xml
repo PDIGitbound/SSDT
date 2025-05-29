@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic_language">
+    <sys_cb_topic_language action="INSERT_OR_UPDATE">
+        <cb_topic_id display_value="CSM_Virtual_Agent_V5">aac870ad9375e250d942fc4e1dba1059</cb_topic_id>
+        <language_code>en</language_code>
+        <nlu_entities>[{"node_id":"f82beb95d6904981ab8a801248b68c0a","variable_name":"problem_latin_america","nlu_entity":"","nlu_entity_label":""},{"node_id":"abd5cb82987e481387c32927e5e53404","variable_name":"laptop_sd","nlu_entity":"","nlu_entity_label":""},{"node_id":"a94992debbc1417489496ccd125a96bd","variable_name":"adapter_sd","nlu_entity":"","nlu_entity_label":""},{"node_id":"102a6925baa5456a9ecf898ae420adde","variable_name":"monitor_sd","nlu_entity":"","nlu_entity_label":""},{"node_id":"1ee78662f8644b32af10c523b3a597e0","variable_name":"charger_sd","nlu_entity":"","nlu_entity_label":""},{"node_id":"e940bf522ed14283961453693fdd5147","variable_name":"hdmi_sd","nlu_entity":"","nlu_entity_label":""},{"node_id":"e6db15dfc92f40a29aa22ec10b834ad8","variable_name":"headset_sd","nlu_entity":"","nlu_entity_label":""},{"node_id":"9c85e4f619ab48ccaafeb352fb2b1ce5","variable_name":"empresa","nlu_entity":"","nlu_entity_label":""},{"node_id":"2a52a45736134142844577f4382eb3f2","variable_name":"problem_usa","nlu_entity":"","nlu_entity_label":""},{"node_id":"e58d2c06cd41492991c31c71c46157e2","variable_name":"problem_europe","nlu_entity":"","nlu_entity_label":""},{"node_id":"8d6ada8e6475497caba01f22c8fda58d","variable_name":"choices","nlu_entity":"","nlu_entity_label":""},{"node_id":"ea90d83e33dd4a52b7adce852bc826ea","variable_name":"laptop_sd_usa","nlu_entity":"","nlu_entity_label":""},{"node_id":"d128bb531b3a45379d19bc0abdeb9e68","variable_name":"monitor_sd_usa","nlu_entity":"","nlu_entity_label":""},{"node_id":"44ade60ae2ce4688924b96524858a980","variable_name":"charger_sd_usa","nlu_entity":"","nlu_entity_label":""},{"node_id":"fae1476f02384efe95799877cb7491cb","variable_name":"headset_sd_usa","nlu_entity":"","nlu_entity_label":""},{"node_id":"c3e819d9fc6546a68c9a452db6da0fc1","variable_name":"adapter_sd_usa","nlu_entity":"","nlu_entity_label":""},{"node_id":"6d5f25c02bb5454195f62b7919ad2b95","variable_name":"hdmi_sd_usa","nlu_entity":"","nlu_entity_label":""},{"node_id":"339e0518e5404ed9b96398b388384514","variable_name":"charger_sd_europe","nlu_entity":"","nlu_entity_label":""},{"node_id":"b534678ea51e481f8c9c9224634a349f","variable_name":"hdmi_sd_europe","nlu_entity":"","nlu_entity_label":""},{"node_id":"e6d359e96e114df6bb31de8458cf72a8","variable_name":"adapter_sd_europe","nlu_entity":"","nlu_entity_label":""},{"node_id":"a3f602a9ff994c59aed2a874f291285a","variable_name":"laptop_sd_europe_3","nlu_entity":"","nlu_entity_label":""},{"node_id":"72207c15b2b044a7ba17a5e7c8e658c0","variable_name":"headset_sd_europe","nlu_entity":"","nlu_entity_label":""},{"node_id":"9a24e3739ae5443abbc94e7daf013208","variable_name":"monitor_sd_europe","nlu_entity":"","nlu_entity_label":""},{"node_id":"b1784cd2c96b439fb1a9586374474f17","variable_name":"case_sys_id","nlu_entity":"","nlu_entity_label":""},{"node_id":"9c376ce5394c4f50b9c2d13f6754f047","variable_name":"other_cases_","nlu_entity":"","nlu_entity_label":""},{"node_id":"68c8121041c34c6bbcf0e65c47017114","variable_name":"kb_other_options","nlu_entity":"","nlu_entity_label":""},{"node_id":"6d7c2862ad6140729a699d18bed25a4a","variable_name":"number_case","nlu_entity":"","nlu_entity_label":""}]</nlu_entities>
+        <nlu_intent>Affirmative</nlu_intent>
+        <nlu_intent_label>Affirmative</nlu_intent_label>
+        <nlu_model>Setup_Topics_Model</nlu_model>
+        <nlu_model_label>Setup Topics Model</nlu_model_label>
+        <nlu_provider>64c023c17300330021a044764df6a70e</nlu_provider>
+        <sys_class_name>sys_cb_topic_language</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-05-28 16:38:52</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>eec870ad9375e250d942fc4e1dba105c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cb_topic_language_eec870ad9375e250d942fc4e1dba105c</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-05-29 04:08:12</sys_updated_on>
+    </sys_cb_topic_language>
+</record_update>
