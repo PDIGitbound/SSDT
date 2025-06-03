@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Create an OT Incident">2ec32743c3f526103ab9b017050131cd</sc_cat_item>
+        <sc_category display_value="Hardware">d258b953c611227a0146101fb1be7c31</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-02 21:10:12</sys_created_on>
+        <sys_id>fdd66f47c3f526103ab9b0170501315b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Hardware.Create an OT Incident</sys_name>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sc_cat_item_category_fdd66f47c3f526103ab9b0170501315b</sys_update_name>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-02 21:10:12</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="c180cbc3c33526103ab9b0170501313d" sys_domain="global" table="sn_ot_incident" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>alex.santacruz</sys_created_by>
+            <sys_created_on>2025-06-02 18:22:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c580cbc3c33526103ab9b01705013161</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sn_ot_incident" name="sn_ot_incident" sys_domain="global" view="18c568e37381301045216238edf6a7b8">c180cbc3c33526103ab9b0170501313d</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ot_incident" sys_domain="global" view="Default view">0d80cbc3c33526103ab9b01705013155</sys_ui_section>
+            <sys_updated_by>alex.santacruz</sys_updated_by>
+            <sys_updated_on>2025-06-02 18:22:46</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>alex.santacruz</sys_created_by>
+            <sys_created_on>2025-06-02 18:22:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0980cbc3c33526103ab9b01705013155</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sn_ot_incident" name="sn_ot_incident" sys_domain="global" view="18c568e37381301045216238edf6a7b8">c180cbc3c33526103ab9b0170501313d</sys_ui_form>
+            <sys_ui_section caption="Summary" display_value="Summary" name="sn_ot_incident" sys_domain="global" view="18c568e37381301045216238edf6a7b8">4d80cbc3c33526103ab9b0170501314d</sys_ui_section>
+            <sys_updated_by>alex.santacruz</sys_updated_by>
+            <sys_updated_on>2025-06-02 18:22:46</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>alex.santacruz</sys_created_by>
+            <sys_created_on>2025-06-02 18:22:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0d80cbc3c33526103ab9b01705013144</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sn_ot_incident" name="sn_ot_incident" sys_domain="global" view="18c568e37381301045216238edf6a7b8">c180cbc3c33526103ab9b0170501313d</sys_ui_form>
+            <sys_ui_section caption="Summary Lookup" display_value="Summary Lookup" name="sn_ot_incident" sys_domain="global" view="18c568e37381301045216238edf6a7b8">4980cbc3c33526103ab9b0170501313f</sys_ui_section>
+            <sys_updated_by>alex.santacruz</sys_updated_by>
+            <sys_updated_on>2025-06-02 18:22:45</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>alex.santacruz</sys_created_by>
+            <sys_created_on>2025-06-02 18:22:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4980cbc3c33526103ab9b0170501314d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sn_ot_incident" name="sn_ot_incident" sys_domain="global" view="18c568e37381301045216238edf6a7b8">c180cbc3c33526103ab9b0170501313d</sys_ui_form>
+            <sys_ui_section caption="Business Impact" display_value="Business Impact" name="sn_ot_incident" sys_domain="global" view="18c568e37381301045216238edf6a7b8">0580cbc3c33526103ab9b0170501314a</sys_ui_section>
+            <sys_updated_by>alex.santacruz</sys_updated_by>
+            <sys_updated_on>2025-06-02 18:22:46</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>alex.santacruz</sys_created_by>
+            <sys_created_on>2025-06-02 18:22:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0180cbc3c33526103ab9b0170501314a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sn_ot_incident" name="sn_ot_incident" sys_domain="global" view="18c568e37381301045216238edf6a7b8">c180cbc3c33526103ab9b0170501313d</sys_ui_form>
+            <sys_ui_section caption="Impact" display_value="Impact" name="sn_ot_incident" sys_domain="global" view="18c568e37381301045216238edf6a7b8">0180cbc3c33526103ab9b01705013145</sys_ui_section>
+            <sys_updated_by>alex.santacruz</sys_updated_by>
+            <sys_updated_on>2025-06-02 18:22:46</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>alex.santacruz</sys_created_by>
+            <sys_created_on>2025-06-02 18:22:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cd80cbc3c33526103ab9b01705013164</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sn_ot_incident" name="sn_ot_incident" sys_domain="global" view="18c568e37381301045216238edf6a7b8">c180cbc3c33526103ab9b0170501313d</sys_ui_form>
+            <sys_ui_section caption="Cause" display_value="Cause" name="sn_ot_incident" sys_domain="global" view="18c568e37381301045216238edf6a7b8">c980cbc3c33526103ab9b01705013161</sys_ui_section>
+            <sys_updated_by>alex.santacruz</sys_updated_by>
+            <sys_updated_on>2025-06-02 18:22:46</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>6</position>
+            <sys_created_by>alex.santacruz</sys_created_by>
+            <sys_created_on>2025-06-02 18:22:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5580cbc3c33526103ab9b01705013169</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="sn_ot_incident" name="sn_ot_incident" sys_domain="global" view="18c568e37381301045216238edf6a7b8">c180cbc3c33526103ab9b0170501313d</sys_ui_form>
+            <sys_ui_section caption="Resolution" display_value="Resolution" name="sn_ot_incident" sys_domain="global" view="18c568e37381301045216238edf6a7b8">c180cbc3c33526103ab9b01705013165</sys_ui_section>
+            <sys_updated_by>alex.santacruz</sys_updated_by>
+            <sys_updated_on>2025-06-02 18:22:46</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>sn_ot_incident</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>alex.santacruz</sys_created_by>
+            <sys_created_on>2025-06-02 18:22:45</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c180cbc3c33526103ab9b0170501313d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sn_ot_incident</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+            <sys_update_name>sys_ui_form_sections_c180cbc3c33526103ab9b0170501313d</sys_update_name>
+            <sys_updated_by>alex.santacruz</sys_updated_by>
+            <sys_updated_on>2025-06-02 18:22:45</sys_updated_on>
+            <sys_user/>
+            <view display_value="SOW-Incident-Overview" name="sow_incident_overview">18c568e37381301045216238edf6a7b8</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

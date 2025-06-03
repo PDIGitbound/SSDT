@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list action="DELETE" parent="" relationship="" sys_domain="global" table="x_volt2_github_s_0_asset_manufacturing_robots" version="2" view="">
+        <sys_ui_list_element action="DELETE">
+            <average_value>false</average_value>
+            <element>child</element>
+            <list_id display_value="x_volt2_github_s_0_asset_manufacturing_robots" element="NULL" name="x_volt2_github_s_0_asset_manufacturing_robots" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31fb128793312610d942fc4e1dba10e7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>esteban.quintero</sys_created_by>
+            <sys_created_on>2025-06-02 15:43:03</sys_created_on>
+            <sys_id>bdfb128793312610d942fc4e1dba10e7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>esteban.quintero</sys_updated_by>
+            <sys_updated_on>2025-06-02 15:43:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="DELETE">
+            <average_value>false</average_value>
+            <element>parent</element>
+            <list_id display_value="x_volt2_github_s_0_asset_manufacturing_robots" element="NULL" name="x_volt2_github_s_0_asset_manufacturing_robots" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31fb128793312610d942fc4e1dba10e7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>esteban.quintero</sys_created_by>
+            <sys_created_on>2025-06-02 15:43:03</sys_created_on>
+            <sys_id>b1fb128793312610d942fc4e1dba10e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>esteban.quintero</sys_updated_by>
+            <sys_updated_on>2025-06-02 15:43:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="DELETE">
+            <average_value>false</average_value>
+            <element>quantity</element>
+            <list_id display_value="x_volt2_github_s_0_asset_manufacturing_robots" element="NULL" name="x_volt2_github_s_0_asset_manufacturing_robots" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31fb128793312610d942fc4e1dba10e7</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>esteban.quintero</sys_created_by>
+            <sys_created_on>2025-06-02 15:43:03</sys_created_on>
+            <sys_id>b5fb128793312610d942fc4e1dba10e8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>esteban.quintero</sys_updated_by>
+            <sys_updated_on>2025-06-02 15:43:03</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="DELETE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_volt2_github_s_0_asset_manufacturing_robots</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by/>
+            <sys_created_on/>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path/>
+            <sys_id>13fb528793312610d942fc4e1dba1016</sys_id>
+            <sys_mod_count/>
+            <sys_name>x_volt2_github_s_0_asset_manufacturing_robots</sys_name>
+            <sys_package/>
+            <sys_policy/>
+            <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+            <sys_update_name/>
+            <sys_updated_by/>
+            <sys_updated_on>2025-06-02 15:48:06</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sys_ui_list_x_volt2_github_s_0_asset_manufacturing_robots_null</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_list parent="" relationship="" sys_domain="global" table="x_volt2_github_s_0_asset_manufacturing_robots" version="2" view=""><sys_ui_list_element action="DELETE"><average_value>false</average_value><element>child</element><list_id display_value="x_volt2_github_s_0_asset_manufacturing_robots" element="NULL" name="x_volt2_github_s_0_asset_manufacturing_robots" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31fb128793312610d942fc4e1dba10e7</list_id><max_value>false</max_value><min_value>false</min_value><position>0</position><sum>false</sum><sys_created_by>esteban.quintero</sys_created_by><sys_created_on>2025-06-02 15:43:03</sys_created_on><sys_id>bdfb128793312610d942fc4e1dba10e7</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>esteban.quintero</sys_updated_by><sys_updated_on>2025-06-02 15:43:03</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="DELETE"><average_value>false</average_value><element>parent</element><list_id display_value="x_volt2_github_s_0_asset_manufacturing_robots" element="NULL" name="x_volt2_github_s_0_asset_manufacturing_robots" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31fb128793312610d942fc4e1dba10e7</list_id><max_value>false</max_value><min_value>false</min_value><position>1</position><sum>false</sum><sys_created_by>esteban.quintero</sys_created_by><sys_created_on>2025-06-02 15:43:03</sys_created_on><sys_id>b1fb128793312610d942fc4e1dba10e8</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>esteban.quintero</sys_updated_by><sys_updated_on>2025-06-02 15:43:03</sys_updated_on></sys_ui_list_element><sys_ui_list_element action="DELETE"><average_value>false</average_value><element>quantity</element><list_id display_value="x_volt2_github_s_0_asset_manufacturing_robots" element="NULL" name="x_volt2_github_s_0_asset_manufacturing_robots" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">31fb128793312610d942fc4e1dba10e7</list_id><max_value>false</max_value><min_value>false</min_value><position>2</position><sum>false</sum><sys_created_by>esteban.quintero</sys_created_by><sys_created_on>2025-06-02 15:43:03</sys_created_on><sys_id>b5fb128793312610d942fc4e1dba10e8</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>esteban.quintero</sys_updated_by><sys_updated_on>2025-06-02 15:43:03</sys_updated_on></sys_ui_list_element><sys_ui_list action="DELETE"><average_value>false</average_value><element/><max_value>false</max_value><min_value>false</min_value><name>x_volt2_github_s_0_asset_manufacturing_robots</name><parent/><position/><relationship/><sum>false</sum><sys_class_name>sys_ui_list</sys_class_name><sys_created_by/><sys_created_on/><sys_domain>global</sys_domain><sys_domain_path/><sys_id>13fb528793312610d942fc4e1dba1016</sys_id><sys_mod_count/><sys_name>x_volt2_github_s_0_asset_manufacturing_robots</sys_name><sys_package/><sys_policy/><sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope><sys_update_name/><sys_updated_by/><sys_updated_on>2025-06-02 15:48:06</sys_updated_on><sys_user/><view display_value="Default view" name="NULL">Default view</view><view_name/></sys_ui_list></sys_ui_list></record_update>]]></payload>
+        <payload_hash>923546237</payload_hash>
+        <record_name>x_volt2_github_s_0_asset_manufacturing_robots</record_name>
+        <reverted_from/>
+        <source>4d41fd3d93316650d942fc4e1dba10f0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-02 15:48:06</sys_created_on>
+        <sys_id>231d520b93312610d942fc4e1dba10d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197315420600000001</sys_recorded_at>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-02 15:48:06</sys_updated_on>
+        <type>List Layout</type>
+        <update_guid>a71d520bb6312610ffc41c1a334dfcd1</update_guid>
+        <update_guid_history>a71d520bb6312610ffc41c1a334dfcd1:923546237,76ca9e8352312610082344c6707653fc:-1233452521</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-02 15:48:06</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_list">sys_ui_list</sys_db_object>
+        <sys_id>33a2d8d0e05b413c86d86c6749dc8409</sys_id>
+        <sys_metadata>31fb128793312610d942fc4e1dba10e7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_volt2_github_s_0_asset_manufacturing_robots</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent display_value="">fe3bd20793312610d942fc4e1dba107a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sys_ui_list_x_volt2_github_s_0_asset_manufacturing_robots_null</sys_update_name>
+        <sys_update_version display_value="sys_ui_list_x_volt2_github_s_0_asset_manufacturing_robots_null">231d520b93312610d942fc4e1dba10d2</sys_update_version>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-02 15:48:06</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

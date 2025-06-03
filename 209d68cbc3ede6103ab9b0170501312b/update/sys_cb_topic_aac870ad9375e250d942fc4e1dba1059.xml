@@ -5333,14 +5333,14 @@
                   "operator": "=",
                   "operand": "location",
                   "expression": "{{vaInputs.user.city}}",
-                  "id": "5c029861f4ac48128a2b5e338c0bcd4c"
+                  "id": "dabf3fa5f1a248e9b1161589f202e2c1"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "asset",
                   "expression": "31cd977393e5aa10d942fc4e1dba10a5",
-                  "id": "ce226b5801404e64b02b39b8435cba15"
+                  "id": "c4fa17e7784f45a3a602788c84099669"
                 },
                 {
                   "prefix": "",
@@ -5372,25 +5372,25 @@
                       ]
                     }
                   ],
-                  "id": "1348e5bc93314876a799c1617b0b10fa"
+                  "id": "2c7f406c1cad43ebbb8c80b5d71866c6"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "account",
                   "expression": "15a82ca59335e250d942fc4e1dba108d",
-                  "id": "09b04305d7924676b7b6a2fdc4ff18d5"
+                  "id": "d1cd0bcdc3f84fe3b3a3ff3ac5440712"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "contact",
-                  "expression": "{{vaInputs.hdmi_usa_contact}}",
-                  "id": "da5e58ec1b454d67b94e83db1a3e97ad"
+                  "expression": "{{vaInputs.user.ref_customer_contact}}",
+                  "id": "961371d9a1174e8db29040cb67dc30de"
                 }
               ]
             },
-            "queryString": "location={{vaInputs.user.city}}^asset=31cd977393e5aa10d942fc4e1dba10a5^short_description={{vaInputs.hdmi_sd_usa}}^account=15a82ca59335e250d942fc4e1dba108d^contact={{vaInputs.hdmi_usa_contact}}"
+            "queryString": "location={{vaInputs.user.city}}^asset=31cd977393e5aa10d942fc4e1dba10a5^short_description={{vaInputs.hdmi_sd_usa}}^account=15a82ca59335e250d942fc4e1dba108d^contact={{vaInputs.user.ref_customer_contact}}"
           },
           "mode": "create",
           "record": "",
@@ -5757,33 +5757,65 @@
                   "prefix": "",
                   "operator": "=",
                   "operand": "location",
-                  "expression": "",
-                  "id": "635357cbbc314b38b734658f767cd0db"
+                  "expression": "{{vaInputs.user.city}}",
+                  "id": "515b4e62e2bd42189be40553bad03652"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "asset",
-                  "expression": "",
-                  "id": "610ead9c5081449ab0407252179c696b"
+                  "expression": "564ed7b393e5aa10d942fc4e1dba10b6",
+                  "id": "e400a7bf26224bad82be4b601360107e"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "account",
-                  "expression": "",
-                  "id": "c02ef896306e43e39cfe8546ef310f78"
+                  "expression": "15a82ca59335e250d942fc4e1dba108d",
+                  "id": "a5260b49648c476a80e85849e5766a70"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "short_description",
-                  "expression": "",
-                  "id": "1702abb25f594a75a04c96a325aca9d8"
+                  "expression": "{{vaInputs.adapter_sd_usa}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.adapter_sd_usa}}",
+                            "displayValue": "Input Variables➛Adapter SD-USA"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "f6c8e38bed954a01ba1bc4850a6926b0"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "contact",
+                  "expression": "{{vaInputs.adapter_usa_contact}}",
+                  "id": "c705a978512e46cd8f417a1a823d0a2c"
                 }
               ]
             },
-            "queryString": "location=^asset=^account=^short_description="
+            "queryString": "location={{vaInputs.user.city}}^asset=564ed7b393e5aa10d942fc4e1dba10b6^account=15a82ca59335e250d942fc4e1dba108d^short_description={{vaInputs.adapter_sd_usa}}^contact={{vaInputs.adapter_usa_contact}}"
           },
           "mode": "create",
           "record": "",
@@ -6210,33 +6242,65 @@
                   "prefix": "",
                   "operator": "=",
                   "operand": "location",
-                  "expression": "",
-                  "id": "11980ff4928943feb07cf7eddc7f96c7"
+                  "expression": "{{vaInputs.user.city}}",
+                  "id": "64468aa59ae04abab93c5e3d6514156d"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "asset",
-                  "expression": "",
-                  "id": "869ba24e0aa444b0b61e2bd8dfe2f576"
+                  "expression": "580ed3b393e5aa10d942fc4e1dba101a",
+                  "id": "bcd5d5f96caf403f85bd1c0a3aeb857f"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "account",
-                  "expression": "",
-                  "id": "2c319772b68d49c7877ad1ebe784cc8f"
+                  "expression": "15a82ca59335e250d942fc4e1dba108d",
+                  "id": "6f3e36251d4f4f12a02bd630ef066766"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "short_description",
-                  "expression": "",
-                  "id": "87e550a82bd843ac9f9bb6e02252aa66"
+                  "expression": "{{vaInputs.monitor_sd_usa}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.monitor_sd_usa}}",
+                            "displayValue": "Input Variables➛Monitor SD-USA"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "6e7abfe9b11442d784dde2e8457a7995"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "contact",
+                  "expression": "{{vaInputs.monitor_usa_contact}}",
+                  "id": "5361505d17544d3da15a4999df992714"
                 }
               ]
             },
-            "queryString": "location=^asset=^account=^short_description="
+            "queryString": "location={{vaInputs.user.city}}^asset=580ed3b393e5aa10d942fc4e1dba101a^account=15a82ca59335e250d942fc4e1dba108d^short_description={{vaInputs.monitor_sd_usa}}^contact={{vaInputs.monitor_usa_contact}}"
           },
           "mode": "create",
           "record": "",
@@ -6863,9 +6927,572 @@
             }
           ],
           "variableId": "a5e1cd3fd8054b46993b97cfa84b5ab8"
+        },
+        "9923a78f8d13427dae0a1a431194506c": {
+          "id": "9923a78f8d13427dae0a1a431194506c",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "8d05dcbbcf4945ab982132ed1a1a20a9": {
+          "name": "Knowledge choices",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "What kind of knowledge you want to see?"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "56626ff1e77e4dc8a83bbceb3ffa80c1",
+          "detailDescription": "",
+          "id": "8d05dcbbcf4945ab982132ed1a1a20a9",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "8cd1bfc9724b4cd4ab273b43d70d751e": {
+          "id": "8cd1bfc9724b4cd4ab273b43d70d751e",
+          "stepType": "TableOutput",
+          "name": "Consumer Service",
+          "header": {
+            "value": "",
+            "mode": "simple"
+          },
+          "displayColumnHeaders": true,
+          "dataSourceType": "table",
+          "script": "",
+          "tableName": "kb_knowledge",
+          "sortByColumns": [],
+          "tableCondition": {
+            "mode": "glide_query",
+            "value": "kb_knowledge_base=2b292926c3302200e7c7d44d81d3ae10"
+          },
+          "columns": [
+            {
+              "key": "number",
+              "value": "Number",
+              "label": "Number"
+            },
+            {
+              "key": "short_description",
+              "value": "Short description",
+              "label": "Short description"
+            }
+          ],
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "You dont have any Consumer Service Knowledge Articles Available"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "debe98e5d8364c8184864754ff4ac413": {
+          "id": "debe98e5d8364c8184864754ff4ac413",
+          "stepType": "TableOutput",
+          "name": "Costumer Service",
+          "header": {
+            "value": "",
+            "mode": "simple"
+          },
+          "displayColumnHeaders": true,
+          "dataSourceType": "table",
+          "script": "",
+          "tableName": "kb_knowledge",
+          "sortByColumns": [],
+          "tableCondition": {
+            "mode": "glide_query",
+            "value": "kb_knowledge_base=05ff44289f011200550bf7b6077fcfa3"
+          },
+          "columns": [
+            {
+              "key": "number",
+              "value": "Number",
+              "label": "Number"
+            },
+            {
+              "key": "short_description",
+              "value": "Short description",
+              "label": "Short description"
+            }
+          ],
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "You don't have any Costumer Service Knowledge Articles Available"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "7e9d711e9f39417bb234b795443927e7": {
+          "id": "7e9d711e9f39417bb234b795443927e7",
+          "stepType": "TableOutput",
+          "name": "Field Service Knowledge",
+          "header": {
+            "value": "",
+            "mode": "simple"
+          },
+          "displayColumnHeaders": true,
+          "dataSourceType": "table",
+          "script": "",
+          "tableName": "kb_knowledge",
+          "sortByColumns": [],
+          "tableCondition": {
+            "mode": "glide_query",
+            "value": "kb_knowledge_base=94316a0047022100158b949b6c9a7164"
+          },
+          "columns": [
+            {
+              "key": "number",
+              "value": "Number",
+              "label": "Number"
+            },
+            {
+              "key": "short_description",
+              "value": "Short description",
+              "label": "Short description"
+            }
+          ],
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "You don't have any Field Service Knowledge Articles Available"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "b410bf6efd32499d94deff742ab64730": {
+          "id": "b410bf6efd32499d94deff742ab64730",
+          "stepType": "TableOutput",
+          "name": "Enterprise Asset Knowledge Bas",
+          "header": {
+            "value": "",
+            "mode": "simple"
+          },
+          "displayColumnHeaders": true,
+          "dataSourceType": "table",
+          "script": "",
+          "tableName": "kb_knowledge",
+          "sortByColumns": [],
+          "tableCondition": {
+            "mode": "glide_query",
+            "value": "kb_knowledge_base=f9820d4ceba6211046605377d852282b"
+          },
+          "columns": [
+            {
+              "key": "number",
+              "value": "Number",
+              "label": "Number"
+            },
+            {
+              "key": "short_description",
+              "value": "Short description",
+              "label": "Short description"
+            }
+          ],
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "You don't have any Enterprise Asset Knowledge Bases Knowledge Articles Available"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "25d66cd27b8d431faa48e777baa35cb9": {
+          "id": "25d66cd27b8d431faa48e777baa35cb9",
+          "stepType": "TableOutput",
+          "name": "IT",
+          "header": {
+            "value": "",
+            "mode": "simple"
+          },
+          "displayColumnHeaders": true,
+          "dataSourceType": "table",
+          "script": "",
+          "tableName": "kb_knowledge",
+          "sortByColumns": [],
+          "tableCondition": {
+            "mode": "glide_query",
+            "value": "kb_knowledge_base=a7e8a78bff0221009b20ffffffffff17"
+          },
+          "columns": [
+            {
+              "key": "number",
+              "value": "Number",
+              "label": "Number"
+            },
+            {
+              "key": "short_description",
+              "value": "Short description",
+              "label": "Short description"
+            }
+          ],
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "You dont have any Knowledge IT Articles Available"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "edcb440ac42a4f76a290aaef1050299e": {
+          "id": "edcb440ac42a4f76a290aaef1050299e",
+          "stepType": "TableOutput",
+          "name": "Knowledge",
+          "header": {
+            "value": "",
+            "mode": "simple"
+          },
+          "displayColumnHeaders": true,
+          "dataSourceType": "table",
+          "script": "",
+          "tableName": "kb_knowledge",
+          "sortByColumns": [],
+          "tableCondition": {
+            "mode": "glide_query",
+            "value": "kb_knowledge_base=dfc19531bf2021003f07e2c1ac0739ab"
+          },
+          "columns": [
+            {
+              "key": "number",
+              "value": "Number",
+              "label": "Number"
+            },
+            {
+              "key": "short_description",
+              "value": "Short description",
+              "label": "Short description"
+            },
+            {
+              "key": "author",
+              "value": "Author",
+              "label": "Author"
+            },
+            {
+              "key": "category",
+              "value": "Category",
+              "label": "Category"
+            }
+          ],
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "You dont have any Knowledge Articles Available"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "615fd8194d534cecba887ec107f7119d": {
+          "id": "615fd8194d534cecba887ec107f7119d",
+          "stepType": "TableOutput",
+          "name": "Vulnerabilities",
+          "header": {
+            "value": "",
+            "mode": "simple"
+          },
+          "displayColumnHeaders": true,
+          "dataSourceType": "table",
+          "script": "",
+          "tableName": "kb_knowledge",
+          "sortByColumns": [],
+          "tableCondition": {
+            "mode": "glide_query",
+            "value": "kb_knowledge_base=e15c06f09f30020034c6b6a0942e7076"
+          },
+          "columns": [
+            {
+              "key": "number",
+              "value": "Number",
+              "label": "Number"
+            },
+            {
+              "key": "short_description",
+              "value": "Short description",
+              "label": "Short description"
+            },
+            {
+              "key": "author",
+              "value": "Author",
+              "label": "Author"
+            },
+            {
+              "key": "kb_category",
+              "value": "Category",
+              "label": "Category"
+            }
+          ],
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "You dont have any Vulnerabilities Knowledge Articles Available"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "26df38077fe742da9c8b91ce68f4d57e": {
+          "id": "26df38077fe742da9c8b91ce68f4d57e",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "73428adb48394528b607439c2a038591": {
+          "id": "73428adb48394528b607439c2a038591",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "eb48f12e58de462f85c4ee6e5412a692": {
+          "id": "eb48f12e58de462f85c4ee6e5412a692",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "274da356412d42549dcce62af32cc24f": {
+          "id": "274da356412d42549dcce62af32cc24f",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "79d74550551e46369f15d45698b89cbe": {
+          "id": "79d74550551e46369f15d45698b89cbe",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "d5d0f3647ea94b5a90f9442102b0e9fe": {
+          "id": "d5d0f3647ea94b5a90f9442102b0e9fe",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "5641be746dea4afeaec7a60c9d0ddd30": {
+          "id": "5641be746dea4afeaec7a60c9d0ddd30",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "155c04dd57db4f57bd1b082c9b8f90b7": {
+          "id": "155c04dd57db4f57bd1b082c9b8f90b7",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "92166c55fbc045c7acbf93ccdf11ccc9": {
+          "id": "92166c55fbc045c7acbf93ccdf11ccc9",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "fdb440805e2248f0b37ab72a82c35424": {
+          "id": "fdb440805e2248f0b37ab72a82c35424",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "cf2527a6de82406f964469668004222f": {
+          "id": "cf2527a6de82406f964469668004222f",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "a70405f98c4c4bdcbd75e339e2080fe0": {
+          "id": "a70405f98c4c4bdcbd75e339e2080fe0",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "f4d18f3911134a858c06b24e37dc5d52": {
+          "id": "f4d18f3911134a858c06b24e37dc5d52",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "081ae93f34fc41da8fcff42396a6e0bc": {
+          "id": "081ae93f34fc41da8fcff42396a6e0bc",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "ccc9f66a7f034240ade37cfae0c19288": {
+          "id": "ccc9f66a7f034240ade37cfae0c19288",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "d99c5e2232a74dd58b9723bf2bb33eae": {
+          "id": "d99c5e2232a74dd58b9723bf2bb33eae",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "87b5f905958c477bac04cc9f7d5c3199": {
+          "id": "87b5f905958c477bac04cc9f7d5c3199",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "fd37bf65e8ea4b4884e01562b7fe403c": {
+          "id": "fd37bf65e8ea4b4884e01562b7fe403c",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "1bd03380b47046bcab7d8f560d108df9": {
+          "id": "1bd03380b47046bcab7d8f560d108df9",
+          "stepType": "ImplicitEnd"
+        },
+        "0eb867552f0c4308aca6d9c8d4d03268": {
+          "id": "0eb867552f0c4308aca6d9c8d4d03268",
+          "stepType": "ImplicitEnd"
+        },
+        "5a880441fa4d48dea78e85b88fc443cd": {
+          "id": "5a880441fa4d48dea78e85b88fc443cd",
+          "stepType": "ImplicitEnd"
+        },
+        "7afdb4d3ae99452388258e171df40f82": {
+          "id": "7afdb4d3ae99452388258e171df40f82",
+          "stepType": "ImplicitEnd"
+        },
+        "e291cd8c6fda4c889b9fa6ca2610e69f": {
+          "id": "e291cd8c6fda4c889b9fa6ca2610e69f",
+          "stepType": "ImplicitEnd"
+        },
+        "7a393573faa14171a9933f11d4339e40": {
+          "id": "7a393573faa14171a9933f11d4339e40",
+          "stepType": "ImplicitEnd"
+        },
+        "d4c18782633f4360a2d2b7680dee5a45": {
+          "id": "d4c18782633f4360a2d2b7680dee5a45",
+          "stepType": "ImplicitEnd"
+        },
+        "1c4cfbd82ccd41c7beb698b390720e53": {
+          "id": "1c4cfbd82ccd41c7beb698b390720e53",
+          "stepType": "ImplicitEnd"
+        },
+        "033b4d06bb204b5a9e91599800158fe7": {
+          "id": "033b4d06bb204b5a9e91599800158fe7",
+          "stepType": "ImplicitEnd"
+        },
+        "ecc955c37c82427aa509b3acd61d11f5": {
+          "id": "ecc955c37c82427aa509b3acd61d11f5",
+          "stepType": "ImplicitEnd"
+        },
+        "31eedd506ca1427984c8b5edce38d206": {
+          "id": "31eedd506ca1427984c8b5edce38d206",
+          "stepType": "ImplicitEnd"
+        },
+        "f5dd744acabd42cabbdc94514cd00878": {
+          "id": "f5dd744acabd42cabbdc94514cd00878",
+          "stepType": "ImplicitEnd"
+        },
+        "dad55612197f43ba81e583ee61e4f45d": {
+          "id": "dad55612197f43ba81e583ee61e4f45d",
+          "stepType": "ImplicitEnd"
         }
       },
       "edges": [
+        {
+          "id": "817ffea5c89541019c0700ef2bf81ae7",
+          "edgeType": "Branch",
+          "source": "d5d0f3647ea94b5a90f9442102b0e9fe",
+          "target": "52062c867801492b90bf8d48b3fda40f",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
         {
           "id": "4004b21f03014a838f6ec974d3b22ced",
           "edgeType": "Branch",
@@ -7117,26 +7744,10 @@
           "label": "Latin_America"
         },
         {
-          "id": "1a660a865cc04e168e62dbb46a489cb8",
-          "edgeType": "Edge",
-          "source": "e940bf522ed14283961453693fdd5147",
-          "target": "dc249d7dfc71452ea784e46f14b69dcf",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
           "id": "cc669343ca65488699dafdf310bc41d6",
           "edgeType": "Edge",
           "source": "dc249d7dfc71452ea784e46f14b69dcf",
           "target": "e74dc5ab9dff495b96a4b3f6b0f095ff",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "d2d8621aaaba4b19808821fdc042e6d9",
-          "edgeType": "Edge",
-          "source": "102a6925baa5456a9ecf898ae420adde",
-          "target": "821bec129dfa4ceaa8ac9bf17a5c8542",
           "sourcePort": "",
           "targetPort": ""
         },
@@ -7149,26 +7760,10 @@
           "targetPort": ""
         },
         {
-          "id": "348a94df91bc41fa8aab1ff6cff63585",
-          "edgeType": "Edge",
-          "source": "a94992debbc1417489496ccd125a96bd",
-          "target": "d3dcf85e64884fe883f919ff013ac67a",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
           "id": "0aa7cf9b1507423d9148dfefce22f82f",
           "edgeType": "Edge",
           "source": "d3dcf85e64884fe883f919ff013ac67a",
           "target": "6caf697e71e64ae8beaefa34141ae982",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "6772989c4be442479cc57480d894ba9a",
-          "edgeType": "Edge",
-          "source": "e6db15dfc92f40a29aa22ec10b834ad8",
-          "target": "a65752c13d2443848f95bb14fa6114f7",
           "sourcePort": "",
           "targetPort": ""
         },
@@ -7181,26 +7776,10 @@
           "targetPort": ""
         },
         {
-          "id": "41fec197740d41829c1f79d6d9e83207",
-          "edgeType": "Edge",
-          "source": "abd5cb82987e481387c32927e5e53404",
-          "target": "d1086c7250734199af8ff666436542d5",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
           "id": "066c5b71144446e8be33a4c55be35ffc",
           "edgeType": "Edge",
           "source": "d1086c7250734199af8ff666436542d5",
           "target": "646ff0709efe4b48b9f56121faab44dc",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "b55bc46989af4a7997c5706c7a0ff288",
-          "edgeType": "Edge",
-          "source": "1ee78662f8644b32af10c523b3a597e0",
-          "target": "513ec8dcdcd347169f0a994e77eb9b69",
           "sourcePort": "",
           "targetPort": ""
         },
@@ -7490,14 +8069,6 @@
           "label": "No"
         },
         {
-          "id": "1c9b990286e747638b7b531cada56376",
-          "edgeType": "Edge",
-          "source": "58d5a374fa544c2d895644364cf53fea",
-          "target": "68c8121041c34c6bbcf0e65c47017114",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
           "id": "f40dca1546c5489ab55ac773ef008270",
           "edgeType": "Edge",
           "source": "68c8121041c34c6bbcf0e65c47017114",
@@ -7517,102 +8088,6 @@
             "mode": "query"
           },
           "label": "Yes"
-        },
-        {
-          "id": "f61718496e214bed8cfecf08c9329154",
-          "edgeType": "Edge",
-          "source": "d128bb531b3a45379d19bc0abdeb9e68",
-          "target": "03ef7ee4b288465691fe0f1d05c0c99a",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "778e0edfd8d0434992407ddf39de614d",
-          "edgeType": "Edge",
-          "source": "ea90d83e33dd4a52b7adce852bc826ea",
-          "target": "39a193b49e874f25a2fd19195734cf12",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "6028421ac4de4905b85848f5dad9e18d",
-          "edgeType": "Edge",
-          "source": "fae1476f02384efe95799877cb7491cb",
-          "target": "d8e51592ba4d4b52b46068c1fcafedcb",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "ac0933fe796d46d0bbfed53cb93aadb3",
-          "edgeType": "Edge",
-          "source": "6d5f25c02bb5454195f62b7919ad2b95",
-          "target": "75730e582b074cbc8df11cd42a0760aa",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "8e55f2d3094440b6bd24adebf7779b11",
-          "edgeType": "Edge",
-          "source": "c3e819d9fc6546a68c9a452db6da0fc1",
-          "target": "52062c867801492b90bf8d48b3fda40f",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "65252e110d2042bb8fce5ee54dd62811",
-          "edgeType": "Edge",
-          "source": "44ade60ae2ce4688924b96524858a980",
-          "target": "9b7a3e0e4b5e48f59d404f7b5fc739c2",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "a7dbf936c9d34340bb45c537a3acf3ab",
-          "edgeType": "Edge",
-          "source": "9a24e3739ae5443abbc94e7daf013208",
-          "target": "d9b3e04f0ade426fab2faf47dfc891fa",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "6aca66e41db34cd0acf11b1ccc51c34c",
-          "edgeType": "Edge",
-          "source": "a3f602a9ff994c59aed2a874f291285a",
-          "target": "c9011282a45f484ba271fb6988139c16",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "16d365f18c214a35bfca9aad1381de09",
-          "edgeType": "Edge",
-          "source": "339e0518e5404ed9b96398b388384514",
-          "target": "2b282a895a2747888cbdc7e56a44bc16",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "169ff3ee5b494bdda0897965c62dbd13",
-          "edgeType": "Edge",
-          "source": "72207c15b2b044a7ba17a5e7c8e658c0",
-          "target": "0a6ae59a1d614f47a674392ad8b26887",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "5e9ed3633548444ba78961dbdd84e256",
-          "edgeType": "Edge",
-          "source": "e6d359e96e114df6bb31de8458cf72a8",
-          "target": "88f9289bb5f84273affc8ad7558a2d67",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "b4574be775ca4200b4030aecaba336af",
-          "edgeType": "Edge",
-          "source": "b534678ea51e481f8c9c9224634a349f",
-          "target": "b15a35c7218844f3a3a1c2cbea2e6734",
-          "sourcePort": "",
-          "targetPort": ""
         },
         {
           "id": "06026956e01349b0960b6df51ab26a54",
@@ -8004,6 +8479,768 @@
           "target": "5806017c06534e46bca0beb62c0abf53",
           "sourcePort": "",
           "targetPort": ""
+        },
+        {
+          "id": "1c9b990286e747638b7b531cada56376",
+          "edgeType": "Edge",
+          "source": "58d5a374fa544c2d895644364cf53fea",
+          "target": "8d05dcbbcf4945ab982132ed1a1a20a9",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "48b9d0bc792649cf8ebbf97f2b5c6485",
+          "edgeType": "Edge",
+          "source": "8d05dcbbcf4945ab982132ed1a1a20a9",
+          "target": "9923a78f8d13427dae0a1a431194506c",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "67c9e174c982488790c84d17eeb87138",
+          "edgeType": "Branch",
+          "source": "9923a78f8d13427dae0a1a431194506c",
+          "target": "8cd1bfc9724b4cd4ab273b43d70d751e",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Consumer Service"
+        },
+        {
+          "id": "87d2e8bcbcd34daf909ba73cbad90b39",
+          "edgeType": "Edge",
+          "source": "8cd1bfc9724b4cd4ab273b43d70d751e",
+          "target": "68c8121041c34c6bbcf0e65c47017114",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0e02dcdd597b4f379d1475b2cb310655",
+          "edgeType": "Branch",
+          "source": "9923a78f8d13427dae0a1a431194506c",
+          "target": "debe98e5d8364c8184864754ff4ac413",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Costumer Service"
+        },
+        {
+          "id": "12490f79ba50463fa9b17d5fa95852b0",
+          "edgeType": "Edge",
+          "source": "debe98e5d8364c8184864754ff4ac413",
+          "target": "68c8121041c34c6bbcf0e65c47017114",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0aa788265efb49e38ae4d395cfa49ec5",
+          "edgeType": "Branch",
+          "source": "9923a78f8d13427dae0a1a431194506c",
+          "target": "7e9d711e9f39417bb234b795443927e7",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Field Service Knowledge"
+        },
+        {
+          "id": "9a30372b72fc41efb58818cdb3ebaa03",
+          "edgeType": "Edge",
+          "source": "7e9d711e9f39417bb234b795443927e7",
+          "target": "68c8121041c34c6bbcf0e65c47017114",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ef222817482b43f5bf57960df230b205",
+          "edgeType": "Branch",
+          "source": "9923a78f8d13427dae0a1a431194506c",
+          "target": "b410bf6efd32499d94deff742ab64730",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Enterprise Asset Knowledge Base"
+        },
+        {
+          "id": "39aeb35989d3463a92203f2da3294cd3",
+          "edgeType": "Edge",
+          "source": "b410bf6efd32499d94deff742ab64730",
+          "target": "68c8121041c34c6bbcf0e65c47017114",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d2ebb82e4991474e9320038653db4cbb",
+          "edgeType": "Branch",
+          "source": "9923a78f8d13427dae0a1a431194506c",
+          "target": "25d66cd27b8d431faa48e777baa35cb9",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "IT"
+        },
+        {
+          "id": "cc73e19e05864f54964474063dba1e2d",
+          "edgeType": "Edge",
+          "source": "25d66cd27b8d431faa48e777baa35cb9",
+          "target": "68c8121041c34c6bbcf0e65c47017114",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "5e43953fc64e48ae9b4a6353ffb3ee0c",
+          "edgeType": "Branch",
+          "source": "9923a78f8d13427dae0a1a431194506c",
+          "target": "edcb440ac42a4f76a290aaef1050299e",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Knowledge"
+        },
+        {
+          "id": "4b694363bac14cb9b5d12e9e9c278736",
+          "edgeType": "Edge",
+          "source": "edcb440ac42a4f76a290aaef1050299e",
+          "target": "68c8121041c34c6bbcf0e65c47017114",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "53f6d489e0f04042b9bd274d4c3269e9",
+          "edgeType": "Branch",
+          "source": "9923a78f8d13427dae0a1a431194506c",
+          "target": "615fd8194d534cecba887ec107f7119d",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Vulnerabilities"
+        },
+        {
+          "id": "6fb6346fe5254379aafc6a9e5a9d67fb",
+          "edgeType": "Edge",
+          "source": "615fd8194d534cecba887ec107f7119d",
+          "target": "68c8121041c34c6bbcf0e65c47017114",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "348a94df91bc41fa8aab1ff6cff63585",
+          "edgeType": "Edge",
+          "source": "a94992debbc1417489496ccd125a96bd",
+          "target": "26df38077fe742da9c8b91ce68f4d57e",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "21ba305acbf64c0d9e478b601ef062e1",
+          "edgeType": "Branch",
+          "source": "26df38077fe742da9c8b91ce68f4d57e",
+          "target": "d3dcf85e64884fe883f919ff013ac67a",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "6028421ac4de4905b85848f5dad9e18d",
+          "edgeType": "Edge",
+          "source": "fae1476f02384efe95799877cb7491cb",
+          "target": "73428adb48394528b607439c2a038591",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "990a7447a28246c1a0431c8231327814",
+          "edgeType": "Branch",
+          "source": "73428adb48394528b607439c2a038591",
+          "target": "d8e51592ba4d4b52b46068c1fcafedcb",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Contact"
+        },
+        {
+          "id": "b4574be775ca4200b4030aecaba336af",
+          "edgeType": "Edge",
+          "source": "b534678ea51e481f8c9c9224634a349f",
+          "target": "eb48f12e58de462f85c4ee6e5412a692",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "209e1e1e86e34cbfb6deffb39c898231",
+          "edgeType": "Branch",
+          "source": "eb48f12e58de462f85c4ee6e5412a692",
+          "target": "b15a35c7218844f3a3a1c2cbea2e6734",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "16d365f18c214a35bfca9aad1381de09",
+          "edgeType": "Edge",
+          "source": "339e0518e5404ed9b96398b388384514",
+          "target": "274da356412d42549dcce62af32cc24f",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ede442ce2f15412a8c440497b0cbf970",
+          "edgeType": "Branch",
+          "source": "274da356412d42549dcce62af32cc24f",
+          "target": "2b282a895a2747888cbdc7e56a44bc16",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "1a660a865cc04e168e62dbb46a489cb8",
+          "edgeType": "Edge",
+          "source": "e940bf522ed14283961453693fdd5147",
+          "target": "79d74550551e46369f15d45698b89cbe",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "0b6e23cd8e6546808ea625ba9b7d3e1f",
+          "edgeType": "Branch",
+          "source": "79d74550551e46369f15d45698b89cbe",
+          "target": "dc249d7dfc71452ea784e46f14b69dcf",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "8e55f2d3094440b6bd24adebf7779b11",
+          "edgeType": "Edge",
+          "source": "c3e819d9fc6546a68c9a452db6da0fc1",
+          "target": "d5d0f3647ea94b5a90f9442102b0e9fe",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "a7dbf936c9d34340bb45c537a3acf3ab",
+          "edgeType": "Edge",
+          "source": "9a24e3739ae5443abbc94e7daf013208",
+          "target": "5641be746dea4afeaec7a60c9d0ddd30",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "57153bc70c1b4b5a86bf982162d5f592",
+          "edgeType": "Branch",
+          "source": "5641be746dea4afeaec7a60c9d0ddd30",
+          "target": "d9b3e04f0ade426fab2faf47dfc891fa",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "169ff3ee5b494bdda0897965c62dbd13",
+          "edgeType": "Edge",
+          "source": "72207c15b2b044a7ba17a5e7c8e658c0",
+          "target": "155c04dd57db4f57bd1b082c9b8f90b7",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "792c59c124f54e438d49d534ecfa5931",
+          "edgeType": "Branch",
+          "source": "155c04dd57db4f57bd1b082c9b8f90b7",
+          "target": "0a6ae59a1d614f47a674392ad8b26887",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "d2d8621aaaba4b19808821fdc042e6d9",
+          "edgeType": "Edge",
+          "source": "102a6925baa5456a9ecf898ae420adde",
+          "target": "92166c55fbc045c7acbf93ccdf11ccc9",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "823ba4f3596349c49278a3d91b3167dc",
+          "edgeType": "Branch",
+          "source": "92166c55fbc045c7acbf93ccdf11ccc9",
+          "target": "821bec129dfa4ceaa8ac9bf17a5c8542",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "contact"
+        },
+        {
+          "id": "ac0933fe796d46d0bbfed53cb93aadb3",
+          "edgeType": "Edge",
+          "source": "6d5f25c02bb5454195f62b7919ad2b95",
+          "target": "fdb440805e2248f0b37ab72a82c35424",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b19cb83d2c05439aaf53128ea5023088",
+          "edgeType": "Branch",
+          "source": "fdb440805e2248f0b37ab72a82c35424",
+          "target": "75730e582b074cbc8df11cd42a0760aa",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "New contact"
+        },
+        {
+          "id": "f61718496e214bed8cfecf08c9329154",
+          "edgeType": "Edge",
+          "source": "d128bb531b3a45379d19bc0abdeb9e68",
+          "target": "cf2527a6de82406f964469668004222f",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "774057da3efc4f5f9565079cd5486b7a",
+          "edgeType": "Branch",
+          "source": "cf2527a6de82406f964469668004222f",
+          "target": "03ef7ee4b288465691fe0f1d05c0c99a",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "5e9ed3633548444ba78961dbdd84e256",
+          "edgeType": "Edge",
+          "source": "e6d359e96e114df6bb31de8458cf72a8",
+          "target": "a70405f98c4c4bdcbd75e339e2080fe0",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "f49e2c5c55ad4837b4de7523fea69755",
+          "edgeType": "Branch",
+          "source": "a70405f98c4c4bdcbd75e339e2080fe0",
+          "target": "88f9289bb5f84273affc8ad7558a2d67",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "65252e110d2042bb8fce5ee54dd62811",
+          "edgeType": "Edge",
+          "source": "44ade60ae2ce4688924b96524858a980",
+          "target": "f4d18f3911134a858c06b24e37dc5d52",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d8a40887dac04767879d14349302c812",
+          "edgeType": "Branch",
+          "source": "f4d18f3911134a858c06b24e37dc5d52",
+          "target": "9b7a3e0e4b5e48f59d404f7b5fc739c2",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "778e0edfd8d0434992407ddf39de614d",
+          "edgeType": "Edge",
+          "source": "ea90d83e33dd4a52b7adce852bc826ea",
+          "target": "081ae93f34fc41da8fcff42396a6e0bc",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "81734855cfae4eb6a93c951fe6adaeea",
+          "edgeType": "Branch",
+          "source": "081ae93f34fc41da8fcff42396a6e0bc",
+          "target": "39a193b49e874f25a2fd19195734cf12",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "6772989c4be442479cc57480d894ba9a",
+          "edgeType": "Edge",
+          "source": "e6db15dfc92f40a29aa22ec10b834ad8",
+          "target": "ccc9f66a7f034240ade37cfae0c19288",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c22f90fb927c401bb6bdd5ac539d04ca",
+          "edgeType": "Branch",
+          "source": "ccc9f66a7f034240ade37cfae0c19288",
+          "target": "a65752c13d2443848f95bb14fa6114f7",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Contact"
+        },
+        {
+          "id": "41fec197740d41829c1f79d6d9e83207",
+          "edgeType": "Edge",
+          "source": "abd5cb82987e481387c32927e5e53404",
+          "target": "d99c5e2232a74dd58b9723bf2bb33eae",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ca2028521543438f8c8c65db0f64651b",
+          "edgeType": "Branch",
+          "source": "d99c5e2232a74dd58b9723bf2bb33eae",
+          "target": "d1086c7250734199af8ff666436542d5",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "b55bc46989af4a7997c5706c7a0ff288",
+          "edgeType": "Edge",
+          "source": "1ee78662f8644b32af10c523b3a597e0",
+          "target": "87b5f905958c477bac04cc9f7d5c3199",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "7e83b961b4c74561a0eedf49a2f0362f",
+          "edgeType": "Branch",
+          "source": "87b5f905958c477bac04cc9f7d5c3199",
+          "target": "513ec8dcdcd347169f0a994e77eb9b69",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "contact"
+        },
+        {
+          "id": "6aca66e41db34cd0acf11b1ccc51c34c",
+          "edgeType": "Edge",
+          "source": "a3f602a9ff994c59aed2a874f291285a",
+          "target": "fd37bf65e8ea4b4884e01562b7fe403c",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "062f52e9dbbb41fbb69e7290da6a19d6",
+          "edgeType": "Branch",
+          "source": "fd37bf65e8ea4b4884e01562b7fe403c",
+          "target": "c9011282a45f484ba271fb6988139c16",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "",
+            "mode": "query"
+          },
+          "label": "Always"
+        },
+        {
+          "id": "abc5ca8a0d384eeba7d9ca4f985c4088",
+          "edgeType": "Branch",
+          "source": "081ae93f34fc41da8fcff42396a6e0bc",
+          "target": "1bd03380b47046bcab7d8f560d108df9",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "6404028dc7394e50b2eb3087e2d5f9d2",
+          "edgeType": "Branch",
+          "source": "274da356412d42549dcce62af32cc24f",
+          "target": "0eb867552f0c4308aca6d9c8d4d03268",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "114f1c4684564d6c9cdfd4ca18b53e63",
+          "edgeType": "Branch",
+          "source": "92166c55fbc045c7acbf93ccdf11ccc9",
+          "target": "21f88906d4584c4d89c008a99440aa59",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Existing Contact"
+        },
+        {
+          "id": "a1c93996b0f2405eab243224067d5658",
+          "edgeType": "Branch",
+          "source": "fdb440805e2248f0b37ab72a82c35424",
+          "target": "022f7fbc3e76467ab888fbeb04c3ef4b",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Existing contact"
+        },
+        {
+          "id": "7c2d9fa557ee476d81dd5b8dc90a4daa",
+          "edgeType": "Branch",
+          "source": "fd37bf65e8ea4b4884e01562b7fe403c",
+          "target": "5a880441fa4d48dea78e85b88fc443cd",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "b9698f0e943949daa2c8032c995638b9",
+          "edgeType": "Branch",
+          "source": "d99c5e2232a74dd58b9723bf2bb33eae",
+          "target": "7afdb4d3ae99452388258e171df40f82",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "fef9cc37afe24a1bba3630a32e6d0878",
+          "edgeType": "Branch",
+          "source": "87b5f905958c477bac04cc9f7d5c3199",
+          "target": "e5c2531329dc4638806eec267b4760c7",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Existing Contact "
+        },
+        {
+          "id": "ed5356c58e214f0d8c1ab566c0a93761",
+          "edgeType": "Branch",
+          "source": "79d74550551e46369f15d45698b89cbe",
+          "target": "e291cd8c6fda4c889b9fa6ca2610e69f",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "ffc10948b1c64a2ebf4217223d3c0555",
+          "edgeType": "Branch",
+          "source": "26df38077fe742da9c8b91ce68f4d57e",
+          "target": "7a393573faa14171a9933f11d4339e40",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "ed94c81bcaf641d793d00b8d588e6a98",
+          "edgeType": "Branch",
+          "source": "a70405f98c4c4bdcbd75e339e2080fe0",
+          "target": "d4c18782633f4360a2d2b7680dee5a45",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "e4b6d3d26a604447b7261d95e00d550c",
+          "edgeType": "Branch",
+          "source": "ccc9f66a7f034240ade37cfae0c19288",
+          "target": "339a53cb14984f89977db41dbe990a2f",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Existing Contact"
+        },
+        {
+          "id": "32e82cc6830c4d39952856ffbef6cfbe",
+          "edgeType": "Branch",
+          "source": "73428adb48394528b607439c2a038591",
+          "target": "390af2c46ceb40e381644034b50932ef",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Existing contact"
+        },
+        {
+          "id": "7063908c19684971a231d2905ed4db0a",
+          "edgeType": "Branch",
+          "source": "5641be746dea4afeaec7a60c9d0ddd30",
+          "target": "1c4cfbd82ccd41c7beb698b390720e53",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "3c553a54009b4fa2a549ae78e04ba677",
+          "edgeType": "Branch",
+          "source": "f4d18f3911134a858c06b24e37dc5d52",
+          "target": "033b4d06bb204b5a9e91599800158fe7",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "29bd34a615d2424ebf4a292a25864227",
+          "edgeType": "Branch",
+          "source": "155c04dd57db4f57bd1b082c9b8f90b7",
+          "target": "ecc955c37c82427aa509b3acd61d11f5",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "7563492c4420450cae5a80bb23fe3a33",
+          "edgeType": "Branch",
+          "source": "d5d0f3647ea94b5a90f9442102b0e9fe",
+          "target": "31eedd506ca1427984c8b5edce38d206",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "1d113d69b47f465da90ad95b6396e8a7",
+          "edgeType": "Branch",
+          "source": "eb48f12e58de462f85c4ee6e5412a692",
+          "target": "f5dd744acabd42cabbdc94514cd00878",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
+        },
+        {
+          "id": "9a433c363549441e92e6afb06e938458",
+          "edgeType": "Branch",
+          "source": "cf2527a6de82406f964469668004222f",
+          "target": "dad55612197f43ba81e583ee61e4f45d",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "query",
+            "value": ""
+          },
+          "label": "Always"
         }
       ]
     }
@@ -9164,6 +10401,55 @@
       "category": "vaInputs",
       "nodeId": "c5dfea90c24c49b6a96bc4f8d612e5b3",
       "isHidden": false
+    },
+    "56626ff1e77e4dc8a83bbceb3ffa80c1": {
+      "id": "56626ff1e77e4dc8a83bbceb3ffa80c1",
+      "name": "knowledge_choices",
+      "label": "Knowledge Choices",
+      "varType": "choice",
+      "choices": [
+        {
+          "label": "Consumer Service",
+          "value": "Consumer Service"
+        },
+        {
+          "label": "Costumer Service",
+          "value": "Costumer"
+        },
+        {
+          "label": "Enterprise Asset Knowledge Bases",
+          "value": "Enterprise Asset",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Field Service Knowledge",
+          "value": "Field Service",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "IT",
+          "value": "IT",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Vulnerabilities",
+          "value": "Vulneratives",
+          "checked": true,
+          "meta": {}
+        },
+        {
+          "label": "Knowledge",
+          "value": "Knowledge",
+          "checked": true,
+          "meta": {}
+        }
+      ],
+      "category": "vaInputs",
+      "nodeId": "8d05dcbbcf4945ab982132ed1a1a20a9",
+      "isHidden": false
     }
   }
 }</graph>
@@ -9188,14 +10474,14 @@
         <sys_created_on>2025-05-28 16:38:52</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>aac870ad9375e250d942fc4e1dba1059</sys_id>
-        <sys_mod_count>83</sys_mod_count>
+        <sys_mod_count>95</sys_mod_count>
         <sys_name>CSM_Virtual_Agent_V5</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_cb_topic_aac870ad9375e250d942fc4e1dba1059</sys_update_name>
         <sys_updated_by>josepablo.lopez</sys_updated_by>
-        <sys_updated_on>2025-05-29 15:16:07</sys_updated_on>
+        <sys_updated_on>2025-06-02 14:57:50</sys_updated_on>
         <title>CSM_Virtual_Agent_V5</title>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>STANDARD</type>

@@ -61,13 +61,18 @@
 }&#13;
 &#13;
 /* Placeholder space */&#13;
-.placeholder-space {&#13;
+&#13;
+.placeholder-upspace {&#13;
+  height: 15px;&#13;
+}&#13;
+&#13;
+.placeholder-downspace {&#13;
   height: 30px;&#13;
 }&#13;
 &#13;
 /* Fancy button */&#13;
 .btn-primary {&#13;
-  background-color: #007bff;&#13;
+  background-color: #378c80;&#13;
   border: none;&#13;
   padding: 0.9rem 1.6rem;&#13;
   font-size: 1.1rem;&#13;
@@ -79,7 +84,7 @@
 }&#13;
 &#13;
 .btn-primary:hover {&#13;
-  background-color: #0056b3;&#13;
+  background-color: #2d6f67; /* Versión más oscura para hover */&#13;
 }&#13;
 &#13;
 /* Animations */&#13;
@@ -103,7 +108,7 @@
         <link><![CDATA[function link(scope, element, attrs, controller) {
   
 }]]></link>
-        <name>My SSDT Cases</name>
+        <name>My OT Incidents</name>
         <option_schema/>
         <public>false</public>
         <roles/>
@@ -112,7 +117,7 @@
     var userID = gs.getUserID();
     var cases = [];
 
-    var gr = new GlideRecord('sn_customerservice_case');
+    var gr = new GlideRecord('sn_ot_incident');
     gr.addQuery('x_volt2_github_s_0_user_id', userID);
     gr.query();
 
@@ -137,24 +142,27 @@
         <sys_created_by>esteban.quintero</sys_created_by>
         <sys_created_on>2025-05-24 20:45:25</sys_created_on>
         <sys_id>e3690550c3b1ee103ab9b01705013188</sys_id>
-        <sys_mod_count>16</sys_mod_count>
-        <sys_name>My SSDT Cases</sys_name>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>My OT Incidents</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_widget_e3690550c3b1ee103ab9b01705013188</sys_update_name>
         <sys_updated_by>esteban.quintero</sys_updated_by>
-        <sys_updated_on>2025-05-28 18:43:13</sys_updated_on>
-        <template><![CDATA[<div>
+        <sys_updated_on>2025-06-03 03:15:24</sys_updated_on>
+        <template><![CDATA[<div>  
+  <div class="placeholder-upspace"></div>
+  
   <!-- Botón para abrir el modal -->
-  <button class="btn btn-primary" ng-click="c.openModal()">My Cases</button>
+  <button class="btn btn-primary" ng-click="c.openModal()">My OT Incidents</button>
+  
 
   <!-- Modal -->
   <div class="modal fade in" ng-show="c.showModal" style="display: block;" tabindex="-1">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">My Cases</h4>
+          <h4 class="modal-title">My OT Incidents</h4>
           <button type="button" class="close" ng-click="c.closeModal()">&times;</button>
         </div>
         <div class="modal-body">
@@ -187,7 +195,7 @@
     </div>
   </div>
   
-  <div class="placeholder-space"></div>
+  <div class="placeholder-downspace"></div>
 </div>
 ]]></template>
     </sp_widget>

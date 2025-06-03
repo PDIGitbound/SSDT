@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="Activities" section_id="c16ade4393312610d942fc4e1dba103c" sys_domain="global" table="x_volt2_github_s_0_asset_manufacturing_robots" version="3" view="itam_workspace">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_notes</element>
+            <position>0</position>
+            <sys_created_by>esteban.quintero</sys_created_by>
+            <sys_created_on>2025-06-02 15:36:11</sys_created_on>
+            <sys_id>c96ade4393312610d942fc4e1dba103d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Activities" display_value="Activities" name="x_volt2_github_s_0_asset_manufacturing_robots" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">c16ade4393312610d942fc4e1dba103c</sys_ui_section>
+            <sys_updated_by>esteban.quintero</sys_updated_by>
+            <sys_updated_on>2025-06-02 15:36:11</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>activity.xml</element>
+            <position>1</position>
+            <sys_created_by>esteban.quintero</sys_created_by>
+            <sys_created_on>2025-06-02 15:36:11</sys_created_on>
+            <sys_id>c16ade4393312610d942fc4e1dba103d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter>
+            <sys_ui_section caption="Activities" display_value="Activities" name="x_volt2_github_s_0_asset_manufacturing_robots" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">c16ade4393312610d942fc4e1dba103c</sys_ui_section>
+            <sys_updated_by>esteban.quintero</sys_updated_by>
+            <sys_updated_on>2025-06-02 15:36:11</sys_updated_on>
+            <sys_user/>
+            <type>formatter</type>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>Activities</caption>
+            <header>false</header>
+            <name>x_volt2_github_s_0_asset_manufacturing_robots</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>esteban.quintero</sys_created_by>
+            <sys_created_on>2025-06-02 15:36:11</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c16ade4393312610d942fc4e1dba103c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_volt2_github_s_0_asset_manufacturing_robots</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+            <sys_update_name>sys_ui_section_c16ade4393312610d942fc4e1dba103c</sys_update_name>
+            <sys_updated_by>esteban.quintero</sys_updated_by>
+            <sys_updated_on>2025-06-02 15:36:11</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="ITAM Workspace" name="itam_workspace">e53c64d153c230108125ddeeff7b12e3</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sys_ui_section_c16ade4393312610d942fc4e1dba103c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="Activities" section_id="c16ade4393312610d942fc4e1dba103c" sys_domain="global" table="x_volt2_github_s_0_asset_manufacturing_robots" version="3" view="itam_workspace"><sys_ui_element action="INSERT_OR_UPDATE"><element>work_notes</element><position>0</position><sys_created_by>esteban.quintero</sys_created_by><sys_created_on>2025-06-02 15:36:11</sys_created_on><sys_id>c96ade4393312610d942fc4e1dba103d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="Activities" display_value="Activities" name="x_volt2_github_s_0_asset_manufacturing_robots" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">c16ade4393312610d942fc4e1dba103c</sys_ui_section><sys_updated_by>esteban.quintero</sys_updated_by><sys_updated_on>2025-06-02 15:36:11</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>activity.xml</element><position>1</position><sys_created_by>esteban.quintero</sys_created_by><sys_created_on>2025-06-02 15:36:11</sys_created_on><sys_id>c16ade4393312610d942fc4e1dba103d</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter display_value="Activities (filtered)">444ea5c6bf310100e628555b3f0739d6</sys_ui_formatter><sys_ui_section caption="Activities" display_value="Activities" name="x_volt2_github_s_0_asset_manufacturing_robots" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">c16ade4393312610d942fc4e1dba103c</sys_ui_section><sys_updated_by>esteban.quintero</sys_updated_by><sys_updated_on>2025-06-02 15:36:11</sys_updated_on><sys_user/><type>formatter</type></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>Activities</caption><header>false</header><name>x_volt2_github_s_0_asset_manufacturing_robots</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>esteban.quintero</sys_created_by><sys_created_on>2025-06-02 15:36:11</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>c16ade4393312610d942fc4e1dba103c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_volt2_github_s_0_asset_manufacturing_robots</sys_name><sys_overrides/><sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package><sys_policy/><sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope><sys_update_name>sys_ui_section_c16ade4393312610d942fc4e1dba103c</sys_update_name><sys_updated_by>esteban.quintero</sys_updated_by><sys_updated_on>2025-06-02 15:36:11</sys_updated_on><sys_user/><title>false</title><view display_value="ITAM Workspace" name="itam_workspace">e53c64d153c230108125ddeeff7b12e3</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>1234661731</payload_hash>
+        <record_name>Manufacturing Robots Asset</record_name>
+        <reverted_from/>
+        <source>4d41fd3d93316650d942fc4e1dba10f0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-02 15:36:11</sys_created_on>
+        <sys_id>cd6ade4393312610d942fc4e1dba103f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197314936bd0000001</sys_recorded_at>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-02 15:36:11</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>456ade4399312610143e9b6e50b8d83f</update_guid>
+        <update_guid_history>456ade4399312610143e9b6e50b8d83f:1234661731</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-02 15:37:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>8e7d02cc63964c8283f0555cfff75b04</sys_id>
+        <sys_metadata>c16ade4393312610d942fc4e1dba103c</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Activities</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent display_value="">d239520393312610d942fc4e1dba105a</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sys_ui_section_c16ade4393312610d942fc4e1dba103c</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_c16ade4393312610d942fc4e1dba103c">cd6ade4393312610d942fc4e1dba103f</sys_update_version>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-02 15:37:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

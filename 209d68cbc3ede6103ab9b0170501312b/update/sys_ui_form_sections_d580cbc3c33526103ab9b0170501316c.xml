@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="d580cbc3c33526103ab9b0170501316c" sys_domain="global" table="sn_ot_incident" version="3">
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>sn_ot_incident</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>alex.santacruz</sys_created_by>
+            <sys_created_on>2025-06-02 18:22:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d580cbc3c33526103ab9b0170501316c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sn_ot_incident</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+            <sys_update_name>sys_ui_form_sections_d580cbc3c33526103ab9b0170501316c</sys_update_name>
+            <sys_updated_by>alex.santacruz</sys_updated_by>
+            <sys_updated_on>2025-06-02 18:22:46</sys_updated_on>
+            <sys_user/>
+            <view display_value="Cxs_popup" name="cxs_popup">9769b79653a823004247ddeeff7b12fe</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
