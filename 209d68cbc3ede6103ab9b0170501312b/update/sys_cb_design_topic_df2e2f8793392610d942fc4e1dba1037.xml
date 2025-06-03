@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="_PRVW__61a25a27cd9d44759047627cdb21c694">9f2e2f8793392610d942fc4e1dba1034</compiled_topic>
+        <design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"e1b5aa7b840a4a0fa327acb3e90e1244","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"e1b5aa7b840a4a0fa327acb3e90e1244"}],"goals":[{"name":"primary","trigger_id":"e1b5aa7b840a4a0fa327acb3e90e1244","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Hola\", vaContext.getRequesterLang())"},"id":"b1a5e96fd5914b49bcb9f4b26cb74a7a","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":"gs.getMessageLang(\"finish\", vaContext.getRequesterLang())"},"id":"5c8bbe9a4bcd4eca930e5d645e61d3ec","name":"End","expert_mode":false},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"contact dont exist","expression":{"type":"Applicability","mode":"script","value":"(function() { return (function execute() {\n    /* Return true or false to indicate the branch condition's applicability.\n       For example:\n\n       var applies = vaInputs.first_name == 'Bill' ? true : false;\n       return applies;\n    */\n    var contactExists = false;\n\n    gs.info('info '+vaInputs.user);\n\n    var gr = new GlideRecord('sys_user');\n    if (gr.get(vaInputs.user)) {\n      contactExists = true;\n    }\n    \n    return contactExists;\n\n})()\n})()"},"id":"c4766d8ce40845a1bf771b2a17a6c57c","name":"contact dont exist","expert_mode":false},{"type":"Branch","label":"Contact exist","expression":{"type":"Applicability","mode":"script","value":"(function() { return (function execute() {\n    /* Return true or false to indicate the branch condition's applicability.\n       For example:\n\n       var applies = vaInputs.first_name == 'Bill' ? true : false;\n       return applies;\n    */\n    var contactExists = false;\n\n    gs.info('info '+vaInputs.user);\n\n    var gr = new GlideRecord('sys_user');\n    if (gr.get(vaInputs.user)) {\n      contactExists = true;\n    }\n    \n    return contactExists;\n\n})()\n})()"},"id":"a5e566696cb6406cb4a4c354d5ca96c1","name":"Contact exist","expert_mode":false}],"id":"0ca66b3e14434251a6b8630a5e252ee3","goal_id":"primary","expert_mode":false},{"type":"CRUDAction","mode":"create","query":"name={{vaInputs.user.user_name}}^sys_created_by={{vaInputs.user.user_name}}","variable_id":"b8ebcc77a25c4a66a0131439a9096341","id":"37676b36cc2942b28d34367dbfc62df0","name":"New Contact","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"attachments":[{"type":"String","mode":"string","value":""}]},{"type":"InputPrompt","variable_id":"c1a98532f9c3491196279bfae9b73137","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"test\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":true,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"metadataScript":"","cardName":"","cardFields":[],"id":"946216b69f5d4cf89c89ae6b5afbf4eb","name":"test","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"formatType":"Text","validationScript":"","description":""},{"type":"InputPrompt","variable_id":"1d8945ff2bb941f2af1d0ebb26220b9d","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"no test\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":true,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"metadataScript":"","cardName":"","cardFields":[],"id":"e86ad39b92b74a4e9c89d9ba29f79038","name":"no test","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"formatType":"Text","validationScript":"","description":""},{"type":"CRUDAction","mode":"read","read_mode":"variable","query":"name={{vaInputs.user.name}}","variable_id":"f1beb7fa30bc438fb21d872f9f946947","id":"95231856ddee4bc8bc66c10417368408","name":"Test of contact","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"condition":{"type":"Condition","mode":"glide_query","value":"name={{vaInputs.user.name}}"}},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"va:topic:57de8f0793752610d942fc4e1dba10b5:node:36cb1166d677413ebd713ad525de7838:field:0 {0}\", vaContext.getRequesterLang(), [vaInputs.test_of_contact.getDisplayValue()])"}],"request_feedback":true,"isCollapsible":true,"id":"36cb1166d677413ebd713ad525de7838","name":"Test response","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"secure":false},{"type":"InputPrompt","variable_id":"2fe647f3e35446899f72bb8c34edb763","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"new contact created\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":true,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"metadataScript":"","cardName":"","cardFields":[],"id":"c9233a26e27c430ab23f07d84fae1d63","name":"New Contact","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"formatType":"Text","validationScript":"","description":""}],"edges":[{"type":"Edge","source_node_id":"b1a5e96fd5914b49bcb9f4b26cb74a7a","target_node_id":"95231856ddee4bc8bc66c10417368408","id":"b7ce667d69414b459918c22f967c96c4"},{"type":"Edge","source_node_id":"0ca66b3e14434251a6b8630a5e252ee3","target_node_id":"946216b69f5d4cf89c89ae6b5afbf4eb","branch_id":"c4766d8ce40845a1bf771b2a17a6c57c","id":"301c4ceddbdc49198bcba237edabb304","name":"c4766d8ce40845a1bf771b2a17a6c57c"},{"type":"Edge","source_node_id":"946216b69f5d4cf89c89ae6b5afbf4eb","target_node_id":"37676b36cc2942b28d34367dbfc62df0","id":"b85e31924823492c96e63769b6b2c789"},{"type":"Edge","source_node_id":"0ca66b3e14434251a6b8630a5e252ee3","target_node_id":"e86ad39b92b74a4e9c89d9ba29f79038","branch_id":"a5e566696cb6406cb4a4c354d5ca96c1","id":"6dcf1bf5e6d74ee882a7a6916ec8882f","name":"a5e566696cb6406cb4a4c354d5ca96c1"},{"type":"Edge","source_node_id":"e86ad39b92b74a4e9c89d9ba29f79038","target_node_id":"5c8bbe9a4bcd4eca930e5d645e61d3ec","id":"0c581aa7f4cf4a0a940f2df4995c044a"},{"type":"Edge","source_node_id":"95231856ddee4bc8bc66c10417368408","target_node_id":"36cb1166d677413ebd713ad525de7838","id":"ef313a10f447463d8c69b3ae6acfabfc"},{"type":"Edge","source_node_id":"36cb1166d677413ebd713ad525de7838","target_node_id":"0ca66b3e14434251a6b8630a5e252ee3","id":"85c7a0e9be6347c0bfa85231479dc0ce"},{"type":"Edge","source_node_id":"37676b36cc2942b28d34367dbfc62df0","target_node_id":"c9233a26e27c430ab23f07d84fae1d63","id":"dffb2ddb2fff4fc8a786e4475608ce9d"},{"type":"Edge","source_node_id":"c9233a26e27c430ab23f07d84fae1d63","target_node_id":"5c8bbe9a4bcd4eca930e5d645e61d3ec","id":"2071d65c5a814c738505ea9c071e02e7"}],"id":"primary"}],"script_variables":[],"glide_variables":[{"type":"Reference","table":"sys_user","auto_select":false,"id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Reference","table":"customer_contact","auto_select":false,"id":"b8ebcc77a25c4a66a0131439a9096341","name":"new_contact","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"String","name":"test","list":false,"id":"c1a98532f9c3491196279bfae9b73137","formatType":"Text","validationScript":"","secure":false,"sensitive":false,"aiInput":false},{"type":"String","name":"no_test","list":false,"id":"1d8945ff2bb941f2af1d0ebb26220b9d","formatType":"Text","validationScript":"","secure":false,"sensitive":false,"aiInput":false},{"type":"Reference","table":"customer_contact","auto_select":false,"id":"f1beb7fa30bc438fb21d872f9f946947","name":"test_of_contact","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"String","name":"new_contact_2","list":false,"id":"2fe647f3e35446899f72bb8c34edb763","formatType":"Text","validationScript":"","secure":false,"sensitive":false,"aiInput":false}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"209d68cbc3ede6103ab9b0170501312b","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":false,"id":"57de8f0793752610d942fc4e1dba10b5","name":"_PRVW__61a25a27cd9d44759047627cdb21c694","key_phrases":["Test of contact"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":false,"design_categories":[],"triggerable_by_notification":false,"model_type":"nlu_keyword","foundational":false,"modify_confirmation_enabled":false,"context_profiles":[],"title":"Test of contact","library":false,"readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>57de8f0793752610d942fc4e1dba10b5</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.78",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "b1a5e96fd5914b49bcb9f4b26cb74a7a": {
+          "id": "b1a5e96fd5914b49bcb9f4b26cb74a7a",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Hola"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "5c8bbe9a4bcd4eca930e5d645e61d3ec": {
+          "id": "5c8bbe9a4bcd4eca930e5d645e61d3ec",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "finish"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "0ca66b3e14434251a6b8630a5e252ee3": {
+          "id": "0ca66b3e14434251a6b8630a5e252ee3",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "37676b36cc2942b28d34367dbfc62df0": {
+          "id": "37676b36cc2942b28d34367dbfc62df0",
+          "stepType": "CrudAction",
+          "name": "New Contact",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "name",
+                  "expression": "{{vaInputs.user.user_name}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.user.user_name}}",
+                            "displayValue": "Input Variables➛User➛User ID"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "634a069b29004f1aba613937a84ebddc"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "sys_created_by",
+                  "expression": "{{vaInputs.user.user_name}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.user.user_name}}",
+                            "displayValue": "Input Variables➛User➛User ID"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "cd1a449ee4af47749467e3942e52294f"
+                }
+              ]
+            },
+            "queryString": "name={{vaInputs.user.user_name}}^sys_created_by={{vaInputs.user.user_name}}"
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "b8ebcc77a25c4a66a0131439a9096341"
+        },
+        "946216b69f5d4cf89c89ae6b5afbf4eb": {
+          "id": "946216b69f5d4cf89c89ae6b5afbf4eb",
+          "stepType": "TextPrompt",
+          "name": "test",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "test"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "c1a98532f9c3491196279bfae9b73137",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        },
+        "e86ad39b92b74a4e9c89d9ba29f79038": {
+          "id": "e86ad39b92b74a4e9c89d9ba29f79038",
+          "stepType": "TextPrompt",
+          "name": "no test",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "no test"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "1d8945ff2bb941f2af1d0ebb26220b9d",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        },
+        "95231856ddee4bc8bc66c10417368408": {
+          "id": "95231856ddee4bc8bc66c10417368408",
+          "stepType": "LookupRecord",
+          "name": "Test of contact",
+          "condition": {
+            "mode": "glide_query",
+            "value": "name={{vaInputs.user.name}}"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "variableId": "f1beb7fa30bc438fb21d872f9f946947"
+        },
+        "36cb1166d677413ebd713ad525de7838": {
+          "id": "36cb1166d677413ebd713ad525de7838",
+          "stepType": "TextOutput",
+          "name": "Test response",
+          "secure": false,
+          "value": [
+            {
+              "value": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "datapill",
+                      "dataPill": {
+                        "value": "{{vaInputs.test_of_contact}}",
+                        "displayValue": "Input Variables➛Test Of Contact"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": ""
+                    },
+                    {
+                      "type": "emoji",
+                      "emoji": {
+                        "id": "grinning",
+                        "name": "Grinning Face",
+                        "short_names": [
+                          "grinning"
+                        ],
+                        "colons": ":grinning:",
+                        "emoticons": [],
+                        "unified": "1f600",
+                        "skin": null,
+                        "native": "😀"
+                      },
+                      "children": [
+                        {
+                          "text": ""
+                        }
+                      ]
+                    },
+                    {
+                      "text": " "
+                    }
+                  ]
+                }
+              ],
+              "mode": "simple",
+              "_key": "c179c25481be4867890b42546180ed92"
+            }
+          ],
+          "isCollapsible": true,
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "c9233a26e27c430ab23f07d84fae1d63": {
+          "id": "c9233a26e27c430ab23f07d84fae1d63",
+          "stepType": "TextPrompt",
+          "name": "New Contact",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "new contact created"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "2fe647f3e35446899f72bb8c34edb763",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        }
+      },
+      "edges": [
+        {
+          "id": "b7ce667d69414b459918c22f967c96c4",
+          "edgeType": "Edge",
+          "source": "b1a5e96fd5914b49bcb9f4b26cb74a7a",
+          "target": "95231856ddee4bc8bc66c10417368408",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "301c4ceddbdc49198bcba237edabb304",
+          "edgeType": "Branch",
+          "source": "0ca66b3e14434251a6b8630a5e252ee3",
+          "target": "946216b69f5d4cf89c89ae6b5afbf4eb",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    /* Return true or false to indicate the branch condition's applicability.\n       For example:\n\n       var applies = vaInputs.first_name == 'Bill' ? true : false;\n       return applies;\n    */\n    var contactExists = false;\n\n    gs.info('info '+vaInputs.user);\n\n    var gr = new GlideRecord('sys_user');\n    if (gr.get(vaInputs.user)) {\n      contactExists = true;\n    }\n    \n    return contactExists;\n\n})()\n"
+          },
+          "label": "contact dont exist"
+        },
+        {
+          "id": "b85e31924823492c96e63769b6b2c789",
+          "edgeType": "Edge",
+          "source": "946216b69f5d4cf89c89ae6b5afbf4eb",
+          "target": "37676b36cc2942b28d34367dbfc62df0",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "6dcf1bf5e6d74ee882a7a6916ec8882f",
+          "edgeType": "Branch",
+          "source": "0ca66b3e14434251a6b8630a5e252ee3",
+          "target": "e86ad39b92b74a4e9c89d9ba29f79038",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    /* Return true or false to indicate the branch condition's applicability.\n       For example:\n\n       var applies = vaInputs.first_name == 'Bill' ? true : false;\n       return applies;\n    */\n    var contactExists = false;\n\n    gs.info('info '+vaInputs.user);\n\n    var gr = new GlideRecord('sys_user');\n    if (gr.get(vaInputs.user)) {\n      contactExists = true;\n    }\n    \n    return contactExists;\n\n})()\n"
+          },
+          "label": "Contact exist"
+        },
+        {
+          "id": "0c581aa7f4cf4a0a940f2df4995c044a",
+          "edgeType": "Edge",
+          "source": "e86ad39b92b74a4e9c89d9ba29f79038",
+          "target": "5c8bbe9a4bcd4eca930e5d645e61d3ec",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ef313a10f447463d8c69b3ae6acfabfc",
+          "edgeType": "Edge",
+          "source": "95231856ddee4bc8bc66c10417368408",
+          "target": "36cb1166d677413ebd713ad525de7838",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "85c7a0e9be6347c0bfa85231479dc0ce",
+          "edgeType": "Edge",
+          "source": "36cb1166d677413ebd713ad525de7838",
+          "target": "0ca66b3e14434251a6b8630a5e252ee3",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "dffb2ddb2fff4fc8a786e4475608ce9d",
+          "edgeType": "Edge",
+          "source": "37676b36cc2942b28d34367dbfc62df0",
+          "target": "c9233a26e27c430ab23f07d84fae1d63",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "2071d65c5a814c738505ea9c071e02e7",
+          "edgeType": "Edge",
+          "source": "c9233a26e27c430ab23f07d84fae1d63",
+          "target": "5c8bbe9a4bcd4eca930e5d645e61d3ec",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "b8ebcc77a25c4a66a0131439a9096341": {
+      "id": "b8ebcc77a25c4a66a0131439a9096341",
+      "name": "new_contact",
+      "label": "New Contact",
+      "varType": "reference",
+      "table": "customer_contact",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "37676b36cc2942b28d34367dbfc62df0",
+      "isHidden": false
+    },
+    "c1a98532f9c3491196279bfae9b73137": {
+      "id": "c1a98532f9c3491196279bfae9b73137",
+      "name": "test",
+      "label": "Test",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTc0ODg5NjQ2OTcxMiBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "946216b69f5d4cf89c89ae6b5afbf4eb",
+      "isHidden": false
+    },
+    "1d8945ff2bb941f2af1d0ebb26220b9d": {
+      "id": "1d8945ff2bb941f2af1d0ebb26220b9d",
+      "name": "no_test",
+      "label": "No Test",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTc0ODg5NjQ4MDYyNyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "e86ad39b92b74a4e9c89d9ba29f79038",
+      "isHidden": false
+    },
+    "f1beb7fa30bc438fb21d872f9f946947": {
+      "id": "f1beb7fa30bc438fb21d872f9f946947",
+      "name": "test_of_contact",
+      "label": "Test Of Contact",
+      "varType": "reference",
+      "table": "customer_contact",
+      "category": "vaInputs",
+      "nodeId": "95231856ddee4bc8bc66c10417368408",
+      "isHidden": false
+    },
+    "2fe647f3e35446899f72bb8c34edb763": {
+      "id": "2fe647f3e35446899f72bb8c34edb763",
+      "name": "new_contact_2",
+      "label": "New Contact (2)",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTc0ODg5OTQ5MDcyMiBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "c9233a26e27c430ab23f07d84fae1d63",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <name>_PRVW__61a25a27cd9d44759047627cdb21c694</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-02 21:42:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>df2e2f8793392610d942fc4e1dba1037</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cb_design_topic_df2e2f8793392610d942fc4e1dba1037</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-02 21:42:15</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>

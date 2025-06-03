@@ -6,21 +6,19 @@
         <action_insert>true</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
-        <active>true</active>
+        <active>false</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
         <client_callable>false</client_callable>
-        <collection>sn_customerservice_case</collection>
+        <collection>incident</collection>
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="sn_customerservice_case">accountISNOTEMPTY^EQ<item endquery="false" field="account" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
-            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
-        </filter_condition>
+        <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>AutoAssignGroupAndLocation</name>
+        <name>AutoAssignGroupAndLocationIncident</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -30,28 +28,28 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
-
-    // Add your code here
-    //gs.addInfoMessage("]]>👉<![CDATA[ AAAAAA ]]>👈<![CDATA[");
-
-    var accGR = new GlideRecord('customer_account');
-    if (accGR.get(current.account)) {
-        var accountCountry = accGR.country;
+	
+    var accountCountry = '';
+    if (current.x_volt2_github_s_0_x_u_account) {
+        var accGR = new GlideRecord('customer_account');
+        if (accGR.get(current.x_volt2_github_s_0_x_u_account)) {//si no funciona, revisar el nombre de la columna Account en el diccionario
+            accountCountry = accGR.getDisplayValue('country');
+        }
     }
-     gs.addInfoMessage("]]>👉<![CDATA[ Account country: " + accountCountry) + " ]]>👈<![CDATA[";
-
+    gs.addInfoMessage("Account country: " + accountCountry);
+    accountCountry = accountCountry.trim();
 
     if (accountCountry == "Mexico") {
         current.assignment_group.setDisplayValue("Field Agents Jalisco");
-		current.location.setDisplayValue("Guadalajara, Jalisco, México");
-    }
-	else if (accountCountry == "USA") {
+        current.location.setDisplayValue("Guadalajara, Jalisco, México");
+
+    } else if (accountCountry == "USA") {
         current.assignment_group.setDisplayValue("Field Agents Texas");
-		current.location.setDisplayValue("Burleson, Texas, United States");
-    }
-	else if (accountCountry == "Spain") {
+        current.location.setDisplayValue("Burleson, Texas, United States");
+
+    } else if (accountCountry == "Spain") {
         current.assignment_group.setDisplayValue("Field Agents Spain");
-		current.location.setDisplayValue("Madrid, Comunidad de Madrid, Spain");
+        current.location.setDisplayValue("Madrid, Comunidad de Madrid, Spain");
     }
 
 })(current, previous);]]></script>
@@ -61,15 +59,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f641605193712250d942fc4e1dba10c0</sys_id>
-        <sys_mod_count>16</sys_mod_count>
-        <sys_name>AutoAssignGroupAndLocation</sys_name>
+        <sys_mod_count>34</sys_mod_count>
+        <sys_name>AutoAssignGroupAndLocationIncident</sys_name>
         <sys_overrides/>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_script_f641605193712250d942fc4e1dba10c0</sys_update_name>
         <sys_updated_by>carlos.salcido</sys_updated_by>
-        <sys_updated_on>2025-05-28 22:07:04</sys_updated_on>
+        <sys_updated_on>2025-06-02 18:42:38</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application display_value="Manufacturing Robots Asset">c9185a4f93fde210d942fc4e1dba1075</application>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Manufacturing Robots Assets</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_volt2_github_s_0_manufacturing_robots_asset</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles>x_volt2_github_s_0.manufacturing_robots_asset_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-02 15:26:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0d185a4f93fde210d942fc4e1dba107a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Manufacturing Robots Assets</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_app_module_0d185a4f93fde210d942fc4e1dba107a</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-02 15:26:05</sys_updated_on>
+        <timeline_page/>
+        <title>Manufacturing Robots Assets</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sys_app_module_0d185a4f93fde210d942fc4e1dba107a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application display_value="Manufacturing Robots Asset">c9185a4f93fde210d942fc4e1dba1075</application><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Manufacturing Robots Assets</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_volt2_github_s_0_manufacturing_robots_asset</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><require_confirmation>true</require_confirmation><roles>x_volt2_github_s_0.manufacturing_robots_asset_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>esteban.quintero</sys_created_by><sys_created_on>2025-06-02 15:26:05</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0d185a4f93fde210d942fc4e1dba107a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Manufacturing Robots Assets</sys_name><sys_overrides/><sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package><sys_policy/><sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope><sys_update_name>sys_app_module_0d185a4f93fde210d942fc4e1dba107a</sys_update_name><sys_updated_by>esteban.quintero</sys_updated_by><sys_updated_on>2025-06-02 15:26:05</sys_updated_on><timeline_page/><title>Manufacturing Robots Assets</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>-1262179039</payload_hash>
+        <record_name>Manufacturing Robots Assets</record_name>
+        <reverted_from/>
+        <source>4d41fd3d93316650d942fc4e1dba10f0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-02 15:26:05</sys_created_on>
+        <sys_id>41185a4f93fde210d942fc4e1dba107f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197313ff9660000001</sys_recorded_at>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-02 15:26:05</sys_updated_on>
+        <type>Module</type>
+        <update_guid>05185a4f2bfde210c048b6f47727c27e</update_guid>
+        <update_guid_history>05185a4f2bfde210c048b6f47727c27e:-1262179039</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Manufacturing Robots Assets">7558168f93fde210d942fc4e1dba1015</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-02 15:27:14</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>72ed3d6a16f24288a7e10dd08aacd441</sys_id>
+        <sys_metadata>0d185a4f93fde210d942fc4e1dba107a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Manufacturing Robots Assets</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sys_app_module_0d185a4f93fde210d942fc4e1dba107a</sys_update_name>
+        <sys_update_version display_value="sys_app_module_0d185a4f93fde210d942fc4e1dba107a">41185a4f93fde210d942fc4e1dba107f</sys_update_version>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-02 15:27:14</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

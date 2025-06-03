@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e2d68496933da650d942fc4e1dba1045" extends="cmdb_ci" label="Manufacturing Robots CI" max_length="40" name="x_volt2_github_s_0_ci_manufacturing_robots" type="collection">
+        <element label="Configuration Item" max_length="32" name="configuration_item" reference="cmdb_ci" type="reference"/>
+    </element>
+</database>

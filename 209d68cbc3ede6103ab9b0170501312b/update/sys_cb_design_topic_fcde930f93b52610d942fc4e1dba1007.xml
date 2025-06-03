@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="_PRVW__60dcfafe884743cc9b0ba671e39ad749">3cde930f93b52610d942fc4e1dba1004</compiled_topic>
+        <design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"45a2c432534d40678942c600308b78f0","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"45a2c432534d40678942c600308b78f0"}],"goals":[{"name":"primary","trigger_id":"45a2c432534d40678942c600308b78f0","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Hola\", vaContext.getRequesterLang())"},"id":"b1a5e96fd5914b49bcb9f4b26cb74a7a","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":""},"id":"5c8bbe9a4bcd4eca930e5d645e61d3ec","name":"End","expert_mode":false},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"contact exist","expression":{"type":"Applicability","mode":"script","value":"(function() { return (function execute() {\n    /* Return true or false to indicate the branch condition's applicability.\n       For example:\n\n       var applies = vaInputs.first_name == 'Bill' ? true : false;\n       return applies;\n    */ \n      var contactExists = false;\n      var gr = new GlideRecord('cmn_contact');\n      if (gr.get(vaInputs.user)) {\n        contactExists = true;\n      }\n      return contactExists;\n})()\n})()"},"id":"71c4446195154c4ab5fddfa833e35eee","name":"contact exist","expert_mode":false},{"type":"Branch","label":"Contact does not exist","expression":{"type":"Applicability","mode":"script","value":"(function() { return (function execute() {\n    /* Return true or false to indicate the branch condition's applicability.\n       For example:\n\n       var applies = vaInputs.first_name == 'Bill' ? true : false;\n       return applies;\n    */ \n      var contactExists = false;\n      var gr = new GlideRecord('cmn_contact');\n      if (gr.get(vaInputs.user)) {\n        contactExists = true;\n      }\n      return contactExists;\n})()\n})()"},"id":"cb85ef9f63274e6ba053d9771afc8c86","name":"Contact does not exist","expert_mode":false}],"id":"0ca66b3e14434251a6b8630a5e252ee3","goal_id":"primary","expert_mode":false},{"type":"CRUDAction","mode":"create","query":"name={{vaInputs.user.user_name}}","variable_id":"b8ebcc77a25c4a66a0131439a9096341","id":"37676b36cc2942b28d34367dbfc62df0","name":"New Contact","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"attachments":[{"type":"String","mode":"string","value":""}]},{"type":"InputPrompt","variable_id":"c1a98532f9c3491196279bfae9b73137","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"test\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":true,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"metadataScript":"","cardName":"","cardFields":[],"id":"946216b69f5d4cf89c89ae6b5afbf4eb","name":"test","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"formatType":"Text","validationScript":"","description":""},{"type":"InputPrompt","variable_id":"1d8945ff2bb941f2af1d0ebb26220b9d","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"no test\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":true,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"metadataScript":"","cardName":"","cardFields":[],"id":"e86ad39b92b74a4e9c89d9ba29f79038","name":"no test","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"formatType":"Text","validationScript":"","description":""}],"edges":[{"type":"Edge","source_node_id":"b1a5e96fd5914b49bcb9f4b26cb74a7a","target_node_id":"0ca66b3e14434251a6b8630a5e252ee3","id":"b7ce667d69414b459918c22f967c96c4"},{"type":"Edge","source_node_id":"37676b36cc2942b28d34367dbfc62df0","target_node_id":"5c8bbe9a4bcd4eca930e5d645e61d3ec","id":"dffb2ddb2fff4fc8a786e4475608ce9d"},{"type":"Edge","source_node_id":"0ca66b3e14434251a6b8630a5e252ee3","target_node_id":"946216b69f5d4cf89c89ae6b5afbf4eb","branch_id":"71c4446195154c4ab5fddfa833e35eee","id":"301c4ceddbdc49198bcba237edabb304","name":"71c4446195154c4ab5fddfa833e35eee"},{"type":"Edge","source_node_id":"946216b69f5d4cf89c89ae6b5afbf4eb","target_node_id":"37676b36cc2942b28d34367dbfc62df0","id":"b85e31924823492c96e63769b6b2c789"},{"type":"Edge","source_node_id":"0ca66b3e14434251a6b8630a5e252ee3","target_node_id":"e86ad39b92b74a4e9c89d9ba29f79038","branch_id":"cb85ef9f63274e6ba053d9771afc8c86","id":"6dcf1bf5e6d74ee882a7a6916ec8882f","name":"cb85ef9f63274e6ba053d9771afc8c86"},{"type":"Edge","source_node_id":"e86ad39b92b74a4e9c89d9ba29f79038","target_node_id":"5c8bbe9a4bcd4eca930e5d645e61d3ec","id":"0c581aa7f4cf4a0a940f2df4995c044a"}],"id":"primary"}],"script_variables":[],"glide_variables":[{"type":"Reference","table":"sys_user","auto_select":false,"id":"current-user","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Reference","table":"customer_contact","auto_select":false,"id":"b8ebcc77a25c4a66a0131439a9096341","name":"new_contact","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"String","name":"test","list":false,"id":"c1a98532f9c3491196279bfae9b73137","formatType":"Text","validationScript":"","secure":false,"sensitive":false,"aiInput":false},{"type":"String","name":"no_test","list":false,"id":"1d8945ff2bb941f2af1d0ebb26220b9d","formatType":"Text","validationScript":"","secure":false,"sensitive":false,"aiInput":false}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"209d68cbc3ede6103ab9b0170501312b","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":false,"id":"57de8f0793752610d942fc4e1dba10b5","name":"_PRVW__60dcfafe884743cc9b0ba671e39ad749","key_phrases":["Test of contact"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":false,"design_categories":[],"triggerable_by_notification":false,"description":"","model_type":"nlu_keyword","foundational":false,"modify_confirmation_enabled":false,"context_profiles":[],"title":"Test of contact","library":false,"readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>57de8f0793752610d942fc4e1dba10b5</design_topic_id>
+        <graph>{
+  "graph_api_version": "1.0.78",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "b1a5e96fd5914b49bcb9f4b26cb74a7a": {
+          "id": "b1a5e96fd5914b49bcb9f4b26cb74a7a",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Hola"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          }
+        },
+        "5c8bbe9a4bcd4eca930e5d645e61d3ec": {
+          "id": "5c8bbe9a4bcd4eca930e5d645e61d3ec",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "0ca66b3e14434251a6b8630a5e252ee3": {
+          "id": "0ca66b3e14434251a6b8630a5e252ee3",
+          "stepType": "Decision",
+          "name": "Decision"
+        },
+        "37676b36cc2942b28d34367dbfc62df0": {
+          "id": "37676b36cc2942b28d34367dbfc62df0",
+          "stepType": "CrudAction",
+          "name": "New Contact",
+          "template": {
+            "query": {
+              "terms": [
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "name",
+                  "expression": "{{vaInputs.user.user_name}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.user.user_name}}",
+                            "displayValue": "Input Variables➛User➛User ID"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "50a4aeb69f0848409384c3dd8f3ddffb"
+                }
+              ]
+            },
+            "queryString": "name={{vaInputs.user.user_name}}"
+          },
+          "mode": "create",
+          "record": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "attachments": [
+            {
+              "value": "",
+              "mode": "simple"
+            }
+          ],
+          "variableId": "b8ebcc77a25c4a66a0131439a9096341"
+        },
+        "946216b69f5d4cf89c89ae6b5afbf4eb": {
+          "id": "946216b69f5d4cf89c89ae6b5afbf4eb",
+          "stepType": "TextPrompt",
+          "name": "test",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "test"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "c1a98532f9c3491196279bfae9b73137",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        },
+        "e86ad39b92b74a4e9c89d9ba29f79038": {
+          "id": "e86ad39b92b74a4e9c89d9ba29f79038",
+          "stepType": "TextPrompt",
+          "name": "no test",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "no test"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "1d8945ff2bb941f2af1d0ebb26220b9d",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        }
+      },
+      "edges": [
+        {
+          "id": "b7ce667d69414b459918c22f967c96c4",
+          "edgeType": "Edge",
+          "source": "b1a5e96fd5914b49bcb9f4b26cb74a7a",
+          "target": "0ca66b3e14434251a6b8630a5e252ee3",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "dffb2ddb2fff4fc8a786e4475608ce9d",
+          "edgeType": "Edge",
+          "source": "37676b36cc2942b28d34367dbfc62df0",
+          "target": "5c8bbe9a4bcd4eca930e5d645e61d3ec",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "301c4ceddbdc49198bcba237edabb304",
+          "edgeType": "Branch",
+          "source": "0ca66b3e14434251a6b8630a5e252ee3",
+          "target": "946216b69f5d4cf89c89ae6b5afbf4eb",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    /* Return true or false to indicate the branch condition's applicability.\n       For example:\n\n       var applies = vaInputs.first_name == 'Bill' ? true : false;\n       return applies;\n    */ \n      var contactExists = false;\n      var gr = new GlideRecord('cmn_contact');\n      if (gr.get(vaInputs.user)) {\n        contactExists = true;\n      }\n      return contactExists;\n})()\n"
+          },
+          "label": "contact exist"
+        },
+        {
+          "id": "b85e31924823492c96e63769b6b2c789",
+          "edgeType": "Edge",
+          "source": "946216b69f5d4cf89c89ae6b5afbf4eb",
+          "target": "37676b36cc2942b28d34367dbfc62df0",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "6dcf1bf5e6d74ee882a7a6916ec8882f",
+          "edgeType": "Branch",
+          "source": "0ca66b3e14434251a6b8630a5e252ee3",
+          "target": "e86ad39b92b74a4e9c89d9ba29f79038",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "mode": "script",
+            "value": "(function execute() {\n    /* Return true or false to indicate the branch condition's applicability.\n       For example:\n\n       var applies = vaInputs.first_name == 'Bill' ? true : false;\n       return applies;\n    */ \n      var contactExists = false;\n      var gr = new GlideRecord('cmn_contact');\n      if (gr.get(vaInputs.user)) {\n        contactExists = true;\n      }\n      return contactExists;\n})()\n"
+          },
+          "label": "Contact does not exist"
+        },
+        {
+          "id": "0c581aa7f4cf4a0a940f2df4995c044a",
+          "edgeType": "Edge",
+          "source": "e86ad39b92b74a4e9c89d9ba29f79038",
+          "target": "5c8bbe9a4bcd4eca930e5d645e61d3ec",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    },
+    "b8ebcc77a25c4a66a0131439a9096341": {
+      "id": "b8ebcc77a25c4a66a0131439a9096341",
+      "name": "new_contact",
+      "label": "New Contact",
+      "varType": "reference",
+      "table": "customer_contact",
+      "inactive": false,
+      "category": "vaInputs",
+      "nodeId": "37676b36cc2942b28d34367dbfc62df0",
+      "isHidden": false
+    },
+    "c1a98532f9c3491196279bfae9b73137": {
+      "id": "c1a98532f9c3491196279bfae9b73137",
+      "name": "test",
+      "label": "Test",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTc0ODg5NjQ2OTcxMiBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "946216b69f5d4cf89c89ae6b5afbf4eb",
+      "isHidden": false
+    },
+    "1d8945ff2bb941f2af1d0ebb26220b9d": {
+      "id": "1d8945ff2bb941f2af1d0ebb26220b9d",
+      "name": "no_test",
+      "label": "No Test",
+      "varType": "string",
+      "secure": false,
+      "category": "vaInputs",
+      "encryptionHashFunction": "SHA-256",
+      "encryptionSalt": {
+        "value": "MTc0ODg5NjQ4MDYyNyBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
+        "mode": "simple"
+      },
+      "nodeId": "e86ad39b92b74a4e9c89d9ba29f79038",
+      "isHidden": false
+    }
+  }
+}</graph>
+        <name>_PRVW__60dcfafe884743cc9b0ba671e39ad749</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-02 20:35:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>fcde930f93b52610d942fc4e1dba1007</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cb_design_topic_fcde930f93b52610d942fc4e1dba1007</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-02 20:35:11</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
+</record_update>

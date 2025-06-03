@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application>Virtual Agent</application>
+        <code/>
+        <commented_message/>
+        <key>costumer service</key>
+        <language>en</language>
+        <message>Costumer Service</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-05-29 17:28:43</sys_created_on>
+        <sys_id>22cd8e7d93b16650d942fc4e1dba10b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>costumer service</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_ui_message_22cd8e7d93b16650d942fc4e1dba10b7</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-05-29 17:28:43</sys_updated_on>
+    </sys_ui_message>
+</record_update>
