@@ -6,21 +6,21 @@
         <header_button display_value="New function instance">4755b5fdc335aa503ab9b01705013186</header_button>
         <header_titles/>
         <hide_empty_sections>true</hide_empty_sections>
-        <name>Self Service Diagnostic Tool</name>
+        <name>I.R.I.S.</name>
         <required_roles/>
         <search_config/>
         <sys_class_name>sys_sg_applet_launcher</sys_class_name>
         <sys_created_by>alex.santacruz</sys_created_by>
         <sys_created_on>2025-05-28 20:57:22</sys_created_on>
         <sys_id>55737161c3fd2a503ab9b01705013103</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Self Service Diagnostic tools</sys_name>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>I.R.I.S.</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_sg_applet_launcher_55737161c3fd2a503ab9b01705013103</sys_update_name>
         <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-05-29 15:41:59</sys_updated_on>
-        <title>Self Service Diagnostic tools</title>
+        <sys_updated_on>2025-06-03 20:05:26</sys_updated_on>
+        <title>I.R.I.S.</title>
     </sys_sg_applet_launcher>
 </record_update>

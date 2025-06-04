@@ -15,16 +15,16 @@
         <sys_created_by>isaac.hernandez</sys_created_by>
         <sys_created_on>2025-05-27 20:38:26</sys_created_on>
         <sys_id>8e06209593712250d942fc4e1dba10e1</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>SSDT2 - Container 1</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_container_8e06209593712250d942fc4e1dba10e1</sys_update_name>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-02 22:07:18</sys_updated_on>
+        <sys_updated_on>2025-06-03 16:40:36</sys_updated_on>
         <title/>
-        <width>container</width>
+        <width>container-fluid</width>
     </sp_container>
     <sys_attachment action="INSERT_OR_UPDATE">
         <average_image_color>#4d646a</average_image_color>

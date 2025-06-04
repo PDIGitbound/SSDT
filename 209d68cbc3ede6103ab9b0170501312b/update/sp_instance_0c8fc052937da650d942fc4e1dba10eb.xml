@@ -10,20 +10,20 @@
         <roles/>
         <short_description/>
         <size>md</size>
-        <sp_column display_value="1">537f8452937da650d942fc4e1dba100b</sp_column>
+        <sp_column display_value="1">bb72516d93f5e250d942fc4e1dba10a3</sp_column>
         <sp_widget display_value="Quick Links">dae53627530030101865ddeeff7b12be</sp_widget>
         <sys_class_name>sp_instance</sys_class_name>
         <sys_created_by>isaac.hernandez</sys_created_by>
         <sys_created_on>2025-05-30 21:33:55</sys_created_on>
         <sys_id>0c8fc052937da650d942fc4e1dba10eb</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_instance_0c8fc052937da650d942fc4e1dba10eb</sys_update_name>
-        <sys_updated_by>isaac.hernandez</sys_updated_by>
-        <sys_updated_on>2025-05-30 21:39:54</sys_updated_on>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-04 21:25:29</sys_updated_on>
         <title/>
         <url/>
         <widget_parameters><![CDATA[{
@@ -57,11 +57,11 @@
 	},
 	"background_color": {
 		"value": "",
-		"displayValue": ""
+		"displayValue": "-- None --"
 	},
 	"background_hexcode": {
-		"value": "",
-		"displayValue": ""
+		"value": "#e6e8ea",
+		"displayValue": "#e6e8ea"
 	},
 	"icon_background_color": {
 		"value": "false",
@@ -88,8 +88,8 @@
 		"displayValue": ""
 	},
 	"quick_links": {
-		"value": "9b729365e71130104cda66ef11e8a9a7,60c3db65e71130104cda66ef11e8a96f,4e116048e76530104cda66ef11e8a9bc,aff317a5e71130104cda66ef11e8a939",
-		"displayValue": "Password Reset, Printer Issues, Request Standing Desk, System Status"
+		"value": "9b729365e71130104cda66ef11e8a9a7,60c3db65e71130104cda66ef11e8a96f,4e116048e76530104cda66ef11e8a9bc,1e1cf027c3b1a6103ab9b01705013129",
+		"displayValue": "Password Reset, Printer Issues, Request Standing Desk, Prueba de Quick link"
 	},
 	"load_config": {
 		"value": "async",

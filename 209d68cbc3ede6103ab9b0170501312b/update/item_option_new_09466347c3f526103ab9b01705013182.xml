@@ -22,7 +22,7 @@
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field>location</field>
+        <field>x_volt2_github_s_0_x_u_account</field>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
@@ -42,14 +42,14 @@
         <map_to_field>true</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
-        <name>location</name>
+        <name>x_volt2_github_s_0_x_u_account</name>
         <not_available_conversation>false</not_available_conversation>
         <order>200</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>In what location are you residing?</question_text>
+        <question_text>In which enterprise are you working?</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -57,7 +57,7 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table>sn_ot_incident</record_producer_table>
-        <reference>cmn_location</reference>
+        <reference>customer_account</reference>
         <reference_qual/>
         <reference_qual_condition/>
         <rich_text/>
@@ -79,14 +79,14 @@
         <sys_created_by>alex.santacruz</sys_created_by>
         <sys_created_on>2025-06-02 21:09:18</sys_created_on>
         <sys_id>09466347c3f526103ab9b01705013182</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>location</sys_name>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>x_volt2_github_s_0_x_u_account</sys_name>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>item_option_new_09466347c3f526103ab9b01705013182</sys_update_name>
         <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-06-02 21:15:14</sys_updated_on>
+        <sys_updated_on>2025-06-03 15:05:55</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
