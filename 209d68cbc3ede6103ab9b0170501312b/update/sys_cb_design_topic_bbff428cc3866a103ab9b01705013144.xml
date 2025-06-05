@@ -1,17 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
-    <sys_cb_topic action="INSERT_OR_UPDATE">
-        <applicability/>
-        <applicability_mode>query</applicability_mode>
-        <autopilot_topic>true</autopilot_topic>
-        <category/>
-        <channels/>
-        <connect_queue/>
-        <context_profiles/>
-        <description>Create a new incident with all the caracteristics and certain kind of assets</description>
-        <dialog_acts_enabled>false</dialog_acts_enabled>
-        <expose_on_palette>false</expose_on_palette>
-        <flexible_conversation_switching>false</flexible_conversation_switching>
-        <foundational>false</foundational>
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_design_topic">
+    <sys_cb_design_topic action="INSERT_OR_UPDATE">
+        <compiled_topic display_value="_PRVW__cc9ae819e5cb49488643875300e3d26a">7bff428cc3866a103ab9b01705013141</compiled_topic>
+        <design_definition>{"type":"FlowTopic","triggers":[{"type":"Trigger","name":"d4ee08db2cf345418a210763961d3912","triggerType":"request","applicability":{"type":"Applicability","mode":"script","value":"true"},"id":"d4ee08db2cf345418a210763961d3912"}],"goals":[{"name":"primary","trigger_id":"d4ee08db2cf345418a210763961d3912","nodes":[{"type":"StartGoal","goal_id":"primary","greeting_msg":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Welcome to Customer Service {0}\", vaContext.getRequesterLang(), [vaInputs.user.name.getDisplayValue()])"},"id":"3e85d2beeea9444ba2350c11c4e6566f","name":"Start","expert_mode":false},{"type":"TerminateGoal","goal_id":"primary","confirmation_msg":{"type":"String","mode":"string","value":""},"id":"7a02fc7bd2244375bb8a9196b5c1aa07","name":"End","expert_mode":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"0a6535374db04308bca535a3623d5b25","name":"Choices","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"fb58ac7fcdd148b8879cf537861749c6","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"How can i help you?\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"Have the permissions","expression":{"type":"Applicability","mode":"query","value":""},"id":"790f175ae36a4373984c13806e23f237","name":"Have the permissions","expert_mode":false},{"type":"Branch","label":"Did not have the permissions","expression":{"type":"Applicability","mode":"script","value":"(function() { return (function execute() {\n    /* Return true or false to indicate the branch condition's applicability.\n       For example:\n\n       var applies = vaInputs.first_name == 'Bill' ? true : false;\n       return applies;\n    */\n    (function execute() {\n   var gr =new GlideRecord(\"Incident\");\n   return !gr.canCreate();\n    return true;\n})()\n\n    return true;\n})()\n})()"},"id":"fce92eaced9044b98502ba510f1c7631","name":"Did not have the permissions","expert_mode":false}],"id":"550bcef460e342de8aa193ae37ea3d6c","goal_id":"primary","expert_mode":false},{"type":"TextOutputPrompt","value":[{"type":"String","mode":"string","value":"gs.getMessageLang(\"You do not have the permissions to create a Incident.Contact your system administrator to get access.\", vaContext.getRequesterLang())"}],"request_feedback":true,"isCollapsible":true,"id":"db6846909b3045ebaf1228e27ef23b0c","name":"Incident Access","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"secure":false},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"No","expression":{"type":"Applicability","mode":"query","value":"can_i_help_you_with_something_else_=No"},"id":"ce76905fb0bd454f986edd9cc9c5de09","name":"No","expert_mode":false},{"type":"Branch","label":"Yes","expression":{"type":"Applicability","mode":"query","value":"can_i_help_you_with_something_else_=Yes "},"id":"c06db67d793c4ab89c6f442c34a6d084","name":"Yes","expert_mode":false}],"id":"60025da9c1fc4c5696dcc2e94ec26e52","goal_id":"primary","expert_mode":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"83326bfa46524a1e9c9c35a2b6c62a84","name":"Can i help you with something else?","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"0c1533ee80aa44659499557943a6ca8d","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Can i help you with something else?\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"d5074b5dd6b34753969c4194d2dbdd32","name":"Choices with out Incident creation","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"853326a7f9d64cbaad7858087bac3248","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"How can i help you, you have this options util your system administrator give you the permissions.\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"No","expression":{"type":"Applicability","mode":"query","value":""},"id":"0d8fa6d007c04a79844d0061ea371f0f","name":"No","expert_mode":false},{"type":"Branch","label":"Yes","expression":{"type":"Applicability","mode":"query","value":""},"id":"a1539b96d0f24527ae2b6ed7982729c5","name":"Yes","expert_mode":false}],"id":"b2f4a2e0da2249979f58061a32a32e97","goal_id":"primary","expert_mode":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"70b6a487eabe4f9283a37199c9d4a46d","name":"Can i help you with something else?","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"6f1ba205b7264fcf9872886736696d22","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Can i help you with something else?\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"Knowledge bases","expression":{"type":"Applicability","mode":"query","value":"choices=Knowledge Bases"},"id":"f4e7080efd4f49608e9b69f602fdd0d3","name":"Knowledge bases","expert_mode":false},{"type":"Branch","label":"Create an Incident","expression":{"type":"Applicability","mode":"query","value":"choices=Create an Incident"},"id":"165cb2aaf9774f4491ce5becb3b0df3e","name":"Create an Incident","expert_mode":false},{"type":"Branch","label":"Check the Status of your Incidents","expression":{"type":"Applicability","mode":"query","value":"choices=Check the status of your incidents"},"id":"9347d925e10244ac8ca087c1d0bd281d","name":"Check the Status of your Incidents","expert_mode":false},{"type":"Branch","label":"Other","expression":{"type":"Applicability","mode":"query","value":"choices=Other"},"id":"cfe711cc5da148ff968f336574402b82","name":"Other","expert_mode":false}],"id":"7bf1de5ca9a84a19be19aa0d813f082e","goal_id":"primary","expert_mode":false},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"Knowledge bases","expression":{"type":"Applicability","mode":"query","value":"choices_with_out_incident_creation=Knowledge Bases"},"id":"5e45183bb4b54afc88ee408887ecdec9","name":"Knowledge bases","expert_mode":false},{"type":"Branch","label":"Other","expression":{"type":"Applicability","mode":"query","value":"choices_with_out_incident_creation=Other"},"id":"f092bc4e74194344954de072cbb5b227","name":"Other","expert_mode":false}],"id":"503877f7636143e1840a0753e42ab45f","goal_id":"primary","expert_mode":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"cc2f45d3e85947ceaeb54e618af81f76","name":"What kind of knowledge you want to see?","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"2f26b0760fca46719bfd613ab91941f6","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"What kind of knowledge you want to see?\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"TableOutput","mode":"glide_record","conditionType":"simple","query":"kb_knowledge_base=05ff44289f011200550bf7b6077fcfa3","sortBy":"^ORDERBYnumber","table":"kb_knowledge","title":{"type":"String","mode":"string","value":""},"columns":[{"name":"short_description","label":"Short description"},{"name":"number","label":"Number"},{"name":"author","label":"Author"}],"showColumnHeaders":true,"noResultsMessage":{"type":"String","mode":"string","value":"You don't have any {{vaInputs.what_kind_of_knowledge_you_want_to_see_}}  Articles Available"},"id":"b164bfd0b16742ec890f522cdbd95ab2","name":"Costumer Service Article List","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"9a31232af9dd44888e027721d45cc210","name":"You want to see an specific Knowledge?","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"b8398c32b6994227ac062321e0dc5d88","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"You want to see an specific Knowledge Base or You want to search another kind of knowledge?\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"No","expression":{"type":"Applicability","mode":"query","value":"you_want_to_see_an_specific_knowledge_=No"},"id":"aec7a4ec33d241eea35adf5d0fedbad6","name":"No","expert_mode":false},{"type":"Branch","label":"Another Knowledge","expression":{"type":"Applicability","mode":"query","value":"you_want_to_see_an_specific_knowledge_=Knowledge Base"},"id":"0a8ee73e3a2944249e48134e6924a74f","name":"Another Knowledge","expert_mode":false},{"type":"Branch","label":"Yes","expression":{"type":"Applicability","mode":"query","value":"you_want_to_see_an_specific_knowledge_=Specific Knowledge"},"id":"46155c10bb70462b9624e13b023e0419","name":"Yes","expert_mode":false}],"id":"26df69de37764c94a2db3960f11a1343","goal_id":"primary","expert_mode":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"38fa998fe2524dbaa403d05ca9f15b76","name":"Specific Knowledge","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"489a3bc1b2d0431198e4988df3cca94e","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"You want to search another Knowledge Article?\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"No","expression":{"type":"Applicability","mode":"query","value":"specific_knowledge=No"},"id":"0ad37a4e01ca494484a66d75492ae751","name":"No","expert_mode":false},{"type":"Branch","label":"Yes","expression":{"type":"Applicability","mode":"query","value":"specific_knowledge=Yes"},"id":"6b7b167254204604be514926d14bf86e","name":"Yes","expert_mode":false}],"id":"4ddd97a0622c4981b9adeb47537ff619","goal_id":"primary","expert_mode":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"1090b2f2a29641708c6786a4e183090d","name":"Select the option that best matches your","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"03a9ce2c648c481b99ad75e5454599f9","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Select the option that best matches your issue.\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"b91fe9f20dba47f8bcf137b6a51edf8c","name":"Select your Poth","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"65e2e57bcff64d36bc40b2d817db073e","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Select your Poth\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"CRUDAction","mode":"create","query":"first_name={{vaInputs.user.first_name}}^last_name={{vaInputs.user.last_name}}^account={{vaInputs.select_your_poth}}^email={{vaInputs.user.email}}","variable_id":"3bd792015e714eb2abc833c499ef6291","id":"9094e5f0bb2043bc96a73d250624df3c","name":"Contact ","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"attachments":[{"type":"String","mode":"string","value":""}]},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"A contact already exists.","expression":{"type":"Applicability","mode":"script","value":"(function() { return (function execute() {\n        gs.info('INFO2:'+vaVars.Comparation)\n    return vaVars.Comparation==true\n})();})()"},"id":"487c8324e0044fe595ab75c63773abba","name":"A contact already exists.","expert_mode":false},{"type":"Branch","label":"New contact.","expression":{"type":"Applicability","mode":"script","value":"(function() { return (function execute() {\n    gs.info('INFO1:'+vaVars.Comparation)\n    return vaVars.Comparation==false\n})();})()"},"id":"d86678fa44844b26853af390bd740829","name":"New contact.","expert_mode":false}],"id":"3599d7f9055243a3973a1b3548755c23","goal_id":"primary","expert_mode":false},{"type":"TableOutput","mode":"glide_record","conditionType":"simple","query":"state!=7^sys_created_byLIKE{{vaInputs.user.user_name}}","sortBy":"^ORDERBYsys_created_on","table":"sn_ot_incident","title":{"type":"String","mode":"string","value":""},"columns":[{"name":"number","label":"Number"},{"name":"short_description","label":"Short description"},{"name":"sys_created_by","label":"Created by"},{"name":"x_volt2_github_s_0_x_u_account","label":"Account"}],"showColumnHeaders":true,"noResultsMessage":{"type":"String","mode":"string","value":"You currently have no open OT Incidents."},"id":"a151f05f187e4dbb9f8a298ec7f4a65d","name":"Incidents Created by the User","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"7e8e876638594414a111bde0cbef6e75","name":"Specific case from the table","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"f4f8bc3f6be94fdb8cd6e2f59372bc41","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Would you like to see a Specific OT Incident?\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"No","expression":{"type":"Applicability","mode":"query","value":"specific_case_from_the_table=No"},"id":"e9ae90b1dc7a445e9239f19b63c059c1","name":"No","expert_mode":false},{"type":"Branch","label":"Yes","expression":{"type":"Applicability","mode":"query","value":"specific_case_from_the_table=Yes"},"id":"1afe540a5f6d4a5ba06849104a5b2806","name":"Yes","expert_mode":false}],"id":"58f1bcf8d4f64c97b4fa78f63bd6a87a","goal_id":"primary","expert_mode":false},{"type":"InputPrompt","variable_id":"20da92161bf0461b9757d458cfe04481","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Please provide the OT Incident number you want to track.\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":true,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"metadataScript":"","cardName":"","cardFields":[],"id":"5e08edf7433148ddb9c4c22000d65b34","name":"OT Incident Number","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"formatType":"Text","validationScript":"","description":""},{"type":"RecordOutputPrompt","mode":"query","table":"sn_ot_incident","fields":["number","short_description","state","priority","sys_created_by"],"request_feedback":true,"id":"6d00ea3ae856475085ab1996fae64dc4","name":"TSOTIncident","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"number={{vaInputs.ot_incident_number}}","condition":{"type":"Condition","mode":"glide_query","value":"number={{vaInputs.ot_incident_number}}"}},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"Yes","expression":{"type":"Applicability","mode":"query","value":"another_search=Yes"},"id":"b5537a3e9d7849848c778416f57e1d3e","name":"Yes","expert_mode":false},{"type":"Branch","label":"No","expression":{"type":"Applicability","mode":"query","value":"another_search=No"},"id":"c5fb653b1fa94288b27ee2110d23b7ea","name":"No","expert_mode":false}],"id":"6429a831b5344d489744fb98bcd392bd","goal_id":"primary","expert_mode":false},{"type":"ChoiceInputPrompt","expression_mode":"simple","metadataScript":"","cardName":"","cardFields":[],"id":"137de8237c754074a82231cd0ff088cc","name":"Another Search","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"4df4e0eed059483491e1f175117814c0","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Would you like to view another specific case?\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"Harmonic drive","expression":{"type":"Applicability","mode":"query","value":"select_the_option_that_best_matches_your=Armonic Drive"},"id":"4f71f27a59aa41d3879f71b4ab227257","name":"Harmonic drive","expert_mode":false},{"type":"Branch","label":"ServoMotor","expression":{"type":"Applicability","mode":"query","value":""},"id":"7051bd8e1424418e9d4e39aa57a8c619","name":"ServoMotor","expert_mode":false},{"type":"Branch","label":"Coil","expression":{"type":"Applicability","mode":"query","value":""},"id":"d80e1b0327ad492788cdf7028b92b5cf","name":"Coil","expert_mode":false},{"type":"Branch","label":"Cable","expression":{"type":"Applicability","mode":"query","value":""},"id":"2608cb204cc94e34aed9b06a2d7917f6","name":"Cable","expert_mode":false},{"type":"Branch","label":"Engine","expression":{"type":"Applicability","mode":"query","value":""},"id":"06bcb98f83ca4a71ad197a0d22ba234c","name":"Engine","expert_mode":false},{"type":"Branch","label":"Industrial PVC","expression":{"type":"Applicability","mode":"query","value":""},"id":"c75c9df6c5a2460b9165932f653ce5d8","name":"Industrial PVC","expert_mode":false},{"type":"Branch","label":"Bearing","expression":{"type":"Applicability","mode":"query","value":""},"id":"724682e7b63a43759f9b5759649480ed","name":"Bearing","expert_mode":false}],"id":"2fdae1d82f92440491a102bac28d6a06","goal_id":"primary","expert_mode":false},{"type":"CRUDAction","mode":"create","query":"asset=647f720393352610d942fc4e1dba10c1^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue^x_volt2_github_s_0_x_u_account={{vaInputs.select_your_poth}}^isa_entity_site=177cfa8fc3f126103ab9b017050131dd","variable_id":"8f65ce34e3704e548a8d40653b775411","id":"81bf6e8754e24099a21fe54f22a38e05","name":"Incident OT Creation","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"attachments":[{"type":"String","mode":"string","value":""}]},{"type":"CRUDAction","mode":"create","query":"asset=7d9e3a8f93f12610d942fc4e1dba1000^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue","variable_id":"cf99c78d04e34ba6ad27defd75c9016c","id":"38343fc729ad40689c8562796cf11663","name":"Incident OT Creation 1","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"attachments":[{"type":"String","mode":"string","value":""}]},{"type":"CRUDAction","mode":"create","query":"asset=e42fbacf93f12610d942fc4e1dba10dc^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue","variable_id":"edf7f2dfe509470db20cbd81d59d1c77","id":"6497ca2168df43fab6532ea1b107c811","name":"Incident OT Creation 2","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"attachments":[{"type":"String","mode":"string","value":""}]},{"type":"CRUDAction","mode":"create","query":"asset=f45ffecf93f12610d942fc4e1dba10e3^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue","variable_id":"e2630c31cb7343b2be6a0c77754be50b","id":"4ecfc7e812e2432e9a363c524bd81eba","name":"Incident OT Creation 3","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"attachments":[{"type":"String","mode":"string","value":""}]},{"type":"CRUDAction","mode":"create","query":"asset=4bee76cf93f12610d942fc4e1dba10bb^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue","variable_id":"d3d8224b2c214b5391b27ce8f1c2521a","id":"a7863546132747a1b7acdd8d8f93aa4d","name":"Incident OT Creation 4","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"attachments":[{"type":"String","mode":"string","value":""}]},{"type":"CRUDAction","mode":"create","query":"asset=4d3fbacf93f12610d942fc4e1dba107b^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue","variable_id":"6858f48dfb384351a201b2f1d3380c78","id":"c900cde306c641e2ba8e4f91d0fc99db","name":"Incident OT Creation 5","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"attachments":[{"type":"String","mode":"string","value":""}]},{"type":"CRUDAction","mode":"create","query":"asset=19eb32cb93f12610d942fc4e1dba1067^caller_id={{vaInputs.user}}^short_description={{vaInputs.user.ref_customer_contact}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue","variable_id":"c327f3f91b0b4440bec31d6f7c99eda6","id":"4619168a02cb47dc9fbdf8ba9963c0b3","name":"Incident OT Creation 6","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"attachments":[{"type":"String","mode":"string","value":""}]},{"type":"RecordOutputPrompt","mode":"query","table":"kb_knowledge","fields":["number","short_description","text","author"],"request_feedback":true,"id":"880fb44f5b2543ff8566a701d47421bd","name":"Specific Knowledge","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"NQnumber={{vaInputs.specific_number_knowledge}}","condition":{"type":"Condition","mode":"glide_query","value":"NQnumber={{vaInputs.specific_number_knowledge}}"}},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"Vulnerabilities","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=Vulnerabilities"},"id":"e64c9e79cd604c0184c3d470ef3c2337","name":"Vulnerabilities","expert_mode":false},{"type":"Branch","label":"Customer Service Article","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=Costumer Service"},"id":"c4861d6b29ec4ac7b14f0b9a0e66e3a8","name":"Customer Service Article","expert_mode":false},{"type":"Branch","label":"Consumer Service Article","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=Consumer Service"},"id":"506743b977d54e79a295d595f7de4bd9","name":"Consumer Service Article","expert_mode":false},{"type":"Branch","label":"Field Service Knowledge","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=Field Service Knowledge"},"id":"22169ec1aebc44d5b225f4f64bf68bd5","name":"Field Service Knowledge","expert_mode":false},{"type":"Branch","label":"Enterprise Asset Knowledge","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=Enterprise Asset Knowledge Base"},"id":"80387ceddfc241c582cd0a7ee47d0ec3","name":"Enterprise Asset Knowledge","expert_mode":false},{"type":"Branch","label":"IT","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=IT"},"id":"7cf2b0b4a5dc4790823a19b70a1f272c","name":"IT","expert_mode":false},{"type":"Branch","label":"Knowledge bases","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=Knowledge"},"id":"4e61fd843c8e4600aae8583ed827df55","name":"Knowledge bases","expert_mode":false}],"id":"0697fcf6cd0244d6a00fae7218f69bd7","goal_id":"primary","expert_mode":false},{"type":"RecordOutputPrompt","mode":"query","table":"kb_knowledge","fields":["number","short_description","text","author"],"request_feedback":true,"id":"22fa9aa350384b269038df6d6e9ab0a4","name":"Consumer Service Article Know","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"number={{vaInputs.specific_number_knowledge}}","condition":{"type":"Condition","mode":"glide_query","value":"number={{vaInputs.specific_number_knowledge}}"}},{"type":"RecordOutputPrompt","mode":"query","table":"kb_knowledge","fields":["number","short_description","text","author"],"request_feedback":true,"id":"27cc9bfdec444f83a31c39e4fe946947","name":"Field Service Knowledge articl","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"number={{vaInputs.specific_number_knowledge}}","condition":{"type":"Condition","mode":"glide_query","value":"number={{vaInputs.specific_number_knowledge}}"}},{"type":"RecordOutputPrompt","mode":"query","table":"kb_knowledge","fields":["number","author","text","short_description"],"request_feedback":true,"id":"ead0eab43f0b4d22afc9295932f439d3","name":"Enterprise Asset Knowledge Art","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"number={{vaInputs.specific_number_knowledge}}","condition":{"type":"Condition","mode":"glide_query","value":"number={{vaInputs.specific_number_knowledge}}"}},{"type":"RecordOutputPrompt","mode":"query","table":"kb_knowledge","fields":["number","short_description","text","author"],"request_feedback":true,"id":"fd67178bc8624618b973ccfef0d17ba3","name":"IT Article","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"number={{vaInputs.specific_number_knowledge}}","condition":{"type":"Condition","mode":"glide_query","value":"number={{vaInputs.specific_number_knowledge}}"}},{"type":"RecordOutputPrompt","mode":"query","table":"kb_knowledge","fields":["number","short_description","text","author"],"request_feedback":true,"id":"be7cc87b9b024caa9b56178cc2f3be56","name":"Article Knowledge bases","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"number={{vaInputs.specific_number_knowledge}}","condition":{"type":"Condition","mode":"glide_query","value":"number={{vaInputs.specific_number_knowledge}}"}},{"type":"RecordOutputPrompt","mode":"query","table":"kb_knowledge","fields":["number","short_description","text","author"],"request_feedback":true,"id":"2fbbd85122e14221a1df44ae3a2ccea6","name":"Vulnerabilities Knowledge","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"number={{vaInputs.specific_number_knowledge}}","condition":{"type":"Condition","mode":"glide_query","value":"number={{vaInputs.specific_number_knowledge}}"}},{"type":"InputPrompt","variable_id":"a45a6d3f9331477fbed55617d57492ec","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Please provide the {0}article number you want to see.\", vaContext.getRequesterLang(), [vaInputs.what_kind_of_knowledge_you_want_to_see_])"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":true,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"metadataScript":"","cardName":"","cardFields":[],"id":"f72328380a834b8280fdd17f02fa2b58","name":"Specific number Knowledge","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"formatType":"Text","validationScript":"","description":""},{"type":"Decision","name":"Decision","branches":[{"type":"Branch","label":"Vulnerabilities","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=Vulnerabilities"},"id":"d781ac0090cd4e498ad6a42a33c36480","name":"Vulnerabilities","expert_mode":false},{"type":"Branch","label":"Costumer Service Article List","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=Costumer Service"},"id":"68849aa5c53f4929b214370c7c144455","name":"Costumer Service Article List","expert_mode":false},{"type":"Branch","label":"Consumer Service Article List","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=Consumer Service"},"id":"89322d7108144354bc9877efe68e84ae","name":"Consumer Service Article List","expert_mode":false},{"type":"Branch","label":"Field Service Knowledge list","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=Field Service Knowledge"},"id":"88717266b44c4f39b205c572cccaaf84","name":"Field Service Knowledge list","expert_mode":false},{"type":"Branch","label":"Enterprise Asset Knowledge","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=Enterprise Asset Knowledge Base"},"id":"064610772cac463cb74e825b69a7d48c","name":"Enterprise Asset Knowledge","expert_mode":false},{"type":"Branch","label":"IT","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=IT"},"id":"32e1aaf7a48841ec8655507584a0cc8a","name":"IT","expert_mode":false},{"type":"Branch","label":"Knowledge bases","expression":{"type":"Applicability","mode":"query","value":"what_kind_of_knowledge_you_want_to_see_=Knowledge"},"id":"bee36e5cd4394cb1bc09d39cdd49daa7","name":"Knowledge bases","expert_mode":false}],"id":"7c51221547e242d3a29b8d3801738951","goal_id":"primary","expert_mode":false},{"type":"TableOutput","mode":"glide_record","conditionType":"simple","query":"kb_knowledge_base=2b292926c3302200e7c7d44d81d3ae10","sortBy":"","table":"kb_knowledge","title":{"type":"String","mode":"string","value":""},"columns":[{"name":"number","label":"Number"},{"name":"short_description","label":"Short description"},{"name":"author","label":"Author"}],"showColumnHeaders":true,"noResultsMessage":{"type":"String","mode":"string","value":"You don't have any {{vaInputs.what_kind_of_knowledge_you_want_to_see_}}  Articles Available"},"id":"a789090ba3844910910b63d2683698ba","name":"Consumer Service Article List","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false},{"type":"TableOutput","mode":"glide_record","conditionType":"simple","query":"kb_knowledge_base=94316a0047022100158b949b6c9a7164","sortBy":"","table":"kb_knowledge","title":{"type":"String","mode":"string","value":""},"columns":[{"name":"number","label":"Number"},{"name":"short_description","label":"Short description"},{"name":"author","label":"Author"}],"showColumnHeaders":true,"noResultsMessage":{"type":"String","mode":"string","value":"You don't have any {{vaInputs.what_kind_of_knowledge_you_want_to_see_}}  Articles Available"},"id":"2f2c1fbfda5f4d42adef5a1c2bfbe766","name":"Field Service Knowledge list","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false},{"type":"TableOutput","mode":"glide_record","conditionType":"simple","query":"kb_knowledge_base=f9820d4ceba6211046605377d852282b","sortBy":"","table":"kb_knowledge","title":{"type":"String","mode":"string","value":""},"columns":[{"name":"number","label":"Number"},{"name":"short_description","label":"Short description"},{"name":"author","label":"Author"}],"showColumnHeaders":true,"noResultsMessage":{"type":"String","mode":"string","value":"You don't have any {{vaInputs.what_kind_of_knowledge_you_want_to_see_}}  Articles Available"},"id":"350bf79022d14744855860ecf794275f","name":"Enterprise Asset Knowledge lis","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false},{"type":"TableOutput","mode":"glide_record","conditionType":"simple","query":"kb_knowledge_base=a7e8a78bff0221009b20ffffffffff17","sortBy":"","table":"kb_knowledge","title":{"type":"String","mode":"string","value":""},"columns":[{"name":"number","label":"Number"},{"name":"short_description","label":"Short description"},{"name":"author","label":"Author"}],"showColumnHeaders":true,"noResultsMessage":{"type":"String","mode":"string","value":"You don't have any {{vaInputs.what_kind_of_knowledge_you_want_to_see_}}  Articles Available"},"id":"770509b1dc7541cb885f38c3b776a3f0","name":"IT List","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false},{"type":"TableOutput","mode":"glide_record","conditionType":"simple","query":"kb_knowledge_base=dfc19531bf2021003f07e2c1ac0739ab","sortBy":"","table":"kb_knowledge","title":{"type":"String","mode":"string","value":""},"columns":[{"name":"number","label":"Number"},{"name":"text","label":"Article body"},{"name":"author","label":"Author"}],"showColumnHeaders":true,"noResultsMessage":{"type":"String","mode":"string","value":"You don't have any {{vaInputs.what_kind_of_knowledge_you_want_to_see_}}  Articles Available"},"id":"9a879d47377f4c2d8c79c003468d4074","name":"Knowledge Bases List","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false},{"type":"TableOutput","mode":"glide_record","conditionType":"simple","query":"kb_knowledge_base=e15c06f09f30020034c6b6a0942e7076","sortBy":"^ORDERBYsys_created_on","table":"kb_knowledge","title":{"type":"String","mode":"string","value":""},"columns":[{"name":"number","label":"Number"},{"name":"author","label":"Author"},{"name":"short_description","label":"Short description"}],"showColumnHeaders":true,"noResultsMessage":{"type":"String","mode":"string","value":"You don't have any {{vaInputs.what_kind_of_knowledge_you_want_to_see_}}  Articles Available"},"id":"ff096993165e4dd294e3c9a0e0f5b806","name":"Vulnerabilities List","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false},{"type":"LibraryCall","library_topic_name":"Transfer to Live Agent","library_topic_id":"9d384761b3633300dbbf6030c6a8dcaa","library_topic_is_template":false,"parameter-mappings":[],"return-value-mappings":[],"header_card_fields":[],"id":"2f48f47b480d4977b49e34d1c42a1aaa","name":"Transfer to Live Agent","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false},{"type":"RecordOutputPrompt","mode":"query","table":"sn_ot_incident","fields":["number","short_description","state","priority","sys_created_by"],"request_feedback":true,"id":"77c6b8fdc9ae4400b19fe0f295648ce9","name":"Incident Number 3","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"sys_id={{vaInputs.incident_ot_creation_3}}","condition":{"type":"Condition","mode":"glide_query","value":"sys_id={{vaInputs.incident_ot_creation_3}}"}},{"type":"RecordOutputPrompt","mode":"query","table":"sn_ot_incident","fields":["number","short_description","state","priority","sys_created_by"],"request_feedback":true,"id":"de7284e6b3454bcc92305a1531bc8599","name":"Incident Number 6","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"sys_id={{vaInputs.incident_ot_creation_6}}","condition":{"type":"Condition","mode":"glide_query","value":"sys_id={{vaInputs.incident_ot_creation_6}}"}},{"type":"RecordOutputPrompt","mode":"query","table":"sn_ot_incident","fields":["number","short_description","priority","state","sys_created_by"],"request_feedback":true,"id":"e7a90d8169d74f749a97cc4d96cf1be3","name":"Incident Number 5","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"sys_id={{vaInputs.incident_ot_creation_5}}","condition":{"type":"Condition","mode":"glide_query","value":"sys_id={{vaInputs.incident_ot_creation_5}}"}},{"type":"RecordOutputPrompt","mode":"query","table":"sn_ot_incident","fields":["number","short_description","priority","state","sys_created_by"],"request_feedback":true,"id":"502797eb06b0494dac9328edbbe5f2e4","name":"Incident Number 4","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"sys_id={{vaInputs.incident_ot_creation_4}}","condition":{"type":"Condition","mode":"glide_query","value":"sys_id={{vaInputs.incident_ot_creation_4}}"}},{"type":"RecordOutputPrompt","mode":"query","table":"sn_ot_incident","fields":["number","short_description","priority","state","sys_created_by"],"request_feedback":true,"id":"a08e9ca2ed3945a096a855125f7533be","name":"Incident Number 2","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"sys_id={{vaInputs.incident_ot_creation_2}}","condition":{"type":"Condition","mode":"glide_query","value":"sys_id={{vaInputs.incident_ot_creation_2}}"}},{"type":"RecordOutputPrompt","mode":"query","table":"sn_ot_incident","fields":["number","short_description","priority"],"request_feedback":true,"id":"f5c8edff76de4e428e334c75f8153f9e","name":"Incident Number 1","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"sys_id={{vaInputs.incident_ot_creation_1}}","condition":{"type":"Condition","mode":"glide_query","value":"sys_id={{vaInputs.incident_ot_creation_1}}"}},{"type":"RecordOutputPrompt","mode":"query","table":"sn_ot_incident","fields":["number","short_description","state","priority","sys_created_by"],"request_feedback":true,"id":"82817e534fbc414bbb7afcb7b8f8888d","name":"Incident Number","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"reference_qualifier_condition":"sys_id={{vaInputs.incident_ot_creation}}","condition":{"type":"Condition","mode":"glide_query","value":"sys_id={{vaInputs.incident_ot_creation}}"}},{"type":"ReferenceChoiceInputPrompt","mode":"glide_record","id":"9a08dd3b2f7e4f87b1091f9553b0a539","name":"Poth","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"variable_id":"0ae2e014efe54c8bb1a443e1b12643e5","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"wait a second\", vaContext.getRequesterLang())"},"request_feedback":false,"skippable":{"type":"Applicability","mode":"script","value":"false"},"metadataScript":"","cardName":"","cardFields":[],"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"expression_mode":"simple","no_options_found_message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"you have not select a poth\", vaContext.getRequesterLang())"},"condition":{"type":"Condition","mode":"glide_query","value":"nameLIKE{{vaInputs.select_your_poth}}"},"description":""},{"type":"InputPrompt","variable_id":"1d6af7d22093433395ddaced2f9abded","message":{"type":"String","mode":"string","value":"gs.getMessageLang(\"Please describe your situation.\", vaContext.getRequesterLang())"},"nlu_entity_binding":{"type":"NLUEntityBinding","allow_text_input":false,"use_confirmation_prompt":true},"request_feedback":true,"skippable":{"type":"Applicability","mode":"script","value":"false"},"skipreprompt":{"type":"Applicability","mode":"script","value":"false"},"metadataScript":"","cardName":"","cardFields":[],"id":"a3319b6e8c284d9c83ae3cc2e2e9572e","name":"Description of the problem","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false,"formatType":"Text","validationScript":"","description":""},{"type":"ScriptedAction","script":"(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_4);\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris'+\n  '?id=csm_get_help'+'sys_id=' + ot_incident.sys_id + '&amp;id=ticket&amp;table=ot_incident',\n    label: ot_incident.number\n  };\n  gs.info('url '+ url)\n  var fieldList = ['category', 'assignment_group', 'short_description', 'state'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n  return html;\n})();\n","id":"e8d2b923842e4dc491995e12c6f39840","name":"Incident Number 4","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false}],"edges":[{"type":"Edge","source_node_id":"7c51221547e242d3a29b8d3801738951","target_node_id":"ff096993165e4dd294e3c9a0e0f5b806","branch_id":"d781ac0090cd4e498ad6a42a33c36480","id":"55f370c47c9e422999f2475036513509","name":"d781ac0090cd4e498ad6a42a33c36480"},{"type":"Edge","source_node_id":"5e08edf7433148ddb9c4c22000d65b34","target_node_id":"6d00ea3ae856475085ab1996fae64dc4","id":"93c069ea7f0d497192e0027382c28a6b"},{"type":"Edge","source_node_id":"b91fe9f20dba47f8bcf137b6a51edf8c","target_node_id":"1090b2f2a29641708c6786a4e183090d","id":"10f20cfa24d847499ec77edebc44977f"},{"type":"Edge","source_node_id":"9a08dd3b2f7e4f87b1091f9553b0a539","target_node_id":"3599d7f9055243a3973a1b3548755c23","id":"d47d64efb8054612bcd2b7fdada5e692"},{"type":"Edge","source_node_id":"9094e5f0bb2043bc96a73d250624df3c","target_node_id":"2fdae1d82f92440491a102bac28d6a06","id":"f5ccf66bfa7b45cdbb0d4786cab595cd"},{"type":"Edge","source_node_id":"e7a90d8169d74f749a97cc4d96cf1be3","target_node_id":"83326bfa46524a1e9c9c35a2b6c62a84","id":"2e3bb5eabcef4fae91e31aa8c4a72f57"},{"type":"Edge","source_node_id":"0697fcf6cd0244d6a00fae7218f69bd7","target_node_id":"2fbbd85122e14221a1df44ae3a2ccea6","branch_id":"e64c9e79cd604c0184c3d470ef3c2337","id":"999602b7e82d42c5af7a525ffffda5b7","name":"e64c9e79cd604c0184c3d470ef3c2337"},{"type":"Edge","source_node_id":"3599d7f9055243a3973a1b3548755c23","target_node_id":"2fdae1d82f92440491a102bac28d6a06","branch_id":"487c8324e0044fe595ab75c63773abba","id":"5a3dffe25ee541a8818cbb5635352664","name":"487c8324e0044fe595ab75c63773abba"},{"type":"Edge","source_node_id":"6d00ea3ae856475085ab1996fae64dc4","target_node_id":"137de8237c754074a82231cd0ff088cc","id":"b9dd5bc4783b45ac89fb6034d08aa99f"},{"type":"Edge","source_node_id":"6429a831b5344d489744fb98bcd392bd","target_node_id":"5e08edf7433148ddb9c4c22000d65b34","branch_id":"b5537a3e9d7849848c778416f57e1d3e","id":"28c8ba4092d54747a8f0cc97772ccc85","name":"b5537a3e9d7849848c778416f57e1d3e"},{"type":"Edge","source_node_id":"550bcef460e342de8aa193ae37ea3d6c","target_node_id":"0a6535374db04308bca535a3623d5b25","branch_id":"790f175ae36a4373984c13806e23f237","id":"d865fa38ca3f4adda9f0ddd2979257aa","name":"790f175ae36a4373984c13806e23f237"},{"type":"Edge","source_node_id":"3e85d2beeea9444ba2350c11c4e6566f","target_node_id":"550bcef460e342de8aa193ae37ea3d6c","id":"f77ae12f416344af8fc946d02dfe57e1"},{"type":"Edge","source_node_id":"550bcef460e342de8aa193ae37ea3d6c","target_node_id":"db6846909b3045ebaf1228e27ef23b0c","branch_id":"fce92eaced9044b98502ba510f1c7631","id":"a146a43a0d42479fae7cd88d0c04e831","name":"fce92eaced9044b98502ba510f1c7631"},{"type":"Edge","source_node_id":"60025da9c1fc4c5696dcc2e94ec26e52","target_node_id":"7a02fc7bd2244375bb8a9196b5c1aa07","branch_id":"ce76905fb0bd454f986edd9cc9c5de09","id":"bccef58d365d4e5b84f11780db5a614d","name":"ce76905fb0bd454f986edd9cc9c5de09"},{"type":"Edge","source_node_id":"60025da9c1fc4c5696dcc2e94ec26e52","target_node_id":"0a6535374db04308bca535a3623d5b25","branch_id":"c06db67d793c4ab89c6f442c34a6d084","id":"4e3aaea1bbd74dfcabec1a402a822bed","name":"c06db67d793c4ab89c6f442c34a6d084"},{"type":"Edge","source_node_id":"83326bfa46524a1e9c9c35a2b6c62a84","target_node_id":"60025da9c1fc4c5696dcc2e94ec26e52","id":"9d51cf62f95b4706b587c400b77765bd"},{"type":"Edge","source_node_id":"db6846909b3045ebaf1228e27ef23b0c","target_node_id":"d5074b5dd6b34753969c4194d2dbdd32","id":"1ee4f3b1e47a4b7fba5c88181581d304"},{"type":"Edge","source_node_id":"b2f4a2e0da2249979f58061a32a32e97","target_node_id":"7a02fc7bd2244375bb8a9196b5c1aa07","branch_id":"0d8fa6d007c04a79844d0061ea371f0f","id":"f503f705b2b842529fa35cc160ddc9ec","name":"0d8fa6d007c04a79844d0061ea371f0f"},{"type":"Edge","source_node_id":"b2f4a2e0da2249979f58061a32a32e97","target_node_id":"db6846909b3045ebaf1228e27ef23b0c","branch_id":"a1539b96d0f24527ae2b6ed7982729c5","id":"d6ba8342a0424dc4a5c010a675f868ce","name":"a1539b96d0f24527ae2b6ed7982729c5"},{"type":"Edge","source_node_id":"70b6a487eabe4f9283a37199c9d4a46d","target_node_id":"b2f4a2e0da2249979f58061a32a32e97","id":"f5411409646d48bdaa1d28eecde79e0a"},{"type":"Edge","source_node_id":"0a6535374db04308bca535a3623d5b25","target_node_id":"7bf1de5ca9a84a19be19aa0d813f082e","id":"f69f3c62e2cd4c04be8d97b1b6230771"},{"type":"Edge","source_node_id":"d5074b5dd6b34753969c4194d2dbdd32","target_node_id":"503877f7636143e1840a0753e42ab45f","id":"3f08e759efb844e7885075490adbf891"},{"type":"Edge","source_node_id":"503877f7636143e1840a0753e42ab45f","target_node_id":"70b6a487eabe4f9283a37199c9d4a46d","branch_id":"5e45183bb4b54afc88ee408887ecdec9","id":"73663a4904bf47e0acbcd2d63a39ab12","name":"5e45183bb4b54afc88ee408887ecdec9"},{"type":"Edge","source_node_id":"503877f7636143e1840a0753e42ab45f","target_node_id":"70b6a487eabe4f9283a37199c9d4a46d","branch_id":"f092bc4e74194344954de072cbb5b227","id":"ea9ee9c85a4c4b6ba693e05895b418bd","name":"f092bc4e74194344954de072cbb5b227"},{"type":"Edge","source_node_id":"7bf1de5ca9a84a19be19aa0d813f082e","target_node_id":"cc2f45d3e85947ceaeb54e618af81f76","branch_id":"f4e7080efd4f49608e9b69f602fdd0d3","id":"f67a5db7d85242d29711e48be970ac6a","name":"f4e7080efd4f49608e9b69f602fdd0d3"},{"type":"Edge","source_node_id":"b164bfd0b16742ec890f522cdbd95ab2","target_node_id":"9a31232af9dd44888e027721d45cc210","id":"b8edcbd1e1dd440eb56d17d3030f23cc"},{"type":"Edge","source_node_id":"9a31232af9dd44888e027721d45cc210","target_node_id":"26df69de37764c94a2db3960f11a1343","id":"41d8238e715e4853be20215a8a097baa"},{"type":"Edge","source_node_id":"26df69de37764c94a2db3960f11a1343","target_node_id":"83326bfa46524a1e9c9c35a2b6c62a84","branch_id":"aec7a4ec33d241eea35adf5d0fedbad6","id":"7f3d09fae1e54219afb5eb3ab8ac6bbe","name":"aec7a4ec33d241eea35adf5d0fedbad6"},{"type":"Edge","source_node_id":"26df69de37764c94a2db3960f11a1343","target_node_id":"cc2f45d3e85947ceaeb54e618af81f76","branch_id":"0a8ee73e3a2944249e48134e6924a74f","id":"2dab2d5f85f8492aa85b8a4aab7df7cf","name":"0a8ee73e3a2944249e48134e6924a74f"},{"type":"Edge","source_node_id":"38fa998fe2524dbaa403d05ca9f15b76","target_node_id":"4ddd97a0622c4981b9adeb47537ff619","id":"6af5f746044245349d1f4762f958e7e1"},{"type":"Edge","source_node_id":"4ddd97a0622c4981b9adeb47537ff619","target_node_id":"83326bfa46524a1e9c9c35a2b6c62a84","branch_id":"0ad37a4e01ca494484a66d75492ae751","id":"51ca0c721c9f4a6587cbf9e47a868329","name":"0ad37a4e01ca494484a66d75492ae751"},{"type":"Edge","source_node_id":"4ddd97a0622c4981b9adeb47537ff619","target_node_id":"f72328380a834b8280fdd17f02fa2b58","branch_id":"6b7b167254204604be514926d14bf86e","id":"8df422517a014579a2e179a3a06cc1ae","name":"6b7b167254204604be514926d14bf86e"},{"type":"Edge","source_node_id":"7bf1de5ca9a84a19be19aa0d813f082e","target_node_id":"b91fe9f20dba47f8bcf137b6a51edf8c","branch_id":"165cb2aaf9774f4491ce5becb3b0df3e","id":"bc79ec84369c4d338c4db1dc30435911","name":"165cb2aaf9774f4491ce5becb3b0df3e"},{"type":"Edge","source_node_id":"3599d7f9055243a3973a1b3548755c23","target_node_id":"9094e5f0bb2043bc96a73d250624df3c","branch_id":"d86678fa44844b26853af390bd740829","id":"b6e5ec55120348299431f8a2172b1cc7","name":"d86678fa44844b26853af390bd740829"},{"type":"Edge","source_node_id":"7bf1de5ca9a84a19be19aa0d813f082e","target_node_id":"a151f05f187e4dbb9f8a298ec7f4a65d","branch_id":"9347d925e10244ac8ca087c1d0bd281d","id":"39c33ba1fcae497c93a225664c171af4","name":"9347d925e10244ac8ca087c1d0bd281d"},{"type":"Edge","source_node_id":"a151f05f187e4dbb9f8a298ec7f4a65d","target_node_id":"7e8e876638594414a111bde0cbef6e75","id":"780cf2fa5c014f61b5eafe6b109de4b1"},{"type":"Edge","source_node_id":"7e8e876638594414a111bde0cbef6e75","target_node_id":"58f1bcf8d4f64c97b4fa78f63bd6a87a","id":"b3dfb239153f4a6d96cf7366d98a0ecd"},{"type":"Edge","source_node_id":"58f1bcf8d4f64c97b4fa78f63bd6a87a","target_node_id":"83326bfa46524a1e9c9c35a2b6c62a84","branch_id":"e9ae90b1dc7a445e9239f19b63c059c1","id":"5ab36cbff20544d9b24b6881b4d5dbab","name":"e9ae90b1dc7a445e9239f19b63c059c1"},{"type":"Edge","source_node_id":"58f1bcf8d4f64c97b4fa78f63bd6a87a","target_node_id":"5e08edf7433148ddb9c4c22000d65b34","branch_id":"1afe540a5f6d4a5ba06849104a5b2806","id":"b892922c26b24427bd34834806371ad7","name":"1afe540a5f6d4a5ba06849104a5b2806"},{"type":"Edge","source_node_id":"6429a831b5344d489744fb98bcd392bd","target_node_id":"83326bfa46524a1e9c9c35a2b6c62a84","branch_id":"c5fb653b1fa94288b27ee2110d23b7ea","id":"2a3b09d74bae4e7c9e1c8533c72357c1","name":"c5fb653b1fa94288b27ee2110d23b7ea"},{"type":"Edge","source_node_id":"137de8237c754074a82231cd0ff088cc","target_node_id":"6429a831b5344d489744fb98bcd392bd","id":"296c5c1ea9ec4d218293221fb358d48a"},{"type":"Edge","source_node_id":"2fdae1d82f92440491a102bac28d6a06","target_node_id":"81bf6e8754e24099a21fe54f22a38e05","branch_id":"4f71f27a59aa41d3879f71b4ab227257","id":"cadcffe27b024902a53b57095f2095bc","name":"4f71f27a59aa41d3879f71b4ab227257"},{"type":"Edge","source_node_id":"2fdae1d82f92440491a102bac28d6a06","target_node_id":"38343fc729ad40689c8562796cf11663","branch_id":"7051bd8e1424418e9d4e39aa57a8c619","id":"041cde9d53424eb1bf7c40e29034632b","name":"7051bd8e1424418e9d4e39aa57a8c619"},{"type":"Edge","source_node_id":"2fdae1d82f92440491a102bac28d6a06","target_node_id":"6497ca2168df43fab6532ea1b107c811","branch_id":"d80e1b0327ad492788cdf7028b92b5cf","id":"97a4fbafd9ff4017b497e79e61f2b3aa","name":"d80e1b0327ad492788cdf7028b92b5cf"},{"type":"Edge","source_node_id":"2fdae1d82f92440491a102bac28d6a06","target_node_id":"4ecfc7e812e2432e9a363c524bd81eba","branch_id":"2608cb204cc94e34aed9b06a2d7917f6","id":"c7458fbe6c4f4f36af75af9afe0a11db","name":"2608cb204cc94e34aed9b06a2d7917f6"},{"type":"Edge","source_node_id":"2fdae1d82f92440491a102bac28d6a06","target_node_id":"a7863546132747a1b7acdd8d8f93aa4d","branch_id":"06bcb98f83ca4a71ad197a0d22ba234c","id":"d057560b9e33403d97bd429b04c22ea7","name":"06bcb98f83ca4a71ad197a0d22ba234c"},{"type":"Edge","source_node_id":"2fdae1d82f92440491a102bac28d6a06","target_node_id":"c900cde306c641e2ba8e4f91d0fc99db","branch_id":"c75c9df6c5a2460b9165932f653ce5d8","id":"377a3646d9bf466ca108e2e4899a43e2","name":"c75c9df6c5a2460b9165932f653ce5d8"},{"type":"Edge","source_node_id":"2fdae1d82f92440491a102bac28d6a06","target_node_id":"4619168a02cb47dc9fbdf8ba9963c0b3","branch_id":"724682e7b63a43759f9b5759649480ed","id":"5c80655b70da4edbaf329266ca0e10bc","name":"724682e7b63a43759f9b5759649480ed"},{"type":"Edge","source_node_id":"880fb44f5b2543ff8566a701d47421bd","target_node_id":"38fa998fe2524dbaa403d05ca9f15b76","id":"1b57876b59cc4669bbe153a1310bf126"},{"type":"Edge","source_node_id":"0697fcf6cd0244d6a00fae7218f69bd7","target_node_id":"880fb44f5b2543ff8566a701d47421bd","branch_id":"c4861d6b29ec4ac7b14f0b9a0e66e3a8","id":"50905f6a9efe4b179ff50b19d65d904b","name":"c4861d6b29ec4ac7b14f0b9a0e66e3a8"},{"type":"Edge","source_node_id":"0697fcf6cd0244d6a00fae7218f69bd7","target_node_id":"22fa9aa350384b269038df6d6e9ab0a4","branch_id":"506743b977d54e79a295d595f7de4bd9","id":"61dc44eaaeaa44fda17ba9ca346ca28d","name":"506743b977d54e79a295d595f7de4bd9"},{"type":"Edge","source_node_id":"22fa9aa350384b269038df6d6e9ab0a4","target_node_id":"38fa998fe2524dbaa403d05ca9f15b76","id":"b129425e7f0245e9a3eb55448dbdb173"},{"type":"Edge","source_node_id":"0697fcf6cd0244d6a00fae7218f69bd7","target_node_id":"27cc9bfdec444f83a31c39e4fe946947","branch_id":"22169ec1aebc44d5b225f4f64bf68bd5","id":"eafd3064e7f6453f855de40434ed72ca","name":"22169ec1aebc44d5b225f4f64bf68bd5"},{"type":"Edge","source_node_id":"27cc9bfdec444f83a31c39e4fe946947","target_node_id":"38fa998fe2524dbaa403d05ca9f15b76","id":"32176dff25a34670b0742d255e23dfef"},{"type":"Edge","source_node_id":"0697fcf6cd0244d6a00fae7218f69bd7","target_node_id":"ead0eab43f0b4d22afc9295932f439d3","branch_id":"80387ceddfc241c582cd0a7ee47d0ec3","id":"d55a6f80af7f4236b16ae38b43b02ef4","name":"80387ceddfc241c582cd0a7ee47d0ec3"},{"type":"Edge","source_node_id":"ead0eab43f0b4d22afc9295932f439d3","target_node_id":"38fa998fe2524dbaa403d05ca9f15b76","id":"011f7f74be184feb88e756cfd2b164cb"},{"type":"Edge","source_node_id":"0697fcf6cd0244d6a00fae7218f69bd7","target_node_id":"fd67178bc8624618b973ccfef0d17ba3","branch_id":"7cf2b0b4a5dc4790823a19b70a1f272c","id":"8c1c23962c1b4033be00f561c13475ff","name":"7cf2b0b4a5dc4790823a19b70a1f272c"},{"type":"Edge","source_node_id":"fd67178bc8624618b973ccfef0d17ba3","target_node_id":"38fa998fe2524dbaa403d05ca9f15b76","id":"f83eda0814054132bfa3087b8e10dd6a"},{"type":"Edge","source_node_id":"0697fcf6cd0244d6a00fae7218f69bd7","target_node_id":"be7cc87b9b024caa9b56178cc2f3be56","branch_id":"4e61fd843c8e4600aae8583ed827df55","id":"e3bd97df48164d8081f6884fc222256b","name":"4e61fd843c8e4600aae8583ed827df55"},{"type":"Edge","source_node_id":"be7cc87b9b024caa9b56178cc2f3be56","target_node_id":"38fa998fe2524dbaa403d05ca9f15b76","id":"5260a4e4fff7441e9a4af19f2f2bc24a"},{"type":"Edge","source_node_id":"2fbbd85122e14221a1df44ae3a2ccea6","target_node_id":"38fa998fe2524dbaa403d05ca9f15b76","id":"8967bab47b254596b82da1224f0df6c2"},{"type":"Edge","source_node_id":"26df69de37764c94a2db3960f11a1343","target_node_id":"f72328380a834b8280fdd17f02fa2b58","branch_id":"46155c10bb70462b9624e13b023e0419","id":"8f584dd063354104a28d3a3c23e1dd0a","name":"46155c10bb70462b9624e13b023e0419"},{"type":"Edge","source_node_id":"f72328380a834b8280fdd17f02fa2b58","target_node_id":"0697fcf6cd0244d6a00fae7218f69bd7","id":"0a15304ef9824840a34dc36e986455b4"},{"type":"Edge","source_node_id":"cc2f45d3e85947ceaeb54e618af81f76","target_node_id":"7c51221547e242d3a29b8d3801738951","id":"73b1e536b7304f8d8c34eb218a507ff0"},{"type":"Edge","source_node_id":"7c51221547e242d3a29b8d3801738951","target_node_id":"b164bfd0b16742ec890f522cdbd95ab2","branch_id":"68849aa5c53f4929b214370c7c144455","id":"48404c7123ce4af3aa0ecd9416bd91ae","name":"68849aa5c53f4929b214370c7c144455"},{"type":"Edge","source_node_id":"7c51221547e242d3a29b8d3801738951","target_node_id":"a789090ba3844910910b63d2683698ba","branch_id":"89322d7108144354bc9877efe68e84ae","id":"7a499c3f1e0c43f8b1ae80f1b320309a","name":"89322d7108144354bc9877efe68e84ae"},{"type":"Edge","source_node_id":"a789090ba3844910910b63d2683698ba","target_node_id":"9a31232af9dd44888e027721d45cc210","id":"8e490b3a310040e9b8efc3ba35442a1c"},{"type":"Edge","source_node_id":"7c51221547e242d3a29b8d3801738951","target_node_id":"2f2c1fbfda5f4d42adef5a1c2bfbe766","branch_id":"88717266b44c4f39b205c572cccaaf84","id":"26ba51c60ad84e3195483b32be5d70a7","name":"88717266b44c4f39b205c572cccaaf84"},{"type":"Edge","source_node_id":"2f2c1fbfda5f4d42adef5a1c2bfbe766","target_node_id":"9a31232af9dd44888e027721d45cc210","id":"9b2c5e570d7c485db6b7947174606dc7"},{"type":"Edge","source_node_id":"7c51221547e242d3a29b8d3801738951","target_node_id":"350bf79022d14744855860ecf794275f","branch_id":"064610772cac463cb74e825b69a7d48c","id":"4a93feb7c3df4ac08cc144e832126bab","name":"064610772cac463cb74e825b69a7d48c"},{"type":"Edge","source_node_id":"350bf79022d14744855860ecf794275f","target_node_id":"9a31232af9dd44888e027721d45cc210","id":"50dc3c6766fd4d13b46cf6a76d14b45a"},{"type":"Edge","source_node_id":"7c51221547e242d3a29b8d3801738951","target_node_id":"770509b1dc7541cb885f38c3b776a3f0","branch_id":"32e1aaf7a48841ec8655507584a0cc8a","id":"370df8cfe7f440ef8a547012a735da5d","name":"32e1aaf7a48841ec8655507584a0cc8a"},{"type":"Edge","source_node_id":"770509b1dc7541cb885f38c3b776a3f0","target_node_id":"9a31232af9dd44888e027721d45cc210","id":"bc0d070e15594eeb88866a86e242eca2"},{"type":"Edge","source_node_id":"7c51221547e242d3a29b8d3801738951","target_node_id":"9a879d47377f4c2d8c79c003468d4074","branch_id":"bee36e5cd4394cb1bc09d39cdd49daa7","id":"c4a86df8c2424a99ada8082efec716f2","name":"bee36e5cd4394cb1bc09d39cdd49daa7"},{"type":"Edge","source_node_id":"9a879d47377f4c2d8c79c003468d4074","target_node_id":"9a31232af9dd44888e027721d45cc210","id":"1c61b3c1220c4c819bf1afcc9c7ca6eb"},{"type":"Edge","source_node_id":"ff096993165e4dd294e3c9a0e0f5b806","target_node_id":"9a31232af9dd44888e027721d45cc210","id":"8e2bbfd320164c659e5cee4af3451539"},{"type":"Edge","source_node_id":"7bf1de5ca9a84a19be19aa0d813f082e","target_node_id":"2f48f47b480d4977b49e34d1c42a1aaa","branch_id":"cfe711cc5da148ff968f336574402b82","id":"e13a5dd3d8f34f30a1d278d5dec01707","name":"cfe711cc5da148ff968f336574402b82"},{"type":"Edge","source_node_id":"2f48f47b480d4977b49e34d1c42a1aaa","target_node_id":"83326bfa46524a1e9c9c35a2b6c62a84","id":"1a7e42b5e024442ab9150062c45cabdb"},{"type":"Edge","source_node_id":"4ecfc7e812e2432e9a363c524bd81eba","target_node_id":"77c6b8fdc9ae4400b19fe0f295648ce9","id":"de3c973455dd4b75873ded43b98ad726"},{"type":"Edge","source_node_id":"77c6b8fdc9ae4400b19fe0f295648ce9","target_node_id":"83326bfa46524a1e9c9c35a2b6c62a84","id":"b1926b6610704eef9297eb5eb322c234"},{"type":"Edge","source_node_id":"4619168a02cb47dc9fbdf8ba9963c0b3","target_node_id":"de7284e6b3454bcc92305a1531bc8599","id":"a03e455359194d8eb21758a9b773fe66"},{"type":"Edge","source_node_id":"de7284e6b3454bcc92305a1531bc8599","target_node_id":"83326bfa46524a1e9c9c35a2b6c62a84","id":"508da2e3c7d6430b8b9a493fdef45532"},{"type":"Edge","source_node_id":"c900cde306c641e2ba8e4f91d0fc99db","target_node_id":"e7a90d8169d74f749a97cc4d96cf1be3","id":"d7b4d0b6752f4ccb9e307e885677b5f6"},{"type":"Edge","source_node_id":"502797eb06b0494dac9328edbbe5f2e4","target_node_id":"83326bfa46524a1e9c9c35a2b6c62a84","id":"532074f26b6e485e96c45ab5a8d7463e"},{"type":"Edge","source_node_id":"6497ca2168df43fab6532ea1b107c811","target_node_id":"a08e9ca2ed3945a096a855125f7533be","id":"01924aff1bd94cbba19125b5d9aa5115"},{"type":"Edge","source_node_id":"a08e9ca2ed3945a096a855125f7533be","target_node_id":"83326bfa46524a1e9c9c35a2b6c62a84","id":"5307a58744c046b3a4607e4ada358949"},{"type":"Edge","source_node_id":"38343fc729ad40689c8562796cf11663","target_node_id":"f5c8edff76de4e428e334c75f8153f9e","id":"26fd9fc6a77c44c18e769dccd47fcf12"},{"type":"Edge","source_node_id":"f5c8edff76de4e428e334c75f8153f9e","target_node_id":"83326bfa46524a1e9c9c35a2b6c62a84","id":"de7488da8a634a70ab087ac1d4f876ac"},{"type":"Edge","source_node_id":"81bf6e8754e24099a21fe54f22a38e05","target_node_id":"82817e534fbc414bbb7afcb7b8f8888d","id":"3b271062360f45b083bb9a0b4eccfc37"},{"type":"Edge","source_node_id":"82817e534fbc414bbb7afcb7b8f8888d","target_node_id":"83326bfa46524a1e9c9c35a2b6c62a84","id":"a5c0d19b0e7049978f5b5a7094d6edfb"},{"type":"Edge","source_node_id":"1090b2f2a29641708c6786a4e183090d","target_node_id":"a3319b6e8c284d9c83ae3cc2e2e9572e","id":"7cf04b7dd967432eaf21836ada4d20f3"},{"type":"Edge","source_node_id":"a3319b6e8c284d9c83ae3cc2e2e9572e","target_node_id":"9a08dd3b2f7e4f87b1091f9553b0a539","id":"0aa74260a66f4c7383e7e9126b54eab2"},{"type":"Edge","source_node_id":"a7863546132747a1b7acdd8d8f93aa4d","target_node_id":"e8d2b923842e4dc491995e12c6f39840","id":"80889b92992946dcb8152f2ea18e0458"},{"type":"Edge","source_node_id":"e8d2b923842e4dc491995e12c6f39840","target_node_id":"502797eb06b0494dac9328edbbe5f2e4","id":"ec192ac02fcd4e59a40502bd486340aa"}],"id":"primary"}],"script_variables":[{"type":"String","name":"Comparation","value":{"type":"String","mode":"script","value":"(function execute() {\n    var bolean=true\n\n    var userId = gs.getUserID();\n\n    var userGr = new GlideRecord('sys_user');\n \n    if (userGr.get(userId)) {\n\n        var email = userGr.email;\n\n        gs.info(\"Email del usuario actual: \" + email);\n \n        // Buscar el mismo email en customer_contact\n\n        var contactGr = new GlideRecord('customer_contact');\n\n        contactGr.addQuery('email', email);\n\n        contactGr.setLimit(1);\n\n        contactGr.query();\n \n        if (contactGr.next()) {\n\n            gs.info(\"El email existe en customer_contact. sys_id: \" + contactGr.getUniqueValue());\n            bolean=true\n            \n\n        } else {\n\n            gs.info(\"El email NO existe en customer_contact.\");\n            bolean=false\n            \n        }\n\n    } else {\n\n        gs.info(\"No se pudo encontrar al usuario actual.\");\n\n    }\n    return bolean\n})();"},"list":false,"id":"306f493a7c684e1a82e864c7902daed5","formatType":"text","secure":false,"sensitive":false,"aiInput":false}],"glide_variables":[{"type":"Reference","table":"sys_user","auto_select":false,"id":"c865ba5caed14f8d941b5187e00c1c94","name":"user","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"String","name":"description_of_the_problem","list":false,"id":"1d6af7d22093433395ddaced2f9abded","formatType":"Text","validationScript":"","secure":false,"sensitive":false,"aiInput":false},{"type":"Choice","choices":[{"name":"Create an Incident","element":"Create an Incident"},{"name":"Check the status of your incidents","element":"Check the status of your incidents"},{"name":"Knowledge Bases","element":"Knowledge Bases"},{"name":"Other","element":"Other"}],"id":"fb58ac7fcdd148b8879cf537861749c6","name":"choices","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Choices"},{"type":"Choice","choices":[{"name":"Yes ","element":"Yes "},{"name":"No","element":"No"}],"id":"0c1533ee80aa44659499557943a6ca8d","name":"can_i_help_you_with_something_else_","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Can I Help You With Something Else?"},{"type":"Choice","choices":[{"name":"Knowledge Bases","element":"Knowledge Bases"},{"name":"Other","element":"Other"}],"id":"853326a7f9d64cbaad7858087bac3248","name":"choices_with_out_incident_creation","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Choices With Out Incident Creation"},{"type":"Choice","choices":[{"name":"Yes ","element":"Yes "},{"name":"No","element":"No"}],"id":"6f1ba205b7264fcf9872886736696d22","name":"can_i_help_you_with_something_else__2","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Can I Help You With Something Else? (2)"},{"type":"Choice","choices":[{"name":"Consumer Service","element":"Consumer Service"},{"name":"Costumer Service","element":"Costumer Service"},{"name":"Enterprise Asset Knowledge Base","element":"Enterprise Asset Knowledge Base"},{"name":"Field Service Knowledge","element":"Field Service Knowledge"},{"name":"IT","element":"IT"},{"name":"Vulnerabilities","element":"Vulnerabilities"},{"name":"Knowledge","element":"Knowledge"}],"id":"2f26b0760fca46719bfd613ab91941f6","name":"what_kind_of_knowledge_you_want_to_see_","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"What Kind Of Knowledge You Want To See?"},{"type":"Choice","choices":[{"name":"Knowledge Base ","element":"Knowledge Base"},{"name":"Specific Knowledge","element":"Specific Knowledge"},{"name":"No","element":"No"}],"id":"b8398c32b6994227ac062321e0dc5d88","name":"you_want_to_see_an_specific_knowledge_","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"You Want To See An Specific Knowledge?"},{"type":"Choice","choices":[{"name":"Yes","element":"Yes"},{"name":"No","element":"No"}],"id":"489a3bc1b2d0431198e4988df3cca94e","name":"specific_knowledge","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Specific Knowledge"},{"type":"Choice","choices":[{"name":"Servomotor","element":"Servomotor"},{"name":"Engine","element":"Engine"},{"name":"Coil","element":"Coil"},{"name":"Industrial PVC","element":"Industrial PVC"},{"name":"Cable","element":"Cable"},{"name":"Harmonic Drive","element":"Armonic Drive"},{"name":"Bearing","element":"Bearing"}],"id":"03a9ce2c648c481b99ad75e5454599f9","name":"select_the_option_that_best_matches_your","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Select The Option That Best Matches Your"},{"type":"Choice","choices":[{"name":"LatinAmerica","element":"Mexican Enterprise 1"},{"name":"US","element":"USA Enterprise 1"},{"name":"Europe","element":"Spanish Enterprise 1"}],"id":"65e2e57bcff64d36bc40b2d817db073e","name":"select_your_poth","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Select Your Poth"},{"type":"Reference","table":"customer_contact","auto_select":false,"id":"3bd792015e714eb2abc833c499ef6291","name":"contact_","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Reference","table":"sn_ot_incident","auto_select":false,"id":"8f65ce34e3704e548a8d40653b775411","name":"incident_ot_creation","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Choice","choices":[{"name":"Yes","element":"Yes"},{"name":"No","element":"No"}],"id":"f4f8bc3f6be94fdb8cd6e2f59372bc41","name":"specific_case_from_the_table","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Specific Case From The Table"},{"type":"String","name":"ot_incident_number","list":false,"id":"20da92161bf0461b9757d458cfe04481","formatType":"Text","validationScript":"","secure":false,"sensitive":false,"aiInput":false},{"type":"Choice","choices":[{"name":"Yes","element":"Yes"},{"name":"No","element":"No"}],"id":"4df4e0eed059483491e1f175117814c0","name":"another_search","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false,"label":"Another Search"},{"type":"Reference","table":"sn_ot_incident","auto_select":false,"id":"cf99c78d04e34ba6ad27defd75c9016c","name":"incident_ot_creation_1","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Reference","table":"sn_ot_incident","auto_select":false,"id":"edf7f2dfe509470db20cbd81d59d1c77","name":"incident_ot_creation_2","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Reference","table":"sn_ot_incident","auto_select":false,"id":"e2630c31cb7343b2be6a0c77754be50b","name":"incident_ot_creation_3","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Reference","table":"sn_ot_incident","auto_select":false,"id":"d3d8224b2c214b5391b27ce8f1c2521a","name":"incident_ot_creation_4","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Reference","table":"sn_ot_incident","auto_select":false,"id":"6858f48dfb384351a201b2f1d3380c78","name":"incident_ot_creation_5","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"Reference","table":"sn_ot_incident","auto_select":false,"id":"c327f3f91b0b4440bec31d6f7c99eda6","name":"incident_ot_creation_6","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false},{"type":"String","name":"specific_number_knowledge","list":false,"id":"a45a6d3f9331477fbed55617d57492ec","formatType":"Text","validationScript":"","secure":false,"sensitive":false,"aiInput":false},{"type":"Reference","table":"customer_account","reference_qualifier_condition":"nameLIKE{{vaInputs.select_your_poth}}","auto_select":false,"id":"0ae2e014efe54c8bb1a443e1b12643e5","name":"poth","formatType":"text","secure":false,"sensitive":false,"aiInput":false,"list":false}],"applicability":{"type":"Applicability","mode":"script","value":"true"},"roles":[],"scope":"209d68cbc3ede6103ab9b0170501312b","domain":"global","topic_type":"STANDARD","channels":[],"dialog_acts_enabled":false,"id":"7307b948c3066a103ab9b0170501318d","name":"_PRVW__cc9ae819e5cb49488643875300e3d26a","key_phrases":["CSM_Virtual_Agent_V7","CSM_Virtual_Agent_V6"],"nlu_provider":"","nlu_model":"","nlu_model_label":"","nlu_intent":"","nlu_intent_label":"","flexible_conversation_switching":false,"autopilot_topic":true,"design_categories":[],"triggerable_by_notification":false,"description":"Create a new incident with all the caracteristics and certain kind of assets","model_type":"nlu_keyword","foundational":false,"modify_confirmation_enabled":false,"context_profiles":[],"title":"CSM_Virtual_Agent_V7","library":false,"readOnly":false,"nluMapping":"[]"}</design_definition>
+        <design_topic_id>7307b948c3066a103ab9b0170501318d</design_topic_id>
         <graph>{
   "graph_api_version": "1.0.78",
   "goals": {
@@ -24,8 +15,8 @@
       "applicability": "",
       "description": "",
       "nodes": {
-        "e676cfa578134c988d34dfb20f264ce0": {
-          "id": "e676cfa578134c988d34dfb20f264ce0",
+        "3e85d2beeea9444ba2350c11c4e6566f": {
+          "id": "3e85d2beeea9444ba2350c11c4e6566f",
           "stepType": "Start",
           "name": "Start",
           "greetingResponse": {
@@ -57,8 +48,8 @@
             "mode": "simple"
           }
         },
-        "1cdf06c8144a4d9fb630e5a83caefef9": {
-          "id": "1cdf06c8144a4d9fb630e5a83caefef9",
+        "7a02fc7bd2244375bb8a9196b5c1aa07": {
+          "id": "7a02fc7bd2244375bb8a9196b5c1aa07",
           "stepType": "TerminateGoal",
           "name": "End",
           "confirmationMessage": {
@@ -66,7 +57,7 @@
             "value": ""
           }
         },
-        "134d0a1f8afc4bc39711bee6067f7c7c": {
+        "0a6535374db04308bca535a3623d5b25": {
           "name": "Choices",
           "prompt": {
             "value": [
@@ -105,9 +96,9 @@
             "value": "",
             "mode": "simple"
           },
-          "variableId": "a3dfe3cb79864025abbfd611e935cb84",
+          "variableId": "fb58ac7fcdd148b8879cf537861749c6",
           "detailDescription": "",
-          "id": "134d0a1f8afc4bc39711bee6067f7c7c",
+          "id": "0a6535374db04308bca535a3623d5b25",
           "stepType": "ChoicePrompt",
           "hasCardHeader": false,
           "cardMetadata": {
@@ -120,13 +111,13 @@
           "withNluUserInput": false,
           "skipIfFulfilled": false
         },
-        "8b50825581714c0b96672778bd279cb6": {
-          "id": "8b50825581714c0b96672778bd279cb6",
+        "550bcef460e342de8aa193ae37ea3d6c": {
+          "id": "550bcef460e342de8aa193ae37ea3d6c",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "d7ab6271c0414e728c8240c0d09c0fcb": {
-          "id": "d7ab6271c0414e728c8240c0d09c0fcb",
+        "db6846909b3045ebaf1228e27ef23b0c": {
+          "id": "db6846909b3045ebaf1228e27ef23b0c",
           "stepType": "TextOutput",
           "name": "Incident Access",
           "secure": false,
@@ -153,12 +144,12 @@
             "mode": "query"
           }
         },
-        "b394b5874a5f4a3ea14f0f51f7edddfc": {
-          "id": "b394b5874a5f4a3ea14f0f51f7edddfc",
+        "60025da9c1fc4c5696dcc2e94ec26e52": {
+          "id": "60025da9c1fc4c5696dcc2e94ec26e52",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "e07a51d99df24292ad37573bc518a144": {
+        "83326bfa46524a1e9c9c35a2b6c62a84": {
           "name": "Can i help you with something else?",
           "prompt": {
             "value": [
@@ -197,9 +188,9 @@
             "value": "",
             "mode": "simple"
           },
-          "variableId": "94940ba9d05c44329fd05516199e2c2d",
+          "variableId": "0c1533ee80aa44659499557943a6ca8d",
           "detailDescription": "",
-          "id": "e07a51d99df24292ad37573bc518a144",
+          "id": "83326bfa46524a1e9c9c35a2b6c62a84",
           "stepType": "ChoicePrompt",
           "hasCardHeader": false,
           "cardMetadata": {
@@ -212,7 +203,7 @@
           "withNluUserInput": false,
           "skipIfFulfilled": false
         },
-        "31c8f5dcf0224e01b5548cb871136a78": {
+        "d5074b5dd6b34753969c4194d2dbdd32": {
           "name": "Choices with out Incident creation",
           "prompt": {
             "value": [
@@ -251,9 +242,9 @@
             "value": "",
             "mode": "simple"
           },
-          "variableId": "08ad60a100684a34bb2fdb0b291430f5",
+          "variableId": "853326a7f9d64cbaad7858087bac3248",
           "detailDescription": "",
-          "id": "31c8f5dcf0224e01b5548cb871136a78",
+          "id": "d5074b5dd6b34753969c4194d2dbdd32",
           "stepType": "ChoicePrompt",
           "hasCardHeader": false,
           "cardMetadata": {
@@ -266,12 +257,12 @@
           "withNluUserInput": false,
           "skipIfFulfilled": false
         },
-        "9fa989cbcfaa44e49ad18949eb122cc4": {
-          "id": "9fa989cbcfaa44e49ad18949eb122cc4",
+        "b2f4a2e0da2249979f58061a32a32e97": {
+          "id": "b2f4a2e0da2249979f58061a32a32e97",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "bd88412d44884bf4b38b72831650f394": {
+        "70b6a487eabe4f9283a37199c9d4a46d": {
           "name": "Can i help you with something else?",
           "prompt": {
             "value": [
@@ -310,9 +301,9 @@
             "value": "",
             "mode": "simple"
           },
-          "variableId": "eba03d0568814c3a87e84bfc798db99d",
+          "variableId": "6f1ba205b7264fcf9872886736696d22",
           "detailDescription": "",
-          "id": "bd88412d44884bf4b38b72831650f394",
+          "id": "70b6a487eabe4f9283a37199c9d4a46d",
           "stepType": "ChoicePrompt",
           "hasCardHeader": false,
           "cardMetadata": {
@@ -325,17 +316,17 @@
           "withNluUserInput": false,
           "skipIfFulfilled": false
         },
-        "830294efb74441899e4a7ee6925cd514": {
-          "id": "830294efb74441899e4a7ee6925cd514",
+        "7bf1de5ca9a84a19be19aa0d813f082e": {
+          "id": "7bf1de5ca9a84a19be19aa0d813f082e",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "d6977e8b1c3145b1b8bd94b672565838": {
-          "id": "d6977e8b1c3145b1b8bd94b672565838",
+        "503877f7636143e1840a0753e42ab45f": {
+          "id": "503877f7636143e1840a0753e42ab45f",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "62f888faf18842eba7227a51f24678bd": {
+        "cc2f45d3e85947ceaeb54e618af81f76": {
           "name": "What kind of knowledge you want to see?",
           "prompt": {
             "value": [
@@ -374,9 +365,9 @@
             "value": "",
             "mode": "simple"
           },
-          "variableId": "3345e65c1cfb4194922d133edb44229e",
+          "variableId": "2f26b0760fca46719bfd613ab91941f6",
           "detailDescription": "",
-          "id": "62f888faf18842eba7227a51f24678bd",
+          "id": "cc2f45d3e85947ceaeb54e618af81f76",
           "stepType": "ChoicePrompt",
           "hasCardHeader": false,
           "cardMetadata": {
@@ -389,8 +380,8 @@
           "withNluUserInput": false,
           "skipIfFulfilled": false
         },
-        "4cdf48a458924c5cbf2ca06a44225c14": {
-          "id": "4cdf48a458924c5cbf2ca06a44225c14",
+        "b164bfd0b16742ec890f522cdbd95ab2": {
+          "id": "b164bfd0b16742ec890f522cdbd95ab2",
           "stepType": "TableOutput",
           "name": "Costumer Service Article List",
           "header": {
@@ -461,7 +452,7 @@
             "mode": "query"
           }
         },
-        "2d8d043c4886464a8906b711930fbc86": {
+        "9a31232af9dd44888e027721d45cc210": {
           "name": "You want to see an specific Knowledge?",
           "prompt": {
             "value": [
@@ -500,9 +491,9 @@
             "value": "",
             "mode": "simple"
           },
-          "variableId": "511a9fef5b884fa5b085fd54ccd365ab",
+          "variableId": "b8398c32b6994227ac062321e0dc5d88",
           "detailDescription": "",
-          "id": "2d8d043c4886464a8906b711930fbc86",
+          "id": "9a31232af9dd44888e027721d45cc210",
           "stepType": "ChoicePrompt",
           "hasCardHeader": false,
           "cardMetadata": {
@@ -515,12 +506,12 @@
           "withNluUserInput": false,
           "skipIfFulfilled": false
         },
-        "a8709d7f0ef948e7acbb9cb30d58b904": {
-          "id": "a8709d7f0ef948e7acbb9cb30d58b904",
+        "26df69de37764c94a2db3960f11a1343": {
+          "id": "26df69de37764c94a2db3960f11a1343",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "b0b74e04a55d49298e4af57328591505": {
+        "38fa998fe2524dbaa403d05ca9f15b76": {
           "name": "Specific Knowledge",
           "prompt": {
             "value": [
@@ -559,9 +550,9 @@
             "value": "",
             "mode": "simple"
           },
-          "variableId": "ef2807c72dc94ed6bd78fd2b0dcc6ce1",
+          "variableId": "489a3bc1b2d0431198e4988df3cca94e",
           "detailDescription": "",
-          "id": "b0b74e04a55d49298e4af57328591505",
+          "id": "38fa998fe2524dbaa403d05ca9f15b76",
           "stepType": "ChoicePrompt",
           "hasCardHeader": false,
           "cardMetadata": {
@@ -574,12 +565,12 @@
           "withNluUserInput": false,
           "skipIfFulfilled": false
         },
-        "79b9097e8e044779aaf0e13f9e201e52": {
-          "id": "79b9097e8e044779aaf0e13f9e201e52",
+        "4ddd97a0622c4981b9adeb47537ff619": {
+          "id": "4ddd97a0622c4981b9adeb47537ff619",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "ed3912c5d8da40a9972068828d3e8031": {
+        "1090b2f2a29641708c6786a4e183090d": {
           "name": "Select the option that best matches your",
           "prompt": {
             "value": [
@@ -618,9 +609,9 @@
             "value": "",
             "mode": "simple"
           },
-          "variableId": "bad7364100eb44cfb1f4d2ab7b182533",
+          "variableId": "03a9ce2c648c481b99ad75e5454599f9",
           "detailDescription": "",
-          "id": "ed3912c5d8da40a9972068828d3e8031",
+          "id": "1090b2f2a29641708c6786a4e183090d",
           "stepType": "ChoicePrompt",
           "hasCardHeader": false,
           "cardMetadata": {
@@ -633,7 +624,7 @@
           "withNluUserInput": false,
           "skipIfFulfilled": false
         },
-        "11f574977e134b458a9c0bfeec2a1997": {
+        "b91fe9f20dba47f8bcf137b6a51edf8c": {
           "name": "Select your Poth",
           "prompt": {
             "value": [
@@ -672,9 +663,9 @@
             "value": "",
             "mode": "simple"
           },
-          "variableId": "b9f26a2c3c5d48598e6176b847f569d1",
+          "variableId": "65e2e57bcff64d36bc40b2d817db073e",
           "detailDescription": "",
-          "id": "11f574977e134b458a9c0bfeec2a1997",
+          "id": "b91fe9f20dba47f8bcf137b6a51edf8c",
           "stepType": "ChoicePrompt",
           "hasCardHeader": false,
           "cardMetadata": {
@@ -687,8 +678,8 @@
           "withNluUserInput": false,
           "skipIfFulfilled": false
         },
-        "5aeea097b597475b84d1e2a86d1dfee9": {
-          "id": "5aeea097b597475b84d1e2a86d1dfee9",
+        "9094e5f0bb2043bc96a73d250624df3c": {
+          "id": "9094e5f0bb2043bc96a73d250624df3c",
           "stepType": "CrudAction",
           "name": "Contact ",
           "template": {
@@ -813,15 +804,15 @@
               "mode": "simple"
             }
           ],
-          "variableId": "6dfacbebca414a4a99ac4b6a83f18466"
+          "variableId": "3bd792015e714eb2abc833c499ef6291"
         },
-        "016d9f96084e4c1eb9dc9201ab1d2bc5": {
-          "id": "016d9f96084e4c1eb9dc9201ab1d2bc5",
+        "3599d7f9055243a3973a1b3548755c23": {
+          "id": "3599d7f9055243a3973a1b3548755c23",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "bb491a2787324ff49233b8592f959784": {
-          "id": "bb491a2787324ff49233b8592f959784",
+        "a151f05f187e4dbb9f8a298ec7f4a65d": {
+          "id": "a151f05f187e4dbb9f8a298ec7f4a65d",
           "stepType": "TableOutput",
           "name": "Incidents Created by the User",
           "header": {
@@ -882,7 +873,7 @@
             "mode": "query"
           }
         },
-        "72d65d0a9d334e88888236d14c8da0fc": {
+        "7e8e876638594414a111bde0cbef6e75": {
           "name": "Specific case from the table",
           "prompt": {
             "value": [
@@ -921,9 +912,9 @@
             "value": "",
             "mode": "simple"
           },
-          "variableId": "b3f10e150a4e4031b7752daf7ceeaf96",
+          "variableId": "f4f8bc3f6be94fdb8cd6e2f59372bc41",
           "detailDescription": "",
-          "id": "72d65d0a9d334e88888236d14c8da0fc",
+          "id": "7e8e876638594414a111bde0cbef6e75",
           "stepType": "ChoicePrompt",
           "hasCardHeader": false,
           "cardMetadata": {
@@ -936,13 +927,13 @@
           "withNluUserInput": false,
           "skipIfFulfilled": false
         },
-        "a7de2895a5bf4de192d1c5c0cbb61a5d": {
-          "id": "a7de2895a5bf4de192d1c5c0cbb61a5d",
+        "58f1bcf8d4f64c97b4fa78f63bd6a87a": {
+          "id": "58f1bcf8d4f64c97b4fa78f63bd6a87a",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "4d30545ead0f425eb33fb23e6987d5a7": {
-          "id": "4d30545ead0f425eb33fb23e6987d5a7",
+        "5e08edf7433148ddb9c4c22000d65b34": {
+          "id": "5e08edf7433148ddb9c4c22000d65b34",
           "stepType": "TextPrompt",
           "name": "OT Incident Number",
           "prompt": {
@@ -992,7 +983,7 @@
           },
           "withNluUserInput": false,
           "skipIfFulfilled": false,
-          "variableId": "3c4aac06ef754c51bb57acaec9329f06",
+          "variableId": "20da92161bf0461b9757d458cfe04481",
           "detailDescription": "",
           "inputType": {
             "format": "Text",
@@ -1000,8 +991,8 @@
           },
           "requestFeedback": true
         },
-        "c729bab91e1c4861957a37975413df41": {
-          "id": "c729bab91e1c4861957a37975413df41",
+        "6d00ea3ae856475085ab1996fae64dc4": {
+          "id": "6d00ea3ae856475085ab1996fae64dc4",
           "stepType": "RecordOutput",
           "name": "TSOTIncident",
           "variableId": "",
@@ -1030,12 +1021,12 @@
             "value": "number={{vaInputs.ot_incident_number}}"
           }
         },
-        "1e372e9e1f424b8aa805c8177713b2e2": {
-          "id": "1e372e9e1f424b8aa805c8177713b2e2",
+        "6429a831b5344d489744fb98bcd392bd": {
+          "id": "6429a831b5344d489744fb98bcd392bd",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "3bc349ec6de5455f9463ff8b288d6953": {
+        "137de8237c754074a82231cd0ff088cc": {
           "name": "Another Search",
           "prompt": {
             "value": [
@@ -1074,9 +1065,9 @@
             "value": "",
             "mode": "simple"
           },
-          "variableId": "4c26e8781f9a4a429d13b272a13cd0aa",
+          "variableId": "4df4e0eed059483491e1f175117814c0",
           "detailDescription": "",
-          "id": "3bc349ec6de5455f9463ff8b288d6953",
+          "id": "137de8237c754074a82231cd0ff088cc",
           "stepType": "ChoicePrompt",
           "hasCardHeader": false,
           "cardMetadata": {
@@ -1089,13 +1080,13 @@
           "withNluUserInput": false,
           "skipIfFulfilled": false
         },
-        "cb20f8c6606a4627a736ac19b596ad94": {
-          "id": "cb20f8c6606a4627a736ac19b596ad94",
+        "2fdae1d82f92440491a102bac28d6a06": {
+          "id": "2fdae1d82f92440491a102bac28d6a06",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "e6e4318f62fc4ec8a697e8cccbe3442c": {
-          "id": "e6e4318f62fc4ec8a697e8cccbe3442c",
+        "81bf6e8754e24099a21fe54f22a38e05": {
+          "id": "81bf6e8754e24099a21fe54f22a38e05",
           "stepType": "CrudAction",
           "name": "Incident OT Creation",
           "template": {
@@ -1198,10 +1189,10 @@
               "mode": "simple"
             }
           ],
-          "variableId": "991ec442b2f34967adc99abe479ca99f"
+          "variableId": "8f65ce34e3704e548a8d40653b775411"
         },
-        "20a84d096b2c48dc8fcdd8448a7c834d": {
-          "id": "20a84d096b2c48dc8fcdd8448a7c834d",
+        "38343fc729ad40689c8562796cf11663": {
+          "id": "38343fc729ad40689c8562796cf11663",
           "stepType": "CrudAction",
           "name": "Incident OT Creation 1",
           "template": {
@@ -1290,10 +1281,10 @@
               "mode": "simple"
             }
           ],
-          "variableId": "0ea2d7fdf4ce4846aa6d3193285de8c6"
+          "variableId": "cf99c78d04e34ba6ad27defd75c9016c"
         },
-        "ed35768675b34ad594fcfab42ec7fef0": {
-          "id": "ed35768675b34ad594fcfab42ec7fef0",
+        "6497ca2168df43fab6532ea1b107c811": {
+          "id": "6497ca2168df43fab6532ea1b107c811",
           "stepType": "CrudAction",
           "name": "Incident OT Creation 2",
           "template": {
@@ -1382,10 +1373,10 @@
               "mode": "simple"
             }
           ],
-          "variableId": "8dcc7568a34542bbb6a87b64f087f799"
+          "variableId": "edf7f2dfe509470db20cbd81d59d1c77"
         },
-        "69607f01c6ee46fdbb6743347ca83538": {
-          "id": "69607f01c6ee46fdbb6743347ca83538",
+        "4ecfc7e812e2432e9a363c524bd81eba": {
+          "id": "4ecfc7e812e2432e9a363c524bd81eba",
           "stepType": "CrudAction",
           "name": "Incident OT Creation 3",
           "template": {
@@ -1474,10 +1465,10 @@
               "mode": "simple"
             }
           ],
-          "variableId": "149f3025dbd944638d97a41940c227b9"
+          "variableId": "e2630c31cb7343b2be6a0c77754be50b"
         },
-        "789b04115c16497397dd86801b241f52": {
-          "id": "789b04115c16497397dd86801b241f52",
+        "a7863546132747a1b7acdd8d8f93aa4d": {
+          "id": "a7863546132747a1b7acdd8d8f93aa4d",
           "stepType": "CrudAction",
           "name": "Incident OT Creation 4",
           "template": {
@@ -1566,10 +1557,10 @@
               "mode": "simple"
             }
           ],
-          "variableId": "324cea7f749a4bd19608b74e9dc272c9"
+          "variableId": "d3d8224b2c214b5391b27ce8f1c2521a"
         },
-        "a2e1209b3e3545ebb832b676552ef8f5": {
-          "id": "a2e1209b3e3545ebb832b676552ef8f5",
+        "c900cde306c641e2ba8e4f91d0fc99db": {
+          "id": "c900cde306c641e2ba8e4f91d0fc99db",
           "stepType": "CrudAction",
           "name": "Incident OT Creation 5",
           "template": {
@@ -1658,10 +1649,10 @@
               "mode": "simple"
             }
           ],
-          "variableId": "394f13d5442a4da593ca85490e2bd756"
+          "variableId": "6858f48dfb384351a201b2f1d3380c78"
         },
-        "dfe0543505244de3bf71742f0c9ba488": {
-          "id": "dfe0543505244de3bf71742f0c9ba488",
+        "4619168a02cb47dc9fbdf8ba9963c0b3": {
+          "id": "4619168a02cb47dc9fbdf8ba9963c0b3",
           "stepType": "CrudAction",
           "name": "Incident OT Creation 6",
           "template": {
@@ -1750,10 +1741,10 @@
               "mode": "simple"
             }
           ],
-          "variableId": "de956cbaac244070b4894418d4235242"
+          "variableId": "c327f3f91b0b4440bec31d6f7c99eda6"
         },
-        "2ea0795f26b34902b9647a4382a898bf": {
-          "id": "2ea0795f26b34902b9647a4382a898bf",
+        "880fb44f5b2543ff8566a701d47421bd": {
+          "id": "880fb44f5b2543ff8566a701d47421bd",
           "stepType": "RecordOutput",
           "name": "Specific Knowledge",
           "variableId": "",
@@ -1781,13 +1772,13 @@
             "value": "NQnumber={{vaInputs.specific_number_knowledge}}"
           }
         },
-        "692fd912a5e9422b9e1b922527ec4e16": {
-          "id": "692fd912a5e9422b9e1b922527ec4e16",
+        "0697fcf6cd0244d6a00fae7218f69bd7": {
+          "id": "0697fcf6cd0244d6a00fae7218f69bd7",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "faf6396395b343cea1f84707ae7afa81": {
-          "id": "faf6396395b343cea1f84707ae7afa81",
+        "22fa9aa350384b269038df6d6e9ab0a4": {
+          "id": "22fa9aa350384b269038df6d6e9ab0a4",
           "stepType": "RecordOutput",
           "name": "Consumer Service Article Know",
           "variableId": "",
@@ -1815,8 +1806,8 @@
             "value": "number={{vaInputs.specific_number_knowledge}}"
           }
         },
-        "972987c918d24bf38f1746366f86dc1e": {
-          "id": "972987c918d24bf38f1746366f86dc1e",
+        "27cc9bfdec444f83a31c39e4fe946947": {
+          "id": "27cc9bfdec444f83a31c39e4fe946947",
           "stepType": "RecordOutput",
           "name": "Field Service Knowledge articl",
           "variableId": "",
@@ -1844,8 +1835,8 @@
             "value": "number={{vaInputs.specific_number_knowledge}}"
           }
         },
-        "8ce3138c8f01438ea4f068bbd33f2af3": {
-          "id": "8ce3138c8f01438ea4f068bbd33f2af3",
+        "ead0eab43f0b4d22afc9295932f439d3": {
+          "id": "ead0eab43f0b4d22afc9295932f439d3",
           "stepType": "RecordOutput",
           "name": "Enterprise Asset Knowledge Art",
           "variableId": "",
@@ -1873,8 +1864,8 @@
             "value": "number={{vaInputs.specific_number_knowledge}}"
           }
         },
-        "7ac10a4b4841435f83342553366d1770": {
-          "id": "7ac10a4b4841435f83342553366d1770",
+        "fd67178bc8624618b973ccfef0d17ba3": {
+          "id": "fd67178bc8624618b973ccfef0d17ba3",
           "stepType": "RecordOutput",
           "name": "IT Article",
           "variableId": "",
@@ -1902,11 +1893,11 @@
             "value": "number={{vaInputs.specific_number_knowledge}}"
           }
         },
-        "0766c830f85a4583aa8814ed3d2d1d03": {
-          "id": "0766c830f85a4583aa8814ed3d2d1d03",
+        "be7cc87b9b024caa9b56178cc2f3be56": {
+          "id": "be7cc87b9b024caa9b56178cc2f3be56",
           "stepType": "RecordOutput",
           "name": "Article Knowledge bases",
-          "variableId": "6dfacbebca414a4a99ac4b6a83f18466",
+          "variableId": "3bd792015e714eb2abc833c499ef6291",
           "cardTemplate": "General",
           "cardFields": {},
           "mode": "script",
@@ -1931,8 +1922,8 @@
             "value": "number={{vaInputs.specific_number_knowledge}}"
           }
         },
-        "e68825ccbd234be89365ef302be2d02e": {
-          "id": "e68825ccbd234be89365ef302be2d02e",
+        "2fbbd85122e14221a1df44ae3a2ccea6": {
+          "id": "2fbbd85122e14221a1df44ae3a2ccea6",
           "stepType": "RecordOutput",
           "name": "Vulnerabilities Knowledge",
           "variableId": "",
@@ -1960,8 +1951,8 @@
             "value": "number={{vaInputs.specific_number_knowledge}}"
           }
         },
-        "1ada275d18fb4e9e89474bc55ec0165b": {
-          "id": "1ada275d18fb4e9e89474bc55ec0165b",
+        "f72328380a834b8280fdd17f02fa2b58": {
+          "id": "f72328380a834b8280fdd17f02fa2b58",
           "stepType": "TextPrompt",
           "name": "Specific number Knowledge",
           "prompt": {
@@ -2026,7 +2017,7 @@
           },
           "withNluUserInput": false,
           "skipIfFulfilled": false,
-          "variableId": "3cb5d892f7814ce0a877e5f54d3886ad",
+          "variableId": "a45a6d3f9331477fbed55617d57492ec",
           "detailDescription": "",
           "inputType": {
             "format": "Text",
@@ -2034,13 +2025,13 @@
           },
           "requestFeedback": true
         },
-        "205efd66617f4d61a7f021fe6675d568": {
-          "id": "205efd66617f4d61a7f021fe6675d568",
+        "7c51221547e242d3a29b8d3801738951": {
+          "id": "7c51221547e242d3a29b8d3801738951",
           "stepType": "Decision",
           "name": "Decision"
         },
-        "9c14639be5a44cb0b57222baa86bf399": {
-          "id": "9c14639be5a44cb0b57222baa86bf399",
+        "a789090ba3844910910b63d2683698ba": {
+          "id": "a789090ba3844910910b63d2683698ba",
           "stepType": "TableOutput",
           "name": "Consumer Service Article List",
           "header": {
@@ -2106,8 +2097,8 @@
             "mode": "query"
           }
         },
-        "37099d556a3445f1a8c4d9a05e346342": {
-          "id": "37099d556a3445f1a8c4d9a05e346342",
+        "2f2c1fbfda5f4d42adef5a1c2bfbe766": {
+          "id": "2f2c1fbfda5f4d42adef5a1c2bfbe766",
           "stepType": "TableOutput",
           "name": "Field Service Knowledge list",
           "header": {
@@ -2173,8 +2164,8 @@
             "mode": "query"
           }
         },
-        "f781d6116a6943c28b4c23e0edd15d53": {
-          "id": "f781d6116a6943c28b4c23e0edd15d53",
+        "350bf79022d14744855860ecf794275f": {
+          "id": "350bf79022d14744855860ecf794275f",
           "stepType": "TableOutput",
           "name": "Enterprise Asset Knowledge lis",
           "header": {
@@ -2240,8 +2231,8 @@
             "mode": "query"
           }
         },
-        "efdf69a1bbb54df6a8241ac80b407b29": {
-          "id": "efdf69a1bbb54df6a8241ac80b407b29",
+        "770509b1dc7541cb885f38c3b776a3f0": {
+          "id": "770509b1dc7541cb885f38c3b776a3f0",
           "stepType": "TableOutput",
           "name": "IT List",
           "header": {
@@ -2307,8 +2298,8 @@
             "mode": "query"
           }
         },
-        "64d6950cadf549f1a0bbcf6a768f4263": {
-          "id": "64d6950cadf549f1a0bbcf6a768f4263",
+        "9a879d47377f4c2d8c79c003468d4074": {
+          "id": "9a879d47377f4c2d8c79c003468d4074",
           "stepType": "TableOutput",
           "name": "Knowledge Bases List",
           "header": {
@@ -2374,8 +2365,8 @@
             "mode": "query"
           }
         },
-        "a988f5e76a654c43a964fb46525b6714": {
-          "id": "a988f5e76a654c43a964fb46525b6714",
+        "ff096993165e4dd294e3c9a0e0f5b806": {
+          "id": "ff096993165e4dd294e3c9a0e0f5b806",
           "stepType": "TableOutput",
           "name": "Vulnerabilities List",
           "header": {
@@ -2446,8 +2437,8 @@
             "mode": "query"
           }
         },
-        "6e0c443ffad341b99b0414bb85d227b0": {
-          "id": "6e0c443ffad341b99b0414bb85d227b0",
+        "2f48f47b480d4977b49e34d1c42a1aaa": {
+          "id": "2f48f47b480d4977b49e34d1c42a1aaa",
           "stepType": "ReusableTopic",
           "name": "Transfer to Live Agent",
           "fields": [],
@@ -2468,11 +2459,11 @@
           "outputDynamicModal": {},
           "outputs": []
         },
-        "2976f6113ccb480ea7394bcdfc1fee76": {
-          "id": "2976f6113ccb480ea7394bcdfc1fee76",
+        "77c6b8fdc9ae4400b19fe0f295648ce9": {
+          "id": "77c6b8fdc9ae4400b19fe0f295648ce9",
           "stepType": "RecordOutput",
           "name": "Incident Number 3",
-          "variableId": "149f3025dbd944638d97a41940c227b9",
+          "variableId": "e2630c31cb7343b2be6a0c77754be50b",
           "cardTemplate": "General",
           "cardFields": {},
           "mode": "script",
@@ -2498,11 +2489,11 @@
             "value": "sys_id={{vaInputs.incident_ot_creation_3}}"
           }
         },
-        "d6b847e9dbbb4978a306bd65a74da443": {
-          "id": "d6b847e9dbbb4978a306bd65a74da443",
+        "de7284e6b3454bcc92305a1531bc8599": {
+          "id": "de7284e6b3454bcc92305a1531bc8599",
           "stepType": "RecordOutput",
           "name": "Incident Number 6",
-          "variableId": "de956cbaac244070b4894418d4235242",
+          "variableId": "c327f3f91b0b4440bec31d6f7c99eda6",
           "cardTemplate": "General",
           "cardFields": {},
           "mode": "script",
@@ -2528,11 +2519,11 @@
             "value": "sys_id={{vaInputs.incident_ot_creation_6}}"
           }
         },
-        "3ba9de2253ac457c82863d040a0845ba": {
-          "id": "3ba9de2253ac457c82863d040a0845ba",
+        "e7a90d8169d74f749a97cc4d96cf1be3": {
+          "id": "e7a90d8169d74f749a97cc4d96cf1be3",
           "stepType": "RecordOutput",
           "name": "Incident Number 5",
-          "variableId": "394f13d5442a4da593ca85490e2bd756",
+          "variableId": "6858f48dfb384351a201b2f1d3380c78",
           "cardTemplate": "General",
           "cardFields": {},
           "mode": "script",
@@ -2558,11 +2549,11 @@
             "value": "sys_id={{vaInputs.incident_ot_creation_5}}"
           }
         },
-        "5334bc6992f84a2a8c8eb3899ec840f5": {
-          "id": "5334bc6992f84a2a8c8eb3899ec840f5",
+        "502797eb06b0494dac9328edbbe5f2e4": {
+          "id": "502797eb06b0494dac9328edbbe5f2e4",
           "stepType": "RecordOutput",
           "name": "Incident Number 4",
-          "variableId": "324cea7f749a4bd19608b74e9dc272c9",
+          "variableId": "d3d8224b2c214b5391b27ce8f1c2521a",
           "cardTemplate": "General",
           "cardFields": {},
           "mode": "script",
@@ -2588,11 +2579,11 @@
             "value": "sys_id={{vaInputs.incident_ot_creation_4}}"
           }
         },
-        "b44c5c41ae64413c89e05c2cad9959c1": {
-          "id": "b44c5c41ae64413c89e05c2cad9959c1",
+        "a08e9ca2ed3945a096a855125f7533be": {
+          "id": "a08e9ca2ed3945a096a855125f7533be",
           "stepType": "RecordOutput",
           "name": "Incident Number 2",
-          "variableId": "8dcc7568a34542bbb6a87b64f087f799",
+          "variableId": "edf7f2dfe509470db20cbd81d59d1c77",
           "cardTemplate": "General",
           "cardFields": {},
           "mode": "script",
@@ -2618,11 +2609,39 @@
             "value": "sys_id={{vaInputs.incident_ot_creation_2}}"
           }
         },
-        "bad8f44ef4ab479c92827eaac7a18d96": {
-          "id": "bad8f44ef4ab479c92827eaac7a18d96",
+        "f5c8edff76de4e428e334c75f8153f9e": {
+          "id": "f5c8edff76de4e428e334c75f8153f9e",
+          "stepType": "RecordOutput",
+          "name": "Incident Number 1",
+          "variableId": "cf99c78d04e34ba6ad27defd75c9016c",
+          "cardTemplate": "General",
+          "cardFields": {},
+          "mode": "script",
+          "tableName": "sn_ot_incident",
+          "fields": [
+            "number",
+            "short_description",
+            "priority"
+          ],
+          "cardDefinition": {
+            "name": "Record",
+            "value": "General"
+          },
+          "requestFeedback": true,
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "condition": {
+            "mode": "glide_query",
+            "value": "sys_id={{vaInputs.incident_ot_creation_1}}"
+          }
+        },
+        "82817e534fbc414bbb7afcb7b8f8888d": {
+          "id": "82817e534fbc414bbb7afcb7b8f8888d",
           "stepType": "RecordOutput",
           "name": "Incident Number",
-          "variableId": "991ec442b2f34967adc99abe479ca99f",
+          "variableId": "8f65ce34e3704e548a8d40653b775411",
           "cardTemplate": "General",
           "cardFields": {},
           "mode": "script",
@@ -2648,7 +2667,7 @@
             "value": "sys_id={{vaInputs.incident_ot_creation}}"
           }
         },
-        "88d0744a99264d6c81ab91013404ad80": {
+        "9a08dd3b2f7e4f87b1091f9553b0a539": {
           "name": "Poth",
           "prompt": {
             "value": [
@@ -2687,9 +2706,9 @@
             "value": "",
             "mode": "simple"
           },
-          "variableId": "5a37f013e53048f592511fb5aa3098b7",
+          "variableId": "0ae2e014efe54c8bb1a443e1b12643e5",
           "detailDescription": "",
-          "id": "88d0744a99264d6c81ab91013404ad80",
+          "id": "9a08dd3b2f7e4f87b1091f9553b0a539",
           "stepType": "ReferenceChoicePrompt",
           "mode": "glide_record",
           "script": "",
@@ -2724,8 +2743,8 @@
           "withNluUserInput": false,
           "skipIfFulfilled": false
         },
-        "9c94f49abaf64b67b291b38793e93319": {
-          "id": "9c94f49abaf64b67b291b38793e93319",
+        "a3319b6e8c284d9c83ae3cc2e2e9572e": {
+          "id": "a3319b6e8c284d9c83ae3cc2e2e9572e",
           "stepType": "TextPrompt",
           "name": "Description of the problem",
           "prompt": {
@@ -2775,7 +2794,7 @@
           },
           "withNluUserInput": false,
           "skipIfFulfilled": false,
-          "variableId": "d617c1c6dbb64f6eb57353fa05174e92",
+          "variableId": "1d6af7d22093433395ddaced2f9abded",
           "detailDescription": "",
           "inputType": {
             "format": "Text",
@@ -2783,12 +2802,11 @@
           },
           "requestFeedback": true
         },
-        "5075cbd55a9c44ea9e6f319321f64458": {
-          "id": "5075cbd55a9c44ea9e6f319321f64458",
-          "stepType": "ScriptOutput",
-          "name": "Incident_Numeber_1_scpt_res",
-          "output_type": "single_part",
-          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_1);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_1)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_get_help' +\n    'sys_id=' + ot_incident.sys_id + '&amp;id=ticket&amp;table=ot_incident',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_get_help' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;id=ticket&amp;table=ot_incident'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n",
+        "e8d2b923842e4dc491995e12c6f39840": {
+          "id": "e8d2b923842e4dc491995e12c6f39840",
+          "name": "Incident Number 4",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_4);\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '/' +\n    gs.getProperty('sn_itsm_va.com.snc.itsm.virtualagent.portal_url') +\n    '?sys_id=' + ot_incident.sys_id + '&amp;id=ticket&amp;table=ot_incident',\n    label: ot_incident.number\n  };\n  var fieldList = ['category', 'assignment_group', 'short_description', 'state'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n  return html;\n})();\n\n",
+          "stepType": "ScriptAction",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2797,50 +2815,10 @@
       },
       "edges": [
         {
-          "id": "547d62f306484e568974d01c660acfac",
-          "edgeType": "Edge",
-          "source": "5075cbd55a9c44ea9e6f319321f64458",
-          "target": "e07a51d99df24292ad37573bc518a144",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "a2c5461881f2483582ca80a1f9255436",
-          "edgeType": "Edge",
-          "source": "11f574977e134b458a9c0bfeec2a1997",
-          "target": "ed3912c5d8da40a9972068828d3e8031",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "d0321e80bc4a46a18a484731896c7ab3",
-          "edgeType": "Edge",
-          "source": "88d0744a99264d6c81ab91013404ad80",
-          "target": "016d9f96084e4c1eb9dc9201ab1d2bc5",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "422cd14207e84f07b5924bdfb9db79e0",
-          "edgeType": "Edge",
-          "source": "5aeea097b597475b84d1e2a86d1dfee9",
-          "target": "cb20f8c6606a4627a736ac19b596ad94",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "69580a58ff2549b18d291f6e900ca977",
-          "edgeType": "Edge",
-          "source": "3ba9de2253ac457c82863d040a0845ba",
-          "target": "e07a51d99df24292ad37573bc518a144",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "84981484c371472ebf9be8b543fc56c1",
+          "id": "55f370c47c9e422999f2475036513509",
           "edgeType": "Branch",
-          "source": "692fd912a5e9422b9e1b922527ec4e16",
-          "target": "e68825ccbd234be89365ef302be2d02e",
+          "source": "7c51221547e242d3a29b8d3801738951",
+          "target": "ff096993165e4dd294e3c9a0e0f5b806",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -2850,10 +2828,63 @@
           "label": "Vulnerabilities"
         },
         {
-          "id": "9542d27922344b15aac42edbb98be97e",
+          "id": "93c069ea7f0d497192e0027382c28a6b",
+          "edgeType": "Edge",
+          "source": "5e08edf7433148ddb9c4c22000d65b34",
+          "target": "6d00ea3ae856475085ab1996fae64dc4",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "10f20cfa24d847499ec77edebc44977f",
+          "edgeType": "Edge",
+          "source": "b91fe9f20dba47f8bcf137b6a51edf8c",
+          "target": "1090b2f2a29641708c6786a4e183090d",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "d47d64efb8054612bcd2b7fdada5e692",
+          "edgeType": "Edge",
+          "source": "9a08dd3b2f7e4f87b1091f9553b0a539",
+          "target": "3599d7f9055243a3973a1b3548755c23",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "f5ccf66bfa7b45cdbb0d4786cab595cd",
+          "edgeType": "Edge",
+          "source": "9094e5f0bb2043bc96a73d250624df3c",
+          "target": "2fdae1d82f92440491a102bac28d6a06",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "2e3bb5eabcef4fae91e31aa8c4a72f57",
+          "edgeType": "Edge",
+          "source": "e7a90d8169d74f749a97cc4d96cf1be3",
+          "target": "83326bfa46524a1e9c9c35a2b6c62a84",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "999602b7e82d42c5af7a525ffffda5b7",
           "edgeType": "Branch",
-          "source": "016d9f96084e4c1eb9dc9201ab1d2bc5",
-          "target": "cb20f8c6606a4627a736ac19b596ad94",
+          "source": "0697fcf6cd0244d6a00fae7218f69bd7",
+          "target": "2fbbd85122e14221a1df44ae3a2ccea6",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.what_kind_of_knowledge_you_want_to_see_=Vulnerabilities",
+            "mode": "query"
+          },
+          "label": "Vulnerabilities"
+        },
+        {
+          "id": "5a3dffe25ee541a8818cbb5635352664",
+          "edgeType": "Branch",
+          "source": "3599d7f9055243a3973a1b3548755c23",
+          "target": "2fdae1d82f92440491a102bac28d6a06",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -2863,18 +2894,18 @@
           "label": "A contact already exists."
         },
         {
-          "id": "969a5c9e5098407ab5681d3f1c3b0bd1",
+          "id": "b9dd5bc4783b45ac89fb6034d08aa99f",
           "edgeType": "Edge",
-          "source": "c729bab91e1c4861957a37975413df41",
-          "target": "3bc349ec6de5455f9463ff8b288d6953",
+          "source": "6d00ea3ae856475085ab1996fae64dc4",
+          "target": "137de8237c754074a82231cd0ff088cc",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "aeaf6c57134242dc832a3e8ad548f1ba",
+          "id": "28c8ba4092d54747a8f0cc97772ccc85",
           "edgeType": "Branch",
-          "source": "1e372e9e1f424b8aa805c8177713b2e2",
-          "target": "4d30545ead0f425eb33fb23e6987d5a7",
+          "source": "6429a831b5344d489744fb98bcd392bd",
+          "target": "5e08edf7433148ddb9c4c22000d65b34",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -2884,10 +2915,10 @@
           "label": "Yes"
         },
         {
-          "id": "ca9eacfcf100481b88b6fe14e85dbf81",
+          "id": "d865fa38ca3f4adda9f0ddd2979257aa",
           "edgeType": "Branch",
-          "source": "8b50825581714c0b96672778bd279cb6",
-          "target": "134d0a1f8afc4bc39711bee6067f7c7c",
+          "source": "550bcef460e342de8aa193ae37ea3d6c",
+          "target": "0a6535374db04308bca535a3623d5b25",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -2897,18 +2928,18 @@
           "label": "Have the permissions"
         },
         {
-          "id": "66fea846be764a33b4755c734e9f5d24",
+          "id": "f77ae12f416344af8fc946d02dfe57e1",
           "edgeType": "Edge",
-          "source": "e676cfa578134c988d34dfb20f264ce0",
-          "target": "8b50825581714c0b96672778bd279cb6",
+          "source": "3e85d2beeea9444ba2350c11c4e6566f",
+          "target": "550bcef460e342de8aa193ae37ea3d6c",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "30bb150e5bdb44f4b5b99209d7eb30e3",
+          "id": "a146a43a0d42479fae7cd88d0c04e831",
           "edgeType": "Branch",
-          "source": "8b50825581714c0b96672778bd279cb6",
-          "target": "d7ab6271c0414e728c8240c0d09c0fcb",
+          "source": "550bcef460e342de8aa193ae37ea3d6c",
+          "target": "db6846909b3045ebaf1228e27ef23b0c",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -2918,10 +2949,10 @@
           "label": "Did not have the permissions"
         },
         {
-          "id": "6337d9ae227f4f08b769f7780a868183",
+          "id": "bccef58d365d4e5b84f11780db5a614d",
           "edgeType": "Branch",
-          "source": "b394b5874a5f4a3ea14f0f51f7edddfc",
-          "target": "1cdf06c8144a4d9fb630e5a83caefef9",
+          "source": "60025da9c1fc4c5696dcc2e94ec26e52",
+          "target": "7a02fc7bd2244375bb8a9196b5c1aa07",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -2931,10 +2962,10 @@
           "label": "No"
         },
         {
-          "id": "30febdaf70bd4bd18c72d9c89371ed60",
+          "id": "4e3aaea1bbd74dfcabec1a402a822bed",
           "edgeType": "Branch",
-          "source": "b394b5874a5f4a3ea14f0f51f7edddfc",
-          "target": "134d0a1f8afc4bc39711bee6067f7c7c",
+          "source": "60025da9c1fc4c5696dcc2e94ec26e52",
+          "target": "0a6535374db04308bca535a3623d5b25",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -2944,26 +2975,26 @@
           "label": "Yes"
         },
         {
-          "id": "3e0e7e5d47b3441eaae6e3e75ffd804a",
+          "id": "9d51cf62f95b4706b587c400b77765bd",
           "edgeType": "Edge",
-          "source": "e07a51d99df24292ad37573bc518a144",
-          "target": "b394b5874a5f4a3ea14f0f51f7edddfc",
+          "source": "83326bfa46524a1e9c9c35a2b6c62a84",
+          "target": "60025da9c1fc4c5696dcc2e94ec26e52",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "8a9a64593836451bb04184cdce878c55",
+          "id": "1ee4f3b1e47a4b7fba5c88181581d304",
           "edgeType": "Edge",
-          "source": "d7ab6271c0414e728c8240c0d09c0fcb",
-          "target": "31c8f5dcf0224e01b5548cb871136a78",
+          "source": "db6846909b3045ebaf1228e27ef23b0c",
+          "target": "d5074b5dd6b34753969c4194d2dbdd32",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "b1249bf0ebda4f2d93ccfc9656a3b873",
+          "id": "f503f705b2b842529fa35cc160ddc9ec",
           "edgeType": "Branch",
-          "source": "9fa989cbcfaa44e49ad18949eb122cc4",
-          "target": "1cdf06c8144a4d9fb630e5a83caefef9",
+          "source": "b2f4a2e0da2249979f58061a32a32e97",
+          "target": "7a02fc7bd2244375bb8a9196b5c1aa07",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -2973,10 +3004,10 @@
           "label": "No"
         },
         {
-          "id": "92363b702f6f483d849b2bc6f005e0a8",
+          "id": "d6ba8342a0424dc4a5c010a675f868ce",
           "edgeType": "Branch",
-          "source": "9fa989cbcfaa44e49ad18949eb122cc4",
-          "target": "d7ab6271c0414e728c8240c0d09c0fcb",
+          "source": "b2f4a2e0da2249979f58061a32a32e97",
+          "target": "db6846909b3045ebaf1228e27ef23b0c",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -2986,34 +3017,34 @@
           "label": "Yes"
         },
         {
-          "id": "c643751965614f9787b49893e7cb4c3c",
+          "id": "f5411409646d48bdaa1d28eecde79e0a",
           "edgeType": "Edge",
-          "source": "bd88412d44884bf4b38b72831650f394",
-          "target": "9fa989cbcfaa44e49ad18949eb122cc4",
+          "source": "70b6a487eabe4f9283a37199c9d4a46d",
+          "target": "b2f4a2e0da2249979f58061a32a32e97",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "f19a9b30fe5947909033debc76d5d4f1",
+          "id": "f69f3c62e2cd4c04be8d97b1b6230771",
           "edgeType": "Edge",
-          "source": "134d0a1f8afc4bc39711bee6067f7c7c",
-          "target": "830294efb74441899e4a7ee6925cd514",
+          "source": "0a6535374db04308bca535a3623d5b25",
+          "target": "7bf1de5ca9a84a19be19aa0d813f082e",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "c141f7a60887413f84da3e8a6cd56c59",
+          "id": "3f08e759efb844e7885075490adbf891",
           "edgeType": "Edge",
-          "source": "31c8f5dcf0224e01b5548cb871136a78",
-          "target": "d6977e8b1c3145b1b8bd94b672565838",
+          "source": "d5074b5dd6b34753969c4194d2dbdd32",
+          "target": "503877f7636143e1840a0753e42ab45f",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "d1864f8db32143f89f17162180c4d9a0",
+          "id": "73663a4904bf47e0acbcd2d63a39ab12",
           "edgeType": "Branch",
-          "source": "d6977e8b1c3145b1b8bd94b672565838",
-          "target": "bd88412d44884bf4b38b72831650f394",
+          "source": "503877f7636143e1840a0753e42ab45f",
+          "target": "70b6a487eabe4f9283a37199c9d4a46d",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3023,10 +3054,10 @@
           "label": "Knowledge bases"
         },
         {
-          "id": "1558e0074e814d3090fa94cb95e74a63",
+          "id": "ea9ee9c85a4c4b6ba693e05895b418bd",
           "edgeType": "Branch",
-          "source": "d6977e8b1c3145b1b8bd94b672565838",
-          "target": "bd88412d44884bf4b38b72831650f394",
+          "source": "503877f7636143e1840a0753e42ab45f",
+          "target": "70b6a487eabe4f9283a37199c9d4a46d",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3036,10 +3067,10 @@
           "label": "Other"
         },
         {
-          "id": "cb1149db71ca42c39c4ed82f565cc002",
+          "id": "f67a5db7d85242d29711e48be970ac6a",
           "edgeType": "Branch",
-          "source": "830294efb74441899e4a7ee6925cd514",
-          "target": "62f888faf18842eba7227a51f24678bd",
+          "source": "7bf1de5ca9a84a19be19aa0d813f082e",
+          "target": "cc2f45d3e85947ceaeb54e618af81f76",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3049,26 +3080,26 @@
           "label": "Knowledge bases"
         },
         {
-          "id": "6aa13b0df08349d5a30b789d978554a7",
+          "id": "b8edcbd1e1dd440eb56d17d3030f23cc",
           "edgeType": "Edge",
-          "source": "4cdf48a458924c5cbf2ca06a44225c14",
-          "target": "2d8d043c4886464a8906b711930fbc86",
+          "source": "b164bfd0b16742ec890f522cdbd95ab2",
+          "target": "9a31232af9dd44888e027721d45cc210",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "306cca1dc23a48d29c741646b4dd8197",
+          "id": "41d8238e715e4853be20215a8a097baa",
           "edgeType": "Edge",
-          "source": "2d8d043c4886464a8906b711930fbc86",
-          "target": "a8709d7f0ef948e7acbb9cb30d58b904",
+          "source": "9a31232af9dd44888e027721d45cc210",
+          "target": "26df69de37764c94a2db3960f11a1343",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "d71c8bfa6eef4734807661132055db79",
+          "id": "7f3d09fae1e54219afb5eb3ab8ac6bbe",
           "edgeType": "Branch",
-          "source": "a8709d7f0ef948e7acbb9cb30d58b904",
-          "target": "e07a51d99df24292ad37573bc518a144",
+          "source": "26df69de37764c94a2db3960f11a1343",
+          "target": "83326bfa46524a1e9c9c35a2b6c62a84",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3078,10 +3109,10 @@
           "label": "No"
         },
         {
-          "id": "02a32b39e7a546dcb50188acb916c72e",
+          "id": "2dab2d5f85f8492aa85b8a4aab7df7cf",
           "edgeType": "Branch",
-          "source": "a8709d7f0ef948e7acbb9cb30d58b904",
-          "target": "62f888faf18842eba7227a51f24678bd",
+          "source": "26df69de37764c94a2db3960f11a1343",
+          "target": "cc2f45d3e85947ceaeb54e618af81f76",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3091,18 +3122,18 @@
           "label": "Another Knowledge"
         },
         {
-          "id": "60f65feb6ebe441f9af0662d48d39c84",
+          "id": "6af5f746044245349d1f4762f958e7e1",
           "edgeType": "Edge",
-          "source": "b0b74e04a55d49298e4af57328591505",
-          "target": "79b9097e8e044779aaf0e13f9e201e52",
+          "source": "38fa998fe2524dbaa403d05ca9f15b76",
+          "target": "4ddd97a0622c4981b9adeb47537ff619",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "795e4d3eb2df4070b79b1037639ef02b",
+          "id": "51ca0c721c9f4a6587cbf9e47a868329",
           "edgeType": "Branch",
-          "source": "79b9097e8e044779aaf0e13f9e201e52",
-          "target": "e07a51d99df24292ad37573bc518a144",
+          "source": "4ddd97a0622c4981b9adeb47537ff619",
+          "target": "83326bfa46524a1e9c9c35a2b6c62a84",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3112,10 +3143,10 @@
           "label": "No"
         },
         {
-          "id": "a00ae9956e17461b9161d9f88798541d",
+          "id": "8df422517a014579a2e179a3a06cc1ae",
           "edgeType": "Branch",
-          "source": "79b9097e8e044779aaf0e13f9e201e52",
-          "target": "1ada275d18fb4e9e89474bc55ec0165b",
+          "source": "4ddd97a0622c4981b9adeb47537ff619",
+          "target": "f72328380a834b8280fdd17f02fa2b58",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3125,10 +3156,10 @@
           "label": "Yes"
         },
         {
-          "id": "8c38520333bd46ee814fad2bc2f4af30",
+          "id": "bc79ec84369c4d338c4db1dc30435911",
           "edgeType": "Branch",
-          "source": "830294efb74441899e4a7ee6925cd514",
-          "target": "11f574977e134b458a9c0bfeec2a1997",
+          "source": "7bf1de5ca9a84a19be19aa0d813f082e",
+          "target": "b91fe9f20dba47f8bcf137b6a51edf8c",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3138,10 +3169,10 @@
           "label": "Create an Incident"
         },
         {
-          "id": "55e3bc34e339434f9c19440c1e851f9f",
+          "id": "b6e5ec55120348299431f8a2172b1cc7",
           "edgeType": "Branch",
-          "source": "016d9f96084e4c1eb9dc9201ab1d2bc5",
-          "target": "5aeea097b597475b84d1e2a86d1dfee9",
+          "source": "3599d7f9055243a3973a1b3548755c23",
+          "target": "9094e5f0bb2043bc96a73d250624df3c",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3151,10 +3182,10 @@
           "label": "New contact."
         },
         {
-          "id": "492f920a46a44c86998521cab4c2f8be",
+          "id": "39c33ba1fcae497c93a225664c171af4",
           "edgeType": "Branch",
-          "source": "830294efb74441899e4a7ee6925cd514",
-          "target": "bb491a2787324ff49233b8592f959784",
+          "source": "7bf1de5ca9a84a19be19aa0d813f082e",
+          "target": "a151f05f187e4dbb9f8a298ec7f4a65d",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3164,26 +3195,26 @@
           "label": "Check the Status of your Incidents"
         },
         {
-          "id": "a99081d0e50e4fd49ab7174fd5ba3d60",
+          "id": "780cf2fa5c014f61b5eafe6b109de4b1",
           "edgeType": "Edge",
-          "source": "bb491a2787324ff49233b8592f959784",
-          "target": "72d65d0a9d334e88888236d14c8da0fc",
+          "source": "a151f05f187e4dbb9f8a298ec7f4a65d",
+          "target": "7e8e876638594414a111bde0cbef6e75",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "4331cc84a46044c2a78b226837609707",
+          "id": "b3dfb239153f4a6d96cf7366d98a0ecd",
           "edgeType": "Edge",
-          "source": "72d65d0a9d334e88888236d14c8da0fc",
-          "target": "a7de2895a5bf4de192d1c5c0cbb61a5d",
+          "source": "7e8e876638594414a111bde0cbef6e75",
+          "target": "58f1bcf8d4f64c97b4fa78f63bd6a87a",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "2b4608a30a124253b2b11e69c77b9779",
+          "id": "5ab36cbff20544d9b24b6881b4d5dbab",
           "edgeType": "Branch",
-          "source": "a7de2895a5bf4de192d1c5c0cbb61a5d",
-          "target": "e07a51d99df24292ad37573bc518a144",
+          "source": "58f1bcf8d4f64c97b4fa78f63bd6a87a",
+          "target": "83326bfa46524a1e9c9c35a2b6c62a84",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3193,10 +3224,10 @@
           "label": "No"
         },
         {
-          "id": "bc5e53a063d04c5ea03090f69460378a",
+          "id": "b892922c26b24427bd34834806371ad7",
           "edgeType": "Branch",
-          "source": "a7de2895a5bf4de192d1c5c0cbb61a5d",
-          "target": "4d30545ead0f425eb33fb23e6987d5a7",
+          "source": "58f1bcf8d4f64c97b4fa78f63bd6a87a",
+          "target": "5e08edf7433148ddb9c4c22000d65b34",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3206,18 +3237,10 @@
           "label": "Yes"
         },
         {
-          "id": "b44b8f62ba3b44a6b721362bfc643833",
-          "edgeType": "Edge",
-          "source": "4d30545ead0f425eb33fb23e6987d5a7",
-          "target": "c729bab91e1c4861957a37975413df41",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "d20b8d05d2434cc4a2ecedd4ffcccedc",
+          "id": "2a3b09d74bae4e7c9e1c8533c72357c1",
           "edgeType": "Branch",
-          "source": "1e372e9e1f424b8aa805c8177713b2e2",
-          "target": "e07a51d99df24292ad37573bc518a144",
+          "source": "6429a831b5344d489744fb98bcd392bd",
+          "target": "83326bfa46524a1e9c9c35a2b6c62a84",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3227,18 +3250,18 @@
           "label": "No"
         },
         {
-          "id": "610cb36ccd964a5b9be35861f42ebc0d",
+          "id": "296c5c1ea9ec4d218293221fb358d48a",
           "edgeType": "Edge",
-          "source": "3bc349ec6de5455f9463ff8b288d6953",
-          "target": "1e372e9e1f424b8aa805c8177713b2e2",
+          "source": "137de8237c754074a82231cd0ff088cc",
+          "target": "6429a831b5344d489744fb98bcd392bd",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "57e08a123bdf434d8c1981931a4cdb36",
+          "id": "cadcffe27b024902a53b57095f2095bc",
           "edgeType": "Branch",
-          "source": "cb20f8c6606a4627a736ac19b596ad94",
-          "target": "e6e4318f62fc4ec8a697e8cccbe3442c",
+          "source": "2fdae1d82f92440491a102bac28d6a06",
+          "target": "81bf6e8754e24099a21fe54f22a38e05",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3248,96 +3271,96 @@
           "label": "Harmonic drive"
         },
         {
-          "id": "36160c9e672047fbab4aa91e8295366c",
+          "id": "041cde9d53424eb1bf7c40e29034632b",
           "edgeType": "Branch",
-          "source": "cb20f8c6606a4627a736ac19b596ad94",
-          "target": "20a84d096b2c48dc8fcdd8448a7c834d",
+          "source": "2fdae1d82f92440491a102bac28d6a06",
+          "target": "38343fc729ad40689c8562796cf11663",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
-            "value": "vaInputs.select_the_option_that_best_matches_your=Servomotor",
-            "mode": "query"
+            "mode": "query",
+            "value": ""
           },
           "label": "ServoMotor"
         },
         {
-          "id": "64f1720252014b9099060d8b9a73145a",
+          "id": "97a4fbafd9ff4017b497e79e61f2b3aa",
           "edgeType": "Branch",
-          "source": "cb20f8c6606a4627a736ac19b596ad94",
-          "target": "ed35768675b34ad594fcfab42ec7fef0",
+          "source": "2fdae1d82f92440491a102bac28d6a06",
+          "target": "6497ca2168df43fab6532ea1b107c811",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
-            "value": "vaInputs.select_the_option_that_best_matches_your=Coil",
-            "mode": "query"
+            "mode": "query",
+            "value": ""
           },
           "label": "Coil"
         },
         {
-          "id": "6ee50a322ae442608afa3858d3ceb7a1",
+          "id": "c7458fbe6c4f4f36af75af9afe0a11db",
           "edgeType": "Branch",
-          "source": "cb20f8c6606a4627a736ac19b596ad94",
-          "target": "69607f01c6ee46fdbb6743347ca83538",
+          "source": "2fdae1d82f92440491a102bac28d6a06",
+          "target": "4ecfc7e812e2432e9a363c524bd81eba",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
-            "value": "vaInputs.select_the_option_that_best_matches_your=Cable",
-            "mode": "query"
+            "mode": "query",
+            "value": ""
           },
           "label": "Cable"
         },
         {
-          "id": "5838571368744589911b435d5b261538",
+          "id": "d057560b9e33403d97bd429b04c22ea7",
           "edgeType": "Branch",
-          "source": "cb20f8c6606a4627a736ac19b596ad94",
-          "target": "789b04115c16497397dd86801b241f52",
+          "source": "2fdae1d82f92440491a102bac28d6a06",
+          "target": "a7863546132747a1b7acdd8d8f93aa4d",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
-            "value": "vaInputs.select_the_option_that_best_matches_your=Engine",
-            "mode": "query"
+            "mode": "query",
+            "value": ""
           },
           "label": "Engine"
         },
         {
-          "id": "53ca7ec35b7b49b681ca26e6c6324d42",
+          "id": "377a3646d9bf466ca108e2e4899a43e2",
           "edgeType": "Branch",
-          "source": "cb20f8c6606a4627a736ac19b596ad94",
-          "target": "a2e1209b3e3545ebb832b676552ef8f5",
+          "source": "2fdae1d82f92440491a102bac28d6a06",
+          "target": "c900cde306c641e2ba8e4f91d0fc99db",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
-            "value": "vaInputs.select_the_option_that_best_matches_your=Industrial PVC",
-            "mode": "query"
+            "mode": "query",
+            "value": ""
           },
           "label": "Industrial PVC"
         },
         {
-          "id": "6e22f60f5c6540d3bafbe7fd64e4f7ba",
+          "id": "5c80655b70da4edbaf329266ca0e10bc",
           "edgeType": "Branch",
-          "source": "cb20f8c6606a4627a736ac19b596ad94",
-          "target": "dfe0543505244de3bf71742f0c9ba488",
+          "source": "2fdae1d82f92440491a102bac28d6a06",
+          "target": "4619168a02cb47dc9fbdf8ba9963c0b3",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
-            "value": "vaInputs.select_the_option_that_best_matches_your=Bearing",
-            "mode": "query"
+            "mode": "query",
+            "value": ""
           },
           "label": "Bearing"
         },
         {
-          "id": "2716f1f6404e4e1bbfe361063118e46d",
+          "id": "1b57876b59cc4669bbe153a1310bf126",
           "edgeType": "Edge",
-          "source": "2ea0795f26b34902b9647a4382a898bf",
-          "target": "b0b74e04a55d49298e4af57328591505",
+          "source": "880fb44f5b2543ff8566a701d47421bd",
+          "target": "38fa998fe2524dbaa403d05ca9f15b76",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "a83008d68fda4496aec745a7fb09800f",
+          "id": "50905f6a9efe4b179ff50b19d65d904b",
           "edgeType": "Branch",
-          "source": "692fd912a5e9422b9e1b922527ec4e16",
-          "target": "2ea0795f26b34902b9647a4382a898bf",
+          "source": "0697fcf6cd0244d6a00fae7218f69bd7",
+          "target": "880fb44f5b2543ff8566a701d47421bd",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3347,10 +3370,10 @@
           "label": "Customer Service Article"
         },
         {
-          "id": "88898794c34f4673a90879490bf344f6",
+          "id": "61dc44eaaeaa44fda17ba9ca346ca28d",
           "edgeType": "Branch",
-          "source": "692fd912a5e9422b9e1b922527ec4e16",
-          "target": "faf6396395b343cea1f84707ae7afa81",
+          "source": "0697fcf6cd0244d6a00fae7218f69bd7",
+          "target": "22fa9aa350384b269038df6d6e9ab0a4",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3360,18 +3383,18 @@
           "label": "Consumer Service Article"
         },
         {
-          "id": "05e63d74c4f34f56a85d79db1b446b9c",
+          "id": "b129425e7f0245e9a3eb55448dbdb173",
           "edgeType": "Edge",
-          "source": "faf6396395b343cea1f84707ae7afa81",
-          "target": "b0b74e04a55d49298e4af57328591505",
+          "source": "22fa9aa350384b269038df6d6e9ab0a4",
+          "target": "38fa998fe2524dbaa403d05ca9f15b76",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "a1bc4a39baf14ff4b6c262346ded1dc9",
+          "id": "eafd3064e7f6453f855de40434ed72ca",
           "edgeType": "Branch",
-          "source": "692fd912a5e9422b9e1b922527ec4e16",
-          "target": "972987c918d24bf38f1746366f86dc1e",
+          "source": "0697fcf6cd0244d6a00fae7218f69bd7",
+          "target": "27cc9bfdec444f83a31c39e4fe946947",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3381,18 +3404,18 @@
           "label": "Field Service Knowledge"
         },
         {
-          "id": "526df9d8f80d482d95b1d6950785c2e5",
+          "id": "32176dff25a34670b0742d255e23dfef",
           "edgeType": "Edge",
-          "source": "972987c918d24bf38f1746366f86dc1e",
-          "target": "b0b74e04a55d49298e4af57328591505",
+          "source": "27cc9bfdec444f83a31c39e4fe946947",
+          "target": "38fa998fe2524dbaa403d05ca9f15b76",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "34d8527fe62c42b28e0f4ebf0ab0dae6",
+          "id": "d55a6f80af7f4236b16ae38b43b02ef4",
           "edgeType": "Branch",
-          "source": "692fd912a5e9422b9e1b922527ec4e16",
-          "target": "8ce3138c8f01438ea4f068bbd33f2af3",
+          "source": "0697fcf6cd0244d6a00fae7218f69bd7",
+          "target": "ead0eab43f0b4d22afc9295932f439d3",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3402,18 +3425,18 @@
           "label": "Enterprise Asset Knowledge"
         },
         {
-          "id": "423495168b0d45159bafdf8b58aaa7ae",
+          "id": "011f7f74be184feb88e756cfd2b164cb",
           "edgeType": "Edge",
-          "source": "8ce3138c8f01438ea4f068bbd33f2af3",
-          "target": "b0b74e04a55d49298e4af57328591505",
+          "source": "ead0eab43f0b4d22afc9295932f439d3",
+          "target": "38fa998fe2524dbaa403d05ca9f15b76",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "27f82903d72447778d00d03743dacba6",
+          "id": "8c1c23962c1b4033be00f561c13475ff",
           "edgeType": "Branch",
-          "source": "692fd912a5e9422b9e1b922527ec4e16",
-          "target": "7ac10a4b4841435f83342553366d1770",
+          "source": "0697fcf6cd0244d6a00fae7218f69bd7",
+          "target": "fd67178bc8624618b973ccfef0d17ba3",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3423,18 +3446,18 @@
           "label": "IT"
         },
         {
-          "id": "3ebfa5832964471093096150e641f2d2",
+          "id": "f83eda0814054132bfa3087b8e10dd6a",
           "edgeType": "Edge",
-          "source": "7ac10a4b4841435f83342553366d1770",
-          "target": "b0b74e04a55d49298e4af57328591505",
+          "source": "fd67178bc8624618b973ccfef0d17ba3",
+          "target": "38fa998fe2524dbaa403d05ca9f15b76",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "8e6ce7f3beca44bf876986ce76d36bc6",
+          "id": "e3bd97df48164d8081f6884fc222256b",
           "edgeType": "Branch",
-          "source": "692fd912a5e9422b9e1b922527ec4e16",
-          "target": "0766c830f85a4583aa8814ed3d2d1d03",
+          "source": "0697fcf6cd0244d6a00fae7218f69bd7",
+          "target": "be7cc87b9b024caa9b56178cc2f3be56",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3444,26 +3467,26 @@
           "label": "Knowledge bases"
         },
         {
-          "id": "5589415be93c45f3bc260bd590ba6c76",
+          "id": "5260a4e4fff7441e9a4af19f2f2bc24a",
           "edgeType": "Edge",
-          "source": "0766c830f85a4583aa8814ed3d2d1d03",
-          "target": "b0b74e04a55d49298e4af57328591505",
+          "source": "be7cc87b9b024caa9b56178cc2f3be56",
+          "target": "38fa998fe2524dbaa403d05ca9f15b76",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "a170d262b01e45179febcd254892e786",
+          "id": "8967bab47b254596b82da1224f0df6c2",
           "edgeType": "Edge",
-          "source": "e68825ccbd234be89365ef302be2d02e",
-          "target": "b0b74e04a55d49298e4af57328591505",
+          "source": "2fbbd85122e14221a1df44ae3a2ccea6",
+          "target": "38fa998fe2524dbaa403d05ca9f15b76",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "bd6079b0482d4e469452a203e80d210a",
+          "id": "8f584dd063354104a28d3a3c23e1dd0a",
           "edgeType": "Branch",
-          "source": "a8709d7f0ef948e7acbb9cb30d58b904",
-          "target": "1ada275d18fb4e9e89474bc55ec0165b",
+          "source": "26df69de37764c94a2db3960f11a1343",
+          "target": "f72328380a834b8280fdd17f02fa2b58",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3473,26 +3496,26 @@
           "label": "Yes"
         },
         {
-          "id": "5fd0d0a7dc8d40aba883de05b788fcbb",
+          "id": "0a15304ef9824840a34dc36e986455b4",
           "edgeType": "Edge",
-          "source": "1ada275d18fb4e9e89474bc55ec0165b",
-          "target": "692fd912a5e9422b9e1b922527ec4e16",
+          "source": "f72328380a834b8280fdd17f02fa2b58",
+          "target": "0697fcf6cd0244d6a00fae7218f69bd7",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "150bacf3125d414d84a6b2ecb85a9873",
+          "id": "73b1e536b7304f8d8c34eb218a507ff0",
           "edgeType": "Edge",
-          "source": "62f888faf18842eba7227a51f24678bd",
-          "target": "205efd66617f4d61a7f021fe6675d568",
+          "source": "cc2f45d3e85947ceaeb54e618af81f76",
+          "target": "7c51221547e242d3a29b8d3801738951",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "6a619488cfdf425a84fb9f658c28a803",
+          "id": "48404c7123ce4af3aa0ecd9416bd91ae",
           "edgeType": "Branch",
-          "source": "205efd66617f4d61a7f021fe6675d568",
-          "target": "4cdf48a458924c5cbf2ca06a44225c14",
+          "source": "7c51221547e242d3a29b8d3801738951",
+          "target": "b164bfd0b16742ec890f522cdbd95ab2",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3502,10 +3525,10 @@
           "label": "Costumer Service Article List"
         },
         {
-          "id": "22b56eb8980b4442bf461fcdf3eb203b",
+          "id": "7a499c3f1e0c43f8b1ae80f1b320309a",
           "edgeType": "Branch",
-          "source": "205efd66617f4d61a7f021fe6675d568",
-          "target": "9c14639be5a44cb0b57222baa86bf399",
+          "source": "7c51221547e242d3a29b8d3801738951",
+          "target": "a789090ba3844910910b63d2683698ba",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3515,18 +3538,18 @@
           "label": "Consumer Service Article List"
         },
         {
-          "id": "9d084e7bc38d4fe1972d1857cd38c74b",
+          "id": "8e490b3a310040e9b8efc3ba35442a1c",
           "edgeType": "Edge",
-          "source": "9c14639be5a44cb0b57222baa86bf399",
-          "target": "2d8d043c4886464a8906b711930fbc86",
+          "source": "a789090ba3844910910b63d2683698ba",
+          "target": "9a31232af9dd44888e027721d45cc210",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "bac4efc2fc164bc598f69c6f3dccd614",
+          "id": "26ba51c60ad84e3195483b32be5d70a7",
           "edgeType": "Branch",
-          "source": "205efd66617f4d61a7f021fe6675d568",
-          "target": "37099d556a3445f1a8c4d9a05e346342",
+          "source": "7c51221547e242d3a29b8d3801738951",
+          "target": "2f2c1fbfda5f4d42adef5a1c2bfbe766",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3536,18 +3559,18 @@
           "label": "Field Service Knowledge list"
         },
         {
-          "id": "7fda7e2f6c654610851b745852ea1f9f",
+          "id": "9b2c5e570d7c485db6b7947174606dc7",
           "edgeType": "Edge",
-          "source": "37099d556a3445f1a8c4d9a05e346342",
-          "target": "2d8d043c4886464a8906b711930fbc86",
+          "source": "2f2c1fbfda5f4d42adef5a1c2bfbe766",
+          "target": "9a31232af9dd44888e027721d45cc210",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "451177581b1e4515ba7c889d6943738e",
+          "id": "4a93feb7c3df4ac08cc144e832126bab",
           "edgeType": "Branch",
-          "source": "205efd66617f4d61a7f021fe6675d568",
-          "target": "f781d6116a6943c28b4c23e0edd15d53",
+          "source": "7c51221547e242d3a29b8d3801738951",
+          "target": "350bf79022d14744855860ecf794275f",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3557,18 +3580,18 @@
           "label": "Enterprise Asset Knowledge"
         },
         {
-          "id": "c2fff2cfb65b43328d4b0e3ab35ba165",
+          "id": "50dc3c6766fd4d13b46cf6a76d14b45a",
           "edgeType": "Edge",
-          "source": "f781d6116a6943c28b4c23e0edd15d53",
-          "target": "2d8d043c4886464a8906b711930fbc86",
+          "source": "350bf79022d14744855860ecf794275f",
+          "target": "9a31232af9dd44888e027721d45cc210",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "4a74cab04d814adc9f0565a7c6a363e5",
+          "id": "370df8cfe7f440ef8a547012a735da5d",
           "edgeType": "Branch",
-          "source": "205efd66617f4d61a7f021fe6675d568",
-          "target": "efdf69a1bbb54df6a8241ac80b407b29",
+          "source": "7c51221547e242d3a29b8d3801738951",
+          "target": "770509b1dc7541cb885f38c3b776a3f0",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3578,18 +3601,18 @@
           "label": "IT"
         },
         {
-          "id": "a78f4bd4755f4ef3b5c5ea2b9e5f00a0",
+          "id": "bc0d070e15594eeb88866a86e242eca2",
           "edgeType": "Edge",
-          "source": "efdf69a1bbb54df6a8241ac80b407b29",
-          "target": "2d8d043c4886464a8906b711930fbc86",
+          "source": "770509b1dc7541cb885f38c3b776a3f0",
+          "target": "9a31232af9dd44888e027721d45cc210",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "12d6430c20704089a74ad9d6b2bf0d2f",
+          "id": "c4a86df8c2424a99ada8082efec716f2",
           "edgeType": "Branch",
-          "source": "205efd66617f4d61a7f021fe6675d568",
-          "target": "64d6950cadf549f1a0bbcf6a768f4263",
+          "source": "7c51221547e242d3a29b8d3801738951",
+          "target": "9a879d47377f4c2d8c79c003468d4074",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3599,39 +3622,26 @@
           "label": "Knowledge bases"
         },
         {
-          "id": "d6c72fa78d6f412ca0dee87864639400",
+          "id": "1c61b3c1220c4c819bf1afcc9c7ca6eb",
           "edgeType": "Edge",
-          "source": "64d6950cadf549f1a0bbcf6a768f4263",
-          "target": "2d8d043c4886464a8906b711930fbc86",
+          "source": "9a879d47377f4c2d8c79c003468d4074",
+          "target": "9a31232af9dd44888e027721d45cc210",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "73ceb9463e6244c691ebc33dcc6a3b9d",
-          "edgeType": "Branch",
-          "source": "205efd66617f4d61a7f021fe6675d568",
-          "target": "a988f5e76a654c43a964fb46525b6714",
-          "sourcePort": "",
-          "targetPort": "",
-          "expression": {
-            "value": "vaInputs.what_kind_of_knowledge_you_want_to_see_=Vulnerabilities",
-            "mode": "query"
-          },
-          "label": "Vulnerabilities"
-        },
-        {
-          "id": "2ca28c8081624265a7bf7f68f5b1bcb7",
+          "id": "8e2bbfd320164c659e5cee4af3451539",
           "edgeType": "Edge",
-          "source": "a988f5e76a654c43a964fb46525b6714",
-          "target": "2d8d043c4886464a8906b711930fbc86",
+          "source": "ff096993165e4dd294e3c9a0e0f5b806",
+          "target": "9a31232af9dd44888e027721d45cc210",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "e26372c8717f459bba430a37d9dbb1eb",
+          "id": "e13a5dd3d8f34f30a1d278d5dec01707",
           "edgeType": "Branch",
-          "source": "830294efb74441899e4a7ee6925cd514",
-          "target": "6e0c443ffad341b99b0414bb85d227b0",
+          "source": "7bf1de5ca9a84a19be19aa0d813f082e",
+          "target": "2f48f47b480d4977b49e34d1c42a1aaa",
           "sourcePort": "",
           "targetPort": "",
           "expression": {
@@ -3641,122 +3651,138 @@
           "label": "Other"
         },
         {
-          "id": "f9c293f20bf349c0ac5ee3be9e248d2a",
+          "id": "1a7e42b5e024442ab9150062c45cabdb",
           "edgeType": "Edge",
-          "source": "6e0c443ffad341b99b0414bb85d227b0",
-          "target": "e07a51d99df24292ad37573bc518a144",
+          "source": "2f48f47b480d4977b49e34d1c42a1aaa",
+          "target": "83326bfa46524a1e9c9c35a2b6c62a84",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "48003dc8e958429a8ed73d34ef970056",
+          "id": "de3c973455dd4b75873ded43b98ad726",
           "edgeType": "Edge",
-          "source": "69607f01c6ee46fdbb6743347ca83538",
-          "target": "2976f6113ccb480ea7394bcdfc1fee76",
+          "source": "4ecfc7e812e2432e9a363c524bd81eba",
+          "target": "77c6b8fdc9ae4400b19fe0f295648ce9",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "08e5f74cda664084a5156ca0db61b5f8",
+          "id": "b1926b6610704eef9297eb5eb322c234",
           "edgeType": "Edge",
-          "source": "2976f6113ccb480ea7394bcdfc1fee76",
-          "target": "e07a51d99df24292ad37573bc518a144",
+          "source": "77c6b8fdc9ae4400b19fe0f295648ce9",
+          "target": "83326bfa46524a1e9c9c35a2b6c62a84",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "3dad2cd892c6447da180618f62e7cf25",
+          "id": "a03e455359194d8eb21758a9b773fe66",
           "edgeType": "Edge",
-          "source": "dfe0543505244de3bf71742f0c9ba488",
-          "target": "d6b847e9dbbb4978a306bd65a74da443",
+          "source": "4619168a02cb47dc9fbdf8ba9963c0b3",
+          "target": "de7284e6b3454bcc92305a1531bc8599",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "48e23d81b23644c5977c45f118e773b9",
+          "id": "508da2e3c7d6430b8b9a493fdef45532",
           "edgeType": "Edge",
-          "source": "d6b847e9dbbb4978a306bd65a74da443",
-          "target": "e07a51d99df24292ad37573bc518a144",
+          "source": "de7284e6b3454bcc92305a1531bc8599",
+          "target": "83326bfa46524a1e9c9c35a2b6c62a84",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "cbdd0a66df29417fbf6611801ede3d48",
+          "id": "d7b4d0b6752f4ccb9e307e885677b5f6",
           "edgeType": "Edge",
-          "source": "a2e1209b3e3545ebb832b676552ef8f5",
-          "target": "3ba9de2253ac457c82863d040a0845ba",
+          "source": "c900cde306c641e2ba8e4f91d0fc99db",
+          "target": "e7a90d8169d74f749a97cc4d96cf1be3",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "e5a5643e0dcf4cf98afe7ae88ddc4369",
+          "id": "532074f26b6e485e96c45ab5a8d7463e",
           "edgeType": "Edge",
-          "source": "789b04115c16497397dd86801b241f52",
-          "target": "5334bc6992f84a2a8c8eb3899ec840f5",
+          "source": "502797eb06b0494dac9328edbbe5f2e4",
+          "target": "83326bfa46524a1e9c9c35a2b6c62a84",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "a7a7afab57654665a21cc4560428247f",
+          "id": "01924aff1bd94cbba19125b5d9aa5115",
           "edgeType": "Edge",
-          "source": "5334bc6992f84a2a8c8eb3899ec840f5",
-          "target": "e07a51d99df24292ad37573bc518a144",
+          "source": "6497ca2168df43fab6532ea1b107c811",
+          "target": "a08e9ca2ed3945a096a855125f7533be",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "ff2c2d5e1f514025be70eae6337b3a1b",
+          "id": "5307a58744c046b3a4607e4ada358949",
           "edgeType": "Edge",
-          "source": "ed35768675b34ad594fcfab42ec7fef0",
-          "target": "b44c5c41ae64413c89e05c2cad9959c1",
+          "source": "a08e9ca2ed3945a096a855125f7533be",
+          "target": "83326bfa46524a1e9c9c35a2b6c62a84",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "dca05bccd4304be3854220ea757ad5bf",
+          "id": "26fd9fc6a77c44c18e769dccd47fcf12",
           "edgeType": "Edge",
-          "source": "b44c5c41ae64413c89e05c2cad9959c1",
-          "target": "e07a51d99df24292ad37573bc518a144",
+          "source": "38343fc729ad40689c8562796cf11663",
+          "target": "f5c8edff76de4e428e334c75f8153f9e",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "02e461a70a054ce191ed947b6b818613",
+          "id": "de7488da8a634a70ab087ac1d4f876ac",
           "edgeType": "Edge",
-          "source": "e6e4318f62fc4ec8a697e8cccbe3442c",
-          "target": "bad8f44ef4ab479c92827eaac7a18d96",
+          "source": "f5c8edff76de4e428e334c75f8153f9e",
+          "target": "83326bfa46524a1e9c9c35a2b6c62a84",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "3006155040bb4725a8a7eed1e61427a4",
+          "id": "3b271062360f45b083bb9a0b4eccfc37",
           "edgeType": "Edge",
-          "source": "bad8f44ef4ab479c92827eaac7a18d96",
-          "target": "e07a51d99df24292ad37573bc518a144",
+          "source": "81bf6e8754e24099a21fe54f22a38e05",
+          "target": "82817e534fbc414bbb7afcb7b8f8888d",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "f80bbcdecaf24ff482cbe2c84c3a7362",
+          "id": "a5c0d19b0e7049978f5b5a7094d6edfb",
           "edgeType": "Edge",
-          "source": "ed3912c5d8da40a9972068828d3e8031",
-          "target": "9c94f49abaf64b67b291b38793e93319",
+          "source": "82817e534fbc414bbb7afcb7b8f8888d",
+          "target": "83326bfa46524a1e9c9c35a2b6c62a84",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "e898bec69f554364b26ba7d494019ad7",
+          "id": "7cf04b7dd967432eaf21836ada4d20f3",
           "edgeType": "Edge",
-          "source": "9c94f49abaf64b67b291b38793e93319",
-          "target": "88d0744a99264d6c81ab91013404ad80",
+          "source": "1090b2f2a29641708c6786a4e183090d",
+          "target": "a3319b6e8c284d9c83ae3cc2e2e9572e",
           "sourcePort": "",
           "targetPort": ""
         },
         {
-          "id": "284dd9a8f87a4daa9a8ffd2c68618e88",
+          "id": "0aa74260a66f4c7383e7e9126b54eab2",
           "edgeType": "Edge",
-          "source": "20a84d096b2c48dc8fcdd8448a7c834d",
-          "target": "5075cbd55a9c44ea9e6f319321f64458",
+          "source": "a3319b6e8c284d9c83ae3cc2e2e9572e",
+          "target": "9a08dd3b2f7e4f87b1091f9553b0a539",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "80889b92992946dcb8152f2ea18e0458",
+          "edgeType": "Edge",
+          "source": "a7863546132747a1b7acdd8d8f93aa4d",
+          "target": "e8d2b923842e4dc491995e12c6f39840",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ec192ac02fcd4e59a40502bd486340aa",
+          "edgeType": "Edge",
+          "source": "e8d2b923842e4dc491995e12c6f39840",
+          "target": "502797eb06b0494dac9328edbbe5f2e4",
           "sourcePort": "",
           "targetPort": ""
         }
@@ -3764,16 +3790,16 @@
     }
   },
   "variables": {
-    "current-user": {
+    "c865ba5caed14f8d941b5187e00c1c94": {
       "category": "vaInputs",
-      "id": "current-user",
+      "id": "c865ba5caed14f8d941b5187e00c1c94",
       "label": "User",
       "name": "user",
       "table": "sys_user",
       "varType": "reference"
     },
-    "d617c1c6dbb64f6eb57353fa05174e92": {
-      "id": "d617c1c6dbb64f6eb57353fa05174e92",
+    "1d6af7d22093433395ddaced2f9abded": {
+      "id": "1d6af7d22093433395ddaced2f9abded",
       "name": "description_of_the_problem",
       "label": "Description Of The Problem",
       "varType": "string",
@@ -3784,11 +3810,11 @@
         "value": "MTc0ODg3ODIxMTM1NCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
         "mode": "simple"
       },
-      "nodeId": "9c94f49abaf64b67b291b38793e93319",
+      "nodeId": "a3319b6e8c284d9c83ae3cc2e2e9572e",
       "isHidden": false
     },
-    "a3dfe3cb79864025abbfd611e935cb84": {
-      "id": "a3dfe3cb79864025abbfd611e935cb84",
+    "fb58ac7fcdd148b8879cf537861749c6": {
+      "id": "fb58ac7fcdd148b8879cf537861749c6",
       "name": "choices",
       "label": "Choices",
       "varType": "choice",
@@ -3815,11 +3841,11 @@
         }
       ],
       "category": "vaInputs",
-      "nodeId": "134d0a1f8afc4bc39711bee6067f7c7c",
+      "nodeId": "0a6535374db04308bca535a3623d5b25",
       "isHidden": false
     },
-    "94940ba9d05c44329fd05516199e2c2d": {
-      "id": "94940ba9d05c44329fd05516199e2c2d",
+    "0c1533ee80aa44659499557943a6ca8d": {
+      "id": "0c1533ee80aa44659499557943a6ca8d",
       "name": "can_i_help_you_with_something_else_",
       "label": "Can I Help You With Something Else?",
       "varType": "choice",
@@ -3834,11 +3860,11 @@
         }
       ],
       "category": "vaInputs",
-      "nodeId": "e07a51d99df24292ad37573bc518a144",
+      "nodeId": "83326bfa46524a1e9c9c35a2b6c62a84",
       "isHidden": false
     },
-    "08ad60a100684a34bb2fdb0b291430f5": {
-      "id": "08ad60a100684a34bb2fdb0b291430f5",
+    "853326a7f9d64cbaad7858087bac3248": {
+      "id": "853326a7f9d64cbaad7858087bac3248",
       "name": "choices_with_out_incident_creation",
       "label": "Choices With Out Incident Creation",
       "varType": "choice",
@@ -3853,11 +3879,11 @@
         }
       ],
       "category": "vaInputs",
-      "nodeId": "31c8f5dcf0224e01b5548cb871136a78",
+      "nodeId": "d5074b5dd6b34753969c4194d2dbdd32",
       "isHidden": false
     },
-    "eba03d0568814c3a87e84bfc798db99d": {
-      "id": "eba03d0568814c3a87e84bfc798db99d",
+    "6f1ba205b7264fcf9872886736696d22": {
+      "id": "6f1ba205b7264fcf9872886736696d22",
       "name": "can_i_help_you_with_something_else__2",
       "label": "Can I Help You With Something Else? (2)",
       "varType": "choice",
@@ -3872,11 +3898,11 @@
         }
       ],
       "category": "vaInputs",
-      "nodeId": "bd88412d44884bf4b38b72831650f394",
+      "nodeId": "70b6a487eabe4f9283a37199c9d4a46d",
       "isHidden": false
     },
-    "3345e65c1cfb4194922d133edb44229e": {
-      "id": "3345e65c1cfb4194922d133edb44229e",
+    "2f26b0760fca46719bfd613ab91941f6": {
+      "id": "2f26b0760fca46719bfd613ab91941f6",
       "name": "what_kind_of_knowledge_you_want_to_see_",
       "label": "What Kind Of Knowledge You Want To See?",
       "varType": "choice",
@@ -3921,11 +3947,11 @@
         }
       ],
       "category": "vaInputs",
-      "nodeId": "62f888faf18842eba7227a51f24678bd",
+      "nodeId": "cc2f45d3e85947ceaeb54e618af81f76",
       "isHidden": false
     },
-    "511a9fef5b884fa5b085fd54ccd365ab": {
-      "id": "511a9fef5b884fa5b085fd54ccd365ab",
+    "b8398c32b6994227ac062321e0dc5d88": {
+      "id": "b8398c32b6994227ac062321e0dc5d88",
       "name": "you_want_to_see_an_specific_knowledge_",
       "label": "You Want To See An Specific Knowledge?",
       "varType": "choice",
@@ -3946,11 +3972,11 @@
         }
       ],
       "category": "vaInputs",
-      "nodeId": "2d8d043c4886464a8906b711930fbc86",
+      "nodeId": "9a31232af9dd44888e027721d45cc210",
       "isHidden": false
     },
-    "ef2807c72dc94ed6bd78fd2b0dcc6ce1": {
-      "id": "ef2807c72dc94ed6bd78fd2b0dcc6ce1",
+    "489a3bc1b2d0431198e4988df3cca94e": {
+      "id": "489a3bc1b2d0431198e4988df3cca94e",
       "name": "specific_knowledge",
       "label": "Specific Knowledge",
       "varType": "choice",
@@ -3965,11 +3991,11 @@
         }
       ],
       "category": "vaInputs",
-      "nodeId": "b0b74e04a55d49298e4af57328591505",
+      "nodeId": "38fa998fe2524dbaa403d05ca9f15b76",
       "isHidden": false
     },
-    "bad7364100eb44cfb1f4d2ab7b182533": {
-      "id": "bad7364100eb44cfb1f4d2ab7b182533",
+    "03a9ce2c648c481b99ad75e5454599f9": {
+      "id": "03a9ce2c648c481b99ad75e5454599f9",
       "name": "select_the_option_that_best_matches_your",
       "label": "Select The Option That Best Matches Your",
       "varType": "choice",
@@ -4014,11 +4040,11 @@
         }
       ],
       "category": "vaInputs",
-      "nodeId": "ed3912c5d8da40a9972068828d3e8031",
+      "nodeId": "1090b2f2a29641708c6786a4e183090d",
       "isHidden": false
     },
-    "b9f26a2c3c5d48598e6176b847f569d1": {
-      "id": "b9f26a2c3c5d48598e6176b847f569d1",
+    "65e2e57bcff64d36bc40b2d817db073e": {
+      "id": "65e2e57bcff64d36bc40b2d817db073e",
       "name": "select_your_poth",
       "label": "Select Your Poth",
       "varType": "choice",
@@ -4039,33 +4065,33 @@
         }
       ],
       "category": "vaInputs",
-      "nodeId": "11f574977e134b458a9c0bfeec2a1997",
+      "nodeId": "b91fe9f20dba47f8bcf137b6a51edf8c",
       "isHidden": false
     },
-    "6dfacbebca414a4a99ac4b6a83f18466": {
-      "id": "6dfacbebca414a4a99ac4b6a83f18466",
+    "3bd792015e714eb2abc833c499ef6291": {
+      "id": "3bd792015e714eb2abc833c499ef6291",
       "name": "contact_",
       "label": "Contact ",
       "varType": "reference",
       "table": "customer_contact",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "0766c830f85a4583aa8814ed3d2d1d03",
+      "nodeId": "be7cc87b9b024caa9b56178cc2f3be56",
       "isHidden": false
     },
-    "991ec442b2f34967adc99abe479ca99f": {
-      "id": "991ec442b2f34967adc99abe479ca99f",
+    "8f65ce34e3704e548a8d40653b775411": {
+      "id": "8f65ce34e3704e548a8d40653b775411",
       "name": "incident_ot_creation",
       "label": "Incident OT Creation",
       "varType": "reference",
       "table": "sn_ot_incident",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "bad8f44ef4ab479c92827eaac7a18d96",
+      "nodeId": "82817e534fbc414bbb7afcb7b8f8888d",
       "isHidden": false
     },
-    "b3f10e150a4e4031b7752daf7ceeaf96": {
-      "id": "b3f10e150a4e4031b7752daf7ceeaf96",
+    "f4f8bc3f6be94fdb8cd6e2f59372bc41": {
+      "id": "f4f8bc3f6be94fdb8cd6e2f59372bc41",
       "name": "specific_case_from_the_table",
       "label": "Specific Case From The Table",
       "varType": "choice",
@@ -4080,11 +4106,11 @@
         }
       ],
       "category": "vaInputs",
-      "nodeId": "72d65d0a9d334e88888236d14c8da0fc",
+      "nodeId": "7e8e876638594414a111bde0cbef6e75",
       "isHidden": false
     },
-    "3c4aac06ef754c51bb57acaec9329f06": {
-      "id": "3c4aac06ef754c51bb57acaec9329f06",
+    "20da92161bf0461b9757d458cfe04481": {
+      "id": "20da92161bf0461b9757d458cfe04481",
       "name": "ot_incident_number",
       "label": "OT Incident Number",
       "varType": "string",
@@ -4095,11 +4121,11 @@
         "value": "MTc0ODk2NDQ3MzA2OCBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
         "mode": "simple"
       },
-      "nodeId": "4d30545ead0f425eb33fb23e6987d5a7",
+      "nodeId": "5e08edf7433148ddb9c4c22000d65b34",
       "isHidden": false
     },
-    "4c26e8781f9a4a429d13b272a13cd0aa": {
-      "id": "4c26e8781f9a4a429d13b272a13cd0aa",
+    "4df4e0eed059483491e1f175117814c0": {
+      "id": "4df4e0eed059483491e1f175117814c0",
       "name": "another_search",
       "label": "Another Search",
       "varType": "choice",
@@ -4114,11 +4140,11 @@
         }
       ],
       "category": "vaInputs",
-      "nodeId": "3bc349ec6de5455f9463ff8b288d6953",
+      "nodeId": "137de8237c754074a82231cd0ff088cc",
       "isHidden": false
     },
-    "447930c2bd9a42a3898edb3e96143eaa": {
-      "id": "447930c2bd9a42a3898edb3e96143eaa",
+    "306f493a7c684e1a82e864c7902daed5": {
+      "id": "306f493a7c684e1a82e864c7902daed5",
       "value": {
         "mode": "script",
         "value": "(function execute() {\n    var bolean=true\n\n    var userId = gs.getUserID();\n\n    var userGr = new GlideRecord('sys_user');\n \n    if (userGr.get(userId)) {\n\n        var email = userGr.email;\n\n        gs.info(\"Email del usuario actual: \" + email);\n \n        // Buscar el mismo email en customer_contact\n\n        var contactGr = new GlideRecord('customer_contact');\n\n        contactGr.addQuery('email', email);\n\n        contactGr.setLimit(1);\n\n        contactGr.query();\n \n        if (contactGr.next()) {\n\n            gs.info(\"El email existe en customer_contact. sys_id: \" + contactGr.getUniqueValue());\n            bolean=true\n            \n\n        } else {\n\n            gs.info(\"El email NO existe en customer_contact.\");\n            bolean=false\n            \n        }\n\n    } else {\n\n        gs.info(\"No se pudo encontrar al usuario actual.\");\n\n    }\n    return bolean\n})();"
@@ -4128,74 +4154,74 @@
       "varType": "script",
       "category": "vaVars"
     },
-    "0ea2d7fdf4ce4846aa6d3193285de8c6": {
-      "id": "0ea2d7fdf4ce4846aa6d3193285de8c6",
+    "cf99c78d04e34ba6ad27defd75c9016c": {
+      "id": "cf99c78d04e34ba6ad27defd75c9016c",
       "name": "incident_ot_creation_1",
       "label": "Incident OT Creation 1",
       "varType": "reference",
       "table": "sn_ot_incident",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "20a84d096b2c48dc8fcdd8448a7c834d",
+      "nodeId": "f5c8edff76de4e428e334c75f8153f9e",
       "isHidden": false
     },
-    "8dcc7568a34542bbb6a87b64f087f799": {
-      "id": "8dcc7568a34542bbb6a87b64f087f799",
+    "edf7f2dfe509470db20cbd81d59d1c77": {
+      "id": "edf7f2dfe509470db20cbd81d59d1c77",
       "name": "incident_ot_creation_2",
       "label": "Incident OT Creation 2",
       "varType": "reference",
       "table": "sn_ot_incident",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "b44c5c41ae64413c89e05c2cad9959c1",
+      "nodeId": "a08e9ca2ed3945a096a855125f7533be",
       "isHidden": false
     },
-    "149f3025dbd944638d97a41940c227b9": {
-      "id": "149f3025dbd944638d97a41940c227b9",
+    "e2630c31cb7343b2be6a0c77754be50b": {
+      "id": "e2630c31cb7343b2be6a0c77754be50b",
       "name": "incident_ot_creation_3",
       "label": "Incident OT Creation 3",
       "varType": "reference",
       "table": "sn_ot_incident",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "2976f6113ccb480ea7394bcdfc1fee76",
+      "nodeId": "77c6b8fdc9ae4400b19fe0f295648ce9",
       "isHidden": false
     },
-    "324cea7f749a4bd19608b74e9dc272c9": {
-      "id": "324cea7f749a4bd19608b74e9dc272c9",
+    "d3d8224b2c214b5391b27ce8f1c2521a": {
+      "id": "d3d8224b2c214b5391b27ce8f1c2521a",
       "name": "incident_ot_creation_4",
       "label": "Incident OT Creation 4",
       "varType": "reference",
       "table": "sn_ot_incident",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "5334bc6992f84a2a8c8eb3899ec840f5",
+      "nodeId": "502797eb06b0494dac9328edbbe5f2e4",
       "isHidden": false
     },
-    "394f13d5442a4da593ca85490e2bd756": {
-      "id": "394f13d5442a4da593ca85490e2bd756",
+    "6858f48dfb384351a201b2f1d3380c78": {
+      "id": "6858f48dfb384351a201b2f1d3380c78",
       "name": "incident_ot_creation_5",
       "label": "Incident OT Creation 5",
       "varType": "reference",
       "table": "sn_ot_incident",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "3ba9de2253ac457c82863d040a0845ba",
+      "nodeId": "e7a90d8169d74f749a97cc4d96cf1be3",
       "isHidden": false
     },
-    "de956cbaac244070b4894418d4235242": {
-      "id": "de956cbaac244070b4894418d4235242",
+    "c327f3f91b0b4440bec31d6f7c99eda6": {
+      "id": "c327f3f91b0b4440bec31d6f7c99eda6",
       "name": "incident_ot_creation_6",
       "label": "Incident OT Creation 6",
       "varType": "reference",
       "table": "sn_ot_incident",
       "inactive": false,
       "category": "vaInputs",
-      "nodeId": "d6b847e9dbbb4978a306bd65a74da443",
+      "nodeId": "de7284e6b3454bcc92305a1531bc8599",
       "isHidden": false
     },
-    "3cb5d892f7814ce0a877e5f54d3886ad": {
-      "id": "3cb5d892f7814ce0a877e5f54d3886ad",
+    "a45a6d3f9331477fbed55617d57492ec": {
+      "id": "a45a6d3f9331477fbed55617d57492ec",
       "name": "specific_number_knowledge",
       "label": "Specific Number Knowledge",
       "varType": "string",
@@ -4206,11 +4232,11 @@
         "value": "MTc0ODk4NTMxOTQzNiBWQSBEZXNpZ25lciBpcyBhd2Vzb21l",
         "mode": "simple"
       },
-      "nodeId": "1ada275d18fb4e9e89474bc55ec0165b",
+      "nodeId": "f72328380a834b8280fdd17f02fa2b58",
       "isHidden": false
     },
-    "5a37f013e53048f592511fb5aa3098b7": {
-      "id": "5a37f013e53048f592511fb5aa3098b7",
+    "0ae2e014efe54c8bb1a443e1b12643e5": {
+      "id": "0ae2e014efe54c8bb1a443e1b12643e5",
       "name": "poth",
       "label": "Poth",
       "varType": "reference",
@@ -4218,43 +4244,25 @@
       "category": "vaInputs",
       "autoSelect": false,
       "autoSelectExpression": "",
-      "nodeId": "88d0744a99264d6c81ab91013404ad80",
+      "nodeId": "9a08dd3b2f7e4f87b1091f9553b0a539",
       "isHidden": false
     }
   }
 }</graph>
-        <key_phrases>CSM_Virtual_Agent_V6</key_phrases>
-        <library>false</library>
-        <live_agent>false</live_agent>
-        <model_type>nlu_keyword</model_type>
-        <modify_confirmation_enabled>false</modify_confirmation_enabled>
-        <name>CSM_Virtual_Agent_V6</name>
-        <nlu_intent/>
-        <nlu_intent_label/>
-        <nlu_model/>
-        <nlu_model_label/>
-        <nlu_provider/>
-        <palette_label/>
-        <roles/>
-        <root_topic_id/>
-        <secure_custom_input_control>false</secure_custom_input_control>
-        <source_topic_id/>
-        <sys_class_name>sys_cb_topic</sys_class_name>
+        <name>_PRVW__cc9ae819e5cb49488643875300e3d26a</name>
+        <sys_class_name>sys_cb_design_topic</sys_class_name>
         <sys_created_by>josepablo.lopez</sys_created_by>
-        <sys_created_on>2025-06-02 15:27:47</sys_created_on>
+        <sys_created_on>2025-06-05 17:24:42</sys_created_on>
         <sys_domain>global</sys_domain>
-        <sys_id>ca78568f93fde210d942fc4e1dba1060</sys_id>
-        <sys_mod_count>58</sys_mod_count>
-        <sys_name>CSM_Virtual_Agent_V6</sys_name>
+        <sys_id>bbff428cc3866a103ab9b01705013144</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FlowTopic</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
-        <sys_update_name>sys_cb_topic_ca78568f93fde210d942fc4e1dba1060</sys_update_name>
+        <sys_update_name>sys_cb_design_topic_bbff428cc3866a103ab9b01705013144</sys_update_name>
         <sys_updated_by>josepablo.lopez</sys_updated_by>
-        <sys_updated_on>2025-06-05 18:48:41</sys_updated_on>
-        <title>CSM_Virtual_Agent_V6</title>
-        <triggerable_by_notification>false</triggerable_by_notification>
-        <type>STANDARD</type>
-    </sys_cb_topic>
-    <sys_translated_text action="delete_multiple" query="documentkey=ca78568f93fde210d942fc4e1dba1060"/>
+        <sys_updated_on>2025-06-05 17:24:42</sys_updated_on>
+        <type>FlowTopic</type>
+    </sys_cb_design_topic>
 </record_update>

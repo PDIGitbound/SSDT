@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>write</operation>
+        <source_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-05 19:09:35</sys_created_on>
+        <sys_id>9408eec8930a6a10d942fc4e1dba10ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>incident_asset</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_scope_privilege_9408eec8930a6a10d942fc4e1dba10ef</sys_update_name>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-05 19:09:35</sys_updated_on>
+        <target_name>incident_asset</target_name>
+        <target_scope display_value="ServiceNow Enterprise Asset Management">b8671851eb313010c69b5377d85228d5</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+</record_update>

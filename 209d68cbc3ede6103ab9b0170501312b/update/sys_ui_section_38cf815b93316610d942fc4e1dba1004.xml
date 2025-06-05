@@ -28,6 +28,20 @@
             <sys_user/>
             <type/>
         </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>2</position>
+            <sys_created_by>esteban.quintero</sys_created_by>
+            <sys_created_on>2025-06-05 16:17:55</sys_created_on>
+            <sys_id>e5b006c093466a10d942fc4e1dba1077</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_volt2_github_s_0_iris_alert" sys_domain="global" view="Default view">38cf815b93316610d942fc4e1dba1004</sys_ui_section>
+            <sys_updated_by>esteban.quintero</sys_updated_by>
+            <sys_updated_on>2025-06-05 16:17:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>
