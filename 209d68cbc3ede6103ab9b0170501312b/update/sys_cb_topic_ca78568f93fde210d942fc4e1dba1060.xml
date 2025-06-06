@@ -2797,9 +2797,9 @@
         "bb2d590cd5b54020a77ab0743e21c433": {
           "id": "bb2d590cd5b54020a77ab0743e21c433",
           "stepType": "ScriptOutput",
-          "name": "",
-          "output_type": "",
-          "script": "",
+          "name": "Incident_Number_scpt_res_5",
+          "output_type": "single_part",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_5);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_5)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2819,9 +2819,9 @@
         "ec095fdcc1e54dbb9073b250e51c5b07": {
           "id": "ec095fdcc1e54dbb9073b250e51c5b07",
           "stepType": "ScriptOutput",
-          "name": "",
-          "output_type": "",
-          "script": "",
+          "name": "Incident_Number_scpt_res_6",
+          "output_type": "single_part",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_6);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_6)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2830,9 +2830,9 @@
         "e31dd0072edc46e9aa0168e2b85f4013": {
           "id": "e31dd0072edc46e9aa0168e2b85f4013",
           "stepType": "ScriptOutput",
-          "name": "",
-          "output_type": "",
-          "script": "",
+          "name": "Incident_Number_2_scpt_res",
+          "output_type": "single_part",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_2);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_2)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n\n",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2841,9 +2841,9 @@
         "36fb9b957258486a8275ccfb4c15a45f": {
           "id": "36fb9b957258486a8275ccfb4c15a45f",
           "stepType": "ScriptOutput",
-          "name": "",
-          "output_type": "",
-          "script": "",
+          "name": "Incident_Number_scpt_res",
+          "output_type": "single_part",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -4339,14 +4339,14 @@
         <sys_created_on>2025-06-02 15:27:47</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>ca78568f93fde210d942fc4e1dba1060</sys_id>
-        <sys_mod_count>61</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_name>CSM_Virtual_Agent_V6</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_cb_topic_ca78568f93fde210d942fc4e1dba1060</sys_update_name>
         <sys_updated_by>josepablo.lopez</sys_updated_by>
-        <sys_updated_on>2025-06-05 22:25:14</sys_updated_on>
+        <sys_updated_on>2025-06-06 15:16:42</sys_updated_on>
         <title>CSM_Virtual_Agent_V6</title>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>STANDARD</type>
