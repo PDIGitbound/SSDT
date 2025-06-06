@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element attributes="email_client=true" audit="true" db_object_id="9bb6d175933d2650d942fc4e1dba1041" extends="incident" label="Operational Technology Incident" max_length="40" name="sn_ot_incident" type="collection">
+        <element label="Detected state" max_length="40" name="x_volt2_github_s_0_detected_state" type="boolean"/>
         <element label="User ID" max_length="32" name="x_volt2_github_s_0_user_id" reference="sys_user" type="reference"/>
         <element label="Configuration Item" max_length="32" name="x_volt2_github_s_0_configuration_item" reference="cmdb_ci" type="reference"/>
     </element>

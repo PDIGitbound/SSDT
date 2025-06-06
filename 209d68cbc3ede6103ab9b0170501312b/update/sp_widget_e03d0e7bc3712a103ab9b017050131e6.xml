@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {
+  
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.image-dropzone {&#13;
+  border: 2px dashed #ccc;&#13;
+  padding: 40px;&#13;
+  text-align: center;&#13;
+  color: #888;&#13;
+  background-color: #f9f9f9;&#13;
+  transition: background-color 0.3s ease;&#13;
+  border-radius: 12px;&#13;
+}&#13;
+&#13;
+.image-dropzone.dragover {&#13;
+  background-color: #e0e0e0;&#13;
+  border-color: #666;&#13;
+  color: #333;&#13;
+}&#13;
+&#13;
+.preview-container {&#13;
+  display: flex;&#13;
+  flex-wrap: wrap;&#13;
+  gap: 15px;&#13;
+}&#13;
+&#13;
+.image-preview img {&#13;
+  width: 150px;&#13;
+  height: auto;&#13;
+  border-radius: 8px;&#13;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);&#13;
+}&#13;
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description>A ver si jala</description>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>draft images</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+function aversijala($scope) {
+  $scope.images = [];
+  $scope.isDragOver = false;
+
+  $scope.handleDragOver = function (event) {
+    event.preventDefault();
+    $scope.isDragOver = true;
+  };
+
+  $scope.handleDragLeave = function (event) {
+    event.preventDefault();
+    $scope.isDragOver = false;
+  };
+
+  $scope.handleDrop = function (event) {
+    event.preventDefault();
+    $scope.isDragOver = false;
+
+    const files = event.dataTransfer.files;
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      if (file.type.startsWith("image/")) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          $scope.$apply(() => {
+            $scope.images.push(e.target.result);
+          });
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+  };
+}
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-04 22:34:19</sys_created_on>
+        <sys_id>e03d0e7bc3712a103ab9b017050131e6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>draft images</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_widget_e03d0e7bc3712a103ab9b017050131e6</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-04 22:43:54</sys_updated_on>
+        <template><![CDATA[<div class="image-dropzone"
+     ng-class="{'dragover': isDragOver}"
+     ng-drop="handleDrop($event)"
+     ng-dragover="handleDragOver($event)"
+     ng-dragleave="handleDragLeave($event)">
+  <p>Arrastra y suelta tus imágenes aquí</p>
+</div>
+
+<div class="preview-container mt-3">
+  <div class="image-preview" ng-repeat="img in images">
+    <img ng-src="{{img}}" alt="Vista previa">
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_volt2_github_s_0_iris_alert</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Create OT Incident from Iris Alert</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+    gs.info("Valor de detected_state: " + current.detected_state);
+    if (!current.detected_state) {
+        gs.info("No se ejecuta BR porque detected_state no es true.");
+        return;
+    }
+
+    gs.info("=== Ejecutando Business Rule desde Iris Alert ===");
+    gs.info("Valor recibido en current.name (asset): " + current.name);
+
+    var incident = new GlideRecord('sn_ot_incident');
+    incident.initialize();
+
+	incident.x_volt2_github_s_0_detected_state = true;
+
+    // Buscar en alm_asset por nombre
+    var assetGR = new GlideRecord('alm_asset');
+    assetGR.addQuery('x_volt2_github_s_0_name', current.name);
+    assetGR.query();
+
+    if (assetGR.next()) {
+        gs.info("Asset encontrado: " + assetGR.getDisplayValue());
+
+        // Asignar el asset (sys_id del alm_asset)
+        incident.asset = assetGR.getUniqueValue();
+        gs.info("Asset asignado al incidente: " + incident.asset);
+
+        // Asignar el CI vinculado desde el campo personalizado (ej. ci)
+        if (assetGR.ci) {
+            gs.info("CI relacionado al asset: " + assetGR.ci.getDisplayValue());
+            incident.cmdb_ci = assetGR.ci;
+        } else {
+            gs.info("No se encontró CI relacionado al asset.");
+        }
+    } else {
+        gs.info("No se encontró ningún asset en alm_asset con nombre igual a: " + current.name);
+    }
+
+    // Caller y usuario actual
+    current.x_volt2_github_s_0_user_id = gs.getUserID();
+    incident.caller_id = gs.getUserID();
+    gs.info("Asignado x_volt2_github_s_0_user_id automáticamente: " + current.x_volt2_github_s_0_user_id);
+
+    // Account activa cualquiera
+    // Asignar cuenta fija por sys_id
+	var accountSysId = '72a720a59335e250d942fc4e1dba1021';
+
+    incident.x_volt2_github_s_0_x_u_account = accountSysId;
+    gs.info("Cuenta fija asignada al incidente: 72a720a59335e250d942fc4e1dba1021: " + incident.x_volt2_github_s_0_x_u_account);
+
+    // Buscar entidad ISA que esté ligada a esa cuenta
+    var isaGR = new GlideRecord('cmdb_ci_ot_isa_entity');
+    isaGR.addQuery('x_volt2_github_s_0_customer_account', accountSysId);
+    isaGR.query();
+
+    if (isaGR.next()) {
+        incident.isa_entity_site = isaGR.getUniqueValue();
+        gs.info("ISA Entity relacionado a la cuenta asignado: " + isaGR.getDisplayValue());
+    } else {
+        gs.info("No se encontró ISA Entity relacionado a la cuenta: " + accountSysId);
+    }
+
+    incident.short_description = 'Auto-generated OT Incident from IRIS Alert for ' + assetGR.getDisplayValue() + ' asset.';
+
+    // Insertar el incidente
+    incident.insert();
+    gs.info("Incidente OT insertado con sys_id: " + incident.getUniqueValue());
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-05 17:22:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5de30e0893466a10d942fc4e1dba10c5</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_name>Create OT Incident from Iris Alert</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_script_5de30e0893466a10d942fc4e1dba10c5</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-05 22:20:03</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=5de30e0893466a10d942fc4e1dba10c5"/>
+</record_update>

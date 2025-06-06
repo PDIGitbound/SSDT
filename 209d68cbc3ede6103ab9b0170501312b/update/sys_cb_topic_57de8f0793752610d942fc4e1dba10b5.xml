@@ -410,17 +410,20 @@
             "script": ""
           },
           "requestFeedback": true
+        },
+        "38687ccc8b3e4d9aa4d2c1c553d19002": {
+          "id": "38687ccc8b3e4d9aa4d2c1c553d19002",
+          "stepType": "ScriptOutput",
+          "name": "Comparation",
+          "output_type": "single_part",
+          "script": "(function execute() {\n    var bolean=true\n\n    var userId = gs.getUserID();\n\n    var userGr = new GlideRecord('sys_user');\n \n    if (userGr.get(userId)) {\n\n        var email = userGr.email;\n\n        gs.info(\"Email del usuario actual: \" + email);\n \n        // Buscar el mismo email en customer_contact\n\n        var contactGr = new GlideRecord('customer_contact');\n\n        contactGr.addQuery('email', email);\n\n        contactGr.setLimit(1);\n\n        contactGr.query();\n \n        if (contactGr.next()) {\n\n            gs.info(\"El email existe en customer_contact. sys_id: \" + contactGr.getUniqueValue());\n            bolean=true\n            \n\n        } else {\n\n            gs.info(\"El email NO existe en customer_contact.\");\n            bolean=false\n            \n        }\n\n    } else {\n\n        gs.info(\"No se pudo encontrar al usuario actual.\");\n\n    }\n    return bolean\n})();",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
         }
       },
       "edges": [
-        {
-          "id": "b7ce667d69414b459918c22f967c96c4",
-          "edgeType": "Edge",
-          "source": "b1a5e96fd5914b49bcb9f4b26cb74a7a",
-          "target": "95231856ddee4bc8bc66c10417368408",
-          "sourcePort": "",
-          "targetPort": ""
-        },
         {
           "id": "301c4ceddbdc49198bcba237edabb304",
           "edgeType": "Branch",
@@ -429,10 +432,18 @@
           "sourcePort": "",
           "targetPort": "",
           "expression": {
-            "mode": "query",
-            "value": ""
+            "mode": "script",
+            "value": "(function execute() {\n    return vaVars.Comparation==false\n})();"
           },
-          "label": "contact dont exist"
+          "label": "False"
+        },
+        {
+          "id": "b7ce667d69414b459918c22f967c96c4",
+          "edgeType": "Edge",
+          "source": "b1a5e96fd5914b49bcb9f4b26cb74a7a",
+          "target": "95231856ddee4bc8bc66c10417368408",
+          "sourcePort": "",
+          "targetPort": ""
         },
         {
           "id": "b85e31924823492c96e63769b6b2c789",
@@ -451,9 +462,9 @@
           "targetPort": "",
           "expression": {
             "mode": "script",
-            "value": "(function execute(inputs, outputs) {\n\n    var userId = gs.getUserID();\n\n    var userGr = new GlideRecord('sys_user');\n \n    if (userGr.get(userId)) {\n\n        var email = userGr.email;\n\n        outputs.email = email;\n \n        // Buscar ese mismo email en customer_contact\n\n        var contactGr = new GlideRecord('customer_contact');\n\n        contactGr.addQuery('email', email);\n\n        contactGr.setLimit(1);\n\n        contactGr.query();\n \n        if (contactGr.next()) {\n\n            outputs.existe_en_customer_contact = true;\n\n            outputs.customer_contact_sys_id = contactGr.getUniqueValue();\n\n        } else {\n\n            outputs.existe_en_customer_contact = false;\n\n        }\n\n    } else {\n\n        outputs.email = '';\n\n        outputs.existe_en_customer_contact = false;\n\n    }\n\n})(inputs, outputs);\n\n \n(function execute() {\n\n    var userId = gs.getUserID();\n\n    var userGr = new GlideRecord('sys_user');\n \n    if (userGr.get(userId)) {\n\n        var email = userGr.email;\n\n        gs.info(\"Email del usuario actual: \" + email);\n \n        // Buscar el mismo email en customer_contact\n\n        var contactGr = new GlideRecord('customer_contact');\n\n        contactGr.addQuery('email', email);\n\n        contactGr.setLimit(1);\n\n        contactGr.query();\n \n        if (contactGr.next()) {\n\n            gs.info(\"El email existe en customer_contact. sys_id: \" + contactGr.getUniqueValue());\n\n        } else {\n\n            gs.info(\"El email NO existe en customer_contact.\");\n\n        }\n\n    } else {\n\n        gs.info(\"No se pudo encontrar al usuario actual.\");\n\n    }\n\n})();\n\n "
+            "value": "(function execute() {\n    return vaVars.Comparation==true\n})();"
           },
-          "label": "Contact exist"
+          "label": "true"
         },
         {
           "id": "0c581aa7f4cf4a0a940f2df4995c044a",
@@ -472,14 +483,6 @@
           "targetPort": ""
         },
         {
-          "id": "85c7a0e9be6347c0bfa85231479dc0ce",
-          "edgeType": "Edge",
-          "source": "36cb1166d677413ebd713ad525de7838",
-          "target": "0ca66b3e14434251a6b8630a5e252ee3",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
           "id": "dffb2ddb2fff4fc8a786e4475608ce9d",
           "edgeType": "Edge",
           "source": "37676b36cc2942b28d34367dbfc62df0",
@@ -492,6 +495,22 @@
           "edgeType": "Edge",
           "source": "c9233a26e27c430ab23f07d84fae1d63",
           "target": "5c8bbe9a4bcd4eca930e5d645e61d3ec",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "85c7a0e9be6347c0bfa85231479dc0ce",
+          "edgeType": "Edge",
+          "source": "36cb1166d677413ebd713ad525de7838",
+          "target": "38687ccc8b3e4d9aa4d2c1c553d19002",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "69416395937144769bd998758f34f28a",
+          "edgeType": "Edge",
+          "source": "38687ccc8b3e4d9aa4d2c1c553d19002",
+          "target": "0ca66b3e14434251a6b8630a5e252ee3",
           "sourcePort": "",
           "targetPort": ""
         }
@@ -572,6 +591,17 @@
       },
       "nodeId": "c9233a26e27c430ab23f07d84fae1d63",
       "isHidden": false
+    },
+    "4cb0f158b1594acc9fcce878574024be": {
+      "id": "4cb0f158b1594acc9fcce878574024be",
+      "value": {
+        "mode": "script",
+        "value": "(function execute() {\n    var bolean=true\n\n    var userId = gs.getUserID();\n\n    var userGr = new GlideRecord('sys_user');\n \n    if (userGr.get(userId)) {\n\n        var email = userGr.email;\n\n        gs.info(\"Email del usuario actual: \" + email);\n \n        // Buscar el mismo email en customer_contact\n\n        var contactGr = new GlideRecord('customer_contact');\n\n        contactGr.addQuery('email', email);\n\n        contactGr.setLimit(1);\n\n        contactGr.query();\n \n        if (contactGr.next()) {\n\n            gs.info(\"El email existe en customer_contact. sys_id: \" + contactGr.getUniqueValue());\n            bolean=true\n            \n\n        } else {\n\n            gs.info(\"El email NO existe en customer_contact.\");\n            bolean=false\n            \n        }\n\n    } else {\n\n        gs.info(\"No se pudo encontrar al usuario actual.\");\n\n    }\n    return bolean\n})();"
+      },
+      "name": "Comparation",
+      "label": "Comparation",
+      "varType": "script",
+      "category": "vaVars"
     }
   }
 }</graph>
@@ -596,14 +626,14 @@
         <sys_created_on>2025-06-02 19:25:27</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>57de8f0793752610d942fc4e1dba10b5</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name>Test of contact</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_cb_topic_57de8f0793752610d942fc4e1dba10b5</sys_update_name>
         <sys_updated_by>josepablo.lopez</sys_updated_by>
-        <sys_updated_on>2025-06-02 23:02:24</sys_updated_on>
+        <sys_updated_on>2025-06-03 17:11:17</sys_updated_on>
         <title>Test of contact</title>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>STANDARD</type>

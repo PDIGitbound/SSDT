@@ -10,23 +10,23 @@
         <filter/>
         <hide_filters>false</hide_filters>
         <hide_screen_name>false</hide_screen_name>
-        <icon display_value="Self Service Diagnostic Tool">eba775b1c375aa503ab9b0170501318a</icon>
-        <name>Self Service Diagnostic Tool</name>
+        <icon display_value="I.R.I.S.">eba775b1c375aa503ab9b0170501318a</icon>
+        <name>I.R.I.S.</name>
         <relative_url>false</relative_url>
         <roles_override/>
         <sys_class_name>sys_sg_browser_screen</sys_class_name>
         <sys_created_by>alex.santacruz</sys_created_by>
         <sys_created_on>2025-05-28 18:39:34</sys_created_on>
         <sys_id>326499a5c33d2a503ab9b0170501314d</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Self Service Diagnostic Tool</sys_name>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>I.R.I.S.</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_sg_browser_screen_326499a5c33d2a503ab9b0170501314d</sys_update_name>
         <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-05-29 15:54:29</sys_updated_on>
-        <url>https://volteollcdemo22.service-now.com/ssdt</url>
+        <sys_updated_on>2025-06-03 20:06:11</sys_updated_on>
+        <url>https://volteollcdemo22.service-now.com/iris</url>
     </sys_sg_browser_screen>
     <sys_translated_text action="delete_multiple" query="documentkey=326499a5c33d2a503ab9b0170501314d"/>
 </record_update>

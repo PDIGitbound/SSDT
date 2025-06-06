@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_visibility">
+    <par_dashboard_visibility action="INSERT_OR_UPDATE">
+        <dashboard display_value="Incident Management">1e4e9cc4c31e3110458f1fec5440dd66</dashboard>
+        <experience display_value="Process Mining Workspace">ae7a921553312010e7cdddeeff7b12ec</experience>
+        <sys_class_name>par_dashboard_visibility</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-04 15:45:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>179f283bc379e6103ab9b01705013153</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>par_dashboard_visibility_179f283bc379e6103ab9b01705013153</sys_update_name>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-04 15:45:07</sys_updated_on>
+    </par_dashboard_visibility>
+</record_update>

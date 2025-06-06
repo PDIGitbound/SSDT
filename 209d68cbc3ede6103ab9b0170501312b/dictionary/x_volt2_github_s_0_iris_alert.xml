@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d84e0d9793316610d942fc4e1dba109e" label="IRIS Alert" max_length="40" name="x_volt2_github_s_0_iris_alert" type="collection">
+        <element label="Alert" max_length="8000" name="alert" type="string"/>
+        <element label="Detected State" max_length="40" name="detected_state" type="boolean"/>
+        <element label="Name" max_length="100" name="name" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>primary</color>
+        <css/>
+        <glyph>book</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>2</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description> Browse and search for articles, rate or submit feedback.</short_description>
+        <size>md</size>
+        <sp_column display_value="1">13cab45f93bd2610d942fc4e1dba1016</sp_column>
+        <sp_page display_value="kb_home">e1c919e4dbd3220099f93691f0b8f535</sp_page>
+        <sp_widget display_value="Icon Link">3caa67afcb13020000f8d856634c9c2e</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-05-27 20:38:26</sys_created_on>
+        <sys_id>ca06609593712250d942fc4e1dba1004</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name>Knowledge</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_instance_link_ca06609593712250d942fc4e1dba1004</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-03 17:52:10</sys_updated_on>
+        <title>Knowledge</title>
+        <type>page</type>
+        <url>/kb</url>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=ca06609593712250d942fc4e1dba1004"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sp_instance_link_ca06609593712250d942fc4e1dba1004</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;primary&lt;/color&gt;&lt;css/&gt;&lt;glyph&gt;book&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;2&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item/&gt;&lt;sc_category/&gt;&lt;short_description&gt; Browse and search for articles, rate or submit feedback.&lt;/short_description&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;13cab45f93bd2610d942fc4e1dba1016&lt;/sp_column&gt;&lt;sp_page display_value="kb_home"&gt;e1c919e4dbd3220099f93691f0b8f535&lt;/sp_page&gt;&lt;sp_widget display_value="Icon Link"&gt;3caa67afcb13020000f8d856634c9c2e&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;isaac.hernandez&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-05-27 20:38:26&lt;/sys_created_on&gt;&lt;sys_id&gt;ca06609593712250d942fc4e1dba1004&lt;/sys_id&gt;&lt;sys_mod_count&gt;15&lt;/sys_mod_count&gt;&lt;sys_name&gt;Knowledge&lt;/sys_name&gt;&lt;sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GitHub SSDT"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_ca06609593712250d942fc4e1dba1004&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;ruben.fernandez&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-03 17:52:10&lt;/sys_updated_on&gt;&lt;title&gt;Knowledge&lt;/title&gt;&lt;type&gt;page&lt;/type&gt;&lt;url&gt;/kb&lt;/url&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "Circle Icon",
+		"displayValue": "Circle Icon"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=ca06609593712250d942fc4e1dba1004"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2087636730</payload_hash>
+        <record_name>Knowledge</record_name>
+        <reverted_from/>
+        <source>c19edfdb93f96610d942fc4e1dba1000</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-03 17:52:10</sys_created_on>
+        <sys_id>3a13486793fd6610d942fc4e1dba10c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19736ec14da0000001</sys_recorded_at>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-03 17:52:10</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>be13486724fd66108862961c234c20c5</update_guid>
+        <update_guid_history>be13486724fd66108862961c234c20c5:2087636730,ba134867d7fd66107f6229845f0419c0:-846507783,7613486767fd6610fcd567f13836c8b7:-1894912328,321348676ffd66107cbffeabc1f0d698:726813947,fa134867a9fd6610af1634061eb7fa92:2087636730,a61348672ffd66109b795e6f1c82678d:-846507783,9913086788fd66107dd6d71bbc17a3b7:726813947,5513086710fd6610ddefbed7566cd0b2:2087636730,111308674cfd661023c3ebe6cc4546ad:-846507783,df03c46782fd6610afa715841b614d8e:726813947,9b03c4671bfd66101d84a4f4700e4289:2087636730,f6038467d9fd66103c0989c6abc6b5f6:-846507783,7e0344671bfd6610fae11ec0d2f1eef7:-1894912328,ea0384677dfd661063e4edf7caefc6c6:2087636730,44dab45f6dbd2610db08ed65c4cec12a:-846507783,ca066095537122508598243988074f06:943578457</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Knowledge">e423886793fd6610d942fc4e1dba1014</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-03 17:52:17</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>25334092254b4aaa86d3c78445981be4</sys_id>
+        <sys_metadata>ca06609593712250d942fc4e1dba1004</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Knowledge</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sp_instance_link_ca06609593712250d942fc4e1dba1004</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_ca06609593712250d942fc4e1dba1004">3a13486793fd6610d942fc4e1dba10c6</sys_update_version>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-03 17:52:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

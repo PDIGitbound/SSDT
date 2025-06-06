@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_volt2_github_s_0.GetSiteFromAccount</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>GetSiteFromAccount</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var GetSiteFromAccount = Class.create();
+GetSiteFromAccount.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getEntitySysId: function() {
+        var accountSysId = this.getParameter('sysparm_account_sys_id');
+        gs.info('[]]>🛠<![CDATA[ ScriptInclude] sysparm_account_sys_id recibido: ' + accountSysId);
+
+        var entityGR = new GlideRecord('cmdb_ci_ot_isa_entity');
+        entityGR.addQuery('x_volt2_github_s_0_customer_account', accountSysId);
+        entityGR.query();
+
+        if (entityGR.next()) {
+            var entityId = entityGR.getUniqueValue();
+            var entityName = entityGR.getDisplayValue('entity_name'); // usa 'entity_name' si ese es el campo
+            gs.info('[✅ ScriptInclude] Entidad encontrada. sys_id: ' + entityId + ', name: ' + entityName);
+            return entityId + '||' + entityName;
+        }
+
+        gs.info('[❌ ScriptInclude] No se encontró entidad relacionada.');
+        return '';
+    }
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-04 22:43:24</sys_created_on>
+        <sys_id>b31f0e3fc3712a103ab9b0170501310d</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>GetSiteFromAccount</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_script_include_b31f0e3fc3712a103ab9b0170501310d</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-05 05:42:11</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application>Virtual Agent</application>
+        <code/>
+        <commented_message/>
+        <key>how can i help you, you have this options util your system administrator give you the permissions.</key>
+        <language>en</language>
+        <message>How can i help you, you have this options util your system administrator give you the permissions.</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-03 17:18:22</sys_created_on>
+        <sys_id>a75b771b93bd6610d942fc4e1dba1083</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>how can i help you, you have this options util your system administrator give you the permissions.</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_ui_message_a75b771b93bd6610d942fc4e1dba1083</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-03 17:18:22</sys_updated_on>
+    </sys_ui_message>
+</record_update>

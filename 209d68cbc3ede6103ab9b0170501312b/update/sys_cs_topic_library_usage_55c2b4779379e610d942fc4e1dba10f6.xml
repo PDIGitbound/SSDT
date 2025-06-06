@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_library_usage">
+    <sys_cs_topic_library_usage action="INSERT_OR_UPDATE">
+        <calling_cs_topic_id display_value="CSM_Virtual_Agent_V6">49c2f0779379e610d942fc4e1dba10ba</calling_cs_topic_id>
+        <library_cs_topic_id display_value="Transfer to Live Agent">9d384761b3633300dbbf6030c6a8dcaa</library_cs_topic_id>
+        <library_usage>{"type":"LibraryCall","library_topic_name":"Transfer to Live Agent","library_topic_id":"9d384761b3633300dbbf6030c6a8dcaa","library_topic_is_template":false,"parameter-mappings":[],"return-value-mappings":[],"header_card_fields":[],"id":"6e0c443ffad341b99b0414bb85d227b0","name":"Transfer to Live Agent","goal_id":"primary","applicability":{"type":"Applicability","mode":"script","value":"true"},"expert_mode":false}</library_usage>
+        <node_id>6e0c443ffad341b99b0414bb85d227b0</node_id>
+        <sys_class_name>sys_cs_topic_library_usage</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-04 15:58:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>55c2b4779379e610d942fc4e1dba10f6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cs_topic_library_usage_55c2b4779379e610d942fc4e1dba10f6</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-04 15:58:54</sys_updated_on>
+    </sys_cs_topic_library_usage>
+</record_update>
