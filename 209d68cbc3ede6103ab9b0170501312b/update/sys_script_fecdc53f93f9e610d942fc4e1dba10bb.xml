@@ -31,13 +31,19 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
-var woNotes = current.close_notes + '';
+    var woNotes = current.close_notes + '';
 
     var otiGR = new GlideRecord('sn_ot_incident');
-	
+
     if (otiGR.get(current.parent)) {
-        otiGR.resolution_notes = woNotes;
+        otiGR.close_code = 'Solution provided';
+        otiGR.close_notes = woNotes;
         otiGR.update();
+
+		otiGR.get(otiGR.sys_id);
+
+        // otiGR.state = 'Resolved'; //'Resolved';
+        // otiGR.update();
     }
 
 })(current, previous);]]></script>
@@ -47,7 +53,7 @@ var woNotes = current.close_notes + '';
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fecdc53f93f9e610d942fc4e1dba10bb</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>passCloseNotesFromWOtoOTI</sys_name>
         <sys_overrides/>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
@@ -55,7 +61,7 @@ var woNotes = current.close_notes + '';
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_script_fecdc53f93f9e610d942fc4e1dba10bb</sys_update_name>
         <sys_updated_by>carlos.salcido</sys_updated_by>
-        <sys_updated_on>2025-06-04 21:00:48</sys_updated_on>
+        <sys_updated_on>2025-06-05 21:05:34</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

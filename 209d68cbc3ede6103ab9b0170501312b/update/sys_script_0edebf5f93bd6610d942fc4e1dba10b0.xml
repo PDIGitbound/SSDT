@@ -6,7 +6,7 @@
         <action_insert>false</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
-        <active>true</active>
+        <active>false</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -21,7 +21,7 @@
         <is_rest>false</is_rest>
         <message/>
         <name>changeOTIncidentStateToResolved</name>
-        <order>200</order>
+        <order>100</order>
         <priority>100</priority>
         <rest_method/>
         <rest_method_text/>
@@ -30,36 +30,15 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
-    var parentId = current.parent + ''; // sys_id del OTI
 
-    var otGR = new GlideRecord('sn_ot_incident');
-    if (otGR.get(parentId)) {
+    var otiGR = new GlideRecord('sn_ot_incident');
 
+    if (otiGR.get(current.parent)) {
+        otiGR.get(otiGR.sys_id);
 
-		otGR.close_code = 'Solution provided';
-
-
-
-        // Ahora sí podemos cambiar el estado del OTI
-        otGR.state = '3'; // Complete / Resolved
-        otGR.update();
-
-        // // Buscar el único registro relacionado en Affected OT Devices
-        // var affectedCI = new GlideRecord('task_ci');
-        // affectedCI.addQuery('task', otGR.sys_id);
-        // affectedCI.setLimit(1); // Asumimos solo uno
-        // affectedCI.query();
-
-        // if (affectedCI.next()) {
-        //     // Si no tiene asset_action, lo establecemos
-        //     if (!affectedCI.asset_action) {
-        //         affectedCI.asset_action = 'no_action'; // O 'repaired', 'replaced', etc.
-        //         affectedCI.update();
-        //     }
-        // }
-
+        otiGR.state = 'Resolved'; //'Resolved';
+        otiGR.update();
     }
-
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -68,7 +47,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0edebf5f93bd6610d942fc4e1dba10b0</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>changeOTIncidentStateToResolved</sys_name>
         <sys_overrides/>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
@@ -76,7 +55,7 @@
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_script_0edebf5f93bd6610d942fc4e1dba10b0</sys_update_name>
         <sys_updated_by>carlos.salcido</sys_updated_by>
-        <sys_updated_on>2025-06-04 21:15:25</sys_updated_on>
+        <sys_updated_on>2025-06-05 21:18:08</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>

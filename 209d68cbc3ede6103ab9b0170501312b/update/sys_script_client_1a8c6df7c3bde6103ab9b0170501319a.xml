@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
     <sys_script_client action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <applies_extended>false</applies_extended>
         <condition/>
         <description>site and account values on ot incident</description>
@@ -11,21 +11,23 @@
         <name>site and account values on ot incident</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
-   if (isLoading || newValue === '') {
-      return;
-   }
+    if (isLoading || newValue === '') {
+        return;
+    }
 
-    var valorRef = g_form.getDisplayValue('caller_id');
+    // Get the display value of the changed field
+    var displayValue = g_form.getDisplayBox('x_volt2_github_s_0_x_u_account').value;
 
-	
-    g_form.setValue('isa_entity_site', valorRef);
-	
-	g_form.addInfoMessage("Destino seteado a: " + g_form.getDisplayValue('caller_id'));
+    // Set that value to another field
+    // var ga = new GlideAjax('ResolveCompanySysId');
+    // ga.addParam('sysparm_name', 'getSysIdFromCompanyName');
+    // ga.addParam('sysparm_company_name', displayValue);
+    // ga.getXMLAnswer(function(sysId) {
+    //     g_form.setValue('isa_entity_site', sysId);
+    // });
 
+    g_form.setValue('isa_entity_site', displayValue);
 
-
-   //Type appropriate comment here, and begin script below
-   
 }]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
         <sys_created_by>alex.santacruz</sys_created_by>
@@ -33,7 +35,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1a8c6df7c3bde6103ab9b0170501319a</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>site and account values on ot incident</sys_name>
         <sys_overrides/>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
@@ -41,10 +43,10 @@
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_script_client_1a8c6df7c3bde6103ab9b0170501319a</sys_update_name>
         <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-06-04 21:11:34</sys_updated_on>
+        <sys_updated_on>2025-06-05 16:38:01</sys_updated_on>
         <table>sn_ot_incident</table>
         <type>onChange</type>
-        <ui_type>0</ui_type>
+        <ui_type>10</ui_type>
         <view/>
     </sys_script_client>
 </record_update>

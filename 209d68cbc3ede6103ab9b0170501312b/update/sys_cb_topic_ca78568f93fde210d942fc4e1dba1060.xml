@@ -2788,7 +2788,62 @@
           "stepType": "ScriptOutput",
           "name": "Incident_Numeber_1_scpt_res",
           "output_type": "single_part",
-          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_1);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_1)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_get_help' +\n    'sys_id=' + ot_incident.sys_id + '&amp;id=ticket&amp;table=ot_incident',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_get_help' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;id=ticket&amp;table=ot_incident'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_1);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_1)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "bb2d590cd5b54020a77ab0743e21c433": {
+          "id": "bb2d590cd5b54020a77ab0743e21c433",
+          "stepType": "ScriptOutput",
+          "name": "",
+          "output_type": "",
+          "script": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "0ed5c46b3c0f434c8655975713adba31": {
+          "id": "0ed5c46b3c0f434c8655975713adba31",
+          "stepType": "ScriptOutput",
+          "name": "incident_num_4_scpt_res",
+          "output_type": "single_part",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_4);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_4)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "ec095fdcc1e54dbb9073b250e51c5b07": {
+          "id": "ec095fdcc1e54dbb9073b250e51c5b07",
+          "stepType": "ScriptOutput",
+          "name": "",
+          "output_type": "",
+          "script": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "e31dd0072edc46e9aa0168e2b85f4013": {
+          "id": "e31dd0072edc46e9aa0168e2b85f4013",
+          "stepType": "ScriptOutput",
+          "name": "",
+          "output_type": "",
+          "script": "",
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          }
+        },
+        "36fb9b957258486a8275ccfb4c15a45f": {
+          "id": "36fb9b957258486a8275ccfb4c15a45f",
+          "stepType": "ScriptOutput",
+          "name": "",
+          "output_type": "",
+          "script": "",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -3665,34 +3720,10 @@
           "targetPort": ""
         },
         {
-          "id": "3dad2cd892c6447da180618f62e7cf25",
-          "edgeType": "Edge",
-          "source": "dfe0543505244de3bf71742f0c9ba488",
-          "target": "d6b847e9dbbb4978a306bd65a74da443",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
           "id": "48e23d81b23644c5977c45f118e773b9",
           "edgeType": "Edge",
           "source": "d6b847e9dbbb4978a306bd65a74da443",
           "target": "e07a51d99df24292ad37573bc518a144",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "cbdd0a66df29417fbf6611801ede3d48",
-          "edgeType": "Edge",
-          "source": "a2e1209b3e3545ebb832b676552ef8f5",
-          "target": "3ba9de2253ac457c82863d040a0845ba",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "e5a5643e0dcf4cf98afe7ae88ddc4369",
-          "edgeType": "Edge",
-          "source": "789b04115c16497397dd86801b241f52",
-          "target": "5334bc6992f84a2a8c8eb3899ec840f5",
           "sourcePort": "",
           "targetPort": ""
         },
@@ -3705,26 +3736,10 @@
           "targetPort": ""
         },
         {
-          "id": "ff2c2d5e1f514025be70eae6337b3a1b",
-          "edgeType": "Edge",
-          "source": "ed35768675b34ad594fcfab42ec7fef0",
-          "target": "b44c5c41ae64413c89e05c2cad9959c1",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
           "id": "dca05bccd4304be3854220ea757ad5bf",
           "edgeType": "Edge",
           "source": "b44c5c41ae64413c89e05c2cad9959c1",
           "target": "e07a51d99df24292ad37573bc518a144",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "02e461a70a054ce191ed947b6b818613",
-          "edgeType": "Edge",
-          "source": "e6e4318f62fc4ec8a697e8cccbe3442c",
-          "target": "bad8f44ef4ab479c92827eaac7a18d96",
           "sourcePort": "",
           "targetPort": ""
         },
@@ -3757,6 +3772,86 @@
           "edgeType": "Edge",
           "source": "20a84d096b2c48dc8fcdd8448a7c834d",
           "target": "5075cbd55a9c44ea9e6f319321f64458",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "cbdd0a66df29417fbf6611801ede3d48",
+          "edgeType": "Edge",
+          "source": "a2e1209b3e3545ebb832b676552ef8f5",
+          "target": "bb2d590cd5b54020a77ab0743e21c433",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "b01ac2c4e0d74841968c7b77972814c1",
+          "edgeType": "Edge",
+          "source": "bb2d590cd5b54020a77ab0743e21c433",
+          "target": "3ba9de2253ac457c82863d040a0845ba",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "e5a5643e0dcf4cf98afe7ae88ddc4369",
+          "edgeType": "Edge",
+          "source": "789b04115c16497397dd86801b241f52",
+          "target": "0ed5c46b3c0f434c8655975713adba31",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "04d0b2e5c8894232a691f7739172a57e",
+          "edgeType": "Edge",
+          "source": "0ed5c46b3c0f434c8655975713adba31",
+          "target": "5334bc6992f84a2a8c8eb3899ec840f5",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "3dad2cd892c6447da180618f62e7cf25",
+          "edgeType": "Edge",
+          "source": "dfe0543505244de3bf71742f0c9ba488",
+          "target": "ec095fdcc1e54dbb9073b250e51c5b07",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "c82b92031a4242bb85f6e709a7798650",
+          "edgeType": "Edge",
+          "source": "ec095fdcc1e54dbb9073b250e51c5b07",
+          "target": "d6b847e9dbbb4978a306bd65a74da443",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "ff2c2d5e1f514025be70eae6337b3a1b",
+          "edgeType": "Edge",
+          "source": "ed35768675b34ad594fcfab42ec7fef0",
+          "target": "e31dd0072edc46e9aa0168e2b85f4013",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "2c05671c9b9449ca8174a8c61251cf68",
+          "edgeType": "Edge",
+          "source": "e31dd0072edc46e9aa0168e2b85f4013",
+          "target": "b44c5c41ae64413c89e05c2cad9959c1",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "02e461a70a054ce191ed947b6b818613",
+          "edgeType": "Edge",
+          "source": "e6e4318f62fc4ec8a697e8cccbe3442c",
+          "target": "36fb9b957258486a8275ccfb4c15a45f",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "941181d6bcb84c6198537e94d0e6e5f2",
+          "edgeType": "Edge",
+          "source": "36fb9b957258486a8275ccfb4c15a45f",
+          "target": "bad8f44ef4ab479c92827eaac7a18d96",
           "sourcePort": "",
           "targetPort": ""
         }
@@ -4244,14 +4339,14 @@
         <sys_created_on>2025-06-02 15:27:47</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>ca78568f93fde210d942fc4e1dba1060</sys_id>
-        <sys_mod_count>58</sys_mod_count>
+        <sys_mod_count>61</sys_mod_count>
         <sys_name>CSM_Virtual_Agent_V6</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_cb_topic_ca78568f93fde210d942fc4e1dba1060</sys_update_name>
         <sys_updated_by>josepablo.lopez</sys_updated_by>
-        <sys_updated_on>2025-06-05 18:48:41</sys_updated_on>
+        <sys_updated_on>2025-06-05 22:25:14</sys_updated_on>
         <title>CSM_Virtual_Agent_V6</title>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>STANDARD</type>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>primary</color>
+        <css/>
+        <glyph>book</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item/>
+        <sc_category/>
+        <short_description>Knowledge bases</short_description>
+        <size>md</size>
+        <sp_column display_value="1">537f8452937da650d942fc4e1dba100b</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Knowledge Icon Link">8bcb79bfc3fde6103ab9b0170501317f</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-04 21:47:16</sys_created_on>
+        <sys_id>9c824e3bc3312a103ab9b0170501313d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Knowledge</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_instance_link_9c824e3bc3312a103ab9b0170501313d</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-04 21:48:53</sys_updated_on>
+        <title>Knowledge</title>
+        <type>page</type>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "Top Icon",
+		"displayValue": "Top Icon"
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=9c824e3bc3312a103ab9b0170501313d"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sp_instance_link_9c824e3bc3312a103ab9b0170501313d</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;primary&lt;/color&gt;&lt;css/&gt;&lt;glyph&gt;book&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item/&gt;&lt;sc_category/&gt;&lt;short_description&gt;Knowledge bases&lt;/short_description&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;537f8452937da650d942fc4e1dba100b&lt;/sp_column&gt;&lt;sp_page/&gt;&lt;sp_widget display_value="Knowledge Icon Link"&gt;8bcb79bfc3fde6103ab9b0170501317f&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;ruben.fernandez&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-04 21:47:16&lt;/sys_created_on&gt;&lt;sys_id&gt;9c824e3bc3312a103ab9b0170501313d&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Knowledge&lt;/sys_name&gt;&lt;sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GitHub SSDT"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_9c824e3bc3312a103ab9b0170501313d&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;ruben.fernandez&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-04 21:48:53&lt;/sys_updated_on&gt;&lt;title&gt;Knowledge&lt;/title&gt;&lt;type&gt;page&lt;/type&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "Top Icon",
+		"displayValue": "Top Icon"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=9c824e3bc3312a103ab9b0170501313d"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1084041059</payload_hash>
+        <record_name>Knowledge</record_name>
+        <reverted_from/>
+        <source>c19edfdb93f96610d942fc4e1dba1000</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-04 21:48:53</sys_created_on>
+        <sys_id>4ce2067bc3312a103ab9b0170501317e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1973ceb294b0000001</sys_recorded_at>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-04 21:48:53</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>c0e2067b84312a100e2c7aef1c4df37e</update_guid>
+        <update_guid_history>c0e2067b84312a100e2c7aef1c4df37e:1084041059,31b2027b90312a10c117d68e9081043f:120738780,50824e3b01312a10a71971b8d7085a40:472097765</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Knowledge">38e302fbc3312a103ab9b017050131e3</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-04 21:53:18</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>82ce658859c342c09a8443127db8c900</sys_id>
+        <sys_metadata>9c824e3bc3312a103ab9b0170501313d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Knowledge</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sp_instance_link_9c824e3bc3312a103ab9b0170501313d</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_9c824e3bc3312a103ab9b0170501313d">4ce2067bc3312a103ab9b0170501317e</sys_update_version>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-04 21:53:18</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
