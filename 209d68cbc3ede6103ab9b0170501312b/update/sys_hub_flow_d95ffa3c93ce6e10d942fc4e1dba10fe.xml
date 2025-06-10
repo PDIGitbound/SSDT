@@ -1,0 +1,1271 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=218309000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>incident_creation_summarizer</internal_name>
+        <label_cache>[{"name":"flow_variable.incident_sysid","label":"Flow Variables➛incident_sysid","type":"string","base_type":"string","usedInstances":{"73f41f6f-b907-4eeb-9c95-46ed11a01e13":["sysid"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"d3e19742-44cd-4089-a866-b782800725dc"}},{"name":"flow_variable.incident_description","label":"Flow Variables➛incident_description","type":"string","base_type":"string","usedInstances":{"73f41f6f-b907-4eeb-9c95-46ed11a01e13":["texttosummarize"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"ee20b009-042a-4ad3-b07a-45a1ff08e886"}},{"name":"flow_variable.sysid","label":"Flow Variables➛sysid","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"58dd38b3-5046-4fad-b376-665250ef38c0"}},{"name":"flow_variable.texttosummarize","label":"Flow Variables➛texttosummarize","type":"string","base_type":"string","usedInstances":{},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"80d2507a-d2fb-4685-b52b-6d400475542f"}},{"name":"Created_1.current.x_volt2_github_s_0_summary_generated","label":"Trigger - Record Created➛Incident Record➛Summary generated","reference":"","reference_display":"Summary generated","type":"boolean","base_type":"boolean","parent_table_name":"incident","column_name":"x_volt2_github_s_0_summary_generated","usedInstances":{"3d60b614-a6b6-420c-8fed-29c7cffa5756":["condition"],"dbae3c59-c322-440a-bd89-02244d4cd7bb":["x_volt2_github_s_0_summary_generated"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number","usedInstances":{"836a4120-e938-4670-b2d8-efe86ea309f4":["incidentrecord"]}},{"name":"836a4120-e938-4670-b2d8-efe86ea309f4.response","label":"2 - Summarize➛response","reference_display":"response","type":"string","base_type":"string","usedInstances":{"d49e0801-818c-4e55-8f67-1eb046a7acc4":["ah_work_note"],"3083f3fa-357c-4eb2-ba18-1001fddc5bea":["description"],"ebd6fa72-4f18-41da-b7f2-2002eeaa3083":["ah_work_note"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"7ace8998-d367-4871-becc-d6ae9c315c03"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","usedInstances":{"d49e0801-818c-4e55-8f67-1eb046a7acc4":["ah_task"]},"attributes":{}},{"name":"Updated_1.current.description","label":"Trigger - Record Updated➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description","usedInstances":{"836a4120-e938-4670-b2d8-efe86ea309f4":["texttosummarize"]}},{"name":"Created_1.current.description","label":"Trigger - Record Created➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description","usedInstances":{"6d6c048f-d26c-4c1b-adfb-5e3c77f974a0":["texttosummarize"],"836a4120-e938-4670-b2d8-efe86ea309f4":["texttosummarize"],"ea06ada3-a55b-48c3-8e7a-f42730e348f9":["incident_description-0"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","usedInstances":{"d49e0801-818c-4e55-8f67-1eb046a7acc4":["ah_task"],"ebd6fa72-4f18-41da-b7f2-2002eeaa3083":["ah_task"],"836a4120-e938-4670-b2d8-efe86ea309f4":["incidentrecord"],"dbae3c59-c322-440a-bd89-02244d4cd7bb":["record"]},"attributes":{}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id","usedInstances":{"836a4120-e938-4670-b2d8-efe86ea309f4":["incidentrecord","sysid"],"ea06ada3-a55b-48c3-8e7a-f42730e348f9":["incident_description-0","incident_sysid-1"]}}]</label_cache>
+        <master_snapshot>b780cbbc93ce6e10d942fc4e1dba10ef</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Incident Creation Summarizer</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>07f65e8fc33126103ab9b017050131bd</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:46:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d95ffa3c93ce6e10d942fc4e1dba10fe</sys_id>
+        <sys_mod_count>91</sys_mod_count>
+        <sys_name>Incident Creation Summarizer</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_hub_flow_d95ffa3c93ce6e10d942fc4e1dba10fe</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:25:29</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=d95ffa3c93ce6e10d942fc4e1dba10fe"/>
+    <sys_variable_value action="delete_multiple" query="document_key=d95ffa3c93ce6e10d942fc4e1dba10fe"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="incident">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-02 15:21:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>07f65e8fc33126103ab9b017050131bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-02 15:21:19</sys_updated_on>
+        <table>incident</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>d95ffa3c93ce6e10d942fc4e1dba10fe</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 17:25:29</sys_created_on>
+        <sys_id>48204cbdc346a2503ab9b01705013197</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:25:29</sys_updated_on>
+        <trigger display_value="">07f65e8fc33126103ab9b017050131bd</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=d95ffa3c93ce6e10d942fc4e1dba10fe^sys_idNOT IN48204cbdc346a2503ab9b01705013197"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=d95ffa3c93ce6e10d942fc4e1dba10fe"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=d95ffa3c93ce6e10d942fc4e1dba10fe^sys_idNOT IN995f3e3c93ce6e10d942fc4e1dba1001"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>d95ffa3c93ce6e10d942fc4e1dba10fe</id>
+        <name>Incident Creation Summarizer</name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:46:58</sys_created_on>
+        <sys_id>995f3e3c93ce6e10d942fc4e1dba1001</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-08 04:46:58</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=995f3e3c93ce6e10d942fc4e1dba1001"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=d95ffa3c93ce6e10d942fc4e1dba10fe^sys_idNOT INb1808bbc93ce6e10d942fc4e1dba10f3,bd808bbc93ce6e10d942fc4e1dba10f9"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Incident Creation Summarizer">d95ffa3c93ce6e10d942fc4e1dba10fe</model>
+        <model_id>d95ffa3c93ce6e10d942fc4e1dba10fe</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d95ffa3c93ce6e10d942fc4e1dba10fe</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:52:10</sys_created_on>
+        <sys_id>b1808bbc93ce6e10d942fc4e1dba10f3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-08 04:52:10</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b1808bbc93ce6e10d942fc4e1dba10f3"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Incident Creation Summarizer">d95ffa3c93ce6e10d942fc4e1dba10fe</model>
+        <model_id>d95ffa3c93ce6e10d942fc4e1dba10fe</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d95ffa3c93ce6e10d942fc4e1dba10fe</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:52:11</sys_created_on>
+        <sys_id>bd808bbc93ce6e10d942fc4e1dba10f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-08 04:52:11</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=bd808bbc93ce6e10d942fc4e1dba10f9"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=d95ffa3c93ce6e10d942fc4e1dba10fe"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d95ffa3c93ce6e10d942fc4e1dba10fe"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=d95ffa3c93ce6e10d942fc4e1dba10fe^sys_idNOT INf71eda11c38222503ab9b017050131ca"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Incident Creation Summarizer">d95ffa3c93ce6e10d942fc4e1dba10fe</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-09 15:38:49</sys_created_on>
+        <sys_id>f71eda11c38222503ab9b017050131ca</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-09 15:45:12</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxnLdtkkUDbDeo7W0fglSgRNImSpOuRCnrXeTfO9TNsi6OHStb5yWASHnmzNGZM2Qevpsc+YSbV+Yc+ZyYA5MJRUKB+HyzJrCs9LIn0ErvrZDASMlwY16pMCYDk4ZyNSerNUcKXqaIR7AoQ0xC88oemAniMZltojsMkeD3aZg8pplvwzMTAcNEKFjCLIJgmz/znbvtTrBkHIdEmFcPjwNzjUKIpXSe77UtppMFNEATh1iBa7uOY1nO5dD2L1zfdrCLiGVBwHrhNXCqpf5tZeSrIgITXBbdoCYkCN8LvinfWAKzGQ0r9DVi3yD6paXfowSwByTbKx+9nIpsOVhKFpD7tWJSZCsZzmxT8nglPmf4NYmEopirgkRYiSOIR9YasgaRI6KzpXyaFgk/MpFWl29yGSBePiGlQubHikSacMo4UO9l3EQyDlP009vr++mN99eH+fVvt1NvejubT++u57c35nNal/dvrCNmCHMsXlbOc/nlPzLC9QcU8coHNAMzCkK2Vh8CxZJCYs+DrWyvpcAsZaUh3aDYinalW1S/T7uW1aneoJKxUPDft380xZstHqfbiwuEMEEduvVpRbfVylugqRYSqtXtU3C+coiEh5b1P4k4d6DXanglMeE323AmbC4WoGom1rHSbD0hoSJPSQ9h7FV41K8CppdEndXWVPbLmg5jASG88gs1lZ0SWTL6iUVQwAP0ZcFWGhL26ac85DQWhoRPCX+MIA6BLGUUTkfvVmiRc0xnhJNAVWRBv0TVp99ZFDGxqKAuk6asNHKW6UBeRlFSljs6Mfljn23dJD2pkVlr76N727Yp9Ql1rLHubNtyfWpbY2uEKHYtK3Aqvd0E04lS1STxJj1+XIdHqRj5AdKrU5yDt6rdcJCMkl0NFiRoieRGct0PNLsnaI6GVjNE9yhHLGWZLd/sqnNfaT2fBhBOEPwCH2qM+oUDHJBy+QRm/Ar381HwzyKUscB1O9IxDSaM7RvGTzl/P/fohFSGZD+A3TfOyQO3tBfCRWLTg/u51PYnZEgsMD0X/M4fTSZ+gBxKxxdj4tg199vCaMX2LlzvBbUlbXLtcsBW4SRtejvC+04A2PDBowGe7oC5MFv9L9t7H073tCTCA6ihx7WXNQxvweESXOz12+2N1Mm2v0/teHo5CUb2eByM4R4DHU+HxEf20BmhyfjCvRzVOr4BZR9M1cLMD7ndRJsoBdLhBl+yrfO6rr+lbCOilB5Hx09pAefY9DcoS1KZlPqzGKmpyND4LMUvd9v3jBmBAZhecfsa14eg0B/WeFsYvlTLxnkBUv8K6zup9Tmzg5Wzu1LVRJLs1nrylYoML0cT6rZbDJ20WcwWTDfMsz9eHNghSWevtZ0zDhV80to3nQeDV0i4JpPqiWHPkaYvUuzeSXHejhT35GNU0Yud98jXgH1HIyw9V5wyx3RO4klaNe8bacCGAUkMRo38f4sEG/7GUEsClHI4L0NCQ2c/1bWrU6QJpVTwjwWSncAb0wyWjfwAdX6DqiaFfm/ABI/RaOR2nIcn9RtwG6AX8J792Dq6K5K2Jts7u46LW4/ZOr0qkt1VxIFzqdeq24fTaVW3jqeXqj598Oy7v7egONOR8vgfJ+dAvUUfAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=d95ffa3c93ce6e10d942fc4e1dba10fe^sys_idNOT IN66016a19c38222503ab9b01705013199,f014b3a9c306a2503ab9b017050131de"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Add Worknote">4d7227a473210300e4fd234ffff6a712</action_type>
+        <action_type_parent display_value="Add Worknote">cdc8896487110300123eaf8e36cb0b24</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>4d7227a473210300e4fd234ffff6a712</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Incident Creation Summarizer">d95ffa3c93ce6e10d942fc4e1dba10fe</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>3d60b614-a6b6-420c-8fed-29c7cffa5756</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-09 15:51:34</sys_created_on>
+        <sys_id>66016a19c38222503ab9b01705013199</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:26:14</sys_updated_on>
+        <ui_id>ebd6fa72-4f18-41da-b7f2-2002eeaa3083</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VTy27bMBD8lYJnQZBkp259Cxz41DZAXeQSBMJaXNlEKFLlw44r+N+7tGhFSZsgh1yim2YfnBkObzsmOJuz7OusKGYwnU2KPJtkGU5rXkymNX2fYZZfsIQpaJA6YVs6sPcE7ED6gHTdwiA45GWeVt4YVO54pDoXtpVwuIlthFRbITnV2fz2LmEtGFrp0LB596z0Vk4S1iipNTL6h6I7tAEwWCPtrjBC3+LYzxGuDQ9MsoThg0PFkSjUIC0mrAHFwWlzGBDSy6+VfAS2QrleYwMPVvyhUydFMjp44DhAZfSHSr/6Un0FDlbO+Mp5M1imRYW2t4VjDV66xRjrG65bJ7TqRxys5XlaS9+oH70tbFgwuhJviQi2QXBQEOXUq63eD+4shTp5E4tSVyBHrQim2i4FynBpyjdr6k0YOGfE2rvAs2MosaEDygbaVqhN2Rq9E6elxLFJN5J+0lrqPZGxYqNSqIKglHyHdEn41Qm+ASOCuu+0hoaPCbMHu5Bg7aNGMrj87QPDXnHUVvb2hJHKiNZd0gE7jDKOSXwH+cVrmSuKJyHba3NfKu1w9BjeIfdv4HDOfWDwKTL4P6/4Aixdhto8i//qDMbs5++W/S9Zlj1N/wvJ/6ip/1jpvvsL7cC88ucFAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Copy of Summarize">4b83b769c306a2503ab9b0170501318c</action_type>
+        <action_type_parent display_value="Copy of Summarize">4c833769c306a2503ab9b0170501316b</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>4b83b769c306a2503ab9b0170501318c</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Incident Creation Summarizer">d95ffa3c93ce6e10d942fc4e1dba10fe</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>3d60b614-a6b6-420c-8fed-29c7cffa5756</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 16:32:50</sys_created_on>
+        <sys_id>f014b3a9c306a2503ab9b017050131de</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:30:37</sys_updated_on>
+        <ui_id>73f41f6f-b907-4eeb-9c95-46ed11a01e13</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/71T207jMBD9FdbPTeUmaS59W4GQkHYXibK8IFTZjk0tOU5I7EK36r/vOHHbcCliVwi/+cyMfebMnNsNkgWaISyyiKZJziKckHCKI0JziicpnuJJNMkEGiFNSg6Zhj8ZU7W2LEkj/3AIrIiyLvINzslmI1T1uFhBkFDFx1IzWXBtFgVvWSNrIyu93UJVIdtakfXNfxWzpVRFwzWa3d6NUE0a4GZ4g2abF6GPNqcI5QpSr6G7E1OdzAf9HW3crGsXaE0j9b2///APzXdg1RSO2GSEoJ7rggMjQVTLR6gkuiCmatZoZhoLQMNJcanVep+xlNrAY8jlPrXu11mGMXaZgkOTjPfR/XXhZe1hcUYMASaWGdv4VLasJONtL0/BBbHKnA6xPuGyE7svMW4YvrpSttS/ekXQ/oHdFAGxLZDgtevUcfeNiPmyerzasTyXuhPFB1XFiNrfiAHpqDWOzwZZef1C5R55pTNXvHSrUpK6BmRRN9VKdr8A6XJ8r+Ay7tYLlkne6zFhrsMxTICMzwE/6+Abv3s/4Rkodt/91vLB8gu3SWnChIjzaZBGeRjEMc0DIvg0iAse4jyOp5iEaDtC7bo9VaRtD0LBhBYP1rXZy+YFWvQau5Juwb8DqRX3WmxH3p0sfW+B8/iwpPAxVBw8edRRXeJbRvxnd4UxeIhFExZlb5BLpgN37di9IOt9dNjp51a6GuDeTeH7bvLIR+wUhc/NtBPoiKkuDuFPNtfg4y8wmZhz0rDlueTKzVDbknbbfsR8w9E8999wOF9iQRbjhEbgORpmNIhxVgSZEDSIUsHShMYZTtgnWvDuLwFjDAsiBwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=d95ffa3c93ce6e10d942fc4e1dba10fe"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=d95ffa3c93ce6e10d942fc4e1dba10fe^sys_idNOT IN3ef873e1c346a2503ab9b01705013146,4ea27be5c306a2503ab9b01705013137,8ea27be5c306a2503ab9b01705013133"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b2f873e1c346a2503ab9b01705013146</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Incident Creation Summarizer">d95ffa3c93ce6e10d942fc4e1dba10fe</flow>
+        <flow_variables_assigned>incident_description,incident_sysid</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id>3d60b614-a6b6-420c-8fed-29c7cffa5756</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 16:54:16</sys_created_on>
+        <sys_id>3ef873e1c346a2503ab9b01705013146</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:25:27</sys_updated_on>
+        <ui_id>ea06ada3-a55b-48c3-8e7a-f42730e348f9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1XXW/aMBT9L3kmkRMCCbxVmypV2lZpZX2Zqsixb8Ca46S2A2WI/75rklBEB/vQKq0Sb/G5177nnuuDxcarGls31syqK2PEXHnTrw8DTyiH4ffGU7QEb4oIExyUzTgYpkVtRaW8gbeksnHhzeadBmqBZ2HAGq0xMzjI3G4xlwtTS7q+/4MtbCEkx0jLqqYayVjQ3nRzFLLrGjJJc5B48p3VQs1xu+C4SqBIkyGEbBiPaTQiQ5pPchImZETCYRgWmNdvPNHkeQlcaYyavmiluWNIBh48WVAckERBpYGBV1LFqa30eo+gAvxWyWdgIZTF0zyX/GTEdzw6JYS4zAKwXQZtdL/MOllbmC0qweC25bZDLM1lt4dVsinVp7YbNxAoaCNtPxBEGoPnQe1YOxodp+JuUa0+9wWvhdo12AVlxajcr6hFGfLGgnEzasTsSJwW+XA8KJBQOmVLWteIZLWulmJXBUmXwVziIihktXLa4y0NKHMdBqgmDa4Rf7+D76kWrt2PeAxuduW+KPHYwI27CAARyQmZ+CSOqB9TPvRzkuDXiIZFQVJI07G33UmbPTauqVakTo6sVRQT2ulfIYUldJ1vBy+dYtYGL+B5j2BOJvjv2uMg+184Iz/vjMnPnNE3darZixveiBs4Dn6SxJEfx4z7MUknPk3HYz9P0gg1TqIRZ3/thgd369vq7Suyu2+//Cm9vCYX/7wV/7z2a3LKMZdX5eKK/9cVr/2qcGDCIKuZo3DT/0txgTXeHcEOoVWlv7l+nrHtD9UoUPvvDAAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">0aa27be5c306a2503ab9b01705013137</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Incident Creation Summarizer">d95ffa3c93ce6e10d942fc4e1dba10fe</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>3d60b614-a6b6-420c-8fed-29c7cffa5756</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 16:26:38</sys_created_on>
+        <sys_id>4ea27be5c306a2503ab9b01705013137</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:25:27</sys_updated_on>
+        <ui_id>4732a80a-4521-4c1e-86d9-3eb4bdda6ec6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c2a27be5c306a2503ab9b01705013133</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Incident Creation Summarizer">d95ffa3c93ce6e10d942fc4e1dba10fe</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 16:26:38</sys_created_on>
+        <sys_id>8ea27be5c306a2503ab9b01705013133</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:25:27</sys_updated_on>
+        <ui_id>3d60b614-a6b6-420c-8fed-29c7cffa5756</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1U22rcMBD9laJnY3zJLs2+hZRAoW2gCXlpg5Cl8a6oLLm67KXL/ntHlr1Zkg0tJY99s86MZs4ZnfGemOD74N29uXJOLjVZfHvMiNQRw+890awDsiDcaCG9NJoOQEbWTIUYuAtdx6z8BQJBIV2v2O7hXIyvpBIWxg49s1jHgyWL/bOQ3/VAFWtAxRLeSr3E61LgqS1YW17yktfVvK6Konp/UTbzuikrUTNgNeZNF68nwu8+DUj2qpLYD3E3dTJWRFplkRHYetAC6S9aphxkpGNaMG/s7ohYYOJWqydgJbXHciQmbx2KJ4tqNouJLaBGDil4PNJxaAnmKyM53PaRYEI8a9R4hxsVOv0l6YjjhpYF5adxIxIc1oM+ko4sRkrt3cpsvk4Nb6QeBI5BZThTxxPzOIYmeHDxYUBBh4Vox/oeh0N7a9ZyuIxcunyp8JC3ymywaXRPzngknuOMWH6D+IcBfkATRBWfsQxeTjQb5iSng9OwnLco4TCMhf4MkVASOEqhaRqY4LiVvb/CPmsYWR+ylzY9ceh+f42P5EHQMufB4gx8vqVro3xFl9KvQkMdLagbzLqjS9BgY/rh8D0URS2GHi/N/VZl32IvLtmsnZXF7PxeXMzP7cWZjXh9Gao/LEN8vr/chaIo/i/D6TJIR5OpR23JGP+6C4/R+KmDS74RwKVDIvcR+zj92WNghwaQ/BTaGPsjSnjCDr8BkmOBniMGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=d95ffa3c93ce6e10d942fc4e1dba10fe"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=d95ffa3c93ce6e10d942fc4e1dba10fe^sys_idNOT IN7ef873e1c346a2503ab9b0170501311f,bef873e1c346a2503ab9b01705013119"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=ee20b009-042a-4ad3-b07a-45a1ff08e886</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>incident_description</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>incident_description</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Incident Creation Summarizer">d95ffa3c93ce6e10d942fc4e1dba10fe</model>
+        <model_id>d95ffa3c93ce6e10d942fc4e1dba10fe</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_d95ffa3c93ce6e10d942fc4e1dba10fe</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 16:54:16</sys_created_on>
+        <sys_id>7ef873e1c346a2503ab9b0170501311f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:54:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d3e19742-44cd-4089-a866-b782800725dc</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>incident_sysid</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>incident_sysid</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Incident Creation Summarizer">d95ffa3c93ce6e10d942fc4e1dba10fe</model>
+        <model_id>d95ffa3c93ce6e10d942fc4e1dba10fe</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_variable_d95ffa3c93ce6e10d942fc4e1dba10fe</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 16:54:16</sys_created_on>
+        <sys_id>bef873e1c346a2503ab9b01705013119</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:54:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d95ffa3c93ce6e10d942fc4e1dba10fe</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:52:11</sys_created_on>
+        <sys_id>b580cbbc93ce6e10d942fc4e1dba1008</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-08 04:52:11</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d95ffa3c93ce6e10d942fc4e1dba10fe</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:52:11</sys_created_on>
+        <sys_id>bd808bbc93ce6e10d942fc4e1dba10f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-08 04:52:11</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_d95ffa3c93ce6e10d942fc4e1dba10fe"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_d95ffa3c93ce6e10d942fc4e1dba10fe"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>incident_creation_summarizer</internal_name>
+        <label_cache>[{"name":"flow_variable.incident_sysid","label":"Flow Variables➛incident_sysid","type":"string","base_type":"string","usedInstances":{"73f41f6f-b907-4eeb-9c95-46ed11a01e13":["sysid"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"d3e19742-44cd-4089-a866-b782800725dc"}},{"name":"flow_variable.incident_description","label":"Flow Variables➛incident_description","type":"string","base_type":"string","usedInstances":{"73f41f6f-b907-4eeb-9c95-46ed11a01e13":["texttosummarize"]},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"ee20b009-042a-4ad3-b07a-45a1ff08e886"}},{"name":"flow_variable.sysid","label":"Flow Variables➛sysid","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","usedInstances":{},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"58dd38b3-5046-4fad-b376-665250ef38c0"}},{"name":"flow_variable.texttosummarize","label":"Flow Variables➛texttosummarize","type":"string","base_type":"string","usedInstances":{},"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":"","uiUniqueId":"80d2507a-d2fb-4685-b52b-6d400475542f"}},{"name":"Created_1.current.x_volt2_github_s_0_summary_generated","label":"Trigger - Record Created➛Incident Record➛Summary generated","reference":"","reference_display":"Summary generated","type":"boolean","base_type":"boolean","parent_table_name":"incident","column_name":"x_volt2_github_s_0_summary_generated","usedInstances":{"3d60b614-a6b6-420c-8fed-29c7cffa5756":["condition"],"dbae3c59-c322-440a-bd89-02244d4cd7bb":["x_volt2_github_s_0_summary_generated"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"incident","column_name":"number","usedInstances":{"836a4120-e938-4670-b2d8-efe86ea309f4":["incidentrecord"]}},{"name":"836a4120-e938-4670-b2d8-efe86ea309f4.response","label":"2 - Summarize➛response","reference_display":"response","type":"string","base_type":"string","usedInstances":{"d49e0801-818c-4e55-8f67-1eb046a7acc4":["ah_work_note"],"3083f3fa-357c-4eb2-ba18-1001fddc5bea":["description"],"ebd6fa72-4f18-41da-b7f2-2002eeaa3083":["ah_work_note"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"7ace8998-d367-4871-becc-d6ae9c315c03"}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","usedInstances":{"d49e0801-818c-4e55-8f67-1eb046a7acc4":["ah_task"]},"attributes":{}},{"name":"Updated_1.current.description","label":"Trigger - Record Updated➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description","usedInstances":{"836a4120-e938-4670-b2d8-efe86ea309f4":["texttosummarize"]}},{"name":"Created_1.current.description","label":"Trigger - Record Created➛Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"incident","column_name":"description","usedInstances":{"6d6c048f-d26c-4c1b-adfb-5e3c77f974a0":["texttosummarize"],"836a4120-e938-4670-b2d8-efe86ea309f4":["texttosummarize"],"ea06ada3-a55b-48c3-8e7a-f42730e348f9":["incident_description-0"]}},{"name":"Created_1.current","label":"Trigger - Record Created➛Incident Record","reference":"incident","reference_display":"Incident","type":"reference","base_type":"reference","usedInstances":{"d49e0801-818c-4e55-8f67-1eb046a7acc4":["ah_task"],"ebd6fa72-4f18-41da-b7f2-2002eeaa3083":["ah_task"],"836a4120-e938-4670-b2d8-efe86ea309f4":["incidentrecord"],"dbae3c59-c322-440a-bd89-02244d4cd7bb":["record"]},"attributes":{}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id","usedInstances":{"836a4120-e938-4670-b2d8-efe86ea309f4":["incidentrecord","sysid"],"ea06ada3-a55b-48c3-8e7a-f42730e348f9":["incident_description-0","incident_sysid-1"]}}]</label_cache>
+        <master>true</master>
+        <name>Incident Creation Summarizer</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Incident Creation Summarizer">d95ffa3c93ce6e10d942fc4e1dba10fe</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:52:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b780cbbc93ce6e10d942fc4e1dba10ef</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:25:29</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=b780cbbc93ce6e10d942fc4e1dba10ef"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b780cbbc93ce6e10d942fc4e1dba10ef"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=b780cbbc93ce6e10d942fc4e1dba10ef"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=b780cbbc93ce6e10d942fc4e1dba10ef^sys_idNOT IN3780cbbc93ce6e10d942fc4e1dba10f0"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>b780cbbc93ce6e10d942fc4e1dba10ef</id>
+        <name>Incident Creation Summarizer</name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:52:18</sys_created_on>
+        <sys_id>3780cbbc93ce6e10d942fc4e1dba10f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-08 04:52:18</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=3780cbbc93ce6e10d942fc4e1dba10f0"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=b780cbbc93ce6e10d942fc4e1dba10ef^sys_idNOT IN7b80cbbc93ce6e10d942fc4e1dba10fc,f380cbbc93ce6e10d942fc4e1dba10f1"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Incident Creation Summarizer">b780cbbc93ce6e10d942fc4e1dba10ef</model>
+        <model_id>b780cbbc93ce6e10d942fc4e1dba10ef</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b780cbbc93ce6e10d942fc4e1dba10ef</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:52:18</sys_created_on>
+        <sys_id>7b80cbbc93ce6e10d942fc4e1dba10fc</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:25:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7b80cbbc93ce6e10d942fc4e1dba10fc"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Incident Creation Summarizer">b780cbbc93ce6e10d942fc4e1dba10ef</model>
+        <model_id>b780cbbc93ce6e10d942fc4e1dba10ef</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_b780cbbc93ce6e10d942fc4e1dba10ef</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:52:18</sys_created_on>
+        <sys_id>f380cbbc93ce6e10d942fc4e1dba10f1</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:25:28</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f380cbbc93ce6e10d942fc4e1dba10f1"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=b780cbbc93ce6e10d942fc4e1dba10ef"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b780cbbc93ce6e10d942fc4e1dba10ef"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=b780cbbc93ce6e10d942fc4e1dba10ef^sys_idNOT IN3b800fbc93ce6e10d942fc4e1dba1009"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Incident Creation Summarizer">b780cbbc93ce6e10d942fc4e1dba10ef</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:52:19</sys_created_on>
+        <sys_id>3b800fbc93ce6e10d942fc4e1dba1009</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-09 15:45:14</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxnLdtkkUDbDeo7W0fglSgRNImSpOuRCnrXeTfO9TNsi6OHStb5yWASHnmzNGZM2Qevpsc+YSbV+Yc+ZyYA5MJRUKB+HyzJrCs9LIn0ErvrZDASMlwY16pMCYDk4ZyNSerNUcKXqaIR7AoQ0xC88oemAniMZltojsMkeD3aZg8pplvwzMTAcNEKFjCLIJgmz/znbvtTrBkHIdEmFcPjwNzjUKIpXSe77UtppMFNEATh1iBa7uOY1nO5dD2L1zfdrCLiGVBwHrhNXCqpf5tZeSrIgITXBbdoCYkCN8LvinfWAKzGQ0r9DVi3yD6paXfowSwByTbKx+9nIpsOVhKFpD7tWJSZCsZzmxT8nglPmf4NYmEopirgkRYiSOIR9YasgaRI6KzpXyaFgk/MpFWl29yGSBePiGlQubHikSacMo4UO9l3EQyDlP009vr++mN99eH+fVvt1NvejubT++u57c35nNal/dvrCNmCHMsXlbOc/nlPzLC9QcU8coHNAMzCkK2Vh8CxZJCYs+DrWyvpcAsZaUh3aDYinalW1S/T7uW1aneoJKxUPDft380xZstHqfbiwuEMEEduvVpRbfVylugqRYSqtXtU3C+coiEh5b1P4k4d6DXanglMeE323AmbC4WoGom1rHSbD0hoSJPSQ9h7FV41K8CppdEndXWVPbLmg5jASG88gs1lZ0SWTL6iUVQwAP0ZcFWGhL26ac85DQWhoRPCX+MIA6BLGUUTkfvVmiRc0xnhJNAVWRBv0TVp99ZFDGxqKAuk6asNHKW6UBeRlFSljs6Mfljn23dJD2pkVlr76N727Yp9Ql1rLHubNtyfWpbY2uEKHYtK3Aqvd0E04lS1STxJj1+XIdHqRj5AdKrU5yDt6rdcJCMkl0NFiRoieRGct0PNLsnaI6GVjNE9yhHLGWZLd/sqnNfaT2fBhBOEPwCH2qM+oUDHJBy+QRm/Ar381HwzyKUscB1O9IxDSaM7RvGTzl/P/fohFSGZD+A3TfOyQO3tBfCRWLTg/u51PYnZEgsMD0X/M4fTSZ+gBxKxxdj4tg199vCaMX2LlzvBbUlbXLtcsBW4SRtejvC+04A2PDBowGe7oC5MFv9L9t7H073tCTCA6ihx7WXNQxvweESXOz12+2N1Mm2v0/teHo5CUb2eByM4R4DHU+HxEf20BmhyfjCvRzVOr4BZR9M1cLMD7ndRJsoBdLhBl+yrfO6rr+lbCOilB5Hx09pAefY9DcoS1KZlPqzGKmpyND4LMUvd9v3jBmBAZhecfsa14eg0B/WeFsYvlTLxnkBUv8K6zup9Tmzg5Wzu1LVRJLs1nrylYoML0cT6rZbDJ20WcwWTDfMsz9eHNghSWevtZ0zDhV80to3nQeDV0i4JpPqiWHPkaYvUuzeSXHejhT35GNU0Yud98jXgH1HIyw9V5wyx3RO4klaNe8bacCGAUkMRo38f4sEG/7GUEsClHI4L0NCQ2c/1bWrU6QJpVTwjwWSncAb0wyWjfwAdX6DqiaFfm/ABI/RaOR2nIcn9RtwG6AX8J792Dq6K5K2Jts7u46LW4/ZOr0qkt1VxIFzqdeq24fTaVW3jqeXqj598Oy7v7egONOR8vgfJ+dAvUUfAAA=</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=b780cbbc93ce6e10d942fc4e1dba10ef^sys_idNOT IN3701aa19c38222503ab9b01705013189,b114f3a9c306a2503ab9b017050131b5"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Add Worknote">4d7227a473210300e4fd234ffff6a712</action_type>
+        <action_type_parent display_value="Add Worknote">cdc8896487110300123eaf8e36cb0b24</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>4d7227a473210300e4fd234ffff6a712</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Incident Creation Summarizer">b780cbbc93ce6e10d942fc4e1dba10ef</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>3d60b614-a6b6-420c-8fed-29c7cffa5756</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-09 15:51:38</sys_created_on>
+        <sys_id>3701aa19c38222503ab9b01705013189</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:06:52</sys_updated_on>
+        <ui_id>ebd6fa72-4f18-41da-b7f2-2002eeaa3083</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VTy27bMBD8lYJnQZBkp259Cxz41DZAXeQSBMJaXNlEKFLlw44r+N+7tGhFSZsgh1yim2YfnBkObzsmOJuz7OusKGYwnU2KPJtkGU5rXkymNX2fYZZfsIQpaJA6YVs6sPcE7ED6gHTdwiA45GWeVt4YVO54pDoXtpVwuIlthFRbITnV2fz2LmEtGFrp0LB596z0Vk4S1iipNTL6h6I7tAEwWCPtrjBC3+LYzxGuDQ9MsoThg0PFkSjUIC0mrAHFwWlzGBDSy6+VfAS2QrleYwMPVvyhUydFMjp44DhAZfSHSr/6Un0FDlbO+Mp5M1imRYW2t4VjDV66xRjrG65bJ7TqRxys5XlaS9+oH70tbFgwuhJviQi2QXBQEOXUq63eD+4shTp5E4tSVyBHrQim2i4FynBpyjdr6k0YOGfE2rvAs2MosaEDygbaVqhN2Rq9E6elxLFJN5J+0lrqPZGxYqNSqIKglHyHdEn41Qm+ASOCuu+0hoaPCbMHu5Bg7aNGMrj87QPDXnHUVvb2hJHKiNZd0gE7jDKOSXwH+cVrmSuKJyHba3NfKu1w9BjeIfdv4HDOfWDwKTL4P6/4Aixdhto8i//qDMbs5++W/S9Zlj1N/wvJ/6ip/1jpvvsL7cC88ucFAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Copy of Summarize">4b83b769c306a2503ab9b0170501318c</action_type>
+        <action_type_parent display_value="Copy of Summarize">4c833769c306a2503ab9b0170501316b</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>4b83b769c306a2503ab9b0170501318c</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Incident Creation Summarizer">b780cbbc93ce6e10d942fc4e1dba10ef</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id>3d60b614-a6b6-420c-8fed-29c7cffa5756</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 16:32:54</sys_created_on>
+        <sys_id>b114f3a9c306a2503ab9b017050131b5</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:25:29</sys_updated_on>
+        <ui_id>73f41f6f-b907-4eeb-9c95-46ed11a01e13</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/71TXU/bMBT9K8zPTeUmaZP0bQIhIW1DoowXhCrbsaklxwmOXeiq/vddJ+4XWxGbEH7zuffa5557z/0ayRJNERZ5QrNJwRI8IfEYJ4QWFI8yPMajZJQLNECaVBwyLX+xtm5dVREjf3EILIlyPvIFztl6LVT9PF9CkFDFh1IzWXJt5yVvmZGNlbXebKCqlG2jyOruv4rZQqrScI2m9w8D1BAD3Cw3aLp+FXpvc4pQriD1Fro7s/XZ7KC/k43bVeMDrTVSP4b7t/DQbAvWpvTERgME9VyXHBgJolo+QBXRJbG1WaGpNQ4Aw0l5rdVql7GQ2sJjyOe+tP7XaY4x9pmCQ5OM99HddR5k7WFxQSwBJo5ZZ0IqW9SS8baXp+SCOGXPD7E+4boTuy+xfhihulau0j96RdDuge0UAXEtkOCN79RzD42I2aJ+vtmyvJS6EyUEVc2I2t2IBemos57PGjl5+0rlHvlDZ6545VelIk0DyLwx9VJ2vwDpavio4DLs1guWST7qIWG+wyFMgAwvAb/o4Luwe9/hGSj23/3U8snxK79J2YQJkRbjKEuKOEpTWkRE8HGUljzGRZqOMYnRZoDaVXuuSNvuhYIJzZ+cb7OXLQg07zX2Jd2CfwVSSx602AyCO1n21gIX6X5J4WOo2HvypKO6xL8Z8Z/d9Q5yW3dt2b0iG3y03+ljK90c4MFN8dtuCsh77JTEx2baCnTCVFf78Aeb6+DjTzCZmHFi2OJScuVnqF1Fu20/Yb7D0Rz773A4n2JBluIJTcBzNM5plOK8jHIhaJRkgmUTmuZ4wj7Qgg+/ATbLzEAiBwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=b780cbbc93ce6e10d942fc4e1dba10ef"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=b780cbbc93ce6e10d942fc4e1dba10ef^sys_idNOT IN23a2bbe5c306a2503ab9b01705013136,53db3be5c346a2503ab9b017050131ea,67a2bbe5c306a2503ab9b01705013137"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">c2a27be5c306a2503ab9b01705013133</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Incident Creation Summarizer">b780cbbc93ce6e10d942fc4e1dba10ef</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 16:26:44</sys_created_on>
+        <sys_id>23a2bbe5c306a2503ab9b01705013136</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:25:29</sys_updated_on>
+        <ui_id>3d60b614-a6b6-420c-8fed-29c7cffa5756</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJnQdAjNhrfAgcBCqQNUAe5tAGxIimbKEWqfNhWDf97l5L8QOOiDZpjb+bscjkz2oF3xATfBu8ezY1zcqnJ7MtzQqSOGP7eEQ2NIDPCjObSS6NpDyRkDSrEwiI0DVj5Q3AEuXStgu7pUo2tpOJWjC+0YHGOF5bMdr+UJMerdQZ1fs1yVhbTssiy4v1VXk3LKi94CQJKHKigEgpb5wdq7+57JPktZ9+1EXfeSr0cz/fjlMUBNJZHVnmWELH1QnNkP6tBOZGQBjQHb2x3RKwA/qDVCVhJ7XEcic1bh9rJrJhMYmMtUCITQ/F4pKNnA1zfggekEpgPdmxlKyOZcIM5XNQQlJ+fY0PDQxulDlc8VOpw26jQ6E+DI+Q44PCJEAkOSYg2Ko3URx31YmU2nw8s76TuXRmLyjBQxxN49K4KPvLZEaFEg4NoA22LjtLWmrXsLyOXJl0qPKS1Mht8NG5cCiwST9FYSO8Qv+3hJ1ycqOIjjsHLA80KnGS0304chzYJsk+I69xcgXMnkegu/R4ixUHyKI4O/sQrzMrW3+DLazHq2Ccvl/1sz3e7OX5rLzjNUxYsuuLTLV0b5Qu6lH4VKupoRl2/8h1dCi1sbN/vv4YsK3n/xsuIvNXY16XrGib1JM8ml9N1Nb2Urgu5emWkij9EKn7Pv0xUlmX/I/XPkZKODkEYtQ3L9HaJeo7xGd48es2kQ2qPEftw+JeJhQ6XS7JzaGPstyjqhO1/AtB+eLGvBgAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">b2f873e1c346a2503ab9b01705013146</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Incident Creation Summarizer">b780cbbc93ce6e10d942fc4e1dba10ef</flow>
+        <flow_variables_assigned>incident_description,incident_sysid</flow_variables_assigned>
+        <generation_source/>
+        <logic_definition display_value="Set Flow Variables">4f787d1e0f9b0010ecf0cc52ff767ea0</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <parent_ui_id>3d60b614-a6b6-420c-8fed-29c7cffa5756</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 17:06:52</sys_created_on>
+        <sys_id>53db3be5c346a2503ab9b017050131ea</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:25:29</sys_updated_on>
+        <ui_id>ea06ada3-a55b-48c3-8e7a-f42730e348f9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1XUU/bMBD+L35uIqdNm5Q3BEJC2oY0GC/TFF3sC7XmOCG2ga7qf9+5SUvFBhrSnra8xd+d7e++u09WNqzxrvXO3jSn1qo7w06+fpswZQJG3xumJDthbMIM1Ehfyggl0bhCohWdap1qDEUfQPsQ3mzOOgSHskhi4buOMuOjzO2WcqWyrYb17Tu2iJXSkiI9uxY6IuOwYyebF6Ed2wyrPJthImbpAqZzPoNyWfIk43OezJKkogM1lKhfL+ftYt26DVHrOmXuhvWH4cDrPdh0MhDkE4ZPDo1EYlaBtjhhNRgJrunWB4QEkFdGPwMrZVyvew1PVv2g+3LOeciskKoV2EcPy2JQtYerc3BAVLxwvhtSxapRAm2vk8QKvHZnx1ifcNVXudvioNT73Y32tfnU68IOB+ybSIi3RALbUGrgPhRSXa+ax897lhfK7FQZgroRoA8rcKRd6V3gs2Fe3byQuUd+ERo11qFHNbQtIUXbNQ9qdwuRruM7TYu40s1j6CJNeAwiVBhTCyC+IPx8B99Cp0K5H+kY2hyu+2LUvcfLMFKIU15yvox4OoUoBTmLSp7R1xySquI55vmCbSfMru2ZBmufhaIOFfc+lNnLNghU9BqHLbvJOiVSDzhosZ287ju6gUJvO45yCiX/1GxH2e/zWfm2z5a/89me/mtljd7677wlaYSWWTqN0lTIKOX5MoJ8sYjKLJ9SY7LpXIq/6K1vwTs9n/GFG1+40YXjCze+cKO3/q0XTqJQlnjeBFKX+7+5EFjTXCpxDD023fdQ4TO2/QnneTaCFw4AAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">0aa27be5c306a2503ab9b01705013137</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Incident Creation Summarizer">b780cbbc93ce6e10d942fc4e1dba10ef</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>3d60b614-a6b6-420c-8fed-29c7cffa5756</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 16:26:44</sys_created_on>
+        <sys_id>67a2bbe5c306a2503ab9b01705013137</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:25:29</sys_updated_on>
+        <ui_id>4732a80a-4521-4c1e-86d9-3eb4bdda6ec6</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=b780cbbc93ce6e10d942fc4e1dba10ef"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=b780cbbc93ce6e10d942fc4e1dba10ef^sys_idNOT IN1bdb3be5c346a2503ab9b017050131cb,dbdb3be5c346a2503ab9b017050131cf"/>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=ee20b009-042a-4ad3-b07a-45a1ff08e886</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>incident_description</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>incident_description</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Incident Creation Summarizer">b780cbbc93ce6e10d942fc4e1dba10ef</model>
+        <model_id>b780cbbc93ce6e10d942fc4e1dba10ef</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_b780cbbc93ce6e10d942fc4e1dba10ef</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 17:06:52</sys_created_on>
+        <sys_id>1bdb3be5c346a2503ab9b017050131cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:06:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_hub_flow_variable action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d3e19742-44cd-4089-a866-b782800725dc</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>incident_sysid</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>incident_sysid</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Incident Creation Summarizer">b780cbbc93ce6e10d942fc4e1dba10ef</model>
+        <model_id>b780cbbc93ce6e10d942fc4e1dba10ef</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_variable_b780cbbc93ce6e10d942fc4e1dba10ef</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_variable</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 17:06:52</sys_created_on>
+        <sys_id>dbdb3be5c346a2503ab9b017050131cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:06:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_variable>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b780cbbc93ce6e10d942fc4e1dba10ef</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:52:18</sys_created_on>
+        <sys_id>3780cbbc93ce6e10d942fc4e1dba10fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-08 04:52:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b780cbbc93ce6e10d942fc4e1dba10ef</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:52:18</sys_created_on>
+        <sys_id>7f800fbc93ce6e10d942fc4e1dba1000</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-08 04:52:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_b780cbbc93ce6e10d942fc4e1dba10ef"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_b780cbbc93ce6e10d942fc4e1dba10ef"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>d95ffa3c93ce6e10d942fc4e1dba10fe</sys_id>
+        <latest_snapshot>b780cbbc93ce6e10d942fc4e1dba10ef</latest_snapshot>
+        <compiler_build>glide-yokohama-12-18-2024__patch3-04-17-2025_04-30-2025_1345.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=d95ffa3c93ce6e10d942fc4e1dba10fe^sys_idNOT IN7f800fbc93ce6e10d942fc4e1dba1018"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"7f800fbc93ce6e10d942fc4e1dba1018","name":"plan","plan_signature":null}}</plan>
+        <plan_id>d95ffa3c93ce6e10d942fc4e1dba10fe</plan_id>
+        <snapshot>1b410471c386a2503ab9b017050131ae</snapshot>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 04:52:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7f800fbc93ce6e10d942fc4e1dba1018</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:25:29</sys_updated_on>
+        <trigger display_value="">07f65e8fc33126103ab9b017050131bd</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=d95ffa3c93ce6e10d942fc4e1dba10fe"/>
+</record_update>

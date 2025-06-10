@@ -49,7 +49,7 @@
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text>Which is the item?</question_text>
+        <question_text>Which is the asset?</question_text>
         <read_only>false</read_only>
         <read_roles/>
         <read_script/>
@@ -82,14 +82,14 @@
         <sys_created_by>alex.santacruz</sys_created_by>
         <sys_created_on>2025-06-02 21:06:59</sys_created_on>
         <sys_id>53b52bc3c3f526103ab9b01705013106</sys_id>
-        <sys_mod_count>6</sys_mod_count>
-        <sys_name>Which is the item?</sys_name>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Which is the asset?</sys_name>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>item_option_new_53b52bc3c3f526103ab9b01705013106</sys_update_name>
         <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-06-03 15:08:48</sys_updated_on>
+        <sys_updated_on>2025-06-10 21:32:30</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>

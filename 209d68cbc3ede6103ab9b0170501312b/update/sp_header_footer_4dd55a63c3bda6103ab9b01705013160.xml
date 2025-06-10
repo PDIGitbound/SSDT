@@ -1,48 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
     <sp_header_footer action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller=function() {
-  /* widget controller */
-  var c = this;
-};]]></client_script>
+        <client_script/>
         <controller_as>c</controller_as>
-        <css/>
+        <css>.widget {
+  height: 300px;
+  width: 100vw;
+  background-color: #6c9eb1;
+  text-align: center;
+  overflow: auto;
+}
+</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
         <docs/>
         <field_list/>
-        <has_preview>false</has_preview>
+        <has_preview>true</has_preview>
         <id>irisFooter</id>
         <internal>false</internal>
-        <link><![CDATA[function link(scope, element, attrs, controller) {
-  
-}]]></link>
+        <link/>
         <name>IRIS footer</name>
         <option_schema/>
-        <public>false</public>
+        <public>true</public>
         <roles/>
-        <script><![CDATA[(function() {
-  /* populate the 'data' object */
-  /* e.g., data.table = $sp.getValue('table'); */
-
-})();]]></script>
+        <script/>
         <servicenow>false</servicenow>
-        <static>false</static>
+        <static>true</static>
         <sys_class_name>sp_header_footer</sys_class_name>
         <sys_created_by>ruben.fernandez</sys_created_by>
         <sys_created_on>2025-06-04 04:33:35</sys_created_on>
         <sys_id>4dd55a63c3bda6103ab9b01705013160</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name>IRIS footer</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_header_footer_4dd55a63c3bda6103ab9b01705013160</sys_update_name>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-04 04:33:35</sys_updated_on>
-        <template><![CDATA[<div>
-<!-- your widget template -->
-</div>]]></template>
+        <sys_updated_on>2025-06-10 22:12:43</sys_updated_on>
+        <template><![CDATA[<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Full Width Widget</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .widget {
+      background-color: #6c9eb1;
+      color: white;
+      width: 100vw;
+      box-sizing: border-box;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .widget h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+    }
+
+    .widget p {
+      margin: 0.5em 0;
+    }
+
+    .widget button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background-color: white;
+      color: #6c9eb1;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .widget button:hover {
+      background-color: #e1f0f5;
+    }
+  </style>
+</head>
+<body>
+  <div class="widget">
+    <h2>Widget Title</h2>
+    <p>This widget now spans the full width of the page. You can adapt the height or layout as needed.</p>
+    <button>Take Action</button>
+  </div>
+</body>
+</html>
+]]></template>
     </sp_header_footer>
 </record_update>

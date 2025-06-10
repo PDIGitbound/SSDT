@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config_var_set">
+    <sn_nowassist_skill_config_var_set action="INSERT_OR_UPDATE">
+        <config_type display_value="General details">38372887436882106b5f90cfd7b8f25d</config_type>
+        <description/>
+        <hide_step>false</hide_step>
+        <name>General details</name>
+        <order>100</order>
+        <parent/>
+        <screen_id>b42e0753433442106b5f90cfd7b8f2f8</screen_id>
+        <screen_table>sys_ux_macroponent</screen_table>
+        <skill_config display_value="OT Incident summarization">208cabd1c3ca22503ab9b017050131b3</skill_config>
+        <step_completed>false</step_completed>
+        <sys_class_name>sn_nowassist_skill_config_var_set</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 21:21:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>3c8c6315c3ca22503ab9b017050131fe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>General details</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_var_set_3c8c6315c3ca22503ab9b017050131fe</sys_update_name>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:21:19</sys_updated_on>
+        <title/>
+        <vars/>
+    </sn_nowassist_skill_config_var_set>
+    <sys_translated_text action="delete_multiple" query="documentkey=3c8c6315c3ca22503ab9b017050131fe"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3c8c6315c3ca22503ab9b017050131fe"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sn_nowassist_skill_config_var_set</document>
+        <document_key>3c8c6315c3ca22503ab9b017050131fe</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 21:21:19</sys_created_on>
+        <sys_id>b08c6315c3ca22503ab9b017050131ff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:21:19</sys_updated_on>
+        <value>short_description</value>
+        <variable display_value="Fields">09d5ad7d779012103f075cea5b5a99f2</variable>
+    </sys_variable_value>
+</record_update>

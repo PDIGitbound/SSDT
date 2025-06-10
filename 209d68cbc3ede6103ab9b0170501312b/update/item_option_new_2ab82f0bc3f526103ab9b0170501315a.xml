@@ -10,19 +10,19 @@
         <conversational_label/>
         <create_roles/>
         <default_html_value/>
-        <default_value/>
+        <default_value>javascript:gs.getUserID();</default_value>
         <delete_roles/>
         <delivery_plan/>
         <description/>
         <display_title>false</display_title>
         <do_not_select_first>false</do_not_select_first>
         <dynamic_default_value/>
-        <dynamic_ref_qual/>
+        <dynamic_ref_qual display_value="Sender">2fd8e97bef3221002841f7f775c0fbc1</dynamic_ref_qual>
         <dynamic_value_dot_walk_path/>
         <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
-        <field>caller_id</field>
+        <field>x_volt2_github_s_0_x_u_account</field>
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
@@ -33,9 +33,9 @@
         <list_table/>
         <lookup_label/>
         <lookup_price/>
-        <lookup_table/>
+        <lookup_table>sys_user</lookup_table>
         <lookup_unique>false</lookup_unique>
-        <lookup_value/>
+        <lookup_value>name</lookup_value>
         <macro/>
         <macroponent/>
         <mandatory>true</mandatory>
@@ -44,7 +44,7 @@
         <mask_use_encryption>false</mask_use_encryption>
         <name>who_is_the_caller</name>
         <not_available_conversation>false</not_available_conversation>
-        <order>400</order>
+        <order>10</order>
         <post_insert_script/>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
@@ -79,14 +79,14 @@
         <sys_created_by>alex.santacruz</sys_created_by>
         <sys_created_on>2025-06-02 21:20:00</sys_created_on>
         <sys_id>2ab82f0bc3f526103ab9b0170501315a</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Who is the caller?</sys_name>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>item_option_new_2ab82f0bc3f526103ab9b0170501315a</sys_update_name>
         <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-06-02 21:23:48</sys_updated_on>
+        <sys_updated_on>2025-06-10 22:34:47</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
@@ -104,7 +104,7 @@
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>
         <visible_summary>true</visible_summary>
-        <write_roles/>
+        <write_roles>nobody</write_roles>
     </item_option_new>
     <sys_translated_text action="delete_multiple" query="documentkey=2ab82f0bc3f526103ab9b0170501315a"/>
     <fx_price action="delete_multiple" query="id=2ab82f0bc3f526103ab9b0170501315a"/>

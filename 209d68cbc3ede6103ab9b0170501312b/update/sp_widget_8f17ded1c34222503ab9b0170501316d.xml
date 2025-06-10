@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>downtime_during_shift</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Downtime during shift</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+  var gr = new GlideRecord('sn_ot_incident');
+  var totalSeconds = 0;
+
+  var validStates = ['6', 'Resolved'];
+  gr.addEncodedQuery('stateIN' + validStates.join(','));
+  gr.query();
+
+  while (gr.next()) {
+    var openedAt = new GlideDateTime(gr.getValue('opened_at'));
+    var resolvedAt = new GlideDateTime(gr.getValue('resolved_at'));
+
+    var tempTime = new GlideDateTime(openedAt);
+    var endTime = new GlideDateTime(resolvedAt);
+
+    while (tempTime.before(endTime)) {
+      var current = new GlideDateTime(tempTime);
+      var dayOfWeek = current.getDayOfWeekLocalTime(); // empieza en domingo (1) y termina en sabadp (7)
+
+      if (dayOfWeek >= 2 && dayOfWeek <= 6) { // solo contar de lunes (2) a viernes (6)
+        var currentDate = current.getDate().getByFormat('yyyy-MM-dd');
+
+        var shiftStart = new GlideDateTime(currentDate + ' 06:00:00');
+        var shiftEnd = new GlideDateTime(currentDate + ' 16:00:00');
+
+				var segmentStart = (current.getNumericValue() > shiftStart.getNumericValue()) ? current : shiftStart;
+				var segmentEnd = (endTime.getNumericValue() < shiftEnd.getNumericValue()) ? endTime : shiftEnd;
+
+				if (segmentEnd.getNumericValue() > segmentStart.getNumericValue()) {
+			  var diffMs = segmentEnd.getNumericValue() - segmentStart.getNumericValue();
+			  totalSeconds += diffMs / 1000;
+				}
+      }
+
+      tempTime.addDaysLocalTime(1); // dia siguiente
+      tempTime.setDisplayValue(tempTime.getDate().getByFormat('yyyy-MM-dd') + ' 00:00:00');
+    }
+  }
+
+  var totalMinutes = Math.floor(totalSeconds / 60);
+  var hours = Math.floor(totalMinutes / 60);
+  var minutes = totalMinutes % 60;
+	var piecesByMinute = 1;
+	var pieceValue = 3;
+  var moneyWaste = totalMinutes * piecesByMinute * pieceValue;
+	
+	function formatCurrency(amount) {
+  return '$' + parseFloat(amount).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+
+  data.moneyWaste = formatCurrency(moneyWaste);
+
+	
+  data.totalDowntimeShift = {
+    seconds: Math.round(totalSeconds),
+    formatted: hours + 'h ' + minutes + 'min'
+  };
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-09 15:08:11</sys_created_on>
+        <sys_id>8f17ded1c34222503ab9b0170501316d</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Downtime during shift</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_widget_8f17ded1c34222503ab9b0170501316d</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-09 16:54:45</sys_updated_on>
+        <template><![CDATA[<div class="panel panel-default">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <i class="fa fa-clock-o"></i> Total Downtime (Productive Hours)
+    </h4>
+  </div>
+  <div class="panel-body text-center">
+    <h2 class="text-primary" style="font-size: 2.5em;">
+      {{data.totalDowntimeShift.formatted}}
+    </h2>
+    <p class="text-muted">
+      Total downtime during work shifts (Monday-Friday, 6:00 a.m. to 4:00 p.m.)
+      <h2 style="font-size: 2.2em;" class="text-danger">
+       {{data.moneyWaste}}
+    </h2>
+    <p class="text-muted">Estimated downtime loss</p>
+  </div>
+</div>
+]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>8f17ded1c34222503ab9b0170501316d</id>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-09 15:08:11</sys_created_on>
+        <sys_id>cb179215c34222503ab9b01705013168</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-09 15:08:11</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent">
+    <sn_aia_agent action="INSERT_OR_UPDATE">
+        <agent_type>internal</agent_type>
+        <compiled_handbook>```markdown
+- **Step 1: Monitor New OT Incidents**
+  - Continuously monitor for the creation of new OT incidents as per your role.
+  - Once a new OT incident is detected, proceed to the next step to begin the summarization process.
+
+- **Step 2: Retrieve Incident Details**
+  - Use the 'Fetch details related to case/incident/request and survey questions' tool to retrieve the details of the newly created OT incident.
+    - **Inputs Required:**
+      - `survey_number`: Provide the unique identifier of the OT incident.
+      - `record_fields`: Specify the fields you need to extract, such as "short_description", "description", "priority", etc.
+    - **Expected Outcome:** The tool will return the detailed information about the OT incident, including its key attributes.
+  - If the tool fails to retrieve the details or returns incomplete information, use the 'User Output' tool to inform the user: "I was unable to retrieve the details of the OT incident. Please verify the incident ID or provide additional information."
+
+- **Step 3: Collect Relevant Incident Details**
+  - Use the 'Collect relevant incident details for a problem' tool to gather additional context or related information about the OT incident.
+    - **Inputs Required:**
+      - `problem_number`: If available, provide the problem number associated with the OT incident. If not, leave this field blank.
+    - **Expected Outcome:** The tool will return any additional details or context related to the OT incident.
+  - If no additional details are found, proceed with the information retrieved in Step 2.
+
+- **Step 4: Analyze and Extract Key Issue Details**
+  - Use the 'Content Analysis' tool to synthesize the retrieved information and identify the key issue of the OT incident.
+    - **Inputs Required:**
+      - `analysis`: Provide a detailed description of the OT incident details retrieved in Steps 2 and 3. Include all relevant fields and context.
+    - **Expected Outcome:** The tool will return a concise and clear summary of the key issue, ensuring clarity and relevance.
+  - If the tool fails to generate a meaningful summary, use the 'User Output' tool to inform the user: "I was unable to analyze the incident details effectively. Please verify the provided information or try again."
+
+- **Step 5: Reference Associated Work Orders and Work Order Tasks**
+  - Use the 'Content Analysis' tool again to identify and reference any associated Work Orders (WO) and Work Order Tasks (WOT) from the retrieved details.
+    - **Inputs Required:**
+      - `analysis`: Provide the details of the OT incident and explicitly request the identification of any associated WO and WOT.
+    - **Expected Outcome:** The tool will return a list of associated Work Orders and Work Order Tasks, if available.
+  - If no associated WO or WOT are found, proceed to the next step without this information.
+
+- **Step 6: Generate the Summary**
+  - Use the 'Content Analysis' tool to compile the extracted key issue details and references to associated WO and WOT into a concise and informative summary.
+    - **Inputs Required:**
+      - `analysis`: Provide all the synthesized information, including the key issue, context, and any associated WO and WOT.
+    - **Expected Outcome:** The tool will return a well-structured summary that is ready to be stored in the OT incident's work notes.
+  - If the tool fails to generate a summary, use the 'User Output' tool to inform the user: "I was unable to generate a summary for the OT incident. Please verify the provided information or try again."
+
+- **Step 7: Store the Summary in Work Notes**
+  - Use the 'User Output' tool to display the generated summary to the user for confirmation.
+    - **Inputs Required:**
+      - `message`: Provide the generated summary for review.
+  - Once confirmed, store the summary in the OT incident's work notes using the appropriate system interface (this step assumes the system automatically handles this based on your role).
+
+- **Step 8: Completion**
+  - Use the 'Finish' tool to conclude the execution once the summary has been successfully stored in the OT incident's work notes.
+```</compiled_handbook>
+        <description>This agent is designed to assist with OT incident management by summarizing critical information, including key issues, relevant details, and associated references. It supports efficient resolution by providing clear and actionable insights for agents handling the incidents.</description>
+        <external_agent_configuration/>
+        <instructions>1. Monitor the creation of new OT incidents and trigger the summarization process.
+2. Extract key issue details from the incident, ensuring clarity and relevance.
+3. Include references to associated Work Orders (WO) and Work Order Tasks (WOT) in the summary.
+4. Store the generated summary in the OT incident's work notes for easy access by human agents.
+5. Ensure the summary is concise, informative, and supports efficient incident resolution.</instructions>
+        <internal_name>global.x_volt2_github_s_0.Incident Summary Agent</internal_name>
+        <name>Incident Summary Agent</name>
+        <processing_message>Generating a summary of the incident details, including key information, Work Order, and Work Order Task. Please wait…</processing_message>
+        <proficiency>- The agent is capable of analyzing newly created OT incidents to identify key issues, extract relevant details, and reference associated Work Orders (WO) and Work Order Tasks (WOT). It ensures that the generated summaries are concise, informative, and stored in the OT incident's work notes to enhance understanding and streamline response efforts for human agents.
+- The agent can use the 'Fetch details related to case/incident/request and survey questions' tool to retrieve detailed information about an OT incident, including survey questions and associated data. By providing the 'survey_number' and specifying 'record_fields', the agent ensures it gathers all necessary information to create a comprehensive summary.
+- The agent can use the 'Collect relevant incident details for a problem' tool to gather additional context and details about a problem related to an OT incident. This capability enhances the agent's ability to provide a well-rounded and informative summary, even when a 'problem_number' is not explicitly provided.
+- The agent is capable of combining the 'Fetch details related to case/incident/request and survey questions' tool and the 'Collect relevant incident details for a problem' tool to extract and cross-reference information about Work Orders (WO) and Work Order Tasks (WOT). This ensures that the generated summaries include all necessary references to support efficient incident resolution.
+- The agent is capable of storing the generated summaries directly into the OT incident's work notes. This ensures that the information is easily accessible to human agents, enhancing their ability to understand and resolve incidents efficiently.
+- The agent is capable of generating summaries that are concise, informative, and tailored to the needs of human agents. This ensures that the summaries effectively support incident resolution by providing clear and relevant information.</proficiency>
+        <record_type>custom</record_type>
+        <role>The agent is responsible for analyzing newly created OT incidents and generating concise, informative summaries. It identifies the key issue, extracts relevant details, and references associated Work Orders (WO) and Work Order Tasks (WOT). The agent ensures that these summaries are stored in the OT incident's work notes to enhance understanding and streamline response efforts for human agents.</role>
+        <strategy display_value="ReAct">f0bff21f9f13c6108f431597d90a1c74</strategy>
+        <sys_class_name>sn_aia_agent</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 19:02:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>a293947dc3c6a2503ab9b0170501316a</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Incident Summary Agent</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_aia_agent_a293947dc3c6a2503ab9b0170501316a</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 19:07:48</sys_updated_on>
+    </sn_aia_agent>
+</record_update>

@@ -30,3 +30,4 @@ If you find yourself unable to import your repository due to the presence of fil
    * ISA Equipment Model
    * Asset Management
    * Operational Technology Incident Management
+   * Service Management Basics

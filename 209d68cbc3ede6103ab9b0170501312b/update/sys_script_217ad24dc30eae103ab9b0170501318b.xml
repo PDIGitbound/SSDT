@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>alm_asset</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="alm_asset">install_statusCHANGESTO7^stockroomISNOTEMPTY^EQ<item display_value="Retired" endquery="false" field="install_status" goto="false" newquery="false" operator="CHANGESTO" or="false" value="7"/>
+            <item endquery="false" field="stockroom" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Auto-Reparation Order</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+    // Asegúrate de que solo se ejecuta si tiene un personal stockroom asignado
+    if (!current.stockroom || current.stockroom.nil()) {
+        return;
+    }
+
+    // Crear la orden de reparación (Repair Order)
+    var repairOrder = new GlideRecord('alm_repair_order');
+    repairOrder.initialize();
+
+    // Campos clave que puedes modificar según necesidad
+    repairOrder.asset = current.sys_id;
+    repairOrder.stockroom = current.stockroom;
+    repairOrder.opened_by = gs.getUserID();  // o current.u_user si tienes un campo usuario personalizado
+    repairOrder.status = 'requested'; // Asegúrate que este valor existe en tu sistema
+    repairOrder.short_description = 'Generated automatically due to asset retirement.';
+    repairOrder.insert();
+
+})(current, previous);
+]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-08 21:22:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>217ad24dc30eae103ab9b0170501318b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Auto-Reparation Order</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_script_217ad24dc30eae103ab9b0170501318b</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-08 21:23:26</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=217ad24dc30eae103ab9b0170501318b"/>
+</record_update>

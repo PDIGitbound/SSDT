@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_gen_ai_skill_applicability">
+    <sys_gen_ai_skill_applicability action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <condition/>
+        <condition_mode>simple</condition_mode>
+        <condition_script><![CDATA[(function executeCondition(/* glide record */ current) {   
+	// customize condition logic here, return true or false   
+	return false;
+})(current);]]></condition_script>
+        <roles>itil</roles>
+        <skill_id display_value="">2fa9662a1bb83110f9ddb888cc4bcbab</skill_id>
+        <sys_class_name>sys_gen_ai_skill_applicability</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 21:48:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>9da27711c30e22503ab9b017050131c3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2fa9662a1bb83110f9ddb888cc4bcbab</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_gen_ai_skill_applicability_9da27711c30e22503ab9b017050131c3</sys_update_name>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:48:06</sys_updated_on>
+    </sys_gen_ai_skill_applicability>
+</record_update>

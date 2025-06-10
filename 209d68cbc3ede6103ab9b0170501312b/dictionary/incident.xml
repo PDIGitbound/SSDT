@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element attributes="all_tables.query_hints=true,email_client=true,hasWorkflow=true,live_feed=true,query_hints=true" audit="true" db_object_id="df5425394793211042fbaa42736d433b" extends="task" label="Incident" max_length="40" name="incident" text_index="true" type="collection">
+    <element attributes="all_tables.query_hints=true,email_client=true,hasWorkflow=true,live_feed=true,query_hints=true,wwna_skill_id=c5870faa20e22110f877d3d1bc36dd87" audit="true" db_object_id="df5425394793211042fbaa42736d433b" extends="task" label="Incident" max_length="40" name="incident" text_index="true" type="collection">
         <element label="Contact" max_length="32" name="x_volt2_github_s_0_x_u_contact" reference="customer_contact" type="reference"/>
+        <element label="Summary generated" max_length="40" name="x_volt2_github_s_0_summary_generated" type="boolean"/>
         <element label="Account" max_length="32" name="x_volt2_github_s_0_x_u_account" reference="customer_account" type="reference"/>
     </element>
 </database>

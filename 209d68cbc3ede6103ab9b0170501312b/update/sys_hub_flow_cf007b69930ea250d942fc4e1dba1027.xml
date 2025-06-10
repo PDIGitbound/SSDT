@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>intermediateFlowVersion=0.4,labelCacheCleanUpExecuted=true</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source>agentic_ai</generation_source>
+        <internal_name>operational_technology_incident__use_case_create_ot_incidents__cb007b69930ea250d942fc4e1dba1026</internal_name>
+        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Operational Technology Incident Record","reference":"sn_ot_incident","reference_display":"Operational Technology Incident","type":"reference","base_type":"reference","usedInstances":{"43007b69-3c0e-a250-51f6-b3de911b203e":["target_record"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>Operational Technology Incident - Use case: Create OT Incidents - cb007b69930ea250d942fc4e1dba1026</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:15:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>cf007b69930ea250d942fc4e1dba1027</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Operational Technology Incident - Use case: Create OT Incidents - cb007b69930ea250d942fc4e1dba1026</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_hub_flow_cf007b69930ea250d942fc4e1dba1027</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:15:15</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>1</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=cf007b69930ea250d942fc4e1dba1027"/>
+    <sys_variable_value action="delete_multiple" query="document_key=cf007b69930ea250d942fc4e1dba1027"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=cf007b69930ea250d942fc4e1dba1027"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=cf007b69930ea250d942fc4e1dba1027^sys_idNOT IN83007b69930ea250d942fc4e1dba102a"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>cf007b69930ea250d942fc4e1dba1027</id>
+        <name>Operational Technology Incident - Use case: Create OT Incidents - cb007b69930ea250d942fc4e1dba1026</name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:15:14</sys_created_on>
+        <sys_id>83007b69930ea250d942fc4e1dba102a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:15:14</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=83007b69930ea250d942fc4e1dba102a"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=cf007b69930ea250d942fc4e1dba1027^sys_idNOT IN53007b69930ea250d942fc4e1dba1050,d3007b69930ea250d942fc4e1dba1047"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Operational Technology Incident - Use case: Create OT Incidents - cb007b69930ea250d942fc4e1dba1026">cf007b69930ea250d942fc4e1dba1027</model>
+        <model_id>cf007b69930ea250d942fc4e1dba1027</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cf007b69930ea250d942fc4e1dba1027</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:15:15</sys_created_on>
+        <sys_id>53007b69930ea250d942fc4e1dba1050</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:15:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=53007b69930ea250d942fc4e1dba1050"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Operational Technology Incident - Use case: Create OT Incidents - cb007b69930ea250d942fc4e1dba1026">cf007b69930ea250d942fc4e1dba1027</model>
+        <model_id>cf007b69930ea250d942fc4e1dba1027</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_cf007b69930ea250d942fc4e1dba1027</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:15:15</sys_created_on>
+        <sys_id>d3007b69930ea250d942fc4e1dba1047</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:15:15</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d3007b69930ea250d942fc4e1dba1047"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=cf007b69930ea250d942fc4e1dba1027"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cf007b69930ea250d942fc4e1dba1027"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=cf007b69930ea250d942fc4e1dba1027^sys_idNOT IN47007b69930ea250d942fc4e1dba1041"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Operational Technology Incident - Use case: Create OT Incidents - cb007b69930ea250d942fc4e1dba1026">cf007b69930ea250d942fc4e1dba1027</flow>
+        <generation_source>agentic_ai</generation_source>
+        <name>Created</name>
+        <remote_sys_id/>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:15:14</sys_created_on>
+        <sys_id>47007b69930ea250d942fc4e1dba1041</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:15:15</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=47007b69930ea250d942fc4e1dba1041"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>47007b69930ea250d942fc4e1dba1041</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:15:15</sys_created_on>
+        <sys_id>d3007b69930ea250d942fc4e1dba1043</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:15:15</sys_updated_on>
+        <value>sn_ot_incident</value>
+        <variable display_value="Table">cfca92e0c31322002841b63b12d3ae00</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>47007b69930ea250d942fc4e1dba1041</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:15:15</sys_created_on>
+        <sys_id>d7007b69930ea250d942fc4e1dba1042</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:15:15</sys_updated_on>
+        <value>caller_idISNOTEMPTY</value>
+        <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
+    </sys_variable_value>
+    <sys_hub_action_instance action="delete_multiple" query="flow=cf007b69930ea250d942fc4e1dba1027^sys_idNOT IN5b007b69930ea250d942fc4e1dba107d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="AIA Trigger Use Case">0b63e51a53c7121059e0ddeeff7b12b5</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Operational Technology Incident - Use case: Create OT Incidents - cb007b69930ea250d942fc4e1dba1026">cf007b69930ea250d942fc4e1dba1027</flow>
+        <generation_source>agentic_ai</generation_source>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:15:15</sys_created_on>
+        <sys_id>5b007b69930ea250d942fc4e1dba107d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:15:15</sys_updated_on>
+        <ui_id>43007b69-3c0e-a250-51f6-b3de911b203e</ui_id>
+        <updation_source/>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5b007b69930ea250d942fc4e1dba107d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>5b007b69930ea250d942fc4e1dba107d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:15:15</sys_created_on>
+        <sys_id>9f007b69930ea250d942fc4e1dba1080</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:15:15</sys_updated_on>
+        <value>cf007361c306a2503ab9b0170501311f</value>
+        <variable display_value="Trigger Configuration Id">8f63e51a53c7121059e0ddeeff7b12b8</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5b007b69930ea250d942fc4e1dba107d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>target_record</field>
+        <id>5b007b69930ea250d942fc4e1dba107d</id>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:15:15</sys_created_on>
+        <sys_id>1f007b69930ea250d942fc4e1dba1080</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:15:15</sys_updated_on>
+        <table>var__m_sys_hub_action_input_0b63e51a53c7121059e0ddeeff7b12b5</table>
+        <value>{{Created_1.current}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>trigger_configuration_id</field>
+        <id>5b007b69930ea250d942fc4e1dba107d</id>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:15:15</sys_created_on>
+        <sys_id>17007b69930ea250d942fc4e1dba1080</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:15:15</sys_updated_on>
+        <table>var__m_sys_hub_action_input_0b63e51a53c7121059e0ddeeff7b12b5</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5b007b69930ea250d942fc4e1dba107d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5b007b69930ea250d942fc4e1dba107d"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=cf007b69930ea250d942fc4e1dba1027"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=cf007b69930ea250d942fc4e1dba1027"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=cf007b69930ea250d942fc4e1dba1027"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=cf007b69930ea250d942fc4e1dba1027"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cf007b69930ea250d942fc4e1dba1027</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:15:15</sys_created_on>
+        <sys_id>13007b69930ea250d942fc4e1dba1052</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:15:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_cf007b69930ea250d942fc4e1dba1027</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:15:15</sys_created_on>
+        <sys_id>17007b69930ea250d942fc4e1dba104f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:15:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_cf007b69930ea250d942fc4e1dba1027"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_cf007b69930ea250d942fc4e1dba1027"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=cf007b69930ea250d942fc4e1dba1027"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=cf007b69930ea250d942fc4e1dba1027"/>
+</record_update>
