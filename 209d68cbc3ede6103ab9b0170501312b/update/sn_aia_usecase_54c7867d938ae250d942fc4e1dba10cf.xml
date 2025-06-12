@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_usecase">
+    <sn_aia_usecase action="INSERT_OR_UPDATE">
+        <base_plan>This agentic workflow specializes in creating incidents in ServiceNow based on user inputs.
+1. Extract the caller's name from the input.
+2. Populate the caller's name into the description field of the incident.
+3. Create a new incident record in ServiceNow with the provided details.
+4. Confirm the successful creation of the incident to the user.</base_plan>
+        <description>This workflow creates a simple incident in ServiceNow with the caller's name populated in the description field. It is designed for users who need to quickly log incidents with minimal input.</description>
+        <execution_mode>copilot</execution_mode>
+        <internal_name>global.x_volt2_github_s_0.Create Incident Workflow</internal_name>
+        <name>Create Incident Workflow</name>
+        <record_type>custom</record_type>
+        <strategy display_value="ReActive Planner">b264c470ff1022106c36ffffffffff67</strategy>
+        <sys_class_name>sn_aia_usecase</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-11 03:19:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>54c7867d938ae250d942fc4e1dba10cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Incident Workflow</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_aia_usecase_54c7867d938ae250d942fc4e1dba10cf</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-11 03:19:28</sys_updated_on>
+        <team display_value="Create Incident Workflow">41188a7d938ae250d942fc4e1dba1071</team>
+    </sn_aia_usecase>
+</record_update>

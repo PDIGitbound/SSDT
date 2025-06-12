@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row">
+    <sp_row action="DELETE">
+        <class_name/>
+        <order>2</order>
+        <semantic_tag/>
+        <sp_column/>
+        <sp_container display_value="i.home - Container 3">1acafc1f93bd2610d942fc4e1dba1099</sp_container>
+        <sys_class_name>sp_row</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-04 21:25:15</sys_created_on>
+        <sys_id>bd7d3973c3312a103ab9b01705013163</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_row_bd7d3973c3312a103ab9b01705013163</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-12 17:49:25</sys_updated_on>
+    </sp_row>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sp_row_bd7d3973c3312a103ab9b01705013163</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_row"><sp_row action="INSERT_OR_UPDATE"><class_name/><order>2</order><semantic_tag/><sp_column/><sp_container display_value="i.home - Container 3">1acafc1f93bd2610d942fc4e1dba1099</sp_container><sys_class_name>sp_row</sys_class_name><sys_created_by>ruben.fernandez</sys_created_by><sys_created_on>2025-06-04 21:25:15</sys_created_on><sys_id>bd7d3973c3312a103ab9b01705013163</sys_id><sys_mod_count>2</sys_mod_count><sys_name>2</sys_name><sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package><sys_policy/><sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope><sys_update_name>sp_row_bd7d3973c3312a103ab9b01705013163</sys_update_name><sys_updated_by>ruben.fernandez</sys_updated_by><sys_updated_on>2025-06-12 17:49:25</sys_updated_on></sp_row></record_update>]]></payload>
+        <payload_hash>924924669</payload_hash>
+        <record_name>2</record_name>
+        <reverted_from/>
+        <source>c7617b589306ea10d942fc4e1dba1033</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-12 17:49:25</sys_created_on>
+        <sys_id>1ac8de56c342a6503ab9b01705013192</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1976542cbd60000001</sys_recorded_at>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-12 17:49:25</sys_updated_on>
+        <type>Row</type>
+        <update_guid>5ec8de568b42a650b1d9cb02c95ab291</update_guid>
+        <update_guid_history>5ec8de568b42a650b1d9cb02c95ab291:924924669,fd2ebdb3a1312a102f31966ae6cb492f:-1537725523,717d3973d7312a10e54aa2f8d2d569fb:-1253515281</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="2">a6e91e1ac342a6503ab9b0170501310b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-12 17:54:22</sys_created_on>
+        <sys_db_object display_value="" name="sp_row">sp_row</sys_db_object>
+        <sys_id>159c1495b649416883cf2d8dad48fb90</sys_id>
+        <sys_metadata>bd7d3973c3312a103ab9b01705013163</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sp_row_bd7d3973c3312a103ab9b01705013163</sys_update_name>
+        <sys_update_version display_value="sp_row_bd7d3973c3312a103ab9b01705013163">1ac8de56c342a6503ab9b01705013192</sys_update_version>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-12 17:54:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

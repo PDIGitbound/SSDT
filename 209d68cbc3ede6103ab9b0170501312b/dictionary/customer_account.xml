@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="79c2c00fc3a9e6103ab9b01705013179" extends="core_company" label="Account" max_length="40" name="customer_account" text_index="true" type="collection">
+        <element label="Asset" max_length="32" name="x_volt2_github_s_0_asset" reference="alm_asset" type="reference"/>
+        <index name="index">
+            <element name="x_volt2_github_s_0_asset"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.production-summary {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+.production-summary p {
+  margin: 10px 0;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>iris_worked_time</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>iris worked time</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  var productionStart = new GlideDateTime("2025-05-19 00:00:00");
+  var now = new GlideDateTime();
+  var totalOperationalSeconds = now.getNumericValue() - productionStart.getNumericValue();
+  totalOperationalSeconds = totalOperationalSeconds / 1000;
+
+  var downtimeSeconds = 0;
+  var count = 0;
+
+  var gr = new GlideRecord('metric_instance');
+  gr.addQuery('definition', '35f2b283c0a808ae000b7132cd0a4f55');
+  gr.addQuery('calculation_complete', true);
+  gr.addQuery('value', 'In Progress');
+  gr.query();
+
+  while (gr.next()) {
+    var start = gr.getValue('start');
+    var end = gr.getValue('end');
+
+    if (start && end) {
+      var gdtStart = new GlideDateTime(start);
+      var gdtEnd = new GlideDateTime(end); 
+      var diffMillis = gdtEnd.getNumericValue() - gdtStart.getNumericValue();
+      downtimeSeconds += diffMillis / 1000;
+      count++;
+    }
+  }
+
+  var workedSeconds = totalOperationalSeconds - downtimeSeconds;
+
+  data.total_operational_hours = (totalOperationalSeconds / 3600).toFixed(2);
+  data.downtime_hours = (downtimeSeconds / 3600).toFixed(2);
+  data.worked_hours = (workedSeconds / 3600).toFixed(2);
+
+  var efficiency = (workedSeconds / totalOperationalSeconds) * 100;
+  data.efficiency_percentage = efficiency.toFixed(2) + "%";
+
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-12 17:52:12</sys_created_on>
+        <sys_id>0b695ed6c342a6503ab9b01705013129</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>iris worked time</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_widget_0b695ed6c342a6503ab9b01705013129</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-12 17:54:47</sys_updated_on>
+        <template><![CDATA[<div class="production-summary">
+  <p><strong>Total de horas desde el inicio:</strong> {{ data.total_operational_hours }} hrs</p>
+  <p><strong>Horas de downtime:</strong> {{ data.downtime_hours }} hrs</p>
+  <p><strong>Horas trabajadas:</strong> {{ data.worked_hours }} hrs</p>
+  <p><strong>Eficiencia de operación:</strong> {{ data.efficiency_percentage }}</p>
+</div>
+]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>0b695ed6c342a6503ab9b01705013129</id>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-12 17:52:12</sys_created_on>
+        <sys_id>8b695ed6c342a6503ab9b0170501312d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-12 17:52:12</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

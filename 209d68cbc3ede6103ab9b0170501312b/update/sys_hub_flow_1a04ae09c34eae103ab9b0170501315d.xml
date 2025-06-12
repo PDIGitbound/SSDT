@@ -4,7 +4,7 @@
         <acls/>
         <active>true</active>
         <annotation/>
-        <attributes>browserActivatedIn=safari,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=173287000,viewActivatedIn=naturalLanguage</attributes>
+        <attributes>browserActivatedIn=safari,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=262552000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>27000</authored_on_release_version>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
@@ -15,14 +15,14 @@
         <flow_priority>MEDIUM</flow_priority>
         <generation_source/>
         <internal_name>create_repair_order_on_asset_retirement</internal_name>
-        <label_cache>[{"name":"Updated_1.current","label":"Trigger - Record Updated➛Hardware Record","reference":"alm_hardware","reference_display":"Hardware","type":"reference","base_type":"reference","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]},"attributes":{}},{"name":"Updated_1.run_start_date_time","label":"Trigger - Record Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.stockroom.name","label":"Trigger - Record Created or Updated➛Asset Record➛Stockroom➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"alm_stockroom","column_name":"name","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["stockroom"]}},{"name":"Created or Updated_1.current.serial_number","label":"Trigger - Record Created or Updated➛Asset Record➛Serial number","reference":"","reference_display":"Serial number","type":"string","base_type":"string","parent_table_name":"alm_asset","column_name":"serial_number","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["parent"]}},{"name":"Created or Updated_1.current.stockroom","label":"Trigger - Record Created or Updated➛Asset Record➛Stockroom","reference":"alm_stockroom","reference_display":"Stockroom","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"stockroom","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["stockroom"]}},{"name":"Created or Updated_1.current.support_group","label":"Trigger - Record Created or Updated➛Asset Record➛Support group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"support_group","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["assignment_group"]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Asset Record","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["asset","stockroom","parent"]},"attributes":{}}]</label_cache>
+        <label_cache>[{"name":"Updated_1.run_start_time","label":"Trigger - Record Updated➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"3c872254-dc0b-4071-b3d3-c6d6df39608d":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.x_volt2_github_s_0_name","label":"Trigger - Record Created or Updated➛Asset Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"alm_asset","column_name":"x_volt2_github_s_0_name","usedInstances":{"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}},{"name":"Created or Updated_1.current.display_name","label":"Trigger - Record Created or Updated➛Hardware Record➛Display name","reference":"","reference_display":"Display name","type":"string","base_type":"string","parent_table_name":"alm_hardware","column_name":"display_name","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}},{"name":"Created or Updated_1.current.asset_tag","label":"Trigger - Record Created or Updated➛Hardware Record➛Asset tag","reference":"","reference_display":"Asset tag","type":"string","base_type":"string","parent_table_name":"alm_hardware","column_name":"asset_tag","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]}},{"name":"Created or Updated_1.run_start_date_time","label":"Trigger - Record Created or Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Hardware Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"alm_hardware","column_name":"sys_id","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Hardware Record","reference":"alm_hardware","reference_display":"Hardware","type":"reference","base_type":"reference","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]},"attributes":{}},{"name":"Updated_1.run_start_date_time","label":"Trigger - Record Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.stockroom.name","label":"Trigger - Record Created or Updated➛Asset Record➛Stockroom➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"alm_stockroom","column_name":"name","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["stockroom"]}},{"name":"Created or Updated_1.current.serial_number","label":"Trigger - Record Created or Updated➛Asset Record➛Serial number","reference":"","reference_display":"Serial number","type":"string","base_type":"string","parent_table_name":"alm_asset","column_name":"serial_number","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["parent"]}},{"name":"Created or Updated_1.current.stockroom","label":"Trigger - Record Created or Updated➛Asset Record➛Stockroom","reference":"alm_stockroom","reference_display":"Stockroom","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"stockroom","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["stockroom"]}},{"name":"Created or Updated_1.current.support_group","label":"Trigger - Record Created or Updated➛Asset Record➛Support group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"support_group","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["assignment_group"]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Hardware Record","reference":"alm_hardware","reference_display":"Hardware","type":"reference","base_type":"reference","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["asset","stockroom","parent"],"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]},"attributes":{}},{"name":"Created or Updated_1.run_start_time","label":"Trigger - Record Created or Updated➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.ci","label":"Trigger - Record Created or Updated➛Asset Record➛Configuration Item","reference":"cmdb_ci","reference_display":"Configuration Item","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"ci","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]}},{"name":"Created or Updated_1.current.ci.name","label":"Trigger - Record Created or Updated➛Asset Record➛Configuration Item➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci","column_name":"name","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}},{"name":"Created or Updated_1.current.sys_id","label":"Trigger - Record Created or Updated➛Hardware Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"alm_hardware","column_name":"sys_id","usedInstances":{"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}}]</label_cache>
         <master_snapshot>cdb59749c342ee103ab9b017050131fa</master_snapshot>
         <master_snapshot_digest/>
         <name>Create Repair Order on Asset Retirement</name>
         <natlang/>
         <outputs/>
         <pre_compiled>false</pre_compiled>
-        <remote_trigger_id>61e37cfdc38aa2503ab9b017050131cc</remote_trigger_id>
+        <remote_trigger_id>d6a48ecac34a26503ab9b01705013195</remote_trigger_id>
         <run_as>user</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
@@ -36,7 +36,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1a04ae09c34eae103ab9b0170501315d</sys_id>
-        <sys_mod_count>46</sys_mod_count>
+        <sys_mod_count>166</sys_mod_count>
         <sys_name>Create Repair Order on Asset Retirement</sys_name>
         <sys_overrides/>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
@@ -44,7 +44,7 @@
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_hub_flow_1a04ae09c34eae103ab9b0170501315d</sys_update_name>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-10 21:34:19</sys_updated_on>
+        <sys_updated_on>2025-06-12 15:46:15</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
@@ -53,7 +53,7 @@
     <sys_variable_value action="delete_multiple" query="document_key=1a04ae09c34eae103ab9b0170501315d"/>
     <sys_flow_record_trigger action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition table="alm_hardware">install_statusCHANGESTO7<item display_value="Retired" endquery="false" field="install_status" goto="false" newquery="false" operator="CHANGESTO" or="false" value="7"/>
+        <condition table="alm_hardware">install_status=7<item display_value="Retired" endquery="false" field="install_status" goto="false" newquery="false" operator="=" or="false" value="7"/>
         </condition>
         <name/>
         <on_delete>false</on_delete>
@@ -67,15 +67,15 @@
         <run_when_user_setting>any</run_when_user_setting>
         <sys_class_name>sys_flow_record_trigger</sys_class_name>
         <sys_created_by>ruben.fernandez</sys_created_by>
-        <sys_created_on>2025-06-10 21:11:41</sys_created_on>
+        <sys_created_on>2025-06-11 21:43:01</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>61e37cfdc38aa2503ab9b017050131cc</sys_id>
+        <sys_id>d6a48ecac34a26503ab9b01705013195</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_overrides/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-10 21:11:41</sys_updated_on>
+        <sys_updated_on>2025-06-11 21:43:01</sys_updated_on>
         <table>alm_hardware</table>
         <trigger_definition/>
     </sys_flow_record_trigger>
@@ -85,14 +85,14 @@
         <identifier>1a04ae09c34eae103ab9b0170501315d</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>ruben.fernandez</sys_created_by>
-        <sys_created_on>2025-06-10 21:34:18</sys_created_on>
-        <sys_id>4d19f479c3caa2503ab9b01705013114</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_created_on>2025-06-11 22:22:03</sys_created_on>
+        <sys_id>4a9d42cac38a26503ab9b0170501313c</sys_id>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-10 21:34:18</sys_updated_on>
-        <trigger display_value="">61e37cfdc38aa2503ab9b017050131cc</trigger>
+        <sys_updated_on>2025-06-12 15:46:15</sys_updated_on>
+        <trigger display_value="">d6a48ecac34a26503ab9b01705013195</trigger>
     </sys_trigger_runner_mapping>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=1a04ae09c34eae103ab9b0170501315d^sys_idNOT IN4d19f479c3caa2503ab9b01705013114"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=1a04ae09c34eae103ab9b0170501315d^sys_idNOT IN4a9d42cac38a26503ab9b0170501313c"/>
     <sys_hub_flow_stage action="delete_multiple" query="flow=1a04ae09c34eae103ab9b0170501315d"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=1a04ae09c34eae103ab9b0170501315d^sys_idNOT IN1e046a49c34eae103ab9b017050131ca"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -385,7 +385,7 @@
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fcd5220dc34eae103ab9b017050131c5"/>
     <sys_hub_flow_output action="delete_multiple" query="model=1a04ae09c34eae103ab9b0170501315d"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=1a04ae09c34eae103ab9b0170501315d"/>
-    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=1a04ae09c34eae103ab9b0170501315d^sys_idNOT INd43f24f5c38aa2503ab9b01705013188"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=1a04ae09c34eae103ab9b0170501315d^sys_idNOT INbfee7d02c34a26503ab9b017050131bc"/>
     <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
         <comment/>
         <display_text/>
@@ -395,25 +395,25 @@
         <published_version/>
         <remote_sys_id/>
         <sys_created_by>ruben.fernandez</sys_created_by>
-        <sys_created_on>2025-06-10 20:51:07</sys_created_on>
-        <sys_id>d43f24f5c38aa2503ab9b01705013188</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_created_on>2025-06-11 21:18:00</sys_created_on>
+        <sys_id>bfee7d02c34a26503ab9b017050131bc</sys_id>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-10 21:11:35</sys_updated_on>
+        <sys_updated_on>2025-06-11 21:51:50</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
-        <trigger_inputs>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</trigger_inputs>
+        <trigger_inputs>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</trigger_inputs>
         <trigger_outputs/>
         <trigger_type>record_update</trigger_type>
         <updation_source/>
     </sys_hub_trigger_instance_v2>
-    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=1a04ae09c34eae103ab9b0170501315d^sys_idNOT IN3e213cb9c38aa2503ab9b017050131a9"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=1a04ae09c34eae103ab9b0170501315d^sys_idNOT INc1ded98ac34626503ab9b01705013135"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
         <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
         <attributes/>
         <comment/>
-        <compiled_snapshot/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
         <display_text/>
         <flow display_value="Create Repair Order on Asset Retirement">1a04ae09c34eae103ab9b0170501315d</flow>
         <generation_source/>
@@ -421,15 +421,15 @@
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>ruben.fernandez</sys_created_by>
-        <sys_created_on>2025-06-10 20:59:45</sys_created_on>
-        <sys_id>3e213cb9c38aa2503ab9b017050131a9</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_created_on>2025-06-11 18:57:43</sys_created_on>
+        <sys_id>c1ded98ac34626503ab9b01705013135</sys_id>
+        <sys_mod_count>41</sys_mod_count>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-10 21:34:00</sys_updated_on>
-        <ui_id>5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae</ui_id>
+        <sys_updated_on>2025-06-11 22:23:02</sys_updated_on>
+        <ui_id>3c872254-dc0b-4071-b3d3-c6d6df39608d</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/91UTW/bMAz9K4HORmDHWZrkVmDIbe3Qbb00rUBbdCJMllxJTpsF/u+j/JF17QIEw4Bh843kE/keSfPuwKRgSzZLMH63SGZ5mqTpJI4n82mSzdIsmYgUEKcsYhpKJKSHTCFvjYjtQNXB6TSXHkqem7I0mlusQFpurEBLKCFdpWB/24Nv2uhoiOZbqYRFzZZ39xGrwFJqT5Hl4VXI7yvkCjJUlORzoDG66micK+GnxyckhSqvfR3VZRwxfPaoBVK9ApTDiJWgBXhj92zpbU0OiyCutdofEVupPSVkAfvs5DfKPo8DrkCSlmMXO5q871bnzrdG5nhdeWl052mJ9UGj6lJfdSJCn7GAWvmhz+SpHeXDKlAOJHpGxaeteboZCq6kbtX1QWVyUEcLvLcyqz26MA9UWFIiXkJVSb3hlTU72T4mLuV4o8gYF8o8UVEnN3oMeSA+pg7BeEX+9637FqwMKj5QGnrctOr5Yx3qdjp6xrwTTQCXW1n5S0q3w55cEw27KzBenBx8kv0YdLuu7uXeepN/tcaU6zqOU3FYD7u6Zss1+wjWjyw+0hu/ZtG6e9aGChCLNL2IF+mFoBqxWEwnRT7FRGSQxLN5C3d7x6U4E988iJqGBR57LocvVbAET8a21tx5YtPGuZclNs0DOIf+LTivLc3VN83bP+9/l/ubpwRL6oHHUdem6OytGhKsJCrhfrFmwy3pC/BdX6C/J8mfuifJLG6/v3NVOp7/2FF5cd9PnJf7794Q4gccBwAA</values>
+        <values>H4sIAAAAAAAA/91VUU/bMBD+K5WfoyppukL7NoF42mCCjRcK1iW+UGuOHWyn0FX577vESamAakzaC+ub7/vu/H3ny/Vmy6RgCzZLMP40T2Z5mqTpJI4nx9Mkm6VZMhEpIE5ZxDSUSEwPmULeHSK2BlW3Qae59FDy3JSl0dxiBdJyYwVaYgnpKgWb65582aGjAc1XUgmLmi1ubiNWgaXSnpDF9gX0XqEKMlRE/d4qPSDcb6o3Y1/2c0fnAQhKF3HE8MmjFkhCClAOI1aCFuCN3bCFtzUFLIK40GqzY6yk9lSQtdwnJ3/RtcdxyyuQnOUYsN2R980K4eIUPFxR5dzXtqfmKyNzdKEnAguolT/ZjwXCReWl0SGls9lnG1WX+jy0hO0KDG9DkdqRCKxan63y3kZxtTKPl4PKM6m7lvSgMjmo3Qm8tzKrfatny1BhSYV4CVUl9T2vrFnLLpm0lON7RYdxocwjXerkvR5D3gofU1thfEbx0y58DVa2Lr5SGUpuIuY27kSBc89eqIn8oW6VBGe9Bx7a0KbkVlb+M12wxl5uEw1fgMB4fnCwkux5kLqhd/vT703+0xpTLus4TsV2OUz8ki2W7BtYP7L4QDl+yaJlSOugAsQ8TY/ieXok6I5YzKeTIp9iIjJI4tlxRyefXIp38ps7UdPzgcdey/ZH1Z4ET8a21tx5UsO9LLFp7qh56F/z8trSI/umef3p/sdO/3IN/XlahjV0JlEJ98b4DDsIS+qgRx7G6cUe6sHRdQ/2uyj5V7somcXd7wNtpGDuwy+kvf+eA6vp9jcUqUyungcAAA==</values>
     </sys_hub_action_instance_v2>
     <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=1a04ae09c34eae103ab9b0170501315d"/>
     <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=1a04ae09c34eae103ab9b0170501315d"/>
@@ -520,7 +520,7 @@
         <description>New Repair Order when an asset changes to "Retired".</description>
         <flow_priority>MEDIUM</flow_priority>
         <internal_name>create_repair_order_on_asset_retirement</internal_name>
-        <label_cache>[{"name":"Updated_1.current","label":"Trigger - Record Updated➛Hardware Record","reference":"alm_hardware","reference_display":"Hardware","type":"reference","base_type":"reference","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]},"attributes":{}},{"name":"Updated_1.run_start_date_time","label":"Trigger - Record Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.stockroom.name","label":"Trigger - Record Created or Updated➛Asset Record➛Stockroom➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"alm_stockroom","column_name":"name","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["stockroom"]}},{"name":"Created or Updated_1.current.serial_number","label":"Trigger - Record Created or Updated➛Asset Record➛Serial number","reference":"","reference_display":"Serial number","type":"string","base_type":"string","parent_table_name":"alm_asset","column_name":"serial_number","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["parent"]}},{"name":"Created or Updated_1.current.stockroom","label":"Trigger - Record Created or Updated➛Asset Record➛Stockroom","reference":"alm_stockroom","reference_display":"Stockroom","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"stockroom","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["stockroom"]}},{"name":"Created or Updated_1.current.support_group","label":"Trigger - Record Created or Updated➛Asset Record➛Support group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"support_group","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["assignment_group"]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Asset Record","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["asset","stockroom","parent"]},"attributes":{}}]</label_cache>
+        <label_cache>[{"name":"Updated_1.run_start_time","label":"Trigger - Record Updated➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"3c872254-dc0b-4071-b3d3-c6d6df39608d":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.x_volt2_github_s_0_name","label":"Trigger - Record Created or Updated➛Asset Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"alm_asset","column_name":"x_volt2_github_s_0_name","usedInstances":{"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}},{"name":"Created or Updated_1.current.display_name","label":"Trigger - Record Created or Updated➛Hardware Record➛Display name","reference":"","reference_display":"Display name","type":"string","base_type":"string","parent_table_name":"alm_hardware","column_name":"display_name","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}},{"name":"Created or Updated_1.current.asset_tag","label":"Trigger - Record Created or Updated➛Hardware Record➛Asset tag","reference":"","reference_display":"Asset tag","type":"string","base_type":"string","parent_table_name":"alm_hardware","column_name":"asset_tag","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]}},{"name":"Created or Updated_1.run_start_date_time","label":"Trigger - Record Created or Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Hardware Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"alm_hardware","column_name":"sys_id","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Hardware Record","reference":"alm_hardware","reference_display":"Hardware","type":"reference","base_type":"reference","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]},"attributes":{}},{"name":"Updated_1.run_start_date_time","label":"Trigger - Record Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.stockroom.name","label":"Trigger - Record Created or Updated➛Asset Record➛Stockroom➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"alm_stockroom","column_name":"name","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["stockroom"]}},{"name":"Created or Updated_1.current.serial_number","label":"Trigger - Record Created or Updated➛Asset Record➛Serial number","reference":"","reference_display":"Serial number","type":"string","base_type":"string","parent_table_name":"alm_asset","column_name":"serial_number","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["parent"]}},{"name":"Created or Updated_1.current.stockroom","label":"Trigger - Record Created or Updated➛Asset Record➛Stockroom","reference":"alm_stockroom","reference_display":"Stockroom","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"stockroom","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["stockroom"]}},{"name":"Created or Updated_1.current.support_group","label":"Trigger - Record Created or Updated➛Asset Record➛Support group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"support_group","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["assignment_group"]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Hardware Record","reference":"alm_hardware","reference_display":"Hardware","type":"reference","base_type":"reference","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["asset","stockroom","parent"],"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]},"attributes":{}},{"name":"Created or Updated_1.run_start_time","label":"Trigger - Record Created or Updated➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.ci","label":"Trigger - Record Created or Updated➛Asset Record➛Configuration Item","reference":"cmdb_ci","reference_display":"Configuration Item","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"ci","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]}},{"name":"Created or Updated_1.current.ci.name","label":"Trigger - Record Created or Updated➛Asset Record➛Configuration Item➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci","column_name":"name","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}},{"name":"Created or Updated_1.current.sys_id","label":"Trigger - Record Created or Updated➛Hardware Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"alm_hardware","column_name":"sys_id","usedInstances":{"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}}]</label_cache>
         <master>true</master>
         <name>Create Repair Order on Asset Retirement</name>
         <natlang/>
@@ -537,7 +537,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cdb59749c342ee103ab9b017050131fa</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>51</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -545,7 +545,7 @@
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-10 21:34:18</sys_updated_on>
+        <sys_updated_on>2025-06-11 22:22:03</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow_snapshot>
@@ -629,14 +629,14 @@
         <sys_created_by>ruben.fernandez</sys_created_by>
         <sys_created_on>2025-06-09 01:03:10</sys_created_on>
         <sys_id>05b5d749c342ee103ab9b0170501310d</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>101</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-10 21:34:18</sys_updated_on>
+        <sys_updated_on>2025-06-11 22:22:03</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -713,14 +713,14 @@
         <sys_created_by>ruben.fernandez</sys_created_by>
         <sys_created_on>2025-06-09 01:03:10</sys_created_on>
         <sys_id>c1b59749c342ee103ab9b017050131fc</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>101</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name/>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-10 21:34:18</sys_updated_on>
+        <sys_updated_on>2025-06-11 22:22:03</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -855,17 +855,17 @@
         <sys_created_by>ruben.fernandez</sys_created_by>
         <sys_created_on>2025-06-09 01:03:11</sys_created_on>
         <sys_id>81b5d749c342ee103ab9b01705013119</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-10 21:11:40</sys_updated_on>
+        <sys_updated_on>2025-06-11 21:51:55</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
-        <trigger_inputs>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</trigger_inputs>
+        <trigger_inputs>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</trigger_inputs>
         <trigger_outputs/>
         <trigger_type>record_update</trigger_type>
         <updation_source/>
     </sys_hub_trigger_instance_v2>
-    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=cdb59749c342ee103ab9b017050131fa^sys_idNOT IN5c317cb9c38aa2503ab9b01705013166"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=cdb59749c342ee103ab9b017050131fa^sys_idNOT IN32de1d8ac34626503ab9b01705013114"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
         <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
@@ -879,15 +879,15 @@
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>ruben.fernandez</sys_created_by>
-        <sys_created_on>2025-06-10 20:59:51</sys_created_on>
-        <sys_id>5c317cb9c38aa2503ab9b01705013166</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_created_on>2025-06-11 18:57:51</sys_created_on>
+        <sys_id>32de1d8ac34626503ab9b01705013114</sys_id>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-10 21:34:18</sys_updated_on>
-        <ui_id>5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae</ui_id>
+        <sys_updated_on>2025-06-11 22:22:03</sys_updated_on>
+        <ui_id>3c872254-dc0b-4071-b3d3-c6d6df39608d</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/91VUU/bMBD+K5WfoyppukL7NoF42mCCjRcK1iW+UGuOHWyn0FX577vESamAakzaC+ub7/vu/H3ny/Vmy6RgCzZLMP40T2Z5mqTpJI4nx9Mkm6VZMhEpIE5ZxDSUSEwPmULeHSK2BlW3Qae59FDy3JSl0dxiBdJyYwVaYgnpKgWb65582aGjAc1XUgmLmi1ubiNWgaXSnpDF9gX0XqEKMlRE/d4qPSDcb6o3Y1/2c0fnAQhKF3HE8MmjFkhCClAOI1aCFuCN3bCFtzUFLIK40GqzY6yk9lSQtdwnJ3/RtcdxyyuQnOUYsN2R980K4eIUPFxR5dzXtqfmKyNzdKEnAguolT/ZjwXCReWl0SGls9lnG1WX+jy0hO0KDG9DkdqRCKxan63y3kZxtTKPl4PKM6m7lvSgMjmo3Qm8tzKrfatny1BhSYV4CVUl9T2vrFnLLpm0lON7RYdxocwjXerkvR5D3gofU1thfEbx0y58DVa2Lr5SGUpuIuY27kSBc89eqIn8oW6VBGe9Bx7a0KbkVlb+M12wxl5uEw1fgMB4fnCwkux5kLqhd/vT703+0xpTLus4TsV2OUz8ki2W7BtYP7L4QDl+yaJlSOugAsQ8TY/ieXok6I5YzKeTIp9iIjJI4tlxRyefXIp38ps7UdPzgcdey/ZH1Z4ET8a21tx5UtPh3MsSm+aOOoj+NTmvLb20b5rX3+//bvcvF9Kf52ZYSGcSlXBvDNKwjbCkNpLWMFgvNlIPjq57sN9Kyb/aSsks7n4faDcFcx9+Ne39Cx1YUre/AXuIlqmoBwAA</values>
+        <values>H4sIAAAAAAAA/91VUU/bMBD+K5WfoyppukL7NoF42mCCjRcK1iW+UGuOHWyn0FX577vESamAakzaC+ub7/vu/H3ny/Vmy6RgCzZLMP40T2Z5mqTpJI4nx9Mkm6VZMhEpIE5ZxDSUSEwPmULeHSK2BlW3Qae59FDy3JSl0dxiBdJyYwVaYgnpKgWb65582aGjAc1XUgmLmi1ubiNWgaXSnpDF9gX0XqEKMlRE/d4qPSDcb6o3Y1/2c0fnAQhKF3HE8MmjFkhCClAOI1aCFuCN3bCFtzUFLIK40GqzY6yk9lSQtdwnJ3/RtcdxyyuQnOUYsN2R980K4eIUPFxR5dzXtqfmKyNzdKEnAguolT/ZjwXCReWl0SGls9lnG1WX+jy0hO0KDG9DkdqRCKxan63y3kZxtTKPl4PKM6m7lvSgMjmo3Qm8tzKrfatny1BhSYV4CVUl9T2vrFnLLpm0lON7RYdxocwjXerkvR5D3gofU1thfEbx0y58DVa2Lr5SGUpuIuY27kSBc89eqIn8oW6VBGe9Bx7a0KbkVlb+M12wxl5uEw1fgMB4fnCwkux5kLqhd/vT703+0xpTLus4TsV2OUz8ki2W7BtYP7L4QDl+yaJlSOugAsQ8TY/ieXok6I5YzKeTIp9iIjJI4tlxRyefXIp38ps7UdPzgcdey/ZH1Z4ET8a21tx5UsO9LLFp7qh56F/z8trSI/umef3p/sdO/3IN/XlahjV0JlEJ98b4DDsIS+qgRx7G6cUe6sHRdQ/2uyj5V7somcXd7wNtpGDuwy+kvf+eA6vp9jcUqUyungcAAA==</values>
     </sys_hub_action_instance_v2>
     <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=cdb59749c342ee103ab9b017050131fa"/>
     <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=cdb59749c342ee103ab9b017050131fa"/>
@@ -971,21 +971,21 @@
     </sys_hub_flow>
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=1a04ae09c34eae103ab9b0170501315d^sys_idNOT INc9b5d749c342ee103ab9b0170501312e"/>
     <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
-        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerUniqueChange</binding_strategy>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"c9b5d749c342ee103ab9b0170501312e","name":"plan","plan_signature":null}}</plan>
         <plan_id>1a04ae09c34eae103ab9b0170501315d</plan_id>
-        <snapshot>cdb59749c342ee103ab9b017050131fa</snapshot>
+        <snapshot>20ddc6cac38a26503ab9b0170501315b</snapshot>
         <sys_created_by>ruben.fernandez</sys_created_by>
         <sys_created_on>2025-06-09 01:03:11</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c9b5d749c342ee103ab9b0170501312e</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-10 21:34:18</sys_updated_on>
-        <trigger display_value="">61e37cfdc38aa2503ab9b017050131cc</trigger>
+        <sys_updated_on>2025-06-11 22:22:03</sys_updated_on>
+        <trigger display_value="">d6a48ecac34a26503ab9b01705013195</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=1a04ae09c34eae103ab9b0170501315d"/>
 </record_update>

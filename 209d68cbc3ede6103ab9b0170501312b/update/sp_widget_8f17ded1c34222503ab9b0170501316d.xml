@@ -36,9 +36,9 @@
 
     while (tempTime.before(endTime)) {
       var current = new GlideDateTime(tempTime);
-      var dayOfWeek = current.getDayOfWeekLocalTime(); // empieza en domingo (1) y termina en sabadp (7)
+      var dayOfWeek = current.getDayOfWeekLocalTime(); // empieza en dom 1 y termina en sabadp 7
 
-      if (dayOfWeek >= 2 && dayOfWeek <= 6) { // solo contar de lunes (2) a viernes (6)
+      if (dayOfWeek >= 2 && dayOfWeek <= 6) { // solo contar de lun 2 a vie 6
         var currentDate = current.getDate().getByFormat('yyyy-MM-dd');
 
         var shiftStart = new GlideDateTime(currentDate + ' 06:00:00');
@@ -53,7 +53,7 @@
 				}
       }
 
-      tempTime.addDaysLocalTime(1); // dia siguiente
+      tempTime.addDaysLocalTime(1); // dia sig
       tempTime.setDisplayValue(tempTime.getDate().getByFormat('yyyy-MM-dd') + ' 00:00:00');
     }
   }
@@ -83,14 +83,14 @@
         <sys_created_by>isaac.hernandez</sys_created_by>
         <sys_created_on>2025-06-09 15:08:11</sys_created_on>
         <sys_id>8f17ded1c34222503ab9b0170501316d</sys_id>
-        <sys_mod_count>21</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name>Downtime during shift</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_widget_8f17ded1c34222503ab9b0170501316d</sys_update_name>
         <sys_updated_by>isaac.hernandez</sys_updated_by>
-        <sys_updated_on>2025-06-09 16:54:45</sys_updated_on>
+        <sys_updated_on>2025-06-11 18:37:59</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default">
   <div class="panel-heading">
     <h4 class="panel-title">
