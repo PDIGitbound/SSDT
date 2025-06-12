@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_usecase">
+    <sn_aia_usecase action="INSERT_OR_UPDATE">
+        <base_plan>This agentic workflow specializes in automating OT incident creation and field population.
+
+1. Automatically create OT incidents with required fields: account, asset, and caller.
+2. Populate the account, asset, and caller fields when an OT incident is created.
+3. Ensure data consistency and accuracy for the specified fields during the workflow execution.</base_plan>
+        <description>This workflow automates the creation of OT incidents by fulfilling the account, asset, and caller fields. It also ensures these fields are populated when an OT incident is created.</description>
+        <execution_mode>copilot</execution_mode>
+        <internal_name>global.x_volt2_github_s_0.Create OT Incidents</internal_name>
+        <name>Create OT Incidents</name>
+        <record_type>custom</record_type>
+        <strategy display_value="ReActive Planner">b264c470ff1022106c36ffffffffff67</strategy>
+        <sys_class_name>sn_aia_usecase</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 16:12:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>0d0da3e9c3c2a2503ab9b01705013177</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create OT Incidents</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_aia_usecase_0d0da3e9c3c2a2503ab9b01705013177</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:12:30</sys_updated_on>
+        <team display_value="Create OT Incidents">076f2321c306a2503ab9b0170501311b</team>
+    </sn_aia_usecase>
+</record_update>

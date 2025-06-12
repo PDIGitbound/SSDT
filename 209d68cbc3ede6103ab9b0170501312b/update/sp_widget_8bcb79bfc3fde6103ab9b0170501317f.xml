@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[function hola ($scope, spAriaUtil) {
+        <client_script><![CDATA[function($scope, spAriaUtil) {
 	$scope.accessibilityModeEnabled = spAriaUtil.isAccessibilityEnabled();
-}]]></client_script>
+}
+]]></client_script>
         <controller_as>c</controller_as>
         <css>@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;display=swap');
 
@@ -22,13 +23,13 @@
 .book-icon {
   width: 64px;
   height: 64px;
-  color: var(--icon-color, #3a6ebd); /* Personalizable */
+  color: var(--icon-color, #34515e); /* Personalizable */
   margin-bottom: 12px;
 }
 
 .title {
   font-size: 20px;
-  color: var(--title-color, #3a6ebd); /* Personalizable */
+  color: var(--title-color, #34515e); /* Personalizable */
   margin: 0;
 }
 
@@ -61,14 +62,14 @@
         <sys_created_by>ruben.fernandez</sys_created_by>
         <sys_created_on>2025-06-04 21:17:57</sys_created_on>
         <sys_id>8bcb79bfc3fde6103ab9b0170501317f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Knowledge Icon Link</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_widget_8bcb79bfc3fde6103ab9b0170501317f</sys_update_name>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-06 03:51:19</sys_updated_on>
+        <sys_updated_on>2025-06-06 04:37:27</sys_updated_on>
         <template><![CDATA[<div class="knowledge-widget" ng-click="goToLink()">
   <svg class="book-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
     <path d="M16 8h30a2 2 0 0 1 2 2v41a2 2 0 0 1-2 2H16a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2zm4 10h22v2H20v-2zm0 6h22v2H20v-2zm0 6h22v2H20v-2z" fill="currentColor"/>

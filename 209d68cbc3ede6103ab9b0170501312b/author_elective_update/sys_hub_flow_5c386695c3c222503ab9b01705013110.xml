@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="DELETE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>test of summarize</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>sum</internal_name>
+        <label_cache>[{"name":"ba16775f-78f5-4230-86a2-a62d630c94e5.response","label":"1 - Summarize➛response","reference_display":"response","type":"string","base_type":"string","usedInstances":{"9ff0bbc4-5a57-472f-94e2-6cceb7de7483":["ah_work_note"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"7ace8998-d367-4871-becc-d6ae9c315c03"}},{"name":"Created_1.current.description","label":"Trigger - Record Created➛Operational Technology Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"sn_ot_incident","column_name":"description","usedInstances":{"ba16775f-78f5-4230-86a2-a62d630c94e5":["texttosummarize"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Operational Technology Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sn_ot_incident","column_name":"number","usedInstances":{"ba16775f-78f5-4230-86a2-a62d630c94e5":["incidentrecord"],"9ff0bbc4-5a57-472f-94e2-6cceb7de7483":["ah_task"]}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>Sum</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 16:22:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5c386695c3c222503ab9b01705013110</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Sum</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_hub_flow_5c386695c3c222503ab9b01705013110</sys_update_name>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:55:08</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="DELETE" query="documentkey=5c386695c3c222503ab9b01705013110"/>
+    <sys_variable_value action="DELETE" query="document_key=5c386695c3c222503ab9b01705013110"/>
+    <sys_hub_flow_stage action="DELETE" query="flow=5c386695c3c222503ab9b01705013110"/>
+    <sys_flow_cat_variable_model action="DELETE" query="id=5c386695c3c222503ab9b01705013110^sys_idNOT IN58386695c3c222503ab9b01705013111"/>
+    <sys_flow_cat_variable_model action="DELETE">
+        <id>5c386695c3c222503ab9b01705013110</id>
+        <name>Sum</name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 16:22:49</sys_created_on>
+        <sys_id>58386695c3c222503ab9b01705013111</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 16:22:49</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="DELETE" query="flow_catalog_model=58386695c3c222503ab9b01705013111"/>
+    <sys_hub_flow_input action="DELETE" query="model=5c386695c3c222503ab9b01705013110^sys_idNOT IN53d8271dc38a22503ab9b0170501316e,8bd8ebd9c38a22503ab9b0170501319d"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Sum">5c386695c3c222503ab9b01705013110</model>
+        <model_id>5c386695c3c222503ab9b01705013110</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_5c386695c3c222503ab9b01705013110</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 21:05:22</sys_created_on>
+        <sys_id>53d8271dc38a22503ab9b0170501316e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:05:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=53d8271dc38a22503ab9b0170501316e"/>
+    <sys_hub_flow_input action="DELETE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Sum">5c386695c3c222503ab9b01705013110</model>
+        <model_id>5c386695c3c222503ab9b01705013110</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_5c386695c3c222503ab9b01705013110</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 21:05:21</sys_created_on>
+        <sys_id>8bd8ebd9c38a22503ab9b0170501319d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:05:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="DELETE" query="action_input=8bd8ebd9c38a22503ab9b0170501319d"/>
+    <sys_hub_flow_output action="DELETE" query="model=5c386695c3c222503ab9b01705013110"/>
+    <sys_hub_alias_mapping action="DELETE" query="source_id=5c386695c3c222503ab9b01705013110"/>
+    <sys_hub_trigger_instance_v2 action="DELETE" query="flow=5c386695c3c222503ab9b01705013110^sys_idNOT INdbd8271dc38a22503ab9b0170501317d"/>
+    <sys_hub_trigger_instance_v2 action="DELETE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Sum">5c386695c3c222503ab9b01705013110</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 21:05:22</sys_created_on>
+        <sys_id>dbd8271dc38a22503ab9b0170501317d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:50:26</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxnLdtkkUDbDeo7W0fglSgKNImSpOuRCnrXeTfO9TNsi6OHStb5yWAODLn8OjMmWEevpsc+YSbV+Yc+ZyYA5MJRUKB+HyzJrCs9LIn0ErHVkgESMlwY16pMCYDk4ZyNSerNUcKXqaIR7Aow4CE5pU9MBPEYzLbRHcB7AS/T7fJ9zTzMDxHwpPKYwKzgAgFgYBFsOXmzzx+vyYhUkwCKmNO8FJILhcb4277A7xkPAiJMK8eHgfmGoWQSGkQ32shppFgitHEIRZ2bddxLMu5HNr+hevbTuAiYlmwYZ2VGnLVQs722OSrIiIgQclIg7eQoOBe8E35xhJozzhaoa8R+wa7X1r6PUoAOyZZrHz0coayZbyUDJP7taYoW8lwZkHJ45X4nOHX3BKKYq4KbmEljmA/staQNYgcEZ0t5dO0SPiRifR0eZBLjHj5hJQKmR8rEmnCKeNAvZdxE8k4TNFPb6/vpzfeXx/m17/dTr3p7Ww+vbue396Yz+m5vH9jvWOGMMfiZcd5LgXxkRGuP6CIVz6gGZgRDtlafcCKJYX+ngdbTV9LEbCUlYaucRGKdnVdnH6fsC2rU9q4krGQ99+3fzQ1nS0ep9uLC4QCgjp069OKbqsnb4GmWkionm6fgvOVQyQ8tKz/ScS5Pb1WwysZEH6z3c6E4GIBqmZiHSvN1hMSKvKU9FAQeBUe9auA6SVRZ2d7flHBYQzeKLzyezR1nNJW8veJRQD3Aaqw4CbdEuL0U77lNBaGhA8Hfwwch0CNMgpfo3crtMgZpTPCCVYVEdAvUfXpdxZFTCwqqMukKQeNnGU6EJNRHCnLHZ2Y/LHPIm6SntTIrBXz0ZVs25T6hDrWWNexbbk+ta2xNUI0cC0LO5VKboLpRKlqkniTij6unqNUjPwA6dUpzsFb1Wo4SEbJrgYLErREctu47gea3RM0R0Or2Z97lP+VssyWb3bVue9oPfd+FCQIfhEcaoMHOiDl8gms9xXu5yP8zyKUsQjqdqT3NJgwtm8YP+X8/dyjE1IZkv0Adt84Jw/c0l4IF4lND+7nUtufkCGxwPRc8Dt/NJn4GDmUji/GxLFr7reF0YrtXbjeC2pL2uTa5YCtwkna9HaE950AsOGDRwM83QFzYbb6XxZ7H073tCTCA6ihx7WXNQxvweHKW8T6rfZG6mRb36dWPL2c4JE9HuMx3Fqg4umQ+MgeOiM0GV+4l6NaxTeg7IOpWpj5IXeZaBOlQDrc4EsWOq/L+VvKNiJK6XZ0fJcWMMemv0FZkkqn1J/FSE1FhsZnKX65275nzAg0wPRC21e7PgSF/rDG28LwpVo25gVI/Sus76TWc2YHK2d3paqJJNk968lXKjK8HE2o224xdNJmMVsw3TDPfrw4sEKSzlprmzMOFXzSWjedg8ErJFyTSXVi2DPS9EWK3TspztuR4p48RhW12HmPfA3Yd9TC0rnilD6mcxJP0qp530gDAgYkMRg18v8kksDwN4ZaEqCUw7wMCQ2d/VTXrnaRJpRSwT8WSDaBN7oZLBv5AHV+jaomhX5vwCQYo9HI7ZiHJ/UbcBugF/Cefds6uiqStiLb27uO27e+Z2v3qkh2VxEH9qVeT93enE47dWt7eunUpzeefff3FhRn2lIe/wMvSAC0UB8AAA==</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE" query="flow=5c386695c3c222503ab9b01705013110^sys_idNOT INdbd8271dc38a22503ab9b0170501317f,ef233b91c30e22503ab9b0170501313a"/>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Summarize">ef31d4cb47b1211051a45831e36d43b9</action_type>
+        <action_type_parent display_value="Summarize">d5fb000b47b1211051a45831e36d4336</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Sum">5c386695c3c222503ab9b01705013110</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 21:05:22</sys_created_on>
+        <sys_id>dbd8271dc38a22503ab9b0170501317f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:50:26</sys_updated_on>
+        <ui_id>ba16775f-78f5-4230-86a2-a62d630c94e5</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/8VTXU/bMBT9K8jPTeQ4Sdv0DW1CQtqGBIwXhCLHvmktOU5wnEJX9b/vuklKQevGeNgefT/POdfnfkuUJAsyjaI4okmZzIqIRRFNI56k8ziCeCqTmAsyIYZXgJUOnp2r266quFU/ABNrrjuf2W4/WeAOZB6ForMWjAsltMKqxqna7HZYK1XbaL65+4sWsVJaYoYs7h8mpOEWcTiwZLF9k3KbBnLNC9A4+cZZZZbY/l56Y+Mt8jtz9dnNEcOT1P1KTLTjstpKjyyaECwFIwGXl1y3MCEVN5K72m7IwtkOA0hcXhm9OVSslHE4jPja59YvWMwppb6yBGQpoM8envmgZh8Wq1oJuNoL10ccL/TQI2rdVeZbz8PfAUreaTfeASNdi/Og8aA9jAFTebOqn67HhRfK7PkNSV0Lrg8v7lCFonPQ+tN06vaNNn3ky9v7gIYKN+YVbxqM5I2t12q/BUFX4VLjIyx1/YToWrU0IReeYYhi8vAC45/34Ts8iaf7Fcdgs1/33ajHDi79/WdTUZZJlgazOGNBkhRZwEtIg0QCo1mSpJQzsttLmz92nlQv0iBH3iuKBf3XPEcIaxiY7yaDh1IOMWOZFPGcMZbSmBdZQaMZTSn+vun85SMpI5Sfa0Hgj/mDhUxXFWB/5Z4Pm+Nw0NEf74A+9o7Yr0fspzgN3rBHuwZ7sN/bY4i8xx8xe+2OEcQJl1y+pE+75WjG/3PNsWqvjXN8u3/inVhmcRqxeSCpSIIkg2nAi1kWpDFNgc1iYIx+2DsPPwEnS4PxgQYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="DELETE">
+        <action_type display_value="Add Worknote">4d7227a473210300e4fd234ffff6a712</action_type>
+        <action_type_parent display_value="Add Worknote">cdc8896487110300123eaf8e36cb0b24</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Sum">5c386695c3c222503ab9b01705013110</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 21:50:26</sys_created_on>
+        <sys_id>ef233b91c30e22503ab9b0170501313a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:50:26</sys_updated_on>
+        <ui_id>9ff0bbc4-5a57-472f-94e2-6cceb7de7483</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Ty27bMBD8lUJnWdBbjm9Fi9zaAE2RSxAIK2llE6FIlqLsuIb/vUuLUuw2DYKgx+rGfczO7I7uDx5rvJUXXhVxXEBaJHEUJmGIadvESdrSl0MRZZ7vCeiQKmFTGugfKbAFPtjI4fBJIxhsyiioB61RmEAMXYX6eKSyhvWKw/7OVVOk3jDeUJm3un/wPQWakA1qb3X4LWX2CksOFXJq/IYtUqZGQngr56nXMf5Dgh1AAX0GLXVjqYS+h08GRYM0qgXeo+91IBowUu/nCOlubgR/DmyYMKPIDp569pPQk9g/GzBzmUOlWxClvo+peiNZjTfKMClGMAMVn5Yn+dCJr6MSu15sYeDmbL1DT5ioLHdLxjFrbzdyN+/wmomTTJfksgY+v8AYzarBYG9Pghw7Aio7UIqJdam03LJTM3HpgjWnR9ByuaOhPVuLAGpLPKBVQXBN8c+n8B1oZlV8IRhqPp42UP4Y7NxRh2NcjqKpoK81U+YjwW3RkTv6zrBR9trx4/ji2jupH0shDV64toIoL4qsXRTLNlukcRIuljnEC8jjJk/C+irFLNDYKylo8AtWfg/E+7x/SwcR68n4b9A+NVrlH5zyl/fhfoF+muD8H/0z/y/DMLz8A/7i/v/Of9X5D78A0J46wawFAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="DELETE" query="flow=5c386695c3c222503ab9b01705013110"/>
+    <sys_hub_flow_logic_instance_v2 action="DELETE" query="flow=5c386695c3c222503ab9b01705013110"/>
+    <sys_hub_pill_compound action="DELETE" query="attached_to=5c386695c3c222503ab9b01705013110"/>
+    <sys_hub_flow_variable action="DELETE" query="model=5c386695c3c222503ab9b01705013110"/>
+    <sys_documentation action="DELETE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5c386695c3c222503ab9b01705013110</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 21:05:21</sys_created_on>
+        <sys_id>17d8271dc38a22503ab9b0170501316d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:05:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="DELETE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_5c386695c3c222503ab9b01705013110</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 21:05:22</sys_created_on>
+        <sys_id>57d8271dc38a22503ab9b01705013170</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:05:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_input_5c386695c3c222503ab9b01705013110"/>
+    <sys_choice action="DELETE" query="name=var__m_sys_hub_flow_output_5c386695c3c222503ab9b01705013110"/>
+    <sys_flow_trigger_plan action="DELETE" query="plan_id=5c386695c3c222503ab9b01705013110"/>
+    <sys_flow_subflow_plan action="DELETE" query="plan_id=5c386695c3c222503ab9b01705013110"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sys_hub_flow_5c386695c3c222503ab9b01705013110</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_hub_flow"&gt;&lt;sys_hub_flow action="INSERT_OR_UPDATE"&gt;&lt;access&gt;public&lt;/access&gt;&lt;acls/&gt;&lt;active&gt;false&lt;/active&gt;&lt;annotation/&gt;&lt;attributes&gt;browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage&lt;/attributes&gt;&lt;authored_on_release_version&gt;27000&lt;/authored_on_release_version&gt;&lt;callable_by_client_api&gt;false&lt;/callable_by_client_api&gt;&lt;category/&gt;&lt;compiler_build/&gt;&lt;copied_from/&gt;&lt;copied_from_name/&gt;&lt;description&gt;test of summarize&lt;/description&gt;&lt;display_name_after_preview/&gt;&lt;flow_priority&gt;MEDIUM&lt;/flow_priority&gt;&lt;generation_source/&gt;&lt;internal_name&gt;sum&lt;/internal_name&gt;&lt;label_cache&gt;[{"name":"ba16775f-78f5-4230-86a2-a62d630c94e5.response","label":"1 - Summarize➛response","reference_display":"response","type":"string","base_type":"string","usedInstances":{"9ff0bbc4-5a57-472f-94e2-6cceb7de7483":["ah_work_note"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"7ace8998-d367-4871-becc-d6ae9c315c03"}},{"name":"Created_1.current.description","label":"Trigger - Record Created➛Operational Technology Incident Record➛Description","reference":"","reference_display":"Description","type":"string","base_type":"string","parent_table_name":"sn_ot_incident","column_name":"description","usedInstances":{"ba16775f-78f5-4230-86a2-a62d630c94e5":["texttosummarize"]}},{"name":"Created_1.current.number","label":"Trigger - Record Created➛Operational Technology Incident Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sn_ot_incident","column_name":"number","usedInstances":{"ba16775f-78f5-4230-86a2-a62d630c94e5":["incidentrecord"],"9ff0bbc4-5a57-472f-94e2-6cceb7de7483":["ah_task"]}}]&lt;/label_cache&gt;&lt;latest_snapshot/&gt;&lt;master_snapshot/&gt;&lt;master_snapshot_digest/&gt;&lt;name&gt;Sum&lt;/name&gt;&lt;natlang/&gt;&lt;outputs/&gt;&lt;pre_compiled&gt;false&lt;/pre_compiled&gt;&lt;remote_trigger_id/&gt;&lt;run_as&gt;user&lt;/run_as&gt;&lt;run_with_roles/&gt;&lt;sc_callable&gt;false&lt;/sc_callable&gt;&lt;show_draft_actions&gt;false&lt;/show_draft_actions&gt;&lt;show_triggered_flows&gt;false&lt;/show_triggered_flows&gt;&lt;status&gt;draft&lt;/status&gt;&lt;substatus/&gt;&lt;sys_class_name&gt;sys_hub_flow&lt;/sys_class_name&gt;&lt;sys_created_by&gt;alex.santacruz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-09 16:22:49&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;5c386695c3c222503ab9b01705013110&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Sum&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GitHub SSDT"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_hub_flow_5c386695c3c222503ab9b01705013110&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;alex.santacruz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-09 21:55:08&lt;/sys_updated_on&gt;&lt;type&gt;flow&lt;/type&gt;&lt;updation_source/&gt;&lt;version&gt;2&lt;/version&gt;&lt;/sys_hub_flow&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=5c386695c3c222503ab9b01705013110"/&gt;&lt;sys_variable_value action="delete_multiple" query="document_key=5c386695c3c222503ab9b01705013110"/&gt;&lt;sys_hub_flow_stage action="delete_multiple" query="flow=5c386695c3c222503ab9b01705013110"/&gt;&lt;sys_flow_cat_variable_model action="delete_multiple" query="id=5c386695c3c222503ab9b01705013110^sys_idNOT IN58386695c3c222503ab9b01705013111"/&gt;&lt;sys_flow_cat_variable_model action="INSERT_OR_UPDATE"&gt;&lt;id&gt;5c386695c3c222503ab9b01705013110&lt;/id&gt;&lt;name&gt;Sum&lt;/name&gt;&lt;sys_created_by&gt;alex.santacruz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-09 16:22:49&lt;/sys_created_on&gt;&lt;sys_id&gt;58386695c3c222503ab9b01705013111&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;alex.santacruz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-09 16:22:49&lt;/sys_updated_on&gt;&lt;/sys_flow_cat_variable_model&gt;&lt;sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=58386695c3c222503ab9b01705013111"/&gt;&lt;sys_hub_flow_input action="delete_multiple" query="model=5c386695c3c222503ab9b01705013110^sys_idNOT IN53d8271dc38a22503ab9b0170501316e,8bd8ebd9c38a22503ab9b0170501319d"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent/&gt;&lt;dependent_on_field/&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;table_name&lt;/internal_type&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;mandatory&gt;false&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Sum"&gt;5c386695c3c222503ab9b01705013110&lt;/model&gt;&lt;model_id&gt;5c386695c3c222503ab9b01705013110&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_5c386695c3c222503ab9b01705013110&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;101&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;alex.santacruz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-09 21:05:22&lt;/sys_created_on&gt;&lt;sys_id&gt;53d8271dc38a22503ab9b0170501316e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GitHub SSDT"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;alex.santacruz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-09 21:05:22&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;false&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=53d8271dc38a22503ab9b0170501316e"/&gt;&lt;sys_hub_flow_input action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;array&gt;false&lt;/array&gt;&lt;array_denormalized&gt;false&lt;/array_denormalized&gt;&lt;attributes&gt;element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID&lt;/attributes&gt;&lt;audit&gt;false&lt;/audit&gt;&lt;calculation&gt;&lt;![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]&gt;&lt;/calculation&gt;&lt;choice/&gt;&lt;choice_field/&gt;&lt;choice_table/&gt;&lt;column_label/&gt;&lt;comments/&gt;&lt;create_roles/&gt;&lt;default_value/&gt;&lt;defaultsort/&gt;&lt;delete_roles/&gt;&lt;dependent&gt;table_name&lt;/dependent&gt;&lt;dependent_on_field&gt;table_name&lt;/dependent_on_field&gt;&lt;display&gt;false&lt;/display&gt;&lt;dynamic_creation&gt;false&lt;/dynamic_creation&gt;&lt;dynamic_creation_script/&gt;&lt;dynamic_default_value/&gt;&lt;dynamic_ref_qual/&gt;&lt;element&gt;current&lt;/element&gt;&lt;element_reference&gt;false&lt;/element_reference&gt;&lt;foreign_database/&gt;&lt;formula/&gt;&lt;function_definition/&gt;&lt;function_field&gt;false&lt;/function_field&gt;&lt;help/&gt;&lt;hint/&gt;&lt;internal_type display_value=""&gt;document_id&lt;/internal_type&gt;&lt;label&gt;Record&lt;/label&gt;&lt;mandatory&gt;true&lt;/mandatory&gt;&lt;max_length&gt;200&lt;/max_length&gt;&lt;model display_value="Sum"&gt;5c386695c3c222503ab9b01705013110&lt;/model&gt;&lt;model_id&gt;5c386695c3c222503ab9b01705013110&lt;/model_id&gt;&lt;model_table&gt;sys_hub_flow&lt;/model_table&gt;&lt;name&gt;var__m_sys_hub_flow_input_5c386695c3c222503ab9b01705013110&lt;/name&gt;&lt;next_element/&gt;&lt;order&gt;100&lt;/order&gt;&lt;primary&gt;false&lt;/primary&gt;&lt;read_only&gt;false&lt;/read_only&gt;&lt;read_roles/&gt;&lt;reference/&gt;&lt;reference_cascade_rule/&gt;&lt;reference_floats&gt;false&lt;/reference_floats&gt;&lt;reference_key/&gt;&lt;reference_qual/&gt;&lt;reference_qual_condition/&gt;&lt;reference_type/&gt;&lt;sizeclass/&gt;&lt;spell_check&gt;false&lt;/spell_check&gt;&lt;staged&gt;false&lt;/staged&gt;&lt;sys_class_name&gt;sys_hub_flow_input&lt;/sys_class_name&gt;&lt;sys_created_by&gt;alex.santacruz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-09 21:05:21&lt;/sys_created_on&gt;&lt;sys_id&gt;8bd8ebd9c38a22503ab9b0170501319d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package/&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GitHub SSDT"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;alex.santacruz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-09 21:05:21&lt;/sys_updated_on&gt;&lt;table_reference&gt;false&lt;/table_reference&gt;&lt;text_index&gt;false&lt;/text_index&gt;&lt;unique&gt;false&lt;/unique&gt;&lt;use_dependent_field&gt;true&lt;/use_dependent_field&gt;&lt;use_dynamic_default&gt;false&lt;/use_dynamic_default&gt;&lt;use_reference_qualifier&gt;simple&lt;/use_reference_qualifier&gt;&lt;virtual&gt;false&lt;/virtual&gt;&lt;virtual_type&gt;script&lt;/virtual_type&gt;&lt;widget/&gt;&lt;write_roles/&gt;&lt;xml_view&gt;false&lt;/xml_view&gt;&lt;/sys_hub_flow_input&gt;&lt;sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8bd8ebd9c38a22503ab9b0170501319d"/&gt;&lt;sys_hub_flow_output action="delete_multiple" query="model=5c386695c3c222503ab9b01705013110"/&gt;&lt;sys_hub_alias_mapping action="delete_multiple" query="source_id=5c386695c3c222503ab9b01705013110"/&gt;&lt;sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=5c386695c3c222503ab9b01705013110^sys_idNOT INdbd8271dc38a22503ab9b0170501317d"/&gt;&lt;sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;comment/&gt;&lt;display_text/&gt;&lt;flow display_value="Sum"&gt;5c386695c3c222503ab9b01705013110&lt;/flow&gt;&lt;generation_source/&gt;&lt;name&gt;Created&lt;/name&gt;&lt;published_version/&gt;&lt;remote_sys_id/&gt;&lt;sys_created_by&gt;alex.santacruz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-09 21:05:22&lt;/sys_created_on&gt;&lt;sys_id&gt;dbd8271dc38a22503ab9b0170501317d&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope/&gt;&lt;sys_updated_by&gt;alex.santacruz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-09 21:50:26&lt;/sys_updated_on&gt;&lt;trigger_definition display_value="Created"&gt;798916a0c31322002841b63b12d3ae7c&lt;/trigger_definition&gt;&lt;trigger_inputs&gt;H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuthxnLdtkkUDbDeo7W0fglSgKNImSpOuRCnrXeTfO9TNsi6OHStb5yWAODLn8OjMmWEevpsc+YSbV+Yc+ZyYA5MJRUKB+HyzJrCs9LIn0ErHVkgESMlwY16pMCYDk4ZyNSerNUcKXqaIR7Aow4CE5pU9MBPEYzLbRHcB7AS/T7fJ9zTzMDxHwpPKYwKzgAgFgYBFsOXmzzx+vyYhUkwCKmNO8FJILhcb4277A7xkPAiJMK8eHgfmGoWQSGkQ32shppFgitHEIRZ2bddxLMu5HNr+hevbTuAiYlmwYZ2VGnLVQs722OSrIiIgQclIg7eQoOBe8E35xhJozzhaoa8R+wa7X1r6PUoAOyZZrHz0coayZbyUDJP7taYoW8lwZkHJ45X4nOHX3BKKYq4KbmEljmA/staQNYgcEZ0t5dO0SPiRifR0eZBLjHj5hJQKmR8rEmnCKeNAvZdxE8k4TNFPb6/vpzfeXx/m17/dTr3p7Ww+vbue396Yz+m5vH9jvWOGMMfiZcd5LgXxkRGuP6CIVz6gGZgRDtlafcCKJYX+ngdbTV9LEbCUlYaucRGKdnVdnH6fsC2rU9q4krGQ99+3fzQ1nS0ep9uLC4QCgjp069OKbqsnb4GmWkionm6fgvOVQyQ8tKz/ScS5Pb1WwysZEH6z3c6E4GIBqmZiHSvN1hMSKvKU9FAQeBUe9auA6SVRZ2d7flHBYQzeKLzyezR1nNJW8veJRQD3Aaqw4CbdEuL0U77lNBaGhA8Hfwwch0CNMgpfo3crtMgZpTPCCVYVEdAvUfXpdxZFTCwqqMukKQeNnGU6EJNRHCnLHZ2Y/LHPIm6SntTIrBXz0ZVs25T6hDrWWNexbbk+ta2xNUI0cC0LO5VKboLpRKlqkniTij6unqNUjPwA6dUpzsFb1Wo4SEbJrgYLErREctu47gea3RM0R0Or2Z97lP+VssyWb3bVue9oPfd+FCQIfhEcaoMHOiDl8gms9xXu5yP8zyKUsQjqdqT3NJgwtm8YP+X8/dyjE1IZkv0Adt84Jw/c0l4IF4lND+7nUtufkCGxwPRc8Dt/NJn4GDmUji/GxLFr7reF0YrtXbjeC2pL2uTa5YCtwkna9HaE950AsOGDRwM83QFzYbb6XxZ7H073tCTCA6ihx7WXNQxvweHKW8T6rfZG6mRb36dWPL2c4JE9HuMx3Fqg4umQ+MgeOiM0GV+4l6NaxTeg7IOpWpj5IXeZaBOlQDrc4EsWOq/L+VvKNiJK6XZ0fJcWMMemv0FZkkqn1J/FSE1FhsZnKX65275nzAg0wPRC21e7PgSF/rDG28LwpVo25gVI/Sus76TWc2YHK2d3paqJJNk968lXKjK8HE2o224xdNJmMVsw3TDPfrw4sEKSzlprmzMOFXzSWjedg8ErJFyTSXVi2DPS9EWK3TspztuR4p48RhW12HmPfA3Yd9TC0rnilD6mcxJP0qp530gDAgYkMRg18v8kksDwN4ZaEqCUw7wMCQ2d/VTXrnaRJpRSwT8WSDaBN7oZLBv5AHV+jaomhX5vwCQYo9HI7ZiHJ/UbcBugF/Cefds6uiqStiLb27uO27e+Z2v3qkh2VxEH9qVeT93enE47dWt7eunUpzeefff3FhRn2lIe/wMvSAC0UB8AAA==&lt;/trigger_inputs&gt;&lt;trigger_outputs/&gt;&lt;trigger_type&gt;record_create&lt;/trigger_type&gt;&lt;updation_source/&gt;&lt;/sys_hub_trigger_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="delete_multiple" query="flow=5c386695c3c222503ab9b01705013110^sys_idNOT INdbd8271dc38a22503ab9b0170501317f,ef233b91c30e22503ab9b0170501313a"/&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Summarize"&gt;ef31d4cb47b1211051a45831e36d43b9&lt;/action_type&gt;&lt;action_type_parent display_value="Summarize"&gt;d5fb000b47b1211051a45831e36d4336&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Sum"&gt;5c386695c3c222503ab9b01705013110&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;1&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;alex.santacruz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-09 21:05:22&lt;/sys_created_on&gt;&lt;sys_id&gt;dbd8271dc38a22503ab9b0170501317f&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_scope display_value="GitHub SSDT"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_scope&gt;&lt;sys_updated_by&gt;alex.santacruz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-09 21:50:26&lt;/sys_updated_on&gt;&lt;ui_id&gt;ba16775f-78f5-4230-86a2-a62d630c94e5&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/8VTXU/bMBT9K8jPTeQ4Sdv0DW1CQtqGBIwXhCLHvmktOU5wnEJX9b/vuklKQevGeNgefT/POdfnfkuUJAsyjaI4okmZzIqIRRFNI56k8ziCeCqTmAsyIYZXgJUOnp2r266quFU/ABNrrjuf2W4/WeAOZB6ForMWjAsltMKqxqna7HZYK1XbaL65+4sWsVJaYoYs7h8mpOEWcTiwZLF9k3KbBnLNC9A4+cZZZZbY/l56Y+Mt8jtz9dnNEcOT1P1KTLTjstpKjyyaECwFIwGXl1y3MCEVN5K72m7IwtkOA0hcXhm9OVSslHE4jPja59YvWMwppb6yBGQpoM8envmgZh8Wq1oJuNoL10ccL/TQI2rdVeZbz8PfAUreaTfeASNdi/Og8aA9jAFTebOqn67HhRfK7PkNSV0Lrg8v7lCFonPQ+tN06vaNNn3ky9v7gIYKN+YVbxqM5I2t12q/BUFX4VLjIyx1/YToWrU0IReeYYhi8vAC45/34Ts8iaf7Fcdgs1/33ajHDi79/WdTUZZJlgazOGNBkhRZwEtIg0QCo1mSpJQzsttLmz92nlQv0iBH3iuKBf3XPEcIaxiY7yaDh1IOMWOZFPGcMZbSmBdZQaMZTSn+vun85SMpI5Sfa0Hgj/mDhUxXFWB/5Z4Pm+Nw0NEf74A+9o7Yr0fspzgN3rBHuwZ7sN/bY4i8xx8xe+2OEcQJl1y+pE+75WjG/3PNsWqvjXN8u3/inVhmcRqxeSCpSIIkg2nAi1kWpDFNgc1iYIx+2DsPPwEnS4PxgQYAAA==&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_action_instance_v2 action="INSERT_OR_UPDATE"&gt;&lt;action_type display_value="Add Worknote"&gt;4d7227a473210300e4fd234ffff6a712&lt;/action_type&gt;&lt;action_type_parent display_value="Add Worknote"&gt;cdc8896487110300123eaf8e36cb0b24&lt;/action_type_parent&gt;&lt;attributes/&gt;&lt;comment/&gt;&lt;compiled_snapshot/&gt;&lt;display_text/&gt;&lt;flow display_value="Sum"&gt;5c386695c3c222503ab9b01705013110&lt;/flow&gt;&lt;generation_source/&gt;&lt;order&gt;2&lt;/order&gt;&lt;parent_ui_id/&gt;&lt;sys_class_name&gt;sys_hub_action_instance_v2&lt;/sys_class_name&gt;&lt;sys_created_by&gt;alex.santacruz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-09 21:50:26&lt;/sys_created_on&gt;&lt;sys_id&gt;ef233b91c30e22503ab9b0170501313a&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_scope display_value="GitHub SSDT"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_scope&gt;&lt;sys_updated_by&gt;alex.santacruz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-09 21:50:26&lt;/sys_updated_on&gt;&lt;ui_id&gt;9ff0bbc4-5a57-472f-94e2-6cceb7de7483&lt;/ui_id&gt;&lt;updation_source/&gt;&lt;values&gt;H4sIAAAAAAAA/+1Ty27bMBD8lUJnWdBbjm9Fi9zaAE2RSxAIK2llE6FIlqLsuIb/vUuLUuw2DYKgx+rGfczO7I7uDx5rvJUXXhVxXEBaJHEUJmGIadvESdrSl0MRZZ7vCeiQKmFTGugfKbAFPtjI4fBJIxhsyiioB61RmEAMXYX6eKSyhvWKw/7OVVOk3jDeUJm3un/wPQWakA1qb3X4LWX2CksOFXJq/IYtUqZGQngr56nXMf5Dgh1AAX0GLXVjqYS+h08GRYM0qgXeo+91IBowUu/nCOlubgR/DmyYMKPIDp569pPQk9g/GzBzmUOlWxClvo+peiNZjTfKMClGMAMVn5Yn+dCJr6MSu15sYeDmbL1DT5ioLHdLxjFrbzdyN+/wmomTTJfksgY+v8AYzarBYG9Pghw7Aio7UIqJdam03LJTM3HpgjWnR9ByuaOhPVuLAGpLPKBVQXBN8c+n8B1oZlV8IRhqPp42UP4Y7NxRh2NcjqKpoK81U+YjwW3RkTv6zrBR9trx4/ji2jupH0shDV64toIoL4qsXRTLNlukcRIuljnEC8jjJk/C+irFLNDYKylo8AtWfg/E+7x/SwcR68n4b9A+NVrlH5zyl/fhfoF+muD8H/0z/y/DMLz8A/7i/v/Of9X5D78A0J46wawFAAA=&lt;/values&gt;&lt;/sys_hub_action_instance_v2&gt;&lt;sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=5c386695c3c222503ab9b01705013110"/&gt;&lt;sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=5c386695c3c222503ab9b01705013110"/&gt;&lt;sys_hub_pill_compound action="delete_multiple" query="attached_to=5c386695c3c222503ab9b01705013110"/&gt;&lt;sys_hub_flow_variable action="delete_multiple" query="model=5c386695c3c222503ab9b01705013110"/&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;current&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Record&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_5c386695c3c222503ab9b01705013110&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;alex.santacruz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-09 21:05:21&lt;/sys_created_on&gt;&lt;sys_id&gt;17d8271dc38a22503ab9b0170501316d&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GitHub SSDT"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;alex.santacruz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-09 21:05:21&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_documentation action="INSERT_OR_UPDATE"&gt;&lt;element&gt;table_name&lt;/element&gt;&lt;help/&gt;&lt;hint/&gt;&lt;label&gt;Table Name&lt;/label&gt;&lt;language&gt;en&lt;/language&gt;&lt;name&gt;var__m_sys_hub_flow_input_5c386695c3c222503ab9b01705013110&lt;/name&gt;&lt;plural/&gt;&lt;sys_class_name&gt;sys_documentation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;alex.santacruz&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-09 21:05:22&lt;/sys_created_on&gt;&lt;sys_id&gt;57d8271dc38a22503ab9b01705013170&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GitHub SSDT"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_scope&gt;&lt;sys_update_name/&gt;&lt;sys_updated_by&gt;alex.santacruz&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-09 21:05:22&lt;/sys_updated_on&gt;&lt;url/&gt;&lt;url_target/&gt;&lt;/sys_documentation&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_5c386695c3c222503ab9b01705013110"/&gt;&lt;sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_5c386695c3c222503ab9b01705013110"/&gt;&lt;sys_flow_trigger_plan action="delete_multiple" query="plan_id=5c386695c3c222503ab9b01705013110"/&gt;&lt;sys_flow_subflow_plan action="delete_multiple" query="plan_id=5c386695c3c222503ab9b01705013110"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1906409381</payload_hash>
+        <record_name>Sum</record_name>
+        <reverted_from/>
+        <source>fb7115db93316610d942fc4e1dba102e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 21:55:08</sys_created_on>
+        <sys_id>1c443b15c30e22503ab9b0170501314c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19756b0acb10000001</sys_recorded_at>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:55:08</sys_updated_on>
+        <type>Flow</type>
+        <update_guid>10443b150b0e2250fe34a2ffc1c2e34c</update_guid>
+        <update_guid_history>10443b150b0e2250fe34a2ffc1c2e34c:1906409381,ef233b911f0e22502c14e84838cc8345:2001158558,d3d8271d0f8a225030cae8317e681b8b:-809283945,5c38a695a1c222508b391a19d16e9e32:1553964559</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-10 06:26:04</sys_created_on>
+        <sys_db_object display_value="" name="sys_hub_flow">sys_hub_flow</sys_db_object>
+        <sys_id>6f377d55f3604c04bcf107fe78a81a90</sys_id>
+        <sys_metadata>5c386695c3c222503ab9b01705013110</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Sum</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sys_hub_flow_5c386695c3c222503ab9b01705013110</sys_update_name>
+        <sys_update_version display_value="sys_hub_flow_5c386695c3c222503ab9b01705013110">1c443b15c30e22503ab9b0170501314c</sys_update_version>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-10 06:26:04</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

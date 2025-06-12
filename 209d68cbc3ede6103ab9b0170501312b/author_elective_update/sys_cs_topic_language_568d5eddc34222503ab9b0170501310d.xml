@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_language">
+    <sys_cs_topic_language action="DELETE">
+        <cs_topic_id display_value="_PRVW__1ed17e691fa04b5b8273a7bbb265b9f4">468d5eddc34222503ab9b01705013107</cs_topic_id>
+        <language_code>en</language_code>
+        <nlu_entities>[{"variable_name":"poth","nlu_entity":"","nlu_entity_label":""}]</nlu_entities>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider>64c023c17300330021a044764df6a70e</nlu_provider>
+        <sys_class_name>sys_cs_topic_language</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-09 15:36:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>568d5eddc34222503ab9b0170501310d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cs_topic_language_568d5eddc34222503ab9b0170501310d</sys_update_name>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-09 15:36:15</sys_updated_on>
+    </sys_cs_topic_language>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sys_cs_topic_language_568d5eddc34222503ab9b0170501310d</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_topic_language"><sys_cs_topic_language action="INSERT_OR_UPDATE"><cs_topic_id display_value="_PRVW__1ed17e691fa04b5b8273a7bbb265b9f4">468d5eddc34222503ab9b01705013107</cs_topic_id><language_code>en</language_code><nlu_entities>[{"variable_name":"poth","nlu_entity":"","nlu_entity_label":""}]</nlu_entities><nlu_intent/><nlu_intent_label/><nlu_model/><nlu_model_label/><nlu_provider>64c023c17300330021a044764df6a70e</nlu_provider><sys_class_name>sys_cs_topic_language</sys_class_name><sys_created_by>josepablo.lopez</sys_created_by><sys_created_on>2025-06-09 15:36:15</sys_created_on><sys_domain>global</sys_domain><sys_id>568d5eddc34222503ab9b0170501310d</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package><sys_policy/><sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope><sys_update_name>sys_cs_topic_language_568d5eddc34222503ab9b0170501310d</sys_update_name><sys_updated_by>josepablo.lopez</sys_updated_by><sys_updated_on>2025-06-09 15:36:15</sys_updated_on></sys_cs_topic_language></record_update>]]></payload>
+        <payload_hash>-1993489481</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>fb7115db93316610d942fc4e1dba102e</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-09 15:36:15</sys_created_on>
+        <sys_id>168d5eddc34222503ab9b0170501310f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1975555ca9c0000001</sys_recorded_at>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-09 15:36:15</sys_updated_on>
+        <type>CS Topic Language</type>
+        <update_guid>968d5edd27422250ff2694891c5c020e</update_guid>
+        <update_guid_history>968d5edd27422250ff2694891c5c020e:-1993489481</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>josepablo.lopez</sys_created_by>
+        <sys_created_on>2025-06-10 03:47:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_cs_topic_language">sys_cs_topic_language</sys_db_object>
+        <sys_id>7a4c3488d2194dd4bb34d7c8a07ba710</sys_id>
+        <sys_metadata>568d5eddc34222503ab9b0170501310d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sys_cs_topic_language_568d5eddc34222503ab9b0170501310d</sys_update_name>
+        <sys_update_version display_value="sys_cs_topic_language_568d5eddc34222503ab9b0170501310d">168d5eddc34222503ab9b0170501310f</sys_update_version>
+        <sys_updated_by>josepablo.lopez</sys_updated_by>
+        <sys_updated_on>2025-06-10 03:47:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

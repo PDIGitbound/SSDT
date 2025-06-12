@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_one_extend_capability_definition">
+    <sys_one_extend_capability_definition action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <api>3c3047e32dcef110f877b951e3e5bf94</api>
+        <api_type>sys_hub_flow</api_type>
+        <capability display_value="Summarize Inc">d41d67e9c3c2a2503ab9b017050131b7</capability>
+        <category display_value="Other">04c489f3532121106b38ddeeff7b1215</category>
+        <connection display_value="sn_google_bard_spk.Google_AI_Studio">f88fc66f43a00210fce343852db8f284</connection>
+        <description/>
+        <filter_properties>{"provider":"Google Cloud AI StudioChat Completions"}</filter_properties>
+        <metadata/>
+        <name>Summarize Inc (Google Cloud AI Studio - Chat Completions)</name>
+        <order>0</order>
+        <postprocessor><![CDATA[(function(outputs) {     	/* write code here to transform definition output to capability output.*/     	     	outputs = JSON.parse(outputs);     	     	return outputs;     })(outputs);]]></postprocessor>
+        <preprocessor><![CDATA[(function(inputs) {     	/* write code here to transform capability input to definition input.*/     	     	inputs = JSON.parse(inputs);     	     	return inputs;     })(inputs);]]></preprocessor>
+        <sys_class_name>sys_one_extend_capability_definition</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 16:02:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>1c1d67e9c3c2a2503ab9b017050131f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Summarize Inc (Google Cloud AI Studio - Chat Completions)</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_one_extend_capability_definition_1c1d67e9c3c2a2503ab9b017050131f5</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 16:02:13</sys_updated_on>
+        <truncate_strategy display_value="Default Truncation Strategy">2b99e1137fb20210f465c3b76d86650d</truncate_strategy>
+    </sys_one_extend_capability_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=1c1d67e9c3c2a2503ab9b017050131f5"/>
+</record_update>

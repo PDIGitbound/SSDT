@@ -1,0 +1,1037 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=safari,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=437000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>1a04ae09c34eae103ab9b0170501315d</copied_from>
+        <copied_from_name>Create Repair Order on Asset Ret</copied_from_name>
+        <description>New Repair Order when an asset changes to "Retired".</description>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>copy_of_create_repair_order_on_asset_retirement_v2</internal_name>
+        <label_cache>[{"name":"Updated_1.run_start_time","label":"Trigger - Record Updated➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"3c872254-dc0b-4071-b3d3-c6d6df39608d":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.x_volt2_github_s_0_name","label":"Trigger - Record Created or Updated➛Asset Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"alm_asset","column_name":"x_volt2_github_s_0_name","usedInstances":{"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}},{"name":"Created or Updated_1.current.display_name","label":"Trigger - Record Created or Updated➛Hardware Record➛Display name","reference":"","reference_display":"Display name","type":"string","base_type":"string","parent_table_name":"alm_hardware","column_name":"display_name","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}},{"name":"Created or Updated_1.current.asset_tag","label":"Trigger - Record Created or Updated➛Hardware Record➛Asset tag","reference":"","reference_display":"Asset tag","type":"string","base_type":"string","parent_table_name":"alm_hardware","column_name":"asset_tag","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]}},{"name":"Created or Updated_1.run_start_date_time","label":"Trigger - Record Created or Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Hardware Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"alm_hardware","column_name":"sys_id","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Asset Record","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]},"attributes":{}},{"name":"Updated_1.run_start_date_time","label":"Trigger - Record Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.stockroom.name","label":"Trigger - Record Created or Updated➛Asset Record➛Stockroom➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"alm_stockroom","column_name":"name","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["stockroom"]}},{"name":"Created or Updated_1.current.serial_number","label":"Trigger - Record Created or Updated➛Asset Record➛Serial number","reference":"","reference_display":"Serial number","type":"string","base_type":"string","parent_table_name":"alm_asset","column_name":"serial_number","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["parent"]}},{"name":"Created or Updated_1.current.stockroom","label":"Trigger - Record Created or Updated➛Asset Record➛Stockroom","reference":"alm_stockroom","reference_display":"Stockroom","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"stockroom","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["stockroom"]}},{"name":"Created or Updated_1.current.support_group","label":"Trigger - Record Created or Updated➛Asset Record➛Support group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"support_group","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["assignment_group"]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Hardware Record","reference":"alm_hardware","reference_display":"Hardware","type":"reference","base_type":"reference","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["asset","stockroom","parent"],"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]},"attributes":{}},{"name":"Created or Updated_1.run_start_time","label":"Trigger - Record Created or Updated➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.ci","label":"Trigger - Record Created or Updated➛Asset Record➛Configuration Item","reference":"cmdb_ci","reference_display":"Configuration Item","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"ci","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]}},{"name":"Created or Updated_1.current.ci.name","label":"Trigger - Record Created or Updated➛Asset Record➛Configuration Item➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci","column_name":"name","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}},{"name":"Created or Updated_1.current.sys_id","label":"Trigger - Record Created or Updated➛Hardware Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"alm_hardware","column_name":"sys_id","usedInstances":{"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}}]</label_cache>
+        <master_snapshot>de711e02c3ca26503ab9b017050131ab</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Copy of Create Repair Order on Asset Retirement V2</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>92c78cf9c386a2503ab9b01705013175</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:36:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>47f01202c3ca26503ab9b01705013175</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Copy of Create Repair Order on Asset Retirement V2</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_hub_flow_47f01202c3ca26503ab9b01705013175</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:44:09</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=47f01202c3ca26503ab9b01705013175"/>
+    <sys_variable_value action="delete_multiple" query="document_key=47f01202c3ca26503ab9b01705013175"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="alm_asset">install_status=32<item display_value="Retired" endquery="false" field="install_status" goto="false" newquery="false" operator="=" or="false" value="32"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>false</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-10 17:58:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>92c78cf9c386a2503ab9b01705013175</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-10 17:58:56</sys_updated_on>
+        <table>alm_asset</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>47f01202c3ca26503ab9b01705013175</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:44:09</sys_created_on>
+        <sys_id>b9a252c2c3ca26503ab9b017050131e4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:44:09</sys_updated_on>
+        <trigger display_value="">92c78cf9c386a2503ab9b01705013175</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=47f01202c3ca26503ab9b01705013175^sys_idNOT INb9a252c2c3ca26503ab9b017050131e4"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=47f01202c3ca26503ab9b01705013175"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=47f01202c3ca26503ab9b01705013175^sys_idNOT IN8bf01202c3ca26503ab9b01705013176"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>47f01202c3ca26503ab9b01705013175</id>
+        <name>Copy of Create Repair Order on Asset Retirement V2</name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:36:51</sys_created_on>
+        <sys_id>8bf01202c3ca26503ab9b01705013176</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:36:51</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=8bf01202c3ca26503ab9b01705013176"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=47f01202c3ca26503ab9b01705013175^sys_idNOT IN43f01202c3ca26503ab9b0170501317d,8ff01202c3ca26503ab9b01705013182,c3f01202c3ca26503ab9b01705013186"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Copy of Create Repair Order on Asset Retirement V2">47f01202c3ca26503ab9b01705013175</model>
+        <model_id>47f01202c3ca26503ab9b01705013175</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_47f01202c3ca26503ab9b01705013175</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:36:51</sys_created_on>
+        <sys_id>43f01202c3ca26503ab9b0170501317d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:38:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=43f01202c3ca26503ab9b0170501317d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Copy of Create Repair Order on Asset Retirement V2">47f01202c3ca26503ab9b01705013175</model>
+        <model_id>47f01202c3ca26503ab9b01705013175</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_47f01202c3ca26503ab9b01705013175</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:36:52</sys_created_on>
+        <sys_id>8ff01202c3ca26503ab9b01705013182</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:38:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8ff01202c3ca26503ab9b01705013182"/>
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDCollection</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>global</scope_name>
+        <serialized_content>{"FlowDesigner:FDCollection":{"$COCollectionField":[{"FDChangeDetails":{"previous_display_value":"String","previous_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Display Value\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"0\"}"},"previous_value":"String","previous_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Value\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"},"current_display_value":"String","current_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Display Value\",\"mandatory\":\"false\",\"order\":\"5\",\"max_length\":\"0\"}"},"current_value":"String","current_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Value\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"0\"}"},"field_name":"String","field_name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Field Name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDCollection.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-13 23:19:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>f4f014150f023300ecf0cc52ff767eed</sys_id>
+        <sys_mod_count>101</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Flow Designer Designer Model" source="com.glide.hub.designer_backend.model">5ef7e13d47d3211042fbaa42736d43d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-28 05:06:11</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Copy of Create Repair Order on Asset Retirement V2">47f01202c3ca26503ab9b01705013175</model>
+        <model_id>47f01202c3ca26503ab9b01705013175</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_47f01202c3ca26503ab9b01705013175</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:36:52</sys_created_on>
+        <sys_id>c3f01202c3ca26503ab9b01705013186</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:36:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c3f01202c3ca26503ab9b01705013186"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=47f01202c3ca26503ab9b01705013175"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=47f01202c3ca26503ab9b01705013175"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=47f01202c3ca26503ab9b01705013175^sys_idNOT IN83f01202c3ca26503ab9b017050131b8"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Copy of Create Repair Order on Asset Retirement V2">47f01202c3ca26503ab9b01705013175</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:36:52</sys_created_on>
+        <sys_id>83f01202c3ca26503ab9b017050131b8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:38:57</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=47f01202c3ca26503ab9b01705013175^sys_idNOT IN68a212c2c3ca26503ab9b01705013163,c7f01202c3ca26503ab9b017050131b7"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="Copy of Create Repair Order on Asset Retirement V2">47f01202c3ca26503ab9b01705013175</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:44:04</sys_created_on>
+        <sys_id>68a212c2c3ca26503ab9b01705013163</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:44:08</sys_updated_on>
+        <ui_id>88b3820b-ed0c-45b6-a20d-e08776eeeeed</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/91U0WrbMBT9laLnxNhxva55G80Kg7WFFbJCKUaWrx2BLHmynDQL+fdd2bLjZqHEZU8zftHR0dU5V0d63hGekjmJEhYkjH2KwsD3Q/yTLEivA/8aWPT5Kr0iEyJpAcgUKo8FrEEgtKaithiXmcJhyqtS0O3Sod9alK24SDVIMn9+mZCSaqxjQJP57mjKbEuIBU2w9JzcrBRngMvPldct/O60nZBrN0CIdaWVTq0Of0Lg1YBMAbfKqKhgQgoqU2qU3vaIBpo+SHEAVlwarEYs+bXiv7H0pW95GaAlBu1cP4xdd1q41VCh8V2vfDq9uFcSLqbTQWsHMveTA9f19ugAHDMYMn9SLbnMB+QNIgfybEj+qrXSAyq4seOGezymFDJaC3Mz3kFwtoPZGAfhCAeX1kHb/IfScIXRI4GNBk2EE8uUqAt538aH9H6XR1lv0cXJyNcVHjeUNlI2Iy4w2eNKbX50ebjlslHkJoViVPQjaozmSW1sf3cEBBRYKC5oWWIj4lKrNW8Wo9jCywUOvEyoDW5a8Vx6lFlrHiaYereILxp4STW3Nu+wDC7eN+GMf9V239aoUxw3bbGEimlemi9Ybg1OnG12cydn4Xt3EqK3d7CAqqI5DE7mafG0wO/vd+Mw8bGn4xF718TlXJndwrte40nh7vmouvJdqv/Z8zGLonHvRx/hUQn+3wP68gcIG7xZ1QYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Create Repair Order on Asset Retirement V2">47f01202c3ca26503ab9b01705013175</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:36:52</sys_created_on>
+        <sys_id>c7f01202c3ca26503ab9b017050131b7</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:44:04</sys_updated_on>
+        <ui_id>3c872254-dc0b-4071-b3d3-c6d6df39608d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VUS2vbQBD+K2bPQkhWahLfCsW3JpC2uaRhGWlH9sK+urty4hr/987q4aRJDKYUSnXbmdnvMfuh+z2Tgi3ZosTiw1W5aKqyquZFMb+8KOtFVZdzUQHiBcuYAY00GaFWyPtDxragulQMhssImjdWa2u4RwfSc+sFepoSMjgFu7tx+LbvzqZus5FKeDRsef+QMQeeoCN1lvtXrbhzyBXUqAjka5Ixux5knGvht8snLCWW17VB6rLIGD5FNAKJrwUVMGMajIBo/Y4to++o4BHEjVG748RGmkiALM0+BfmT0C+LNNciWWtw6B2PfNzWUG42VjZ446K0Zqj0wsamVZ0214OJtGdsoVNx2jNVukB46JLkJGJU1H7Z2MfbiXAlTe9ubCrbgDqeIEYv6y5iSO+BCjUBcQ3OSbPmztut7C+TFp2vFR3yVtlHIg1ybXJokvCcNgT5iuqf+vIdeJlcfCYYunzo3fMfXeIdfIyK+WCaBkLjpYsfCW6Lo7hDNmVXYHF18uHL+vmh+7iGF7mFEDB+74qiEvv9N0c6UfAybzpPq4mHw9vwnnHjDwONmngizgam7GxvE8BKohLhHbNTokcCvh0JxlSXfyvV5aLov3+T7UHnfxbtF3+ZEyF/+AX1MlIjogUAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=47f01202c3ca26503ab9b01705013175"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=47f01202c3ca26503ab9b01705013175"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=47f01202c3ca26503ab9b01705013175"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=47f01202c3ca26503ab9b01705013175"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_47f01202c3ca26503ab9b01705013175</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:36:52</sys_created_on>
+        <sys_id>87f01202c3ca26503ab9b01705013181</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:36:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_47f01202c3ca26503ab9b01705013175</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:36:52</sys_created_on>
+        <sys_id>c3f01202c3ca26503ab9b01705013185</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:36:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_47f01202c3ca26503ab9b01705013175</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:36:52</sys_created_on>
+        <sys_id>cff01202c3ca26503ab9b01705013188</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:36:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_47f01202c3ca26503ab9b01705013175"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_47f01202c3ca26503ab9b01705013175"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=safari,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=262552000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>1a04ae09c34eae103ab9b0170501315d</copied_from>
+        <copied_from_name/>
+        <description>New Repair Order when an asset changes to "Retired".</description>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>copy_of_create_repair_order_on_asset_retirement_v2</internal_name>
+        <label_cache>[{"name":"Updated_1.run_start_time","label":"Trigger - Record Updated➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"3c872254-dc0b-4071-b3d3-c6d6df39608d":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.x_volt2_github_s_0_name","label":"Trigger - Record Created or Updated➛Asset Record➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"alm_asset","column_name":"x_volt2_github_s_0_name","usedInstances":{"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}},{"name":"Created or Updated_1.current.display_name","label":"Trigger - Record Created or Updated➛Hardware Record➛Display name","reference":"","reference_display":"Display name","type":"string","base_type":"string","parent_table_name":"alm_hardware","column_name":"display_name","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}},{"name":"Created or Updated_1.current.asset_tag","label":"Trigger - Record Created or Updated➛Hardware Record➛Asset tag","reference":"","reference_display":"Asset tag","type":"string","base_type":"string","parent_table_name":"alm_hardware","column_name":"asset_tag","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]}},{"name":"Created or Updated_1.run_start_date_time","label":"Trigger - Record Created or Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Updated_1.current.sys_id","label":"Trigger - Record Updated➛Hardware Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"alm_hardware","column_name":"sys_id","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]}},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Asset Record","reference":"alm_asset","reference_display":"Asset","type":"reference","base_type":"reference","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]},"attributes":{}},{"name":"Updated_1.run_start_date_time","label":"Trigger - Record Updated➛Run Start Date/Time","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.stockroom.name","label":"Trigger - Record Created or Updated➛Asset Record➛Stockroom➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"alm_stockroom","column_name":"name","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["stockroom"]}},{"name":"Created or Updated_1.current.serial_number","label":"Trigger - Record Created or Updated➛Asset Record➛Serial number","reference":"","reference_display":"Serial number","type":"string","base_type":"string","parent_table_name":"alm_asset","column_name":"serial_number","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["parent"]}},{"name":"Created or Updated_1.current.stockroom","label":"Trigger - Record Created or Updated➛Asset Record➛Stockroom","reference":"alm_stockroom","reference_display":"Stockroom","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"stockroom","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["stockroom"]}},{"name":"Created or Updated_1.current.support_group","label":"Trigger - Record Created or Updated➛Asset Record➛Support group","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"support_group","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["assignment_group"]}},{"name":"Created or Updated_1.current","label":"Trigger - Record Created or Updated➛Hardware Record","reference":"alm_hardware","reference_display":"Hardware","type":"reference","base_type":"reference","usedInstances":{"f485a9a3-7eb6-4eac-be72-8f9e93912229":["asset","stockroom","parent"],"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]},"attributes":{}},{"name":"Created or Updated_1.run_start_time","label":"Trigger - Record Created or Updated➛Run Start Time UTC","type":"glide_date_time","base_type":"glide_date_time","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["due_date"]},"attributes":{"test_input_hidden":"true"}},{"name":"Created or Updated_1.current.ci","label":"Trigger - Record Created or Updated➛Asset Record➛Configuration Item","reference":"cmdb_ci","reference_display":"Configuration Item","type":"reference","base_type":"reference","parent_table_name":"alm_asset","column_name":"ci","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"]}},{"name":"Created or Updated_1.current.ci.name","label":"Trigger - Record Created or Updated➛Asset Record➛Configuration Item➛Name","reference":"","reference_display":"Name","type":"string","base_type":"string","parent_table_name":"cmdb_ci","column_name":"name","usedInstances":{"5ea1ff9d-6852-4333-9cb2-013ed6d4d5ae":["asset"],"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}},{"name":"Created or Updated_1.current.sys_id","label":"Trigger - Record Created or Updated➛Hardware Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"alm_hardware","column_name":"sys_id","usedInstances":{"3c872254-dc0b-4071-b3d3-c6d6df39608d":["asset"]}}]</label_cache>
+        <master>true</master>
+        <name>Copy of Create Repair Order on Asset Retirement V2</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Copy of Create Repair Order on Asset Retirement V2">47f01202c3ca26503ab9b01705013175</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:39:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>de711e02c3ca26503ab9b017050131ab</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:44:09</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=de711e02c3ca26503ab9b017050131ab"/>
+    <sys_variable_value action="delete_multiple" query="document_key=de711e02c3ca26503ab9b017050131ab"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=de711e02c3ca26503ab9b017050131ab"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=de711e02c3ca26503ab9b017050131ab^sys_idNOT IN52711e02c3ca26503ab9b017050131ad"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>de711e02c3ca26503ab9b017050131ab</id>
+        <name>Copy of Create Repair Order on Asset Retirement V2</name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:39:00</sys_created_on>
+        <sys_id>52711e02c3ca26503ab9b017050131ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:39:00</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=52711e02c3ca26503ab9b017050131ad"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=de711e02c3ca26503ab9b017050131ab^sys_idNOT IN12711e02c3ca26503ab9b017050131ae,e6711e02c3ca26503ab9b017050131c0,ee711e02c3ca26503ab9b017050131b8"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Copy of Create Repair Order on Asset Retirement V2">de711e02c3ca26503ab9b017050131ab</model>
+        <model_id>de711e02c3ca26503ab9b017050131ab</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_de711e02c3ca26503ab9b017050131ab</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:39:00</sys_created_on>
+        <sys_id>12711e02c3ca26503ab9b017050131ae</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:44:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=12711e02c3ca26503ab9b017050131ae"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Copy of Create Repair Order on Asset Retirement V2">de711e02c3ca26503ab9b017050131ab</model>
+        <model_id>de711e02c3ca26503ab9b017050131ab</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_de711e02c3ca26503ab9b017050131ab</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:39:00</sys_created_on>
+        <sys_id>e6711e02c3ca26503ab9b017050131c0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:44:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e6711e02c3ca26503ab9b017050131c0"/>
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDCollection</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>global</scope_name>
+        <serialized_content>{"FlowDesigner:FDCollection":{"$COCollectionField":[{"FDChangeDetails":{"previous_display_value":"String","previous_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Display Value\",\"mandatory\":\"false\",\"order\":\"4\",\"max_length\":\"0\"}"},"previous_value":"String","previous_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Previous Value\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"0\"}"},"current_display_value":"String","current_display_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Display Value\",\"mandatory\":\"false\",\"order\":\"5\",\"max_length\":\"0\"}"},"current_value":"String","current_value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Current Value\",\"mandatory\":\"false\",\"order\":\"3\",\"max_length\":\"0\"}"},"field_name":"String","field_name.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Field Name\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDCollection.$type_facets":{"SimpleMapFacet":"{\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Changed Fields\",\"mandatory\":\"false\",\"child_name\":\"FDChangeDetails\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDCollection\",\"child_label\":\"FDChangeDetails\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"100\",\"max_length\":\"4000\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2019-06-13 23:19:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path/>
+        <sys_id>f4f014150f023300ecf0cc52ff767eed</sys_id>
+        <sys_mod_count>101</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Flow Designer Designer Model" source="com.glide.hub.designer_backend.model">5ef7e13d47d3211042fbaa42736d43d7</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Global">global</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-28 05:06:11</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="Copy of Create Repair Order on Asset Retirement V2">de711e02c3ca26503ab9b017050131ab</model>
+        <model_id>de711e02c3ca26503ab9b017050131ab</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_de711e02c3ca26503ab9b017050131ab</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:39:00</sys_created_on>
+        <sys_id>ee711e02c3ca26503ab9b017050131b8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:44:08</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ee711e02c3ca26503ab9b017050131b8"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=de711e02c3ca26503ab9b017050131ab"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=de711e02c3ca26503ab9b017050131ab"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=de711e02c3ca26503ab9b017050131ab^sys_idNOT INee711e02c3ca26503ab9b017050131cc"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Copy of Create Repair Order on Asset Retirement V2">de711e02c3ca26503ab9b017050131ab</flow>
+        <generation_source/>
+        <name>Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:39:00</sys_created_on>
+        <sys_id>ee711e02c3ca26503ab9b017050131cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:39:00</sys_updated_on>
+        <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=de711e02c3ca26503ab9b017050131ab^sys_idNOT IN6a711e02c3ca26503ab9b017050131cc,ada252c2c3ca26503ab9b017050131a0"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Create Repair Order on Asset Retirement V2">de711e02c3ca26503ab9b017050131ab</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:39:00</sys_created_on>
+        <sys_id>6a711e02c3ca26503ab9b017050131cc</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:44:09</sys_updated_on>
+        <ui_id>3c872254-dc0b-4071-b3d3-c6d6df39608d</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VUwU7jMBD9lcrnKEoaqKC3FainXZBgtxcWWZN40lpy7GA7hW7Vf99xnJSKpVpW2gu9ed6b8XsTvz7smBRszmY5ZueX+awq8qKYZtn04iwvZ0WZT0UBiGcsYRoaJKaHUiHvDwnbgOpC0WkuPTS8Mk1jNLfYgrTcWIGWWEK6VsF2OZDvenQyotVaKmFRs/nDY8JasDTaEzLfvYE+KlRBiYqo34PSE8L9tn239vW4d3ITgah0niUMXzxqgSSkBuUwYQ1oAd7YLZt721HBIohbrbYHxlpqTwNZ4L44+YuuvcgCr0ZyVmHEDkc+LCuW62vwcE+TK9/ZgVqtjazQxZ0IrKFT/uq4Fgm3rZdGx5be5tBtVNfom7gSdhgwfhuqdI5EYBt8BuWDjfp+bZ7vRpULqfuVDKAyFajDCby3sux80LNjqLChQbyBtpV6xVtrNrJvJi1NulJ0SGtlnulSJ1c6hSoIT2mtkC6oft2Xl2BlcPGNxlDzPmFu664UOPfqhZbIn7qgJDobPPC4htBSWdn6L3TBBge5+2RMgMDs8uTDysvXh9Q/enf0+kkE+p9dlhVit/vRknIUPE+rztKy/H7/ZwQ+0PGPsfi7+jEWC4lKuHfsjJnAhqR65NHem1wM4GQ5gEM28v+VjXyW9b9PlJBo7tMH5Oi/8ERUHn8DNBvVQy4GAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>5bc1bcc6531003003bf1d9109ec587d4</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Copy of Create Repair Order on Asset Retirement V2">de711e02c3ca26503ab9b017050131ab</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:44:08</sys_created_on>
+        <sys_id>ada252c2c3ca26503ab9b017050131a0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:44:08</sys_updated_on>
+        <ui_id>88b3820b-ed0c-45b6-a20d-e08776eeeeed</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VUXWvbMBT9K0XPToiTel3zNpIVBv2ABbJCKUaWrxOBLHmSnDQL+e+7suWPpmEk0LcZv9yjK+mcq3Pvy57wlExJlLAwYexLNAlHown+SRamt+HoFlj09Sa9IQGRNAfMFGoVC9iAQGhDRekwLjOFYcpNIehu6dEfNcrWXKQaJJm+vAakoBrPsaDJdH+0dC4RQRO8fUruPYsTxOyucBBbK87Ax/d+26wBlU4djVFA4M2CTAHvz6gwEJCcypRapXctooGmT1J0wJpLi6cRl/xm+B+873rk8jJARQzqtTaMfXFqOJtTSxdWl8yW2qfWZA3WYt9KHAyuHpWEq8GgV+0e9UPQ5fpyH72Jzwz7mb+ollyueslbRLrkcT/5u9ZK91LBxz53csCXSyGjpbCzyxWEZysYX6JgcoGCa6egLv5TYblCN5LQeYYmonkaJcpcPtY+I63e5ZH9a3R+sgtKgxaAwtnM+cabKFus1fZn45E7LitGflEoRkUbUWs1T0rr6rsnICDHg+KcFgUWIi602vBqM5LNhyuBwTATaouXGr6SQ8qctCG6mg7vEJ9X8JJq7mQ+4DG4+RAQszMzQY3pxKKF49+lY1JL9xriqlDVFqZ5Yb/hBRvwdF35q3YeT/7VzhC9b98cjKEr6L3V8/x5jt/H4dItXDZfziDU+OahZXOSop8xBp+lcmJ/xiwasLH5p82YcRR9zpA51bYfG+GiPvj/bP76F2C2IelABwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=de711e02c3ca26503ab9b017050131ab"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=de711e02c3ca26503ab9b017050131ab"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=de711e02c3ca26503ab9b017050131ab"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=de711e02c3ca26503ab9b017050131ab"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_de711e02c3ca26503ab9b017050131ab</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:39:00</sys_created_on>
+        <sys_id>56711e02c3ca26503ab9b017050131b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:39:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_de711e02c3ca26503ab9b017050131ab</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:39:00</sys_created_on>
+        <sys_id>62711e02c3ca26503ab9b017050131c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:39:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_de711e02c3ca26503ab9b017050131ab</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:39:00</sys_created_on>
+        <sys_id>6e711e02c3ca26503ab9b017050131bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:39:00</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_de711e02c3ca26503ab9b017050131ab"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_de711e02c3ca26503ab9b017050131ab"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>47f01202c3ca26503ab9b01705013175</sys_id>
+        <latest_snapshot>de711e02c3ca26503ab9b017050131ab</latest_snapshot>
+        <compiler_build>glide-yokohama-12-18-2024__patch3-04-17-2025_04-30-2025_1345.zip</compiler_build>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=47f01202c3ca26503ab9b01705013175^sys_idNOT IN6e711e02c3ca26503ab9b017050131d4"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerUniqueChange</binding_strategy>
+        <plan/>
+        <plan_id>47f01202c3ca26503ab9b01705013175</plan_id>
+        <snapshot>de711e02c3ca26503ab9b017050131ab</snapshot>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-11 22:39:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6e711e02c3ca26503ab9b017050131d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 22:39:01</sys_updated_on>
+        <trigger display_value="">92c78cf9c386a2503ab9b01705013175</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=47f01202c3ca26503ab9b01705013175"/>
+</record_update>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.metric-summary-widget {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  font-family: "Segoe UI", sans-serif;
+  max-width: 500px;
+  margin: 10px auto 20px auto;
+  justify-content: center;
+}
+ 
+.metric-header h4 {
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  color: #333;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+ 
+.metric-body p {
+  font-size: 1.1em;
+  color: #444;
+  margin: 10px 0;
+}
+ 
+.metric-body strong {
+  color: #222;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>metric_downtime</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Metric Downtime</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+
+  var totalSeconds = 0;
+  var count = 0;
+ 
+  var gr = new GlideRecord('metric_instance');
+  gr.addQuery('definition', '35f2b283c0a808ae000b7132cd0a4f55');
+  gr.addQuery('calculation_complete', true);
+  gr.addQuery('value', 'In Progress');
+  gr.query();
+ 
+  while (gr.next()) {
+    var start = gr.getValue('start');
+    var end = gr.getValue('end');
+ 
+    if (start && end) {
+      var gdtStart = new GlideDateTime(start);
+      var gdtEnd = new GlideDateTime(end); 
+      var diffMillis = gdtEnd.getNumericValue() - gdtStart.getNumericValue();
+      var diffSeconds = diffMillis / 1000;
+ 
+      totalSeconds += diffSeconds;
+
+      count++;
+    }
+  }
+  var days = Math.floor(totalSeconds / (24 * 3600));
+  var hours = Math.floor((totalSeconds % (24 * 3600)) / 3600);
+  var minutes = Math.floor((totalSeconds % 3600) / 60);
+  var seconds = Math.floor(totalSeconds % 60);
+ 
+	var lostMinutes = totalSeconds / 60;
+  var lostMoney = lostMinutes * 3;
+	
+  data.total_time_text = days + " días, " + hours + " horas, " + minutes + " minutos y " + seconds + " segundos";
+
+  data.total_records = count;
+
+  data.money_lost = "$" + lostMoney.toFixed(2);
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-11 17:25:18</sys_created_on>
+        <sys_id>cfa98186c3c226503ab9b017050131ac</sys_id>
+        <sys_mod_count>34</sys_mod_count>
+        <sys_name>Metric Downtime</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_widget_cfa98186c3c226503ab9b017050131ac</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-12 17:43:58</sys_updated_on>
+        <template><![CDATA[<div class="metric-summary-widget">
+<div class="metric-header">
+<h4>Duración total de cálculos completados</h4>
+</div>
+<div class="metric-body">
+<p><strong>Registros procesados:</strong> {{::data.total_records}}</p>
+<p><strong>Duración total:</strong> {{::data.total_time_text}}</p>
+<p><strong>Dinero perdido estimado:</strong> {{ data.money_lost }}</p>
+</div>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>cfa98186c3c226503ab9b017050131ac</id>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-11 17:25:18</sys_created_on>
+        <sys_id>07a98186c3c226503ab9b017050131b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-11 17:25:18</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config_var_set">
+    <sn_nowassist_skill_config_var_set action="INSERT_OR_UPDATE">
+        <config_type display_value="">aa67a3fd1b743110f9ddb888cc4bcb99</config_type>
+        <description/>
+        <hide_step>false</hide_step>
+        <name>Work in progress</name>
+        <order>220</order>
+        <parent display_value="Choose input">6c8c6315c3ca22503ab9b017050131e1</parent>
+        <screen_id>17b178b2435802106b5f90cfd7b8f235</screen_id>
+        <screen_table>sys_ux_macroponent</screen_table>
+        <skill_config display_value="OT Incident summarization">208cabd1c3ca22503ab9b017050131b3</skill_config>
+        <step_completed>false</step_completed>
+        <sys_class_name>sn_nowassist_skill_config_var_set</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 21:21:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>208c6315c3ca22503ab9b017050131e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Work in progress</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_var_set_208c6315c3ca22503ab9b017050131e5</sys_update_name>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:21:18</sys_updated_on>
+        <title/>
+        <vars/>
+    </sn_nowassist_skill_config_var_set>
+    <sys_translated_text action="delete_multiple" query="documentkey=208c6315c3ca22503ab9b017050131e5"/>
+    <sys_variable_value action="delete_multiple" query="document_key=208c6315c3ca22503ab9b017050131e5"/>
+</record_update>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="Incident Summary Agent">a293947dc3c6a2503ab9b0170501316a</agent>
+        <description>This will return details of an incident. Incident number should be provided as input.</description>
+        <display_output>true</display_output>
+        <document_status/>
+        <execution_mode>Supervised</execution_mode>
+        <inputs>[{"name":"incident_number","description":"The number of the incident"}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Fetch incident details</name>
+        <output_transformation_strategy>undefined</output_transformation_strategy>
+        <pre_message/>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-11 21:11:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>f86db54ec30a26503ab9b017050131b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fetch incident details</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_f86db54ec30a26503ab9b017050131b9</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-11 21:11:15</sys_updated_on>
+        <tool display_value="Fetch incident details">e6fc6c7833579650d39ae3570e5c7b71</tool>
+        <tool_attributes>{}</tool_attributes>
+    </sn_aia_agent_tool_m2m>
+</record_update>

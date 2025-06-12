@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_now_assist_deployment_config_attributes">
+    <sys_now_assist_deployment_config_attributes action="INSERT_OR_UPDATE">
+        <deployment_config display_value="Now Assist in Virtual Agent - 1">c115b795c30e22503ab9b01705013142</deployment_config>
+        <name>sp_agent_chat_config_sys_id</name>
+        <sys_class_name>sys_now_assist_deployment_config_attributes</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-09 21:58:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>3d15f795c30e22503ab9b017050131a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sp_agent_chat_config_sys_id</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_now_assist_deployment_config_attributes_3d15f795c30e22503ab9b017050131a6</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:58:47</sys_updated_on>
+        <value>7115f795c30e22503ab9b01705013197</value>
+    </sys_now_assist_deployment_config_attributes>
+</record_update>

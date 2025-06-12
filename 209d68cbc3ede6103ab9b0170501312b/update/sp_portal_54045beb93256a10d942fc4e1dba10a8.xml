@@ -2,7 +2,7 @@
     <sp_portal action="INSERT_OR_UPDATE">
         <alternate_portal/>
         <communication_channels/>
-        <css_variables>$brand-primary:#4c7080;
+        <css_variables>$brand-primary:#6C9EB1;
 $body-bg:#c9d6d3;
 $state-success-text:#181A1F;
 $sp-homepage-bg:#fff;
@@ -11,14 +11,14 @@ $text-color:#717171;
 $sp-logo-margin-y:.5rem;
 $navbar-inverse-link-hover-color:#ffffff;
 $panel-bg:#fff;
-$brand-success:#5cb85c;
+$brand-success:#34515e;
 $navbar-inverse-bg:#6C9EB1;
-$brand-warning:#f0ad4e;
-$brand-danger:#d9534f;
+$brand-warning:#34515e;
+$brand-danger:34515e;
 $sp-tagline-color:#717171;
 $navbar-inverse-link-color:#c9d6d3;
-$brand-info:#5bc0de;
-$link-color:4c7080;
+$brand-info:#34515e;
+$link-color:#34515e;
 $sp-logo-margin-x:1rem;
 $btn-default-bg:#ffffff;
 $text-muted:#979797;
@@ -29,7 +29,7 @@ $text-muted:#979797;
         <enable_certificate_based_authentication>false</enable_certificate_based_authentication>
         <enable_favorites>false</enable_favorites>
         <hide_portal_name>false</hide_portal_name>
-        <homepage display_value="ssdt_home2">c2066c5593712250d942fc4e1dba1020</homepage>
+        <homepage display_value="iris_home">c2066c5593712250d942fc4e1dba1020</homepage>
         <icon/>
         <inactive>false</inactive>
         <kb_knowledge_base/>
@@ -50,14 +50,14 @@ $text-muted:#979797;
         <sys_created_by>isaac.hernandez</sys_created_by>
         <sys_created_on>2025-05-22 22:50:19</sys_created_on>
         <sys_id>54045beb93256a10d942fc4e1dba10a8</sys_id>
-        <sys_mod_count>238</sys_mod_count>
+        <sys_mod_count>259</sys_mod_count>
         <sys_name>I.R.I.S.</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_portal_54045beb93256a10d942fc4e1dba10a8</sys_update_name>
         <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-05 17:16:11</sys_updated_on>
+        <sys_updated_on>2025-06-12 18:38:12</sys_updated_on>
         <theme display_value="SSDT Theme">1f83fe0f93b12610d942fc4e1dba100c</theme>
         <title>I.R.I.S.</title>
         <ts_index_group/>

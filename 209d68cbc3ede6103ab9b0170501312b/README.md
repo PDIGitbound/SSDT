@@ -29,4 +29,6 @@ If you find yourself unable to import your repository due to the presence of fil
    * Incident
    * ISA Equipment Model
    * Asset Management
+   * Customer Service Base Entities
    * Operational Technology Incident Management
+   * Service Management Basics

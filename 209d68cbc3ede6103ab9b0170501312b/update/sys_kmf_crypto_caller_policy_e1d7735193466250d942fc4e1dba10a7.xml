@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_kmf_crypto_caller_policy">
+    <sys_kmf_crypto_caller_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <approval_type/>
+        <check_script_hash>false</check_script_hash>
+        <crypto_module display_value="global.com_snc_integration_multifactor_authentication_glideencrypter">603c9e42c3132010fdbd3f57bb40ddb4</crypto_module>
+        <crypto_spec/>
+        <granular_operation/>
+        <identity_group_alias/>
+        <impersonation>false</impersonation>
+        <instance_recipient/>
+        <owner>e5cc9d791b5fad50c8432f8dee4bcb66</owner>
+        <policy_name>AutoGen-script-9dba190cd7230100fceaa6859e61035f-null</policy_name>
+        <result>reject</result>
+        <script_hash>J4/1DeCSAsaSWM6SHtx+naAzXwl+7KVm+vLuNp4u/yo=</script_hash>
+        <script_table>sys_script_include</script_table>
+        <signature_data/>
+        <specify_purpose>false</specify_purpose>
+        <sys_class_name>sys_kmf_crypto_caller_policy</sys_class_name>
+        <sys_created_by>carlos.salcido</sys_created_by>
+        <sys_created_on>2025-06-09 22:10:47</sys_created_on>
+        <sys_id>e1d7735193466250d942fc4e1dba10a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_kmf_crypto_caller_policy_e1d7735193466250d942fc4e1dba10a7</sys_update_name>
+        <sys_updated_by>carlos.salcido</sys_updated_by>
+        <sys_updated_on>2025-06-09 22:10:47</sys_updated_on>
+        <target_role/>
+        <target_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</target_scope>
+        <target_script>9dba190cd7230100fceaa6859e61035f</target_script>
+        <type>1</type>
+        <used>false</used>
+    </sys_kmf_crypto_caller_policy>
+</record_update>

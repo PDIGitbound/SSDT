@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <condition_script/>
+        <description/>
+        <event_name>activate.life.cycle.migration</event_name>
+        <name>Summarize OT Incident Data</name>
+        <order>100</order>
+        <script><![CDATA[(function execute(inputs, outputs) {
+    var request = {
+        "executionRequests": [
+            {
+                "payload": {
+                    "textToSummarize": inputs.caller_name
+                },
+                "capabilityId": "02def939533121106b38ddeeff7b1237"
+            }
+        ]
+    };
+
+    var output = sn_one_extend.OneExtendUtil.execute(request);
+    var capabilityResponse = output.capabilities && output.capabilities["02def939533121106b38ddeeff7b1237"];
+
+    if (capabilityResponse) {
+        outputs.response = capabilityResponse.response;
+        outputs.status = capabilityResponse.status;
+        outputs.error = capabilityResponse.error;
+    } else {
+        outputs.error = "No response from capability";
+    }
+})(inputs, outputs);
+]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-08 03:04:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bda72ab8934e6e10d942fc4e1dba10e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Summarize OT Incident Data</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sysevent_script_action_bda72ab8934e6e10d942fc4e1dba10e4</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-08 03:04:20</sys_updated_on>
+    </sysevent_script_action>
+</record_update>

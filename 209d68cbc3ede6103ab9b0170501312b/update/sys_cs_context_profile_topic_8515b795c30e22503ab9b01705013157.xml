@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_context_profile_topic">
+    <sys_cs_context_profile_topic action="INSERT_OR_UPDATE">
+        <context_profile display_value="Now Assist in Virtual Agent - 1">8915b795c30e22503ab9b0170501313e</context_profile>
+        <sys_class_name>sys_cs_context_profile_topic</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-09 21:58:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8515b795c30e22503ab9b01705013157</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>survey</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_cs_context_profile_topic_8515b795c30e22503ab9b01705013157</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:58:44</sys_updated_on>
+        <topic/>
+        <topic_type>survey</topic_type>
+    </sys_cs_context_profile_topic>
+</record_update>

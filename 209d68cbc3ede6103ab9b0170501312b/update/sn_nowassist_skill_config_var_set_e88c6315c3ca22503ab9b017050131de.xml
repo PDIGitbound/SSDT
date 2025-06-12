@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_nowassist_skill_config_var_set">
+    <sn_nowassist_skill_config_var_set action="INSERT_OR_UPDATE">
+        <config_type display_value="">d51b3a7d25cb3110f8776ab691d522af</config_type>
+        <description/>
+        <hide_step>false</hide_step>
+        <name>Define availability</name>
+        <order>500</order>
+        <parent/>
+        <screen_id>88395367c3b2f11044104fb9c840dd8b</screen_id>
+        <screen_table>sys_ux_macroponent</screen_table>
+        <skill_config display_value="OT Incident summarization">208cabd1c3ca22503ab9b017050131b3</skill_config>
+        <step_completed>false</step_completed>
+        <sys_class_name>sn_nowassist_skill_config_var_set</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-09 21:21:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>e88c6315c3ca22503ab9b017050131de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Define availability</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_nowassist_skill_config_var_set_e88c6315c3ca22503ab9b017050131de</sys_update_name>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-09 21:21:18</sys_updated_on>
+        <title/>
+        <vars/>
+    </sn_nowassist_skill_config_var_set>
+    <sys_translated_text action="delete_multiple" query="documentkey=e88c6315c3ca22503ab9b017050131de"/>
+    <sys_variable_value action="delete_multiple" query="document_key=e88c6315c3ca22503ab9b017050131de"/>
+</record_update>

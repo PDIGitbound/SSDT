@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="one_api_service_plan_feature_edge">
+    <one_api_service_plan_feature_edge action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applicability_condition_expression/>
+        <applicability_failed_policy/>
+        <applicability_script><![CDATA[(function(currentInputs, context) {  
+	/* @param {Object} currentInputs - Inputs provided for the current step.*/  
+	/* @param {Object} context - Execution context, which may include:*/     
+	/*         - Previous tool outputs/inputs (e.g., context['ToolName.attributeName'] or context.getValue('ToolName.attributeName')).*/     
+	/*         - Additional context information (e.g., context.getAllValues()).*/  
+	/* @returns {Boolean} - Return 'true' if the condition is met; otherwise 'false'.*/  
+	return true;
+  })(currentInputs, context);]]></applicability_script>
+        <applicability_type/>
+        <error_handler_script><![CDATA[(function handleError() {  
+	// customize condition logic here,  
+	return ;
+})();]]></error_handler_script>
+        <error_policy/>
+        <from_service_plan_feature display_value="___$y$t3m_bu1163r___-542203de7fe81210a01c7d8b7d86658c, cc801ebaff68a2101dbaffffffffff07-default: 542203de7fe81210a01c7d8b7d86658c-2">98569871c30aa2503ab9b0170501311f</from_service_plan_feature>
+        <internal_name>InstructionToolSearch__Recommend AIA Tools RAG</internal_name>
+        <name>edge</name>
+        <order>0</order>
+        <sys_class_name>one_api_service_plan_feature_edge</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-10 19:02:26</sys_created_on>
+        <sys_id>1c569871c30aa2503ab9b01705013136</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>edge</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>one_api_service_plan_feature_edge_1c569871c30aa2503ab9b01705013136</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-10 19:02:26</sys_updated_on>
+        <to_service_plan_feature display_value="___$y$t3m_bu1163r___-542203de7fe81210a01c7d8b7d86658c, cc801ebaff68a2101dbaffffffffff07-default: cc801ebaff68a2101dbaffffffffff07">d8569871c30aa2503ab9b01705013130</to_service_plan_feature>
+    </one_api_service_plan_feature_edge>
+</record_update>

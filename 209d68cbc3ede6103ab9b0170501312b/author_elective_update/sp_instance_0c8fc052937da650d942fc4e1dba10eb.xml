@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>2</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">bb72516d93f5e250d942fc4e1dba10a3</sp_column>
+        <sp_widget display_value="Quick Links">dae53627530030101865ddeeff7b12be</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-05-30 21:33:55</sys_created_on>
+        <sys_id>0c8fc052937da650d942fc4e1dba10eb</sys_id>
+        <sys_mod_count>34</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_instance_0c8fc052937da650d942fc4e1dba10eb</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-06 19:20:33</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"title": {
+		"value": "",
+		"displayValue": ""
+	},
+	"card_type": {
+		"value": "Thumbnail",
+		"displayValue": "Thumbnail"
+	},
+	"card_size": {
+		"value": "Medium",
+		"displayValue": "Medium"
+	},
+	"text_alignment": {
+		"value": "Default",
+		"displayValue": "Default"
+	},
+	"show_icon": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"show_background": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"show_description": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"background_color": {
+		"value": "Hexcode",
+		"displayValue": "Hexcode"
+	},
+	"background_hexcode": {
+		"value": "#c9d6d3",
+		"displayValue": "#c9d6d3"
+	},
+	"icon_background_color": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"icon_background_hexcode": {
+		"value": "#c9d6d3",
+		"displayValue": "#c9d6d3"
+	},
+	"show_text_overlay": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"text_overlay_hexcode": {
+		"value": "##c9d6d3",
+		"displayValue": "##c9d6d3"
+	},
+	"text_color": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"text_color_hexcode": {
+		"value": "#FFFFFF",
+		"displayValue": "#FFFFFF"
+	},
+	"quick_links": {
+		"value": "9b729365e71130104cda66ef11e8a9a7,60c3db65e71130104cda66ef11e8a96f,4e116048e76530104cda66ef11e8a9bc,1e1cf027c3b1a6103ab9b01705013129",
+		"displayValue": "Password Reset, Printer Issues, Request Standing Desk, Prueba de Quick link"
+	},
+	"load_config": {
+		"value": "async",
+		"displayValue": "async"
+	},
+	"show_empty_state": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=0c8fc052937da650d942fc4e1dba10eb"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sp_instance_0c8fc052937da650d942fc4e1dba10eb</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;2&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;bb72516d93f5e250d942fc4e1dba10a3&lt;/sp_column&gt;&lt;sp_widget display_value="Quick Links"&gt;dae53627530030101865ddeeff7b12be&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;isaac.hernandez&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-05-30 21:33:55&lt;/sys_created_on&gt;&lt;sys_id&gt;0c8fc052937da650d942fc4e1dba10eb&lt;/sys_id&gt;&lt;sys_mod_count&gt;34&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GitHub SSDT"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_0c8fc052937da650d942fc4e1dba10eb&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;ruben.fernandez&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-06 19:20:33&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"title": {
+		"value": "",
+		"displayValue": ""
+	},
+	"card_type": {
+		"value": "Thumbnail",
+		"displayValue": "Thumbnail"
+	},
+	"card_size": {
+		"value": "Medium",
+		"displayValue": "Medium"
+	},
+	"text_alignment": {
+		"value": "Default",
+		"displayValue": "Default"
+	},
+	"show_icon": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"show_background": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"show_description": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"background_color": {
+		"value": "Hexcode",
+		"displayValue": "Hexcode"
+	},
+	"background_hexcode": {
+		"value": "#c9d6d3",
+		"displayValue": "#c9d6d3"
+	},
+	"icon_background_color": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"icon_background_hexcode": {
+		"value": "#c9d6d3",
+		"displayValue": "#c9d6d3"
+	},
+	"show_text_overlay": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"text_overlay_hexcode": {
+		"value": "##c9d6d3",
+		"displayValue": "##c9d6d3"
+	},
+	"text_color": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"text_color_hexcode": {
+		"value": "#FFFFFF",
+		"displayValue": "#FFFFFF"
+	},
+	"quick_links": {
+		"value": "9b729365e71130104cda66ef11e8a9a7,60c3db65e71130104cda66ef11e8a96f,4e116048e76530104cda66ef11e8a9bc,1e1cf027c3b1a6103ab9b01705013129",
+		"displayValue": "Password Reset, Printer Issues, Request Standing Desk, Prueba de Quick link"
+	},
+	"load_config": {
+		"value": "async",
+		"displayValue": "async"
+	},
+	"show_empty_state": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=0c8fc052937da650d942fc4e1dba10eb"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1323781372</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>c7617b589306ea10d942fc4e1dba1033</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-06 19:20:33</sys_created_on>
+        <sys_id>e214ff5c9346ea10d942fc4e1dba1018</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19746b0116b0000001</sys_recorded_at>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-06 19:20:33</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>6a14ff5c3e46ea10896de7423735f117</update_guid>
+        <update_guid_history>6a14ff5c3e46ea10896de7423735f117:1323781372,3c1fca0c79866a102972694fb7c3cef7:-1766805155,f3b8f10c3d066a10aba1e821f335ee0b:1323781372,2f38f5c86b066a10c4939cfbbc729090:-1766805155,1838b5c881066a108b6c83f6db56b39c:1323781372,e9e782739b712a1060f18b729fb7c7ac:-1766805155,f6174eff55312a100c5fdab1a0c6ffac:-2017326403,03070effdc312a10f70db69b7f25064f:1297841827,7ff60aff3a312a10f8768ea74e72107a:1217283619,37d6c2ff91312a102a31b58c81c8eba6:-2017326403,ccb642ff8d312a10d09c4853062e69bb:1474035833,5ab5ca7fe0312a1012d54274d16a1724:1757815321,a685c67f83312a1015dac3f2818ed061:-1192203527,0605ca3fb7312a1008bc7afac9906ae9:-1623222613,c5d4863fa7312a1073f73c8c2baff76c:-1399705187,bdc4463f1c312a10a9b1399eecded273:2032387711,cd848afb82312a10ed914aa77cee85a8:-1682943907,98440afbe0312a10c1756d53fe1037ad:1703396893,542442fbd3312a10c95b0829e7c5bd8d:1143394291,d18db9732e312a1076de3b8e1bf78b6f:432720561,b8e28167e775a610b7303fa35aa210d3:1333946666,3abce8e3f2f1a61096632e4fba040958:-1886169392,72fb64a3c9f1a610d61f357013db6ec4:-1431956826,d4fb28a3c5f1a6100821c8d48f8cab5b:1233289368,bcdb64a3caf1a610c88c695fed754097:-1431956826,8dbb60a359f1a61004a05ee9892ba73a:-993749662,4c7920af5fb1a6102453f6039211cdcd:-2092583666,95d4339fca7d6610076a2c5f3b20c506:858435279,0f14bb1f467d66105276a70c099e88f2:-2092583666,59e3371f967d6610b3c2096366d39ed4:858435279,59d3f31f997d66105e6b3fb8dc1e9e29:-2092583666,4fc3b31fe47d6610e48b9569c2203530:858435279,37d090d29e7da6501b862b0cc6dbc095:-2092583666,d09fc4525e7da650fbc38f83efac0f37:719275342,408fc052897da650a4f5dfa0620c11ee:-926044477</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">ca1314e8c30aea103ab9b017050131dd</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-06 21:35:57</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>a7a5aa171a964c488f0cb3d4b5244084</sys_id>
+        <sys_metadata>0c8fc052937da650d942fc4e1dba10eb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sp_instance_0c8fc052937da650d942fc4e1dba10eb</sys_update_name>
+        <sys_update_version display_value="sp_instance_0c8fc052937da650d942fc4e1dba10eb">e214ff5c9346ea10d942fc4e1dba1018</sys_update_version>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-06 21:35:57</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

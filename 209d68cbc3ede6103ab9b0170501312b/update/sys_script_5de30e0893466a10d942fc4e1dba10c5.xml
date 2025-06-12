@@ -61,6 +61,9 @@
         } else {
             gs.info("No se encontró CI relacionado al asset.");
         }
+
+		assetGR.install_status = 7;
+		assetGR.update();
     } else {
         gs.info("No se encontró ningún asset en alm_asset con nombre igual a: " + current.name);
     }
@@ -102,7 +105,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5de30e0893466a10d942fc4e1dba10c5</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>Create OT Incident from Iris Alert</sys_name>
         <sys_overrides/>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
@@ -110,7 +113,7 @@
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_script_5de30e0893466a10d942fc4e1dba10c5</sys_update_name>
         <sys_updated_by>esteban.quintero</sys_updated_by>
-        <sys_updated_on>2025-06-05 22:20:03</sys_updated_on>
+        <sys_updated_on>2025-06-11 18:37:53</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
