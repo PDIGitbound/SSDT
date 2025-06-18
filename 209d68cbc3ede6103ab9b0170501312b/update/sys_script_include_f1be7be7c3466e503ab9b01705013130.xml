@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_volt2_github_s_0.UpdateIrisAssetsToDefault</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Revert all Retired assets to In Stock state</description>
+        <mobile_callable>false</mobile_callable>
+        <name>UpdateIrisAssetsToDefault</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var UpdateIrisAssetsToDefault = Class.create();
+UpdateIrisAssetsToDefault.prototype = {
+    initialize: function() { },
+
+    run: function() {
+        var updatedCount = 0;
+
+        var categoryGR = new GlideRecord('cmdb_model_category');
+        categoryGR.addQuery('name', 'Manufacturing Robot');
+        categoryGR.query();
+
+        if (!categoryGR.next()) {
+            gs.info('Category "Manufacturing Robot" not found.');
+            return;
+        }
+
+        var categorySysId = categoryGR.getValue('sys_id');
+
+        var otincGR = new GlideRecord('alm_asset');
+        otincGR.addQuery('model_category', categorySysId);
+        otincGR.addQuery('cost', '>', '0.00');
+        otincGR.addQuery('install_status', '7');
+        otincGR.query();
+
+        while (otincGR.next()) {
+            otincGR.setValue('install_status', '6'); // "In Stock"
+            otincGR.update();
+            gs.info('Updated Asset: ' + otincGR.getValue('x_volt2_github_s_0_name') + ' to In stock state.');
+            updatedCount++;
+        }
+
+        gs.info('Updated Assets: ' + updatedCount);
+    },
+
+    type: 'UpdateIrisAssetsToDefault'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-16 22:31:46</sys_created_on>
+        <sys_id>f1be7be7c3466e503ab9b01705013130</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>UpdateIrisAssetsToDefault</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_script_include_f1be7be7c3466e503ab9b01705013130</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-17 03:22:30</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>2</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">bb72516d93f5e250d942fc4e1dba10a3</sp_column>
+        <sp_widget display_value="Copy of Virtual Agent Service Portal Wid">7b5ff495c37526503ab9b01705013136</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-12 22:38:11</sys_created_on>
+        <sys_id>94eadb1ec3c6a6503ab9b017050131dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_instance_94eadb1ec3c6a6503ab9b017050131dc</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-12 22:38:11</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=94eadb1ec3c6a6503ab9b017050131dc"/>
+</record_update>

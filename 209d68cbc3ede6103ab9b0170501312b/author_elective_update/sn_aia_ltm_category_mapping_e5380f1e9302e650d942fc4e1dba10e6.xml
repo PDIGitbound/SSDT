@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_ltm_category_mapping">
+    <sn_aia_ltm_category_mapping action="DELETE">
+        <category display_value="Workplace">5c446eae43db52107c4d14020ab8f218</category>
+        <entity_id>43770bda9302e650d942fc4e1dba10ee</entity_id>
+        <entity_table>sn_aia_agent</entity_table>
+        <sys_class_name>sn_aia_ltm_category_mapping</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-12 21:16:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>e5380f1e9302e650d942fc4e1dba10e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_aia_ltm_category_mapping_e5380f1e9302e650d942fc4e1dba10e6</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:16:38</sys_updated_on>
+    </sn_aia_ltm_category_mapping>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sn_aia_ltm_category_mapping_e5380f1e9302e650d942fc4e1dba10e6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_ltm_category_mapping"><sn_aia_ltm_category_mapping action="INSERT_OR_UPDATE"><category display_value="Workplace">5c446eae43db52107c4d14020ab8f218</category><entity_id>43770bda9302e650d942fc4e1dba10ee</entity_id><entity_table>sn_aia_agent</entity_table><sys_class_name>sn_aia_ltm_category_mapping</sys_class_name><sys_created_by>esteban.quintero</sys_created_by><sys_created_on>2025-06-12 21:16:38</sys_created_on><sys_domain>global</sys_domain><sys_id>e5380f1e9302e650d942fc4e1dba10e6</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package><sys_policy/><sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope><sys_update_name>sn_aia_ltm_category_mapping_e5380f1e9302e650d942fc4e1dba10e6</sys_update_name><sys_updated_by>esteban.quintero</sys_updated_by><sys_updated_on>2025-06-12 21:16:38</sys_updated_on></sn_aia_ltm_category_mapping></record_update>]]></payload>
+        <payload_hash>-387235515</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>be26a2d6934ea650d942fc4e1dba10b0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-12 21:16:38</sys_created_on>
+        <sys_id>69380f1e9302e650d942fc4e1dba10e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197660081c00000001</sys_recorded_at>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:16:38</sys_updated_on>
+        <type>AI Agent Category Mappings</type>
+        <update_guid>2d380f1ec902e65028c4dd649389a3e7</update_guid>
+        <update_guid_history>2d380f1ec902e65028c4dd649389a3e7:-387235515</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">389903de9302e650d942fc4e1dba1014</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-12 21:22:35</sys_created_on>
+        <sys_db_object display_value="" name="sn_aia_ltm_category_mapping">sn_aia_ltm_category_mapping</sys_db_object>
+        <sys_id>0b0c8508d43d46299ce9170bdff73999</sys_id>
+        <sys_metadata>e5380f1e9302e650d942fc4e1dba10e6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sn_aia_ltm_category_mapping_e5380f1e9302e650d942fc4e1dba10e6</sys_update_name>
+        <sys_update_version display_value="sn_aia_ltm_category_mapping_e5380f1e9302e650d942fc4e1dba10e6">69380f1e9302e650d942fc4e1dba10e8</sys_update_version>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:22:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

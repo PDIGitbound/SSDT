@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_trigger_agent_usecase_m2m">
+    <sn_aia_trigger_agent_usecase_m2m action="INSERT_OR_UPDATE">
+        <objective_template><![CDATA[Help me resolve ${number}]]></objective_template>
+        <related_resource_record>43770bda9302e650d942fc4e1dba10ee</related_resource_record>
+        <related_resource_table>sn_aia_agent</related_resource_table>
+        <sys_class_name>sn_aia_trigger_agent_usecase_m2m</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-12 21:22:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>b279cb9e9302e650d942fc4e1dba10c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_aia_trigger_agent_usecase_m2m_b279cb9e9302e650d942fc4e1dba10c9</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:22:10</sys_updated_on>
+        <trigger_configuration display_value="sn_ot_incident">a279cb9e9302e650d942fc4e1dba10c5</trigger_configuration>
+    </sn_aia_trigger_agent_usecase_m2m>
+</record_update>

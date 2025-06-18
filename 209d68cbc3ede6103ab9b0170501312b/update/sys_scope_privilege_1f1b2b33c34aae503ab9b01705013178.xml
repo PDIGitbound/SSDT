@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_scope_privilege">
+    <sys_scope_privilege action="INSERT_OR_UPDATE">
+        <operation>create</operation>
+        <source_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</source_scope>
+        <status>allowed</status>
+        <sys_class_name>sys_scope_privilege</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-17 15:40:00</sys_created_on>
+        <sys_id>1f1b2b33c34aae503ab9b01705013178</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_fsm_part_request</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_scope_privilege_1f1b2b33c34aae503ab9b01705013178</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-17 15:40:00</sys_updated_on>
+        <target_name>sn_fsm_part_request</target_name>
+        <target_scope display_value="Field Service Advanced Parts Sourcing">f20c3661771101104fcd79207b5a993c</target_scope>
+        <target_type>sys_db_object</target_type>
+    </sys_scope_privilege>
+</record_update>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_permission">
+    <par_dashboard_permission action="INSERT_OR_UPDATE">
+        <can_read>true</can_read>
+        <can_share>false</can_share>
+        <can_write>false</can_write>
+        <dashboard display_value="Field Service Performance Analytics">da61ed2e4901e38e210418fdb6ede3df</dashboard>
+        <group display_value="Equipo Dinamita" name="Equipo Dinamita">85de3bf2c3a9e6103ab9b017050131d6</group>
+        <owner>false</owner>
+        <role/>
+        <sys_class_name>par_dashboard_permission</sys_class_name>
+        <sys_created_by>carlos.salcido</sys_created_by>
+        <sys_created_on>2025-06-12 21:02:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>bd0507d69302e650d942fc4e1dba10cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>da61ed2e4901e38e210418fdb6ede3df</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>par_dashboard_permission_bd0507d69302e650d942fc4e1dba10cf</sys_update_name>
+        <sys_updated_by>carlos.salcido</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:02:44</sys_updated_on>
+        <user/>
+    </par_dashboard_permission>
+</record_update>

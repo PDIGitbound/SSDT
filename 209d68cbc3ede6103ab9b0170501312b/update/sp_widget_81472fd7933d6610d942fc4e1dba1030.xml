@@ -7,13 +7,13 @@
 
 .panel.panel-default {
 
-  border: 1px solid #ccc;
+  border: 0px solid #ccc;
 
-  border-radius: 12px;
+  border-radius: 10px;
 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 
-  background-color: #1e1e1e; // fondo oscuro
+  background-color: #34515e; // fondo oscuro
 
   color: #ffffff; // texto blanco
 
@@ -23,7 +23,9 @@
 
 .panel-heading {
 
-  background-color: #2c2c2c;
+  background-color: #34515e;
+  
+  border-radius 12px:
 
   padding: 12px 16px;
 
@@ -63,7 +65,7 @@
 
   border-collapse: collapse;
 
-  color: #ffffff;
+  color: #c9d6d3;
 
 }
  
@@ -77,19 +79,19 @@
  
 .table-striped tbody tr:nth-child(odd) {
 
-  background-color: #2a2a2a;
+  background-color: #34515e;
 
 }
  
 .table-striped tbody tr:nth-child(even) {
 
-  background-color: #1e1e1e;
+  background-color: #6c9eb1;
 
 }
  
 .table th {
 
-  background-color: #333;
+  background-color: #34515e;
 
   font-weight: 600;
 
@@ -99,10 +101,30 @@
 
 .panel-body p {
 
-  color: #cccccc;
+  color: #6c9eb1;
 
   font-style: italic;
 
+}
+
+.scroll-table {
+  max-height: 300px; /* Ajusta según el alto que ocupe 10 filas */
+  overflow-y: auto;
+}
+
+.scroll-table table {
+  margin: 0;
+}
+
+.panel-body input[type="text"] {
+  color: #000 !important;         /* Texto negro */
+  background-color: #fff;         /* Fondo blanco (opcional) */
+}
+
+/* Placeholder también en negro (para compatibilidad con navegadores) */
+.panel-body input::placeholder {
+  color: #000;
+  opacity: 1; /* Para que sea visible en todos los navegadores */
 }
 
  </css>
@@ -143,19 +165,29 @@
         <sys_created_by>isaac.hernandez</sys_created_by>
         <sys_created_on>2025-06-03 15:50:32</sys_created_on>
         <sys_id>81472fd7933d6610d942fc4e1dba1030</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>41</sys_mod_count>
         <sys_name>retired assets widget</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_widget_81472fd7933d6610d942fc4e1dba1030</sys_update_name>
-        <sys_updated_by>isaac.hernandez</sys_updated_by>
-        <sys_updated_on>2025-06-04 15:14:23</sys_updated_on>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-13 22:32:43</sys_updated_on>
         <template><![CDATA[<div class="panel panel-default">
   <div class="panel-heading">
-    <h4>Retired Assets</h4>
+    <h4 style="color: #c9d6d3">Retired Assets</h4>
   </div>
   <div class="panel-body">
+    
+    <!-- Campo de filtro personalizado -->
+    <div style="margin-bottom: 10px;">
+      <input type="text" ng-model="searchText" placeholder="Filtrar por nombre..." style="padding: 6px; border-radius: 4px; border: 1px solid #ccc;">
+      <button style="padding: 6px 12px; margin-left: 5px; background-color: #6c9eb1; color: white; border: none; border-radius: 4px; cursor: pointer;">
+        Filtrar
+      </button>
+    </div>
+
+    <!-- Tabla visible si hay datos -->
     <table class="table table-striped" ng-if="data.retiredAssets.length">
       <thead>
         <tr>
@@ -166,16 +198,24 @@
           <th>Retirement Date</th>
         </tr>
       </thead>
-      <tbody>
-        <tr ng-repeat="asset in data.retiredAssets">
-          <td>{{ asset.name }}</td>
-          <td>{{ asset.model }}</td>
-          <td>{{ asset.location }}</td>
-          <td>{{ asset.retirement_reason || 'N/A' }}</td>
-          <td>{{ asset.retirement_date || 'N/A' }}</td>
-        </tr>
-      </tbody>
     </table>
+
+    <!-- Cuerpo de la tabla con scroll y filtro -->
+    <div style="max-height: 300px; overflow-y: auto;" ng-if="data.retiredAssets.length">
+      <table class="table table-striped">
+        <tbody>
+          <tr ng-repeat="asset in data.retiredAssets | filter: { name: searchText }">
+            <td>{{ asset.name }}</td>
+            <td>{{ asset.model }}</td>
+            <td>{{ asset.location }}</td>
+            <td>{{ asset.retirement_reason || 'N/A' }}</td>
+            <td>{{ asset.retirement_date || 'N/A' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mensaje si no hay activos -->
     <div ng-if="!data.retiredAssets.length">
       <p>No retired assets found.</p>
     </div>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="DELETE">
+        <active>true</active>
+        <agent display_value="OT Incident Description Retriever">43770bda9302e650d942fc4e1dba10ee</agent>
+        <description>This will return details of an incident. Incident number should be provided as input.</description>
+        <display_output>true</display_output>
+        <document_status/>
+        <execution_mode>Supervised</execution_mode>
+        <inputs>[{"name":"incident_number","description":"The number of the incident"}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Fetch incident details</name>
+        <output_transformation_strategy>undefined</output_transformation_strategy>
+        <pre_message/>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-12 21:17:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>f658435e9302e650d942fc4e1dba1070</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fetch incident details</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_f658435e9302e650d942fc4e1dba1070</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:17:16</sys_updated_on>
+        <tool display_value="Fetch incident details">e6fc6c7833579650d39ae3570e5c7b71</tool>
+        <tool_attributes>{}</tool_attributes>
+    </sn_aia_agent_tool_m2m>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sn_aia_agent_tool_m2m_f658435e9302e650d942fc4e1dba1070</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m"><sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE"><active>true</active><agent display_value="OT Incident Description Retriever">43770bda9302e650d942fc4e1dba10ee</agent><description>This will return details of an incident. Incident number should be provided as input.</description><display_output>true</display_output><document_status/><execution_mode>Supervised</execution_mode><inputs>[{"name":"incident_number","description":"The number of the incident"}]</inputs><max_auto_executions>10</max_auto_executions><name>Fetch incident details</name><output_transformation_strategy>undefined</output_transformation_strategy><pre_message/><sys_class_name>sn_aia_agent_tool_m2m</sys_class_name><sys_created_by>esteban.quintero</sys_created_by><sys_created_on>2025-06-12 21:17:16</sys_created_on><sys_domain>global</sys_domain><sys_id>f658435e9302e650d942fc4e1dba1070</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Fetch incident details</sys_name><sys_overrides/><sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package><sys_policy/><sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope><sys_update_name>sn_aia_agent_tool_m2m_f658435e9302e650d942fc4e1dba1070</sys_update_name><sys_updated_by>esteban.quintero</sys_updated_by><sys_updated_on>2025-06-12 21:17:16</sys_updated_on><tool display_value="Fetch incident details">e6fc6c7833579650d39ae3570e5c7b71</tool><tool_attributes>{}</tool_attributes></sn_aia_agent_tool_m2m></record_update>]]></payload>
+        <payload_hash>-2033756676</payload_hash>
+        <record_name>Fetch incident details</record_name>
+        <reverted_from/>
+        <source>be26a2d6934ea650d942fc4e1dba10b0</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-12 21:17:16</sys_created_on>
+        <sys_id>fa58435e9302e650d942fc4e1dba1076</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197660115f10000001</sys_recorded_at>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:17:16</sys_updated_on>
+        <type>Agent Tool</type>
+        <update_guid>7e58435e5b02e6505f423f6aebf1e775</update_guid>
+        <update_guid_history>7e58435e5b02e6505f423f6aebf1e775:-2033756676</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Fetch incident details">aa5557929382e650d942fc4e1dba1007</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-12 22:14:02</sys_created_on>
+        <sys_db_object display_value="" name="sn_aia_agent_tool_m2m">sn_aia_agent_tool_m2m</sys_db_object>
+        <sys_id>be02291361a945788d7c5c9344edd390</sys_id>
+        <sys_metadata>f658435e9302e650d942fc4e1dba1070</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fetch incident details</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sn_aia_agent_tool_m2m_f658435e9302e650d942fc4e1dba1070</sys_update_name>
+        <sys_update_version display_value="sn_aia_agent_tool_m2m_f658435e9302e650d942fc4e1dba1070">fa58435e9302e650d942fc4e1dba1076</sys_update_version>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-12 22:14:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

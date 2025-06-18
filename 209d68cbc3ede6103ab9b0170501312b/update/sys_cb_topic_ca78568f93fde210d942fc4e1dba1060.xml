@@ -579,114 +579,6 @@
           "stepType": "Decision",
           "name": "Decision"
         },
-        "ed3912c5d8da40a9972068828d3e8031": {
-          "name": "Select the option that best matches your",
-          "prompt": {
-            "value": [
-              {
-                "type": "paragraph",
-                "children": [
-                  {
-                    "text": "Select the option that best matches your issue."
-                  }
-                ]
-              }
-            ],
-            "mode": "simple"
-          },
-          "confirmMessage": {
-            "value": "",
-            "mode": "simple"
-          },
-          "acknowledgeMsg": {
-            "value": "",
-            "mode": "simple"
-          },
-          "applicability": {
-            "value": "",
-            "mode": "query"
-          },
-          "skippable": {
-            "value": "",
-            "mode": "query"
-          },
-          "skipReprompt": {
-            "value": "",
-            "mode": "query"
-          },
-          "defaultValue": {
-            "value": "",
-            "mode": "simple"
-          },
-          "variableId": "bad7364100eb44cfb1f4d2ab7b182533",
-          "detailDescription": "",
-          "id": "ed3912c5d8da40a9972068828d3e8031",
-          "stepType": "ChoicePrompt",
-          "hasCardHeader": false,
-          "cardMetadata": {
-            "mode": "card",
-            "metadataScript": "",
-            "cardTemplate": "",
-            "cardFields": {},
-            "cardDefinition": {}
-          },
-          "withNluUserInput": false,
-          "skipIfFulfilled": false
-        },
-        "11f574977e134b458a9c0bfeec2a1997": {
-          "name": "Select your Poth",
-          "prompt": {
-            "value": [
-              {
-                "type": "paragraph",
-                "children": [
-                  {
-                    "text": "Select your Poth"
-                  }
-                ]
-              }
-            ],
-            "mode": "simple"
-          },
-          "confirmMessage": {
-            "value": "",
-            "mode": "simple"
-          },
-          "acknowledgeMsg": {
-            "value": "",
-            "mode": "simple"
-          },
-          "applicability": {
-            "value": "",
-            "mode": "query"
-          },
-          "skippable": {
-            "value": "",
-            "mode": "query"
-          },
-          "skipReprompt": {
-            "value": "",
-            "mode": "query"
-          },
-          "defaultValue": {
-            "value": "",
-            "mode": "simple"
-          },
-          "variableId": "b9f26a2c3c5d48598e6176b847f569d1",
-          "detailDescription": "",
-          "id": "11f574977e134b458a9c0bfeec2a1997",
-          "stepType": "ChoicePrompt",
-          "hasCardHeader": false,
-          "cardMetadata": {
-            "mode": "card",
-            "metadataScript": "",
-            "cardTemplate": "",
-            "cardFields": {},
-            "cardDefinition": {}
-          },
-          "withNluUserInput": false,
-          "skipIfFulfilled": false
-        },
         "5aeea097b597475b84d1e2a86d1dfee9": {
           "id": "5aeea097b597475b84d1e2a86d1dfee9",
           "stepType": "CrudAction",
@@ -857,11 +749,6 @@
               "key": "sys_created_by",
               "value": "Created by",
               "label": "Created by"
-            },
-            {
-              "key": "x_volt2_github_s_0_x_u_account",
-              "value": "Account",
-              "label": "Account"
             }
           ],
           "noRecordsResponseMsg": {
@@ -1000,36 +887,6 @@
           },
           "requestFeedback": true
         },
-        "c729bab91e1c4861957a37975413df41": {
-          "id": "c729bab91e1c4861957a37975413df41",
-          "stepType": "RecordOutput",
-          "name": "TSOTIncident",
-          "variableId": "",
-          "cardTemplate": "General",
-          "cardFields": {},
-          "mode": "script",
-          "tableName": "sn_ot_incident",
-          "fields": [
-            "number",
-            "short_description",
-            "state",
-            "priority",
-            "sys_created_by"
-          ],
-          "cardDefinition": {
-            "name": "Record",
-            "value": "General"
-          },
-          "requestFeedback": true,
-          "applicability": {
-            "value": "",
-            "mode": "query"
-          },
-          "condition": {
-            "mode": "glide_query",
-            "value": "number={{vaInputs.ot_incident_number}}"
-          }
-        },
         "1e372e9e1f424b8aa805c8177713b2e2": {
           "id": "1e372e9e1f424b8aa805c8177713b2e2",
           "stepType": "Decision",
@@ -1106,14 +963,14 @@
                   "operator": "=",
                   "operand": "asset",
                   "expression": "647f720393352610d942fc4e1dba10c1",
-                  "id": "27871c51ba3b4b85a49e23c572a9a9f0"
+                  "id": "b16f19b6aa0b4645aa45b7628b60c6f0"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "caller_id",
                   "expression": "{{vaInputs.user}}",
-                  "id": "3a36ce0058ea4465a033726350912c42"
+                  "id": "7e210bb19b48466f9cd113e5d7c955a5"
                 },
                 {
                   "prefix": "",
@@ -1145,46 +1002,32 @@
                       ]
                     }
                   ],
-                  "id": "90cde7b96c8a4784b0ecccd8b10b49bf"
+                  "id": "fe213dda602d4647a6c9f12e5c3a8647"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "x_volt2_github_s_0_x_u_contact",
                   "expression": "{{vaInputs.user.ref_customer_contact}}",
-                  "id": "d56e8bae5ecf49398f28ba8f075b1259"
+                  "id": "82ccf1c57493430bb3d1bc4a999c34cc"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "category",
                   "expression": "hardware",
-                  "id": "7e478a2faf1a4bd4b16e03367fe4a2c3"
+                  "id": "9f87415278c24eeeb05baa039e8cd72a"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "subcategory",
                   "expression": "ot_issue",
-                  "id": "2afe9f2b919944b0a0546df5be9ec818"
-                },
-                {
-                  "prefix": "",
-                  "operator": "=",
-                  "operand": "x_volt2_github_s_0_x_u_account",
-                  "expression": "{{vaInputs.select_your_poth}}",
-                  "id": "108175ea08484bbcb633563b0356e6b7"
-                },
-                {
-                  "prefix": "",
-                  "operator": "=",
-                  "operand": "isa_entity_site",
-                  "expression": "177cfa8fc3f126103ab9b017050131dd",
-                  "id": "da0ac599199847d4822577f56b0ed0ec"
+                  "id": "964dbac4d58445b58c5fa2dd6aca8ee0"
                 }
               ]
             },
-            "queryString": "asset=647f720393352610d942fc4e1dba10c1^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue^x_volt2_github_s_0_x_u_account={{vaInputs.select_your_poth}}^isa_entity_site=177cfa8fc3f126103ab9b017050131dd"
+            "queryString": "asset=647f720393352610d942fc4e1dba10c1^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue"
           },
           "mode": "create",
           "record": "",
@@ -1396,14 +1239,14 @@
                   "operator": "=",
                   "operand": "asset",
                   "expression": "f45ffecf93f12610d942fc4e1dba10e3",
-                  "id": "48cca770ea694fe69eaf2559edb3ca19"
+                  "id": "fe173fbcc8ea4a848eebf7305e681c75"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "caller_id",
                   "expression": "{{vaInputs.user}}",
-                  "id": "4e5e18d595474e85b6119bd63d9ad6e3"
+                  "id": "ca671153330d4716ab015be7279eeda1"
                 },
                 {
                   "prefix": "",
@@ -1435,39 +1278,32 @@
                       ]
                     }
                   ],
-                  "id": "adafd6ed5ecc423ab84fad6b3ac90a14"
+                  "id": "d39e8bc539fc4d19b896ce051847faa9"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "x_volt2_github_s_0_x_u_contact",
                   "expression": "{{vaInputs.user.ref_customer_contact}}",
-                  "id": "ed844b7807e7456c9a2c68965f1201a1"
+                  "id": "97a2c978aa1940b9b14c949b8ce18a7e"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "category",
                   "expression": "hardware",
-                  "id": "9db74bb1a3404bb9aa372dabbd2b3873"
+                  "id": "699433800a1140c2a4aee51c18e629fe"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "subcategory",
                   "expression": "ot_issue",
-                  "id": "a0b2fb2d0bfa4be7bbc4c6f77780b147"
-                },
-                {
-                  "prefix": "",
-                  "operator": "=",
-                  "operand": "x_volt2_github_s_0_x_u_account",
-                  "expression": "",
-                  "id": "475ff409081448408a47efff4d1bc24c"
+                  "id": "520112e7a82a46d485a1f2ad9825bf8d"
                 }
               ]
             },
-            "queryString": "asset=f45ffecf93f12610d942fc4e1dba10e3^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue^x_volt2_github_s_0_x_u_account="
+            "queryString": "asset=f45ffecf93f12610d942fc4e1dba10e3^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue"
           },
           "mode": "create",
           "record": "",
@@ -2272,141 +2108,6 @@
           "outputDynamicModal": {},
           "outputs": []
         },
-        "88d0744a99264d6c81ab91013404ad80": {
-          "name": "Poth",
-          "prompt": {
-            "value": [
-              {
-                "type": "paragraph",
-                "children": [
-                  {
-                    "text": " wait a second"
-                  }
-                ]
-              }
-            ],
-            "mode": "simple"
-          },
-          "confirmMessage": {
-            "value": "",
-            "mode": "simple"
-          },
-          "acknowledgeMsg": {
-            "value": "",
-            "mode": "simple"
-          },
-          "applicability": {
-            "value": "",
-            "mode": "query"
-          },
-          "skippable": {
-            "value": "",
-            "mode": "query"
-          },
-          "skipReprompt": {
-            "value": "",
-            "mode": "query"
-          },
-          "defaultValue": {
-            "value": "",
-            "mode": "simple"
-          },
-          "variableId": "5a37f013e53048f592511fb5aa3098b7",
-          "detailDescription": "",
-          "id": "88d0744a99264d6c81ab91013404ad80",
-          "stepType": "ReferenceChoicePrompt",
-          "mode": "glide_record",
-          "script": "",
-          "metadataScript": "",
-          "cardData": {},
-          "isMultipleSelect": false,
-          "noRecordsResponseMsg": {
-            "value": [
-              {
-                "type": "paragraph",
-                "children": [
-                  {
-                    "text": "you have not select a poth"
-                  }
-                ]
-              }
-            ],
-            "mode": "simple"
-          },
-          "condition": {
-            "mode": "glide_query",
-            "value": "nameLIKE{{vaInputs.select_your_poth}}"
-          },
-          "hasCardHeader": false,
-          "cardMetadata": {
-            "mode": "card",
-            "metadataScript": "",
-            "cardTemplate": "",
-            "cardFields": {},
-            "cardDefinition": {}
-          },
-          "withNluUserInput": false,
-          "skipIfFulfilled": false
-        },
-        "9c94f49abaf64b67b291b38793e93319": {
-          "id": "9c94f49abaf64b67b291b38793e93319",
-          "stepType": "TextPrompt",
-          "name": "Description of the problem",
-          "prompt": {
-            "value": [
-              {
-                "type": "paragraph",
-                "children": [
-                  {
-                    "text": "Please describe your situation."
-                  }
-                ]
-              }
-            ],
-            "mode": "simple"
-          },
-          "confirmMessage": {
-            "value": "",
-            "mode": "simple"
-          },
-          "acknowledgeMsg": {
-            "value": "",
-            "mode": "simple"
-          },
-          "applicability": {
-            "value": "",
-            "mode": "query"
-          },
-          "skippable": {
-            "value": "",
-            "mode": "query"
-          },
-          "skipReprompt": {
-            "value": "",
-            "mode": "query"
-          },
-          "defaultValue": {
-            "value": "",
-            "mode": "simple"
-          },
-          "hasCardHeader": false,
-          "cardMetadata": {
-            "mode": "card",
-            "metadataScript": "",
-            "cardTemplate": "",
-            "cardFields": {},
-            "cardDefinition": {}
-          },
-          "withNluUserInput": false,
-          "skipIfFulfilled": false,
-          "variableId": "d617c1c6dbb64f6eb57353fa05174e92",
-          "detailDescription": "",
-          "inputType": {
-            "format": "Text",
-            "script": ""
-          },
-          "requestFeedback": true
-        },
         "5075cbd55a9c44ea9e6f319321f64458": {
           "id": "5075cbd55a9c44ea9e6f319321f64458",
           "stepType": "ScriptOutput",
@@ -2618,9 +2319,200 @@
             "value": "",
             "mode": "query"
           }
+        },
+        "ed3912c5d8da40a9972068828d3e8031": {
+          "name": "Select the option that best matches your",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Select the option that best matches your issue."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "bad7364100eb44cfb1f4d2ab7b182533",
+          "detailDescription": "",
+          "id": "ed3912c5d8da40a9972068828d3e8031",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
+        },
+        "9c94f49abaf64b67b291b38793e93319": {
+          "id": "9c94f49abaf64b67b291b38793e93319",
+          "stepType": "TextPrompt",
+          "name": "Description of the problem",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Please describe your situation."
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false,
+          "variableId": "d617c1c6dbb64f6eb57353fa05174e92",
+          "detailDescription": "",
+          "inputType": {
+            "format": "Text",
+            "script": ""
+          },
+          "requestFeedback": true
+        },
+        "11f574977e134b458a9c0bfeec2a1997": {
+          "name": "Select your Poth",
+          "prompt": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "Select your Poth"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "confirmMessage": {
+            "value": "",
+            "mode": "simple"
+          },
+          "acknowledgeMsg": {
+            "value": "",
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "skippable": {
+            "value": "",
+            "mode": "query"
+          },
+          "skipReprompt": {
+            "value": "",
+            "mode": "query"
+          },
+          "defaultValue": {
+            "value": "",
+            "mode": "simple"
+          },
+          "variableId": "b9f26a2c3c5d48598e6176b847f569d1",
+          "detailDescription": "",
+          "id": "11f574977e134b458a9c0bfeec2a1997",
+          "stepType": "ChoicePrompt",
+          "hasCardHeader": false,
+          "cardMetadata": {
+            "mode": "card",
+            "metadataScript": "",
+            "cardTemplate": "",
+            "cardFields": {},
+            "cardDefinition": {}
+          },
+          "withNluUserInput": false,
+          "skipIfFulfilled": false
         }
       },
       "edges": [
+        {
+          "id": "b44b8f62ba3b44a6b721362bfc643833",
+          "edgeType": "Edge",
+          "source": "4d30545ead0f425eb33fb23e6987d5a7",
+          "target": "0f1ba91ba857498faf1183d016236040",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "f433b5efce96484696c1ba8d03cda968",
+          "edgeType": "Edge",
+          "source": "ed3912c5d8da40a9972068828d3e8031",
+          "target": "9c94f49abaf64b67b291b38793e93319",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "a859e38f76204af396a86c401655c0d6",
+          "edgeType": "Edge",
+          "source": "9c94f49abaf64b67b291b38793e93319",
+          "target": "016d9f96084e4c1eb9dc9201ab1d2bc5",
+          "sourcePort": "",
+          "targetPort": ""
+        },
         {
           "id": "b01ac2c4e0d74841968c7b77972814c1",
           "edgeType": "Edge",
@@ -2765,22 +2657,6 @@
           "edgeType": "Edge",
           "source": "5075cbd55a9c44ea9e6f319321f64458",
           "target": "e07a51d99df24292ad37573bc518a144",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "a2c5461881f2483582ca80a1f9255436",
-          "edgeType": "Edge",
-          "source": "11f574977e134b458a9c0bfeec2a1997",
-          "target": "ed3912c5d8da40a9972068828d3e8031",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "d0321e80bc4a46a18a484731896c7ab3",
-          "edgeType": "Edge",
-          "source": "88d0744a99264d6c81ab91013404ad80",
-          "target": "016d9f96084e4c1eb9dc9201ab1d2bc5",
           "sourcePort": "",
           "targetPort": ""
         },
@@ -2945,19 +2821,6 @@
           "targetPort": ""
         },
         {
-          "id": "1558e0074e814d3090fa94cb95e74a63",
-          "edgeType": "Branch",
-          "source": "d6977e8b1c3145b1b8bd94b672565838",
-          "target": "bd88412d44884bf4b38b72831650f394",
-          "sourcePort": "",
-          "targetPort": "",
-          "expression": {
-            "value": "vaInputs.choices_with_out_incident_creation=Other",
-            "mode": "query"
-          },
-          "label": "Other"
-        },
-        {
           "id": "cb1149db71ca42c39c4ed82f565cc002",
           "edgeType": "Branch",
           "source": "830294efb74441899e4a7ee6925cd514",
@@ -3047,19 +2910,6 @@
           "label": "Yes"
         },
         {
-          "id": "8c38520333bd46ee814fad2bc2f4af30",
-          "edgeType": "Branch",
-          "source": "830294efb74441899e4a7ee6925cd514",
-          "target": "11f574977e134b458a9c0bfeec2a1997",
-          "sourcePort": "",
-          "targetPort": "",
-          "expression": {
-            "value": "vaInputs.choices=Create an Incident",
-            "mode": "query"
-          },
-          "label": "Create an Incident"
-        },
-        {
           "id": "55e3bc34e339434f9c19440c1e851f9f",
           "edgeType": "Branch",
           "source": "016d9f96084e4c1eb9dc9201ab1d2bc5",
@@ -3126,14 +2976,6 @@
             "mode": "query"
           },
           "label": "Yes"
-        },
-        {
-          "id": "b44b8f62ba3b44a6b721362bfc643833",
-          "edgeType": "Edge",
-          "source": "4d30545ead0f425eb33fb23e6987d5a7",
-          "target": "c729bab91e1c4861957a37975413df41",
-          "sourcePort": "",
-          "targetPort": ""
         },
         {
           "id": "d20b8d05d2434cc4a2ecedd4ffcccedc",
@@ -3437,22 +3279,6 @@
           "targetPort": ""
         },
         {
-          "id": "f80bbcdecaf24ff482cbe2c84c3a7362",
-          "edgeType": "Edge",
-          "source": "ed3912c5d8da40a9972068828d3e8031",
-          "target": "9c94f49abaf64b67b291b38793e93319",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "e898bec69f554364b26ba7d494019ad7",
-          "edgeType": "Edge",
-          "source": "9c94f49abaf64b67b291b38793e93319",
-          "target": "88d0744a99264d6c81ab91013404ad80",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
           "id": "284dd9a8f87a4daa9a8ffd2c68618e88",
           "edgeType": "Edge",
           "source": "20a84d096b2c48dc8fcdd8448a7c834d",
@@ -3513,14 +3339,6 @@
           "edgeType": "Edge",
           "source": "69607f01c6ee46fdbb6743347ca83538",
           "target": "6f7244f382034cd196c9e5799f7d15f5",
-          "sourcePort": "",
-          "targetPort": ""
-        },
-        {
-          "id": "969a5c9e5098407ab5681d3f1c3b0bd1",
-          "edgeType": "Edge",
-          "source": "c729bab91e1c4861957a37975413df41",
-          "target": "0f1ba91ba857498faf1183d016236040",
           "sourcePort": "",
           "targetPort": ""
         },
@@ -3597,6 +3415,40 @@
           "id": "d81f8e632c844177858a9a4f28fa7251",
           "edgeType": "Edge",
           "source": "107ed95cdda3486c9a80dcee5ea4ae4b",
+          "target": "bd88412d44884bf4b38b72831650f394",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "8c38520333bd46ee814fad2bc2f4af30",
+          "edgeType": "Branch",
+          "source": "830294efb74441899e4a7ee6925cd514",
+          "target": "ed3912c5d8da40a9972068828d3e8031",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.choices=Create an Incident",
+            "mode": "query"
+          },
+          "label": "Create an Incident"
+        },
+        {
+          "id": "1558e0074e814d3090fa94cb95e74a63",
+          "edgeType": "Branch",
+          "source": "d6977e8b1c3145b1b8bd94b672565838",
+          "target": "11f574977e134b458a9c0bfeec2a1997",
+          "sourcePort": "",
+          "targetPort": "",
+          "expression": {
+            "value": "vaInputs.choices_with_out_incident_creation=Other",
+            "mode": "query"
+          },
+          "label": "Other"
+        },
+        {
+          "id": "b83d46c0d94c49dba0cb84be405bfd8f",
+          "edgeType": "Edge",
+          "source": "11f574977e134b458a9c0bfeec2a1997",
           "target": "bd88412d44884bf4b38b72831650f394",
           "sourcePort": "",
           "targetPort": ""
@@ -4299,18 +4151,6 @@
       },
       "nodeId": "1ada275d18fb4e9e89474bc55ec0165b",
       "isHidden": false
-    },
-    "5a37f013e53048f592511fb5aa3098b7": {
-      "id": "5a37f013e53048f592511fb5aa3098b7",
-      "name": "poth",
-      "label": "Poth",
-      "varType": "reference",
-      "table": "customer_account",
-      "category": "vaInputs",
-      "autoSelect": false,
-      "autoSelectExpression": "",
-      "nodeId": "88d0744a99264d6c81ab91013404ad80",
-      "isHidden": false
     }
   }
 }</graph>
@@ -4335,14 +4175,14 @@
         <sys_created_on>2025-06-02 15:27:47</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>ca78568f93fde210d942fc4e1dba1060</sys_id>
-        <sys_mod_count>91</sys_mod_count>
+        <sys_mod_count>95</sys_mod_count>
         <sys_name>Customer Service</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_cb_topic_ca78568f93fde210d942fc4e1dba1060</sys_update_name>
         <sys_updated_by>josepablo.lopez</sys_updated_by>
-        <sys_updated_on>2025-06-10 16:21:11</sys_updated_on>
+        <sys_updated_on>2025-06-16 15:45:33</sys_updated_on>
         <title>Customer Service</title>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>STANDARD</type>

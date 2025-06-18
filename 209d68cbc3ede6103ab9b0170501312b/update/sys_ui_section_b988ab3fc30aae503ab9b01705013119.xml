@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="b988ab3fc30aae503ab9b01705013119" sys_domain="global" table="sn_fsm_part_request" version="3" view="Spare_part_request_view">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 15:31:01</sys_created_on>
+            <sys_id>a309a77fc30aae503ab9b01705013178</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_fsm_part_request" sys_domain="global" view="b5886b3fc30aae503ab9b01705013197">b988ab3fc30aae503ab9b01705013119</sys_ui_section>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 15:31:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>from_stockroom</element>
+            <position>1</position>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 15:31:01</sys_created_on>
+            <sys_id>ab09a77fc30aae503ab9b01705013178</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_fsm_part_request" sys_domain="global" view="b5886b3fc30aae503ab9b01705013197">b988ab3fc30aae503ab9b01705013119</sys_ui_section>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 15:31:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>to_stockroom</element>
+            <position>2</position>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 15:31:01</sys_created_on>
+            <sys_id>a309a77fc30aae503ab9b01705013179</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_fsm_part_request" sys_domain="global" view="b5886b3fc30aae503ab9b01705013197">b988ab3fc30aae503ab9b01705013119</sys_ui_section>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 15:31:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>x_volt2_github_s_0_asset</element>
+            <position>3</position>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 15:31:01</sys_created_on>
+            <sys_id>ab09a77fc30aae503ab9b01705013179</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_fsm_part_request" sys_domain="global" view="b5886b3fc30aae503ab9b01705013197">b988ab3fc30aae503ab9b01705013119</sys_ui_section>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 15:31:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 15:31:01</sys_created_on>
+            <sys_id>a309a77fc30aae503ab9b0170501317a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_fsm_part_request" sys_domain="global" view="b5886b3fc30aae503ab9b01705013197">b988ab3fc30aae503ab9b01705013119</sys_ui_section>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 15:31:01</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>5</position>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 15:31:01</sys_created_on>
+            <sys_id>ab09a77fc30aae503ab9b0170501317a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_fsm_part_request" sys_domain="global" view="b5886b3fc30aae503ab9b01705013197">b988ab3fc30aae503ab9b01705013119</sys_ui_section>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 15:31:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>requested_for</element>
+            <position>6</position>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 15:31:01</sys_created_on>
+            <sys_id>a309a77fc30aae503ab9b0170501317b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_fsm_part_request" sys_domain="global" view="b5886b3fc30aae503ab9b01705013197">b988ab3fc30aae503ab9b01705013119</sys_ui_section>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 15:31:01</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>sn_fsm_part_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 15:28:43</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>b988ab3fc30aae503ab9b01705013119</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sn_fsm_part_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+            <sys_update_name>sys_ui_section_b988ab3fc30aae503ab9b01705013119</sys_update_name>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 15:28:43</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Spare part request view" name="Spare_part_request_view">b5886b3fc30aae503ab9b01705013197</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="INSERT_OR_UPDATE">
+        <canvas display_value="">5fe507dac346a6503ab9b0170501314c</canvas>
+        <component display_value="Single score">d24d53f60350de7a652caf3188a46ed2</component>
+        <component_props>{"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"newReporting":false,"showSparkline":true,"configVersion":"23.0.0-ci-SNAPSHOT","groupBy":null,"trendBy":null,"showMaximumRange":false,"enableRealTimeUpdate":false,"scoreType":null,"useRelativeScoreTime":true,"showScoreUpdateTime":true,"colorConfig":{"type":"default"},"showFilterIcon":true,"followFilters":true,"headingPosition":null,"showChange":true,"showTarget":true,"showGapPercentage":false,"showScoreDate":false,"showChangePercentage":true,"showChangeFrom":true,"showZero":false,"description":"Mean time to resolve Work Orders","dataSources":[{"allowRealTime":false,"allowTotalValue":false,"indicatorType":"2","isScriptedIndicator":false,"label":"Average Closing time for Work Orders","filter":"","sourceType":"indicator","uuid":{"breakdowns":[],"indicator":"5603e24bc35002001c845cb981d3ae45"},"preferredVisualizations":["18ac962264404bcc0039359d184b15f3"],"id":"aW5kaWNhdG9yNTYwM2UyNGJjMzUwMDIwMDFjODQ1Y2I5ODFkM2FlNDUxNjkzODAzMDU3MjcwNjY2ODc2NzQuNzMwNzI3NTY=","dataCategories":["trend","group","simple"]}],"metrics":[{"dataSource":"aW5kaWNhdG9yNTYwM2UyNGJjMzUwMDIwMDFjODQ1Y2I5ODFkM2FlNDUxNjkzODAzMDU3MjcwNjY2ODc2NzQuNzMwNzI3NTY=","id":"YVc1a2FXTmhkRzl5TlRZd00yVXlOR0pqTXpVd01ESXdNREZqT0RRMVkySTVPREZrTTJGbE5EVXhOamt6T0RBek1EVTNNamN3TmpZMk9EYzJOelF1TnpNd056STNOVFk9MTY5MzgwMzA1NzI3MA==","aggregateIndicator":"","frequency":10,"numberFormat":{"customFormat":true,"rounding":"HALF_UP","decimalPrecision":0,"abbreviationEnabled":true,"numberInTooltipsEnabled":false,"thousandSeparatorEnabled":false},"axisId":"primary"}],"headerTitle":"Mean time to resolve work orders","filterConfigurations":[],"bareBorder":false,"noDebounce":true,"applyDateRange":false,"scoreSize":"lg","componentId":"7xz2g0ta","showDateRangeByDefault":false,"allowChangeDateRange":false,"chartInteractionEnabled":true,"enableDrilldown":true,"showLoadingIndicator":false,"id":"sortBy","value":"value","propLabel":"Sort by","metaForCollated":{"isFromScriptedPolicy":true,"isExternalProp":false,"isOverridingPreset":null},"filterPerMetric":[],"sortBy":"value"}</component_props>
+        <h>14</h>
+        <name/>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-12 21:06:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>93e507dac346a6503ab9b01705013180</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>par_dashboard_widget_93e507dac346a6503ab9b01705013180</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:16:58</sys_updated_on>
+        <visualization/>
+        <w>12</w>
+        <widget_props/>
+        <x>12</x>
+        <y>0</y>
+    </par_dashboard_widget>
+</record_update>

@@ -42,7 +42,6 @@
 
 	incident.x_volt2_github_s_0_detected_state = true;
 
-    // Buscar en alm_asset por nombre
     var assetGR = new GlideRecord('alm_asset');
     assetGR.addQuery('x_volt2_github_s_0_name', current.name);
     assetGR.query();
@@ -54,7 +53,7 @@
         incident.asset = assetGR.getUniqueValue();
         gs.info("Asset asignado al incidente: " + incident.asset);
 
-        // Asignar el CI vinculado desde el campo personalizado (ej. ci)
+        // Asignar el CI vinculado desde el campo personalizado
         if (assetGR.ci) {
             gs.info("CI relacionado al asset: " + assetGR.ci.getDisplayValue());
             incident.cmdb_ci = assetGR.ci;
@@ -68,13 +67,10 @@
         gs.info("No se encontró ningún asset en alm_asset con nombre igual a: " + current.name);
     }
 
-    // Caller y usuario actual
     current.x_volt2_github_s_0_user_id = gs.getUserID();
     incident.caller_id = gs.getUserID();
     gs.info("Asignado x_volt2_github_s_0_user_id automáticamente: " + current.x_volt2_github_s_0_user_id);
 
-    // Account activa cualquiera
-    // Asignar cuenta fija por sys_id
 	var accountSysId = '72a720a59335e250d942fc4e1dba1021';
 
     incident.x_volt2_github_s_0_x_u_account = accountSysId;
@@ -92,9 +88,13 @@
         gs.info("No se encontró ISA Entity relacionado a la cuenta: " + accountSysId);
     }
 
-    incident.short_description = 'Auto-generated OT Incident from IRIS Alert for ' + assetGR.getDisplayValue() + ' asset.';
+	var asset = assetGR.getDisplayValue();
 
-    // Insertar el incidente
+    incident.short_description = 'Auto-generated OT Incident from IRIS Alert for ' + asset + ' asset.';
+
+	var descUtil = new IrisAlertDescriptions();
+	incident.description = descUtil.getDescription(asset);
+
     incident.insert();
     gs.info("Incidente OT insertado con sys_id: " + incident.getUniqueValue());
 
@@ -105,7 +105,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5de30e0893466a10d942fc4e1dba10c5</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>Create OT Incident from Iris Alert</sys_name>
         <sys_overrides/>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
@@ -113,7 +113,7 @@
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_script_5de30e0893466a10d942fc4e1dba10c5</sys_update_name>
         <sys_updated_by>esteban.quintero</sys_updated_by>
-        <sys_updated_on>2025-06-11 18:37:53</sys_updated_on>
+        <sys_updated_on>2025-06-18 05:19:29</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
