@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_team">
+    <sn_aia_team action="INSERT_OR_UPDATE">
+        <description>This Usecase is designed to analyze ot incident data, identify description, given solution, root cause and impact level. It is intended for IT teams and support staff to help them manage and resolve incidents more efficiently.</description>
+        <name>Analyze ot incident information</name>
+        <sys_class_name>sn_aia_team</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-13 04:44:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>e79e6c2e934ae650d942fc4e1dba1019</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Analyze ot incident information</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_aia_team_e79e6c2e934ae650d942fc4e1dba1019</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-13 04:44:03</sys_updated_on>
+    </sn_aia_team>
+</record_update>

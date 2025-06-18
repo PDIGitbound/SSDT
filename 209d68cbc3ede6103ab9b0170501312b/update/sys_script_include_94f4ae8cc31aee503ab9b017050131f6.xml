@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_volt2_github_s_0.IrisAlertDescriptions</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description>Dictionary for IRIS Alert Descriptions</description>
+        <mobile_callable>false</mobile_callable>
+        <name>IrisAlertDescriptions</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var IrisAlertDescriptions = Class.create();
+IrisAlertDescriptions.prototype = {
+    initialize: function() {
+    },
+
+	getDescription: function(assetName) {
+        var descriptions = {
+            "Bearing": "Sustained irregular movement and elevated surface heat were detected in a rotating section, indicating possible internal resistance, imbalance, or progressive surface wear affecting normal motion.",
+            "Cable": "Inconsistent power or signal flow has been observed in a transmission line, suggesting potential degradation of insulation, internal breaks, or unstable contact points influenced by physical strain.",
+            "Coil": "Performance degradation was noted in an energy-handling unit, along with concentrated heat spots, likely caused by aging materials, uneven operation, or internal inefficiencies.",
+            "Engine": "Temperature levels remain above expected limits during continuous operation, accompanied by reduced mechanical output and delayed response when subjected to repeated or heavy use.",
+            "Harmonic Drive": "Movement irregularities were identified within a directional control assembly, marked by inconsistent movement intervals and unstable transitions between positions.",
+            "Industrial PVC": "Structural elements made of thermoplastic material show bending, softening, and partial deformation, consistent with exposure to environmental or thermal conditions beyond rated thresholds.",
+            "Servomotor": "Controlled movement sequences display reduced consistency, including brief unintended shifts and delays in positioning that affect overall coordination and system timing."
+        };
+
+        return descriptions[assetName] || "No predefined description available for this asset.";
+    },
+
+    type: 'IrisAlertDescriptions'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-18 05:15:42</sys_created_on>
+        <sys_id>94f4ae8cc31aee503ab9b017050131f6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>IrisAlertDescriptions</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_script_include_94f4ae8cc31aee503ab9b017050131f6</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-18 05:16:02</sys_updated_on>
+    </sys_script_include>
+</record_update>

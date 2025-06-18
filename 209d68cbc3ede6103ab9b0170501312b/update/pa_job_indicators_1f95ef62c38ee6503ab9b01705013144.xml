@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="pa_job_indicators">
+    <pa_job_indicators action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <collect>1</collect>
+        <collect_indicator>true</collect_indicator>
+        <display>temporary job for collecting IRIS Indicator Test 2 - IRIS Indicator Test 2</display>
+        <indicator display_value="IRIS Indicator Test 2">1395e3a2c38ee6503ab9b017050131ed</indicator>
+        <job display_value="temporary job for collecting IRIS Indicator Test 2">1795ef62c38ee6503ab9b01705013144</job>
+        <sys_class_name>pa_job_indicators</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-13 18:03:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1f95ef62c38ee6503ab9b01705013144</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>IRIS Indicator Test 2.temporary job for collecting IRIS Indicator Test 2</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>pa_job_indicators_1f95ef62c38ee6503ab9b01705013144</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-13 18:03:35</sys_updated_on>
+    </pa_job_indicators>
+</record_update>

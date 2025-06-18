@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_canvas">
+    <par_dashboard_canvas action="INSERT_OR_UPDATE">
+        <dashboard display_value="Field Service Performance Analytics - Copy">9eb5871a9302e650d942fc4e1dba10ae</dashboard>
+        <dashboard_tab/>
+        <layout>[{"sys_id":"66b54b1a9302e650d942fc4e1dba10c0","x":0,"y":0,"w":6,"h":4,"component_id":"226449101138d0dff1abe0e1566c8b2a","component_props":"{\"filterId\":\"1a98c5d15b164f02d67d9530acb205c1\",\"filterName\":\"Assignment Group\",\"filterComponentType\":\"singleselect\",\"datasource\":{\"type\":\"table\",\"encodedQuery\":\"active=true^sys_idINjavascript:new global.FSMFilterClientUtil().getMyGroups();\",\"table\":{\"id\":\"sys_user_group\",\"label\":\"sys_user_group\"}},\"targets\":[{\"type\":\"table\",\"table\":{\"id\":\"wm_task\",\"label\":\"wm_task\"},\"field\":{\"id\":\"assignment_group\",\"type\":\"reference\",\"label\":\"assignment_group\",\"reference\":\"\"}}],\"defaultSelectedItems\":[],\"dateFilterView\":\"calendar-reldates\",\"sort\":\"ASC\",\"enableClearFilter\":true,\"maxElements\":500}","can_edit":true}]</layout>
+        <sys_class_name>par_dashboard_canvas</sys_class_name>
+        <sys_created_by>carlos.salcido</sys_created_by>
+        <sys_created_on>2025-06-12 21:05:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>62b54b1a9302e650d942fc4e1dba108e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>par_dashboard_canvas_62b54b1a9302e650d942fc4e1dba108e</sys_update_name>
+        <sys_updated_by>carlos.salcido</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:05:48</sys_updated_on>
+    </par_dashboard_canvas>
+</record_update>

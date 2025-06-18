@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="INSERT_OR_UPDATE">
+        <canvas display_value="">5fe507dac346a6503ab9b0170501314c</canvas>
+        <component display_value="Single score">d24d53f60350de7a652caf3188a46ed2</component>
+        <component_props>{"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"newReporting":false,"showSparkline":true,"dataPassthrough":null,"configVersion":"23.0.0-ci-SNAPSHOT","groupBy":null,"trendBy":null,"showMaximumRange":false,"enableRealTimeUpdate":false,"scoreType":null,"useRelativeScoreTime":true,"showScoreUpdateTime":true,"colorConfig":{"type":"default"},"showFilterIcon":true,"followFilters":true,"headingPosition":null,"showChange":true,"showTarget":true,"showGapPercentage":false,"showScoreDate":false,"showChangePercentage":true,"showChangeFrom":true,"showZero":false,"description":"Total time spent by agents for work order tasks as a percentage of total working time","dataSources":[{"allowRealTime":false,"allowTotalValue":false,"indicatorType":"2","isScriptedIndicator":false,"label":"% utilization of agents for work order tasks","filter":"","sourceType":"indicator","uuid":{"breakdowns":[],"indicator":"882dc85fc35002001c845cb981d3ae4e"},"preferredVisualizations":["18ac962264404bcc0039359d184b15f3"],"id":"aW5kaWNhdG9yODgyZGM4NWZjMzUwMDIwMDFjODQ1Y2I5ODFkM2FlNGUxNjkzODAzMDU3MjY5OTYwNTk4NDMuMzk5MjUwOA==","dataCategories":["trend","group","simple"]}],"metrics":[{"dataSource":"aW5kaWNhdG9yODgyZGM4NWZjMzUwMDIwMDFjODQ1Y2I5ODFkM2FlNGUxNjkzODAzMDU3MjY5OTYwNTk4NDMuMzk5MjUwOA==","id":"YVc1a2FXTmhkRzl5T0RneVpHTTROV1pqTXpVd01ESXdNREZqT0RRMVkySTVPREZrTTJGbE5HVXhOamt6T0RBek1EVTNNalk1T1RZd05UazRORE11TXprNU1qVXdPQT09MTY5MzgwMzA1NzI2OQ==","aggregateIndicator":"","frequency":10,"numberFormat":{"customFormat":true,"rounding":"HALF_UP","decimalPrecision":0,"abbreviationEnabled":true,"numberInTooltipsEnabled":false,"thousandSeparatorEnabled":false},"axisId":"primary"}],"headerTitle":"% Agent utilization for work order tasks","filterConfigurations":[],"bareBorder":false,"noDebounce":"","applyDateRange":false,"scoreSize":"lg","componentId":"cjoq6d9m","showDateRangeByDefault":false,"allowChangeDateRange":false,"chartInteractionEnabled":true,"enableDrilldown":true}</component_props>
+        <h>14</h>
+        <name/>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-12 21:06:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>9fe507dac346a6503ab9b0170501317d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>par_dashboard_widget_9fe507dac346a6503ab9b0170501317d</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:06:39</sys_updated_on>
+        <visualization/>
+        <w>12</w>
+        <widget_props/>
+        <x>36</x>
+        <y>0</y>
+    </par_dashboard_widget>
+</record_update>

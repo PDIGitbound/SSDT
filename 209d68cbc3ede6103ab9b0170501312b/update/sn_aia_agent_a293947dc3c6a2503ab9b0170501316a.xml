@@ -53,7 +53,7 @@
 5. Ensure the summary is concise, informative, and supports efficient incident resolution.</instructions>
         <internal_name>global.x_volt2_github_s_0.Incident Summary Agent</internal_name>
         <name>Incident Summary Agent</name>
-        <processing_message>Generating a summary of the incident details, including key information, Work Order, and Work Order Task. Please wait…</processing_message>
+        <processing_message>Incident Summary Agent running. . </processing_message>
         <proficiency>- The agent is capable of analyzing OT incidents and generating summaries that identify key issues, extract relevant details, and reference associated Work Orders (WO) and Work Order Tasks (WOT), ultimately enhancing understanding and streamlining response efforts for human agents.
 - The agent can fetch details related to a case, incident, or request, including survey questions, using the survey number and record fields as inputs, to gather comprehensive information for summarization.
 - The agent can collect relevant incident details for a problem, with the option to provide a problem number to focus the collection of details, allowing for more precise summarization and analysis.
@@ -69,13 +69,13 @@
         <sys_created_on>2025-06-10 19:02:20</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>a293947dc3c6a2503ab9b0170501316a</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name>Incident Summary Agent</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sn_aia_agent_a293947dc3c6a2503ab9b0170501316a</sys_update_name>
         <sys_updated_by>esteban.quintero</sys_updated_by>
-        <sys_updated_on>2025-06-11 21:11:27</sys_updated_on>
+        <sys_updated_on>2025-06-12 21:07:37</sys_updated_on>
     </sn_aia_agent>
 </record_update>

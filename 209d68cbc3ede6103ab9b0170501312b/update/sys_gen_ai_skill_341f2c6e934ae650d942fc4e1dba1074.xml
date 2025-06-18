@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_gen_ai_skill">
+    <sys_gen_ai_skill action="INSERT_OR_UPDATE">
+        <enable_followup>false</enable_followup>
+        <skill_description>This Usecase is designed to analyze ot incident data, identify description, given solution, root cause and impact level. It is intended for IT teams and support staff to help them manage and resolve incidents more efficiently.</skill_description>
+        <skill_document>3c1f2c6e934ae650d942fc4e1dba1070</skill_document>
+        <skill_name>Analyze ot incident information</skill_name>
+        <skill_table>sn_aia_skill_metadata</skill_table>
+        <sys_class_name>sys_gen_ai_skill</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-13 04:46:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>341f2c6e934ae650d942fc4e1dba1074</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sys_gen_ai_skill_341f2c6e934ae650d942fc4e1dba1074</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-13 04:46:04</sys_updated_on>
+    </sys_gen_ai_skill>
+</record_update>

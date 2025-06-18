@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_canvas">
+    <par_dashboard_canvas action="INSERT_OR_UPDATE">
+        <dashboard display_value="IRIS Analytics">83e583dac346a6503ab9b01705013104</dashboard>
+        <dashboard_tab/>
+        <layout>[{"sys_id":"5fe507dac346a6503ab9b0170501316f","x":0,"y":0,"w":12,"h":6,"component_id":"226449101138d0dff1abe0e1566c8b2a","component_props":"{\"filterId\":\"1a98c5d15b164f02d67d9530acb205c1\",\"filterName\":\"Assignment Group\",\"filterComponentType\":\"singleselect\",\"datasource\":{\"type\":\"table\",\"payload\":{\"table\":\"sys_user_group\",\"field\":null,\"primaryKey\":null},\"encodedQuery\":\"active=true^sys_idINjavascript:new global.FSMFilterClientUtil().getMyGroups();\",\"emptyOption\":null,\"choices\":null},\"targets\":[{\"type\":\"table\",\"payload\":{\"table\":\"wm_task\",\"field\":\"assignment_group\",\"primaryKey\":null,\"fieldType\":\"reference\"},\"encodedQuery\":null,\"emptyOption\":null,\"choices\":null}],\"defaultSelectedItems\":[],\"dateFilterView\":\"calendar-reldates\",\"sort\":\"ASC\",\"enableClearFilter\":true,\"maxElements\":500,\"cascadeScope\":\"top_layout\",\"id\":\"isShowSelectedValueInPill\",\"value\":false,\"noDebounce\":true,\"propLabel\":\"Show values in pill\",\"metaForCollated\":{\"isFromScriptedPolicy\":true,\"isExternalProp\":false,\"isOverridingPreset\":null},\"isShowSelectedValueInPill\":false}","can_edit":true}]</layout>
+        <sys_class_name>par_dashboard_canvas</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-12 21:06:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>07e507dac346a6503ab9b01705013133</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>par_dashboard_canvas_07e507dac346a6503ab9b01705013133</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:16:58</sys_updated_on>
+    </par_dashboard_canvas>
+</record_update>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="sn_fsm_part_request" version="2" view="spare_part_request">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="sn_fsm_part_request" element="NULL" name="sn_fsm_part_request" parent="NULL" relationship="NULL" sys_domain="global" view="a213fffbc34aae503ab9b01705013102">e25dc50cc352ee503ab9b017050131a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 22:49:13</sys_created_on>
+            <sys_id>225dc50cc352ee503ab9b017050131b6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 22:49:13</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>from_stockroom</element>
+            <list_id display_value="sn_fsm_part_request" element="NULL" name="sn_fsm_part_request" parent="NULL" relationship="NULL" sys_domain="global" view="a213fffbc34aae503ab9b01705013102">e25dc50cc352ee503ab9b017050131a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 22:49:13</sys_created_on>
+            <sys_id>2a5dc50cc352ee503ab9b017050131b6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 22:49:13</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>requested_for</element>
+            <list_id display_value="sn_fsm_part_request" element="NULL" name="sn_fsm_part_request" parent="NULL" relationship="NULL" sys_domain="global" view="a213fffbc34aae503ab9b01705013102">e25dc50cc352ee503ab9b017050131a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 22:49:13</sys_created_on>
+            <sys_id>2e5dc50cc352ee503ab9b017050131b6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 22:49:13</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>state</element>
+            <list_id display_value="sn_fsm_part_request" element="NULL" name="sn_fsm_part_request" parent="NULL" relationship="NULL" sys_domain="global" view="a213fffbc34aae503ab9b01705013102">e25dc50cc352ee503ab9b017050131a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 22:49:13</sys_created_on>
+            <sys_id>225dc50cc352ee503ab9b017050131b7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 22:49:13</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_domain</element>
+            <list_id display_value="sn_fsm_part_request" element="NULL" name="sn_fsm_part_request" parent="NULL" relationship="NULL" sys_domain="global" view="a213fffbc34aae503ab9b01705013102">e25dc50cc352ee503ab9b017050131a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 22:49:13</sys_created_on>
+            <sys_id>265dc50cc352ee503ab9b017050131b7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 22:49:13</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>to_stockroom</element>
+            <list_id display_value="sn_fsm_part_request" element="NULL" name="sn_fsm_part_request" parent="NULL" relationship="NULL" sys_domain="global" view="a213fffbc34aae503ab9b01705013102">e25dc50cc352ee503ab9b017050131a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 22:49:13</sys_created_on>
+            <sys_id>2a5dc50cc352ee503ab9b017050131b7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 22:49:13</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_by</element>
+            <list_id display_value="sn_fsm_part_request" element="NULL" name="sn_fsm_part_request" parent="NULL" relationship="NULL" sys_domain="global" view="a213fffbc34aae503ab9b01705013102">e25dc50cc352ee503ab9b017050131a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 22:49:13</sys_created_on>
+            <sys_id>2e5dc50cc352ee503ab9b017050131b7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 22:49:13</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>x_volt2_github_s_0_assigned_to</element>
+            <list_id display_value="sn_fsm_part_request" element="NULL" name="sn_fsm_part_request" parent="NULL" relationship="NULL" sys_domain="global" view="a213fffbc34aae503ab9b01705013102">e25dc50cc352ee503ab9b017050131a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 22:49:13</sys_created_on>
+            <sys_id>225dc50cc352ee503ab9b017050131b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 22:49:13</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>x_volt2_github_s_0_asset_requested</element>
+            <list_id display_value="sn_fsm_part_request" element="NULL" name="sn_fsm_part_request" parent="NULL" relationship="NULL" sys_domain="global" view="a213fffbc34aae503ab9b01705013102">e25dc50cc352ee503ab9b017050131a8</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 22:49:13</sys_created_on>
+            <sys_id>265dc50cc352ee503ab9b017050131b8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 22:49:13</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>sn_fsm_part_request</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>ruben.fernandez</sys_created_by>
+            <sys_created_on>2025-06-17 22:49:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e25dc50cc352ee503ab9b017050131a8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sn_fsm_part_request</sys_name>
+            <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+            <sys_update_name>sys_ui_list_sn_fsm_part_request_spare_part_request</sys_update_name>
+            <sys_updated_by>ruben.fernandez</sys_updated_by>
+            <sys_updated_on>2025-06-17 22:49:13</sys_updated_on>
+            <sys_user/>
+            <view display_value="Spare part request" name="spare_part_request">a213fffbc34aae503ab9b01705013102</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

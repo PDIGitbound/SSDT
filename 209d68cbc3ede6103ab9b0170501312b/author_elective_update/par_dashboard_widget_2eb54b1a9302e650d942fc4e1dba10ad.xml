@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget">
+    <par_dashboard_widget action="DELETE">
+        <canvas display_value="">e6b54b1a9302e650d942fc4e1dba109c</canvas>
+        <component display_value="Single score">d24d53f60350de7a652caf3188a46ed2</component>
+        <component_props>{"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"newReporting":false,"showSparkline":true,"dataPassthrough":null,"configVersion":"23.0.0-ci-SNAPSHOT","groupBy":null,"trendBy":null,"showMaximumRange":false,"enableRealTimeUpdate":false,"scoreType":null,"useRelativeScoreTime":true,"showScoreUpdateTime":true,"colorConfig":{"type":"default"},"showFilterIcon":true,"followFilters":true,"headingPosition":null,"showChange":true,"showTarget":true,"showGapPercentage":false,"showScoreDate":false,"showChangePercentage":true,"showChangeFrom":true,"showZero":false,"description":"Mean time to resolve Work Orders","dataSources":[{"allowRealTime":false,"allowTotalValue":false,"indicatorType":"2","isScriptedIndicator":false,"label":"Average Closing time for Work Orders","filter":"","sourceType":"indicator","uuid":{"breakdowns":[],"indicator":"5603e24bc35002001c845cb981d3ae45"},"preferredVisualizations":["18ac962264404bcc0039359d184b15f3"],"id":"aW5kaWNhdG9yNTYwM2UyNGJjMzUwMDIwMDFjODQ1Y2I5ODFkM2FlNDUxNjkzODAzMDU3MjcwNjY2ODc2NzQuNzMwNzI3NTY=","dataCategories":["trend","group","simple"]}],"metrics":[{"dataSource":"aW5kaWNhdG9yNTYwM2UyNGJjMzUwMDIwMDFjODQ1Y2I5ODFkM2FlNDUxNjkzODAzMDU3MjcwNjY2ODc2NzQuNzMwNzI3NTY=","id":"YVc1a2FXTmhkRzl5TlRZd00yVXlOR0pqTXpVd01ESXdNREZqT0RRMVkySTVPREZrTTJGbE5EVXhOamt6T0RBek1EVTNNamN3TmpZMk9EYzJOelF1TnpNd056STNOVFk9MTY5MzgwMzA1NzI3MA==","aggregateIndicator":"","frequency":10,"numberFormat":{"customFormat":true,"rounding":"HALF_UP","decimalPrecision":0,"abbreviationEnabled":true,"numberInTooltipsEnabled":false,"thousandSeparatorEnabled":false},"axisId":"primary"}],"headerTitle":"Mean time to resolve work orders","filterConfigurations":[],"bareBorder":false,"noDebounce":"","applyDateRange":false,"scoreSize":"lg","componentId":"7xz2g0ta","showDateRangeByDefault":false,"allowChangeDateRange":false,"chartInteractionEnabled":true,"enableDrilldown":true}</component_props>
+        <h>14</h>
+        <name/>
+        <stored_component/>
+        <sys_class_name>par_dashboard_widget</sys_class_name>
+        <sys_created_by>carlos.salcido</sys_created_by>
+        <sys_created_on>2025-06-12 21:05:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>2eb54b1a9302e650d942fc4e1dba10ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>par_dashboard_widget_2eb54b1a9302e650d942fc4e1dba10ad</sys_update_name>
+        <sys_updated_by>carlos.salcido</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:05:47</sys_updated_on>
+        <visualization/>
+        <w>12</w>
+        <widget_props/>
+        <x>12</x>
+        <y>0</y>
+    </par_dashboard_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>par_dashboard_widget_2eb54b1a9302e650d942fc4e1dba10ad</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_widget"><par_dashboard_widget action="INSERT_OR_UPDATE"><canvas display_value="">e6b54b1a9302e650d942fc4e1dba109c</canvas><component display_value="Single score">d24d53f60350de7a652caf3188a46ed2</component><component_props>{"showTotalAggregate":false,"showSubAggregate":false,"showFirstGroupAggregate":false,"showSecondGroupAggregate":false,"hideMatrixAggregate":false,"newReporting":false,"showSparkline":true,"dataPassthrough":null,"configVersion":"23.0.0-ci-SNAPSHOT","groupBy":null,"trendBy":null,"showMaximumRange":false,"enableRealTimeUpdate":false,"scoreType":null,"useRelativeScoreTime":true,"showScoreUpdateTime":true,"colorConfig":{"type":"default"},"showFilterIcon":true,"followFilters":true,"headingPosition":null,"showChange":true,"showTarget":true,"showGapPercentage":false,"showScoreDate":false,"showChangePercentage":true,"showChangeFrom":true,"showZero":false,"description":"Mean time to resolve Work Orders","dataSources":[{"allowRealTime":false,"allowTotalValue":false,"indicatorType":"2","isScriptedIndicator":false,"label":"Average Closing time for Work Orders","filter":"","sourceType":"indicator","uuid":{"breakdowns":[],"indicator":"5603e24bc35002001c845cb981d3ae45"},"preferredVisualizations":["18ac962264404bcc0039359d184b15f3"],"id":"aW5kaWNhdG9yNTYwM2UyNGJjMzUwMDIwMDFjODQ1Y2I5ODFkM2FlNDUxNjkzODAzMDU3MjcwNjY2ODc2NzQuNzMwNzI3NTY=","dataCategories":["trend","group","simple"]}],"metrics":[{"dataSource":"aW5kaWNhdG9yNTYwM2UyNGJjMzUwMDIwMDFjODQ1Y2I5ODFkM2FlNDUxNjkzODAzMDU3MjcwNjY2ODc2NzQuNzMwNzI3NTY=","id":"YVc1a2FXTmhkRzl5TlRZd00yVXlOR0pqTXpVd01ESXdNREZqT0RRMVkySTVPREZrTTJGbE5EVXhOamt6T0RBek1EVTNNamN3TmpZMk9EYzJOelF1TnpNd056STNOVFk9MTY5MzgwMzA1NzI3MA==","aggregateIndicator":"","frequency":10,"numberFormat":{"customFormat":true,"rounding":"HALF_UP","decimalPrecision":0,"abbreviationEnabled":true,"numberInTooltipsEnabled":false,"thousandSeparatorEnabled":false},"axisId":"primary"}],"headerTitle":"Mean time to resolve work orders","filterConfigurations":[],"bareBorder":false,"noDebounce":"","applyDateRange":false,"scoreSize":"lg","componentId":"7xz2g0ta","showDateRangeByDefault":false,"allowChangeDateRange":false,"chartInteractionEnabled":true,"enableDrilldown":true}</component_props><h>14</h><name/><stored_component/><sys_class_name>par_dashboard_widget</sys_class_name><sys_created_by>carlos.salcido</sys_created_by><sys_created_on>2025-06-12 21:05:47</sys_created_on><sys_domain>global</sys_domain><sys_id>2eb54b1a9302e650d942fc4e1dba10ad</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package><sys_policy/><sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope><sys_update_name>par_dashboard_widget_2eb54b1a9302e650d942fc4e1dba10ad</sys_update_name><sys_updated_by>carlos.salcido</sys_updated_by><sys_updated_on>2025-06-12 21:05:47</sys_updated_on><visualization/><w>12</w><widget_props/><x>12</x><y>0</y></par_dashboard_widget></record_update>]]></payload>
+        <payload_hash>1946863453</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>7978761693cea650d942fc4e1dba1002</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>carlos.salcido</sys_created_by>
+        <sys_created_on>2025-06-12 21:05:47</sys_created_on>
+        <sys_id>aab54b1a9302e650d942fc4e1dba10af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19765f690ac0000001</sys_recorded_at>
+        <sys_updated_by>carlos.salcido</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:05:47</sys_updated_on>
+        <type>PAR Dashboard Widget</type>
+        <update_guid>6eb54b1ad302e650f886a0f73a320bae</update_guid>
+        <update_guid_history>6eb54b1ad302e650f886a0f73a320bae:1946863453</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">f6b54b1a9302e650d942fc4e1dba10ee</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>carlos.salcido</sys_created_by>
+        <sys_created_on>2025-06-12 21:05:47</sys_created_on>
+        <sys_db_object display_value="" name="par_dashboard_widget">par_dashboard_widget</sys_db_object>
+        <sys_id>7af792c309c444e2aa029418be6b7764</sys_id>
+        <sys_metadata>2eb54b1a9302e650d942fc4e1dba10ad</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>par_dashboard_widget_2eb54b1a9302e650d942fc4e1dba10ad</sys_update_name>
+        <sys_update_version display_value="par_dashboard_widget_2eb54b1a9302e650d942fc4e1dba10ad">aab54b1a9302e650d942fc4e1dba10af</sys_update_version>
+        <sys_updated_by>carlos.salcido</sys_updated_by>
+        <sys_updated_on>2025-06-12 21:05:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

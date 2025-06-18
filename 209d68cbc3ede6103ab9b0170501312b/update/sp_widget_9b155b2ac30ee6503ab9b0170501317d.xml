@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>downtime_by_day</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Downtime by Day</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  // 1. Calcula el inicio del día
+  var now = new GlideDateTime();
+  var startOfDay = new GlideDateTime();
+  startOfDay.setValue(now.getDate() + " 00:00:00"); // yyyy-MM-dd + start
+
+  // 2. Calcula el total de segundos operativos hoy
+  var totalOperationalSeconds = (now.getNumericValue() - startOfDay.getNumericValue()) / 1000;
+  var downtimeSeconds = 0;
+
+  // 3. Obtiene los registros de downtime de hoy
+  var gr = new GlideRecord('metric_instance');
+  gr.addQuery('definition', '35f2b283c0a808ae000b7132cd0a4f55');
+  gr.addQuery('calculation_complete', true);
+  gr.addQuery('value', 'In Progress');
+  gr.addQuery('start', '>=', startOfDay);
+  gr.query();
+
+  // 4. Acumula el tiempo de downtime
+  while (gr.next()) {
+    var start = gr.getValue('start');
+    var end = gr.getValue('end');
+    if (start && end) {
+      var gdtStart = new GlideDateTime(start);
+      var gdtEnd = new GlideDateTime(end);
+      downtimeSeconds += (gdtEnd.getNumericValue() - gdtStart.getNumericValue()) / 1000;
+    }
+  }
+
+  // 5. Calcula horas trabajadas y eficiencia
+  var workedSeconds = totalOperationalSeconds - downtimeSeconds;
+  data.worked_hours_today = (workedSeconds / 3600).toFixed(2);
+  data.efficiency_today = ((workedSeconds / totalOperationalSeconds) * 100).toFixed(2) + "%";
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-13 16:51:29</sys_created_on>
+        <sys_id>9b155b2ac30ee6503ab9b0170501317d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Downtime by Day</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_widget_9b155b2ac30ee6503ab9b0170501317d</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-13 17:36:50</sys_updated_on>
+        <template><![CDATA[<div class="daily-work">
+  <p><strong>Horas trabajadas hoy:</strong> {{ data.worked_hours_today }} hrs</p>
+  <p><strong>Eficiencia diaria:</strong> {{ data.efficiency_today }}</p>
+</div>
+]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>9b155b2ac30ee6503ab9b0170501317d</id>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-13 16:51:29</sys_created_on>
+        <sys_id>d7159b2ac30ee6503ab9b01705013115</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-13 16:51:29</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

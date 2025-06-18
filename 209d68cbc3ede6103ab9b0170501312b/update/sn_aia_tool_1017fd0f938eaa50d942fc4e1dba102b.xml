@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_tool">
+    <sn_aia_tool action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description>Retrieve Description, Resolution, Impact and Root cause data.</description>
+        <input_schema>[{"name":"incident_number","description":"Required input to search for the correct OT Incident"}]</input_schema>
+        <name>Get OTINC data for analysis</name>
+        <record_type>custom</record_type>
+        <script><![CDATA[(function(inputs) {
+    // Solo se permiten entradas tipo string
+    var outputs = {};
+
+    if (typeof inputs.incident_number !== "string") {
+        outputs.error = "Invalid input type. 'incident_number' must be a string.";
+        return outputs;
+    }
+
+    // Buscar en la tabla de OT incidents
+    var gr = new GlideRecord('sn_ot_incident'); // Reemplaza con el nombre correcto de la tabla OT
+    gr.addQuery('number', inputs.incident_number);
+    gr.query();
+
+    if (gr.next()) {
+        outputs.description = gr.getValue('description');
+        outputs.resolution = gr.getValue('close_notes');
+        outputs.impact = gr.getDisplayValue('impact');
+    } else {
+        outputs.error = "Incident not found.";
+    }
+
+    return outputs;
+})(inputs);]]></script>
+        <sys_class_name>sn_aia_tool</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-14 23:17:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>1017fd0f938eaa50d942fc4e1dba102b</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Get OTINC data for analysis</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_aia_tool_1017fd0f938eaa50d942fc4e1dba102b</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-16 01:39:44</sys_updated_on>
+        <target_document/>
+        <target_document_table/>
+        <type>script</type>
+    </sn_aia_tool>
+</record_update>

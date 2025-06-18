@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="OT Incident Fields Analyzer">fad32983934eaa50d942fc4e1dba1046</agent>
+        <description>Retrieve Description, Resolution, Impact and Root cause data.</description>
+        <display_output>false</display_output>
+        <document_status/>
+        <execution_mode>copilot</execution_mode>
+        <inputs>[{"name":"incident_number","value":"","description":"Required input to search for the correct OT Incident","invalidMessage":null}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Get OTINC data for analysis</name>
+        <output_transformation_strategy>none</output_transformation_strategy>
+        <pre_message/>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-14 23:17:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>5417fd0f938eaa50d942fc4e1dba1031</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Get OTINC data for analysis</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_5417fd0f938eaa50d942fc4e1dba1031</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-15 23:33:09</sys_updated_on>
+        <tool display_value="Get OTINC data for analysis">1017fd0f938eaa50d942fc4e1dba102b</tool>
+        <tool_attributes>{}</tool_attributes>
+    </sn_aia_agent_tool_m2m>
+</record_update>

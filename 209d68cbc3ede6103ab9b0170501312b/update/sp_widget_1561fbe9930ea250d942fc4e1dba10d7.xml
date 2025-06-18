@@ -10,7 +10,9 @@
 	});
 }]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>.breadcrumb_container, sp-breadcrumb {
+  display: none !important;
+}</css>
         <data_table>sp_instance_table</data_table>
         <demo_data/>
         <description/>
@@ -86,14 +88,14 @@
         <sys_created_by>isaac.hernandez</sys_created_by>
         <sys_created_on>2025-06-10 16:21:07</sys_created_on>
         <sys_id>1561fbe9930ea250d942fc4e1dba10d7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Retired Assets 2</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_widget_1561fbe9930ea250d942fc4e1dba10d7</sys_update_name>
         <sys_updated_by>isaac.hernandez</sys_updated_by>
-        <sys_updated_on>2025-06-10 17:29:16</sys_updated_on>
+        <sys_updated_on>2025-06-16 15:42:25</sys_updated_on>
         <template><![CDATA[<div>
   <div class="alert alert-danger" ng-if="data.invalid_table">
     ${Table not defined} '{{data.table_label}}'

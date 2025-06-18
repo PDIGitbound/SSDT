@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>downtime_by_week</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>Downtime by Week</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  var gdt = new GlideDateTime();
+  gdt.setDisplayValue(gs.beginningOfThisWeek()); // lunes 00:00
+  var startOfWeek = gdt;
+  var now = new GlideDateTime();
+
+  var totalOperationalSeconds = (now.getNumericValue() - startOfWeek.getNumericValue()) / 1000;
+  var downtimeSeconds = 0;
+
+  var gr = new GlideRecord('metric_instance');
+  gr.addQuery('definition', '35f2b283c0a808ae000b7132cd0a4f55');
+  gr.addQuery('calculation_complete', true);
+  gr.addQuery('value', 'In Progress');
+  gr.addQuery('start', '>=', startOfWeek); // solo esta semana
+  gr.query();
+
+  while (gr.next()) {
+    var start = gr.getValue('start');
+    var end = gr.getValue('end');
+    if (start && end) {
+      var gdtStart = new GlideDateTime(start);
+      var gdtEnd = new GlideDateTime(end);
+      downtimeSeconds += (gdtEnd.getNumericValue() - gdtStart.getNumericValue()) / 1000;
+    }
+  }
+
+  var workedSeconds = totalOperationalSeconds - downtimeSeconds;
+
+  data.worked_hours_week = (workedSeconds / 3600).toFixed(2);
+  data.efficiency_week = ((workedSeconds / totalOperationalSeconds) * 100).toFixed(2) + "%";
+})();
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-13 16:49:04</sys_created_on>
+        <sys_id>37849fa6c30ee6503ab9b01705013154</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Downtime by Week</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_widget_37849fa6c30ee6503ab9b01705013154</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-13 16:49:47</sys_updated_on>
+        <template><![CDATA[<div class="weekly-work">
+  <p><strong>Horas trabajadas esta semana:</strong> {{ data.worked_hours_week }} hrs</p>
+  <p><strong>Eficiencia semanal:</strong> {{ data.efficiency_week }}</p>
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>37849fa6c30ee6503ab9b01705013154</id>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-13 16:49:04</sys_created_on>
+        <sys_id>ff84d7e6c30ee6503ab9b01705013109</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-13 16:49:04</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

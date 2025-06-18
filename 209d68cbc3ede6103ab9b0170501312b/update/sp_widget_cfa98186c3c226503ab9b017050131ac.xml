@@ -91,23 +91,23 @@
         <sys_created_by>isaac.hernandez</sys_created_by>
         <sys_created_on>2025-06-11 17:25:18</sys_created_on>
         <sys_id>cfa98186c3c226503ab9b017050131ac</sys_id>
-        <sys_mod_count>34</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>Metric Downtime</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_widget_cfa98186c3c226503ab9b017050131ac</sys_update_name>
-        <sys_updated_by>isaac.hernandez</sys_updated_by>
-        <sys_updated_on>2025-06-12 17:43:58</sys_updated_on>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-13 17:27:52</sys_updated_on>
         <template><![CDATA[<div class="metric-summary-widget">
-<div class="metric-header">
-<h4>Duración total de cálculos completados</h4>
-</div>
-<div class="metric-body">
-<p><strong>Registros procesados:</strong> {{::data.total_records}}</p>
-<p><strong>Duración total:</strong> {{::data.total_time_text}}</p>
-<p><strong>Dinero perdido estimado:</strong> {{ data.money_lost }}</p>
-</div>
+  <div class="metric-header">
+    <h4>Duración total de cálculos completados</h4>
+  </div>
+  <div class="metric-body">
+    <p><strong>Registros procesados:</strong> {{::data.total_records}}</p>
+    <p><strong>Duración total:</strong> {{::data.total_time_text}}</p>
+    <p><strong>Dinero perdido estimado:</strong> {{ data.money_lost }}</p>
+  </div>
 </div>]]></template>
     </sp_widget>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
