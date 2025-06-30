@@ -1,95 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_page">
     <sp_page action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <css>body .padding-top{&#13;
-  padding-top: 0px;&#13;
-}&#13;
-section.page { &#13;
-  background-color: #E1DFDF;&#13;
-}&#13;
-&#13;
-section.page, section.body {&#13;
-    padding-top: 0px !important;&#13;
-}&#13;
-&#13;
-.banner-container {&#13;
-  	width: 100%;&#13;
-}&#13;
-&#13;
-.search-container {&#13;
-  max-width: 709px;&#13;
-  margin: 0 auto;&#13;
-}&#13;
-&#13;
-.mob-ban-container {&#13;
-  height: 85px;&#13;
-  padding-top: 20px;&#13;
-}&#13;
-&#13;
-.v-h-center {&#13;
-    display: table-cell;&#13;
-    vertical-align: middle;&#13;
-    margin-left: auto;&#13;
-    margin-right: auto;&#13;
-}&#13;
-#homepage-search {&#13;
-  	padding: 10px !important;&#13;
-}&#13;
-#homepage-search h2 {&#13;
-	font-size: 36px;&#13;
-    font-weight: 300;&#13;
-    line-height: 42px;&#13;
-    margin-top: 0px;&#13;
-	margin-bottom: 10px !important;&#13;
-}&#13;
-#homepage-search .h4 {&#13;
-	margin-top: 0px;&#13;
-    font-size: 18px;&#13;
-    font-weight: 300;&#13;
-    line-height: 21px;&#13;
-}&#13;
-#homepage-search div[widget] .input-group {&#13;
-	max-width: 578px;&#13;
-  	margin: 0 auto;	&#13;
-}&#13;
-#homepage-search div[widget] .input-group input[name="q"] {&#13;
-    border: 1.2px solid $text-muted;&#13;
-    border-radius: 4.8px 0 0 4.8px;&#13;
-  	padding-left: 12px;&#13;
-    padding-right: 12px;&#13;
-    box-shadow: none;&#13;
-    -webkit-box-shadow: none;&#13;
-}&#13;
-#homepage-search div[widget] .input-group input[name="q"]:focus {&#13;
-  outline: 5px auto $input-border-focus;&#13;
-}&#13;
-#homepage-search ::placeholder {&#13;
-	font-size: 16px;&#13;
-	line-height: 25px;&#13;
-}&#13;
-#homepage-search :-ms-input-placeholder {&#13;
-	font-size: 16px;&#13;
-	line-height: 25px;&#13;
-}&#13;
-#homepage-search div[widget] .input-group .input-group-btn &gt; button {&#13;
-    min-width: 48px;&#13;
-    border: 1.2px solid $text-muted;&#13;
-    border-radius: 0 4.8px 4.8px 0;&#13;
-    padding: 10px;&#13;
-}&#13;
-.form-control {&#13;
-    height: 3.4rem;&#13;
-}&#13;
-.input-group-btn &gt; .btn {&#13;
-  height: 3.4rem;&#13;
-}&#13;
-.input-lg, .input-group-lg &gt; .form-control, .input-group-lg &gt; .input-group-addon, .input-group-lg &gt; .input-group-btn &gt; .btn {&#13;
-    height: 4.5rem;&#13;
-    font-size: $font-size-large;&#13;
-}&#13;
-.input-sm, .input-group-sm &gt; .form-control, .input-group-sm &gt; .input-group-addon, .input-group-sm &gt; .input-group-btn &gt; .btn {&#13;
-    height: 2.5rem;&#13;
-    font-size: $font-size-small;&#13;
+        <css>body .padding-top{
+  padding-top: 0px;
+}
+section.page { 
+  background-color: #FFFFFF;
+}
+
+section.page, section.body {
+    padding-top: 0px !important;
+}
+
+.banner-container {
+  	width: 100%;
+}
+
+.search-container {
+  max-width: 709px;
+  margin: 0 auto;
+}
+
+.mob-ban-container {
+  height: 85px;
+  padding-top: 20px;
+}
+
+.v-h-center {
+    display: table-cell;
+    vertical-align: middle;
+    margin-left: auto;
+    margin-right: auto;
+}
+#homepage-search {
+  	padding: 10px !important;
+}
+#homepage-search h2 {
+	font-size: 36px;
+    font-weight: 300;
+    line-height: 42px;
+    margin-top: 0px;
+	margin-bottom: 10px !important;
+}
+#homepage-search .h4 {
+	margin-top: 0px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21px;
+}
+#homepage-search div[widget] .input-group {
+	max-width: 578px;
+  	margin: 0 auto;	
+}
+#homepage-search div[widget] .input-group input[name="q"] {
+    border: 1.2px solid $text-muted;
+    border-radius: 4.8px 0 0 4.8px;
+  	padding-left: 12px;
+    padding-right: 12px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+#homepage-search div[widget] .input-group input[name="q"]:focus {
+  outline: 5px auto $input-border-focus;
+}
+#homepage-search ::placeholder {
+	font-size: 16px;
+	line-height: 25px;
+}
+#homepage-search :-ms-input-placeholder {
+	font-size: 16px;
+	line-height: 25px;
+}
+#homepage-search div[widget] .input-group .input-group-btn &gt; button {
+    min-width: 48px;
+    border: 1.2px solid $text-muted;
+    border-radius: 0 4.8px 4.8px 0;
+    padding: 10px;
+}
+.form-control {
+    height: 3.4rem;
+}
+.input-group-btn &gt; .btn {
+  height: 3.4rem;
+}
+.input-lg, .input-group-lg &gt; .form-control, .input-group-lg &gt; .input-group-addon, .input-group-lg &gt; .input-group-btn &gt; .btn {
+    height: 4.5rem;
+    font-size: $font-size-large;
+}
+.input-sm, .input-group-sm &gt; .form-control, .input-group-sm &gt; .input-group-addon, .input-group-sm &gt; .input-group-btn &gt; .btn {
+    height: 2.5rem;
+    font-size: $font-size-small;
 }</css>
         <draft>false</draft>
         <dynamic_title_structure/>
@@ -105,14 +105,14 @@ section.page, section.body {&#13;
         <sys_created_by>isaac.hernandez</sys_created_by>
         <sys_created_on>2025-05-27 20:38:26</sys_created_on>
         <sys_id>c2066c5593712250d942fc4e1dba1020</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_name>iris_home</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_page_c2066c5593712250d942fc4e1dba1020</sys_update_name>
-        <sys_updated_by>isaac.hernandez</sys_updated_by>
-        <sys_updated_on>2025-06-10 20:22:22</sys_updated_on>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-18 19:56:50</sys_updated_on>
         <title>i.home</title>
         <use_seo_script>false</use_seo_script>
     </sp_page>

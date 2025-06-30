@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_team_member">
+    <sn_aia_team_member action="INSERT_OR_UPDATE">
+        <agent display_value="OT Incident Fields Analyzer">fad32983934eaa50d942fc4e1dba1046</agent>
+        <sys_class_name>sn_aia_team_member</sys_class_name>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-18 16:40:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>f472451cc39622903ab9b01705013187</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sn_aia_team_member_f472451cc39622903ab9b01705013187</sys_update_name>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-18 16:40:04</sys_updated_on>
+        <team display_value="Analyze ot incident information">e79e6c2e934ae650d942fc4e1dba1019</team>
+    </sn_aia_team_member>
+</record_update>

@@ -70,7 +70,7 @@
 * To access the variables, use `producer.var1` where var1 is the name of the variable
 * To access the Record Producer use `cat_item`
 */]]></save_script>
-        <sc_catalogs>e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
+        <sc_catalogs>ab40ca6043e40210e79a44a72bb8f2bd,e0d08b13c3330100c8b837659bba8fb4</sc_catalogs>
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <sc_template/>
@@ -89,14 +89,14 @@
         <sys_created_by>alex.santacruz</sys_created_by>
         <sys_created_on>2025-06-02 21:01:00</sys_created_on>
         <sys_id>2ec32743c3f526103ab9b017050131cd</sys_id>
-        <sys_mod_count>71</sys_mod_count>
+        <sys_mod_count>76</sys_mod_count>
         <sys_name>Create an OT Incident</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sc_cat_item_producer_2ec32743c3f526103ab9b017050131cd</sys_update_name>
-        <sys_updated_by>alex.santacruz</sys_updated_by>
-        <sys_updated_on>2025-06-12 18:45:44</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2025-06-23 00:49:07</sys_updated_on>
         <table_name>sn_ot_incident</table_name>
         <taxonomy_topic/>
         <template/>
@@ -105,7 +105,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>70</version>
+        <version>76</version>
         <view/>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>

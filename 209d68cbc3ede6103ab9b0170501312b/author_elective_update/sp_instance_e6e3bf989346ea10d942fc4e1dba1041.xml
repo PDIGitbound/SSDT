@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">bb72516d93f5e250d942fc4e1dba10a3</sp_column>
+        <sp_widget display_value="IRS of Quick Links">5052771c9306ea10d942fc4e1dba10f6</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-06 19:19:44</sys_created_on>
+        <sys_id>e6e3bf989346ea10d942fc4e1dba1041</sys_id>
+        <sys_mod_count>25</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_instance_e6e3bf989346ea10d942fc4e1dba1041</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-20 16:42:49</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters><![CDATA[{
+	"title": {
+		"value": "",
+		"displayValue": ""
+	},
+	"card_type": {
+		"value": "Thumbnail",
+		"displayValue": "Thumbnail"
+	},
+	"card_size": {
+		"value": "Medium",
+		"displayValue": "Medium"
+	},
+	"text_alignment": {
+		"value": "Default",
+		"displayValue": "Default"
+	},
+	"show_icon": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"show_background": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"show_description": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"background_color": {
+		"value": "Hexcode",
+		"displayValue": "Hexcode"
+	},
+	"background_hexcode": {
+		"value": "#6c9eb1",
+		"displayValue": "#6c9eb1"
+	},
+	"icon_background_color": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"icon_background_hexcode": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_text_overlay": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"text_overlay_hexcode": {
+		"value": "",
+		"displayValue": ""
+	},
+	"text_color": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"text_color_hexcode": {
+		"value": "#FFFFFF",
+		"displayValue": "#FFFFFF"
+	},
+	"quick_links": {
+		"value": "9b729365e71130104cda66ef11e8a9a7,1e1cf027c3b1a6103ab9b01705013129,a359fcd893da6290d942fc4e1dba10f3,b28f7854931e6290d942fc4e1dba1074",
+		"displayValue": "Password Reset, Access to Time Analytics., Access to Retired Assets, Access to OT Analytics"
+	},
+	"load_config": {
+		"value": "async",
+		"displayValue": "async"
+	},
+	"show_empty_state": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]></widget_parameters>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=e6e3bf989346ea10d942fc4e1dba1041"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sp_instance_e6e3bf989346ea10d942fc4e1dba1041</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance"&gt;&lt;sp_instance action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;default&lt;/color&gt;&lt;css/&gt;&lt;glyph/&gt;&lt;id/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;short_description/&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="1"&gt;bb72516d93f5e250d942fc4e1dba10a3&lt;/sp_column&gt;&lt;sp_widget display_value="IRS of Quick Links"&gt;5052771c9306ea10d942fc4e1dba10f6&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance&lt;/sys_class_name&gt;&lt;sys_created_by&gt;ruben.fernandez&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-06 19:19:44&lt;/sys_created_on&gt;&lt;sys_id&gt;e6e3bf989346ea10d942fc4e1dba1041&lt;/sys_id&gt;&lt;sys_mod_count&gt;25&lt;/sys_mod_count&gt;&lt;sys_name/&gt;&lt;sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GitHub SSDT"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_e6e3bf989346ea10d942fc4e1dba1041&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;isaac.hernandez&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-20 16:42:49&lt;/sys_updated_on&gt;&lt;title/&gt;&lt;url/&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"title": {
+		"value": "",
+		"displayValue": ""
+	},
+	"card_type": {
+		"value": "Thumbnail",
+		"displayValue": "Thumbnail"
+	},
+	"card_size": {
+		"value": "Medium",
+		"displayValue": "Medium"
+	},
+	"text_alignment": {
+		"value": "Default",
+		"displayValue": "Default"
+	},
+	"show_icon": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"show_background": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"show_description": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"background_color": {
+		"value": "Hexcode",
+		"displayValue": "Hexcode"
+	},
+	"background_hexcode": {
+		"value": "#6c9eb1",
+		"displayValue": "#6c9eb1"
+	},
+	"icon_background_color": {
+		"value": "false",
+		"displayValue": "false"
+	},
+	"icon_background_hexcode": {
+		"value": "",
+		"displayValue": ""
+	},
+	"show_text_overlay": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"text_overlay_hexcode": {
+		"value": "",
+		"displayValue": ""
+	},
+	"text_color": {
+		"value": "true",
+		"displayValue": "true"
+	},
+	"text_color_hexcode": {
+		"value": "#FFFFFF",
+		"displayValue": "#FFFFFF"
+	},
+	"quick_links": {
+		"value": "9b729365e71130104cda66ef11e8a9a7,1e1cf027c3b1a6103ab9b01705013129,a359fcd893da6290d942fc4e1dba10f3,b28f7854931e6290d942fc4e1dba1074",
+		"displayValue": "Password Reset, Access to Time Analytics., Access to Retired Assets, Access to OT Analytics"
+	},
+	"load_config": {
+		"value": "async",
+		"displayValue": "async"
+	},
+	"show_empty_state": {
+		"value": "false",
+		"displayValue": "false"
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=e6e3bf989346ea10d942fc4e1dba1041"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>875319441</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>59703848c3a6e2103ab9b017050131c9</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-30 06:58:43</sys_created_on>
+        <sys_id>8a70b848c3a6e2103ab9b0170501317c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197bfa187b40000001</sys_recorded_at>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-30 06:58:43</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>244653f404dee2907177182a5b542bec</update_guid>
+        <update_guid_history>244653f404dee2907177182a5b542bec:875319441,49cf68c4c8a6e2103ca0d6874855ab09:0,244653f404dee2907177182a5b542bec:875319441,8b2613f400dee2904e459dbf594b0af5:1461457105,40165fb447dee290f79b61dcc6ce90e9:1250500703,23c5d3b434dee290778916433837cfde:1461457105,32551f7419dee2902947946d5a256db3:-631462461,dd25d7740ddee2907058d246f0b6a73b:875319441,790593741bdee29079b4d0991fb0ef0b:-1791910673,53cffc54411e62905e43cbbf65b65b19:875319441,f199b81c7ada6290e6028b140e38d89b:389688789,9919bcd810da62903b1ad66e9fe7e58e:500654190,ef9a171e45c6a650e05fe0f699f027e6:-609044889,0d9a171e2ac6a6507abb05901f335332:653946886,991bc5f5134ea2507465500804a8a8e4:-609044889,b70bc5f58d4ea250b752051a3b92bb64:653946886,ae0b85f58b4ea250a63aa56bb9bc66fd:1916938661,ccfa05f5364ea25043e5cf46b16f5dee:653946886,4f3a05b5334ea2509e93264ba20106f5:-609044889,d13a05b5b54ea250c9c956cd6706be78:653946886,189bb47dc7caa250c24da7dea3b9c902:-609044889,123094e4650aea109cdfc355f8851bf9:330228935,8d0014e49b0aea10df164d063571cc33:737489599,58df80e4e70aea104780e4599ca4a934:83561727,08cf00e4c20aea103ce7074a16d69c6c:1694630094,6a14ff5cdc46ea10b85d9dc3071e0512:-960790183,6c143b5c3746ea10a5379c8456d4f6d9:1855487864,22e3bf989b46ea100bcc22e3ad0a4145:1375183127</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">57703c48c3a6e2103ab9b0170501319b</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-30 06:58:48</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>32a75654908e4a188a163812ae439304</sys_id>
+        <sys_metadata>e6e3bf989346ea10d942fc4e1dba1041</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sp_instance_e6e3bf989346ea10d942fc4e1dba1041</sys_update_name>
+        <sys_update_version display_value="sp_instance_e6e3bf989346ea10d942fc4e1dba1041">8a70b848c3a6e2103ab9b0170501317c</sys_update_version>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-30 06:58:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

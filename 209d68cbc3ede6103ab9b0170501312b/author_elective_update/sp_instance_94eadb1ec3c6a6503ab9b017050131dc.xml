@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>2</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">bb72516d93f5e250d942fc4e1dba10a3</sp_column>
+        <sp_widget display_value="Copy of Virtual Agent Service Portal Wid">7b5ff495c37526503ab9b01705013136</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-12 22:38:11</sys_created_on>
+        <sys_id>94eadb1ec3c6a6503ab9b017050131dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_instance_94eadb1ec3c6a6503ab9b017050131dc</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-12 22:38:11</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=94eadb1ec3c6a6503ab9b017050131dc"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sp_instance_94eadb1ec3c6a6503ab9b017050131dc</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>2</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">bb72516d93f5e250d942fc4e1dba10a3</sp_column>
+        <sp_widget display_value="Copy of Virtual Agent Service Portal Wid">7b5ff495c37526503ab9b01705013136</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-12 22:38:11</sys_created_on>
+        <sys_id>94eadb1ec3c6a6503ab9b017050131dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_instance_94eadb1ec3c6a6503ab9b017050131dc</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-12 22:38:11</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=94eadb1ec3c6a6503ab9b017050131dc"/>
+</record_update>]]></payload>
+        <payload_hash>1559031909</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>1c8f6c44c3a6e2103ab9b0170501310a</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-30 06:55:39</sys_created_on>
+        <sys_id>49cf28c4c3a6e2103ab9b017050131f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197bf9eb77a0000001</sys_recorded_at>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-30 06:55:39</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>05cf28c46ea6e2104112c59c75dfb1f0</update_guid>
+        <update_guid_history>05cf28c46ea6e2104112c59c75dfb1f0:0,63c19409c1162690b17d428664267038:290485572,09c1540985162690f0ccf119fd313f5c:1661968803,fa869fe490922690d6308ab3aa2b0155:290485572,bc780a989bd2a2905c6cf475035965e1:-1506087832,6858069822d2a290a9cf22eb81faded7:-134604601,3a6cb518fc92a290c9c4e2a10e8f7651:1236878630,9ceadb1e2fc6a6505de7a983080ca4dd:-134604601</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">db703c48c3a6e2103ab9b01705013197</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-30 06:58:48</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>baeacfd4e4f1419497abbcedcb8c4311</sys_id>
+        <sys_metadata>94eadb1ec3c6a6503ab9b017050131dc</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sp_instance_94eadb1ec3c6a6503ab9b017050131dc</sys_update_name>
+        <sys_update_version display_value="sp_instance_94eadb1ec3c6a6503ab9b017050131dc">49cf28c4c3a6e2103ab9b017050131f0</sys_update_version>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-30 06:58:48</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

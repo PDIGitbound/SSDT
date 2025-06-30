@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_link">
+    <sp_instance_link action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>primary</color>
+        <css/>
+        <glyph>cog</glyph>
+        <id/>
+        <kb_article/>
+        <kb_category/>
+        <kb_topic/>
+        <order>1</order>
+        <roles/>
+        <sc_cat_item display_value="Create an OT Incident">2ec32743c3f526103ab9b017050131cd</sc_cat_item>
+        <sc_category/>
+        <short_description>Log an incident for an asset</short_description>
+        <size>md</size>
+        <sp_column display_value="3">52c8de56c342a6503ab9b0170501318b</sp_column>
+        <sp_page display_value="iris_home">c2066c5593712250d942fc4e1dba1020</sp_page>
+        <sp_widget display_value="knoledge Icon Link">05abd054c382aa103ab9b017050131f8</sp_widget>
+        <sys_class_name>sp_instance_link</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-12 18:24:12</sys_created_on>
+        <sys_id>2fb0e69e930ea650d942fc4e1dba1060</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Get Help</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_instance_link_2fb0e69e930ea650d942fc4e1dba1060</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-18 19:15:42</sys_updated_on>
+        <title>Get Help</title>
+        <type>url</type>
+        <url>https://volteollcdemo22.service-now.com/iris?id=csm_get_help&amp;sys_id=2ec32743c3f526103ab9b017050131cd</url>
+        <widget_parameters><![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]></widget_parameters>
+    </sp_instance_link>
+    <sys_translated_text action="DELETE" query="documentkey=2fb0e69e930ea650d942fc4e1dba1060"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sp_instance_link_2fb0e69e930ea650d942fc4e1dba1060</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_instance_link"&gt;&lt;sp_instance_link action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;color&gt;primary&lt;/color&gt;&lt;css/&gt;&lt;glyph&gt;cog&lt;/glyph&gt;&lt;id/&gt;&lt;kb_article/&gt;&lt;kb_category/&gt;&lt;kb_topic/&gt;&lt;order&gt;1&lt;/order&gt;&lt;roles/&gt;&lt;sc_cat_item display_value="Create an OT Incident"&gt;2ec32743c3f526103ab9b017050131cd&lt;/sc_cat_item&gt;&lt;sc_category/&gt;&lt;short_description&gt;Log an incident for an asset&lt;/short_description&gt;&lt;size&gt;md&lt;/size&gt;&lt;sp_column display_value="3"&gt;52c8de56c342a6503ab9b0170501318b&lt;/sp_column&gt;&lt;sp_page display_value="iris_home"&gt;c2066c5593712250d942fc4e1dba1020&lt;/sp_page&gt;&lt;sp_widget display_value="knoledge Icon Link"&gt;05abd054c382aa103ab9b017050131f8&lt;/sp_widget&gt;&lt;sys_class_name&gt;sp_instance_link&lt;/sys_class_name&gt;&lt;sys_created_by&gt;ruben.fernandez&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2025-06-12 18:24:12&lt;/sys_created_on&gt;&lt;sys_id&gt;2fb0e69e930ea650d942fc4e1dba1060&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;Get Help&lt;/sys_name&gt;&lt;sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="GitHub SSDT"&gt;209d68cbc3ede6103ab9b0170501312b&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_instance_link_2fb0e69e930ea650d942fc4e1dba1060&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;isaac.hernandez&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2025-06-18 19:15:42&lt;/sys_updated_on&gt;&lt;title&gt;Get Help&lt;/title&gt;&lt;type&gt;url&lt;/type&gt;&lt;url&gt;https://volteollcdemo22.service-now.com/iris?id=csm_get_help&amp;amp;sys_id=2ec32743c3f526103ab9b017050131cd&lt;/url&gt;&lt;widget_parameters&gt;&lt;![CDATA[{
+	"link_template": {
+		"value": "",
+		"displayValue": ""
+	}
+}]]&gt;&lt;/widget_parameters&gt;&lt;/sp_instance_link&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=2fb0e69e930ea650d942fc4e1dba1060"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1713215735</payload_hash>
+        <record_name>Get Help</record_name>
+        <reverted_from/>
+        <source>625aa094939a6290d942fc4e1dba10e0</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-18 19:15:42</sys_created_on>
+        <sys_id>e01629509312a290d942fc4e1dba10e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1978477f0ba0000001</sys_recorded_at>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-18 19:15:42</sys_updated_on>
+        <type>Instance with Link</type>
+        <update_guid>e41629503612a290be81500b7ba903e4</update_guid>
+        <update_guid_history>e41629503612a290be81500b7ba903e4:1713215735,1bb521504d12a290d0b40c5e1d8c9d65:121965619,73756d107d12a290eaca0d017bcce345:-1593854510,efe42ddc81de6290fe45309373869331:291122289,47d2ea52954ea650e62838c2abdd0ea0:-2096036430,cd32aa129f4ea650a3a9226491148a43:-317738022,37d1e212984ea6509281cd8b0724c82c:1064897261,0a91eede050ea650cbb463afc0bd6f02:607440860,f01162de070ea6504c0c35096f8df2f2:1305472976,85e0aa9efa0ea6502c5b4b5d45645ce0:-1578939931,a7b0e69e510ea650376cafcb95428462:907286296</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Get Help">a8daa9589312a290d942fc4e1dba1046</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-18 19:36:27</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_link">sp_instance_link</sys_db_object>
+        <sys_id>dabe81d79d7144d08076cf66294e66e4</sys_id>
+        <sys_metadata>2fb0e69e930ea650d942fc4e1dba1060</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get Help</sys_name>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sp_instance_link_2fb0e69e930ea650d942fc4e1dba1060</sys_update_name>
+        <sys_update_version display_value="sp_instance_link_2fb0e69e930ea650d942fc4e1dba1060">e01629509312a290d942fc4e1dba10e5</sys_update_version>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-18 19:36:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

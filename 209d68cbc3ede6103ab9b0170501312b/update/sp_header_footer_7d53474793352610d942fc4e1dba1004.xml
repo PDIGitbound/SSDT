@@ -4,7 +4,6 @@
         <client_script><![CDATA[function escHeaderController($rootScope, $scope, $window, spUtil, $location, $uibModal, cabrillo, $timeout, i18n, spContextManager, snAnalytics) {
     var c = this;
 
-    // Events fired from/to $rootScope for responsive mobile view.
     c.SHOW_MOBILE_MEGA_MENU = 'showMobileMegaMenu';
     c.SHOW_MOBILE_MENU_ON_DESKTOP = 'showMobileMenuOnDesktop';
     c.TOGGLE_MOBILE_MENU_VISIBILITY = 'toggleMobileMenuVisibility';
@@ -24,13 +23,15 @@
             var currentUrl = $location.url();
             var params = $location.search();
 
-            // hide on home page
-            if ((params && params.id && params.id === c.data.dashboardSuffix) || (params && !params.id && currentUrl.includes(c.data.portalSuffix)) || hideSearchWidgetForNASS(params)) {
+            if ((params && params.id && params.id === c.data.dashboardSuffix) || 
+                (params && !params.id && currentUrl.includes(c.data.portalSuffix)) || 
+                hideSearchWidgetForNASS(params)) {
                 $scope.showSearchBar = false;
                 $scope.showViewAsHeader = false;
-            } else
+            } else {
                 $scope.showSearchBar = true;
-            // show ViewAs header on viewAsPages  
+            }
+
             if ((params && params.id && currentUrl.includes("ec_view_as")))
                 $scope.showViewAsHeader = true;
         }
@@ -39,7 +40,9 @@
     function hideSearchWidgetForNASS(params) {
         var pageIds = ['esc_search', 'search'];
         var nassFullPageId = 'nowassistselfservice';
-        return c.data.showSparkle && params && params.id && (params.id == nassFullPageId || (pageIds.includes(params.id) && params.searchFromChat && params.searchFromChat == 'true'));
+        return c.data.showSparkle && params && params.id && 
+               (params.id == nassFullPageId || 
+                (pageIds.includes(params.id) && params.searchFromChat == 'true'));
     }
 
     c.evaluateExperienceFeedbackDrawerVisibility = function() {
@@ -52,8 +55,10 @@
             var currentPage = pageID ? pageID : c.data.homepageDisplayValue;
             if (c.data.isDrawerConfigured) {
                 var showOnAllPages = c.data.widgetData.showOnAllPages === '1';
-                var currentPageIncluded = c.data.widgetData.includedPages.length && c.data.widgetData.includedPages.includes(currentPage);
-                var currentPageExcluded = c.data.widgetData.excludedPages.length && c.data.widgetData.excludedPages.includes(currentPage);
+                var currentPageIncluded = c.data.widgetData.includedPages.length &&
+                    c.data.widgetData.includedPages.includes(currentPage);
+                var currentPageExcluded = c.data.widgetData.excludedPages.length &&
+                    c.data.widgetData.excludedPages.includes(currentPage);
                 if ((showOnAllPages && currentPageExcluded) || (!showOnAllPages && !currentPageIncluded)) {
                     $scope.exFeedbackActive = false;
                     c.data.exFeedbackActive = false;
@@ -79,19 +84,12 @@
 
     $scope.$on('sp_loading_indicator', function(e, value) {
         $scope.loadingIndicator = value;
-        // Evaluate search bar visibility once the page has completed loading.
         if (!value) {
             c.evaluateSearchWidgetVisibility();
             c.evaluateExperienceFeedbackDrawerVisibility();
         }
     });
 
-    /*
-    Finds the header seismic component sn-search-combobox
-    as it has a shadow dom, hence direct access to the input button is not available
-    So accessing the nested desktop search box component, and then setting the value
-    of the input control based on query passed
-    */
     function setSearchBoxValue(query) {
         var headerSearchBox = document.querySelector("sn-search-combobox");
         if (headerSearchBox) {
@@ -103,10 +101,6 @@
         }
     }
 
-    /*
-    Checks if showSearchBar is visible and sets the correct value from query
-    $timeout is only used so that current digest cycle completes, there is no hardcoded delay added
-    */
     $scope.$watch('showSearchBar', function() {
         $timeout(function() {
             try {
@@ -115,7 +109,7 @@
                 }
             } catch (e) {}
         });
-    })
+    });
 
     $scope.showSearchBar = true;
     $scope.userID = $scope.user.sys_id;
@@ -126,13 +120,7 @@
     $scope.isMobileViewOnDesktopExpanded = false;
     $scope.loadingIndicator = $rootScope.loadingIndicator;
     $scope.cartItemCount = 0;
-
-    /* Below 2 scope variables (showMobileMenuOnDesktop, showMobileMegaMenu) have counterparts in EC Navigation widget also.
-     So whenever we set these variables, make sure to emit an event on rootScope to update them in the former widget as well. */
-
-    // Determines whether to show mobile view on desktop due to oveflow of items in sub navigation bar of header.
     $scope.showMobileMenuOnDesktop = false;
-    // Used to hide global navigation tools on mobile while showing mega menu topics in right panel.
     $scope.showMobileMegaMenu = false;
 
     c.todoCountTranslation = i18n.format(c.data.todoCountLabel, String(c.data.todoCount));
@@ -148,16 +136,16 @@
     $scope.navEvent = function(event, hrefParam) {
         var JOURNEYS_HREF = "?id=jny_journeys";
         if (hrefParam === JOURNEYS_HREF) {
-            var payload = {};
-            payload.name = "Navigate to Journey's home";
-            payload.data = {};
-            payload.data["Entry point"] = "Header";
+            var payload = {
+                name: "Navigate to Journey's home",
+                data: {
+                    "Entry point": "Header"
+                }
+            };
             snAnalytics.addEvent(payload);
         }
     };
 
-    // initially for first load, if the calculated width is in mobile view then update
-    // isHeaderInMobileView so that Employee Center Navigation widget also goes into mobile mode
     $scope.$watch("mobileDevice", function() {
         $rootScope.isHeaderInMobileView = $scope.mobileDevice;
         $rootScope.$broadcast('isHeaderInMobileView', $scope.mobileDevice);
@@ -175,19 +163,17 @@
     c.registerClickEventHanlderOnCart = function() {
         $('a#cart-dropdown').on('click', function(event) {
             if ($window.innerWidth > c.MOBILE_DEVICE_SCREEN_WIDTH && $scope.isMobileViewOnDesktopExpanded) {
-                $location.search({
-                    id: 'sc_cart'
-                });
+                $location.search({ id: 'sc_cart' });
                 $scope.toggleMobileMenuVisibility();
             }
         });
-    }
+    };
 
     $scope.$on("$sp.service_catalog.cart.count", function($evt, count) {
         $scope.cartItemCount = count;
     });
 
-    $scope.$on("$locationChangeSuccess", function(event, data) {
+    $scope.$on("$locationChangeSuccess", function(event, newUrl, oldUrl) {
         if (c.data.isMobile) {
             if ($('div#popup_todos_mobile').is(":visible"))
                 $('li > a#todos_popup').click();
@@ -198,15 +184,10 @@
             $('li.open > a#todos_popup').click();
         }
 
-        // when location changes and have a query parameter in url, refresh the search bar so that changes will reflect
-        //DEF0353060 : regression due to reload of typeahead widget, now setting search box value
         try {
-            scope.query = new URL(newUrl).searchParams.get("q");
+            $scope.query = new URL(newUrl).searchParams.get("q");
             $scope.oldUrlId = new URL(oldUrl).searchParams.get("id");
             $scope.newUrlId = new URL(newUrl).searchParams.get("id");
-            if ($scope.query && $scope.query != '' && $scope.newUrlId !== $scope.oldUrlId) {
-                setSearchBoxValue($scope.query);
-            }
         } catch (e) {}
     });
 
@@ -214,7 +195,6 @@
         setTimeout($scope.reloadHeader, 20);
     };
 
-    /* Record Watchers */
     if (c.data.recordWatchers && c.data.recordWatchers.length > 0) {
         angular.forEach(c.data.recordWatchers, function(watcher) {
             spUtil.recordWatch($scope, watcher.table, watcher.filter, c.processWatchers);
@@ -223,15 +203,14 @@
 
     $scope.reloadHeader = function(actionName) {
         c.data.action = actionName || c.data.ACTION_TODO_COUNT;
-        if (c.data.action == c.data.ACTION_TODO_COUNT)
-            c.server.get({
-                action: c.data.action
-            }).then(function(resp) {
+        if (c.data.action == c.data.ACTION_TODO_COUNT) {
+            c.server.get({ action: c.data.action }).then(function(resp) {
                 c.data.todoCount = resp.data.todoCount;
                 c.todoCountTranslation = i18n.format(c.data.todoCountLabel, String(c.data.todoCount));
             });
-        else
+        } else {
             c.server.update();
+        }
     };
 
     $scope.openLogin = function() {
@@ -298,7 +277,7 @@
         var headerSearch = document.querySelector(".header-search");
         var navbarBrand = document.querySelector(".navbar-brand-logo > img");
         var navbarRight = document.querySelector(".navbar-right > div");
-        //fix for firefox/chrome on cmd + text zoom increase
+
         if (window.ResizeObserver) {
             var resizeObserver = new ResizeObserver(function(entries) {
                 if (entries) {
@@ -306,17 +285,10 @@
                 }
             });
 
-            if (ecHeaderContainer)
-                resizeObserver.observe(ecHeaderContainer);
-
-            if (headerSearch)
-                resizeObserver.observe(headerSearch);
-
-            if (navbarBrand)
-                resizeObserver.observe(navbarBrand);
-
-            if (navbarRight)
-                resizeObserver.observe(navbarRight);
+            if (ecHeaderContainer) resizeObserver.observe(ecHeaderContainer);
+            if (headerSearch) resizeObserver.observe(headerSearch);
+            if (navbarBrand) resizeObserver.observe(navbarBrand);
+            if (navbarRight) resizeObserver.observe(navbarRight);
         }
     }
 
@@ -337,11 +309,11 @@
     });
 
     $scope.handleMobileViewClick = function(event) {
-        // only stop propagation for navigation menu items
-        if ($(event.target).hasClass('mobile-navigation-menu-item') || $(event.target).parents('.mobile-navigation-menu-item').length || $(event.target).hasClass('back-container'))
+        if ($(event.target).hasClass('mobile-navigation-menu-item') || 
+            $(event.target).parents('.mobile-navigation-menu-item').length || 
+            $(event.target).hasClass('back-container'))
             event.stopPropagation();
         else if ($(event.target).text().trim() != c.toursTranslation) {
-            // Stop propagation for menu items eg. My Requests etc
             if (!($(event.target).parents('.main-header-item').length))
                 event.stopPropagation();
         }
@@ -350,21 +322,14 @@
     $scope.isHomepage = function() {
         if (!$scope.page.id)
             return true;
-
-        if ($scope.page.id == $scope.portal.homepage_dv)
-            return true;
-
-        return false;
+        return $scope.page.id == $scope.portal.homepage_dv;
     };
 
     c.evaluateSearchWidgetVisibility();
 
-    //remove nested ul to fix screen reader issue
     $timeout(function() {
         var cartToursWrapper = $('.navbar-header .v' + scope.data.top.menu.sys_id);
-
-        if (!cartToursWrapper.length)
-            return;
+        if (!cartToursWrapper.length) return;
 
         var menu = cartToursWrapper.parent().parent();
         var menuItems = cartToursWrapper.children();
@@ -382,7 +347,8 @@
     });
 
     resizeObserverHeader.observe(header);
-}]]></client_script>
+}
+]]></client_script>
         <controller_as>c</controller_as>
         <css>$sp-box-shadow--md: 0 4px 8px 0 rgba(56, 56, 56, 0.25) !default;&#13;
 &#13;
@@ -1626,7 +1592,7 @@
 }]]></link>
         <name>SSDT Header</name>
         <option_schema/>
-        <public>false</public>
+        <public>true</public>
         <roles>snc_internal,sn_ta_hiring_core.applicant</roles>
         <script><![CDATA[(function() {
     var stats = {};
@@ -1927,14 +1893,14 @@
         <sys_created_by>ruben.fernandez</sys_created_by>
         <sys_created_on>2025-06-02 18:35:06</sys_created_on>
         <sys_id>7d53474793352610d942fc4e1dba1004</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>SSDT Header</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_header_footer_7d53474793352610d942fc4e1dba1004</sys_update_name>
-        <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-02 18:35:30</sys_updated_on>
+        <sys_updated_by>jessica.hidalgo</sys_updated_by>
+        <sys_updated_on>2025-06-19 17:47:33</sys_updated_on>
         <template><![CDATA[<!-- Nav bar menu items starts-->
 <nav class="navbar-inverse" aria-label="Primary" role="navigation" ng-if="!showViewAsHeader" id="ec-header-container">
 

@@ -2,7 +2,7 @@
     <sys_hub_flow action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
-        <active>true</active>
+        <active>false</active>
         <annotation/>
         <attributes>browserActivatedIn=safari,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=43214000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>27000</authored_on_release_version>
@@ -36,15 +36,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>cc7963bfc30aae503ab9b01705013126</sys_id>
-        <sys_mod_count>86</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Copy of Create Repair Order on Asset Retirement &amp; Part Req</sys_name>
         <sys_overrides/>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_hub_flow_cc7963bfc30aae503ab9b01705013126</sys_update_name>
-        <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-18 03:46:31</sys_updated_on>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-30 06:58:51</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
@@ -540,7 +540,7 @@
         <sys_created_on>2025-06-17 15:32:41</sys_created_on>
         <sys_id>0c7963bfc30aae503ab9b0170501313b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Changed Fields</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
@@ -563,7 +563,7 @@
         <sys_created_on>2025-06-17 15:32:41</sys_created_on>
         <sys_id>407963bfc30aae503ab9b01705013138</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
@@ -586,7 +586,7 @@
         <sys_created_on>2025-06-17 15:32:41</sys_created_on>
         <sys_id>4c7963bfc30aae503ab9b01705013134</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
@@ -1090,7 +1090,7 @@
         <sys_created_on>2025-06-17 15:38:09</sys_created_on>
         <sys_id>08ba6fffc30aae503ab9b01705013111</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Record</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
@@ -1113,7 +1113,7 @@
         <sys_created_on>2025-06-17 15:38:09</sys_created_on>
         <sys_id>ccba6fffc30aae503ab9b01705013118</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Changed Fields</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
@@ -1136,7 +1136,7 @@
         <sys_created_on>2025-06-17 15:38:09</sys_created_on>
         <sys_id>ccba6fffc30aae503ab9b01705013151</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>

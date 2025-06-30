@@ -2,7 +2,7 @@
     <sys_dictionary action="INSERT_OR_UPDATE" element="x_volt2_github_s_0_assigned_to" table="sn_fsm_part_request">
         <active>true</active>
         <array>false</array>
-        <attributes>encode_utf8=false</attributes>
+        <attributes>edge_encryption_enabled=true,encode_utf8=false</attributes>
         <audit>false</audit>
         <calculation/>
         <choice>0</choice>
@@ -35,7 +35,7 @@
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference display_value="" name="sys_user_group">sys_user_group</reference>
+        <reference display_value="" name="sys_user">sys_user</reference>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -52,8 +52,8 @@
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_dictionary_sn_fsm_part_request_x_volt2_github_s_0_assigned_to</sys_update_name>
-        <sys_updated_by>ruben.fernandez</sys_updated_by>
-        <sys_updated_on>2025-06-17 17:18:57</sys_updated_on>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-18 21:09:11</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element db_object_id="0dc1663cc371a2503ab9b01705013123" label="Part Request" max_length="40" name="sn_fsm_part_request" type="collection">
-        <element attributes="encode_utf8=false" label="Assigned to" max_length="32" name="x_volt2_github_s_0_assigned_to" reference="sys_user_group" type="reference"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Assigned to" max_length="32" name="x_volt2_github_s_0_assigned_to" reference="sys_user" type="reference"/>
         <element label="Asset" max_length="32" name="x_volt2_github_s_0_asset" reference="sn_itam_common_repair_order" type="reference"/>
         <index name="index">
             <element name="x_volt2_github_s_0_asset"/>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list>number,cmdb_ci,category,short_description,opened_at</field_list>
+        <filter/>
+        <glyph/>
+        <id/>
+        <maximum_entries>10</maximum_entries>
+        <order>3</order>
+        <order_by>number</order_by>
+        <order_direction>desc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">b1eabca3c3b1a6103ab9b0170501311a</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Incidents by Category or Asset">fd0d37ad934ea250d942fc4e1dba10c3</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-10 17:20:51</sys_created_on>
+        <sys_id>141f33a1938ea250d942fc4e1dba10f6</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_instance_table_141f33a1938ea250d942fc4e1dba10f6</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-18 16:57:34</sys_updated_on>
+        <table>sn_ot_incident</table>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_table>
+    <sys_translated_text action="DELETE" query="documentkey=141f33a1938ea250d942fc4e1dba10f6"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sp_instance_table_141f33a1938ea250d942fc4e1dba10f6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table"><sp_instance_table action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><display_field/><field_list>number,cmdb_ci,category,short_description,opened_at</field_list><filter/><glyph/><id/><maximum_entries>10</maximum_entries><order>3</order><order_by>number</order_by><order_direction>desc</order_direction><roles/><short_description/><size>md</size><sp_column display_value="1">b1eabca3c3b1a6103ab9b0170501311a</sp_column><sp_page/><sp_widget display_value="Incidents by Category or Asset">fd0d37ad934ea250d942fc4e1dba10c3</sp_widget><sys_class_name>sp_instance_table</sys_class_name><sys_created_by>isaac.hernandez</sys_created_by><sys_created_on>2025-06-10 17:20:51</sys_created_on><sys_id>141f33a1938ea250d942fc4e1dba10f6</sys_id><sys_mod_count>14</sys_mod_count><sys_name/><sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package><sys_policy/><sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope><sys_update_name>sp_instance_table_141f33a1938ea250d942fc4e1dba10f6</sys_update_name><sys_updated_by>isaac.hernandez</sys_updated_by><sys_updated_on>2025-06-18 16:57:34</sys_updated_on><table>sn_ot_incident</table><title/><url/><widget_parameters/></sp_instance_table><sys_translated_text action="delete_multiple" query="documentkey=141f33a1938ea250d942fc4e1dba10f6"/></record_update>]]></payload>
+        <payload_hash>-1542508002</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>625aa094939a6290d942fc4e1dba10e0</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-18 16:57:34</sys_created_on>
+        <sys_id>8d764110935e6290d942fc4e1dba10cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19783f979520000001</sys_recorded_at>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-18 16:57:34</sys_updated_on>
+        <type>Instance with Table</type>
+        <update_guid>81764110c45e6290c8de1b2da6a04fcf</update_guid>
+        <update_guid_history>81764110c45e6290c8de1b2da6a04fcf:-1542508002,c8764110605e6290401de7af5bdc6e31:-1946871713,07660110145e62905331b989b0e0919d:1943731872,0063e3ee6d4ee650246d1a50c15082aa:1539368161,cff4932a0b0ee65065f9d7f9cd565484:1943731872,cdd49fe61f0ee6500a4b9b7d94149f5c:1539368161,950d4bd65186a650eadae63af3990f53:1943731872,eaf98392b486a65006cc0125b287236f:1539368161,9399d21a5042a6508bef573863495d2b:1943731872,c3a1d9c2aa06265006431a2732b6b148:-1946871713,d30500f9088ea250ca5dca2714c7ed1a:-1542508002,fdd408b95f8ea2508f46e51b13d45166:1140438498,0054cc79938ea25048a3955ea92f9405:-1261383183,f5410c75a28ea25080d6d93922aaee04:1578078670,901f33a11d8ea25051dc9871c2f5b1f8:-32797762</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">86764110935e6290d942fc4e1dba1074</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-18 16:57:38</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_table">sp_instance_table</sys_db_object>
+        <sys_id>164e4d3b2992436f82c30266995ea939</sys_id>
+        <sys_metadata>141f33a1938ea250d942fc4e1dba10f6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sp_instance_table_141f33a1938ea250d942fc4e1dba10f6</sys_update_name>
+        <sys_update_version display_value="sp_instance_table_141f33a1938ea250d942fc4e1dba10f6">8d764110935e6290d942fc4e1dba10cf</sys_update_version>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-18 16:57:38</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
