@@ -3,7 +3,35 @@
         <category>custom</category>
         <client_script><![CDATA[api.controller=function() {  /* widget controller */  var c = this;};]]></client_script>
         <controller_as>c</controller_as>
-        <css/>
+        <css>.metric-summary-widget {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  font-family: "Segoe UI", sans-serif;
+  max-width: 500px;
+  margin: 10px auto 20px auto;
+  justify-content: center;
+}
+ 
+.metric-header h4 {
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  color: #333;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+}
+ 
+.metric-body p {
+  font-size: 1.1em;
+  color: #444;
+  margin: 10px 0;
+}
+ 
+.metric-body strong {
+  color: #222;
+}</css>
         <data_table>sp_instance</data_table>
         <demo_data/>
         <description/>
@@ -57,15 +85,19 @@
         <sys_created_by>isaac.hernandez</sys_created_by>
         <sys_created_on>2025-06-13 16:51:29</sys_created_on>
         <sys_id>9b155b2ac30ee6503ab9b0170501317d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Downtime by Day</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_widget_9b155b2ac30ee6503ab9b0170501317d</sys_update_name>
         <sys_updated_by>isaac.hernandez</sys_updated_by>
-        <sys_updated_on>2025-06-13 17:36:50</sys_updated_on>
-        <template><![CDATA[<div class="daily-work">
+        <sys_updated_on>2025-06-23 04:25:11</sys_updated_on>
+        <template><![CDATA[<div class="metric-summary-widget">
+  <div class="metric-header">
+    <h4>Daily Statistics</h4>
+  </div>
+  <div class="metric-body">
   <p><strong>Horas trabajadas hoy:</strong> {{ data.worked_hours_today }} hrs</p>
   <p><strong>Eficiencia diaria:</strong> {{ data.efficiency_today }}</p>
 </div>

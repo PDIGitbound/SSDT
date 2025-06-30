@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_style_asset">
+    <m2m_style_asset action="DELETE">
+        <asset display_value="SOLUTIONS I.R.I.S.-3">639192abc37da6103ab9b01705013177</asset>
+        <properties>{
+  "position": "header_logo"
+}</properties>
+        <style display_value="Imagery">3cc68aafc33da6103ab9b01705013164</style>
+        <sys_class_name>m2m_style_asset</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-04 04:14:49</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a791122fc37da6103ab9b017050131a5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>m2m_style_asset_a791122fc37da6103ab9b017050131a5</sys_update_name>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-04 04:14:49</sys_updated_on>
+    </m2m_style_asset>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>m2m_style_asset_a791122fc37da6103ab9b017050131a5</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="m2m_style_asset"><m2m_style_asset action="INSERT_OR_UPDATE"><asset display_value="SOLUTIONS I.R.I.S.-3">639192abc37da6103ab9b01705013177</asset><properties>{
+  "position": "header_logo"
+}</properties><style display_value="Imagery">3cc68aafc33da6103ab9b01705013164</style><sys_class_name>m2m_style_asset</sys_class_name><sys_created_by>ruben.fernandez</sys_created_by><sys_created_on>2025-06-04 04:14:49</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>a791122fc37da6103ab9b017050131a5</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_overrides/><sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package><sys_policy/><sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope><sys_update_name>m2m_style_asset_a791122fc37da6103ab9b017050131a5</sys_update_name><sys_updated_by>ruben.fernandez</sys_updated_by><sys_updated_on>2025-06-04 04:14:49</sys_updated_on></m2m_style_asset></record_update>]]></payload>
+        <payload_hash>-1004849815</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>c19edfdb93f96610d942fc4e1dba1000</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-04 04:14:49</sys_created_on>
+        <sys_id>af91122fc37da6103ab9b017050131a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197392621d20000001</sys_recorded_at>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-04 04:14:49</sys_updated_on>
+        <type>UX Style Assets</type>
+        <update_guid>a391122fd27da610a691f5ac4576c9a7</update_guid>
+        <update_guid_history>a391122fd27da610a691f5ac4576c9a7:-1004849815</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">ff1ba00dc39626903ab9b01705013106</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>ruben.fernandez</sys_created_by>
+        <sys_created_on>2025-06-20 22:53:35</sys_created_on>
+        <sys_db_object display_value="" name="m2m_style_asset">m2m_style_asset</sys_db_object>
+        <sys_id>491feefe8a6943a09af5801dd814d784</sys_id>
+        <sys_metadata>a791122fc37da6103ab9b017050131a5</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>m2m_style_asset_a791122fc37da6103ab9b017050131a5</sys_update_name>
+        <sys_update_version display_value="m2m_style_asset_a791122fc37da6103ab9b017050131a5">af91122fc37da6103ab9b017050131a7</sys_update_version>
+        <sys_updated_by>ruben.fernandez</sys_updated_by>
+        <sys_updated_on>2025-06-20 22:53:35</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>3</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">b1eabca3c3b1a6103ab9b0170501311a</sp_column>
+        <sp_widget display_value="iris worked time">0b695ed6c342a6503ab9b01705013129</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-12 17:53:03</sys_created_on>
+        <sys_id>db99921ac342a6503ab9b017050131e8</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_instance_db99921ac342a6503ab9b017050131e8</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-13 17:53:48</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="DELETE" query="documentkey=db99921ac342a6503ab9b017050131e8"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sp_instance_db99921ac342a6503ab9b017050131e8</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance">
+    <sp_instance action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id/>
+        <order>3</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">b1eabca3c3b1a6103ab9b0170501311a</sp_column>
+        <sp_widget display_value="iris worked time">0b695ed6c342a6503ab9b01705013129</sp_widget>
+        <sys_class_name>sp_instance</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-12 17:53:03</sys_created_on>
+        <sys_id>db99921ac342a6503ab9b017050131e8</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_instance_db99921ac342a6503ab9b017050131e8</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-13 17:53:48</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance>
+    <sys_translated_text action="delete_multiple" query="documentkey=db99921ac342a6503ab9b017050131e8"/>
+</record_update>]]></payload>
+        <payload_hash>-1005851221</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>1c8f6c44c3a6e2103ab9b0170501310a</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>esteban.quintero</sys_created_by>
+        <sys_created_on>2025-06-30 06:55:39</sys_created_on>
+        <sys_id>4dcf68c4c3a6e2103ab9b01705013104</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197bf9eb7cd0000001</sys_recorded_at>
+        <sys_updated_by>esteban.quintero</sys_updated_by>
+        <sys_updated_on>2025-06-30 06:55:39</sys_updated_on>
+        <type>Instance</type>
+        <update_guid>49cf68c463a6e21074544671aaf02704</update_guid>
+        <update_guid_history>49cf68c463a6e21074544671aaf02704:0,379f6484e3a6e21028f39536d775f8b6:1976143961,5f0884f543162a909d9e33095cc66840:-84807195,be08c4f5a9162a90e9602265d74b5f72:-1803032027,19a645105f5e62902fe49523514b5c2c:1364558724,c0764110ae5e6290f83fb027d1a85018:-1803032027,3e660110255e629035913cd33098de83:1364558724,c863e3eefe4ee65040c0da7353738d9c:237182179,43f4932a7d0ee6502d2223ee6b8d5678:1364558724,8dd49fe6310ee65012209df67d3ea04e:237182179,510d4bd63186a6507b5c2a15e1802c46:1364558724,aef983926086a6509b76e54825435749:237182179,9b99921a4e42a650bc38fe7d5c9e57ea:1364558724</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">f9707848c3a6e2103ab9b017050131db</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-30 06:58:42</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance">sp_instance</sys_db_object>
+        <sys_id>059f5078275549b3816ce5e0242a5b19</sys_id>
+        <sys_metadata>db99921ac342a6503ab9b017050131e8</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sp_instance_db99921ac342a6503ab9b017050131e8</sys_update_name>
+        <sys_update_version display_value="sp_instance_db99921ac342a6503ab9b017050131e8">4dcf68c4c3a6e2103ab9b01705013104</sys_update_version>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-30 06:58:42</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

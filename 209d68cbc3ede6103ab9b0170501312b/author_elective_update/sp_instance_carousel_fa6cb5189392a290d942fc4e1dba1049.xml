@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_carousel">
+    <sp_instance_carousel action="DELETE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <glyph/>
+        <id>carousel_iris</id>
+        <interval>5000</interval>
+        <order>1</order>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">f4b88e9893d2a290d942fc4e1dba106d</sp_column>
+        <sp_widget display_value="Carousel">cf1a5153cb21020000f8d856634c9c3c</sp_widget>
+        <sys_class_name>sp_instance_carousel</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-18 20:53:20</sys_created_on>
+        <sys_id>fa6cb5189392a290d942fc4e1dba1049</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_instance_carousel_fa6cb5189392a290d942fc4e1dba1049</sys_update_name>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-18 21:47:05</sys_updated_on>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_carousel>
+    <sys_translated_text action="DELETE" query="documentkey=fa6cb5189392a290d942fc4e1dba1049"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</application>
+        <file_path/>
+        <instance_id>e5cc9d791b5fad50c8432f8dee4bcb66</instance_id>
+        <instance_name>volteollcdemo22</instance_name>
+        <name>sp_instance_carousel_fa6cb5189392a290d942fc4e1dba1049</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_carousel"><sp_instance_carousel action="INSERT_OR_UPDATE"><active>true</active><class_name/><color>default</color><css/><glyph/><id>carousel_iris</id><interval>5000</interval><order>1</order><roles/><short_description/><size>md</size><sp_column display_value="1">f4b88e9893d2a290d942fc4e1dba106d</sp_column><sp_widget display_value="Carousel">cf1a5153cb21020000f8d856634c9c3c</sp_widget><sys_class_name>sp_instance_carousel</sys_class_name><sys_created_by>alex.santacruz</sys_created_by><sys_created_on>2025-06-18 20:53:20</sys_created_on><sys_id>fa6cb5189392a290d942fc4e1dba1049</sys_id><sys_mod_count>5</sys_mod_count><sys_name/><sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package><sys_policy/><sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope><sys_update_name>sp_instance_carousel_fa6cb5189392a290d942fc4e1dba1049</sys_update_name><sys_updated_by>alex.santacruz</sys_updated_by><sys_updated_on>2025-06-18 21:47:05</sys_updated_on><title/><url/><widget_parameters/></sp_instance_carousel><sys_translated_text action="delete_multiple" query="documentkey=fa6cb5189392a290d942fc4e1dba1049"/></record_update>]]></payload>
+        <payload_hash>-11466885</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>20aaac50c31622903ab9b01705013165</source>
+        <source_table>sys_update_set</source_table>
+        <state>current</state>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-18 21:47:05</sys_created_on>
+        <sys_id>c6b802d893d2a290d942fc4e1dba1057</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>197850289d80000001</sys_recorded_at>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-18 21:47:05</sys_updated_on>
+        <type>Instance of Carousel</type>
+        <update_guid>cab802d8c5d2a290d26fc0535f92b656</update_guid>
+        <update_guid_history>cab802d8c5d2a290d26fc0535f92b656:-11466885,78b8ce98ced2a290111abd6de13a65df:672324159,b6984e98a4d2a290d5beff3d4c30923d:1473391520,3898ca98f4d2a2905541567f7d27a8f0:-128743202,a2ac3d186292a2907a970a798b7fd259:1473391520,b66cb518e992a290e4ab10f3c21ae14c:-868484019</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="">975e17d493daa290d942fc4e1dba10e6</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>alex.santacruz</sys_created_by>
+        <sys_created_on>2025-06-19 04:01:17</sys_created_on>
+        <sys_db_object display_value="" name="sp_instance_carousel">sp_instance_carousel</sys_db_object>
+        <sys_id>a6612ca355224119bab80f3af0b58a71</sys_id>
+        <sys_metadata>fa6cb5189392a290d942fc4e1dba1049</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_scope_delete display_value="">55e7485ea60141418724801a8f668b01</sys_scope_delete>
+        <sys_update_name>sp_instance_carousel_fa6cb5189392a290d942fc4e1dba1049</sys_update_name>
+        <sys_update_version display_value="sp_instance_carousel_fa6cb5189392a290d942fc4e1dba1049">c6b802d893d2a290d942fc4e1dba1057</sys_update_version>
+        <sys_updated_by>alex.santacruz</sys_updated_by>
+        <sys_updated_on>2025-06-19 04:01:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

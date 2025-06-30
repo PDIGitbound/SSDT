@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_instance_table">
+    <sp_instance_table action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <class_name/>
+        <color>default</color>
+        <css/>
+        <display_field/>
+        <field_list>x_volt2_github_s_0_name,model,location,retired</field_list>
+        <filter table="alm_asset">install_status=7^x_volt2_github_s_0_nameISNOTEMPTY<item display_value="Retired" endquery="false" field="install_status" goto="false" newquery="false" operator="=" or="false" value="7"/>
+            <item endquery="false" field="x_volt2_github_s_0_name" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+        </filter>
+        <glyph/>
+        <id/>
+        <maximum_entries>10</maximum_entries>
+        <order>5</order>
+        <order_by/>
+        <order_direction>asc</order_direction>
+        <roles/>
+        <short_description/>
+        <size>md</size>
+        <sp_column display_value="1">dc04051c931e6290d942fc4e1dba10a1</sp_column>
+        <sp_page/>
+        <sp_widget display_value="Retired Assets 2">1561fbe9930ea250d942fc4e1dba10d7</sp_widget>
+        <sys_class_name>sp_instance_table</sys_class_name>
+        <sys_created_by>isaac.hernandez</sys_created_by>
+        <sys_created_on>2025-06-18 16:46:52</sys_created_on>
+        <sys_id>1004051c931e6290d942fc4e1dba10af</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
+        <sys_update_name>sp_instance_table_1004051c931e6290d942fc4e1dba10af</sys_update_name>
+        <sys_updated_by>isaac.hernandez</sys_updated_by>
+        <sys_updated_on>2025-06-18 16:46:52</sys_updated_on>
+        <table>alm_asset</table>
+        <title/>
+        <url/>
+        <widget_parameters/>
+    </sp_instance_table>
+    <sys_translated_text action="delete_multiple" query="documentkey=1004051c931e6290d942fc4e1dba10af"/>
+</record_update>

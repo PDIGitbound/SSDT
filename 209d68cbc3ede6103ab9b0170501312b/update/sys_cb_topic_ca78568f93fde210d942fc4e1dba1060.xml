@@ -469,7 +469,7 @@
                 "type": "paragraph",
                 "children": [
                   {
-                    "text": "You want to see an specific Knowledge Base or You want to search another kind of knowledge?"
+                    "text": "You want to see an specific Knowledge Base or you want to search another kind of Knowledge?"
                   }
                 ]
               }
@@ -963,14 +963,14 @@
                   "operator": "=",
                   "operand": "asset",
                   "expression": "647f720393352610d942fc4e1dba10c1",
-                  "id": "b16f19b6aa0b4645aa45b7628b60c6f0"
+                  "id": "84c19f785e8e4b3aab530650360adde3"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "caller_id",
                   "expression": "{{vaInputs.user}}",
-                  "id": "7e210bb19b48466f9cd113e5d7c955a5"
+                  "id": "1b1e425935ee4ce1a93c8ff2f37d4fd3"
                 },
                 {
                   "prefix": "",
@@ -1002,32 +1002,71 @@
                       ]
                     }
                   ],
-                  "id": "fe213dda602d4647a6c9f12e5c3a8647"
+                  "id": "b56f34cb89774b7a8850538219335cf9"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "x_volt2_github_s_0_x_u_contact",
                   "expression": "{{vaInputs.user.ref_customer_contact}}",
-                  "id": "82ccf1c57493430bb3d1bc4a999c34cc"
+                  "id": "af32b7c5ed5c4d97a7796b1d36dce34f"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "category",
                   "expression": "hardware",
-                  "id": "9f87415278c24eeeb05baa039e8cd72a"
+                  "id": "8a4e39cc426a4184a217f42e2907839a"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "subcategory",
                   "expression": "ot_issue",
-                  "id": "964dbac4d58445b58c5fa2dd6aca8ee0"
+                  "id": "03f697afb01947378234988644d4dd34"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "description",
+                  "expression": "{{vaInputs.description_of_the_problem}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.description_of_the_problem}}",
+                            "displayValue": "Input Variables➛Description Of The Problem"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "9761bf6b1b524e66aed63753ad3fedf4"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "x_volt2_github_s_0_x_u_account",
+                  "expression": "{{vaInputs.user.x_volt2_github_s_0_account}}",
+                  "id": "396993b3a871473480c5d5ddbf004446"
                 }
               ]
             },
-            "queryString": "asset=647f720393352610d942fc4e1dba10c1^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue"
+            "queryString": "asset=647f720393352610d942fc4e1dba10c1^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue^description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_account={{vaInputs.user.x_volt2_github_s_0_account}}"
           },
           "mode": "create",
           "record": "",
@@ -1055,14 +1094,14 @@
                   "operator": "=",
                   "operand": "asset",
                   "expression": "7d9e3a8f93f12610d942fc4e1dba1000",
-                  "id": "d731d34a96d8422083fe4556aebace4b"
+                  "id": "621b415bb4a54a7bbcc7b2cf93aeb60d"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "caller_id",
                   "expression": "{{vaInputs.user}}",
-                  "id": "74f7a616a76e44c69b14a75bf8a157e1"
+                  "id": "201adabe803c4cf5adfd0625ff8551c3"
                 },
                 {
                   "prefix": "",
@@ -1094,32 +1133,64 @@
                       ]
                     }
                   ],
-                  "id": "cd660ab8805b4d0ca888ab1aa67ea575"
+                  "id": "e760f9b2ddb24250b4717fef556fd5d0"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
-                  "operand": "x_volt2_github_s_0_x_u_contact",
-                  "expression": "{{vaInputs.user.ref_customer_contact}}",
-                  "id": "42dc6d9caa884054b7a0ce8d7f12b813"
+                  "operand": "x_volt2_github_s_0_x_u_account",
+                  "expression": "{{vaInputs.user.x_volt2_github_s_0_account}}",
+                  "id": "8a971580e72c4e43a2b5d60b9139d795"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "category",
                   "expression": "hardware",
-                  "id": "164d89b5710c4702a0a6af81ed2eeea3"
+                  "id": "290b261b19fa4aa0a6ed39ecb9600aea"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "subcategory",
                   "expression": "ot_issue",
-                  "id": "ad8a26d6c1204ec19cf615ee1177f3ed"
+                  "id": "1ac8925be19440a498bbd5c23b323d42"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "description",
+                  "expression": "{{vaInputs.description_of_the_problem}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.description_of_the_problem}}",
+                            "displayValue": "Input Variables➛Description Of The Problem"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "5a499428e56b4b078cbcaaec0abbced4"
                 }
               ]
             },
-            "queryString": "asset=7d9e3a8f93f12610d942fc4e1dba1000^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue"
+            "queryString": "asset=7d9e3a8f93f12610d942fc4e1dba1000^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_account={{vaInputs.user.x_volt2_github_s_0_account}}^category=hardware^subcategory=ot_issue^description={{vaInputs.description_of_the_problem}}"
           },
           "mode": "create",
           "record": "",
@@ -1138,7 +1209,7 @@
         "ed35768675b34ad594fcfab42ec7fef0": {
           "id": "ed35768675b34ad594fcfab42ec7fef0",
           "stepType": "CrudAction",
-          "name": "Incident OT Creation 2",
+          "name": "Incident OT Creation 2a",
           "template": {
             "query": {
               "terms": [
@@ -1147,14 +1218,14 @@
                   "operator": "=",
                   "operand": "asset",
                   "expression": "e42fbacf93f12610d942fc4e1dba10dc",
-                  "id": "9c1aa15b44a6433c8f34edea99180135"
+                  "id": "bcc26974045a41e5ac578e244128c855"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "caller_id",
                   "expression": "{{vaInputs.user}}",
-                  "id": "a6e267891b834eb4991857e58ccbef5e"
+                  "id": "5f087afb9a9b4893a1a2c8604cd49d1e"
                 },
                 {
                   "prefix": "",
@@ -1186,32 +1257,71 @@
                       ]
                     }
                   ],
-                  "id": "0c241c2a035c494a9c45923a0027b672"
+                  "id": "eb7929ab35cf409290d8ae1bda709711"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "x_volt2_github_s_0_x_u_contact",
                   "expression": "{{vaInputs.user.ref_customer_contact}}",
-                  "id": "5c2264f13145418a89af90993a703f6b"
+                  "id": "0e1018ffb2764e7799c900a63bf6be37"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "category",
                   "expression": "hardware",
-                  "id": "3817edcca83e42e68d092f6752a4a228"
+                  "id": "baf42b828dfd4a538739f805ed966286"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "subcategory",
                   "expression": "ot_issue",
-                  "id": "0dc5cc6003d647e5af39148a688e94b0"
+                  "id": "2d850d7c08eb4d769e2acc314937f345"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "description",
+                  "expression": "{{vaInputs.description_of_the_problem}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.description_of_the_problem}}",
+                            "displayValue": "Input Variables➛Description Of The Problem"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "fcf34e0db0574af4889207d99f06b478"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "x_volt2_github_s_0_x_u_account",
+                  "expression": "{{vaInputs.user.x_volt2_github_s_0_account}}",
+                  "id": "2314307bc9de43dbb240fb03fc592102"
                 }
               ]
             },
-            "queryString": "asset=e42fbacf93f12610d942fc4e1dba10dc^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue"
+            "queryString": "asset=e42fbacf93f12610d942fc4e1dba10dc^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue^description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_account={{vaInputs.user.x_volt2_github_s_0_account}}"
           },
           "mode": "create",
           "record": "",
@@ -1239,14 +1349,14 @@
                   "operator": "=",
                   "operand": "asset",
                   "expression": "f45ffecf93f12610d942fc4e1dba10e3",
-                  "id": "fe173fbcc8ea4a848eebf7305e681c75"
+                  "id": "5d24ba21a32c4cf1a141f7646c8392fc"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "caller_id",
                   "expression": "{{vaInputs.user}}",
-                  "id": "ca671153330d4716ab015be7279eeda1"
+                  "id": "efb9297d2c434b998109d888dcad0b67"
                 },
                 {
                   "prefix": "",
@@ -1278,32 +1388,71 @@
                       ]
                     }
                   ],
-                  "id": "d39e8bc539fc4d19b896ce051847faa9"
+                  "id": "2956e507a41c49779ab24fe46e4ce722"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "x_volt2_github_s_0_x_u_contact",
                   "expression": "{{vaInputs.user.ref_customer_contact}}",
-                  "id": "97a2c978aa1940b9b14c949b8ce18a7e"
+                  "id": "2794b3b45d5446888043257bbab07241"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "category",
                   "expression": "hardware",
-                  "id": "699433800a1140c2a4aee51c18e629fe"
+                  "id": "d49b3a4e9c09453e98da9f38d238d33c"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "subcategory",
                   "expression": "ot_issue",
-                  "id": "520112e7a82a46d485a1f2ad9825bf8d"
+                  "id": "2b8b7c3cb8b54afa87c9ebf7b76b0db6"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "description",
+                  "expression": "{{vaInputs.description_of_the_problem}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.description_of_the_problem}}",
+                            "displayValue": "Input Variables➛Description Of The Problem"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "6066335b80ed411a91d979b269944578"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "x_volt2_github_s_0_x_u_account",
+                  "expression": "{{vaInputs.user.x_volt2_github_s_0_account}}",
+                  "id": "6cf0cdb6ffce47dfb6d0485401fbe0d0"
                 }
               ]
             },
-            "queryString": "asset=f45ffecf93f12610d942fc4e1dba10e3^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue"
+            "queryString": "asset=f45ffecf93f12610d942fc4e1dba10e3^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue^description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_account={{vaInputs.user.x_volt2_github_s_0_account}}"
           },
           "mode": "create",
           "record": "",
@@ -1331,14 +1480,14 @@
                   "operator": "=",
                   "operand": "asset",
                   "expression": "4bee76cf93f12610d942fc4e1dba10bb",
-                  "id": "e9b7712a115041d4a4d569720d7fdc5d"
+                  "id": "165d6f9cb2514a7d9fdadaf83189608f"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "caller_id",
                   "expression": "{{vaInputs.user}}",
-                  "id": "7b78cb5812b649e48b6181508969f2cb"
+                  "id": "dc58a936b9b94fd184ddf50bade44b2c"
                 },
                 {
                   "prefix": "",
@@ -1370,32 +1519,71 @@
                       ]
                     }
                   ],
-                  "id": "c2148c562a204199af96e0c9f18f2e30"
+                  "id": "8e945c3ceee745f68cb6488a07b86b39"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "x_volt2_github_s_0_x_u_contact",
                   "expression": "{{vaInputs.user.ref_customer_contact}}",
-                  "id": "52e50136ca1a4ac69bbd37c844dcf568"
+                  "id": "8e97fa36fb614c89bbed2281e9b9b5c0"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "category",
                   "expression": "hardware",
-                  "id": "932e833438334c9ab653c5277ed7b775"
+                  "id": "c800f91b9fe9418f92e91969851551a3"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "subcategory",
                   "expression": "ot_issue",
-                  "id": "a34811d95abd48dfb76924bff27a54cc"
+                  "id": "57226da84cbb4d6eaa79b6949fa9f780"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "description",
+                  "expression": "{{vaInputs.description_of_the_problem}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.description_of_the_problem}}",
+                            "displayValue": "Input Variables➛Description Of The Problem"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "97a7514b4c0749009b666a1994e74ed7"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "x_volt2_github_s_0_x_u_account",
+                  "expression": "{{vaInputs.user.x_volt2_github_s_0_account}}",
+                  "id": "75b5b0515ccd431b8060427c02914b9d"
                 }
               ]
             },
-            "queryString": "asset=4bee76cf93f12610d942fc4e1dba10bb^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue"
+            "queryString": "asset=4bee76cf93f12610d942fc4e1dba10bb^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue^description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_account={{vaInputs.user.x_volt2_github_s_0_account}}"
           },
           "mode": "create",
           "record": "",
@@ -1423,14 +1611,14 @@
                   "operator": "=",
                   "operand": "asset",
                   "expression": "4d3fbacf93f12610d942fc4e1dba107b",
-                  "id": "4356b46ad3d44bf1bf5c780763a3cee6"
+                  "id": "ebf8993bbd2d4dcb8977f2cc125abc58"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "caller_id",
                   "expression": "{{vaInputs.user}}",
-                  "id": "d412e4d3e7cf4d74a0edc6dd3536f840"
+                  "id": "6059051da72441a590a321436d5e8a76"
                 },
                 {
                   "prefix": "",
@@ -1462,32 +1650,71 @@
                       ]
                     }
                   ],
-                  "id": "a154904bab604bb382d8cfb9e179da1a"
+                  "id": "47948245ec334877a0686e004b046795"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "x_volt2_github_s_0_x_u_contact",
                   "expression": "{{vaInputs.user.ref_customer_contact}}",
-                  "id": "798a8856e159440395f8253ea86f265b"
+                  "id": "877999af177248f09b326d91583c0e41"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "category",
                   "expression": "hardware",
-                  "id": "28afaa938e4340d1af291ee02c403b00"
+                  "id": "4e77be1a22ae49f6835462d098ce0d78"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "subcategory",
                   "expression": "ot_issue",
-                  "id": "70fbf1b6a8de4a2cb4c07d3ab2f5eedd"
+                  "id": "59d4473379b8413689b4e20bcab99f0f"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "description",
+                  "expression": "{{vaInputs.description_of_the_problem}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.description_of_the_problem}}",
+                            "displayValue": "Input Variables➛Description Of The Problem"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "eacead31e9a44f808d59d6ebeb04ff30"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "x_volt2_github_s_0_x_u_account",
+                  "expression": "{{vaInputs.user.x_volt2_github_s_0_account}}",
+                  "id": "35782c686e6346ce84fb2ae94100b93d"
                 }
               ]
             },
-            "queryString": "asset=4d3fbacf93f12610d942fc4e1dba107b^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue"
+            "queryString": "asset=4d3fbacf93f12610d942fc4e1dba107b^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue^description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_account={{vaInputs.user.x_volt2_github_s_0_account}}"
           },
           "mode": "create",
           "record": "",
@@ -1515,14 +1742,14 @@
                   "operator": "=",
                   "operand": "asset",
                   "expression": "19eb32cb93f12610d942fc4e1dba1067",
-                  "id": "7c4a3189a2b34fea9bd4e405ef692616"
+                  "id": "9eca345de56444f59e3b2c059bf3c2ac"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "caller_id",
                   "expression": "{{vaInputs.user}}",
-                  "id": "d6920d81574c47188b1367a7b37f30c8"
+                  "id": "951ec50bdf4949439641242ce4ef6baf"
                 },
                 {
                   "prefix": "",
@@ -1554,32 +1781,71 @@
                       ]
                     }
                   ],
-                  "id": "50f1ab74fd304cf98a86f336784e8302"
+                  "id": "8a02f54f21604936ac364b60396a32e3"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "x_volt2_github_s_0_x_u_contact",
                   "expression": "{{vaInputs.user.ref_customer_contact}}",
-                  "id": "6f1fd9d728804f9d9d29f8af29978395"
+                  "id": "b2b7a632974c48c68a1c99e1cb9a62c5"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "category",
                   "expression": "hardware",
-                  "id": "3b6fcf5936a449f8b51f89e85d0e2d9f"
+                  "id": "2b3ac58d23564532963d2a1dc1fd9786"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "subcategory",
                   "expression": "ot_issue",
-                  "id": "9ed46d43679440cc9e6b9431dc789182"
+                  "id": "02c47b1333774b7585387fb83b2c9d27"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "description",
+                  "expression": "{{vaInputs.description_of_the_problem}}",
+                  "deserializedExpression": [
+                    {
+                      "type": "paragraph",
+                      "children": [
+                        {
+                          "text": ""
+                        },
+                        {
+                          "type": "datapill",
+                          "dataPill": {
+                            "value": "{{vaInputs.description_of_the_problem}}",
+                            "displayValue": "Input Variables➛Description Of The Problem"
+                          },
+                          "children": [
+                            {
+                              "text": ""
+                            }
+                          ]
+                        },
+                        {
+                          "text": ""
+                        }
+                      ]
+                    }
+                  ],
+                  "id": "c8996558534444dd8ced8dfcad4499e5"
+                },
+                {
+                  "prefix": "",
+                  "operator": "=",
+                  "operand": "x_volt2_github_s_0_x_u_account",
+                  "expression": "{{vaInputs.user.x_volt2_github_s_0_account}}",
+                  "id": "f352b6fa7ad641629d2c5b3524dcf5f8"
                 }
               ]
             },
-            "queryString": "asset=19eb32cb93f12610d942fc4e1dba1067^caller_id={{vaInputs.user}}^short_description={{vaInputs.user.ref_customer_contact}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue"
+            "queryString": "asset=19eb32cb93f12610d942fc4e1dba1067^caller_id={{vaInputs.user}}^short_description={{vaInputs.user.ref_customer_contact}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue^description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_account={{vaInputs.user.x_volt2_github_s_0_account}}"
           },
           "mode": "create",
           "record": "",
@@ -1625,7 +1891,7 @@
                     ]
                   },
                   {
-                    "text": "  article number you want to see."
+                    "text": "  Article number you want to see."
                   }
                 ]
               }
@@ -2113,7 +2379,7 @@
           "stepType": "ScriptOutput",
           "name": "Incident_Numeber_1_scpt_res",
           "output_type": "single_part",
-          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_1);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_1)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n    var ot_incident = new GlideRecordSecure('sn_ot_incident');\n    ot_incident.get(vaInputs.incident_ot_creation_1);\n    gs.info('INFO=='+ vaInputs.incident_ot_creation_1)\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n      'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n      label: ot_incident.number\n    };\n\n  \n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n      'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\n  gs.info(url1)\n    var fieldList = ['number', 'caller', 'short_description', 'priority'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, ot_incident);\n    var html = cardRenderer.renderCard(title, fields);\n\n    gs.info('HTML:::'+html)\n    gs.info('FIELD:::'+fields)\n\n      return html;\n  \n})();\n",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2124,7 +2390,7 @@
           "stepType": "ScriptOutput",
           "name": "Incident_Number_scpt_res_5",
           "output_type": "single_part",
-          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_5);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_5)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n    var ot_incident = new GlideRecordSecure('sn_ot_incident');\n    ot_incident.get(vaInputs.incident_ot_creation_5);\n    gs.info('INFO=='+ vaInputs.incident_ot_creation_5)\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n      'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n      label: ot_incident.number\n    };\n\n  \n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n      'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\n  gs.info(url1)\n    var fieldList = ['number', 'caller', 'short_description', 'priority'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, ot_incident);\n    var html = cardRenderer.renderCard(title, fields);\n\n    gs.info('HTML:::'+html)\n    gs.info('FIELD:::'+fields)\n\n      return html;\n\n})();\n",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2135,7 +2401,7 @@
           "stepType": "ScriptOutput",
           "name": "incident_num_4_scpt_res",
           "output_type": "single_part",
-          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_4);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_4)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n    var ot_incident = new GlideRecordSecure('sn_ot_incident');\n    ot_incident.get(vaInputs.incident_ot_creation_4);\n    gs.info('INFO=='+ vaInputs.incident_ot_creation_4)\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n      'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n      label: ot_incident.number\n    };\n\n  \n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n      'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\n  gs.info(url1)\n    var fieldList = ['number', 'caller', 'short_description', 'priority'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, ot_incident);\n    var html = cardRenderer.renderCard(title, fields);\n\n    gs.info('HTML:::'+html)\n    gs.info('FIELD:::'+fields)\n\n      return html;\n \n})();\n",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2146,7 +2412,7 @@
           "stepType": "ScriptOutput",
           "name": "Incident_Number_scpt_res_6",
           "output_type": "single_part",
-          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_6);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_6)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n    var ot_incident = new GlideRecordSecure('sn_ot_incident');\n    ot_incident.get(vaInputs.incident_ot_creation_6);\n    gs.info('INFO=='+ vaInputs.incident_ot_creation_6)\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n      'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n      label: ot_incident.number\n    };\n\n  \n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n      'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\n    gs.info(url1)\n    var fieldList = ['number', 'caller', 'short_description', 'priority'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, ot_incident);\n    var html = cardRenderer.renderCard(title, fields);\n\n    gs.info('HTML:::'+html)\n    gs.info('FIELD:::'+fields)\n\n      return html;\n  \n})();\n",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2157,7 +2423,7 @@
           "stepType": "ScriptOutput",
           "name": "Incident_Number_2_scpt_res",
           "output_type": "single_part",
-          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_2);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_2)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n\n",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n    var ot_incident = new GlideRecordSecure('sn_ot_incident');\n    ot_incident.get(vaInputs.incident_ot_creation_2a);\n    gs.info('INFO=='+ vaInputs.incident_ot_creation_2a)\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n      'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n      label: ot_incident.number\n    };\n\n  \n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n      'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\n  gs.info(url1)\n    var fieldList = ['number', 'caller', 'short_description', 'priority'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, ot_incident);\n    var html = cardRenderer.renderCard(title, fields);\n\n    gs.info('HTML:::'+html)\n    gs.info('FIELD:::'+fields)\n\n      return html;\n})();\n\n",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2168,7 +2434,7 @@
           "stepType": "ScriptOutput",
           "name": "Incident_Number_scpt_res",
           "output_type": "single_part",
-          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n    ot_incident.get(vaInputs.incident_ot_creation);\n    gs.info('INFO=='+ vaInputs.incident_ot_creation)\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n      'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n      label: ot_incident.number\n    };\n\n  \n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n      'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\n  gs.info(url1)\n    var fieldList = ['number', 'caller', 'short_description', 'priority'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, ot_incident);\n    var html = cardRenderer.renderCard(title, fields);\n\n    gs.info('HTML:::'+html)\n    gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2179,7 +2445,7 @@
           "stepType": "ScriptOutput",
           "name": "Specific Knowledge",
           "output_type": "single_part",
-          "script": "(function execute() { \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n  knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n  knowledge_bases.query();\n  knowledge_bases.next();\n  var sysId = knowledge_bases.sys_id;\n  gs.info('INFO3====='+ sysId)\n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url1)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n    label: knowledge_bases.number\n  };\n  url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url2)\n  var fieldList = ['number','short_description'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n  var html = cardRenderer.renderCard(title, fields);\n  gs.info('HTML:::'+html)\n  \n  return html;\n})()",
+          "script": "(function execute() { \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n  if (knowledge_bases.get(vaInputs.specific_number_knowledge)=== true){\n    var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n    knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n    knowledge_bases.query();\n    knowledge_bases.next();\n    var sysId = knowledge_bases.sys_id;\n    gs.info('INFO3====='+ sysId)\n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url1)\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n      label: knowledge_bases.number\n    };\n    url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url2)\n    var fieldList = ['number','short_description'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n    var html = cardRenderer.renderCard(title, fields);\n    gs.info('HTML:::'+html)\n  \n    return html;\n  }\n  else{\n    return('The requested article cannot be found.');\n  }\n})()",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2190,7 +2456,7 @@
           "stepType": "ScriptOutput",
           "name": "Incident_Number_scpt_res3",
           "output_type": "single_part",
-          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_3);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_3)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  \n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n    'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n\n",
+          "script": "(function execute() {\n  \n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  ot_incident.get(vaInputs.incident_ot_creation_3);\n  gs.info('INFO=='+ vaInputs.incident_ot_creation_3)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n  'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp',\n  label: ot_incident.number\n  };\n\n  \nurl1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'\n  'sys_id=' + ot_incident.sys_id + '&amp;' + 'view=csp'\ngs.info(url1)\nvar fieldList = ['number', 'caller', 'short_description', 'priority'];\nvar cardRenderer = new global.VaRecordCardRenderer(true);\nvar fields = cardRenderer.createFields(fieldList, ot_incident);\nvar html = cardRenderer.renderCard(title, fields);\n\ngs.info('HTML:::'+html)\ngs.info('FIELD:::'+fields)\n\nreturn html;\n  \n  \n})();\n\n",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2201,7 +2467,7 @@
           "stepType": "ScriptOutput",
           "name": "TSOTIncident_SCPT",
           "output_type": "single_part",
-          "script": "(function execute() {\n  var ot_incident= new GlideRecordSecure('sn_ot_incident');\n  ot_incident.addQuery('number', vaInputs.ot_incident_number); //\n  ot_incident.query();\n  ot_incident.next();\n  var sysId = ot_incident.sys_id;\n  gs.info('INFO3====='+ sysId)\n\n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + sysId + '&amp;' + 'view=csp'\n  gs.info(url1)\n\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n    'sys_id=' + sysId + '&amp;' + 'view=csp',\n    label: ot_incident.number\n  };\n\n  var fieldList = ['number', 'caller', 'short_description', 'priority'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, ot_incident);\n  var html = cardRenderer.renderCard(title, fields);\n\n  gs.info('HTML:::'+html)\n  gs.info('FIELD:::'+fields)\n\n    return html;\n})();\n\n\n",
+          "script": "(function execute() {\n  var ot_incident = new GlideRecordSecure('sn_ot_incident');\n  \n  if (ot_incident.get(vaInputs.ot_incident_number)=== true){\n    var ot_incident= new GlideRecordSecure('sn_ot_incident');\n    ot_incident.addQuery('number', vaInputs.ot_incident_number); //\n    ot_incident.query();\n    ot_incident.next();\n    var sysId = ot_incident.sys_id;\n    gs.info('INFO3====='+ sysId)\n\n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n      'sys_id=' + sysId + '&amp;' + 'view=csp'\n    gs.info(url1)\n\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=csm_ticket&amp;table=sn_ot_incident' +'&amp;'+\n      'sys_id=' + sysId + '&amp;' + 'view=csp',\n      label: ot_incident.number\n    };\n \n    var fieldList = ['number', 'caller', 'short_description', 'priority'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, ot_incident);\n    var html = cardRenderer.renderCard(title, fields);\n\n    gs.info('HTML:::'+html)\n    gs.info('FIELD:::'+fields)\n\n      return html;\n  }\n  else{\n     return 'The requested OT Incident cannot be found.'\n  }\n})();\n\n\n",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2212,7 +2478,7 @@
           "stepType": "ScriptOutput",
           "name": "Specific Knowledge_5",
           "output_type": "single_part",
-          "script": "(function execute() { \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n  knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n  knowledge_bases.query();\n  knowledge_bases.next();\n  var sysId = knowledge_bases.sys_id;\n  gs.info('INFO3====='+ sysId)\n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url1)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n    label: knowledge_bases.number\n  };\n  url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url2)\n  var fieldList = ['number','short_description'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n  var html = cardRenderer.renderCard(title, fields);\n  gs.info('HTML:::'+html)\n  \n  return html;\n})()",
+          "script": "(function execute() { \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n\n  if (knowledge_bases.get(vaInputs.specific_number_knowledge)=== true){\n    var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n    knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n    knowledge_bases.query();\n    knowledge_bases.next();\n    var sysId = knowledge_bases.sys_id;\n    gs.info('INFO3====='+ sysId)\n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url1)\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n      label: knowledge_bases.number\n    };\n    url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url2)\n    var fieldList = ['number','short_description'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n    var html = cardRenderer.renderCard(title, fields);\n    gs.info('HTML:::'+html)\n  \n    return html;\n  }\n  else{\n    return('The requested article cannot be found.');\n  }\n})()",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2223,7 +2489,7 @@
           "stepType": "ScriptOutput",
           "name": "Specific Knowledge_4",
           "output_type": "single_part",
-          "script": "(function execute() { \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n  knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n  knowledge_bases.query();\n  knowledge_bases.next();\n  var sysId = knowledge_bases.sys_id;\n  gs.info('INFO3====='+ sysId)\n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url1)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n    label: knowledge_bases.number\n  };\n  url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url2)\n  var fieldList = ['number','short_description'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n  var html = cardRenderer.renderCard(title, fields);\n  gs.info('HTML:::'+html)\n  \n  return html;\n})()",
+          "script": "(function execute() { \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n  if (knowledge_bases.get(vaInputs.specific_number_knowledge)=== true){\n    var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n    knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n    knowledge_bases.query();\n    knowledge_bases.next();\n    var sysId = knowledge_bases.sys_id;\n    gs.info('INFO3====='+ sysId)\n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url1)\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n      label: knowledge_bases.number\n    };\n    url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url2)\n    var fieldList = ['number','short_description'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n    var html = cardRenderer.renderCard(title, fields);\n    gs.info('HTML:::'+html)\n  \n    return html;\n  }\n  else{\n    return('The requested article cannot be found.');\n  }\n})()",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2234,7 +2500,7 @@
           "stepType": "ScriptOutput",
           "name": "Specific Knowledge_3",
           "output_type": "single_part",
-          "script": "(function execute() { \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n  knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n  knowledge_bases.query();\n  knowledge_bases.next();\n  var sysId = knowledge_bases.sys_id;\n  gs.info('INFO3====='+ sysId)\n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url1)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n    label: knowledge_bases.number\n  };\n  url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url2)\n  var fieldList = ['number','short_description'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n  var html = cardRenderer.renderCard(title, fields);\n  gs.info('HTML:::'+html)\n  \n  return html;\n})()",
+          "script": "(function execute() { \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n  if (knowledge_bases.get(vaInputs.specific_number_knowledge)=== true){\n    var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n    knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n    knowledge_bases.query();\n    knowledge_bases.next();\n    var sysId = knowledge_bases.sys_id;\n    gs.info('INFO3====='+ sysId)\n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url1)\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n      label: knowledge_bases.number\n    };\n    url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url2)\n    var fieldList = ['number','short_description'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n    var html = cardRenderer.renderCard(title, fields);\n    gs.info('HTML:::'+html)\n  \n    return html;\n  }\n  else{\n    return('The requested article cannot be found.');\n  }\n})()",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2245,7 +2511,7 @@
           "stepType": "ScriptOutput",
           "name": "Specific Knowledge_2",
           "output_type": "single_part",
-          "script": "(function execute() { \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n  knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n  knowledge_bases.query();\n  knowledge_bases.next();\n  var sysId = knowledge_bases.sys_id;\n  gs.info('INFO3====='+ sysId)\n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url1)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n    label: knowledge_bases.number\n  };\n  url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url2)\n  var fieldList = ['number','short_description'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n  var html = cardRenderer.renderCard(title, fields);\n  gs.info('HTML:::'+html)\n  \n  return html;\n})()",
+          "script": "(function execute() { \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n  if (knowledge_bases.get(vaInputs.specific_number_knowledge)=== true){\n    knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n    knowledge_bases.query();\n    knowledge_bases.next();\n    var sysId = knowledge_bases.sys_id;\n    gs.info('INFO3====='+ sysId)\n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url1)\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n      label: knowledge_bases.number\n    };\n    url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url2)\n    var fieldList = ['number','short_description'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n    var html = cardRenderer.renderCard(title, fields);\n    gs.info('HTML:::'+html)\n  \n    return html;\n  }\n  else \n    return('The requested article cannot be found.');\n})()",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2256,7 +2522,7 @@
           "stepType": "ScriptOutput",
           "name": "Specific Knowledge_1",
           "output_type": "single_part",
-          "script": "(function execute() { \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n  knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n  knowledge_bases.query();\n  knowledge_bases.next();\n  var sysId = knowledge_bases.sys_id;\n  gs.info('INFO3====='+ sysId)\n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url1)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n    label: knowledge_bases.number\n  };\n  url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url2)\n  var fieldList = ['number','short_description'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n  var html = cardRenderer.renderCard(title, fields);\n  gs.info('HTML:::'+html)\n  \n  return html;\n})()",
+          "script": "(function execute() { \n\n  \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n  gs.info('VA_Info:'+ vaInputs.specific_number_knowledge)\n  \n  knowledge_bases.get(vaInputs.specific_number_knowledge)\n  gs.info('VA_Info2:'+ knowledge_bases.get(vaInputs.specific_number_knowledge))\n  if (knowledge_bases.get(vaInputs.specific_number_knowledge)=== true)\n  {\n    gs.info('VA_Info:'+ vaInputs.specific_number_knowledge)\n    knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n    knowledge_bases.query();\n    knowledge_bases.next();\n    var sysId = knowledge_bases.sys_id;\n    gs.info('INFO3====='+ sysId)\n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url1)\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n      label: knowledge_bases.number\n   };\n    url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url2)\n    var fieldList = ['number','short_description'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n    var html = cardRenderer.renderCard(title, fields);\n    gs.info('HTML:::'+html)\n  \n    return html;\n  }\n  else{\n    return 'The requested article cannot be found.'\n  }\n})()",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -2267,7 +2533,7 @@
           "stepType": "ScriptOutput",
           "name": "Specific Knowledge_6",
           "output_type": "single_part",
-          "script": "(function execute() { \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n  knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n  knowledge_bases.query();\n  knowledge_bases.next();\n  var sysId = knowledge_bases.sys_id;\n  gs.info('INFO3====='+ sysId)\n  url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url1)\n  var title = {\n  url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n    label: knowledge_bases.number\n  };\n  url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n  gs.info(url2)\n  var fieldList = ['number','short_description'];\n  var cardRenderer = new global.VaRecordCardRenderer(true);\n  var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n  var html = cardRenderer.renderCard(title, fields);\n  gs.info('HTML:::'+html)\n  \n  return html;\n})()\n",
+          "script": "(function execute() { \n  var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n  if (knowledge_bases.get(vaInputs.specific_number_knowledge)=== true){\n    var knowledge_bases= new GlideRecordSecure('kb_knowledge');\n    knowledge_bases.addQuery('number', vaInputs.specific_number_knowledge); // Replace knowledgeNumber with your input\n    knowledge_bases.query();\n    knowledge_bases.next();\n    var sysId = knowledge_bases.sys_id;\n    gs.info('INFO3====='+ sysId)\n    url1= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url1)\n    var title = {\n    url: 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId,\n      label: knowledge_bases.number\n    };\n    url2= 'https://volteollcdemo22.service-now.com/iris' + '?id=kb_article_view&amp;sys_kb_id='+ sysId\n    gs.info(url2)\n    var fieldList = ['number','short_description'];\n    var cardRenderer = new global.VaRecordCardRenderer(true);\n    var fields = cardRenderer.createFields(fieldList, knowledge_bases);\n    var html = cardRenderer.renderCard(title, fields);\n    gs.info('HTML:::'+html)\n  \n    return html;\n  }\n  else{\n    return 'The requested article cannot be found.'\n  }\n})()\n",
           "applicability": {
             "value": "",
             "mode": "query"
@@ -3265,10 +3531,10 @@
           "sourcePort": "",
           "targetPort": "",
           "expression": {
-            "value": "vaInputs.choices=Other",
+            "value": "vaInputs.choices=Troubleshooting",
             "mode": "query"
           },
-          "label": "Other"
+          "label": "Troubleshooting"
         },
         {
           "id": "f9c293f20bf349c0ac5ee3be9e248d2a",
@@ -3751,8 +4017,8 @@
           "meta": {}
         },
         {
-          "label": "Other",
-          "value": "Other",
+          "label": "Troubleshooting",
+          "value": "Troubleshooting",
           "checked": true,
           "meta": {}
         }
@@ -4084,8 +4350,8 @@
     },
     "8dcc7568a34542bbb6a87b64f087f799": {
       "id": "8dcc7568a34542bbb6a87b64f087f799",
-      "name": "incident_ot_creation_2",
-      "label": "Incident OT Creation 2",
+      "name": "incident_ot_creation_2a",
+      "label": "Incident OT Creation 2a",
       "varType": "reference",
       "table": "sn_ot_incident",
       "inactive": false,
@@ -4175,14 +4441,14 @@
         <sys_created_on>2025-06-02 15:27:47</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>ca78568f93fde210d942fc4e1dba1060</sys_id>
-        <sys_mod_count>95</sys_mod_count>
+        <sys_mod_count>118</sys_mod_count>
         <sys_name>Customer Service</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_cb_topic_ca78568f93fde210d942fc4e1dba1060</sys_update_name>
         <sys_updated_by>josepablo.lopez</sys_updated_by>
-        <sys_updated_on>2025-06-16 15:45:33</sys_updated_on>
+        <sys_updated_on>2025-06-23 02:33:15</sys_updated_on>
         <title>Customer Service</title>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>STANDARD</type>
