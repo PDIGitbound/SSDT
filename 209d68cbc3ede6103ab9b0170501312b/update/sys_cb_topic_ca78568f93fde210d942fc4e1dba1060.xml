@@ -1742,20 +1742,20 @@
                   "operator": "=",
                   "operand": "asset",
                   "expression": "19eb32cb93f12610d942fc4e1dba1067",
-                  "id": "9eca345de56444f59e3b2c059bf3c2ac"
+                  "id": "edb8ae59c63d4e7da21fdbad8b9c9ba0"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "caller_id",
                   "expression": "{{vaInputs.user}}",
-                  "id": "951ec50bdf4949439641242ce4ef6baf"
+                  "id": "2475bab2c4c842c0afbcf182ac2f9211"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "short_description",
-                  "expression": "{{vaInputs.user.ref_customer_contact}}",
+                  "expression": "{{vaInputs.description_of_the_problem}}",
                   "deserializedExpression": [
                     {
                       "type": "paragraph",
@@ -1766,8 +1766,8 @@
                         {
                           "type": "datapill",
                           "dataPill": {
-                            "value": "{{vaInputs.user.ref_customer_contact}}",
-                            "displayValue": "Input Variables➛User➛Contact"
+                            "value": "{{vaInputs.description_of_the_problem}}",
+                            "displayValue": "Input Variables➛Description Of The Problem"
                           },
                           "children": [
                             {
@@ -1781,28 +1781,28 @@
                       ]
                     }
                   ],
-                  "id": "8a02f54f21604936ac364b60396a32e3"
+                  "id": "c38d02271c824d7fb8bb90b412e28b3f"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "x_volt2_github_s_0_x_u_contact",
                   "expression": "{{vaInputs.user.ref_customer_contact}}",
-                  "id": "b2b7a632974c48c68a1c99e1cb9a62c5"
+                  "id": "5128dfcf3a174cccb2dc9ffde8affcd2"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "category",
                   "expression": "hardware",
-                  "id": "2b3ac58d23564532963d2a1dc1fd9786"
+                  "id": "e8948fcf4b6b4be2b0fd560c47917db1"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "subcategory",
                   "expression": "ot_issue",
-                  "id": "02c47b1333774b7585387fb83b2c9d27"
+                  "id": "038134a32fe54e3a87e7ef670cfbc5e7"
                 },
                 {
                   "prefix": "",
@@ -1834,18 +1834,18 @@
                       ]
                     }
                   ],
-                  "id": "c8996558534444dd8ced8dfcad4499e5"
+                  "id": "001e7aee70b847b2bc79bfca0a6c13d1"
                 },
                 {
                   "prefix": "",
                   "operator": "=",
                   "operand": "x_volt2_github_s_0_x_u_account",
                   "expression": "{{vaInputs.user.x_volt2_github_s_0_account}}",
-                  "id": "f352b6fa7ad641629d2c5b3524dcf5f8"
+                  "id": "fdc3dfb058e5499694743fd32d9a803f"
                 }
               ]
             },
-            "queryString": "asset=19eb32cb93f12610d942fc4e1dba1067^caller_id={{vaInputs.user}}^short_description={{vaInputs.user.ref_customer_contact}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue^description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_account={{vaInputs.user.x_volt2_github_s_0_account}}"
+            "queryString": "asset=19eb32cb93f12610d942fc4e1dba1067^caller_id={{vaInputs.user}}^short_description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_contact={{vaInputs.user.ref_customer_contact}}^category=hardware^subcategory=ot_issue^description={{vaInputs.description_of_the_problem}}^x_volt2_github_s_0_x_u_account={{vaInputs.user.x_volt2_github_s_0_account}}"
           },
           "mode": "create",
           "record": "",
@@ -4441,14 +4441,14 @@
         <sys_created_on>2025-06-02 15:27:47</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_id>ca78568f93fde210d942fc4e1dba1060</sys_id>
-        <sys_mod_count>118</sys_mod_count>
+        <sys_mod_count>120</sys_mod_count>
         <sys_name>Customer Service</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sys_cb_topic_ca78568f93fde210d942fc4e1dba1060</sys_update_name>
         <sys_updated_by>josepablo.lopez</sys_updated_by>
-        <sys_updated_on>2025-06-23 02:33:15</sys_updated_on>
+        <sys_updated_on>2025-07-22 17:55:19</sys_updated_on>
         <title>Customer Service</title>
         <triggerable_by_notification>false</triggerable_by_notification>
         <type>STANDARD</type>

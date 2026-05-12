@@ -82,21 +82,21 @@
         <sys_created_by>isaac.hernandez</sys_created_by>
         <sys_created_on>2025-06-13 16:49:04</sys_created_on>
         <sys_id>37849fa6c30ee6503ab9b01705013154</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>Downtime by Week</sys_name>
         <sys_package display_value="GitHub SSDT" source="x_volt2_github_s_0">209d68cbc3ede6103ab9b0170501312b</sys_package>
         <sys_policy/>
         <sys_scope display_value="GitHub SSDT">209d68cbc3ede6103ab9b0170501312b</sys_scope>
         <sys_update_name>sp_widget_37849fa6c30ee6503ab9b01705013154</sys_update_name>
         <sys_updated_by>isaac.hernandez</sys_updated_by>
-        <sys_updated_on>2025-06-23 04:18:43</sys_updated_on>
+        <sys_updated_on>2025-07-29 22:12:01</sys_updated_on>
         <template><![CDATA[<div class="metric-summary-widget">
   <div class="metric-header">
     <h4>Weekly Statistics</h4>
   </div>
   <div class="metric-body">
-  <p><strong>Horas trabajadas esta semana:</strong> {{ data.worked_hours_week }} hrs</p>
-  <p><strong>Eficiencia semanal:</strong> {{ data.efficiency_week }}</p>
+  <p><strong>Worked Hours this Week:</strong> {{ data.worked_hours_week }} hrs</p>
+  <p><strong>Weekly efficiency:</strong> {{ data.efficiency_week }}</p>
 </div>]]></template>
     </sp_widget>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
